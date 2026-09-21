@@ -1,0 +1,48 @@
+<div
+  id="cookie-banner"
+  class="fixed inset-x-0 bottom-0 z-50 hidden border-t border-black/10 bg-white/95 px-5 py-4 shadow-[0_-4px_20px_rgba(0,0,0,0.08)] backdrop-blur lg:px-8"
+>
+  <div class="mx-auto flex max-w-[1200px] flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+    <p class="max-w-2xl text-sm leading-relaxed text-brand-ink/80">
+      Para ofrecer las mejores experiencias, utilizamos tecnologías como las cookies
+      para almacenar y/o acceder a la información del dispositivo. El consentimiento de
+      estas tecnologías nos permitirá procesar datos como el comportamiento de
+      navegación o las identificaciones únicas en este sitio. No consentir o retirar el
+      consentimiento, puede afectar negativamente a ciertas características y
+      funciones.
+    </p>
+    <div class="flex shrink-0 flex-wrap items-center gap-3 text-sm font-semibold uppercase tracking-wide">
+      <button
+        id="cookie-decline"
+        class="rounded-md border border-brand-ink/20 px-4 py-2 text-brand-ink hover:bg-brand-cream"
+      >
+        Denegar
+      </button>
+      <button
+        id="cookie-accept"
+        class="rounded-md bg-brand-olive px-4 py-2 text-white hover:bg-brand-olive-dark"
+      >
+        Aceptar
+      </button>
+      <a href="/politica-de-cookies/" class="text-brand-olive underline underline-offset-2"
+        >Ver preferencias</a
+      >
+    </div>
+  </div>
+</div>
+
+<script>
+  const banner = document.getElementById("cookie-banner");
+  const KEY = "aevtj-cookie-consent";
+  if (banner && !localStorage.getItem(KEY)) {
+    banner.classList.remove("hidden");
+  }
+  document.getElementById("cookie-accept")?.addEventListener("click", () => {
+    localStorage.setItem(KEY, "accepted");
+    banner?.classList.add("hidden");
+  });
+  document.getElementById("cookie-decline")?.addEventListener("click", () => {
+    localStorage.setItem(KEY, "declined");
+    banner?.classList.add("hidden");
+  });
+</script>

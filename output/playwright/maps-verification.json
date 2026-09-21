@@ -1,0 +1,19 @@
+{
+  "errors": [],
+  "globeRotates": true,
+  "globePauses": true,
+  "worldKeyboard": "ARGENTINA\n\nAsociación Civil Argentina de Ayuda a Víctimas de Sectas",
+  "spainKeyboard": "Madrid",
+  "overflow320": false,
+  "overflow390": false,
+  "overflow768": false,
+  "overflow1024": false,
+  "overflow1440": false,
+  "globeReducedMotion": true,
+  "noJsHeading": true,
+  "noJsCounters": [
+    "735",
+    "25",
+    "8"
+  ]
+}

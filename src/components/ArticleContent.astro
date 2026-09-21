@@ -1,0 +1,77 @@
+---
+import TornEdge from "./TornEdge.astro";
+
+interface Props {
+  title: string;
+  date?: string;
+  image?: string | null;
+  heroPhoto?: string;
+  html: string;
+}
+const { title, date, image, heroPhoto, html } = Astro.props;
+// Imported articles can contain a second h1 and non-breaking title spaces.
+// Keep the wording while giving the page a single primary heading.
+const displayTitle = title.replace(/\u00a0/g, " ");
+const articleHtml = html.replace(/<h1(\s[^>]*)?>/gi, '<h2$1>').replace(/<\/h1>/gi, '</h2>');
+// Imported layouts leave bare step numbers as empty containers; turn them
+// into badge elements so the stylesheet can present them as steps.
+const steppedHtml = articleHtml
+  .replace(/<button>\s*<span>\s*(\d{1,2})\s*<\/span>\s*<\/button>/gi, '<span class="step-marker">$1</span>')
+  .replace(/<div>\s*(\d{1,2})\s*<\/div>/g, '<div class="step-badge">$1</div>')
+  .replace(/<span>\s*(\d{1,2})\s*<\/span>/g, '<span class="step-badge">$1</span>');
+
+const formattedDate = date
+  ? new Date(date).toLocaleDateString("es-ES", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    })
+  : null;
+---
+
+<article>
+  {
+    heroPhoto ? (
+      <header class="relative overflow-hidden bg-brand-ink text-white">
+        <img src={heroPhoto} alt="" class="absolute inset-0 h-full w-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-b from-brand-ink/60 via-brand-ink/75 to-brand-ink" />
+        <div class="relative mx-auto max-w-[980px] px-5 py-24 text-center lg:px-8 lg:py-32">
+          <h1 class="font-heading text-4xl font-semibold uppercase tracking-wide sm:text-5xl">
+            {displayTitle}
+          </h1>
+          <div class="mx-auto mt-3 h-1 w-24 bg-brand-olive" />
+        </div>
+        <TornEdge />
+      </header>
+    ) : (
+      <header class="border-b border-black/5 bg-brand-cream">
+        <div class="mx-auto max-w-[900px] px-5 py-14 text-center lg:px-8">
+          {formattedDate && (
+            <p class="mb-2 font-heading text-sm uppercase tracking-widest text-brand-olive">
+              {formattedDate}
+            </p>
+          )}
+          <h1 class="font-heading text-4xl font-semibold uppercase tracking-wide text-brand-ink sm:text-5xl">
+            {displayTitle}
+          </h1>
+        </div>
+      </header>
+    )
+  }
+
+  {
+    image && (
+      <div class="mx-auto -mt-8 max-w-[900px] px-5 lg:px-8">
+        <img
+          src={image}
+          alt={title}
+          class="aspect-[16/9] w-full rounded-lg object-cover shadow-lg"
+        />
+      </div>
+    )
+  }
+
+  <div class="mx-auto max-w-[800px] px-5 py-16 lg:px-8 lg:py-20">
+    <div class="prose prose-lg max-w-none prose-headings:font-heading prose-img:rounded-lg" set:html={steppedHtml} />
+  </div>
+</article>

@@ -1,0 +1,61 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const posts = (await getCollection("posts")).sort(
+  (a, b) => new Date(b.data.date ?? 0).getTime() - new Date(a.data.date ?? 0).getTime()
+);
+---
+
+<BaseLayout title="Noticias">
+  <header class="border-b border-black/5 bg-brand-cream">
+    <div class="mx-auto max-w-[1200px] px-5 py-14 text-center lg:px-8">
+      <h1 class="font-heading text-4xl font-semibold uppercase tracking-wide text-brand-ink sm:text-5xl">
+        Noticias
+      </h1>
+      <p class="mx-auto mt-3 max-w-2xl text-brand-ink/70">
+        Actualidad, entrevistas y apariciones en medios de la Asociación Española de
+        Víctimas de los Testigos de Jehová.
+      </p>
+    </div>
+  </header>
+
+  <div class="mx-auto max-w-[1200px] px-5 py-14 lg:px-8">
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        posts.map((post) => (
+          <a
+            href={`/noticias/${post.data.slug}/`}
+            class="group flex flex-col overflow-hidden rounded-xl border border-black/5 shadow-sm transition-shadow hover:shadow-md"
+          >
+            <div class="aspect-[16/9] overflow-hidden bg-brand-cream">
+              {post.data.image && (
+                <img
+                  src={post.data.image}
+                  alt={post.data.title}
+                  class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  loading="lazy"
+                />
+              )}
+            </div>
+            <div class="flex flex-1 flex-col gap-2 p-5">
+              {post.data.date && (
+                <span class="font-heading text-xs uppercase tracking-widest text-brand-olive">
+                  {new Date(post.data.date).toLocaleDateString("es-ES", {
+                    day: "numeric",
+                    month: "long",
+                    year: "numeric",
+                  })}
+                </span>
+              )}
+              <h2 class="font-heading text-xl font-semibold leading-tight text-brand-ink">
+                {post.data.title}
+              </h2>
+              <p class="line-clamp-3 text-sm text-brand-ink/70">{post.data.excerpt}</p>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</BaseLayout>

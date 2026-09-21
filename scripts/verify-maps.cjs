@@ -1,0 +1,62 @@
+const {chromium}=require('C:/Users/jocta/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const fs=require('node:fs');
+(async()=>{
+ const browser=await chromium.launch({channel:'msedge',headless:true});
+ const page=await browser.newPage({viewport:{width:1440,height:1000}});
+ const result={errors:[]};
+ page.on('pageerror',e=>result.errors.push(e.message));
+ await page.addInitScript(()=>{if(location.protocol==='http:')localStorage.setItem('aevtj-cookie-consent','declined')});
+ await page.goto('http://localhost:4322/',{waitUntil:'networkidle'});
+ await page.locator('.map-panel--split').scrollIntoViewIfNeeded();
+ await page.waitForTimeout(1300);
+ await page.screenshot({path:'output/playwright/maps-desktop.png'});
+ const anchors=()=>page.locator('.globe-canvas-wrap').evaluate(el=>[...el.querySelectorAll('[style]')].map(el=>el.getAttribute('style')).join('|'));
+ const before=await anchors();
+ await page.waitForTimeout(500);
+ result.globeRotates=before!==await anchors();
+ await page.getByRole('button',{name:'Pausar giro',exact:true}).click();
+ const paused=await anchors();
+ await page.waitForTimeout(500);
+ result.globePauses=paused===await anchors();
+ const world=page.locator('.world-map path[data-code="ar"]');
+ await world.focus();
+ result.worldKeyboard=await page.locator('.world-map .region-label').innerText();
+ await page.locator('.spain-map').scrollIntoViewIfNeeded();
+ await page.locator('.spain-map path[data-name="Madrid"]').focus();
+ result.spainKeyboard=await page.locator('.spain-map .region-label').innerText();
+ await page.waitForTimeout(1000);
+ await page.screenshot({path:'output/playwright/spain-desktop.png'});
+ for(const width of [320,390,768,1024,1440]){
+   await page.setViewportSize({width,height:900});
+   await page.locator('.map-panel--split').scrollIntoViewIfNeeded();
+   await page.waitForTimeout(400);
+   result[`overflow${width}`]=await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth);
+   if(width===390)await page.screenshot({path:'output/playwright/maps-mobile.png'});
+ }
+ await page.emulateMedia({reducedMotion:'reduce'});
+ await page.waitForTimeout(200);
+ const reduced=await anchors();
+ await page.waitForTimeout(400);
+ result.globeReducedMotion=reduced===await anchors();
+ await page.emulateMedia({reducedMotion:'no-preference'});
+ await page.evaluate(()=>window.scrollTo({top:0,behavior:'instant'}));
+ await page.waitForTimeout(1000);
+ await page.screenshot({path:'output/playwright/home-desktop.png'});
+ for(let y=0;y<await page.evaluate(()=>document.documentElement.scrollHeight);y+=650){
+   await page.evaluate(y=>window.scrollTo({top:y,behavior:'instant'}),y);
+   await page.waitForTimeout(90);
+ }
+ await page.waitForTimeout(1000);
+ await page.screenshot({path:'output/playwright/home-desktop-full.png',fullPage:true});
+ await page.setViewportSize({width:390,height:844});
+ await page.evaluate(()=>window.scrollTo({top:0,behavior:'instant'}));
+ await page.waitForTimeout(1000);
+ await page.screenshot({path:'output/playwright/home-mobile.png'});
+ const noJs=await browser.newPage({javaScriptEnabled:false,viewport:{width:390,height:844}});
+ await noJs.goto('http://localhost:4322/',{waitUntil:'domcontentloaded'});
+ result.noJsHeading=await noJs.locator('h1').isVisible();
+ result.noJsCounters=await noJs.locator('[data-stat-target]').allTextContents();
+ await browser.close();
+ fs.writeFileSync('output/playwright/maps-verification.json',JSON.stringify(result,null,2));
+ console.log(JSON.stringify(result,null,2));
+})();

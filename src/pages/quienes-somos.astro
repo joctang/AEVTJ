@@ -1,0 +1,409 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TornEdge from "../components/TornEdge.astro";
+
+const board = [
+  {
+    name: "Natán Verdés",
+    role: "Secretario",
+    photo: "/uploads/2025/10/natan-e1759935877900-nobg.png",
+    bio: "Ex Testigo de Jehová, graduado en Filosofía (UB), hoy aporta una mirada informada y humanista para visibilizar el ostracismo y el control que sufren los exmiembros, impulsando apoyo y reparación",
+  },
+  {
+    name: "Samuel Ferrando",
+    role: "Presidente",
+    photo: "/uploads/2025/10/samuel-ferrando-e1759935708491-nobg.png",
+    bio: "Ex testigo y ex anciano de congregación; hoy lidera la AEVTJ para visibilizar el ostracismo y reforzar el apoyo legal e institucional a las víctimas",
+  },
+  {
+    name: "Soraya Navarro",
+    role: "Vicepresidenta",
+    photo: "/uploads/2025/10/soraya-navarro-e1759937438606-nobg.png",
+    bio: "Coordina la defensa y acompañamiento a víctimas, impulsando campañas de sensibilización y mejora de protocolos de atención.",
+  },
+  {
+    name: "Rebeca Quesada",
+    role: "Tesorera",
+    photo: "/uploads/2025/10/Rebeca-Quesada-nobg.png",
+    bio: "Con dedicación y transparencia, gestiona los recursos de la Asociación Española de Víctimas de los Testigos de Jehová",
+  },
+];
+
+const mission = [
+  {
+    id: "agrupar",
+    label: "Agrupar",
+    text: [
+      "<strong>Reunir y crear una comunidad abierta</strong> para todas aquellas personas que, de alguna manera, se consideren <strong>víctimas</strong> de la organización de los Testigos Cristianos de Jehová.",
+      "Nuestro objetivo es proporcionar un <strong>espacio de apoyo</strong> mutuo, donde puedan <strong>compartir</strong> sus experiencias, encontrar <strong>comprensión</strong> y <strong>obtener recursos útiles para superar las consecuencias</strong> emocionales, sociales, legales o psicológicas derivadas de su vinculación con esta organización.",
+    ],
+  },
+  {
+    id: "ayudar",
+    label: "Ayudar",
+    text: [
+      "<strong>Brindamos apoyo</strong> integral a quienes desean <strong>salir de manera digna</strong> de la organización de los Testigos de Jehová, con un enfoque en dos pilares fundamentales: <strong>ayuda psicológica y soporte legal</strong>.",
+      "Proporcionamos <strong>orientación</strong> detallada sobre los recursos legales disponibles para proteger sus derechos y facilitar su transición, así como <strong>acceso a asesoramiento psicológico</strong> especializado para abordar las <strong>secuelas</strong> emocionales que puedan surgir durante este proceso.",
+      "Además, ofrecemos <strong>un espacio seguro</strong> donde los afectados pueden compartir sus vivencias, recibir consejos prácticos y encontrar apoyo emocional, asegurando que no enfrenten este camino en soledad.",
+    ],
+  },
+  {
+    id: "visibilidad",
+    label: "Dar visibilidad",
+    text: [
+      "Dar visibilidad a la problemática que enfrentan las víctimas de los Testigos de Jehová, con el <strong>objetivo de prevenir casos similares e informar</strong> de manera clara a la sociedad, especialmente a quienes consideren acercarse a esta “organización religiosa” conocida por prácticas de persuasión y comportamientos sectarios.",
+      "Buscamos <strong>sensibilizar sobre las consecuencias</strong> emocionales, sociales y legales que estas dinámicas pueden generar, promoviendo así la protección de los derechos individuales y la toma de decisiones informadas.",
+    ],
+  },
+  {
+    id: "presion",
+    label: "Ejercer de grupo de presión",
+    text: [
+      "Actuar como Grupo de presión <strong>ante los distintos niveles de gobierno en España</strong>, con el objetivo de garantizar que la organización de los Testigos de Jehová ajuste sus prácticas y dinámicas internas a la legislación vigente tanto a nivel nacional como europeo.",
+      "Este esfuerzo busca <strong>asegurar el cumplimiento de las normativas</strong> que protegen los <strong>derechos fundamentales</strong>, promoviendo un entorno en el que se respeten las libertades individuales y se erradiquen conductas que puedan vulnerar estos principios.",
+      "Nuestra acción está respaldada por el Convenio Europeo de Derechos Humanos (artículos 9 y 10), que protege la libertad de pensamiento, conciencia y religión, así como la libertad de expresión, y por la Constitución Española de 1978 (Título I, artículo 10 y artículo 16), que consagra el respeto a la dignidad humana y la libertad ideológica y religiosa dentro de los límites establecidos por el orden público.",
+    ],
+  },
+];
+
+const transparency = [
+  {
+    title: "Bienvenida",
+    body: `<p>Bienvenido al Portal de Transparencia de la Asociación Española de Víctimas de los Testigos de Jehová.</p><p>Este espacio ha sido creado para garantizar la claridad y accesibilidad de toda la información relevante sobre nuestra organización, promoviendo la confianza y el compromiso con nuestros socios, colaboradores y la sociedad en general.</p><p>En cumplimiento de lo establecido por la <b>Ley Orgánica 1/2002, de 22 de marzo, reguladora del Derecho de Asociación</b>, los asociados tienen derecho a acceder a la información y documentación relacionada con la gestión y funcionamiento de la organización. Para ello, podrán hacerlo a través de los órganos de representación, en los términos establecidos por la normativa vigente. Asimismo, este acceso se realiza respetando las garantías de confidencialidad y protección de datos personales previstas en la <b>Ley Orgánica 15/1999, de 13 de diciembre, de Protección de Datos de Carácter Personal</b>.</p>`,
+  },
+  {
+    title: "1. Información general",
+    body: `<p><b>Quiénes Somos</b><br>La <b>Asociación Española de Víctimas de los Testigos de Jehová (AEVTJ)</b> es una organización sin ánimo de lucro fundada en 2018, dedicada a brindar apoyo, orientación y representación a las personas que han sufrido daños físicos, psicológicos o sociales como consecuencia de su vinculación con los Testigos de Jehová.</p><p><b>Estatutos</b><br>Puedes consultar nuestros estatutos actualizados en el siguiente enlace:<br><a href="/uploads/2026/08/ESTATUTOS_WEB.pdf" class="text-brand-olive underline">Estatutos (revisión julio del 2026)</a></p>`,
+  },
+  {
+    title: "2. Organización y gobernanza",
+    body: `<p><b>Estructura Organizativa</b><br>Nuestro equipo está compuesto por:</p><p><strong>Junta Directiva:</strong><br>Samuel Ferrando (Presidente)<br>Soraya Navarro (Vicepresidenta)<br>Natán Verdés (Secretario)<br>Rebeca Quesada (Tesorera)</p><p><strong>Vocalías:</strong><br>Abigail Aleu Fernandez (Abogada Colegiada 2386 del Ilustre Colegio de Abogados de Lleida, Vocalía Soporte Legal)<br>Misael (Vocalía de Administración)<br>Dani Ataraxia (Vocalía Soporte LGTBIQ+)<br>P. (Psicólogo. Vocalía Soporte Psicológico)<br>R. (Psicóloga. Vocalía Soporte Psicológico)<br>Noemí Saura López (Vocalía RRSS, Newsletter y Página Web)<br>Israel Flórez (Vocalía Asesoramiento Institucional)</p><p>La Asamblea General es el máximo órgano de decisión, seguido por la Junta Directiva. Cualquier socio o socia tiene el derecho de solicitar a la Junta Directiva acceso a toda la documentación original relacionada con la asociación:</p><p>• <a href="/uploads/2025/01/11_ENERO_ACTA_ASAMBLEA_tachado.pdf" class="text-brand-olive underline">Acta de Asamblea del 11 de enero del 2025 (nombres tachados)</a></p><p>• <a href="/uploads/2024/12/CANDIDATURAS-ELECCIONES-AEVTJ-2025-1.pdf" class="text-brand-olive underline">Bases de presentación de candidatura, 23 de diciembre del 2024</a></p><p>• <a href="/uploads/2024/12/Comunicado-oficial-de-la-Asociacion-de-Victimas-de-los-Testigos-de-Jehova-2.pdf" class="text-brand-olive underline">Comunicado del 23 de diciembre del 2024</a></p><p>• <a href="/uploads/2024/12/21-DIC-ACTA-ASAMBLEA_tachado-1.pdf" class="text-brand-olive underline">Acta Asamblea Extraordinaria del 21 de diciembre del 2024 (nombres tachado)</a></p>`,
+  },
+  {
+    title: "3. Información económica y presupuestaria",
+    body: `<p><b>Presupuesto y cuentas Anuales</b></p><p>• Presupuesto y cuentas anuales 2025 – solicitar a la junta<br>• Presupuesto y cuentas anuales 2024 – solicitar a la junta<br>• Presupuesto y cuentas anuales 2023 – solicitar a la junta</p><p><b>Subvenciones y Ayudas Públicas</b></p><p>Actualmente, la asociación no dispone de ninguna subvención. Estamos trabajando en ello.</p><p><b>Donaciones y Cuotas</b></p><p>Nuestro principal apoyo económico proviene de donaciones de nuestros socios. Actualmente, las donaciones son totalmente voluntarias y no existe ninguna cuota de registro ni mensualidad.</p><p><a href="/uploads/2026/07/ingresos_gastos_2025.pdf" class="text-brand-olive underline">Estado de cuentas de la asociación 2026</a></p>`,
+  },
+  {
+    title: "4. Contratos y convenios",
+    body: `<p><b>Convenios Firmados</b></p><p>• Con la Universitat de Barcelona.</p>`,
+  },
+  {
+    title: "5. Proyectos y actividades",
+    body: `<p><b>Proyectos en Curso y Resultados de Actividades</b></p><p>• Solicitar a la junta.</p>`,
+  },
+  {
+    title: "6. Acceso a la información pública",
+    body: `<p><b>Formulario de Solicitud</b></p><p>Si necesitas información adicional o tienes alguna consulta, por favor, envía un correo electrónico a la siguiente dirección: info@victimasdetestigosdejehova.org</p>`,
+  },
+  {
+    title: "7. Canal ético",
+    body: `<p>Hemos habilitado un canal para comunicar cualquier irregularidad o mal uso de recursos. Tu denuncia será tratada con confidencialidad: info@victimasdetestigosdejehova.org</p>`,
+  },
+  {
+    title: "Actualización de datos",
+    body: `<p>Este portal se actualiza periódicamente. Última actualización: 27 de Abril del 2026.</p><p>Si tienes alguna sugerencia o comentario sobre el Portal de Transparencia, no dudes en contactarnos. ¡Gracias por tu interés y confianza!</p>`,
+  },
+];
+
+const collaborators = [
+  {
+    name: "Dr. Carlos Bardavío Antón",
+    role: "Abogado - Doctor en derecho penal",
+    photo: "/uploads/2025/10/carlos-bardavo-a.jpg",
+    bio: `<p><strong>Una autoridad práctica en el combate contra el sectarismo</strong></p><p>Más allá de su formación, Bardavío es un <strong>profesional activo en el terreno</strong>. Desde 2017, colabora como asesor jurídico-legal con <strong>RedUNE</strong>, una organización sin ánimo de lucro dedicada a combatir el sectarismo y el abuso de debilidad. A través de esta colaboración, <strong>ha trabajado en casos reales</strong>, asesorando a víctimas y promoviendo cambios legislativos para tipificar el delito de persuasión coercitiva en el Código Penal.</p><p>También forma parte de la <strong>Red Iberoamericana de Estudio de las Sectas (RIES)</strong>, experiencia que le ha permitido identificar patrones de abuso y crear estrategias legales para proteger a las víctimas.</p><p>Ha asesorado al <strong>Ministerio de Sanidad</strong> en el desarrollo del Plan para la protección de la salud frente a las pseudoterapias, y colabora con la <strong>Asociación para Proteger al Enfermo de Terapias Pseudocientíficas (APETP)</strong>.</p>`,
+  },
+  {
+    name: "Miguel Perlado",
+    role: "Psicólogo clínico y psicoterapeuta. Investigador sobre el sectarismo.",
+    photo: "/uploads/2025/10/Miguel_Perlado-256x300-1.jpg",
+    bio: `<ul class="list-disc space-y-1 pl-5"><li>Trabaja desde hace 25 años como psicólogo, tanto en la atención clínica como forense, especializado en psicoterapia individual, de pareja y familia.</li><li>Forma parte de la Federación Española de Asociaciones de Psicoterapeutas (FEAP).</li><li>Miembro asociado de la Sociedad Española de Psicoanálisis (SEP), integrada en la International Psychoanalytic Association (IPA).</li><li>Pertenece a la International Cultic Studies Association (ICSA).</li><li>Coordina desde 2010 el Grupo de Trabajo sobre Derivas Sectarias del Colegio Oficial de Psicología de Cataluña (COPC).</li><li>Creó la Asociación Iberoamericana para la Investigación del Abuso Psicológico (AIIAP) en 2010.</li></ul>`,
+  },
+  {
+    name: "Luis Santamaría del Río",
+    role: "Teólogo experto en sectas",
+    photo: "/uploads/2025/10/Luis_Santamaria-e1644150790228.jpeg",
+    bio: `<ul class="list-disc space-y-1 pl-5"><li>Licenciado en Teología, máster en Ciencias de las Religiones y experto universitario en Comunicación Social.</li><li>Miembro fundador de la Red Iberoamericana de Estudio de las Sectas (RIES), director de su Biblioteca-Centro de documentación «José María Baamonde».</li><li>Profesor en el máster de Análisis de la Conducta Criminal de la Universidad de Salamanca.</li><li>Autor de varios libros y numerosos artículos sobre el fenómeno sectario.</li><li>Ha impartido cursos y conferencias en varios países de Europa e Iberoamérica.</li></ul>`,
+  },
+];
+---
+
+<BaseLayout title="Quienes somos">
+  <!-- Hero -->
+  <section class="relative overflow-hidden bg-brand-ink text-white">
+    <img
+      src="/uploads/2025/10/16690551373007.jpg"
+      alt="Miembros de la junta directiva de la AEVTJ frente a la sede de los Testigos de Jehová en España"
+      class="absolute inset-0 h-full w-full object-cover"
+    />
+    <div class="absolute inset-0 bg-brand-ink/75"></div>
+    <div class="relative mx-auto max-w-[900px] px-5 py-24 text-center lg:px-8 lg:py-32">
+      <p class="font-heading text-sm uppercase tracking-[0.2em] text-white/80">
+        Asociación de víctimas de los Testigos de Jehová
+      </p>
+      <h1 class="mt-3 font-heading text-5xl font-bold uppercase tracking-wide sm:text-6xl">
+        Quienes somos
+      </h1>
+      <div class="mx-auto mt-3 h-1 w-24 bg-brand-olive"></div>
+      <p class="mt-6 text-lg text-white/90">Esta asociación está fundada por miembros como tú.</p>
+      <p class="mt-1 text-lg text-white/90">Por personas que han pasado o están pasando lo mismo que tú.</p>
+      <a
+        href="/uploads/2026/08/ESTATUTOS_WEB.pdf"
+        class="mt-8 inline-block rounded-md bg-brand-olive px-6 py-3 font-heading text-sm font-semibold uppercase tracking-wide text-white hover:bg-brand-olive-dark"
+      >
+        Nuestros Estatutos
+      </a>
+    </div>
+    <TornEdge />
+  </section>
+
+  <!-- Dos tarjetas -->
+  <section class="mx-auto max-w-[1200px] px-5 py-12 lg:px-8">
+    <div class="grid gap-6 sm:grid-cols-2">
+      <div class="relative flex min-h-[220px] flex-col justify-end overflow-hidden rounded-xl p-6 text-white shadow-lg">
+        <img
+          src="/uploads/2025/10/f857f1c1-ec62-4f58-8a6a-21d4322d9b2d.webp"
+          alt=""
+          class="absolute inset-0 h-full w-full object-cover"
+        />
+        <div class="absolute inset-0 bg-brand-ink/70"></div>
+        <div class="relative">
+          <h3 class="font-heading text-2xl font-semibold uppercase">Te necesitamos</h3>
+          <p class="mt-1 text-sm text-white/85">
+            Miles de personas alrededor del mundo están sufriendo prácticas coercitivas
+          </p>
+          <a
+            href="/hazte-socio/"
+            class="mt-4 inline-block rounded-md bg-brand-olive px-5 py-2 font-heading text-sm font-semibold uppercase tracking-wide text-white hover:bg-brand-olive-dark"
+          >
+            Hazte socio ya
+          </a>
+        </div>
+      </div>
+      <div class="relative flex min-h-[220px] flex-col justify-end overflow-hidden rounded-xl p-6 text-white shadow-lg">
+        <img
+          src="/uploads/2025/10/47f01e58-1a39-43ec-98ad-567033247c45.webp"
+          alt=""
+          class="absolute inset-0 h-full w-full object-cover"
+        />
+        <div class="absolute inset-0 bg-brand-olive-dark/75"></div>
+        <div class="relative">
+          <img src="/uploads/2025/10/right-quote-300x300.png" alt="" class="h-8 w-8" />
+          <h3 class="mt-3 font-heading text-2xl font-semibold uppercase">Recursos</h3>
+          <p class="mt-1 text-sm text-white/85">¿Necesitas ayuda legal o psicológica?</p>
+          <a
+            href="/contacto/"
+            class="mt-4 inline-block rounded-md bg-white px-5 py-2 font-heading text-sm font-semibold uppercase tracking-wide text-brand-ink hover:bg-brand-cream"
+          >
+            Contacta con nosotros
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nuestra misión -->
+  <section class="bg-brand-cream">
+    <div class="mx-auto max-w-[900px] px-5 py-16 lg:px-8">
+      <h2 class="text-center font-heading text-3xl font-semibold uppercase tracking-wide text-brand-ink sm:text-4xl">
+        Nuestra misión
+      </h2>
+      <div class="mission-tabs mt-8">
+        <div class="flex flex-wrap justify-center gap-3">
+          {
+            mission.map((m, i) => (
+              <button
+                type="button"
+                data-tab={m.id}
+                class={`tab-btn rounded-full px-5 py-2 font-heading text-sm font-semibold uppercase tracking-wide transition-colors ${i === 1 ? "is-active bg-brand-ink text-white" : "bg-white text-brand-ink hover:bg-brand-olive/10"}`}
+              >
+                {m.label}
+              </button>
+            ))
+          }
+        </div>
+        <div class="mt-8 rounded-xl bg-white p-6 shadow-sm sm:p-8">
+          {
+            mission.map((m, i) => (
+              <div class="tab-panel space-y-4 text-brand-ink/80" data-panel={m.id} hidden={i !== 1}>
+                {m.text.map((t) => <p set:html={t} />)}
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Junta directiva -->
+  <section class="relative overflow-hidden bg-brand-ink py-20">
+    <div
+      class="pointer-events-none absolute inset-0 opacity-[0.06]"
+      style="background-image: radial-gradient(circle, #fff 1px, transparent 1px); background-size: 22px 22px;"
+    >
+    </div>
+    <div class="relative mx-auto max-w-[1200px] px-5 lg:px-8">
+      <p class="text-center font-heading text-xs font-semibold uppercase tracking-[0.35em] text-brand-terracotta">
+        Un mismo equipo, una misma causa
+      </p>
+      <h2 class="mt-3 text-center font-heading text-3xl font-semibold uppercase tracking-wide text-white sm:text-4xl">
+        Nuestra junta directiva
+      </h2>
+      <p class="mx-auto mt-4 max-w-2xl text-center text-white/70">
+        Cuatro personas unidas por una misma experiencia y un mismo propósito: acompañar,
+        defender y dar voz a quienes han sufrido el ostracismo de los Testigos de Jehová.
+      </p>
+
+      <div class="relative mt-16">
+        <div
+          class="pointer-events-none absolute inset-x-8 top-[7.5rem] hidden h-px bg-gradient-to-r from-transparent via-white/25 to-transparent sm:block"
+        >
+        </div>
+        <div class="grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-4">
+          {
+            board.map((m) => (
+              <div class="group relative flex flex-col items-center text-center">
+                <span class="absolute -top-4 z-20 hidden h-2.5 w-2.5 rounded-full bg-brand-terracotta ring-4 ring-brand-ink sm:block" />
+                <div class="relative flex h-52 w-full items-end justify-center">
+                  <div class="absolute inset-x-6 top-4 bottom-2 rounded-[2rem] bg-gradient-to-b from-white/10 to-white/0 ring-1 ring-white/10 transition-colors duration-300 group-hover:ring-brand-terracotta/40" />
+                  <img
+                    src={m.photo}
+                    alt={m.name}
+                    class="relative z-10 h-full w-auto object-contain drop-shadow-[0_16px_22px_rgba(0,0,0,0.45)] transition-transform duration-300 group-hover:-translate-y-1"
+                  />
+                </div>
+                <h3 class="mt-6 font-heading text-lg font-bold uppercase tracking-wide text-white">{m.name}</h3>
+                <span class="mt-2 inline-block rounded-full bg-brand-terracotta px-3.5 py-1 font-heading text-[11px] font-semibold uppercase tracking-wider text-white">
+                  {m.role}
+                </span>
+                <p class="mt-3 text-sm leading-relaxed text-white/65">{m.bio}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portal de transparencia -->
+  <section class="bg-brand-cream">
+    <div class="mx-auto max-w-[820px] px-5 py-16 lg:px-8">
+      <h2 class="text-center font-heading text-3xl font-semibold uppercase tracking-wide text-brand-ink sm:text-4xl">
+        Portal de transparencia
+      </h2>
+      <div class="mt-8 divide-y divide-black/10 rounded-xl bg-white shadow-sm">
+        {
+          transparency.map((item) => (
+            <details class="group px-6 py-4 open:pb-5">
+              <summary class="flex cursor-pointer list-none items-center justify-between font-heading text-base font-semibold uppercase tracking-wide text-brand-ink">
+                {item.title}
+                <span class="ml-4 text-xl text-brand-olive transition-transform group-open:rotate-45">+</span>
+              </summary>
+              <div class="prose prose-sm mt-3 max-w-none text-brand-ink/75" set:html={item.body} />
+            </details>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Colaboradores -->
+  <section class="mx-auto max-w-[1200px] px-5 py-16 lg:px-8">
+    <h2 class="text-center font-heading text-3xl font-semibold uppercase tracking-wide text-brand-ink sm:text-4xl">
+      Nuestros colaboradores
+    </h2>
+    <p class="mx-auto mt-4 max-w-2xl text-center text-brand-ink/75">
+      El haber podido contar con grandes expertos en la materia nos ha hecho infinitamente
+      más conscientes de la necesidad y la buena dirección de la asociación
+    </p>
+    <div class="mt-12 space-y-12">
+      {
+        collaborators.map((c) => (
+          <div class="grid gap-8 rounded-xl bg-brand-cream p-6 lg:grid-cols-[1fr_320px] lg:p-10">
+            <div>
+              <h3 class="font-heading text-2xl font-bold uppercase text-brand-ink">{c.name}</h3>
+              <p class="mt-1 font-heading text-sm uppercase tracking-wide text-brand-olive">{c.role}</p>
+              <div class="prose prose-sm mt-5 max-w-none text-brand-ink/80" set:html={c.bio} />
+            </div>
+            <div class="aspect-[4/5] w-full overflow-hidden rounded-xl shadow-lg lg:order-2">
+              <img src={c.photo} alt={c.name} class="h-full w-full object-cover" />
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- Comportamientos inaceptables -->
+  <section class="bg-brand-cream">
+    <div class="mx-auto max-w-[820px] px-5 py-16 lg:px-8">
+      <h2 class="text-center font-heading text-3xl font-semibold uppercase tracking-wide text-brand-ink sm:text-4xl">
+        Sobre comportamientos inaceptables
+      </h2>
+      <div class="prose prose-sm mt-6 max-w-none text-brand-ink/80">
+        <p>
+          En la actual junta directiva de la Asociación Española de Víctimas de los
+          testigos de Jehová -AEVTJ-, creemos en la consecución de nuestras metas sin
+          violencia ni malos modales, como ya se ha comunicado en el apartado «nuestra
+          misión», una de ellas es dar a conocer a la sociedad los comportamientos
+          internos y desconocidos de la organización de los testigos de Jehová.
+        </p>
+        <p>
+          A pesar del daño recibido y que nuestro fuero interno nos lo demande,
+          caeríamos en malas prácticas si participáramos en malos comportamientos, en
+          tal caso estaríamos actuando de manera indecorosa y similar a la de ellos
+          como cuando insultan a la sociedad en general, a las personas en particular o
+          a las organizaciones religiosas de distinto origen con calificativos
+          impresentables.
+        </p>
+        <p>
+          <strong>
+            Es por tanto que invitamos a nuestros socios y simpatizantes a ganarles en
+            comportamiento, modales, habla con respeto, derecho a la propiedad y
+            libertad de culto.
+          </strong>
+        </p>
+        <p>Y por tanto, declaramos que:</p>
+        <ul>
+          <li>Siempre fomentamos la concordia con los testigos de Jehová, aunque ellos mismos no nos hablen.</li>
+          <li>Nunca les insultaremos, incluso en las peores circunstancias, llamándolos de manera que no podamos demostrar.</li>
+          <li>Nunca les acusamos de cosas indemostrables, solo informamos a la sociedad de asuntos que pueden ser comprobados y contrastados.</li>
+          <li>Nunca fomentaremos ni incitaremos al odio a las personas bajo ningún concepto.</li>
+          <li>Nunca pintamos ni manchamos sus propiedades, ni tendremos la intención de destruir cualquier propiedad de los testigos de Jehová ni de su organización.</li>
+          <li>Nunca nos introduciremos en sus locales de culto para dar escándalos en su interior, ni vituperar sus emblemas sagrados.</li>
+          <li>Nunca fomentaremos el asalto a sus instalaciones centrales ni locales.</li>
+          <li>Nuestro propósito es que se cumpla la legalidad para todos, y que cada uno se haga cargo de su parte de responsabilidad ante las autoridades.</li>
+          <li>Nos reservamos el derecho a manifestarnos de forma y modo legal con permiso de las autoridades.</li>
+          <li>Nos desvinculamos de cualquier actividad que hayan hecho personas de manera independiente y privada que no haya estado autorizada y dirigida por esta junta directiva o alguno de sus órganos rectores.</li>
+          <li>Nuestro trabajo está en las oficinas, en los despachos, en los medios de comunicación y en la calle, con el máximo respeto, siempre con verdad y con intensidad.</li>
+        </ul>
+        <p>
+          <strong>
+            Recordamos que estas normas son una extensión del artículo 20 del apartado 3
+            denominado socios, de nuestros estatutos.
+          </strong>
+          <u>Un socio que viole estas normas podría causar baja de la asociación según ese artículo.</u>
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  const buttons = document.querySelectorAll<HTMLButtonElement>(".tab-btn");
+  const panels = document.querySelectorAll<HTMLElement>(".tab-panel");
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const target = btn.dataset.tab;
+      buttons.forEach((b) => {
+        b.classList.toggle("is-active", b === btn);
+        b.classList.toggle("bg-brand-ink", b === btn);
+        b.classList.toggle("text-white", b === btn);
+        b.classList.toggle("bg-white", b !== btn);
+        b.classList.toggle("text-brand-ink", b !== btn);
+      });
+      panels.forEach((p) => {
+        p.hidden = p.dataset.panel !== target;
+      });
+    });
+  });
+</script>

@@ -1,0 +1,111 @@
+---
+// Mapa mundial real (CC-BY-4.0, @svg-maps/world), con los países donde tenemos
+// asociaciones aliadas resaltados e interactivos — hermano del mapa de España.
+import world from "@svg-maps/world";
+import { worldPartners } from "../data/partners";
+
+const partnersByCountry = new Map<string, { name: string; href: string | null }[]>();
+for (const p of worldPartners) {
+  if (!p.country) continue;
+  const list = partnersByCountry.get(p.country) ?? [];
+  list.push({ name: p.name, href: p.href });
+  partnersByCountry.set(p.country, list);
+}
+const activeCodes = new Set(partnersByCountry.keys());
+const countryData = Object.fromEntries(partnersByCountry);
+const displayNames = new Intl.DisplayNames(['es'], {type: 'region'});
+const countryName = (id: string, fallback: string) => /^[a-z]{2}$/i.test(id) ? displayNames.of(id.toUpperCase()) ?? fallback : fallback;
+---
+
+<div class="world-map mx-auto w-full max-w-3xl">
+  <svg
+    viewBox={world.viewBox}
+    role="img"
+    aria-label="Mapa mundial con los países donde tenemos asociaciones aliadas"
+    class="h-auto w-full"
+  >
+    {
+      world.locations.map((loc) => {
+        const active = activeCodes.has(loc.id);
+        return (
+          <path
+            d={loc.path}
+            data-name={countryName(loc.id, loc.name)}
+            aria-label={countryName(loc.id, loc.name)}
+            data-code={active ? loc.id : undefined}
+            class={active ? "region region-active" : "region"}
+            tabindex={active ? 0 : -1}
+          />
+        );
+      })
+    }
+  </svg>
+  <div class="region-label mt-5 min-h-[3.25rem] text-center" aria-live="polite">
+    <p class="default-label text-sm text-brand-ink/80">
+      Selecciona un país destacado
+    </p>
+  </div>
+</div>
+
+<style>
+  .world-map .region {
+    fill: #dce4d1;
+    stroke: #a2b28c;
+    stroke-width: 0.6;
+  }
+  .world-map .region-active {
+    fill: var(--color-brand-olive);
+    stroke: #f5f5ec;
+    cursor: pointer;
+  }
+  .world-map .region-active:hover,
+  .world-map .region-active:focus-visible {
+    fill: var(--color-brand-olive-dark);
+    animation-play-state: paused;
+  }
+  @keyframes world-pulse {
+    0%,
+    100% {
+      fill-opacity: 1;
+    }
+    50% {
+      fill-opacity: 0.55;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .world-map .region-active {
+      animation: none;
+    }
+  }
+</style>
+
+<script define:vars={{ countryData }}>
+  const wrap = document.querySelector(".world-map");
+  const label = wrap?.querySelector(".region-label");
+  const defaultHTML = label?.innerHTML ?? "";
+
+  wrap?.querySelectorAll(".region-active").forEach((el) => {
+    const show = () => {
+      if (!label) return;
+      const orgs = countryData[el.dataset.code] || [];
+      const links = orgs
+        .map((o) =>
+          o.href
+            ? `<a href="${o.href}" target="_blank" rel="nofollow noopener" class="underline underline-offset-4 text-brand-olive hover:text-brand-olive-dark">${o.name}</a>`
+            : o.name
+        )
+        .join(" · ");
+      label.innerHTML = `
+        <p class="font-heading text-sm uppercase tracking-widest text-brand-olive">${el.dataset.name}</p>
+        <p class="mt-1 text-sm text-brand-ink">${links}</p>
+      `;
+    };
+    const hide = () => {
+      if (label) label.innerHTML = defaultHTML;
+    };
+    el.addEventListener("mouseenter", show);
+    el.addEventListener("focus", show);
+    el.addEventListener("click", show);
+    // Keep the selected country's links available for keyboard and touch users.
+  });
+</script>

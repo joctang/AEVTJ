@@ -1,0 +1,319 @@
+---
+import "../styles/home-editorial.css";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SpainMap from "../components/SpainMap.astro";
+import WorldMap from "../components/WorldMap.astro";
+import GlobeMap from "../components/GlobeMap.astro";
+import TornEdge from "../components/TornEdge.astro";
+import HelpNotice from "../components/HelpNotice.astro";
+import { stats } from "../data/partners";
+
+const resourceCards = [
+  {
+    number: "01",
+    title: "Quiero salir",
+    text: "Guía para preparar el proceso con más seguridad y menos soledad.",
+    href: "/guia-para-salir-de-los-testigos-de-jehova/",
+    label: "Ver guía",
+  },
+  {
+    number: "02",
+    title: "Necesito apoyo",
+    text: "Contacto para ayuda legal, psicológica o comunitaria.",
+    href: "/contacto/",
+    label: "Contactar",
+  },
+  {
+    number: "03",
+    title: "Busco recursos",
+    text: "Documentos y materiales para entender qué ocurre.",
+    href: "/recursos-de-ayuda/",
+    label: "Ver recursos",
+  },
+];
+
+const evidenceCards = [
+  {
+    label: "Medios · RTVE",
+    title: "RTVE da voz a las víctimas del ostracismo",
+    image: "/uploads/2026/04/al-grano.webp",
+    href: "/noticias/rtve-da-voz-a-las-victimas-del-ostracismo-el-testimonio-de-marcos-en-directo-al-grano/",
+  },
+  {
+    label: "Radio · Cadena SER",
+    title: "Conversaciones pendientes",
+    image: "/uploads/2026/07/cabecera-cadena-ser-dani-testimonio-aevtj.webp",
+    href: "/noticias/conversaciones-pendientes-episodio-128-cadena-ser/",
+  },
+  {
+    label: "Legal",
+    title: "Victoria histórica de la AEVTJ",
+    image: "/uploads/2025/10/audiencia-provincial-de-madrid.webp",
+    href: "/noticias/victoria-historica-de-aevtj/",
+  },
+];
+
+const globalPartners = [
+  { label: "Asociación Civil Argentina de Ayuda a Víctimas de Sectas", image: "/uploads/2025/10/mundo-5bf827.svg", href: "https://asocavics.org/" },
+  { label: "Comunidad de Ex Testigos de Jehová México", image: "/uploads/2025/10/bandera-13b538.svg", href: "https://www.facebook.com/p/Comunidad-de-Ex-Testigos-de-Jehov%C3%A1-M%C3%A9xico-61562062544131/" },
+  { label: "Dales Unidos contra la Violencia Coercitiva", image: "/uploads/2025/10/bandera-13b538.svg", href: "https://www.instagram.com/dales.a.c/" },
+  { label: "exJW Support, UK peer support network", image: "/uploads/2025/10/reino-unido-64dcd5.svg", href: "http://www.exjwsupport.co.uk/" },
+  { label: "Probudili jsme se - Nos despertamos", image: "/uploads/2025/10/republica-checa-8eae56.svg", href: "http://facebook.com/groups/309238966897350" },
+  { label: "JZ Help e.V", image: "/uploads/2025/10/alemania-702b87.svg", href: "https://jz.help/" },
+];
+---
+
+<BaseLayout title="Inicio">
+  <div class="home-premium bg-brand-cream text-brand-ink">
+    <div class="home-ambient" aria-hidden="true"></div>
+
+    <section class="premium-hero" aria-labelledby="home-title">
+      <img
+        src="/uploads/2025/10/manos-unidas.webp"
+        alt="Varias manos unidas en un gesto de apoyo mutuo"
+        class="premium-hero__image"
+        fetchpriority="high"
+        width="1600" height="1067"
+      />
+      <div class="premium-hero__scrim" aria-hidden="true"></div>
+
+      <div class="premium-shell premium-hero__content">
+        <div class="hero-note"><span aria-hidden="true">↗</span> Una vida por delante</div>
+        <div class="premium-hero__copy" data-reveal>
+          <p class="premium-kicker">Asociación Española de Víctimas de los Testigos de Jehová y la JW.ORG</p>
+          <h1 id="home-title">No estás <em>solo.</em></h1>
+          <p>
+            Estamos aquí para escucharte, para ayudarte a recuperar tu vida como hemos hecho
+            nosotros y darte el apoyo que necesitas para dejar atrás la organización.
+          </p>
+          <div class="premium-actions">
+            <a href="/hazte-socio/" class="premium-button premium-button--solid">Únete a nuestra asociación</a>
+            <a href="/guia-para-salir-de-los-testigos-de-jehova/" class="premium-button premium-button--ghost">
+              Guía de cómo salir de los Testigos de Jehová
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-bottom"><span>Apoyo, comunidad y <strong>libertad para ser tú.</strong></span><a href="#ayuda">Descubre cómo podemos ayudarte <span aria-hidden="true">↓</span></a></div>
+      </div>
+    </section>
+
+    <section id="ayuda" class="premium-shell floating-routes" data-scene="light" aria-label="Rutas de ayuda">
+      <p class="premium-kicker" data-reveal style="grid-column:1/-1">Empieza por tu situación</p>
+      {
+        resourceCards.map((card, i) => (
+          <a href={card.href} class="route-card" data-reveal style={`transition-delay:${i * 150}ms`}>
+            <span>{card.number}</span>
+            <h2>{card.title}</h2>
+            <p>{card.text}</p>
+            <strong>{card.label}</strong>
+          </a>
+        ))
+      }
+    </section>
+
+    <section class="premium-shell split-section help-section" data-scene="light">
+      <div class="section-copy" data-reveal>
+        <p class="premium-kicker">Ayuda y recursos</p>
+        <h2>Tanto si tienes dudas como si no sabes cuál es el siguiente paso que vas a dar, estamos aquí para AYUDAR</h2>
+        <p>
+          Todos los que pertenecen a la asociación han sido Testigos de Jehová por muchos años,
+          por lo que conocemos todas las piedras del camino a recorrer.
+        </p>
+        <a href="/recursos-de-ayuda/" class="premium-button premium-button--dark">Consulta nuestros recursos</a>
+      </div>
+      <div class="layered-media" data-reveal>
+        <img src="/uploads/2025/10/pexels-fauxels-3184398.webp" alt="Grupo de personas compartiendo un momento de cercanía" loading="lazy" />
+        <span aria-hidden="true"></span>
+      </div>
+    </section>
+
+    <section class="dark-story" data-scene="dusk">
+      <div class="premium-shell dark-story__grid">
+        <div class="dark-story__sticky" data-reveal>
+          <p class="premium-kicker">Somos víctimas</p>
+          <h2>Cuando la fe te condena</h2>
+        </div>
+        <div class="story-text" data-reveal>
+          <p>La religión es en ocasiones un refugio, un lugar donde <strong>encontrar paz, apoyo y comprensión</strong>. Pero, ¿qué pasa cuando se convierte en una prisión invisible?</p>
+          <p>Los <strong>Testigos de Jehová</strong> tienen, en ocasiones, un estricto control sobre el comportamiento de cómo debes vivir, pensar, sentir, o a quién tienes que obedecer. Para algunos, esta presión es asfixiante. Si decides irte, las consecuencias, además, pueden ser devastadoras desde un plano social, como el ostracismo, pero también psicológicamente.</p>
+          <p>Desde la Asociación Española de Víctimas de los Testigos de Jehová abogamos por los derechos humanos, y podemos explicar qué hay detrás de esta organización a la que durante años hemos entregado nuestra vida.</p>
+        </div>
+      </div>
+      <TornEdge />
+    </section>
+
+    <section class="premium-shell world-section" data-scene="sage">
+      <div class="section-head" data-reveal>
+        <p class="premium-kicker">Somos un movimiento mundial</p>
+        <h2>Somos un movimiento mundial</h2>
+        <p>
+          Algunas de las asociaciones de víctimas que por todo el mundo se han unido para apoyarse mutuamente
+          contra el ostracismo que la organización de los testigos de Jehová les ha causado en sus vidas.
+        </p>
+      </div>
+      <div class="partner-grid" data-reveal>
+        {
+          globalPartners.map((partner) => (
+            <a href={partner.href} target="_blank" rel="nofollow noopener" class="partner-card">
+              <img src={partner.image} alt="" loading="lazy" />
+              <span>{partner.label}</span>
+            </a>
+          ))
+        }
+      </div>
+      <div class="map-panel map-panel--split" data-reveal>
+        <WorldMap />
+        <GlobeMap />
+      </div>
+    </section>
+
+    <section class="premium-shell split-section spain-section">
+      <div class="section-copy" data-reveal>
+        <p class="premium-kicker">Presencia en España</p>
+        <h2>815 Miembros en España</h2>
+        <p>
+          En España, en poco tiempo, la Asociación Española de Víctimas de los Testigos de Jehová ha conseguido
+          reunir a más de 800 miembros en lo que es un movimiento imparable, teniendo presencia en todas las comunidades
+          autónomas del país.
+        </p>
+        <p>Pasa tu cursor por el <strong>mapa interactivo</strong> para ver los socios por comunidad autónoma.</p>
+      </div>
+      <div class="map-panel map-panel--spain" data-reveal>
+        <SpainMap />
+      </div>
+    </section>
+
+    <section class="premium-shell split-section beliefs-section" data-scene="light">
+      <div class="section-copy" data-reveal>
+        <p class="premium-kicker">Qué hay detrás de sus creencias</p>
+        <h2>¿Quiénes son los Testigos de Jehová?</h2>
+        <p>
+          ¿En qué <strong>creen</strong> los testigos de Jehová? ¿Por qué no celebran <strong>cumpleaños</strong>?
+          ¿Qué los lleva a rechazar <strong>transfusiones de sangre</strong>? Sus creencias no solo son diferentes,
+          <strong>pueden cambiar para siempre la vida de quienes las siguen</strong>.
+        </p>
+        <p>Te explicaremos qué hay detrás de esta organización a la que durante años hemos entregado nuestra vida.</p>
+      </div>
+      <div class="layered-media layered-media--soft" data-reveal>
+        <img src="/uploads/elementor/thumbs/a-realistic-image-of-a-young-boy-standin__i0gZB1hSTmTNDtTGBsG3A_mOEnkpnkR1S6MSydVzNR-A-rcuy1lelv61si9l1b8a11tyl27pvyasgsnf4yez11w.jpeg" alt="Niño en una representación simbólica" loading="lazy" />
+        <span aria-hidden="true"></span>
+      </div>
+    </section>
+
+    <section class="dark-story dark-story--ostracism" data-scene="dusk">
+      <img src="/uploads/2025/10/animal-beach-blur-1817048.jpg" alt="" class="dark-story__bg" loading="lazy" />
+      <div class="premium-shell dark-story__grid">
+        <div class="dark-story__sticky" data-reveal>
+          <p class="premium-kicker">Ostracismo o exclusión social</p>
+          <h2>El precio de salir de la JW.ORG: Ostracismo o exclusión social</h2>
+        </div>
+        <div class="story-text" data-reveal>
+          <p>¿Qué pasa cuando alguien decide abandonar la organización?</p>
+          <p>El castigo no es físico, pero duele igual (o más). Se llama <strong>ostracismo</strong>: <strong>nadie te habla, nadie te mira, nadie te recuerda que existes</strong>. Tu familia, tus amigos, toda tu vida anterior… se esfuma. Y no porque tú lo elijas, sino porque <strong>así lo dictan sus reglas</strong>.</p>
+          <p>Pero eso no es todo. También está la culpa interiorizada. Te han enseñado que, fuera de su mundo, no hay salvación. Que sin ellos, eres un traidor, un pecador, un alma perdida. Y el miedo se clava hondo. Porque ¿qué haces cuando todo lo que conocías desaparece de un día para otro? Tienes que aprender a vivir con normalidad fuera de los Testigos de Jehová.</p>
+          <p>Por eso, <strong>cada vez más exadeptos de los Testigos de Jehová en España nos atrevemos a expresar</strong> públicamente lo que antes callábamos: <strong>la presión emocional</strong>, la vulneración de la dignidad, el honor y la intimidad, la imposición de una verdad inapelable que <strong>aplasta derechos, especialmente los de las mujeres y la comunidad LGTBIQ+</strong>.</p>
+          <p>Y lo peor: denuncias de presunto encubrimiento de delitos graves, incluso abusos sexuales. Porque <strong>dentro, el silencio existe</strong>. Y salir de ahí no es fácil.</p>
+        </div>
+      </div>
+      <TornEdge />
+    </section>
+
+    <section class="premium-shell split-section doubts-section">
+      <div class="layered-media" data-reveal>
+        <img src="/uploads/elementor/thumbs/n9iuhr26fo4hrtjiyztf-rcuy21dv3cnnzmxtpx6oq7xf5rj4l5jwiuie44bc44.jpg" alt="Persona alejándose por una calle, simbolizando el camino de salida" loading="lazy" />
+        <span aria-hidden="true"></span>
+      </div>
+      <div class="section-copy" data-reveal>
+        <p class="premium-kicker">Tienes dudas</p>
+        <h2>¿Te estás planteando poder dejar a los Testigos de Jehová?</h2>
+        <p>
+          <em>Es posible que tengas miedo, o que te sientas <strong>atrapado</strong>. Pero no es así. Aquí vamos a mostrarte <strong>cómo</strong> recuperarte y volver a ser tú mismo. Queremos que sepas que <u>no estás solo</u>. Ya has dado el primer paso al buscar <strong>información</strong>. Nosotros estamos contigo.</em>
+        </p>
+        <a href="/guia-para-salir-de-los-testigos-de-jehova/" class="premium-button premium-button--dark">Pasos para salir</a>
+      </div>
+    </section>
+
+    <section class="dark-story dark-story--visibility" data-scene="dusk">
+      <img src="/uploads/2025/10/foto-noticias.jpg" alt="" class="dark-story__bg" loading="lazy" />
+      <div class="premium-shell dark-story__grid">
+        <div class="dark-story__sticky" data-reveal>
+          <p class="premium-kicker">Somos víctimas de los testigos de Jehová</p>
+          <h2>Visibilizar y denunciar</h2>
+        </div>
+        <div class="story-text" data-reveal>
+          <p>Si estás leyendo esto y has pasado por algo parecido, hay algo que debes saber: <strong><u>no estás solo</u></strong>.</p>
+          <p><strong>No eres un traidor, ni un pecador, ni un alma perdida</strong>. Eres una persona que <strong>has elegido la libertad</strong>. Y aunque ahora duela, hay vida después de ellos. Hay personas que te entienden, que te escuchan y que no van a juzgarte por pensar diferente.</p>
+          <p>Porque las secuelas son reales. <strong>Muchas personas que han logrado salir arrastran ansiedad, depresión e incluso pensamientos suicidas.</strong> Cuando te arrebatan tu entorno, cuando te enseñan a vivir con miedo al mundo, cuando te hacen creer que fuera de su mundo solo hay vacío… romper esas cadenas se convierte en una batalla diaria hasta conseguir asumir confianza en el mundo.</p>
+          <p>Desde esta asociación, <strong>estamos aquí para eso</strong>. Para <strong>VISIBILIZAR</strong> lo que muchos prefieren callar. Para <strong>EXPRESAR</strong> el daño que se esconde detrás de estas prácticas y <strong>ofrecer apoyo y asesoramiento psicológico y legal</strong> a quienes siguen atrapados en esa red de control y culpa.</p>
+          <p>Porque creemos en algo muy simple, pero que a algunos les cuesta aceptar: <strong>nadie debería tener que elegir entre su libertad y su familia.</strong></p>
+          <p><strong>Si necesitas apoyo, estamos aquí. Escríbenos o date de alta como socio.</strong></p>
+          <HelpNotice tone="dark" class="mt-5" />
+        </div>
+      </div>
+      <TornEdge />
+    </section>
+
+    <section class="premium-shell evidence-section" data-scene="sage">
+      <div class="section-head" data-reveal>
+        <p class="premium-kicker">Visibilidad pública</p>
+        <h2>Noticias y documentos destacados</h2>
+      </div>
+      <div class="evidence-grid">
+        {
+          evidenceCards.map((card, i) => (
+            <a href={card.href} class="evidence-card" data-reveal style={`transition-delay:${i * 150}ms`}>
+              <img src={card.image} alt={card.title} loading="lazy" />
+              <div>
+                <p>{card.label}</p>
+                <h3>{card.title}</h3>
+              </div>
+            </a>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="premium-shell split-section freedom-section">
+      <div class="section-copy" data-reveal>
+        <p class="premium-kicker">Diste el paso más difícil</p>
+        <h2>Ex Testigos de Jehová: Recupera tu libertad y aprende a ser tú</h2>
+        <p>
+          <strong>Salir no es el final, es el principio</strong> de algo nuevo. Pero también es un camino lleno de desafíos.
+          Si eres un ex Testigo de Jehová, aquí tienes <strong>herramientas, consejos y apoyo</strong> para dejar atrás el
+          pasado y construir una vida que realmente sea tuya. Te acompañamos.
+        </p>
+        <a href="/hazte-socio/" class="premium-button premium-button--dark">Únete a la comunidad</a>
+      </div>
+      <div class="layered-media layered-media--round" data-reveal>
+        <img src="/uploads/elementor/thumbs/f3ngaqgnablhquuoonzb-rcuy2bq36j1tjcit1jnkznbhp045xtoy89oqe5w07o.jpg" alt="Grupo de personas apoyándose" loading="lazy" />
+        <span aria-hidden="true"></span>
+      </div>
+    </section>
+
+    <section class="quote-section">
+      <div class="premium-shell quote-section__inner" data-reveal>
+        <img src="/uploads/2025/10/Sam_Harris_signature.svg.png" alt="Firma de Sam Harris" />
+        <blockquote>
+          "La fe ciega en la autoridad es el mayor enemigo de la verdad. Mientras aceptemos sin cuestionar las palabras de profetas muertos y textos antiguos, seguiremos siendo prisioneros de nuestra propia ignorancia."
+        </blockquote>
+        <p>Sam Harris · neurocientífico, filósofo y autor estadounidense</p>
+      </div>
+    </section>
+
+    <section class="stats-section">
+      <img src="/uploads/2025/10/a-cinematic-medium-shot-of-multiple-arms_MslghtrpSxODFr56MFRwOA_wRBDBTaGS1GzAsbmLgfzeg.jpeg" alt="" loading="lazy" />
+      <div class="premium-shell stats-grid">
+        {
+          stats.map((s, i) => (
+            <div class="stat-card" data-reveal style={`transition-delay:${i * 90}ms`}>
+              <strong>+<span data-stat-target={s.value}>{s.value}</span></strong>
+              <p>{s.label}</p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+  </div>
+
+</BaseLayout>

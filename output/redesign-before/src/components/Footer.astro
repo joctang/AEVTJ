@@ -1,0 +1,96 @@
+---
+import { mainNav, socialLinks, legalLinks } from "../data/nav";
+import Icon from "./Icon.astro";
+---
+
+<footer class="bg-brand-ink text-white">
+  <div class="mx-auto max-w-[1200px] px-5 py-12 lg:px-8">
+    <div class="grid gap-10 lg:grid-cols-[1.2fr_1fr_1fr]">
+      <div>
+        <img
+          src="/uploads/2025/10/Diseno-sin-titulo-98-e1759916679544.png"
+          alt="AEVTJ"
+          class="h-12 w-auto brightness-0 invert"
+        />
+        <p class="mt-4 max-w-sm text-sm leading-relaxed text-white/70">
+          Asociación Española de Víctimas de los Testigos de Jehová y la JW.ORG. Estamos
+          aquí para escucharte, ayudarte a recuperar tu vida y darte el apoyo que
+          necesitas para dejar atrás la organización.
+        </p>
+        <div class="mt-5 flex items-center gap-3">
+          {
+            socialLinks.map((s) => (
+              <a
+                href={s.href}
+                target="_blank"
+                rel="nofollow noopener"
+                aria-label={s.label}
+                class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 transition-colors hover:bg-brand-olive"
+              >
+                <Icon name={s.icon as any} class="h-4 w-4" />
+              </a>
+            ))
+          }
+        </div>
+      </div>
+
+      <nav aria-label="Menú de pie de página">
+        <h2 class="font-heading text-sm uppercase tracking-widest text-white/50">Menú</h2>
+        <ul class="mt-4 flex flex-col gap-2 text-sm">
+          {
+            mainNav.map((item) => (
+              <li>
+                <a href={item.href === "#" ? "/legal/" : item.href} class="text-white/80 hover:text-white">
+                  {item.label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+
+      <div>
+        <h2 class="font-heading text-sm uppercase tracking-widest text-white/50">
+          Newsletter
+        </h2>
+        <p class="mt-4 text-sm text-white/70">
+          Recibe nuestra newsletter mensual de forma totalmente gratuita y mantente
+          informado.
+        </p>
+        <form class="mt-4 flex flex-col gap-3" onsubmit="return false">
+          <input
+            type="email"
+            placeholder="Tu correo electrónico"
+            class="rounded-md border border-white/20 bg-white/5 px-3 py-2 text-sm text-white placeholder-white/40 outline-none focus:border-brand-olive"
+          />
+          <label class="flex items-start gap-2 text-xs text-white/60">
+            <input type="checkbox" class="mt-0.5" />
+            Acepto la Política de Privacidad y el tratamiento de mis datos con el fin de
+            recibir la newsletter.
+          </label>
+          <button
+            type="submit"
+            class="rounded-md bg-brand-olive px-4 py-2 text-sm font-semibold uppercase tracking-wide text-white transition-colors hover:bg-brand-olive-dark"
+          >
+            Suscribirme
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="mt-10 flex flex-col gap-3 border-t border-white/10 pt-6 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between">
+      <p>© {new Date().getFullYear()} Asociación Española de Victimas de los Testigos de Jehová</p>
+      <ul class="flex flex-wrap gap-x-5 gap-y-1">
+        {
+          legalLinks.map((l) => (
+            <li>
+              <a href={l.href} class="hover:text-white">
+                {l.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</footer>

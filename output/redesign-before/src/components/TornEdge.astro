@@ -1,0 +1,17 @@
+---
+// Torn-paper edge divider used under photo heroes on the original site
+// (Elementor background-overlay with shape-bottom.png, repeat-x).
+interface Props {
+  class?: string;
+  size?: "md" | "lg";
+}
+const { class: klass = "", size = "lg" } = Astro.props;
+const height = size === "lg" ? "h-14" : "h-8";
+const backgroundSize = size === "lg" ? "700px 56px" : "400px 32px";
+---
+
+<div
+  class={`pointer-events-none absolute inset-x-0 bottom-0 ${height} bg-repeat-x bg-bottom ${klass}`}
+  style={`background-image:url('/uploads/2025/10/shape-bottom.png'); background-size:${backgroundSize};`}
+>
+</div>

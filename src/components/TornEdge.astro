@@ -1,0 +1,5 @@
+---
+interface Props { class?: string; size?: "md" | "lg"; }
+const { class: klass = "" } = Astro.props;
+---
+<div class={`section-edge ${klass}`} aria-hidden="true"></div>

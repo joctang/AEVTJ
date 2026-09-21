@@ -1,0 +1,76 @@
+---
+// Real geographic map of Spain's Comunidades Autónomas (CC-BY-4.0, @svg-maps/spain),
+// styled to match the brand and made hoverable — replaces the original site's
+// interactive-map plugin, which can't be ported 1:1 without its backend/data.
+import spain from "@svg-maps/spain";
+
+const nameEs: Record<string, string> = {
+  andalusia: "Andalucía",
+  aragon: "Aragón",
+  asturias: "Asturias",
+  "balearic-islands": "Islas Baleares",
+  "basque-country": "País Vasco",
+  "canary-islands": "Islas Canarias",
+  cantabria: "Cantabria",
+  "castile-and-leon": "Castilla y León",
+  "castile-la-mancha": "Castilla-La Mancha",
+  catalonia: "Cataluña",
+  extremadura: "Extremadura",
+  galicia: "Galicia",
+  "la-rioja": "La Rioja",
+  madrid: "Madrid",
+  murcia: "Región de Murcia",
+  navarre: "Navarra",
+  valencia: "C. Valenciana",
+};
+---
+
+<div class="spain-map mx-auto w-full max-w-lg">
+  <svg
+    viewBox={spain.viewBox}
+    role="img"
+    aria-label="Mapa de España por comunidades autónomas"
+    class="h-auto w-full"
+  >
+    {
+      spain.locations.map((loc) => (
+        <path
+          d={loc.path}
+          data-name={nameEs[loc.id] ?? loc.name}
+          tabindex="0"
+          class="region cursor-pointer stroke-brand-ink [stroke-width:1] transition-colors duration-150"
+        />
+      ))
+    }
+  </svg>
+  <p class="region-label mt-3 text-center font-heading text-sm uppercase tracking-widest text-white/70">
+    Pasa el cursor por una comunidad autónoma
+  </p>
+</div>
+
+<style>
+  .spain-map .region {
+    fill: color-mix(in srgb, var(--color-brand-olive) 45%, white);
+  }
+  .spain-map .region:hover,
+  .spain-map .region:focus-visible {
+    fill: #ffffff;
+  }
+</style>
+
+<script>
+  document.querySelectorAll<SVGPathElement>(".spain-map .region").forEach((el) => {
+    const label = el.closest(".spain-map")?.querySelector(".region-label");
+    const defaultText = label?.textContent ?? "";
+    const show = () => {
+      if (label) label.textContent = el.dataset.name ?? defaultText;
+    };
+    const hide = () => {
+      if (label) label.textContent = defaultText;
+    };
+    el.addEventListener("mouseenter", show);
+    el.addEventListener("focus", show);
+    el.addEventListener("mouseleave", hide);
+    el.addEventListener("blur", hide);
+  });
+</script>

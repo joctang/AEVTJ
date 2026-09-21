@@ -1,0 +1,87 @@
+---
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import CookieBanner from "../components/CookieBanner.astro";
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = "Asociación Española de Víctimas de los Testigos de Jehová y la JW.ORG. Escuchamos, apoyamos y ayudamos a recuperar la vida tras salir de la organización.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/uploads/2025/10/Logo-avtj-300x300.png" />
+    <title>{title} · AEVTJ</title>
+    <meta name="description" content={description} />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="flex min-h-screen flex-col bg-white">
+    <Header />
+    <main class="flex-1">
+      <slot />
+    </main>
+    <Footer />
+    <CookieBanner />
+
+    <script>
+      document.documentElement.classList.add("reveal-ready");
+
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              revealObserver.unobserve(entry.target);
+            }
+          }
+        },
+        { threshold: 0.15, rootMargin: "0px 0px -60px 0px" }
+      );
+      document.querySelectorAll("[data-reveal]").forEach((el) => revealObserver.observe(el));
+
+      const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const statObserver = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            if (!entry.isIntersecting) continue;
+            const el = entry.target;
+            const target = parseInt(el.dataset.statTarget || "0", 10);
+            statObserver.unobserve(el);
+            if (prefersReducedMotion) {
+              el.textContent = String(target);
+              continue;
+            }
+            const duration = 1000;
+            const start = performance.now();
+            const tick = (now: number) => {
+              const progress = Math.min((now - start) / duration, 1);
+              const eased = 1 - Math.pow(1 - progress, 3);
+              el.textContent = String(Math.round(target * eased));
+              if (progress < 1) requestAnimationFrame(tick);
+              else el.textContent = String(target);
+            };
+            requestAnimationFrame(tick);
+          }
+        },
+        { threshold: 0.6 }
+      );
+      document.querySelectorAll("[data-stat-target]").forEach((el) => statObserver.observe(el));
+    </script>
+  </body>
+</html>

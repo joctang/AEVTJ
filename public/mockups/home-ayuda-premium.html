@@ -1,0 +1,911 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mockup Home Ayuda Premium · AEVTJ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --olive: #5b6934;
+        --olive-dark: #3f4b22;
+        --ink: #22241c;
+        --cream: #f2eee1;
+        --paper: #fbfaf5;
+        --terracotta: #b45c34;
+        --sand: #ded5bd;
+        --line: rgba(34, 36, 28, 0.14);
+        --ease: cubic-bezier(0.23, 1, 0.32, 1);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Inter, system-ui, sans-serif;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        border-bottom: 1px solid rgba(34, 36, 28, 0.08);
+        background: rgba(251, 250, 245, 0.88);
+        backdrop-filter: blur(18px);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 28px;
+        width: min(1180px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 16px 0;
+      }
+
+      .logo {
+        height: 42px;
+        width: auto;
+      }
+
+      .navlinks {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: var(--olive-dark);
+      }
+
+      .nav-cta,
+      .btn {
+        display: inline-flex;
+        min-height: 46px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 6px;
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        transition:
+          transform 160ms var(--ease),
+          background 180ms var(--ease),
+          color 180ms var(--ease),
+          border-color 180ms var(--ease);
+      }
+
+      .nav-cta {
+        padding: 0 18px;
+        background: var(--ink);
+        color: white;
+      }
+
+      .btn {
+        padding: 0 22px;
+        border: 1px solid transparent;
+      }
+
+      .nav-cta:active,
+      .btn:active,
+      .path-card:active,
+      .news-card:active {
+        transform: scale(0.98);
+      }
+
+      .btn.primary {
+        background: var(--olive);
+        color: white;
+      }
+
+      .btn.primary:hover {
+        background: var(--olive-dark);
+      }
+
+      .btn.secondary {
+        border-color: rgba(255, 255, 255, 0.46);
+        color: white;
+      }
+
+      .btn.secondary:hover {
+        background: rgba(255, 255, 255, 0.12);
+      }
+
+      .hero {
+        position: relative;
+        min-height: 720px;
+        overflow: hidden;
+        background: var(--ink);
+        color: white;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: auto 0 0;
+        height: 180px;
+        background: linear-gradient(180deg, transparent, var(--paper));
+      }
+
+      .hero-img {
+        position: absolute;
+        inset: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        opacity: 0.42;
+      }
+
+      .hero-overlay {
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(90deg, rgba(17, 19, 14, 0.9), rgba(17, 19, 14, 0.56) 52%, rgba(17, 19, 14, 0.28)),
+          radial-gradient(circle at 80% 24%, rgba(180, 92, 52, 0.2), transparent 34%);
+      }
+
+      .hero-inner {
+        position: relative;
+        z-index: 2;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 360px;
+        gap: 56px;
+        width: min(1180px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 118px 0 160px;
+      }
+
+      .eyebrow,
+      .section-kicker,
+      .tag {
+        font-family: "Barlow Condensed", sans-serif;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .eyebrow {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 15px;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        font-family: "Barlow Condensed", sans-serif;
+        line-height: 0.94;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        max-width: 720px;
+        margin-top: 22px;
+        font-size: clamp(72px, 10vw, 128px);
+        font-weight: 800;
+        letter-spacing: 0.01em;
+      }
+
+      .hero-copy {
+        max-width: 650px;
+        margin-top: 24px;
+        color: rgba(255, 255, 255, 0.88);
+        font-size: 20px;
+        line-height: 1.6;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 34px;
+      }
+
+      .urgent-panel {
+        align-self: end;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+        background: rgba(242, 238, 225, 0.1);
+        box-shadow: 0 24px 70px rgba(0, 0, 0, 0.32);
+        backdrop-filter: blur(16px);
+      }
+
+      .urgent-panel header {
+        padding: 22px 22px 14px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      }
+
+      .urgent-panel h2 {
+        font-size: 32px;
+      }
+
+      .urgent-panel p {
+        margin: 10px 0 0;
+        color: rgba(255, 255, 255, 0.74);
+        line-height: 1.55;
+      }
+
+      .urgent-list {
+        display: grid;
+        gap: 1px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+
+      .urgent-list a {
+        display: grid;
+        grid-template-columns: 38px 1fr;
+        gap: 14px;
+        padding: 18px 22px;
+        background: rgba(255, 255, 255, 0.055);
+        transition:
+          background 180ms var(--ease),
+          transform 180ms var(--ease);
+      }
+
+      .urgent-list a:hover {
+        background: rgba(255, 255, 255, 0.11);
+      }
+
+      .num {
+        display: grid;
+        height: 38px;
+        width: 38px;
+        place-items: center;
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        border-radius: 50%;
+        color: var(--sand);
+        font-family: "Barlow Condensed", sans-serif;
+        font-weight: 800;
+      }
+
+      .urgent-list strong {
+        display: block;
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 21px;
+        text-transform: uppercase;
+      }
+
+      .urgent-list span {
+        display: block;
+        margin-top: 3px;
+        color: rgba(255, 255, 255, 0.66);
+        font-size: 14px;
+        line-height: 1.45;
+      }
+
+      .stats-strip {
+        position: relative;
+        z-index: 3;
+        width: min(1040px, calc(100% - 40px));
+        margin: -74px auto 0;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: rgba(251, 250, 245, 0.94);
+        box-shadow: 0 24px 80px rgba(34, 36, 28, 0.12);
+      }
+
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .stat {
+        padding: 28px;
+        text-align: center;
+      }
+
+      .stat + .stat {
+        border-left: 1px solid var(--line);
+      }
+
+      .stat strong {
+        display: block;
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 56px;
+        line-height: 0.9;
+      }
+
+      .stat span {
+        display: block;
+        margin-top: 8px;
+        color: rgba(34, 36, 28, 0.62);
+        font-family: "Barlow Condensed", sans-serif;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      section {
+        width: min(1180px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 96px 0;
+      }
+
+      .section-head {
+        display: grid;
+        grid-template-columns: minmax(0, 0.8fr) minmax(280px, 0.55fr);
+        gap: 44px;
+        align-items: end;
+        margin-bottom: 36px;
+      }
+
+      .section-kicker {
+        display: block;
+        margin-bottom: 10px;
+        color: var(--olive);
+        font-size: 14px;
+      }
+
+      .section-head h2 {
+        font-size: clamp(42px, 5vw, 70px);
+      }
+
+      .section-head p {
+        margin: 0;
+        color: rgba(34, 36, 28, 0.72);
+        line-height: 1.65;
+      }
+
+      .path-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+      }
+
+      .path-card {
+        min-height: 330px;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: white;
+        padding: 26px;
+        transition:
+          transform 200ms var(--ease),
+          box-shadow 200ms var(--ease),
+          border-color 200ms var(--ease);
+      }
+
+      .path-card:hover {
+        transform: translateY(-5px);
+        border-color: rgba(91, 105, 52, 0.35);
+        box-shadow: 0 22px 54px rgba(34, 36, 28, 0.1);
+      }
+
+      .path-card .tag {
+        color: var(--terracotta);
+        font-size: 13px;
+      }
+
+      .path-card h3 {
+        margin-top: 38px;
+        font-size: 38px;
+      }
+
+      .path-card p {
+        margin: 16px 0 0;
+        color: rgba(34, 36, 28, 0.7);
+        line-height: 1.65;
+      }
+
+      .path-card .link {
+        display: inline-flex;
+        margin-top: 28px;
+        color: var(--olive-dark);
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+
+      .feature {
+        display: grid;
+        grid-template-columns: 0.95fr 1.05fr;
+        gap: 54px;
+        align-items: center;
+      }
+
+      .feature-media {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 28px 80px rgba(34, 36, 28, 0.18);
+      }
+
+      .feature-media img {
+        aspect-ratio: 4 / 5;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .feature-media::after {
+        content: "Guía AEVTJ";
+        position: absolute;
+        left: 18px;
+        bottom: 18px;
+        border-radius: 999px;
+        background: rgba(34, 36, 28, 0.84);
+        color: white;
+        padding: 8px 12px;
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .feature-content h2 {
+        font-size: clamp(48px, 6vw, 88px);
+      }
+
+      .feature-content p {
+        color: rgba(34, 36, 28, 0.74);
+        font-size: 18px;
+        line-height: 1.7;
+      }
+
+      .steps {
+        display: grid;
+        gap: 12px;
+        margin: 30px 0;
+      }
+
+      .step {
+        display: grid;
+        grid-template-columns: 46px 1fr;
+        gap: 16px;
+        align-items: start;
+        border-top: 1px solid var(--line);
+        padding-top: 18px;
+      }
+
+      .step b {
+        display: grid;
+        height: 46px;
+        width: 46px;
+        place-items: center;
+        border-radius: 50%;
+        background: var(--cream);
+        color: var(--olive-dark);
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 22px;
+      }
+
+      .step strong {
+        display: block;
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 24px;
+        text-transform: uppercase;
+      }
+
+      .step span {
+        display: block;
+        margin-top: 4px;
+        color: rgba(34, 36, 28, 0.68);
+        line-height: 1.55;
+      }
+
+      .media-band {
+        width: 100%;
+        max-width: none;
+        background: var(--ink);
+        color: white;
+      }
+
+      .media-inner {
+        width: min(1180px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 96px 0;
+      }
+
+      .media-head {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 32px;
+        margin-bottom: 34px;
+      }
+
+      .media-head h2 {
+        max-width: 660px;
+        font-size: clamp(42px, 5vw, 72px);
+      }
+
+      .media-logos {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .media-logos span {
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 999px;
+        padding: 10px 14px;
+        color: rgba(255, 255, 255, 0.76);
+        font-family: "Barlow Condensed", sans-serif;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .news-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 0.9fr 0.9fr;
+        gap: 18px;
+      }
+
+      .news-card {
+        overflow: hidden;
+        border-radius: 10px;
+        background: white;
+        color: var(--ink);
+        transition:
+          transform 200ms var(--ease),
+          box-shadow 200ms var(--ease);
+      }
+
+      .news-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 22px 54px rgba(0, 0, 0, 0.18);
+      }
+
+      .news-card img {
+        aspect-ratio: 16 / 10;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .news-card.big img {
+        aspect-ratio: 16 / 9;
+      }
+
+      .news-card div {
+        padding: 22px;
+      }
+
+      .news-card small {
+        color: var(--terracotta);
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.11em;
+        text-transform: uppercase;
+      }
+
+      .news-card h3 {
+        margin-top: 10px;
+        font-size: 32px;
+        line-height: 1.05;
+      }
+
+      .news-card p {
+        color: rgba(34, 36, 28, 0.68);
+        line-height: 1.55;
+      }
+
+      .final-cta {
+        position: relative;
+        width: min(1180px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 0 0 96px;
+      }
+
+      .final-panel {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 28px;
+        align-items: center;
+        border-radius: 12px;
+        background: var(--olive-dark);
+        color: white;
+        padding: 36px;
+      }
+
+      .final-panel h2 {
+        font-size: clamp(38px, 5vw, 66px);
+      }
+
+      .final-panel p {
+        max-width: 620px;
+        color: rgba(255, 255, 255, 0.76);
+        line-height: 1.6;
+      }
+
+      @media (max-width: 900px) {
+        .navlinks {
+          display: none;
+        }
+
+        .hero {
+          min-height: auto;
+        }
+
+        .hero-inner,
+        .section-head,
+        .feature,
+        .final-panel {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-inner {
+          padding: 72px 0 120px;
+        }
+
+        .urgent-panel {
+          align-self: auto;
+        }
+
+        .stats-grid,
+        .path-grid,
+        .news-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .stat + .stat {
+          border-left: 0;
+          border-top: 1px solid var(--line);
+        }
+
+        .media-head {
+          display: block;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .nav,
+        section,
+        .media-inner,
+        .final-cta,
+        .stats-strip {
+          width: min(100% - 28px, 1180px);
+        }
+
+        .logo {
+          height: 36px;
+        }
+
+        .nav-cta {
+          min-height: 42px;
+          padding: 0 12px;
+          font-size: 14px;
+        }
+
+        h1 {
+          font-size: 64px;
+        }
+
+        .hero-copy {
+          font-size: 17px;
+        }
+
+        section,
+        .media-inner {
+          padding: 68px 0;
+        }
+
+        .path-card {
+          min-height: auto;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          scroll-behavior: auto !important;
+          transition: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Mockup direction: ayuda inmediata + conversión. -->
+    <header class="topbar">
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="/">
+          <img class="logo" src="../uploads/2025/10/Diseno-sin-titulo-98-e1759916679544.png" alt="AEVTJ" />
+        </a>
+        <div class="navlinks">
+          <a href="/quienes-somos/">Quiénes somos</a>
+          <a href="/noticias/">Noticias</a>
+          <a href="/legal/">Documentos</a>
+          <a href="/hazte-socio/">Hazte socio</a>
+        </div>
+        <a class="nav-cta" href="/contacto/">Necesito ayuda</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <img class="hero-img" src="../uploads/2025/10/manos-unidas.webp" alt="Varias manos unidas en señal de apoyo" />
+        <div class="hero-overlay"></div>
+        <div class="hero-inner">
+          <div>
+            <p class="eyebrow">Asociación Española de Víctimas de los Testigos de Jehová y la JW.ORG</p>
+            <h1>No estás solo</h1>
+            <p class="hero-copy">
+              Si estás dudando, si acabas de salir o si necesitas hablar con alguien que entiende el proceso, empieza por aquí. Te orientamos sin juicio y con apoyo real.
+            </p>
+            <div class="hero-actions">
+              <a class="btn primary" href="/contacto/">Hablar con la asociación</a>
+              <a class="btn secondary" href="/guia-para-salir-de-los-testigos-de-jehova/">Ver guía para salir</a>
+            </div>
+          </div>
+
+          <aside class="urgent-panel" aria-label="Rutas rápidas de ayuda">
+            <header>
+              <h2>Empieza por tu situación</h2>
+              <p>Elige la opción que mejor encaja con lo que necesitas ahora.</p>
+            </header>
+            <ul class="urgent-list">
+              <li>
+                <a href="/guia-para-salir-de-los-testigos-de-jehova/">
+                  <span class="num">01</span>
+                  <span><strong>Quiero salir</strong><span>Pasos prácticos para hacerlo con más seguridad.</span></span>
+                </a>
+              </li>
+              <li>
+                <a href="/contacto/">
+                  <span class="num">02</span>
+                  <span><strong>Necesito apoyo</strong><span>Orientación legal, psicológica o comunitaria.</span></span>
+                </a>
+              </li>
+              <li>
+                <a href="/recursos-de-ayuda/">
+                  <span class="num">03</span>
+                  <span><strong>Busco recursos</strong><span>Guías, documentos y materiales para entender qué ocurre.</span></span>
+                </a>
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <aside class="stats-strip" aria-label="Cifras de confianza">
+        <div class="stats-grid">
+          <div class="stat"><strong>+735</strong><span>Socios</span></div>
+          <div class="stat"><strong>25</strong><span>Asociaciones aliadas</span></div>
+          <div class="stat"><strong>8</strong><span>Juicios ganados</span></div>
+        </div>
+      </aside>
+
+      <section>
+        <div class="section-head">
+          <div>
+            <span class="section-kicker">Tres caminos claros</span>
+            <h2>Encuentra apoyo sin perderte</h2>
+          </div>
+          <p>
+            Cada ruta responde a una necesidad concreta: salir, recibir apoyo, entender derechos o encontrar documentación fiable.
+          </p>
+        </div>
+
+        <div class="path-grid">
+          <a class="path-card" href="/guia-para-salir-de-los-testigos-de-jehova/">
+            <span class="tag">Guía práctica</span>
+            <h3>Salir sin hacerlo a ciegas</h3>
+            <p>Contenido ordenado como acompañamiento, con pasos, riesgos y recursos para recuperar autonomía.</p>
+            <span class="link">Ver guía</span>
+          </a>
+          <a class="path-card" href="/contacto/">
+            <span class="tag">Apoyo humano</span>
+            <h3>Hablar con alguien que entiende</h3>
+            <p>Contacto orientado a escucha, derivación y soporte, sin transformar la primera visita en burocracia.</p>
+            <span class="link">Contactar</span>
+          </a>
+          <a class="path-card" href="/legal/">
+            <span class="tag">Derechos y pruebas</span>
+            <h3>Documentar, denunciar, proteger</h3>
+            <p>Acceso a documentos, demandas, sentencias y materiales de transparencia con jerarquía visual.</p>
+            <span class="link">Ver documentos</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="feature">
+        <div class="feature-media">
+          <img src="../uploads/2025/10/salir-es-dificil.webp" alt="Persona caminando hacia una salida simbólica" />
+        </div>
+        <div class="feature-content">
+          <span class="section-kicker">Ruta destacada</span>
+          <h2>Salir es difícil. Perderte en la web no debería serlo.</h2>
+          <p>
+            La guía gana protagonismo porque es una de las páginas más importantes para quien llega con dudas reales.
+          </p>
+          <div class="steps">
+            <div class="step"><b>1</b><span><strong>Entender qué te ocurre</strong><span>Lenguaje claro para nombrar ostracismo, culpa y aislamiento.</span></span></div>
+            <div class="step"><b>2</b><span><strong>Preparar la salida</strong><span>Recursos prácticos, derechos sanitarios y apoyo comunitario.</span></span></div>
+            <div class="step"><b>3</b><span><strong>Recuperar red</strong><span>Contacto, comunidad y acompañamiento para no vivirlo en soledad.</span></span></div>
+          </div>
+          <a class="btn primary" href="/guia-para-salir-de-los-testigos-de-jehova/">Entrar en la guía</a>
+        </div>
+      </section>
+
+      <div class="media-band">
+        <div class="media-inner">
+          <div class="media-head">
+            <h2>Visibilidad pública que también genera confianza</h2>
+            <div class="media-logos" aria-label="Medios destacados">
+              <span>RTVE</span>
+              <span>Cadena SER</span>
+              <span>El País</span>
+              <span>La Sexta</span>
+              <span>HBO</span>
+            </div>
+          </div>
+
+          <div class="news-grid">
+            <a class="news-card big" href="/noticias/rtve-da-voz-a-las-victimas-del-ostracismo-el-testimonio-de-marcos-en-directo-al-grano/">
+              <img src="../uploads/2026/04/al-grano.webp" alt="Programa de RTVE Directo al Grano" />
+              <div>
+                <small>Medios · RTVE</small>
+                <h3>RTVE da voz a las víctimas del ostracismo</h3>
+                <p>Una entrada clara para entender el impacto público del testimonio y acceder a la noticia completa.</p>
+              </div>
+            </a>
+            <a class="news-card" href="/noticias/conversaciones-pendientes-episodio-128-cadena-ser/">
+              <img src="../uploads/2026/07/cabecera-cadena-ser-dani-testimonio-aevtj.webp" alt="Cabecera de Cadena SER" />
+              <div>
+                <small>Radio · SER</small>
+                <h3>Conversaciones pendientes</h3>
+                <p>La presencia en medios ayuda a que el daño deje de vivirse en silencio.</p>
+              </div>
+            </a>
+            <a class="news-card" href="/noticias/documental-hbo/">
+              <img src="../uploads/2026/02/Sobrevivir-al-paraiso-HBO.webp" alt="Documental de HBO" />
+              <div>
+                <small>Documental</small>
+                <h3>Sobrevivir al paraíso</h3>
+                <p>El documental amplía la conversación y acerca estas experiencias a nuevas audiencias.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="final-cta">
+        <div class="final-panel">
+          <div>
+            <h2>Si necesitas apoyo, la siguiente acción tiene que estar clara.</h2>
+            <p>Contacto directo, guía y comunidad para que nadie tenga que atravesar este proceso sin apoyo.</p>
+          </div>
+          <a class="btn secondary" href="/contacto/">Contactar ahora</a>
+        </div>
+      </div>
+    </main>
+    <script>
+      if (window.location.protocol === "file:") {
+        document.querySelectorAll('a[href^="/"]').forEach((link) => {
+          const path = link.getAttribute("href");
+          if (!path) return;
+          const filePath = path.endsWith("/") ? `../../dist${path}index.html` : `../../dist${path}`;
+          link.setAttribute("href", filePath);
+        });
+      }
+    </script>
+  </body>
+</html>

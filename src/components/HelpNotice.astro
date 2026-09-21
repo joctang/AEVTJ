@@ -1,0 +1,27 @@
+---
+interface Props {
+  href?: string;
+  label?: string;
+  tone?: "light" | "dark";
+  class?: string;
+}
+
+const {
+  href = "/contacto/",
+  label = "¿Necesitas ayuda ahora? Habla con nosotros",
+  tone = "light",
+  class: klass = "",
+} = Astro.props;
+---
+
+<a
+  href={href}
+  class={`inline-flex items-center gap-2 px-4 py-2 font-heading text-sm font-semibold uppercase tracking-wide transition-opacity hover:opacity-80 ${
+    tone === "dark"
+      ? "bg-brand-terracotta text-white"
+      : "border border-brand-terracotta text-brand-terracotta"
+  } ${klass}`}
+>
+  <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-current"></span>
+  {label}
+</a>

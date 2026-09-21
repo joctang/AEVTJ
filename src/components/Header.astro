@@ -1,0 +1,136 @@
+---
+import { mainNav, socialLinks } from "../data/nav";
+import Icon from "./Icon.astro";
+---
+
+<header class="site-header">
+  <div class="mx-auto flex max-w-[1200px] items-center justify-between gap-6 px-5 py-4 lg:px-8">
+    <a href="/" class="shrink-0">
+      <img
+        src="/uploads/2025/10/Diseno-sin-titulo-98-e1759916679544.png"
+        alt="AEVTJ - Asociación Española de Víctimas de los Testigos de Jehová"
+        class="h-12 w-auto"
+      />
+    </a>
+
+    <nav aria-label="Menú principal" class="hidden lg:block">
+      <ul class="flex items-center gap-7 font-heading text-lg font-medium tracking-wide text-brand-olive">
+        {
+          mainNav.map((item) => (
+            <li class="group relative py-2">
+              <a
+                href={item.href === "#" ? "/recursos-de-ayuda/" : item.href}
+                aria-current={Astro.url.pathname === item.href ? "page" : undefined}
+                class="flex items-center gap-1 uppercase transition-colors hover:text-brand-olive-dark"
+              >
+                {item.label}
+                {item.children && <Icon name="chevron-down" class="h-2.5 w-2.5" />}
+              </a>
+              {item.children && (
+                <ul class="invisible absolute left-0 top-full z-50 w-80 -translate-y-1 rounded-md border border-black/5 bg-white py-2 opacity-0 shadow-lg transition-all group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
+                  {item.children.map((child) => (
+                    <li>
+                      <a
+                        href={child.href}
+                        class="block px-4 py-2 text-base normal-case leading-snug text-brand-ink hover:bg-brand-cream hover:text-brand-olive"
+                      >
+                        {child.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <div class="hidden items-center gap-3 lg:flex">
+      {
+        socialLinks.map((s) => (
+          <a
+            href={s.href}
+            target="_blank"
+            rel="nofollow noopener"
+            aria-label={s.label}
+            class="flex h-8 w-8 items-center justify-center rounded-full bg-brand-olive text-white transition-colors hover:bg-brand-olive-dark"
+          >
+            <Icon name={s.icon as any} class="h-4 w-4" />
+          </a>
+        ))
+      }
+    </div>
+
+    <button
+      id="mobile-menu-btn"
+      class="flex h-10 w-10 items-center justify-center text-brand-olive lg:hidden"
+      aria-label="Abrir menú"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+    >
+      <Icon name="menu" class="h-6 w-6" />
+    </button>
+  </div>
+
+  <div id="mobile-menu" class="hidden border-t border-black/5 bg-white lg:hidden">
+    <nav aria-label="Menú móvil" class="mx-auto max-w-[1200px] px-5 py-4">
+      <ul class="flex flex-col gap-1 font-heading text-lg font-medium uppercase tracking-wide text-brand-olive">
+        {
+          mainNav.map((item) => (
+            <li>
+              <a href={item.href === "#" ? "/recursos-de-ayuda/" : item.href}
+                aria-current={Astro.url.pathname === item.href ? "page" : undefined} class="block py-2">
+                {item.label}
+              </a>
+              {item.children && (
+                <ul class="ml-4 flex flex-col gap-1 border-l border-black/10 pl-4 text-base normal-case text-brand-ink">
+                  {item.children.map((child) => (
+                    <li>
+                      <a href={child.href} class="block py-1.5 leading-snug">
+                        {child.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
+          ))
+        }
+      </ul>
+      <div class="mt-4 flex items-center gap-3">
+        {
+          socialLinks.map((s) => (
+            <a
+              href={s.href}
+              target="_blank"
+              rel="nofollow noopener"
+              aria-label={s.label}
+              class="flex h-8 w-8 items-center justify-center rounded-full bg-brand-olive text-white"
+            >
+              <Icon name={s.icon as any} class="h-4 w-4" />
+            </a>
+          ))
+        }
+      </div>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById("mobile-menu-btn");
+  const menu = document.getElementById("mobile-menu");
+  btn?.addEventListener("click", () => {
+    const isHidden = menu?.classList.toggle("hidden");
+    btn.setAttribute("aria-expanded", String(!isHidden));
+    btn.setAttribute("aria-label", isHidden ? "Abrir menú" : "Cerrar menú");
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && menu && !menu.classList.contains("hidden")) {
+      menu.classList.add("hidden");
+      btn?.setAttribute("aria-expanded", "false");
+      btn?.setAttribute("aria-label", "Abrir menú");
+      btn?.focus();
+    }
+  });
+</script>

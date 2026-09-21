@@ -1,0 +1,49 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ArticleContent from "../components/ArticleContent.astro";
+
+const heroPhotos: Record<string, string> = {
+  legal: "/uploads/2025/10/nmcr_downloaded_image.png",
+  "guia-para-salir-de-los-testigos-de-jehova": "/uploads/2025/10/val-vesa-02dGWFjSZPo-unsplash-1.jpg",
+  "guia-para-proteger-tus-derechos-sanitarios-en-caso-de-interferencia-familiar":
+    "/uploads/2025/10/Serene-Seascape-at-Sunset.webp",
+};
+
+const heroTitles: Record<string, string> = {
+  legal: "Demandas, juicios y sentencias judiciales",
+  "guia-para-salir-de-los-testigos-de-jehova": "Guía para salir de los Testigos de Jehová",
+  "guia-para-proteger-tus-derechos-sanitarios-en-caso-de-interferencia-familiar":
+    "Guía para proteger tus derechos sanitarios",
+};
+
+export async function getStaticPaths() {
+  const excludedSlugs = new Set([
+    "victimas-testigos-de-jehova-ayuda-denuncia", // home, has its own index.astro
+    "noticias", // has its own listing page
+    "quienes-somos", // has its own custom page
+    "hazte-socio", // has its own custom page
+    "contacto", // has its own custom page
+  ]);
+  const entries = await getCollection("pages");
+  return entries
+    .filter((e) => !excludedSlugs.has(e.data.slug))
+    .map((e) => ({
+      params: { slug: e.data.slug },
+      props: { entry: e },
+    }));
+}
+
+const { entry } = Astro.props;
+const { title, html } = entry.data;
+const heroPhoto = heroPhotos[entry.data.slug];
+const heroTitle = heroTitles[entry.data.slug];
+
+// The hero already shows the page heading, so drop the leading <h1> in the
+// extracted body to avoid repeating it verbatim right below the hero.
+const bodyHtml = heroPhoto ? html.replace(/<h1>.*?<\/h1>/s, "") : html;
+---
+
+<BaseLayout title={title}>
+  <ArticleContent title={heroTitle ?? title} html={bodyHtml} heroPhoto={heroPhoto} />
+</BaseLayout>

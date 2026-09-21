@@ -1,0 +1,744 @@
+{
+  "pages": [
+    {
+      "route": "/",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/aviso-legal/",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/colaboradores/",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/contacto/",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/demandas/",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/guia-para-proteger-tus-derechos-sanitarios-en-caso-de-interferencia-familiar/",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/guia-para-salir-de-los-testigos-de-jehova/",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/hazte-socio/",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/legal/",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/mockups/",
+      "status": 404,
+      "width": 390,
+      "scrollWidth": 390,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/noticias/",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/politica-de-cookies/",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/politica-de-privacidad/",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/quienes-somos/",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/recursos-de-ayuda/",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/relacion-de-pecados-para-un-comite-judicial/",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/separacion-de-la-sociedad/",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/testimonios-bajo-juramento/",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/transparencia/",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/victimas/",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/noticias/conversaciones-pendientes-episodio-128-cadena-ser/",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/noticias/documental-expulsados-de-los-testigos-de-jehova-el-pais/",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/noticias/documental-hbo/",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/noticias/el-precio-de-salir-de-los-testigos-de-jehova-3cat-visibiliza-el-impacto-del-ostracismo-y-la-salud-mental/",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/noticias/entrevista-a-la-aevtj-noruega-y-los-testigos-de-jehova/",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/noticias/entrevista-a-samuel-ferrando-presidente-de-la-aevtj/",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 406,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/noticias/entrevista-soraya-narez-el-intermedio-la-sexta/",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/noticias/estreno-del-documental-expulsados-de-los-testigos-de-jehova-en-el-pais/",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/noticias/israel-florez-y-soraya-narez-en-onda-cero-el-vacio-de-una-vida-borrada-por-la-expulsion/",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/noticias/la-aevtj-solicita-al-defensor-del-pueblo-y-al-gobierno-la-revision-del-estatus-legal-de-los-testigos-de-jehova/",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/noticias/la-audiencia-provincial-de-madrid-revoca-la-condena-contra-un-ex-testigo/",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/noticias/mas-alla-del-prejuicio-nuestra-opinion/",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/noticias/nuevo-documental-revela-historias-de-jovenes-expulsados-por-ser-homosexuales-en-los-testigos-de-jehova/",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/noticias/organizaciones-coercitivas-salir-de-la-trampa-000906-21-06-2026/",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/noticias/rtve-da-voz-a-las-victimas-del-ostracismo-el-testimonio-de-marcos-en-directo-al-grano/",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/noticias/ser-catalunya-da-voz-a-expulsados-de-los-testigos-de-jehova/",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/noticias/suecia-rechaza-subsidios-estatales-a-los-testigos-de-jehova/",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/noticias/victoria-historica-de-aevtj/",
+      "status": 200,
+      "width": 390,
+      "scrollWidth": 390,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/aviso-legal/",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/colaboradores/",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/contacto/",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/demandas/",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/guia-para-proteger-tus-derechos-sanitarios-en-caso-de-interferencia-familiar/",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/guia-para-salir-de-los-testigos-de-jehova/",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/hazte-socio/",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/legal/",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/mockups/",
+      "status": 404,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/noticias/",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/politica-de-cookies/",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/politica-de-privacidad/",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/quienes-somos/",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/recursos-de-ayuda/",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/relacion-de-pecados-para-un-comite-judicial/",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/separacion-de-la-sociedad/",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/testimonios-bajo-juramento/",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/transparencia/",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/victimas/",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/noticias/conversaciones-pendientes-episodio-128-cadena-ser/",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/noticias/documental-expulsados-de-los-testigos-de-jehova-el-pais/",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/noticias/documental-hbo/",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/noticias/el-precio-de-salir-de-los-testigos-de-jehova-3cat-visibiliza-el-impacto-del-ostracismo-y-la-salud-mental/",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/noticias/entrevista-a-la-aevtj-noruega-y-los-testigos-de-jehova/",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/noticias/entrevista-a-samuel-ferrando-presidente-de-la-aevtj/",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/noticias/entrevista-soraya-narez-el-intermedio-la-sexta/",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/noticias/estreno-del-documental-expulsados-de-los-testigos-de-jehova-en-el-pais/",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/noticias/israel-florez-y-soraya-narez-en-onda-cero-el-vacio-de-una-vida-borrada-por-la-expulsion/",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/noticias/la-aevtj-solicita-al-defensor-del-pueblo-y-al-gobierno-la-revision-del-estatus-legal-de-los-testigos-de-jehova/",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/noticias/la-audiencia-provincial-de-madrid-revoca-la-condena-contra-un-ex-testigo/",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/noticias/mas-alla-del-prejuicio-nuestra-opinion/",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/noticias/nuevo-documental-revela-historias-de-jovenes-expulsados-por-ser-homosexuales-en-los-testigos-de-jehova/",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/noticias/organizaciones-coercitivas-salir-de-la-trampa-000906-21-06-2026/",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/noticias/rtve-da-voz-a-las-victimas-del-ostracismo-el-testimonio-de-marcos-en-directo-al-grano/",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/noticias/ser-catalunya-da-voz-a-expulsados-de-los-testigos-de-jehova/",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/noticias/suecia-rechaza-subsidios-estatales-a-los-testigos-de-jehova/",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/noticias/victoria-historica-de-aevtj/",
+      "status": 200,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "overflow": [],
+      "brokenImages": [],
+      "hiddenHeadings": 0
+    },
+    {
+      "route": "/",
+      "width": 320,
+      "scrollWidth": 320,
+      "status": 200
+    },
+    {
+      "route": "/",
+      "width": 768,
+      "scrollWidth": 768,
+      "status": 200
+    },
+    {
+      "route": "/",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "status": 200
+    }
+  ],
+  "interactions": {
+    "heroParallax": true,
+    "mobileMenuOpens": true,
+    "mobileMenuEscape": true,
+    "cookieVisible": false
+  },
+  "consoleErrors": [
+    "Failed to read the 'localStorage' property from 'Window': Storage is disabled inside 'data:' URLs.",
+    "Failed to read the 'localStorage' property from 'Window': Storage is disabled inside 'data:' URLs.",
+    "Failed to read the 'localStorage' property from 'Window': Storage is disabled inside 'data:' URLs.",
+    "Failed to read the 'localStorage' property from 'Window': Storage is disabled inside 'data:' URLs.",
+    "Failed to read the 'localStorage' property from 'Window': Storage is disabled inside 'data:' URLs.",
+    "Failed to read the 'localStorage' property from 'Window': Storage is disabled inside 'data:' URLs.",
+    "Failed to read the 'localStorage' property from 'Window': Storage is disabled inside 'data:' URLs.",
+    "Failed to read the 'localStorage' property from 'Window': Storage is disabled inside 'data:' URLs."
+  ],
+  "screenshots": [
+    "home-desktop.png",
+    "home-overlap.png",
+    "home-help.png",
+    "home-story.png",
+    "home-world.png",
+    "home-news.png",
+    "home-desktop-full.png",
+    "home-mobile.png",
+    "mobile-menu.png",
+    "home-help-mobile.png",
+    "contact-390.png",
+    "contact-1440.png",
+    "about-390.png",
+    "about-1440.png",
+    "news-390.png",
+    "news-1440.png",
+    "membership-390.png",
+    "membership-1440.png",
+    "guide-390.png",
+    "guide-1440.png"
+  ]
+}
