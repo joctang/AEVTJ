@@ -1,0 +1,215 @@
+---
+// Guía para proteger tus derechos sanitarios en caso de interferencia familiar.
+// Kit accionable: aviso legal destacado, 5 pasos, tarjeta de emergencia
+// imprimible, registros autonómicos y cierre. Contenido médico/jurídico
+// literal desde src/data/derechos-sanitarios.ts (no se reescribe ni amplía).
+import "../styles/derechos-sanitarios.css";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PasoSanitario from "../components/PasoSanitario.astro";
+import TarjetaEmergencia from "../components/TarjetaEmergencia.astro";
+import {
+  intro,
+  avisoLegal,
+  pasos,
+  cierre,
+  registrosAutonomicos,
+  enlacesCruzados,
+} from "../data/derechos-sanitarios";
+
+// Un solo h1: el corto del hero ("Guía para proteger tus derechos sanitarios").
+// El título largo del contenido original se conserva en <title>, la meta
+// description y el JSON-LD.
+const h1 = "Guía para proteger tus derechos sanitarios";
+
+const description =
+  "Cómo proteger tus derechos sanitarios ante interferencias familiares: representante sanitario, DVA/DIP (Testamento Vital), tarjeta de emergencia y registros de Instrucciones Previas. Guía informativa de la AEVTJ; no sustituye el asesoramiento jurídico o médico.";
+
+const textoPlano = (s: string) => s.replace(/<[^>]+>/g, "");
+const textoPaso = (paso: (typeof pasos)[number]) =>
+  paso.bloques
+    .map((b) =>
+      b.tipo === "parrafo"
+        ? textoPlano(b.texto)
+        : [b.etiqueta ?? "", ...b.items.map(textoPlano)].join(" ")
+    )
+    .join(" ");
+
+const jsonLdHowTo = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  name: intro.titulo,
+  description,
+  author: {
+    "@type": "Organization",
+    name: "AEVTJ — Asociación Española de Víctimas de los Testigos de Jehová",
+  },
+  step: pasos.map((paso) => ({
+    "@type": "HowToStep",
+    position: paso.n,
+    name: paso.titulo,
+    text: textoPaso(paso),
+  })),
+};
+
+const jsonLdWebPage = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: intro.titulo,
+  description,
+  publisher: { "@type": "Organization", name: "AEVTJ" },
+  dateModified: "2025-02-24",
+};
+---
+
+<BaseLayout title={intro.titulo} description={description}>
+  <div class="derechos">
+    <nav class="derechos-rail" aria-label="Secciones de la guía">
+      <ol>
+        {
+          pasos.map((paso) => (
+            <li>
+              <a href={`#${paso.id}`}>
+                <span>
+                  {paso.n}. {paso.titulo}
+                </span>
+              </a>
+            </li>
+          ))
+        }
+        <li><a href="#tarjeta-emergencia"><span>Tarjeta de emergencia</span></a></li>
+        <li><a href="#registros"><span>Registros autonómicos</span></a></li>
+      </ol>
+      <span class="guia-rail__progreso" aria-hidden="true"></span>
+    </nav>
+
+    <section class="derechos-hero">
+      <img
+        class="derechos-hero__img"
+        src={intro.heroImage.src}
+        alt={intro.heroImage.alt}
+        width="1500"
+        height="938"
+        fetchpriority="high"
+        decoding="async"
+      />
+      <div class="derechos-hero__scrim" aria-hidden="true"></div>
+      <div class="derechos-hero__content">
+        <p class="guia-kicker guia-kicker--crema">{intro.kicker}</p>
+        <h1>{h1}</h1>
+        <p class="derechos-hero__entradilla">
+          <strong>Objetivo</strong>: {intro.objetivo}
+        </p>
+        <p class="derechos-hero__meta">
+          5 pasos<span aria-hidden="true">·</span>1 tarjeta descargable
+        </p>
+        <div class="derechos-hero__actions">
+          <a class="guia-pill guia-pill--solid" href={`#${pasos[0].id}`}>Ver los 5 pasos</a>
+          <a class="guia-pill guia-pill--ghost" href="#tarjeta-emergencia">Descargar la tarjeta</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="derechos-aviso-wrap">
+      <aside class="derechos-aviso" role="note" aria-label={avisoLegal.titulo} data-reveal>
+        <div class="derechos-aviso__icono" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9"></circle>
+            <path d="M12 8h.01M12 11v5"></path>
+          </svg>
+        </div>
+        <div>
+          <h2>{avisoLegal.titulo}</h2>
+          <p>{avisoLegal.texto}</p>
+        </div>
+      </aside>
+    </div>
+
+    <section class="derechos-necesitas" aria-labelledby="derechos-necesitas-titulo">
+      <div class="derechos-necesitas__inner">
+        <p class="guia-kicker" data-reveal>Qué necesitas</p>
+        <h2 id="derechos-necesitas-titulo" class="sr-only">Qué necesitas</h2>
+        <div class="derechos-necesitas__grid">
+          <div class="derechos-necesitas__caja" data-reveal>
+            <h3>DVA/DIP · Voluntades Anticipadas</h3>
+            <p>
+              Registrar por escrito tus <strong>Voluntades Anticipadas / Documento de
+              Instrucciones Previas</strong> (DVA/DIP, también llamado “Testamento Vital”).
+            </p>
+          </div>
+          <div class="derechos-necesitas__caja" data-reveal>
+            <h3>Representante sanitario</h3>
+            <p>Designar un <strong>representante sanitario de confianza</strong>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="derechos-pasos">
+      <div class="derechos-pasos__cuerpo">
+        {
+          pasos.map((paso) => (
+            <PasoSanitario paso={paso}>
+              {paso.n === 4 && <TarjetaEmergencia />}
+            </PasoSanitario>
+          ))
+        }
+      </div>
+    </div>
+
+    <section class="derechos-registros" id="registros" aria-labelledby="derechos-registros-titulo">
+      <div class="derechos-registros__inner">
+        <p class="guia-kicker" data-reveal>Dónde se registra</p>
+        <h2 id="derechos-registros-titulo" data-reveal>Registros de Instrucciones Previas</h2>
+        <p class="derechos-registros__nota" data-reveal>
+          Estamos completando los enlaces a los registros de cada Comunidad Autónoma
+          y ciudad autónoma. Mientras tanto, busca el “Registro de Instrucciones
+          Previas” en la web de sanidad de la tuya.
+        </p>
+        <ul class="derechos-registros__grid">
+          {
+            registrosAutonomicos.map((registro) => (
+              <li class="derechos-registro">{registro.nombre}</li>
+            ))
+          }
+        </ul>
+      </div>
+    </section>
+
+    <section class="derechos-cruces" aria-label="Sigue leyendo">
+      <div class="derechos-cruces__inner">
+        <div class="derechos-cruces__grid">
+          {
+            enlacesCruzados.map((enlace) => (
+              <a class="derechos-cruce" href={enlace.href} data-reveal>
+                <h3>{enlace.titulo}</h3>
+                <p>{enlace.descripcion}</p>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section class="derechos-cierre" aria-labelledby="derechos-cierre-titulo">
+      <div class="derechos-cierre__inner" data-reveal>
+        <h2 id="derechos-cierre-titulo">{cierre.texto}</h2>
+        <p>
+          La asociación acompaña a quienes salen de los Testigos de Jehová. Si tienes
+          dudas sobre esta guía, consúltanos.
+        </p>
+        <div class="derechos-cierre__actions">
+          <a class="guia-pill guia-pill--solid" href="/hazte-socio">Hazte socio</a>
+          <a class="guia-pill guia-pill--navy" href="/contacto">Consúltanos tu caso</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLdHowTo)} />
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLdWebPage)} />
+
+  <script>
+    import { initRail } from "../scripts/rail";
+    initRail(".derechos-rail");
+  </script>
+</BaseLayout>

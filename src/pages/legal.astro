@@ -1,0 +1,141 @@
+---
+import "../styles/legal.css";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CasoJudicial from "../components/CasoJudicial.astro";
+import CasoInternacional from "../components/CasoInternacional.astro";
+import EstadoBadge from "../components/EstadoBadge.astro";
+import { intro, casos, internacionales } from "../data/legal";
+
+const description =
+  "Cómo van las demandas y juicios de la AEVTJ contra los Testigos de Jehová y sus exresponsables: estado de los 4 casos en España, sentencias descargables y el contexto internacional.";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: intro.titulo,
+  description,
+  publisher: { "@type": "Organization", name: "AEVTJ — Asociación Española de Víctimas de los Testigos de Jehová" },
+  mainEntity: {
+    "@type": "ItemList",
+    itemListElement: [
+      ...casos.map((caso, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: `Contra ${caso.demandado}`,
+        url: `${Astro.site ?? "https://victimasdetestigosdejehova.org/"}legal/#${caso.id}`,
+      })),
+      ...internacionales.map((caso, i) => ({
+        "@type": "ListItem",
+        position: casos.length + i + 1,
+        name: `${caso.pais} (${caso.anio})`,
+        url: caso.href,
+      })),
+    ],
+  },
+};
+---
+
+<BaseLayout title={intro.titulo} description={description}>
+  <div class="legal">
+    <nav class="guia-rail legal-rail" aria-label="Casos del expediente">
+      <ol>
+        {casos.map((caso) => (
+          <li><a href={`#${caso.id}`}><span>{caso.demandado}</span></a></li>
+        ))}
+        <li><a href="#juicios-fuera-de-espana"><span>Juicios fuera de España</span></a></li>
+      </ol>
+      <span class="guia-rail__progreso" aria-hidden="true"></span>
+    </nav>
+
+    <section class="legal-hero">
+      <img
+        class="legal-hero__img"
+        src={intro.heroImage.src}
+        alt={intro.heroImage.alt}
+        width={intro.heroImage.width}
+        height={intro.heroImage.height}
+        fetchpriority="high"
+        decoding="async"
+      />
+      <div class="legal-hero__scrim" aria-hidden="true"></div>
+      <div class="legal-hero__content">
+        <p class="guia-kicker guia-kicker--crema">{intro.kicker}</p>
+        <h1>{intro.titulo}</h1>
+        <p class="legal-hero__entradilla" set:html={intro.entradilla} />
+        <p class="legal-hero__meta">
+          4 demandas en España<span aria-hidden="true">·</span>4 casos internacionales<span aria-hidden="true">·</span>Actualizado {intro.actualizado}
+        </p>
+        <div class="legal-hero__actions">
+          <a class="guia-pill guia-pill--solid" href={`#${casos[0].id}`}>Descargar sentencias</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="legal-marcador" aria-label="Estado actual de los casos">
+      <div class="legal-marcador__grid">
+        {casos.map((caso) => (
+          <a class="legal-marcador__casilla" href={`#${caso.id}`} data-reveal>
+            <h2>{caso.demandado}</h2>
+            <p>{caso.rol}</p>
+            <EstadoBadge etiqueta={caso.estado.etiqueta} tono={caso.estado.tono} />
+          </a>
+        ))}
+      </div>
+
+      <div class="legal-contexto" data-reveal>
+        <div class="legal-contexto__columnas">
+          <p set:html={intro.entradilla} />
+        </div>
+        <aside class="legal-aviso-datos">{intro.notaProteccionDatos}</aside>
+      </div>
+    </section>
+
+    <section class="legal-casos" aria-label="Casos en España">
+      <div class="legal-casos__inner">
+        {casos.map((caso) => <CasoJudicial caso={caso} />)}
+      </div>
+      <p class="legal-actualizacion">Última actualización: {intro.actualizado}</p>
+    </section>
+
+    <section class="legal-internacional" id="juicios-fuera-de-espana" aria-labelledby="legal-internacional-titulo">
+      <div class="legal-internacional__cabecera">
+        <p class="guia-kicker" data-reveal>Contexto internacional</p>
+        <h2 id="legal-internacional-titulo" data-reveal>Juicios fuera de España</h2>
+        <p data-reveal>
+          Aquí les vamos a ofrecer toda la información acerca de los juicios que otras víctimas o incluso los propios Testigos de Jehová están teniendo en todo el mundo
+        </p>
+      </div>
+      <div class="legal-internacional__grid">
+        {internacionales.map((caso) => <CasoInternacional caso={caso} />)}
+      </div>
+    </section>
+
+    <section class="legal-anonimizado-wrap" aria-label="Aviso sobre el anonimizado">
+      <aside class="legal-anonimizado" data-reveal>
+        <p>{intro.notaProteccionDatos}</p>
+        <p>Los documentos se publican tal como fueron presentados o resueltos.</p>
+      </aside>
+    </section>
+
+    <section class="legal-cierre" aria-labelledby="legal-cierre-titulo">
+      <div class="legal-cierre__inner">
+        <p class="guia-kicker guia-kicker--crema" data-reveal>Transparencia</p>
+        <h2 id="legal-cierre-titulo" data-reveal>La defensa jurídica se sostiene entre todos</h2>
+        <p data-reveal>
+          Cada sentencia descargable es el resultado del apoyo de personas que hacen posible esta defensa.
+        </p>
+        <div class="legal-cierre__actions" data-reveal>
+          <a class="guia-pill guia-pill--solid" href="/contacto">Denuncia tu caso</a>
+          <a class="guia-pill guia-pill--navy" href="/hazte-socio">Hazte socio</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <script>
+    import { initRail } from "../scripts/rail";
+    initRail(".legal-rail");
+  </script>
+</BaseLayout>

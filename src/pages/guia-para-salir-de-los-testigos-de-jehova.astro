@@ -1,0 +1,194 @@
+---
+import "../styles/guia-salida.css";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TornEdge from "../components/TornEdge.astro";
+import GuiaCapitulo from "../components/GuiaCapitulo.astro";
+import GuiaPasos from "../components/GuiaPasos.astro";
+import { intro, capitulos, citas, pasos, cierre, avisoCrisis, recursos } from "../data/guia-salida";
+
+const description =
+  "Guía para salir de los Testigos de Jehová: qué implica dejar la organización, cómo afrontar la salida en 7 pasos y dónde encontrar apoyo. Por la Asociación Española de Víctimas de los Testigos de Jehová.";
+
+const jsonLdArticle = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: intro.titulo,
+  description,
+  author: { "@type": "Organization", name: "AEVTJ — Asociación Española de Víctimas de los Testigos de Jehová" },
+  publisher: { "@type": "Organization", name: "AEVTJ" },
+  datePublished: "2023-12-24",
+  dateModified: "2023-12-24",
+  image: `${Astro.site ?? ""}${intro.heroImage.src.replace(/^\//, "")}`,
+  mainEntityOfPage: `${Astro.site ?? "https://victimasdetestigosdejehova.org/"}guia-para-salir-de-los-testigos-de-jehova/`,
+};
+
+const jsonLdHowTo = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  name: "7 pasos para afrontar la salida",
+  description: "Pasos prácticos para afrontar la salida de los Testigos de Jehová.",
+  author: { "@type": "Organization", name: "AEVTJ" },
+  step: pasos.map((paso) => ({
+    "@type": "HowToStep",
+    position: paso.n,
+    name: paso.titulo,
+    text: paso.parrafos.join(" "),
+  })),
+};
+---
+
+<BaseLayout title={intro.titulo} description={description}>
+  <div class="guia">
+    <nav class="guia-rail" aria-label="Capítulos de la guía">
+      <ol>
+        {
+          capitulos.map((capitulo) => (
+            <li>
+              <a href={`#${capitulo.id}`}>
+                <span>
+                  {capitulo.n}. {capitulo.titulo}
+                </span>
+              </a>
+            </li>
+          ))
+        }
+        <li><a href="#siete-pasos"><span>7 pasos para afrontar la salida</span></a></li>
+      </ol>
+      <span class="guia-rail__progreso" aria-hidden="true"></span>
+    </nav>
+
+    <section class="guia-hero">
+      <img
+        class="guia-hero__img"
+        src={intro.heroImage.src}
+        alt={intro.heroImage.alt}
+        width={intro.heroImage.width}
+        height={intro.heroImage.height}
+        fetchpriority="high"
+        decoding="async"
+      />
+      <div class="guia-hero__scrim" aria-hidden="true"></div>
+      <div class="guia-hero__content">
+        <p class="guia-kicker guia-kicker--crema">{intro.kicker}</p>
+        <h1>{intro.titulo}</h1>
+        <p class="guia-hero__entradilla">{intro.entradilla}</p>
+        <p class="guia-hero__meta">
+          {intro.minutosLectura} min de lectura<span aria-hidden="true">·</span>{capitulos.length} capítulos<span aria-hidden="true">·</span>7 pasos
+        </p>
+        <div class="guia-hero__actions">
+          <a class="guia-pill guia-pill--solid" href="#el-comienzo">Empezar la guía</a>
+          <a class="guia-pill guia-pill--ghost" href="/contacto">Necesito ayuda ahora</a>
+        </div>
+      </div>
+      <TornEdge />
+      <a class="guia-hero__scroll" href="#guia-indice" aria-label="Bajar al índice de la guía">
+        <span aria-hidden="true"></span>
+      </a>
+    </section>
+
+    <section class="guia-indice" id="guia-indice" aria-labelledby="guia-indice-titulo">
+      <div class="guia-indice__inner">
+        <p class="guia-kicker" data-reveal>En esta guía</p>
+        <h2 id="guia-indice-titulo" data-reveal>Seis capítulos y un recorrido práctico</h2>
+        <div class="guia-indice__grid">
+          {
+            capitulos.map((capitulo) => (
+              <a class="guia-tarjeta" href={`#${capitulo.id}`} data-num={capitulo.n} data-reveal>
+                <span aria-hidden="true">Capítulo {capitulo.n}</span>
+                <h3>{capitulo.titulo}</h3>
+                <p>{capitulo.resumen}</p>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    {
+      capitulos.map((capitulo, i) => (
+        <>
+          <GuiaCapitulo {...capitulo} invertido={capitulo.n % 2 === 0} />
+          {i === 1 && (
+            <div class="guia-cita" data-reveal>
+              <blockquote>«{citas.trasCapitulo2}»</blockquote>
+            </div>
+          )}
+          {i === 4 && (
+            <div class="guia-cita" data-reveal>
+              <blockquote>«{citas.trasCapitulo5}»</blockquote>
+            </div>
+          )}
+          {i === 5 && (
+            <div class="guia-ayuda-wrap">
+              <aside class="guia-ayuda" data-reveal aria-labelledby="guia-ayuda-titulo">
+                <div class="guia-ayuda__icono" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 21s-7-4.6-9.2-9A5.4 5.4 0 0 1 12 6.4 5.4 5.4 0 0 1 21.2 12C19 16.4 12 21 12 21Z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 id="guia-ayuda-titulo">Si sientes que la desesperación te supera</h3>
+                  <p>{avisoCrisis}</p>
+                  <p class="guia-ayuda__enlaces">
+                    <a href="/contacto">Contacta con la asociación</a>
+                    <a href="/recursos-de-ayuda">Recursos de ayuda</a>
+                  </p>
+                </div>
+              </aside>
+            </div>
+          )}
+        </>
+      ))
+    }
+
+    <GuiaPasos />
+
+    <section class="guia-cierre" aria-labelledby="guia-cierre-titulo">
+      <div class="guia-cierre__inner">
+        <p class="guia-kicker guia-kicker--crema" data-reveal>El camino continúa</p>
+        <h2 id="guia-cierre-titulo" data-reveal>No estás solo/a</h2>
+        <div class="guia-cierre__bloques">
+          <div data-reveal>
+            <h3>{cierre.quedarse.titulo}</h3>
+            {cierre.quedarse.parrafos.map((parrafo) => <p set:html={parrafo} />)}
+          </div>
+          <div data-reveal>
+            <h3>{cierre.conclusion.titulo}</h3>
+            {cierre.conclusion.parrafos.map((parrafo) => <p set:html={parrafo} />)}
+          </div>
+        </div>
+
+        <div class="guia-recursos">
+          {
+            recursos.map((recurso) =>
+              recurso.url ? (
+                <a class="guia-recurso" href={recurso.url} target="_blank" rel="noopener" data-reveal>
+                  <h3>{recurso.titulo}</h3>
+                  <p>{recurso.descripcion}</p>
+                </a>
+              ) : (
+                <div class="guia-recurso" data-reveal>
+                  <h3>{recurso.titulo}</h3>
+                  <p>{recurso.descripcion}</p>
+                </div>
+              )
+            )
+          }
+        </div>
+
+        <div class="guia-cierre__actions" data-reveal>
+          <a class="guia-pill guia-pill--solid" href="/contacto">Contacta con la asociación</a>
+          <a class="guia-pill guia-pill--navy" href="/hazte-socio">Hazte socio</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLdArticle)} />
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLdHowTo)} />
+
+  <script>
+    import { initRail } from "../scripts/rail";
+    initRail(".guia-rail");
+  </script>
+</BaseLayout>

@@ -1,0 +1,11 @@
+Another astro preview server is already running.
+
+  URL:  http://127.0.0.1:4321
+  PID:  43612
+
+Run `astro preview stop` to stop it, or use `astro preview --force` to replace it.
+  [1mLocation:[22m
+    [4mC:\Users\jocta\OneDrive\Documentos\Proyectos y Clientes\AEVTJ\astro-site\node_modules\astro\dist\cli\preview\index.js:125:11[24m
+  [1mStack trace:[22m
+[2m    at preview (file:///C:/Users/jocta/OneDrive/Documentos/Proyectos%20y%20Clientes/AEVTJ/astro-site/node_modules/astro/dist/cli/preview/index.js:125:11)
+    at async runCommand (file:///C:/Users/jocta/OneDrive/Documentos/Proyectos%20y%20Clientes/AEVTJ/astro-site/node_modules/astro/dist/cli/index.js:197:22)[22m

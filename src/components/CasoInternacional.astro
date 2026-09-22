@@ -1,0 +1,29 @@
+---
+import type { CasoInternacional } from "../data/legal";
+
+interface Props {
+  caso: CasoInternacional;
+}
+
+const { caso } = Astro.props;
+---
+
+<article class="legal-int-card" data-reveal style={`--reveal-delay:${(caso.n - 1) * 150}ms`}>
+  <span class="legal-internacional__anio">{caso.anio}</span>
+  <h3>{caso.pais}</h3>
+  <p set:html={caso.resumen} />
+  <a
+    class="legal-internacional__enlace"
+    href={caso.href}
+    target="_blank"
+    rel="noopener"
+    aria-label={`Más información sobre el caso de ${caso.pais} (${caso.anio}) — se abre en un sitio externo`}
+  >
+    Más información
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+      <path d="M15 3h6v6" />
+      <path d="M10 14 21 3" />
+    </svg>
+  </a>
+</article>

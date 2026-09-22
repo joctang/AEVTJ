@@ -1,0 +1,32 @@
+---
+import type { GuiaCapitulo } from "../data/guia-salida";
+
+interface Props extends GuiaCapitulo {
+  invertido?: boolean;
+}
+
+const { n, id, titulo, parrafos, imagen, variante, invertido = false } = Astro.props;
+---
+
+<section id={id} class:list={["guia-capitulo", { "guia-capitulo--invertido": invertido }]} data-variante={variante}>
+  <div class="guia-capitulo__inner">
+    <div class="guia-capitulo__texto" data-reveal>
+      <div class="guia-badge" aria-hidden="true"><span>{n}</span></div>
+      <h2>{titulo}</h2>
+      {parrafos.map((parrafo) => <p set:html={parrafo} />)}
+    </div>
+    <div class="guia-capitulo__media" data-reveal>
+      <div class="layered-media layered-media--guia" aria-hidden="false">
+        <span aria-hidden="true"></span>
+        <img
+          src={imagen.src}
+          alt={imagen.alt}
+          width={imagen.width}
+          height={imagen.height}
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+    </div>
+  </div>
+</section>

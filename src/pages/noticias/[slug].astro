@@ -2,24 +2,59 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import ArticleContent from "../../components/ArticleContent.astro";
+import NoticiaArticulo from "../../components/NoticiaArticulo.astro";
+import { getNoticiaMigrada } from "../../data/noticias";
 
 export async function getStaticPaths() {
   const posts = await getCollection("posts");
+  const orden = [...posts].sort(
+    (a, b) => new Date(b.data.date ?? 0).getTime() - new Date(a.data.date ?? 0).getTime()
+  );
+
   return posts.map((p) => ({
     params: { slug: p.data.slug },
-    props: { entry: p },
+    props: {
+      entry: p,
+      // Tres noticias recientes distintas de la actual, para el pie del artículo.
+      relacionadas: orden
+        .filter((o) => o.data.slug !== p.data.slug)
+        .slice(0, 3)
+        .map((o) => ({
+          slug: o.data.slug,
+          titulo: o.data.title,
+          fecha: o.data.date,
+          imagen: o.data.image,
+        })),
+    },
   }));
 }
 
-const { entry } = Astro.props;
+const { entry, relacionadas } = Astro.props;
 const { title, html, image, date } = entry.data;
+
+// Migración progresiva: si la noticia ya está normalizada en
+// `src/data/noticias/`, se pinta con la plantilla canónica; si no, sigue
+// saliendo el HTML heredado de WordPress. Ver PLANTILLA-NOTICIAS.md.
+const migrada = getNoticiaMigrada(entry.data.slug);
+const description = migrada?.entradilla ?? entry.data.excerpt.slice(0, 180);
 ---
 
-<BaseLayout title={title}>
-  <ArticleContent title={title} html={html} image={image} date={date} />
-  <div class="mx-auto max-w-[820px] px-5 pb-16 lg:px-8">
-    <a href="/noticias/" class="font-heading text-sm font-semibold uppercase tracking-wide text-brand-olive hover:text-brand-olive-dark">
-      ← Volver a Noticias
-    </a>
-  </div>
+<BaseLayout title={migrada?.titulo ?? title} description={description}>
+  {
+    migrada ? (
+      <NoticiaArticulo noticia={migrada} relacionadas={relacionadas} />
+    ) : (
+      <>
+        <ArticleContent title={title} html={html} image={image} date={date} />
+        <div class="mx-auto max-w-[820px] px-5 pb-16 lg:px-8">
+          <a
+            href="/noticias/"
+            class="font-heading text-sm font-semibold uppercase tracking-wide text-brand-olive hover:text-brand-olive-dark"
+          >
+            ← Volver a Noticias
+          </a>
+        </div>
+      </>
+    )
+  }
 </BaseLayout>

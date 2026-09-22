@@ -1,0 +1,326 @@
+---
+import "../styles/noticia.css";
+import type { Noticia } from "../data/noticias/tipos";
+
+interface Relacionada {
+  slug: string;
+  titulo: string;
+  fecha?: string;
+  imagen?: string | null;
+}
+
+interface Props {
+  noticia: Noticia;
+  relacionadas?: Relacionada[];
+}
+
+const { noticia, relacionadas = [] } = Astro.props;
+
+const formatearFecha = (iso?: string) =>
+  iso
+    ? new Date(iso).toLocaleDateString("es-ES", { day: "numeric", month: "long", year: "numeric" })
+    : null;
+
+const fechaLarga = formatearFecha(noticia.fecha);
+const tieneLateral = Boolean(
+  noticia.contexto?.length ||
+    noticia.conceptos?.length ||
+    noticia.intervinientes?.length ||
+    noticia.perfil
+);
+
+// Los textos de la interfaz cambian si la pieza es de radio o pódcast.
+const esAudio = noticia.pieza?.formato === "audio";
+const verbo = esAudio ? "Escuchar" : "Ver";
+const kickerPieza = `${verbo} la pieza`;
+---
+
+<article class="noticia">
+  <header class="noticia-hero">
+    <img
+      class="noticia-hero__img"
+      src={noticia.portada.src}
+      alt={noticia.portada.alt}
+      width={noticia.portada.width ?? 1600}
+      height={noticia.portada.height ?? 900}
+      fetchpriority="high"
+      decoding="async"
+    />
+    <div class="noticia-hero__scrim" aria-hidden="true"></div>
+    <div class="noticia-hero__content">
+      <p class="noticia-banda">
+        <span>{noticia.autoria}</span>
+        {
+          noticia.medio && (
+            <>
+              <span class="noticia-banda__sep" aria-hidden="true">·</span>
+              <span>{noticia.medio.etiqueta}</span>
+              <span class="noticia-banda__medio">{noticia.medio.nombre}</span>
+            </>
+          )
+        }
+      </p>
+      <h1>{noticia.titulo}</h1>
+      <p class="noticia-hero__entradilla">{noticia.entradilla}</p>
+      {fechaLarga && <p class="noticia-hero__fecha"><time datetime={noticia.fecha}>{fechaLarga}</time></p>}
+    </div>
+  </header>
+
+  {
+    noticia.citaDestacada && (
+      <div class="noticia-cita-hero" data-reveal>
+        <blockquote>
+          <p set:html={`«${noticia.citaDestacada.texto}»`} />
+          <footer>
+            <cite>{noticia.citaDestacada.autor}</cite>
+            {noticia.citaDestacada.cargo && <span>{noticia.citaDestacada.cargo}</span>}
+          </footer>
+        </blockquote>
+      </div>
+    )
+  }
+
+  {
+    noticia.pieza && (
+      <section class="noticia-pieza" data-reveal aria-label={`${esAudio ? "Audio" : "Vídeo"} de la pieza`}>
+        <div class="noticia-pieza__inner">
+          {noticia.pieza.youtubeId && (
+            <div class="noticia-pieza__marco">
+              <iframe
+                src={`https://www.youtube-nocookie.com/embed/${noticia.pieza.youtubeId}`}
+                title={noticia.pieza.titulo}
+                loading="lazy"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              />
+            </div>
+          )}
+
+          {!noticia.pieza.youtubeId && noticia.pieza.enlaceExterno && (
+            <div class="noticia-pieza__tarjeta">
+              <p class="guia-kicker">{kickerPieza}</p>
+              <h2>{noticia.pieza.titulo}</h2>
+              {noticia.pieza.pie && <p class="noticia-pieza__descripcion">{noticia.pieza.pie}</p>}
+              {noticia.pieza.minuto && (
+                <span class="noticia-pieza__minuto">Desde el minuto {noticia.pieza.minuto}</span>
+              )}
+              <a
+                class="guia-pill guia-pill--navy"
+                href={noticia.pieza.enlaceExterno.href}
+                target="_blank"
+                rel="noopener"
+              >
+                {noticia.pieza.enlaceExterno.etiqueta}
+              </a>
+            </div>
+          )}
+
+          {noticia.pieza.youtubeId && (
+            <p class="noticia-pieza__pie">
+              {noticia.pieza.pie && <span>{noticia.pieza.pie}</span>}
+              {noticia.pieza.minuto && (
+                <span class="noticia-pieza__minuto">Desde el minuto {noticia.pieza.minuto}</span>
+              )}
+              {noticia.pieza.enlaceExterno && (
+                <a
+                  class="noticia-pieza__enlace"
+                  href={noticia.pieza.enlaceExterno.href}
+                  target="_blank"
+                  rel="noopener"
+                >
+                  {noticia.pieza.enlaceExterno.etiqueta}
+                </a>
+              )}
+            </p>
+          )}
+        </div>
+      </section>
+    )
+  }
+
+  <div class="noticia-cuerpo">
+    <div class:list={["noticia-cuerpo__inner", { "noticia-cuerpo__inner--sin-lateral": !tieneLateral }]}>
+      <div class="noticia-texto" data-reveal>
+        {
+          noticia.cuerpo.map((bloque) => {
+            if (bloque.tipo === "seccion") return <h2>{bloque.titulo}</h2>;
+            if (bloque.tipo === "parrafo") return <p set:html={bloque.texto} />;
+            if (bloque.tipo === "cita")
+              return (
+                <blockquote>
+                  <p set:html={`«${bloque.texto}»`} />
+                  {bloque.autor && <cite>{bloque.autor}</cite>}
+                </blockquote>
+              );
+            if (bloque.tipo === "lista")
+              return (
+                <div>
+                  {bloque.etiqueta && <p class="noticia-texto__etiqueta">{bloque.etiqueta}</p>}
+                  <ul>
+                    {bloque.items.map((item) => (
+                      <li set:html={item} />
+                    ))}
+                  </ul>
+                </div>
+              );
+            return (
+              <figure>
+                <img
+                  src={bloque.src}
+                  alt={bloque.alt}
+                  width={bloque.width ?? 1200}
+                  height={bloque.height ?? 800}
+                  loading="lazy"
+                  decoding="async"
+                />
+                {bloque.pie && <figcaption>{bloque.pie}</figcaption>}
+              </figure>
+            );
+          })
+        }
+      </div>
+
+      {
+        tieneLateral && (
+          <aside class="noticia-lateral" data-reveal>
+            {noticia.contexto && noticia.contexto.length > 0 && (
+              <div class="noticia-lateral__caja">
+                <h2>Contexto</h2>
+                <div class="noticia-contexto">
+                  {noticia.contexto.map((dato) => (
+                    <div>
+                      <b>{dato.valor}</b>
+                      <span>{dato.etiqueta}</span>
+                      {dato.detalle && <p>{dato.detalle}</p>}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {noticia.conceptos && noticia.conceptos.length > 0 && (
+              <div class="noticia-lateral__caja">
+                <h2>Conceptos clave</h2>
+                <dl>
+                  {noticia.conceptos.map((c) => (
+                    <>
+                      <dt>{c.termino}</dt>
+                      <dd>{c.definicion}</dd>
+                    </>
+                  ))}
+                </dl>
+              </div>
+            )}
+
+            {noticia.intervinientes && noticia.intervinientes.length > 0 && (
+              <div class="noticia-lateral__caja">
+                <h2>Intervinientes</h2>
+                <dl>
+                  {noticia.intervinientes.map((p) => (
+                    <>
+                      <dt>{p.nombre}</dt>
+                      <dd>{p.rol}</dd>
+                    </>
+                  ))}
+                </dl>
+              </div>
+            )}
+
+            {noticia.perfil && (
+              <div class="noticia-lateral__caja">
+                <h2>{noticia.perfil.titulo}</h2>
+                <p class="noticia-lateral__perfil">{noticia.perfil.texto}</p>
+              </div>
+            )}
+          </aside>
+        )
+      }
+    </div>
+  </div>
+
+  {
+    noticia.recursos && noticia.recursos.length > 0 && (
+      <section class="noticia-recursos" aria-labelledby="noticia-recursos-titulo">
+        <div class="noticia-recursos__inner">
+          <p class="guia-kicker" data-reveal>
+            Recursos y apoyo
+          </p>
+          <h2 id="noticia-recursos-titulo" data-reveal>
+            Si esta historia te toca de cerca
+          </h2>
+          <div class="noticia-recursos__grid">
+            {noticia.recursos.map((r) => (
+              <a
+                class="noticia-recurso"
+                href={r.href}
+                data-reveal
+                target={r.externo ? "_blank" : undefined}
+                rel={r.externo ? "noopener" : undefined}
+              >
+                <h3>{r.titulo}</h3>
+                <p>{r.texto}</p>
+                <span class="noticia-recurso__cta">{r.etiqueta}</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  <section class="noticia-pie">
+    <div class="noticia-pie__inner">
+      {
+        noticia.fuentes && noticia.fuentes.length > 0 && (
+          <div class="noticia-fuentes" data-reveal>
+            <h2>Fuentes</h2>
+            <ul>
+              {noticia.fuentes.map((f) => (
+                <li>
+                  <a href={f.href} target="_blank" rel="noopener">
+                    {f.etiqueta}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )
+      }
+      <div class="noticia-pie__nav">
+        <a class="noticia-pie__volver" href="/noticias/">← Volver a noticias</a>
+        <div class="noticia-pie__acciones">
+          <a class="guia-pill guia-pill--solid" href="/contacto/">Cuéntanos tu caso</a>
+          <a class="guia-pill guia-pill--navy" href="/hazte-socio/">Hazte socio</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {
+    relacionadas.length > 0 && (
+      <section class="noticia-relacionadas" aria-labelledby="noticia-relacionadas-titulo">
+        <div class="noticia-relacionadas__inner">
+          <p class="guia-kicker" data-reveal>
+            Seguir leyendo
+          </p>
+          <h2 id="noticia-relacionadas-titulo" data-reveal>
+            Otras noticias
+          </h2>
+          <div class="noticia-relacionadas__grid">
+            {relacionadas.map((r) => (
+              <a class="noticia-relacionada" href={`/noticias/${r.slug}/`} data-reveal>
+                {r.imagen && (
+                  <img src={r.imagen} alt="" width="640" height="400" loading="lazy" decoding="async" />
+                )}
+                <div class="noticia-relacionada__texto">
+                  {r.fecha && <time datetime={r.fecha}>{formatearFecha(r.fecha)}</time>}
+                  <h3>{r.titulo}</h3>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+</article>

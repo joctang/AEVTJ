@@ -1,0 +1,344 @@
+---
+// Mapa de puntos con un camino circular animado (inspirado en "world-map.tsx" de
+// Aceternity/shadcn), portado a Astro sin React/Next.js: el mapa de puntos se genera
+// en build time con dotted-map (misma librería, sin next/image). Un pequeño script
+// va recorriendo los países uno a uno, de etapa en etapa, cerrando el círculo.
+import DottedMap from "dotted-map";
+import { worldPartners } from "../data/partners";
+
+interface Props {
+  lineColor?: string;
+}
+
+const { lineColor = "#5b6934" } = Astro.props;
+
+const countryLocations: Record<string, { lat: number; lng: number }> = {
+  es: { lat: 40.4637, lng: -3.7492 },
+  ar: { lat: -38.4161, lng: -63.6167 },
+  mx: { lat: 23.6345, lng: -102.5528 },
+  gb: { lat: 55.3781, lng: -3.436 },
+  cz: { lat: 49.8175, lng: 15.473 },
+  de: { lat: 51.1657, lng: 10.4515 },
+  nl: { lat: 52.1326, lng: 5.2913 },
+  us: { lat: 37.0902, lng: -95.7129 },
+  au: { lat: -25.2744, lng: 133.7751 },
+};
+
+const countryNames: Record<string, string> = {
+  ar: "Argentina",
+  mx: "México",
+  gb: "Reino Unido",
+  cz: "República Checa",
+  de: "Alemania",
+  nl: "Países Bajos",
+  us: "Estados Unidos",
+  au: "Australia",
+};
+
+const projectPointPct = (lat: number, lng: number) => ({
+  x: ((lng + 180) * (800 / 360)) / 8,
+  y: ((90 - lat) * (400 / 180)) / 4,
+});
+
+const partnerCountries = [...new Set(worldPartners.map((p) => p.country).filter((c): c is string => Boolean(c)))];
+
+const spain = countryLocations.es;
+// Camino circular: cada etapa conecta con la siguiente (y la última cierra el
+// círculo con la primera), en vez de partir siempre desde España.
+const stops = partnerCountries.filter((c) => c !== "es" && countryLocations[c]);
+const dots = stops.map((c, i) => {
+  const prev = stops[(i - 1 + stops.length) % stops.length];
+  return { id: c, start: countryLocations[prev], end: countryLocations[c] };
+});
+
+const orgsByCountry = new Map<string, string[]>();
+for (const p of worldPartners) {
+  if (!p.country) continue;
+  const list = orgsByCountry.get(p.country) ?? [];
+  list.push(p.name);
+  orgsByCountry.set(p.country, list);
+}
+
+// Clamp label position so it never gets clipped by the map's edges.
+const clamp = (n: number, min: number, max: number) => Math.min(max, Math.max(min, n));
+
+const labels = stops.map((c) => {
+    const { x, y } = projectPointPct(countryLocations[c].lat, countryLocations[c].lng);
+    return {
+      id: c,
+      x: clamp(x, 8, 92),
+      y: clamp(y, 10, 88),
+      country: countryNames[c] ?? c,
+      orgs: orgsByCountry.get(c) ?? [],
+    };
+  });
+
+const map = new DottedMap({ height: 100, grid: "diagonal" });
+const svgMap = map.getSVG({
+  radius: 0.22,
+  color: "#22241c33",
+  shape: "circle",
+  backgroundColor: "transparent",
+});
+
+const projectPoint = (lat: number, lng: number) => {
+  const x = (lng + 180) * (800 / 360);
+  const y = (90 - lat) * (400 / 180);
+  return { x, y };
+};
+
+const createCurvedPath = (start: { x: number; y: number }, end: { x: number; y: number }) => {
+  const midX = (start.x + end.x) / 2;
+  const midY = Math.min(start.y, end.y) - 50;
+  return `M ${start.x} ${start.y} Q ${midX} ${midY} ${end.x} ${end.y}`;
+};
+---
+
+<div class="dotted-world-map w-full aspect-[2/1] relative font-sans" style={`--line-color:${lineColor}`}>
+  <Fragment set:html={svgMap} />
+  <svg viewBox="0 0 800 400" class="overlay h-full w-full absolute inset-0" aria-hidden="true">
+    <circle cx={projectPoint(spain.lat, spain.lng).x} cy={projectPoint(spain.lat, spain.lng).y} r="2.5" class="node node--home" />
+    {
+      dots.map((dot) => {
+        const startPoint = projectPoint(dot.start.lat, dot.start.lng);
+        const endPoint = projectPoint(dot.end.lat, dot.end.lng);
+        return (
+          <path
+            d={createCurvedPath(startPoint, endPoint)}
+            class="arc"
+            data-country={dot.id}
+            pathLength="1"
+            fill="none"
+          />
+        );
+      })
+    }
+    {
+      dots.map((dot) => {
+        const end = projectPoint(dot.end.lat, dot.end.lng);
+        return (
+          <g class="node-group" data-country={dot.id}>
+            <circle cx={end.x} cy={end.y} r="2" class="node" />
+            <circle cx={end.x} cy={end.y} r="2" class="node node--ping" />
+          </g>
+        );
+      })
+    }
+  </svg>
+  <div class="labels" aria-hidden="true">
+    {
+      labels.map((label) => (
+        <div class="country-label" style={`left:${label.x}%; top:${label.y}%`} data-country={label.id}>
+          <p class="country-label__name">{label.country}</p>
+          {label.orgs.map((org) => (
+            <p class="country-label__org">{org}</p>
+          ))}
+        </div>
+      ))
+    }
+  </div>
+  <p class="sr-only">
+    Asociaciones aliadas: {labels.map((l) => `${l.country} (${l.orgs.join(", ")})`).join("; ")}.
+  </p>
+</div>
+
+<script define:vars={{ countryIds: labels.map((l) => l.id) }}>
+  function initDottedMapLabels() {
+    const HOLD_MS = 3000;
+    const FADE_MS = 900;
+    const wrap = document.querySelector(".dotted-world-map");
+    if (!wrap) return;
+
+    const steps = countryIds
+      .map((id) => ({
+        id,
+        label: wrap.querySelector(`.country-label[data-country="${id}"]`),
+        arc: wrap.querySelector(`.arc[data-country="${id}"]`),
+        node: wrap.querySelector(`.node-group[data-country="${id}"]`),
+      }))
+      .filter((s) => s.label && s.arc && s.node);
+    if (!steps.length) return;
+
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    let index = 0;
+    let timer = null;
+
+    const show = (i) => {
+      steps.forEach((s, j) => {
+        const active = j === i;
+        s.label.classList.toggle("is-active", active);
+        s.arc.classList.toggle("is-active", active);
+        s.node.classList.toggle("is-active", active);
+      });
+    };
+
+    const tick = () => {
+      index = (index + 1) % steps.length;
+      show(index);
+      timer = setTimeout(tick, HOLD_MS + FADE_MS);
+    };
+
+    show(0);
+    if (!reducedMotion.matches) timer = setTimeout(tick, HOLD_MS + FADE_MS);
+
+    reducedMotion.addEventListener("change", () => {
+      if (timer) clearTimeout(timer);
+      show(0);
+      if (!reducedMotion.matches) timer = setTimeout(tick, HOLD_MS + FADE_MS);
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initDottedMapLabels);
+  } else {
+    initDottedMapLabels();
+  }
+</script>
+
+<style>
+  .dotted-world-map :global(svg:first-child) {
+    height: 100%;
+    width: 100%;
+    display: block;
+    pointer-events: none;
+    user-select: none;
+    -webkit-mask-image: linear-gradient(to bottom, transparent, white 10%, white 90%, transparent);
+    mask-image: linear-gradient(to bottom, transparent, white 10%, white 90%, transparent);
+  }
+
+  .overlay {
+    pointer-events: none;
+  }
+
+  .arc {
+    stroke: var(--line-color);
+    stroke-width: 1.2;
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    opacity: 0;
+    transition:
+      stroke-dashoffset 0.9s ease-out,
+      opacity 0.9s ease;
+  }
+
+  .arc.is-active {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+
+  .node--home {
+    fill: var(--line-color);
+    opacity: 0.55;
+  }
+
+  .node-group {
+    opacity: 0;
+    transition: opacity 0.9s ease;
+  }
+
+  .node-group.is-active {
+    opacity: 1;
+  }
+
+  .node {
+    fill: var(--line-color);
+  }
+
+  .node--ping {
+    opacity: 0.5;
+    animation: dotted-map-ping 1.5s ease-out infinite;
+  }
+
+  @keyframes dotted-map-ping {
+    from {
+      r: 2;
+      opacity: 0.5;
+    }
+    to {
+      r: 8;
+      opacity: 0;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .arc,
+    .node-group {
+      transition: none;
+    }
+    .node--ping {
+      animation: none;
+      display: none;
+    }
+  }
+
+  .labels {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .country-label {
+    position: absolute;
+    transform: translate(-50%, -100%) translateY(-6px) scale(0.9);
+    text-align: center;
+    white-space: nowrap;
+    opacity: 0;
+    filter: blur(4px);
+    transition:
+      opacity 0.9s ease,
+      filter 0.9s ease,
+      transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .country-label.is-active {
+    opacity: 1;
+    filter: blur(0);
+    transform: translate(-50%, -100%) translateY(-10px) scale(1);
+  }
+
+  .country-label__name {
+    font-family: var(--font-heading, inherit);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--line-color);
+    background: color-mix(in srgb, var(--line-color) 12%, white 88%);
+    border: 1px solid color-mix(in srgb, var(--line-color) 30%, transparent);
+    border-radius: 999px;
+    padding: 0.3rem 0.9rem;
+    margin: 0 0 0.3rem;
+    display: inline-block;
+    box-shadow: 0 0 0 0 transparent;
+    transition:
+      box-shadow 0.9s ease,
+      background 0.9s ease;
+  }
+
+  .country-label.is-active .country-label__name {
+    background: color-mix(in srgb, var(--line-color) 22%, white 78%);
+    box-shadow:
+      0 0 0 5px color-mix(in srgb, var(--line-color) 14%, transparent),
+      0 8px 20px color-mix(in srgb, var(--line-color) 30%, transparent);
+  }
+
+  .country-label__org {
+    font-size: 0.7rem;
+    color: var(--color-brand-ink, #22241c);
+    opacity: 0.75;
+    margin: 0.1rem 0 0;
+  }
+
+  @media (max-width: 640px) {
+    .country-label {
+      white-space: normal;
+      max-width: 10rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .country-label {
+      transition: none;
+    }
+  }
+</style>

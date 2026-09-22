@@ -1,0 +1,116 @@
+---
+// Tarjeta de procedimiento para cada paso de la guía de derechos sanitarios.
+// Casos especiales del paso 2: las tres vías de formalización como opciones
+// excluyentes en rejilla y la fórmula de exclusión como texto a copiar.
+import { viasFormalizacion, formulaExclusion } from "../data/derechos-sanitarios";
+import type { PasoSanitario } from "../data/derechos-sanitarios";
+
+interface Props {
+  paso: PasoSanitario;
+  id?: string;
+}
+const { paso, id } = Astro.props;
+
+const esPaso2 = paso.n === 2;
+// La fórmula de exclusión vive dentro del primer listado del paso 2; se saca
+// del listado y se maqueta como bloque a copiar, sin tocar su texto.
+const bloques = paso.bloques.map((b) =>
+  b.tipo === "lista" && esPaso2
+    ? { ...b, items: b.items.filter((i) => !i.includes("Exclusiones:")) }
+    : b
+);
+const etiquetaVias = "Cómo formalizarlo (elige una vía):";
+---
+
+<section class="paso" id={id ?? paso.id} data-reveal>
+  <header class="paso__cabecera">
+    <span class="paso__badge" aria-hidden="true">{paso.n}</span>
+    <h2>{paso.titulo}</h2>
+  </header>
+
+  {
+    paso.intro && <p class="paso__intro">{paso.intro}</p>
+  }
+
+  {
+    bloques.map((bloque) => (
+      <>
+        {bloque.tipo === "parrafo" ? (
+          <p class="paso__parrafo" set:html={bloque.texto} />
+        ) : (
+          <>
+            {bloque.etiqueta && <p class="paso__etiqueta">{bloque.etiqueta}</p>}
+            {bloque.etiqueta === etiquetaVias ? (
+              <div class="paso__vias">
+                {viasFormalizacion.map((via) => (
+                  <div class="paso__via">
+                    <h3>{via.nombre}</h3>
+                    <p>{via.matiz}</p>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <ul class="paso__lista">
+                {bloque.items.map((item) => (
+                  <li set:html={item} />
+                ))}
+              </ul>
+            )}
+          </>
+        )}
+      </>
+    ))
+  }
+
+  {
+    esPaso2 && (
+      <div class="paso__exclusion">
+        <p class="paso__etiqueta">Exclusiones:</p>
+        <p class="paso__formula" id={`formula-exclusion-${paso.n}`}>
+          {formulaExclusion}
+        </p>
+        <button
+          type="button"
+          class="paso__copiar"
+          data-copiar={`formula-exclusion-${paso.n}`}
+        >
+          <span aria-hidden="true">⧉</span> Copiar texto
+        </button>
+        <p class="paso__copiado" aria-live="polite" role="status"></p>
+      </div>
+    )
+  }
+
+  <slot />
+</section>
+
+<script>
+  const copiar = async (boton: HTMLButtonElement) => {
+    const origen = document.getElementById(boton.dataset.copiar ?? "");
+    const destinoAviso = boton.parentElement?.querySelector(".paso__copiado");
+    const texto = origen?.textContent ?? "";
+    let ok = false;
+    if (navigator.clipboard?.writeText) {
+      try {
+        await navigator.clipboard.writeText(texto);
+        ok = true;
+      } catch {
+        ok = false;
+      }
+    }
+    if (!ok) {
+      // Fallback: selección + comando de copia del navegador.
+      const rango = document.createRange();
+      rango.selectNodeContents(origen!);
+      const seleccion = window.getSelection();
+      seleccion?.removeAllRanges();
+      seleccion?.addRange(rango);
+      ok = document.execCommand("copy");
+      seleccion?.removeAllRanges();
+    }
+    if (destinoAviso) destinoAviso.textContent = ok ? "Texto copiado." : "No se pudo copiar; selecciónalo y cópialo a mano.";
+  };
+  document.querySelectorAll<HTMLButtonElement>("[data-copiar]").forEach((boton) => {
+    boton.addEventListener("click", () => void copiar(boton));
+  });
+</script>

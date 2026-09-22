@@ -1,110 +1,150 @@
 ---
+import "../styles/contacto.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import TornEdge from "../components/TornEdge.astro";
 
 const contacts = [
   {
-    title: "Bienvenida o AYUDA",
+    title: "Bienvenida o ayuda",
+    para: "Si estás saliendo, ya has salido o necesitas apoyo.",
     email: "info@victimasdetestigosdejehova.org",
   },
   {
-    title: "Organismos, Institución y Periodistas",
+    title: "Organismos, instituciones y periodistas",
+    para: "Consultas de medios, administraciones y entidades.",
     email: "medios@victimasdetestigosdejehova.org",
   },
   {
     title: "Secretaría",
+    para: "Altas de socios, documentación y gestiones internas.",
     email: "secretaria@victimasdetestigosdejehova.org",
   },
 ];
+
+const description =
+  "Contacta con la Asociación Española de Víctimas de los Testigos de Jehová: bienvenida y ayuda, medios de comunicación e instituciones, y secretaría.";
 ---
 
-<BaseLayout title="Contacto">
-  <!-- Hero -->
-  <section class="relative overflow-hidden bg-brand-ink text-white">
-    <img
-      src="/uploads/2025/10/ju-on-e6XsI7qqvAA-unsplash-1.jpg"
-      alt="Bosque en penumbra"
-      class="absolute inset-0 h-full w-full object-cover"
-    />
-    <div class="absolute inset-0 bg-brand-ink/60"></div>
-    <div class="relative mx-auto flex max-w-[1200px] flex-col gap-2 px-5 py-24 lg:flex-row lg:items-end lg:justify-between lg:px-8 lg:py-32">
-      <div>
-        <h1 class="font-heading text-6xl font-bold uppercase tracking-wide sm:text-7xl">Contacto</h1>
-        <div class="mt-3 h-1 w-24 bg-brand-olive"></div>
+<BaseLayout title="Contacto" description={description}>
+  <div class="contacto">
+    <section class="contacto-hero">
+      <img
+        class="contacto-hero__img"
+        src="/uploads/2025/10/ju-on-e6XsI7qqvAA-unsplash-1.jpg"
+        alt=""
+        width="1920"
+        height="1280"
+        fetchpriority="high"
+        decoding="async"
+      />
+      <div class="contacto-hero__scrim" aria-hidden="true"></div>
+      <div class="contacto-hero__content">
+        <p class="guia-kicker guia-kicker--crema">Estamos aquí</p>
+        <h1>Contacto</h1>
+        <p class="contacto-hero__entradilla">
+          Queremos ayudarte. Escríbenos al correo que mejor encaje con tu caso o cuéntanos lo que
+          necesitas en el formulario: te responderemos lo antes posible.
+        </p>
       </div>
-      <div class="text-white/90">
-        <p>Queremos ayudarte.</p>
-        <p>Puedes ayudar a que este movimiento sea imparable</p>
+      <TornEdge />
+    </section>
+
+    <section class="contacto-correos" aria-labelledby="contacto-correos-titulo">
+      <div class="contacto-correos__inner">
+        <p class="guia-kicker" data-reveal>Correos de contacto</p>
+        <h2 id="contacto-correos-titulo" data-reveal>Escribe a quien mejor pueda ayudarte</h2>
+        <p class="contacto-correos__intro" data-reveal>
+          Cada dirección la atiende un área distinta de la asociación. Elegir la correcta acelera la
+          respuesta.
+        </p>
+        <div class="contacto-correos__grid">
+          {
+            contacts.map((c) => (
+              <a class="contacto-correo" href={`mailto:${c.email}`} data-reveal>
+                <h3>{c.title}</h3>
+                <p class="contacto-correo__para">{c.para}</p>
+                <span class="contacto-correo__email">{c.email}</span>
+              </a>
+            ))
+          }
+        </div>
       </div>
-    </div>
-    <TornEdge />
-  </section>
+    </section>
 
-  <!-- Tienes mas preguntas -->
-  <section class="mx-auto max-w-[820px] px-5 pt-16 text-center lg:px-8">
-    <p class="font-heading text-sm uppercase tracking-widest text-brand-olive">¿Tienes más</p>
-    <h2 class="mt-1 font-heading text-5xl font-bold uppercase tracking-wide text-brand-ink sm:text-6xl">
-      Preguntas?
-    </h2>
-    <p class="mt-3 text-brand-ink/70">Te responderemos lo antes posible</p>
-  </section>
+    <section class="contacto-form-seccion" aria-labelledby="contacto-form-titulo">
+      <div class="contacto-form-seccion__inner">
+        <p class="guia-kicker" data-reveal>¿Tienes más preguntas?</p>
+        <h2 id="contacto-form-titulo" data-reveal>Cuéntanos tu caso</h2>
+        <p class="contacto-form-seccion__intro" data-reveal>
+          Rellena el formulario y se abrirá tu programa de correo con el mensaje ya redactado, listo
+          para enviar. Así los datos viajan directamente desde tu cuenta a la nuestra.
+        </p>
 
-  <!-- Correos de contacto -->
-  <section class="mx-auto max-w-[1200px] px-5 py-16 lg:px-8">
-    <h2 class="text-center font-heading text-3xl font-semibold uppercase tracking-wide text-brand-ink sm:text-4xl">
-      Correos de contacto
-    </h2>
-    <div class="mt-10 grid gap-6 sm:grid-cols-3">
-      {
-        contacts.map((c) => (
-          <div class="rounded-xl border border-black/5 p-6 text-center shadow-sm">
-            <h3 class="font-heading text-base font-bold uppercase text-brand-ink">{c.title}</h3>
-            <a
-              href={`mailto:${c.email}`}
-              class="mt-3 inline-block text-sm text-brand-ink/75 hover:text-brand-olive"
-            >
-              {c.email}
-            </a>
+        <form class="contacto-form" id="contacto-form" data-reveal novalidate>
+          <div class="contacto-form__fila">
+            <label>
+              Nombre
+              <input type="text" name="nombre" autocomplete="name" required />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" autocomplete="email" required />
+            </label>
           </div>
-        ))
-      }
-    </div>
-  </section>
-
-  <!-- Newsletter -->
-  <section class="mx-auto max-w-[1200px] px-5 pb-16 lg:px-8">
-    <div class="grid overflow-hidden rounded-xl shadow-lg sm:grid-cols-2">
-      <div class="flex items-center bg-brand-olive p-8 sm:p-10">
-        <h3 class="font-heading text-2xl font-semibold text-white sm:text-3xl">
-          Apúntate a nuestro boletín de noticias
-        </h3>
-      </div>
-      <div class="bg-brand-ink p-8 text-white sm:p-10">
-        <form onsubmit="return false" class="flex flex-col gap-3">
-          <label class="text-sm font-medium">
-            Tu correo electrónico
-            <input
-              type="email"
-              class="mt-1.5 w-full rounded-md border border-white/30 bg-white/10 px-3 py-2 text-sm text-white placeholder-white/50 outline-none focus:border-white"
-            />
+          <label>
+            Destinatario
+            <select name="destinatario">
+              {contacts.map((c) => <option value={c.email}>{c.title}</option>)}
+            </select>
           </label>
-          <p class="text-xs text-white/70">
-            Solo usaremos tu correo para enviarte el boletín de noticias. Sin spam, sin cesión de
-            datos a terceros.
+          <label>
+            Asunto
+            <input type="text" name="asunto" required />
+          </label>
+          <label>
+            Mensaje
+            <textarea name="mensaje" rows="6" required></textarea>
+          </label>
+          <p class="contacto-form__nota">
+            Este formulario no envía nada por sí mismo ni guarda tus datos: abre tu gestor de correo
+            con el mensaje preparado. Si prefieres escribirnos directamente, usa una de las
+            direcciones de arriba. Tratamos tus datos según nuestra
+            <a href="/politica-de-privacidad/">Política de Privacidad</a>.
           </p>
-          <label class="flex items-start gap-2 text-xs text-white/70">
-            <input type="checkbox" class="mt-0.5" />
-            Acepto la <a href="/politica-de-privacidad/" class="underline">Política de Privacidad</a>
-            y el tratamiento de mis datos con el fin de recibir el boletín de noticias.
-          </label>
-          <button
-            type="submit"
-            class="mt-2 self-start rounded-md bg-brand-olive px-6 py-2.5 font-heading text-sm font-semibold uppercase tracking-wide text-white hover:bg-brand-olive-dark"
-          >
-            Quiero suscribirme
-          </button>
+          <div class="contacto-form__acciones">
+            <button type="submit" class="guia-pill guia-pill--solid">Preparar mensaje</button>
+            <p class="contacto-form__estado" id="contacto-form-estado" role="status" aria-live="polite"></p>
+          </div>
         </form>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
+
+  <script>
+    // El formulario no tiene backend: compone un mailto con lo escrito y abre
+    // el gestor de correo del usuario. Nada sale del navegador por otra vía.
+    const form = document.getElementById("contacto-form") as HTMLFormElement | null;
+    const estado = document.getElementById("contacto-form-estado");
+
+    form?.addEventListener("submit", (event) => {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+
+      const datos = new FormData(form);
+      const destinatario = String(datos.get("destinatario") ?? "");
+      const nombre = String(datos.get("nombre") ?? "").trim();
+      const email = String(datos.get("email") ?? "").trim();
+      const asunto = String(datos.get("asunto") ?? "").trim();
+      const mensaje = String(datos.get("mensaje") ?? "").trim();
+
+      const cuerpo = `${mensaje}\n\n—\n${nombre}\n${email}`;
+      const href =
+        `mailto:${destinatario}` +
+        `?subject=${encodeURIComponent(asunto)}` +
+        `&body=${encodeURIComponent(cuerpo)}`;
+
+      if (estado) estado.textContent = "Abriendo tu gestor de correo…";
+      window.location.href = href;
+    });
+  </script>
 </BaseLayout>

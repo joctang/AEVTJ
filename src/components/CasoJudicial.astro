@@ -1,0 +1,95 @@
+---
+import type { CasoLegal } from "../data/legal";
+import { tamanoDocumento } from "../data/legal";
+import EstadoBadge from "./EstadoBadge.astro";
+
+interface Props {
+  caso: CasoLegal;
+}
+
+const { caso } = Astro.props;
+---
+
+<article class="legal-caso" id={caso.id} data-reveal>
+  <header class="legal-caso__cabecera">
+    <div>
+      <h3>Contra {caso.demandado}</h3>
+      <p class="legal-caso__rol">{caso.rol}</p>
+    </div>
+    <EstadoBadge etiqueta={caso.estado.etiqueta} tono={caso.estado.tono} />
+  </header>
+
+  <p class="legal-caso__descripcion">{caso.descripcion}</p>
+
+  {
+    caso.hitos.length > 0 && (
+      <ol class="legal-cronologia">
+        {caso.hitos.map((hito, i) => (
+          <li class:list={{ "legal-cronologia__hito--ultimo": i === caso.hitos.length - 1 }}>
+            <span class="legal-cronologia__fecha">{hito.fecha}</span>
+            <p>{hito.texto}</p>
+          </li>
+        ))}
+      </ol>
+    )
+  }
+
+  {
+    caso.situacion.length > 0 && (
+      <div class="legal-caso__situacion">
+        {caso.situacion.map((parrafo) => (
+          <p>{parrafo}</p>
+        ))}
+      </div>
+    )
+  }
+
+  {caso.nota && <p class="legal-caso__nota">{caso.nota}</p>}
+
+  {
+    (caso.documentos.length > 0 || caso.audiosJuicio) && (
+      <ul class="legal-documentos">
+        {caso.documentos.map((doc) => {
+          const tamano = tamanoDocumento(doc.href);
+          return (
+            <li>
+              <a
+                class="legal-documento"
+                href={doc.href}
+                download
+                aria-label={`Descargar ${doc.etiqueta}${tamano ? ` (PDF, ${tamano})` : " (PDF)"}`}
+              >
+                <svg class="legal-documento__icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z" />
+                  <path d="M14 2v6h6" />
+                </svg>
+                <span class="legal-documento__etiqueta">{doc.etiqueta}</span>
+                <span class="legal-documento__meta">PDF · {tamano ?? "—"}</span>
+                <span class="legal-documento__flecha" aria-hidden="true">↓</span>
+              </a>
+            </li>
+          );
+        })}
+        {caso.audiosJuicio && (
+          <li>
+            <a
+              class="legal-documento legal-documento--audio"
+              href={caso.audiosJuicio.href}
+              target="_blank"
+              rel="noopener"
+              aria-label={`${caso.audiosJuicio.titulo} (se abre en YouTube)`}
+            >
+              <svg class="legal-documento__icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M10 9.2v5.6l4.6-2.8Z" fill="currentColor" stroke="none" />
+              </svg>
+              <span class="legal-documento__etiqueta">{caso.audiosJuicio.titulo}</span>
+              <span class="legal-documento__meta">Se abre en YouTube</span>
+              <span class="legal-documento__flecha" aria-hidden="true">↗</span>
+            </a>
+          </li>
+        )}
+      </ul>
+    )
+  }
+</article>

@@ -2,11 +2,10 @@
 import "../styles/home-editorial.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import SpainMap from "../components/SpainMap.astro";
-import WorldMap from "../components/WorldMap.astro";
-import GlobeMap from "../components/GlobeMap.astro";
+import DottedWorldMap from "../components/DottedWorldMap.astro";
 import TornEdge from "../components/TornEdge.astro";
 import HelpNotice from "../components/HelpNotice.astro";
-import { stats } from "../data/partners";
+import { stats, worldPartners } from "../data/partners";
 
 const resourceCards = [
   {
@@ -53,14 +52,7 @@ const evidenceCards = [
   },
 ];
 
-const globalPartners = [
-  { label: "Asociación Civil Argentina de Ayuda a Víctimas de Sectas", image: "/uploads/2025/10/mundo-5bf827.svg", href: "https://asocavics.org/" },
-  { label: "Comunidad de Ex Testigos de Jehová México", image: "/uploads/2025/10/bandera-13b538.svg", href: "https://www.facebook.com/p/Comunidad-de-Ex-Testigos-de-Jehov%C3%A1-M%C3%A9xico-61562062544131/" },
-  { label: "Dales Unidos contra la Violencia Coercitiva", image: "/uploads/2025/10/bandera-13b538.svg", href: "https://www.instagram.com/dales.a.c/" },
-  { label: "exJW Support, UK peer support network", image: "/uploads/2025/10/reino-unido-64dcd5.svg", href: "http://www.exjwsupport.co.uk/" },
-  { label: "Probudili jsme se - Nos despertamos", image: "/uploads/2025/10/republica-checa-8eae56.svg", href: "http://facebook.com/groups/309238966897350" },
-  { label: "JZ Help e.V", image: "/uploads/2025/10/alemania-702b87.svg", href: "https://jz.help/" },
-];
+const globalPartners = worldPartners.map((p) => ({ label: p.name, image: p.flag, href: p.href }));
 ---
 
 <BaseLayout title="Inicio">
@@ -162,9 +154,8 @@ const globalPartners = [
           ))
         }
       </div>
-      <div class="map-panel map-panel--split" data-reveal>
-        <WorldMap />
-        <GlobeMap />
+      <div class="map-panel" data-reveal>
+        <DottedWorldMap />
       </div>
     </section>
 

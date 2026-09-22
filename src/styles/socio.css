@@ -1,0 +1,260 @@
+/* Estilos exclusivos de /hazte-socio/. Importado sólo desde esa página.
+   Manual: sombras navy translúcido, radios 28/32/44/100px,
+   hover 450ms, reveals 1500ms, prefers-reduced-motion. */
+
+/* ---------- Kickers y pills (mismos patrones que guia-salida.css / legal.css) ---------- */
+.socio .guia-kicker {
+  display: flex; align-items: center; gap: 12px;
+  font-family: var(--font-body); font-size: 10px; font-weight: 600;
+  letter-spacing: .16em; line-height: 1.6; text-transform: uppercase; color: #566a38;
+}
+.socio .guia-kicker::before { content: ''; flex: 0 0 6px; height: 6px; border-radius: 50%; background: #2ea88f; }
+.socio .guia-kicker--crema { color: #f5fbdfb3; }
+
+.socio .guia-pill {
+  display: inline-flex; align-items: center; justify-content: center; gap: 14px;
+  min-height: 54px; padding: 14px 28px; border-radius: 100px; border: 0;
+  font-family: var(--font-body); font-size: 13px; font-weight: 500; line-height: 1.45;
+  text-decoration: none; text-transform: none; cursor: pointer;
+  transition: background-color 450ms var(--ease-editorial), transform 450ms var(--ease-editorial), box-shadow 450ms var(--ease-editorial), color 450ms var(--ease-editorial);
+}
+.socio .guia-pill::after { content: '↗'; font-size: 18px; transition: translate 450ms var(--ease-editorial); }
+.socio .guia-pill--solid { background: #d8eaa4; color: #122c33; }
+.socio .guia-pill--navy { background: #122c33; color: #f5fbdf; }
+.socio .guia-pill--ghost { background: transparent; color: #f5fbdf; border: 1px solid #f5fbdf59; }
+@media (hover:hover) and (pointer:fine) {
+  .socio .guia-pill:hover { transform: translateY(-3px); box-shadow: 0 14px 30px #0f25371a; }
+  .socio .guia-pill:hover::after { translate: 3px -3px; }
+  .socio .guia-pill--solid:hover { background: #e9f6c4; }
+  .socio .guia-pill--navy:hover { background: #2ea88f; color: #0f2537; }
+  .socio .guia-pill--ghost:hover { background: #f5fbdf1a; }
+}
+
+/* ---------- Hero ---------- */
+.socio-hero {
+  position: relative; overflow: clip; display: grid; place-items: center;
+  height: 62vh; min-height: 500px; padding: 140px 24px 90px;
+  background: #122c33; color: #f5fbdf; text-align: center;
+  border-radius: 0 0 44px 44px;
+}
+.socio-hero__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.socio-hero__scrim { position: absolute; inset: 0; background: linear-gradient(180deg, #122c33a6 0%, #122c33cc 60%, #122c33 78%); }
+.socio-hero__content { position: relative; display: flex; flex-direction: column; align-items: center; max-width: 760px; }
+.socio-hero .guia-kicker { justify-content: center; }
+.socio-hero h1 {
+  margin-top: 22px; font-size: clamp(2.8rem, 5.6vw, 4.8rem); font-weight: 400;
+  letter-spacing: -.05em; line-height: 1.04; text-transform: none; text-wrap: balance;
+}
+.socio-hero__lema { margin-top: 16px; font-size: 18px; color: #d8eaa4; }
+.socio-hero__entradilla { margin-top: 18px; max-width: 620px; font-size: 16.5px; line-height: 1.8; color: #f5fbdfcc; }
+.socio-hero__actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-top: 32px; }
+
+/* ---------- Vías de colaboración ---------- */
+.socio-vias { padding-block: clamp(64px, 8vw, 110px) 0; }
+.socio-vias__inner { width: min(1120px, calc(100% - 64px)); margin-inline: auto; }
+.socio-vias h2 {
+  margin-top: 18px; max-width: 20ch;
+  font-size: clamp(30px, 3.8vw, 52px); font-weight: 400;
+  line-height: 1.12; letter-spacing: -.045em; text-transform: none;
+}
+.socio-vias__grid {
+  display: grid; grid-template-columns: 1.15fr 1fr; gap: 24px;
+  align-items: start; margin-top: clamp(32px, 4vw, 48px);
+}
+
+.socio-card {
+  padding: clamp(28px, 3.5vw, 44px); border-radius: 28px;
+  background: #fbfdf5; border: 1px solid #dce3cd; box-shadow: 0 20px 50px #0f25371a;
+}
+.socio-card--destacada { background: #0f2537; border-color: #0f2537; color: #f5fbdf; }
+.socio-card h3 {
+  font-size: clamp(1.4rem, 2.3vw, 2rem); font-weight: 400;
+  letter-spacing: -.035em; line-height: 1.2; text-transform: none;
+}
+.socio-card__lema { margin-top: 10px; font-family: var(--font-body); font-size: 14px; color: #7c8a72; }
+.socio-card--destacada .socio-card__lema { color: #d8eaa4; }
+.socio-card > p { margin-top: 18px; font-size: 15.5px; line-height: 1.8; color: #435043; }
+.socio-card--destacada > p { color: #f5fbdfcc; }
+
+.socio-etiqueta {
+  display: inline-flex; align-items: center; gap: 8px; margin-top: 18px;
+  padding: 6px 14px; border-radius: 100px;
+  font-family: var(--font-body); font-size: 11px; font-weight: 600;
+  letter-spacing: .12em; text-transform: uppercase;
+  background: #d8eaa4; color: #122c33;
+}
+
+.socio-beneficios { list-style: none; margin: 24px 0 0; padding: 0; display: flex; flex-direction: column; gap: 14px; }
+.socio-beneficios li {
+  display: flex; align-items: flex-start; gap: 13px;
+  font-family: var(--font-body); font-size: 15px; line-height: 1.65; color: #f5fbdfd9;
+}
+.socio-beneficios svg { flex: 0 0 18px; width: 18px; height: 18px; margin-top: 3px; color: #2ea88f; }
+.socio-card .guia-pill { margin-top: 28px; }
+
+.socio-paypal {
+  margin-top: 24px; padding: 22px 24px; border-radius: 22px; background: #edf5d7;
+}
+.socio-paypal h4 {
+  font-family: var(--font-heading); font-size: 1.15rem; font-weight: 400;
+  letter-spacing: -.02em; text-transform: none;
+}
+.socio-paypal p { margin-top: 10px; font-size: 14.5px; line-height: 1.75; color: #435043; }
+.socio-paypal strong { color: #122c33; overflow-wrap: anywhere; }
+
+/* ---------- Transferencia bancaria ---------- */
+.socio-transferencia { padding-block: clamp(70px, 8vw, 120px); }
+.socio-transferencia__inner {
+  width: min(820px, calc(100% - 64px)); margin-inline: auto;
+  padding: clamp(32px, 4.5vw, 60px); border-radius: 32px;
+  background: #fbfdf5; border: 1px solid #dce3cd; box-shadow: 0 24px 60px #0f25371a;
+}
+.socio-transferencia h2 {
+  margin-top: 18px; font-size: clamp(28px, 3.2vw, 44px); font-weight: 400;
+  line-height: 1.15; letter-spacing: -.04em; text-transform: none;
+}
+.socio-transferencia__intro { margin-top: 14px; font-size: 15.5px; line-height: 1.8; color: #435043; }
+.socio-transferencia h3 {
+  margin-top: clamp(32px, 4vw, 44px);
+  font-family: var(--font-body); font-size: 11px; font-weight: 600;
+  letter-spacing: .14em; text-transform: uppercase; color: #1f7a63;
+}
+
+.socio-datos { margin-top: 16px; border: 1px solid #dce3cd; border-radius: 22px; overflow: hidden; }
+.socio-dato {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 12px;
+  padding: 16px 22px; background: #ffffff;
+}
+.socio-dato + .socio-dato { border-top: 1px solid #edf1e4; }
+.socio-dato__clave {
+  flex: 0 0 auto; font-family: var(--font-body); font-size: 11px; font-weight: 600;
+  letter-spacing: .12em; text-transform: uppercase; color: #7c8a72;
+}
+.socio-dato__valor {
+  margin-left: auto; font-family: var(--font-body); font-size: 15px; font-weight: 500;
+  letter-spacing: .01em; color: #122c33; overflow-wrap: anywhere;
+}
+.socio-copiar {
+  flex: 0 0 auto; display: inline-flex; align-items: center; gap: 7px;
+  min-height: 36px; padding: 8px 15px; border: 1px solid #2ea88f66; border-radius: 100px;
+  background: transparent; cursor: pointer;
+  font-family: var(--font-body); font-size: 12px; font-weight: 600; color: #1f7a63;
+  transition: background-color 450ms var(--ease-editorial), border-color 450ms var(--ease-editorial);
+}
+.socio-copiar svg { width: 13px; height: 13px; }
+@media (hover:hover) and (pointer:fine) {
+  .socio-copiar:hover { background: #e2f2ea; border-color: #2ea88f; }
+}
+.socio-copiado { font-family: var(--font-body); font-size: 12px; color: #1f7a63; }
+.socio-copiado:empty { display: none; }
+
+.socio-pasos { list-style: none; margin: 16px 0 0; padding: 0; display: flex; flex-direction: column; gap: 14px; }
+.socio-pasos li {
+  display: flex; align-items: flex-start; gap: 15px;
+  font-family: var(--font-body); font-size: 15px; line-height: 1.7; color: #435043;
+}
+.socio-pasos li > span:first-child {
+  flex: 0 0 30px; display: grid; place-items: center; width: 30px; height: 30px;
+  border-radius: 50%; background: #122c33;
+  font-family: var(--font-heading); font-size: 14px; color: #f5fbdf;
+}
+.socio-pasos li > span + span { min-width: 0; }
+.socio-pasos strong { color: #122c33; }
+
+.socio-privacidad {
+  margin-top: clamp(28px, 3.5vw, 40px); padding: 22px 26px;
+  border-radius: 22px; background: #fbfdf5; border-left: 4px solid #2ea88f;
+}
+.socio-privacidad p { font-size: 14.5px; line-height: 1.75; color: #435043; }
+.socio-privacidad p + p { margin-top: 8px; }
+.socio-privacidad strong { color: #122c33; }
+
+.socio-gracias { margin-top: clamp(28px, 3.5vw, 40px); text-align: center; }
+.socio-gracias p:first-child {
+  font-family: var(--font-heading); font-size: clamp(1.2rem, 2vw, 1.6rem);
+  letter-spacing: -.03em; color: #122c33;
+}
+.socio-gracias p + p { margin-top: 8px; font-size: 14.5px; line-height: 1.7; color: #7c8a72; }
+
+/* ---------- GoFundMe ---------- */
+.socio-gofundme { padding-bottom: clamp(70px, 8vw, 120px); }
+.socio-gofundme__inner {
+  display: flex; align-items: center; gap: clamp(28px, 4vw, 52px);
+  width: min(820px, calc(100% - 64px)); margin-inline: auto;
+  padding: clamp(28px, 4vw, 48px); border-radius: 28px;
+  background: #edf5d7;
+}
+.socio-gofundme img { flex: 0 0 auto; width: 132px; height: auto; }
+.socio-gofundme h2 {
+  font-size: clamp(1.5rem, 2.4vw, 2.1rem); font-weight: 400;
+  letter-spacing: -.035em; line-height: 1.2; text-transform: none;
+}
+.socio-gofundme p { margin-top: 12px; font-size: 15px; line-height: 1.8; color: #435043; }
+.socio-gofundme a {
+  display: inline-flex; align-items: center; gap: 8px; margin-top: 16px;
+  font-family: var(--font-body); font-size: 13px; font-weight: 500; color: #1f7a63;
+  text-decoration: none;
+}
+.socio-gofundme a::after { content: '↗'; font-size: 15px; transition: translate 450ms var(--ease-editorial); }
+@media (hover:hover) and (pointer:fine) {
+  .socio-gofundme a:hover::after { translate: 3px -3px; }
+}
+
+/* ---------- Cierre / contacto ---------- */
+.socio-cierre { padding-bottom: clamp(90px, 10vw, 140px); }
+.socio-cierre__inner {
+  width: min(1120px, calc(100% - 64px)); margin-inline: auto;
+  padding: clamp(48px, 6vw, 84px) clamp(28px, 5vw, 80px);
+  border-radius: 40px; background: #0f2537; color: #f5fbdf;
+}
+.socio-cierre h2 {
+  margin-top: 18px; font-size: clamp(1.7rem, 3vw, 2.6rem); font-weight: 400;
+  line-height: 1.2; letter-spacing: -.035em; text-transform: none;
+}
+.socio-cierre__intro { margin-top: 16px; max-width: 620px; font-size: 15.5px; line-height: 1.85; color: #f5fbdfcc; }
+.socio-contactos {
+  display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px;
+  margin-top: clamp(32px, 4vw, 44px);
+}
+.socio-contacto {
+  display: flex; flex-direction: column; gap: 8px;
+  padding: 24px; border-radius: 28px; background: #ffffff0f; border: 1px solid #f5fbdf1f;
+}
+.socio-contacto h3 {
+  font-family: var(--font-heading); font-size: 1.05rem; font-weight: 400;
+  letter-spacing: -.02em; line-height: 1.3; text-transform: none;
+}
+.socio-contacto a, .socio-contacto p {
+  font-family: var(--font-body); font-size: 13.5px; line-height: 1.6; color: #f5fbdfb3;
+  overflow-wrap: anywhere; text-decoration: none;
+}
+.socio-contacto a { color: #d8eaa4; }
+@media (hover:hover) and (pointer:fine) {
+  .socio-contacto a:hover { text-decoration: underline; text-underline-offset: 4px; }
+}
+.socio-cierre__actions { display: flex; flex-wrap: wrap; gap: 16px; margin-top: clamp(32px, 4vw, 44px); }
+
+/* ---------- Foco ---------- */
+.socio :is(a, button):focus-visible {
+  outline: 3px solid #2ea88f; outline-offset: 5px; border-radius: 8px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1023px) {
+  .socio-vias__grid { grid-template-columns: 1fr; }
+  .socio-contactos { grid-template-columns: 1fr; }
+}
+@media (max-width: 767px) {
+  .socio-vias__inner, .socio-transferencia__inner, .socio-gofundme__inner,
+  .socio-cierre__inner { width: calc(100% - 40px); }
+  .socio-hero { height: auto; min-height: 460px; border-radius: 0 0 32px 32px; padding: 130px 20px 70px; }
+  .socio-hero h1 { font-size: clamp(2.3rem, 11vw, 3.2rem); }
+  .socio-hero__actions .guia-pill { width: 100%; }
+  .socio-gofundme__inner { flex-direction: column; text-align: center; }
+  .socio-dato { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .socio-dato__valor { margin-left: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .socio .guia-pill, .socio-copiar, .socio-gofundme a { transition: none; }
+}

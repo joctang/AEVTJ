@@ -1,0 +1,100 @@
+---
+// Tarjeta de Instrucciones Sanitarias: proporción de tarjeta de cartera
+// (85,6 × 54 mm), campos para rellenar a mano o antes de imprimir.
+// Sin formularios ni persistencia: ningún dato se guarda ni se transmite.
+import { tarjetaEmergencia } from "../data/derechos-sanitarios";
+
+const rellenables = tarjetaEmergencia.campos.filter((c) => c.tipo === "rellenable");
+const fijos = tarjetaEmergencia.campos.filter((c) => c.tipo === "fijo");
+const autorizacion = fijos.find((c) => c.valor?.includes("Autorizo"));
+const exclusion = fijos.find((c) => c.valor?.includes("Exclusión"));
+const pares = [
+  [rellenables[0]],
+  [rellenables[1], rellenables[2]],
+  [rellenables[3], rellenables[4]],
+  [rellenables[5], rellenables[6]],
+] as const;
+---
+
+<div class="tarjeta-zona" id="tarjeta-emergencia">
+  <div class="tarjeta-acciones">
+    <button type="button" class="tarjeta-imprimir" data-imprimir-tarjeta>
+      Imprimir tarjeta
+    </button>
+    <p class="tarjeta-nota">
+      Rellena los campos a mano o antes de imprimir. Nada se guarda ni se envía.
+    </p>
+  </div>
+
+  <div class="tarjeta-escena">
+    <article class="tarjeta" aria-label="Tarjeta de Instrucciones Sanitarias, tamaño de tarjeta de cartera">
+      <header class="tarjeta__cabecera">
+        <span class="tarjeta__siglas">AEVTJ</span>
+        <h3 class="tarjeta__titulo">{tarjetaEmergencia.titulo}</h3>
+      </header>
+      <div class="tarjeta__cuerpo">
+        {
+          pares.map((par) => (
+            <div class="tarjeta__linea">
+              {par.map((campo) => (
+                campo && (
+                  <span class="tarjeta__campo">
+                    <span class="tarjeta__etiqueta">{campo.etiqueta}:</span>
+                    <span class="tarjeta__rellenable" contenteditable="true" spellcheck="false" />
+                  </span>
+                )
+              ))}
+            </div>
+          ))
+        }
+        <p class="tarjeta__fijo tarjeta__fijo--lima" set:html={autorizacion?.valor} />
+        <p class="tarjeta__fijo tarjeta__fijo--navy" set:html={exclusion?.valor} />
+      </div>
+    </article>
+  </div>
+
+  <aside class="tarjeta-sos" aria-label="Ejemplo de la tarjeta como información médica/SOS en la pantalla del móvil">
+    <p class="tarjeta-sos__kicker">En el móvil</p>
+    <div class="tarjeta-sos__pantalla" aria-hidden="true">
+      <p class="tarjeta-sos__cabecera">Información de emergencia</p>
+      <p class="tarjeta-sos__nombre">Nombre y DNI · Tel. del representante</p>
+      <p class="tarjeta-sos__linea tarjeta-sos__linea--lima">
+        Autorizo transfusiones de sangre y hemoderivados sin restricciones médicas.
+      </p>
+      <p class="tarjeta-sos__linea tarjeta-sos__linea--navy">
+        Exclusión familiar: mis familiares Testigos de Jehová no están autorizados a decidir por mí.
+      </p>
+      <p class="tarjeta-sos__pie">Representante sanitario · Contacto alternativo</p>
+    </div>
+    <p class="tarjeta-sos__nota">
+      Pon esta tarjeta como información médica/SOS en la pantalla del móvil.
+    </p>
+  </aside>
+</div>
+
+<script>
+  // Impresión de sólo la tarjeta: se clona como hija directa de <body> para
+  // poder ocultar el resto de la página con CSS de impresión. El clon es
+  // efímero y no conserva nada tras imprimir.
+  const BOTON = document.querySelector<HTMLButtonElement>("[data-imprimir-tarjeta]");
+  BOTON?.addEventListener("click", () => {
+    const original = document.querySelector<HTMLElement>(".tarjeta-escena .tarjeta");
+    if (!original) return;
+    const clon = original.cloneNode(true) as HTMLElement;
+    clon.setAttribute("aria-hidden", "true");
+    const contenedor = document.createElement("div");
+    contenedor.className = "tarjeta-clon";
+    contenedor.appendChild(clon);
+    document.body.appendChild(contenedor);
+    document.documentElement.classList.add("imprimir-solo-tarjeta");
+    const limpiar = () => {
+      contenedor.remove();
+      document.documentElement.classList.remove("imprimir-solo-tarjeta");
+      window.removeEventListener("afterprint", limpiar);
+    };
+    window.addEventListener("afterprint", limpiar);
+    window.print();
+    // Red de seguridad por si afterprint no llega (diálogo cancelado).
+    setTimeout(limpiar, 60000);
+  });
+</script>

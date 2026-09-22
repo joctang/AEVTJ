@@ -1,0 +1,152 @@
+---
+import { pasos, libros } from "../data/guia-salida";
+---
+
+<section class="guia-pasos" id="siete-pasos">
+  <div class="guia-pasos__head" data-reveal>
+    <p class="guia-kicker">Cómo afrontarlo</p>
+    <h2>7 pasos para afrontar la salida</h2>
+  </div>
+
+  {/* Recorrido de pestañas (≥768px). Sin JS los 7 paneles se ven apilados. */}
+  <div class="guia-tabs" data-reveal>
+    <div class="guia-tabs__list" role="tablist" aria-label="Pasos para afrontar la salida">
+      {
+        pasos.map((paso, i) => (
+          <button
+            type="button"
+            role="tab"
+            id={`paso-tab-${paso.n}`}
+            class="guia-tabs__tab"
+            class:list={{ "is-active": i === 0 }}
+            aria-selected={i === 0 ? "true" : "false"}
+            aria-controls={`paso-panel-${paso.n}`}
+            tabindex={i === 0 ? 0 : -1}
+            aria-label={`Paso ${paso.n}: ${paso.titulo}`}
+          >
+            <span aria-hidden="true">{paso.n}</span>
+          </button>
+        ))
+      }
+    </div>
+
+    <div class="guia-tabs__paneles">
+      {
+        pasos.map((paso, i) => (
+          <div
+            role="tabpanel"
+            id={`paso-panel-${paso.n}`}
+            class="guia-tabs__panel"
+            class:list={{ "is-active": i === 0 }}
+            aria-labelledby={`paso-tab-${paso.n}`}
+          >
+            <h3>{paso.titulo}</h3>
+            {paso.parrafos.map((parrafo) => <p set:html={parrafo} />)}
+            {paso.n === 3 && (
+              <div class="guia-libros">
+                {libros.map((libro) => (
+                  <article class="guia-libro">
+                    <img
+                      src={libro.portada}
+                      alt={`Portada del libro ${libro.titulo}, de ${libro.autor}`}
+                      width={libro.width}
+                      height={libro.height}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <div>
+                      <h4>{libro.titulo}</h4>
+                      <p>
+                        {libro.autor} · {libro.anio}
+                      </p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            )}
+          </div>
+        ))
+      }
+    </div>
+  </div>
+
+  {/* Acordeón nativo en móvil (<768px). */}
+  <div class="guia-acordeon" data-reveal>
+    {
+      pasos.map((paso, i) => (
+        <details open={i === 0}>
+          <summary>
+            <span class="guia-acordeon__num" aria-hidden="true">{paso.n}</span>
+            <span class="guia-acordeon__titulo">{paso.titulo}</span>
+          </summary>
+          <div class="guia-acordeon__body">
+            {paso.parrafos.map((parrafo) => (
+              <p set:html={parrafo} />
+            ))}
+            {paso.n === 3 && (
+              <div class="guia-libros">
+                {libros.map((libro) => (
+                  <article class="guia-libro">
+                    <img
+                      src={libro.portada}
+                      alt={`Portada del libro ${libro.titulo}, de ${libro.autor}`}
+                      width={libro.width}
+                      height={libro.height}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <div>
+                      <h4>{libro.titulo}</h4>
+                      <p>
+                        {libro.autor} · {libro.anio}
+                      </p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            )}
+          </div>
+        </details>
+      ))
+    }
+  </div>
+</section>
+
+<script>
+  const tabs = document.querySelector(".guia-tabs");
+  if (tabs) {
+    tabs.classList.add("is-enhanced");
+    const tabButtons = [...tabs.querySelectorAll<HTMLButtonElement>("[role='tab']")];
+    const panels = [...tabs.querySelectorAll<HTMLElement>("[role='tabpanel']")];
+
+    const activar = (index: number, focus = false) => {
+      const total = tabButtons.length;
+      const actual = ((index % total) + total) % total;
+      tabButtons.forEach((tab, i) => {
+        const activo = i === actual;
+        tab.classList.toggle("is-active", activo);
+        tab.setAttribute("aria-selected", String(activo));
+        tab.tabIndex = activo ? 0 : -1;
+      });
+      panels.forEach((panel, i) => panel.classList.toggle("is-active", i === actual));
+      if (focus) tabButtons[actual].focus();
+    };
+
+    tabButtons.forEach((tab, i) => {
+      tab.addEventListener("click", () => activar(i));
+      tab.addEventListener("keydown", (event) => {
+        const acciones: Record<string, number | undefined> = {
+          ArrowRight: i + 1,
+          ArrowLeft: i - 1,
+          Home: 0,
+          End: tabButtons.length - 1,
+        };
+        const destino = acciones[event.key];
+        if (destino !== undefined) {
+          event.preventDefault();
+          activar(destino, true);
+        }
+      });
+    });
+  }
+</script>

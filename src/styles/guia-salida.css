@@ -1,0 +1,311 @@
+@import "./_editorial-ui.css";
+/* Estilos exclusivos de /guia-para-salir-de-los-testigos-de-jehova/.
+   Importado sólo desde su página. Manual: sombras navy translúcido,
+   radios 28/32/44/100px, hover 450ms, reveals 1500ms. */
+
+.guia { position: relative; }
+
+/* ---------- Kickers y pills: extraídos a _editorial-ui.css ---------- */
+
+/* ---------- Hero editorial ---------- */
+/* Gana a la regla genérica de primera sección interior del editorial.css. */
+.inner-page .site-main > section.guia-hero {
+  padding-top: 150px; padding-bottom: 110px;
+  background: #122c33; border-radius: 0 0 44px 44px;
+}
+.guia-hero {
+  position: relative; overflow: clip; display: grid; place-items: center;
+  min-height: 560px; height: 78vh; padding: 140px 24px 110px;
+  background: #122c33; color: #f5fbdf; text-align: center;
+  border-radius: 0 0 44px 44px;
+}
+.guia-hero__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.guia-hero__scrim { position: absolute; inset: 0; background: linear-gradient(180deg, #122c3399 0%, #122c33cc 60%, #122c33 75%); }
+.guia-hero__content { position: relative; display: flex; flex-direction: column; align-items: center; max-width: 760px; }
+.guia-hero .guia-kicker { justify-content: center; }
+.guia-hero h1 {
+  margin-top: 26px; max-width: 22ch;
+  font-size: clamp(2.9rem, 6vw, 5.4rem); font-weight: 400;
+  letter-spacing: -.045em; line-height: 1.04; text-transform: none;
+}
+.guia-hero__entradilla { margin-top: 24px; max-width: 620px; font-size: 18px; line-height: 1.8; color: #f5fbdfcc; }
+.guia-hero__meta { margin-top: 18px; font-size: 12px; letter-spacing: .06em; color: #f5fbdf99; }
+.guia-hero__meta span { margin-inline: 10px; }
+.guia-hero__actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-top: 34px; }
+.guia-hero__scroll {
+  position: absolute; left: 50%; bottom: 26px; translate: -50% 0; z-index: 2;
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  color: #f5fbdfb3; text-decoration: none; font-size: 15px;
+}
+.guia-hero__scroll::after { content: '↓'; }
+.guia-hero__scroll span { width: 2px; height: 34px; background: linear-gradient(180deg, #2ea88f, #2ea88f1f); animation: guia-scroll 2.4s var(--ease-editorial) infinite; }
+@keyframes guia-scroll { 0% { transform: scaleY(0); transform-origin: top; } 45% { transform: scaleY(1); transform-origin: top; } 55% { transform: scaleY(1); transform-origin: bottom; } 100% { transform: scaleY(0); transform-origin: bottom; } }
+@media (prefers-reduced-motion: reduce) { .guia-hero__scroll span { animation: none; } }
+
+/* ---------- Índice-portal ---------- */
+.guia-indice { padding-block: clamp(90px, 10vw, 140px) clamp(60px, 7vw, 100px); }
+.guia-indice__inner { width: min(1240px, calc(100% - 64px)); margin-inline: auto; }
+.guia-indice h2 { margin-top: 22px; font-size: clamp(34px, 4.15vw, 58px); line-height: 1.12; letter-spacing: -.05em; }
+.guia-indice__grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 20px; margin-top: 54px; }
+.guia-tarjeta {
+  position: relative; overflow: hidden; display: flex; flex-direction: column;
+  padding: 28px; border-radius: 28px; background: #fbfdf5; border: 1px solid #dce3cd;
+  box-shadow: 0 18px 45px #0f25371a; text-decoration: none; color: inherit;
+  transition: transform 450ms cubic-bezier(.22,1,.36,1), box-shadow 450ms cubic-bezier(.22,1,.36,1);
+}
+.guia-tarjeta::before {
+  content: attr(data-num); position: absolute; right: 14px; bottom: -26px;
+  font-family: var(--font-heading); font-size: 120px; line-height: 1; color: #2ea88f2e; letter-spacing: -.05em;
+}
+.guia-tarjeta h3 { position: relative; margin-top: 14px; font-size: clamp(20px, 1.8vw, 26px); line-height: 1.25; letter-spacing: -.03em; }
+.guia-tarjeta p { position: relative; margin-top: 10px; font-size: 14px; line-height: 1.7; color: #526149; }
+.guia-tarjeta > span:first-of-type { font-size: 11px; font-weight: 600; letter-spacing: .12em; color: #1f7a63; }
+@media (hover:hover) and (pointer:fine) {
+  .guia-tarjeta:hover { transform: translateY(-6px); box-shadow: 0 30px 60px #0f25371f; }
+}
+
+/* ---------- Capítulos ---------- */
+.guia-capitulo { padding-block: clamp(90px, 10vw, 140px); }
+.guia-capitulo__inner {
+  display: grid; grid-template-columns: 46fr 54fr; align-items: center;
+  gap: clamp(40px, 6vw, 96px); width: min(1180px, calc(100% - 64px)); margin-inline: auto;
+}
+.guia-capitulo--invertido .guia-capitulo__texto { order: 2; }
+.guia-capitulo--invertido .guia-capitulo__media { order: 1; }
+
+.guia-badge {
+  position: relative; display: flex; align-items: center; justify-content: center;
+  width: 62px; height: 62px; border-radius: 50%; background: #122c33;
+  box-shadow: 0 12px 28px #0f25371f;
+}
+.guia-badge span { font-family: var(--font-heading); font-size: 26px; color: #f5fbdf; }
+.guia-badge::after { content: ''; position: absolute; top: calc(100% + 6px); left: 50%; height: 48px; border-left: 1px dashed #122c3344; }
+.guia-capitulo h2 { margin-top: 40px; font-size: clamp(1.9rem, 3.2vw, 2.9rem); line-height: 1.16; letter-spacing: -.035em; }
+.guia-capitulo__texto p { max-width: 560px; margin-top: 1.4em; font-size: 16.5px; line-height: 1.9; color: #435043; }
+.guia-capitulo__texto p:first-of-type { margin-top: 1.6em; }
+.guia-capitulo__texto strong { color: #122c33; }
+
+/* Imagen flotante (parallax gestionado por editorial.ts vía .layered-media). */
+.layered-media--guia { position: relative; aspect-ratio: 1.08; min-height: 320px; }
+.layered-media--guia span { position: absolute; inset: 9% 0 0 9%; border-radius: 32px; }
+[data-variante='lima'] .layered-media--guia span { background: linear-gradient(150deg, #e6f2c3, #d5e9a6); }
+[data-variante='salvia'] .layered-media--guia span { background: linear-gradient(150deg, #e2edc9, #d3e4bd); }
+[data-variante='arena'] .layered-media--guia span { background: linear-gradient(150deg, #f3f3d8, #eef0d7); }
+.layered-media--guia img {
+  position: absolute; inset: 0 6% 6% 0; z-index: 2; width: 94%; height: 94%;
+  object-fit: cover; border-radius: 32px; box-shadow: 0 30px 70px #0f25371f;
+}
+.layered-media--guia::after {
+  content: '+'; position: absolute; right: -2%; top: -5%; z-index: 3;
+  display: grid; place-items: center; width: 84px; height: 84px;
+  border: 1px solid #0f25371f; border-radius: 50%; background: #f5fbdf;
+  box-shadow: 0 12px 30px #0f253714; font-size: 38px; font-weight: 300; color: #2ea88f;
+  animation: guia-float 7s ease-in-out infinite alternate;
+}
+@keyframes guia-float { from { translate: 0 -7px; } to { translate: 0 9px; } }
+@media (prefers-reduced-motion: reduce) { .layered-media--guia::after { animation: none; } }
+
+/* ---------- Pull-quotes ---------- */
+.guia-cita { display: flex; justify-content: center; padding-block: clamp(30px, 4vw, 60px); }
+.guia-cita blockquote {
+  max-width: 780px; padding-top: 34px; text-align: center; position: relative;
+  font-family: var(--font-heading); font-size: clamp(1.6rem, 3vw, 2.4rem);
+  line-height: 1.35; letter-spacing: -.03em; color: #122c33;
+}
+.guia-cita blockquote::before { content: ''; position: absolute; top: 0; left: 50%; translate: -50% 0; width: 64px; border-top: 3px solid #2ea88f; }
+
+/* ---------- 7 pasos ---------- */
+.guia-pasos { padding-block: clamp(90px, 10vw, 140px); }
+.guia-pasos > * { width: min(1080px, calc(100% - 64px)); margin-inline: auto; }
+.guia-pasos__head {
+  padding: clamp(48px, 6vw, 80px) clamp(28px, 5vw, 80px); border-radius: 44px;
+  background: #edf5d7; text-align: center;
+  display: flex; flex-direction: column; align-items: center;
+}
+.guia-pasos__head h2 { margin-top: 20px; font-size: clamp(30px, 3.8vw, 52px); line-height: 1.12; letter-spacing: -.045em; text-transform: none; }
+.guia-pasos__head + .guia-tabs, .guia-pasos__head + .guia-acordeon { margin-top: 56px; }
+
+.guia-tabs__list { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 4px; }
+.guia-tabs__tab {
+  position: relative; display: inline-flex; align-items: center; justify-content: center;
+  width: 48px; height: 48px; border-radius: 50%; border: 0; background: #122c33;
+  font-family: var(--font-heading); font-size: 20px; color: #f5fbdf;
+  box-shadow: 0 12px 28px #0f25371f;
+  transition: background-color 450ms var(--ease-editorial), transform 450ms var(--ease-editorial);
+}
+.guia-tabs__tab:not(:first-child)::before {
+  content: ''; position: absolute; top: 50%; right: calc(100% + 4px); width: 18px;
+  border-top: 1px dashed #122c3355;
+}
+.guia-tabs__tab.is-active { background: #2ea88f; transform: scale(1.08); }
+@media (hover:hover) and (pointer:fine) {
+  .guia-tabs__tab:hover { background: #2ea88f; }
+}
+
+.guia-tabs__paneles { margin-top: 44px; max-width: 720px; margin-inline: auto; }
+.guia-tabs__panel { text-align: center; }
+.guia-tabs__panel + .guia-tabs__panel { margin-top: 40px; }
+.guia-tabs__panel h3 { font-size: clamp(1.4rem, 2.4vw, 2rem); letter-spacing: -.03em; }
+.guia-tabs__panel p { margin-top: 1.2em; font-size: 16.5px; line-height: 1.9; color: #435043; text-align: left; }
+.guia-tabs__panel ul { margin: 1em auto 0; max-width: 560px; text-align: left; font-size: 16.5px; line-height: 1.9; color: #435043; }
+.guia-tabs__panel strong { color: #122c33; }
+.is-enhanced .guia-tabs__paneles { display: grid; }
+/* Todos los paneles ocupan la misma celda: el contenedor mide lo que el paso
+   más largo y el stepper no salta de altura al cambiar de paso. */
+.is-enhanced .guia-tabs__panel {
+  grid-area: 1 / 1; margin-top: 0; opacity: 0; visibility: hidden; translate: 0 12px; pointer-events: none;
+  transition: opacity 450ms var(--ease-editorial), translate 450ms var(--ease-editorial), visibility 450ms;
+}
+.is-enhanced .guia-tabs__panel.is-active {
+  opacity: 1; visibility: visible; translate: 0 0; pointer-events: auto;
+}
+@media (prefers-reduced-motion: reduce) { .is-enhanced .guia-tabs__panel { transition: none; translate: none; } }
+
+.guia-libros { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px; margin-top: 32px; text-align: left; }
+.guia-libro {
+  display: flex; gap: 18px; align-items: center; padding: 18px;
+  border-radius: 28px; background: #fbfdf5; border: 1px solid #dce3cd;
+  box-shadow: 0 18px 45px #0f25371a;
+}
+.guia-libro img { width: 86px; height: auto; border-radius: 18px; box-shadow: 0 12px 28px #0f25371f; flex: 0 0 auto; }
+.guia-libro h4 { font-size: 18px; line-height: 1.3; letter-spacing: -.02em; }
+.guia-libro p { margin: 6px 0 0; font-family: var(--font-body); font-size: 13px; color: #526149; line-height: 1.6; }
+
+/* Acordeón móvil */
+.guia-acordeon { display: none; }
+.guia-acordeon details {
+  border-radius: 28px; background: #fbfdf5; border: 1px solid #dce3cd;
+  box-shadow: 0 14px 38px #0f25371a; overflow: hidden;
+}
+.guia-acordeon details + details { margin-top: 14px; }
+.guia-acordeon summary {
+  display: flex; align-items: center; gap: 16px; min-height: 72px; padding: 14px 20px;
+  font-family: var(--font-heading); font-size: 17px; letter-spacing: -.02em; color: #122c33;
+  list-style: none;
+}
+.guia-acordeon summary::-webkit-details-marker { display: none; }
+.guia-acordeon summary::after { content: '+'; margin-left: auto; font-size: 24px; color: #2ea88f; transition: rotate 450ms var(--ease-editorial); }
+.guia-acordeon details[open] summary::after { rotate: 45deg; }
+.guia-acordeon__num {
+  flex: 0 0 48px; height: 48px; display: grid; place-items: center; border-radius: 50%;
+  background: #122c33; color: #f5fbdf; font-family: var(--font-heading); font-size: 20px;
+}
+.guia-acordeon details[open] .guia-acordeon__num { background: #2ea88f; }
+.guia-acordeon__body { padding: 4px 24px 26px 24px; }
+.guia-acordeon__body p { margin-top: 1.1em; font-size: 16px; line-height: 1.85; color: #435043; }
+.guia-acordeon__body ul { margin-top: 1em; padding-left: 20px; font-size: 16px; line-height: 1.85; color: #435043; }
+.guia-acordeon__body strong { color: #122c33; }
+.guia-acordeon .guia-libros { grid-template-columns: 1fr; }
+
+/* ---------- Callout de ayuda ---------- */
+.guia-ayuda-wrap { display: flex; justify-content: center; padding-block: 0 clamp(70px, 8vw, 110px); }
+.guia-ayuda {
+  display: flex; gap: 22px; align-items: flex-start; width: min(880px, calc(100% - 64px));
+  padding: 30px 34px; border-radius: 28px; background: #fbfdf5;
+  border-left: 4px solid #2ea88f; box-shadow: 0 18px 45px #0f25371a;
+}
+.guia-ayuda__icono {
+  flex: 0 0 52px; height: 52px; display: grid; place-items: center;
+  border-radius: 50%; background: #122c33; color: #2ea88f;
+}
+.guia-ayuda__icono svg { width: 24px; height: 24px; }
+.guia-ayuda h3 { font-size: clamp(1.2rem, 2vw, 1.55rem); letter-spacing: -.025em; }
+.guia-ayuda p { margin-top: 10px; font-size: 15.5px; line-height: 1.8; color: #435043; }
+.guia-ayuda__enlaces { display: flex; flex-wrap: wrap; gap: 10px 26px; margin-top: 16px; }
+.guia-ayuda__enlaces a { font-size: 13px; font-weight: 500; color: #1f7a63; text-underline-offset: 4px; }
+
+/* ---------- Rail sticky ---------- */
+.guia-rail { display: none; }
+@media (min-width: 1280px) {
+  .guia-rail {
+    display: block; position: fixed; left: 34px; top: 50%; transform: translateY(-50%);
+    z-index: 30; max-width: 190px;
+  }
+  .guia-rail ol { list-style: none; margin: 0; padding: 0 0 0 18px; position: relative; }
+  .guia-rail ol::before { content: ''; position: absolute; left: 0; top: 6px; bottom: 6px; border-left: 1px dashed #122c3333; }
+  .guia-rail__progreso { position: absolute; left: -2px; top: 6px; width: 4px; height: 0; background: #2ea88f; border-radius: 4px; box-shadow: 0 0 8px #2ea88f66; transition: height 200ms linear; }
+  .guia-rail a {
+    position: relative; display: flex; align-items: center; gap: 8px; min-height: 34px;
+    font-family: var(--font-body); font-size: 12px; line-height: 1.4; color: #7c8a72;
+    text-decoration: none; transition: color 450ms var(--ease-editorial);
+  }
+  .guia-rail a::before { content: ''; flex: 0 0 6px; height: 6px; border-radius: 50%; background: transparent; transition: background-color 450ms var(--ease-editorial); }
+  .guia-rail a.is-active { color: #122c33; }
+  .guia-rail a.is-active::before { background: #2ea88f; }
+  .guia-rail span { overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+  @media (prefers-reduced-motion: reduce) { .guia-rail__progreso { transition: none; } }
+}
+
+/* ---------- Cierre ---------- */
+.guia-cierre { padding-block: clamp(60px, 8vw, 110px) clamp(90px, 10vw, 140px); }
+.guia-cierre__inner {
+  width: min(1240px, calc(100% - 64px)); margin-inline: auto;
+  padding: clamp(48px, 6vw, 90px) clamp(28px, 5vw, 90px);
+  border-radius: 44px 44px 40px 40px; background: #0f2537; color: #f5fbdf;
+}
+.guia-cierre h2 { font-size: clamp(1.7rem, 3vw, 2.6rem); line-height: 1.2; letter-spacing: -.035em; }
+.guia-cierre__bloques h3 { margin-top: 18px; font-size: clamp(1.35rem, 2.2vw, 1.9rem); letter-spacing: -.03em; }
+.guia-cierre__bloques { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: clamp(32px, 5vw, 70px); }
+.guia-cierre__bloques p { margin-top: 1.2em; font-size: 15.5px; line-height: 1.85; color: #f5fbdfcc; }
+.guia-cierre__bloques strong { color: #d8eaa4; font-weight: 600; }
+.guia-cierre__bloques .guia-kicker { color: #bfe0d6; }
+
+.guia-recursos { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 18px; margin-top: clamp(48px, 6vw, 72px); }
+.guia-recurso {
+  display: flex; flex-direction: column; padding: 24px; border-radius: 28px;
+  background: #122c33; border: 1px solid #ffffff2b; color: inherit; text-decoration: none;
+  transition: transform 450ms cubic-bezier(.22,1,.36,1), box-shadow 450ms cubic-bezier(.22,1,.36,1), background-color 450ms var(--ease-editorial);
+}
+.guia-recurso::after { content: '↗'; margin-top: auto; padding-top: 18px; font-size: 20px; color: #d8eaa4; transition: translate 450ms var(--ease-editorial); }
+.guia-recurso h3 { font-size: 19px; line-height: 1.3; letter-spacing: -.02em; }
+.guia-recurso p { margin-top: 10px; font-size: 13px; line-height: 1.65; color: #f5fbdfb3; }
+@media (hover:hover) and (pointer:fine) {
+  .guia-recurso:hover { transform: translateY(-6px); box-shadow: 0 24px 50px #0f253745; background: #16323b; }
+  .guia-recurso:hover::after { translate: 3px -3px; }
+}
+.guia-cierre__actions { display: flex; flex-wrap: wrap; gap: 16px; margin-top: clamp(40px, 5vw, 60px); }
+
+/* ---------- Foco y responsive ---------- */
+.guia a:focus-visible, .guia button:focus-visible, .guia summary:focus-visible {
+  outline: 3px solid #2ea88f; outline-offset: 5px; border-radius: 8px;
+}
+
+@media (max-width: 1023px) {
+  .guia-indice__grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .guia-recursos { grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+
+@media (max-width: 899px) {
+  .guia-capitulo__inner { grid-template-columns: 1fr; gap: 44px; }
+  .guia-capitulo__media { order: -1 !important; }
+  .guia-capitulo__texto { order: 2 !important; }
+  .guia-capitulo--invertido .guia-capitulo__texto { order: 2; }
+  .guia-capitulo--invertido .guia-capitulo__media { order: -1; }
+  .layered-media--guia { aspect-ratio: 1.25; min-height: 0; }
+}
+
+@media (max-width: 767px) {
+  .guia-indice__inner, .guia-pasos > *, .guia-cierre__inner, .guia-ayuda { width: calc(100% - 40px); }
+  .guia-capitulo__inner { width: calc(100% - 40px); }
+  .guia-hero { height: auto; min-height: 620px; border-radius: 0 0 32px 32px; }
+  .guia-hero h1 { font-size: clamp(2.6rem, 11vw, 3.4rem); }
+  .guia-hero__entradilla { font-size: 16px; }
+  .guia-hero__actions { flex-direction: column; align-items: stretch; width: 100%; max-width: 340px; }
+  .guia-indice__grid { grid-template-columns: 1fr; }
+  .guia-tabs { display: none; }
+  .guia-acordeon { display: block; }
+  .guia-recursos { grid-template-columns: 1fr; }
+  .guia-cierre__bloques { grid-template-columns: 1fr; }
+  .guia-ayuda { flex-direction: column; }
+}
+
+/* ---------- Rail: reparto del espacio (debe ir al final para ganar a margin-inline) ---------- */
+/* Entre 1280 y 1699px el contenido se desplaza a la derecha del rail para
+   que nunca se solapen; a partir de 1700px el rail cabe en el margen. */
+@media (min-width: 1280px) and (max-width: 1699px) {
+  .guia-indice__inner, .guia-capitulo__inner, .guia-pasos > *, .guia-cierre__inner {
+    width: min(1080px, calc(100% - 370px));
+    margin-left: max(calc((100% - 1080px) / 2 + 130px), 300px);
+    margin-right: auto;
+  }
+}

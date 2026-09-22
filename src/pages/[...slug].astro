@@ -22,8 +22,11 @@ export async function getStaticPaths() {
     "victimas-testigos-de-jehova-ayuda-denuncia", // home, has its own index.astro
     "noticias", // has its own listing page
     "quienes-somos", // has its own custom page
+    "guia-para-salir-de-los-testigos-de-jehova", // has its own custom page
     "hazte-socio", // has its own custom page
     "contacto", // has its own custom page
+    "legal", // has its own custom page
+    "guia-para-proteger-tus-derechos-sanitarios-en-caso-de-interferencia-familiar", // has its own custom page
   ]);
   const entries = await getCollection("pages");
   return entries

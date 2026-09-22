@@ -1,0 +1,15 @@
+---
+import type { TonoEstado } from "../data/legal";
+
+interface Props {
+  etiqueta: string;
+  tono: TonoEstado;
+}
+
+const { etiqueta, tono } = Astro.props;
+---
+
+<span class:list={["legal-estado", `legal-estado--${tono}`]}>
+  <span class="legal-estado__punto" aria-hidden="true"></span>
+  {etiqueta}
+</span>
