@@ -31,12 +31,3 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
           server-dir: /nuevo/
-          log-level: verbose
-
-      - name: Debug FTP listing (raw, bypassing Hostinger web UI)
-        run: |
-          sudo apt-get update -qq && sudo apt-get install -y -qq lftp
-          echo "--- Listing FTP root ---"
-          lftp -u "${{ secrets.FTP_USERNAME }}","${{ secrets.FTP_PASSWORD }}" "${{ secrets.FTP_SERVER }}" -e "set ssl:verify-certificate no; set ftp:ssl-allow no; pwd; ls -la; bye" || true
-          echo "--- Listing /nuevo/ ---"
-          lftp -u "${{ secrets.FTP_USERNAME }}","${{ secrets.FTP_PASSWORD }}" "${{ secrets.FTP_SERVER }}" -e "set ssl:verify-certificate no; set ftp:ssl-allow no; cd /nuevo/; pwd; ls -la; bye" || true
