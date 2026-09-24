@@ -23,17 +23,6 @@ jobs:
       - name: Build site
         run: npm run build
 
-      - name: Debug build output
-        run: |
-          echo "GlobeMap matches:"
-          grep -c "GlobeMap" dist/index.html || echo "0"
-          echo "dotted-world-map matches:"
-          grep -c "dotted-world-map" dist/index.html || echo "0"
-          echo "Local index.html mtime:"
-          stat -c '%y' dist/index.html
-          echo "Local index.html size:"
-          wc -c dist/index.html
-
       - name: Deploy to Hostinger via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
