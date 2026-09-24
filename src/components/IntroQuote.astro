@@ -1,0 +1,220 @@
+<div
+  id="intro-quote"
+  class="intro-quote"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Cita de bienvenida"
+  hidden
+>
+  <div class="intro-quote__grain" aria-hidden="true"></div>
+  <figure class="intro-quote__inner">
+    <span class="intro-quote__kicker">AEVTJ</span>
+    <span class="intro-quote__rule" aria-hidden="true"></span>
+    <blockquote>
+      <p>
+        <span class="line" style="--i:0"><span>En los infiernos</span></span>
+        <span class="line" style="--i:1"><span>que yo atravesé,</span></span>
+        <span class="line" style="--i:2"><span>no había ni monstruos ni diablos,</span></span>
+        <span class="line" style="--i:3"><span>había <em>personas que yo amaba</em>…</span></span>
+      </p>
+    </blockquote>
+  </figure>
+  <button type="button" class="intro-quote__skip">
+    Entrar <span aria-hidden="true">↗</span>
+  </button>
+</div>
+
+<script>
+  const KEY = "aevtj-intro-quote-seen";
+  const HOLD_MS = 6100;
+  const overlay = document.getElementById("intro-quote");
+
+  let seen = false;
+  try {
+    seen = sessionStorage.getItem(KEY) === "1";
+  } catch {}
+
+  if (overlay && !seen) {
+    try {
+      sessionStorage.setItem(KEY, "1");
+    } catch {}
+
+    const root = document.documentElement;
+    const prevOverflow = root.style.overflow;
+    root.style.overflow = "hidden";
+
+    const close = () => {
+      if (overlay.classList.contains("is-leaving")) return;
+      overlay.classList.add("is-leaving");
+      root.style.overflow = prevOverflow;
+      document.removeEventListener("keydown", onKey);
+      setTimeout(() => overlay.remove(), 1400);
+    };
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape" || e.key === "Enter") close();
+    };
+
+    overlay.hidden = false;
+    void overlay.offsetWidth; // commit the closed state so the entrance transitions run
+    overlay.classList.add("is-open");
+    overlay.addEventListener("click", close);
+    document.addEventListener("keydown", onKey);
+    setTimeout(close, HOLD_MS);
+  }
+</script>
+
+<style>
+  .intro-quote {
+    --ease: var(--ease-editorial, cubic-bezier(0.22, 1, 0.36, 1));
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: grid;
+    place-items: center;
+    padding: 32px 24px;
+    background:
+      radial-gradient(70% 60% at 50% 45%, #1f4249 0%, #122c33 70%);
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity 1000ms var(--ease);
+  }
+  .intro-quote[hidden] { display: none; }
+  .intro-quote.is-open { opacity: 1; }
+  .intro-quote.is-leaving {
+    opacity: 0;
+    transition: opacity 1200ms var(--ease) 250ms;
+  }
+
+  /* Very soft film grain for depth. */
+  .intro-quote__grain {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.06;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .intro-quote__inner {
+    position: relative;
+    margin: 0;
+    max-width: 760px;
+    text-align: center;
+  }
+
+  .intro-quote__kicker {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: #d1dfa9;
+    opacity: 0;
+    transition: opacity 1200ms var(--ease) 200ms;
+  }
+  .is-open .intro-quote__kicker { opacity: 0.7; }
+
+  .intro-quote__rule {
+    display: block;
+    width: 56px;
+    height: 1px;
+    margin: 22px auto 38px;
+    background: #d8eaa4;
+    transform: scaleX(0);
+    transition: transform 1400ms var(--ease) 350ms;
+  }
+  .is-open .intro-quote__rule { transform: scaleX(1); }
+
+  .intro-quote blockquote { margin: 0; }
+  .intro-quote p {
+    margin: 0;
+    font-family: var(--font-heading);
+    font-size: clamp(26px, 4.4vw, 50px);
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: -0.03em;
+    color: #f5fbdf;
+    text-wrap: balance;
+  }
+
+  /* Each verse rises from behind an invisible mask. */
+  .intro-quote .line {
+    display: block;
+    overflow: hidden;
+    padding-bottom: 0.08em;
+  }
+  .intro-quote .line > span {
+    display: inline-block;
+    transform: translateY(105%);
+    opacity: 0;
+    transition:
+      transform 1300ms var(--ease),
+      opacity 1300ms var(--ease);
+    transition-delay: calc(550ms + var(--i) * 320ms);
+  }
+  .is-open .line > span { transform: none; opacity: 1; }
+
+  .intro-quote em {
+    font-style: italic;
+    color: #d8eaa4;
+  }
+
+  /* Exit: verses drift up and dissolve before the veil lifts. */
+  .is-leaving .line > span {
+    transform: translateY(-30%);
+    opacity: 0;
+    filter: blur(6px);
+    transition:
+      transform 900ms var(--ease),
+      opacity 700ms var(--ease),
+      filter 900ms var(--ease);
+    transition-delay: calc(var(--i) * 60ms);
+  }
+  .is-leaving .intro-quote__kicker,
+  .is-leaving .intro-quote__rule,
+  .is-leaving .intro-quote__skip {
+    opacity: 0;
+    transition: opacity 500ms var(--ease);
+  }
+
+  .intro-quote__skip {
+    position: absolute;
+    bottom: clamp(64px, 12vh, 120px);
+    left: 50%;
+    translate: -50% 0;
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+    padding: 10px 20px;
+    border: 1px solid rgb(245 251 223 / 0.22);
+    border-radius: 100px;
+    background: transparent;
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: #f5fbdf;
+    cursor: pointer;
+    opacity: 0;
+    transition:
+      opacity 1000ms var(--ease) 2200ms,
+      background-color 400ms var(--ease),
+      border-color 400ms var(--ease);
+  }
+  .is-open .intro-quote__skip { opacity: 0.75; }
+  .intro-quote__skip:hover {
+    background: rgb(245 251 223 / 0.08);
+    border-color: rgb(245 251 223 / 0.45);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .intro-quote,
+    .intro-quote *,
+    .intro-quote .line > span {
+      transition-duration: 1ms !important;
+      transition-delay: 0ms !important;
+      transform: none !important;
+      filter: none !important;
+    }
+  }
+</style>

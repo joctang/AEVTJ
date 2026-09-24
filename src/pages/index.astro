@@ -4,8 +4,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import SpainMap from "../components/SpainMap.astro";
 import DottedWorldMap from "../components/DottedWorldMap.astro";
 import TornEdge from "../components/TornEdge.astro";
-import HelpNotice from "../components/HelpNotice.astro";
+import IntroQuote from "../components/IntroQuote.astro";
 import { stats, worldPartners } from "../data/partners";
+import { memberCount, spainMembers } from "../data/members";
 
 const resourceCards = [
   {
@@ -56,6 +57,7 @@ const globalPartners = worldPartners.map((p) => ({ label: p.name, image: p.flag,
 ---
 
 <BaseLayout title="Inicio">
+  <IntroQuote />
   <div class="home-premium bg-brand-cream text-brand-ink">
     <div class="home-ambient" aria-hidden="true"></div>
 
@@ -162,11 +164,11 @@ const globalPartners = worldPartners.map((p) => ({ label: p.name, image: p.flag,
     <section class="premium-shell split-section spain-section">
       <div class="section-copy" data-reveal>
         <p class="premium-kicker">Presencia en España</p>
-        <h2>815 Miembros en España</h2>
+        <h2>{memberCount} socios, <em>{spainMembers} en España</em></h2>
         <p>
-          En España, en poco tiempo, la Asociación Española de Víctimas de los Testigos de Jehová ha conseguido
-          reunir a más de 800 miembros en lo que es un movimiento imparable, teniendo presencia en todas las comunidades
-          autónomas del país.
+          En poco tiempo, la Asociación Española de Víctimas de los Testigos de Jehová ha conseguido reunir a más de{" "}
+          {Math.floor(memberCount / 100) * 100} socios en lo que es un movimiento imparable, con presencia en todas las comunidades
+          autónomas del país y también fuera de España.
         </p>
         <p>Pasa tu cursor por el <strong>mapa interactivo</strong> para ver los socios por comunidad autónoma.</p>
       </div>
@@ -225,24 +227,90 @@ const globalPartners = worldPartners.map((p) => ({ label: p.name, image: p.flag,
       </div>
     </section>
 
+    <section class="premium-shell manifesto-section" aria-label="Nuestro principio">
+      <figure class="manifesto" data-reveal>
+        <blockquote>
+          Nadie debería tener que elegir entre su <em>libertad</em> y su <em>familia.</em>
+        </blockquote>
+        <figcaption>
+          <span>Si necesitas apoyo, estamos aquí.</span>
+          <div class="manifesto__actions">
+            <a href="/contacto/" class="premium-button premium-button--solid">Escríbenos</a>
+            <a href="/hazte-socio/" class="premium-button premium-button--ghost">Hazte socio</a>
+          </div>
+        </figcaption>
+      </figure>
+    </section>
+
     <section class="dark-story dark-story--visibility" data-scene="dusk">
       <img src="/uploads/2025/10/foto-noticias.jpg" alt="" class="dark-story__bg" loading="lazy" />
       <div class="premium-shell dark-story__grid">
         <div class="dark-story__sticky" data-reveal>
           <p class="premium-kicker">Somos víctimas de los testigos de Jehová</p>
-          <h2>Visibilizar y denunciar</h2>
+          <h2 class="visibility-statement">
+            No eres un traidor, ni un pecador, ni un alma perdida.
+            <em>Eres alguien que ha elegido la libertad.</em>
+          </h2>
         </div>
-        <div class="story-text" data-reveal>
-          <p>Si estás leyendo esto y has pasado por algo parecido, hay algo que debes saber: <strong><u>no estás solo</u></strong>.</p>
-          <p><strong>No eres un traidor, ni un pecador, ni un alma perdida</strong>. Eres una persona que <strong>has elegido la libertad</strong>. Y aunque ahora duela, hay vida después de ellos. Hay personas que te entienden, que te escuchan y que no van a juzgarte por pensar diferente.</p>
-          <p>Porque las secuelas son reales. <strong>Muchas personas que han logrado salir arrastran ansiedad, depresión e incluso pensamientos suicidas.</strong> Cuando te arrebatan tu entorno, cuando te enseñan a vivir con miedo al mundo, cuando te hacen creer que fuera de su mundo solo hay vacío… romper esas cadenas se convierte en una batalla diaria hasta conseguir asumir confianza en el mundo.</p>
-          <p>Desde esta asociación, <strong>estamos aquí para eso</strong>. Para <strong>VISIBILIZAR</strong> lo que muchos prefieren callar. Para <strong>EXPRESAR</strong> el daño que se esconde detrás de estas prácticas y <strong>ofrecer apoyo y asesoramiento psicológico y legal</strong> a quienes siguen atrapados en esa red de control y culpa.</p>
-          <p>Porque creemos en algo muy simple, pero que a algunos les cuesta aceptar: <strong>nadie debería tener que elegir entre su libertad y su familia.</strong></p>
-          <p><strong>Si necesitas apoyo, estamos aquí. Escríbenos o date de alta como socio.</strong></p>
-          <HelpNotice tone="dark" class="mt-5" />
+        <div class="visibility-body" data-reveal>
+          <p class="visibility-lead">
+            Si has pasado por algo parecido, hay algo que debes saber: <strong>no estás solo.</strong>{" "}
+            Aunque ahora duela, hay vida después. Hay personas que te entienden y no van a juzgarte por pensar diferente.
+          </p>
+
+          <div class="aftermath-card">
+            <p class="aftermath-card__label">Las secuelas son reales</p>
+            <ul class="aftermath-card__tags">
+              <li>Ansiedad</li>
+              <li>Depresión</li>
+              <li>Pensamientos suicidas</li>
+            </ul>
+            <p>
+              Cuando te arrebatan tu entorno y te enseñan a temer al mundo, romper esas cadenas es una batalla diaria.
+              No tienes que librarla a solas.
+            </p>
+            <a href="tel:024" class="aftermath-card__crisis">
+              <span aria-hidden="true">024</span>
+              <span>Si piensas en quitarte la vida, llama al <strong>024</strong>. Gratuito y confidencial, 24 horas.</span>
+            </a>
+          </div>
         </div>
       </div>
       <TornEdge />
+    </section>
+
+    <section class="premium-shell mission-section" data-scene="light" aria-labelledby="mission-title">
+      <div class="mission-head" data-reveal>
+        <p class="premium-kicker">Visibilizar y denunciar</p>
+        <h2 id="mission-title">Estamos aquí <em>para eso.</em></h2>
+      </div>
+
+      <ol class="mission-pillars">
+        <li data-reveal style="transition-delay:0ms">
+          <span>01</span>
+          <h3>Visibilizar</h3>
+          <p>Lo que muchos prefieren callar.</p>
+        </li>
+        <li data-reveal style="transition-delay:150ms">
+          <span>02</span>
+          <h3>Expresar</h3>
+          <p>El daño que se esconde detrás de estas prácticas.</p>
+        </li>
+        <li data-reveal style="transition-delay:300ms">
+          <span>03</span>
+          <h3>Acompañar</h3>
+          <p>Con apoyo y asesoramiento psicológico y legal a quienes siguen atrapados en esa red de control y culpa.</p>
+        </li>
+      </ol>
+
+      <div class="mission-fulltext" data-reveal>
+        <p>Si estás leyendo esto y has pasado por algo parecido, hay algo que debes saber: <strong><u>no estás solo</u></strong>.</p>
+        <p><strong>No eres un traidor, ni un pecador, ni un alma perdida</strong>. Eres una persona que <strong>has elegido la libertad</strong>. Y aunque ahora duela, hay vida después de ellos. Hay personas que te entienden, que te escuchan y que no van a juzgarte por pensar diferente.</p>
+        <p>Porque las secuelas son reales. <strong>Muchas personas que han logrado salir arrastran ansiedad, depresión e incluso pensamientos suicidas.</strong> Cuando te arrebatan tu entorno, cuando te enseñan a vivir con miedo al mundo, cuando te hacen creer que fuera de su mundo solo hay vacío… romper esas cadenas se convierte en una batalla diaria hasta conseguir asumir confianza en el mundo.</p>
+        <p>Desde esta asociación, <strong>estamos aquí para eso</strong>. Para <strong>VISIBILIZAR</strong> lo que muchos prefieren callar. Para <strong>EXPRESAR</strong> el daño que se esconde detrás de estas prácticas y <strong>ofrecer apoyo y asesoramiento psicológico y legal</strong> a quienes siguen atrapados en esa red de control y culpa.</p>
+        <p>Porque creemos en algo muy simple, pero que a algunos les cuesta aceptar: <strong>nadie debería tener que elegir entre su libertad y su familia.</strong></p>
+        <p><strong>Si necesitas apoyo, estamos aquí. Escríbenos o date de alta como socio.</strong></p>
+      </div>
     </section>
 
     <section class="premium-shell evidence-section" data-scene="sage">

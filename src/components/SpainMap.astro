@@ -1,9 +1,8 @@
 ---
 // Mapa de España por comunidades autónomas (CC-BY-4.0, @svg-maps/spain),
-// coropleta con los socios por comunidad según el mapa del WordPress original
-// (plugin Interactive Geo Maps, post 3344).
+// coropleta con los socios por comunidad según los datos de src/data/members.ts.
 import spain from "@svg-maps/spain";
-import { membersByRegion } from "../data/members";
+import { membersByRegion, membersOffMap } from "../data/members";
 
 const nameEs: Record<string, string> = {
   andalusia: "Andalucía",
@@ -56,6 +55,11 @@ const regions = spain.locations.map((loc) => {
       ))
     }
   </svg>
+  <p class="off-map mt-3 text-center text-xs text-brand-ink/70">
+    {membersOffMap.map((r, i) => (
+      <>{i > 0 && <span aria-hidden="true"> · </span>}{r.name}: <strong class="font-semibold text-brand-ink">{r.members}</strong></>
+    ))}
+  </p>
   <div class="region-label mt-3 min-h-[3.5rem] text-center" aria-live="polite">
     <p class="default-label text-sm text-brand-ink/80">Pasa el cursor por una comunidad para ver sus socios</p>
   </div>

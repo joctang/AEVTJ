@@ -1,3 +1,5 @@
+import { memberCount } from "./members";
+
 export const worldPartners = [
   { name: "Asociación Civil Argentina de Ayuda a Víctimas de Sectas", href: "https://asocavics.org/", flag: "/uploads/2025/10/mundo-5bf827.svg", country: "ar" },
   { name: "Comunidad de Ex Testigos de Jehová México", href: "https://www.facebook.com/p/Comunidad-de-Ex-Testigos-de-Jehov%C3%A1-M%C3%A9xico-61562062544131/", flag: "/uploads/2025/10/bandera-13b538.svg", country: "mx" },
@@ -13,7 +15,7 @@ export const worldPartners = [
 ];
 
 export const stats = [
-  { value: "735", label: "Socios" },
+  { value: String(memberCount), label: "Socios" },
   { value: "25", label: "Asociaciones de víctimas" },
   { value: "8", label: "Juicios ganados" },
 ];
