@@ -5,6 +5,7 @@ import SpainMap from "../components/SpainMap.astro";
 import DottedWorldMap from "../components/DottedWorldMap.astro";
 import TornEdge from "../components/TornEdge.astro";
 import IntroQuote from "../components/IntroQuote.astro";
+import HelpNotice from "../components/HelpNotice.astro";
 import { stats, worldPartners } from "../data/partners";
 import { memberCount, spainMembers } from "../data/members";
 
@@ -166,9 +167,9 @@ const globalPartners = worldPartners.map((p) => ({ label: p.name, image: p.flag,
         <p class="premium-kicker">Presencia en España</p>
         <h2>{memberCount} socios, <em>{spainMembers} en España</em></h2>
         <p>
-          En poco tiempo, la Asociación Española de Víctimas de los Testigos de Jehová ha conseguido reunir a más de{" "}
-          {Math.floor(memberCount / 100) * 100} socios en lo que es un movimiento imparable, con presencia en todas las comunidades
-          autónomas del país y también fuera de España.
+          En España, en poco tiempo, la Asociación Española de Víctimas de los Testigos de Jehová ha conseguido
+          reunir a más de 800 miembros en lo que es un movimiento imparable, teniendo presencia en todas las comunidades
+          autónomas del país.
         </p>
         <p>Pasa tu cursor por el <strong>mapa interactivo</strong> para ver los socios por comunidad autónoma.</p>
       </div>
@@ -310,6 +311,7 @@ const globalPartners = worldPartners.map((p) => ({ label: p.name, image: p.flag,
         <p>Desde esta asociación, <strong>estamos aquí para eso</strong>. Para <strong>VISIBILIZAR</strong> lo que muchos prefieren callar. Para <strong>EXPRESAR</strong> el daño que se esconde detrás de estas prácticas y <strong>ofrecer apoyo y asesoramiento psicológico y legal</strong> a quienes siguen atrapados en esa red de control y culpa.</p>
         <p>Porque creemos en algo muy simple, pero que a algunos les cuesta aceptar: <strong>nadie debería tener que elegir entre su libertad y su familia.</strong></p>
         <p><strong>Si necesitas apoyo, estamos aquí. Escríbenos o date de alta como socio.</strong></p>
+        <HelpNotice class="mt-1" />
       </div>
     </section>
 

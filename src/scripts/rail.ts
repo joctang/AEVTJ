@@ -37,11 +37,21 @@ export function initRail(rootSelector: string) {
     const avanzado = Math.max(0, Math.min(1, (window.scrollY + window.innerHeight * 0.4 - primera) / Math.max(1, total)));
     progreso.style.height = `${avanzado * 100}%`;
   };
+  // Keep the rail out of the hero: it fades in once the reader reaches the content.
+  const mostrar = () => {
+    const inicio = secciones[0]?.getBoundingClientRect().top ?? 0;
+    rail.classList.toggle("is-shown", inicio < window.innerHeight * 0.6);
+  };
   window.addEventListener("scroll", () => {
     if (!programado) {
       programado = true;
-      requestAnimationFrame(pintar);
+      requestAnimationFrame(() => {
+        pintar();
+        mostrar();
+      });
     }
   }, { passive: true });
   pintar();
+  mostrar();
+  rail.classList.add("is-ready");
 }

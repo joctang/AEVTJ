@@ -6,6 +6,8 @@
 export interface GuiaIntro {
   kicker: string;
   titulo: string;
+  /** Frase grande del hero; `enfasis` va en cursiva lima. */
+  lema: { texto: string; enfasis: string };
   entradilla: string;
   heroImage: { src: string; alt: string; width: number; height: number };
   minutosLectura: number;
@@ -51,6 +53,7 @@ export interface GuiaRecurso {
 export const intro: GuiaIntro = {
   kicker: "Guía · Acompañamiento",
   titulo: "Guía para salir de los Testigos de Jehová",
+  lema: { texto: "Salir no es el final.", enfasis: "Es el principio." },
   entradilla:
     "Si empiezas a preguntarte si las enseñanzas y las prácticas de los Testigos de Jehová son realmente lo que necesitas en tu vida, esta guía explica qué implica dejar la organización y dónde encontrar apoyo en cada paso.",
   heroImage: {

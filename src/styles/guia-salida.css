@@ -10,58 +10,122 @@
 /* ---------- Hero editorial ---------- */
 /* Gana a la regla genérica de primera sección interior del editorial.css. */
 .inner-page .site-main > section.guia-hero {
-  padding-top: 150px; padding-bottom: 110px;
-  background: #122c33; border-radius: 0 0 44px 44px;
+  padding: 90px 0 48px;
+  background: #0f2537; border-radius: 0 0 44px 44px;
 }
 .guia-hero {
-  position: relative; overflow: clip; display: grid; place-items: center;
-  min-height: 560px; height: 78vh; padding: 140px 24px 110px;
-  background: #122c33; color: #f5fbdf; text-align: center;
+  position: relative; overflow: clip; display: flex; flex-direction: column; justify-content: flex-end;
+  min-height: min(calc(100svh - 100px), 900px); padding: 90px 0 48px;
+  background: #0f2537; color: #f5fbdf;
   border-radius: 0 0 44px 44px;
 }
-.guia-hero__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.guia-hero__scrim { position: absolute; inset: 0; background: linear-gradient(180deg, #122c3399 0%, #122c33cc 60%, #122c33 75%); }
-.guia-hero__content { position: relative; display: flex; flex-direction: column; align-items: center; max-width: 760px; }
-.guia-hero .guia-kicker { justify-content: center; }
+/* La foto va a la derecha y se funde con el navy, como el hero de la home. */
+.guia-hero__img {
+  position: absolute; inset: 0 0 0 auto; width: 68%; height: 100%;
+  object-fit: cover; object-position: center; opacity: .78;
+  mask-image: linear-gradient(90deg, transparent, #000 38%);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 38%);
+  animation: guia-hero-settle 2600ms var(--ease-editorial) both;
+}
+@keyframes guia-hero-settle { from { transform: scale(1.08); } to { transform: scale(1); } }
+.guia-hero__scrim {
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(90deg, #0f2537 8%, #0f2537d9 34%, #0f253733 72%),
+    linear-gradient(0deg, #0f2537 0%, transparent 38%),
+    radial-gradient(ellipse at 10% 100%, #2ea88f33, transparent 55%);
+}
+.guia-hero__content { position: relative; width: min(1240px, calc(100% - 112px)); margin-inline: auto; }
 .guia-hero h1 {
-  margin-top: 26px; max-width: 22ch;
-  font-size: clamp(2.9rem, 6vw, 5.4rem); font-weight: 400;
-  letter-spacing: -.045em; line-height: 1.04; text-transform: none;
+  margin: 28px 0 0; max-width: 12ch;
+  font-size: clamp(3.2rem, 6vw, 6.2rem); font-weight: 400;
+  line-height: 1; letter-spacing: -.06em; text-transform: none; text-wrap: balance; color: #f5fbdf;
 }
-.guia-hero__entradilla { margin-top: 24px; max-width: 620px; font-size: 18px; line-height: 1.8; color: #f5fbdfcc; }
-.guia-hero__meta { margin-top: 18px; font-size: 12px; letter-spacing: .06em; color: #f5fbdf99; }
-.guia-hero__meta span { margin-inline: 10px; }
-.guia-hero__actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-top: 34px; }
+.guia-hero__entradilla { margin-top: 32px; max-width: 500px; font-size: 16px; line-height: 1.8; color: #edf1e5d9; }
+.guia-hero__actions { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 34px; }
+.guia-hero__bottom {
+  position: relative; z-index: 2;
+  width: min(1240px, calc(100% - 112px)); margin: 56px auto 0;
+  display: flex; align-items: center; justify-content: space-between; gap: 24px;
+  padding-top: 22px; border-top: 1px solid #ffffff2e;
+}
+.guia-hero__meta { display: flex; flex-wrap: wrap; gap: 8px 34px; margin: 0; padding: 0; list-style: none; font-size: 12px; color: #dce4ce; }
+.guia-hero__meta strong { margin-right: 4px; font-family: var(--font-heading); font-size: 20px; font-weight: 400; color: #f5fbdf; }
 .guia-hero__scroll {
-  position: absolute; left: 50%; bottom: 26px; translate: -50% 0; z-index: 2;
-  display: flex; flex-direction: column; align-items: center; gap: 8px;
-  color: #f5fbdfb3; text-decoration: none; font-size: 15px;
+  display: inline-flex; align-items: center; gap: 12px; min-height: 44px;
+  font-size: 12px; color: #dce4ce; text-decoration: none; transition: color 450ms var(--ease-editorial);
 }
-.guia-hero__scroll::after { content: '↓'; }
-.guia-hero__scroll span { width: 2px; height: 34px; background: linear-gradient(180deg, #2ea88f, #2ea88f1f); animation: guia-scroll 2.4s var(--ease-editorial) infinite; }
-@keyframes guia-scroll { 0% { transform: scaleY(0); transform-origin: top; } 45% { transform: scaleY(1); transform-origin: top; } 55% { transform: scaleY(1); transform-origin: bottom; } 100% { transform: scaleY(0); transform-origin: bottom; } }
-@media (prefers-reduced-motion: reduce) { .guia-hero__scroll span { animation: none; } }
+.guia-hero__scroll span { display: inline-block; animation: guia-bob 2.4s ease-in-out infinite alternate; }
+.guia-hero__scroll:hover { color: #2ea88f; }
+@keyframes guia-bob { from { translate: 0 -3px; } to { translate: 0 4px; } }
+@media (prefers-reduced-motion: reduce) { .guia-hero__img, .guia-hero__scroll span { animation: none; } }
 
 /* ---------- Índice-portal ---------- */
 .guia-indice { padding-block: clamp(90px, 10vw, 140px) clamp(60px, 7vw, 100px); }
 .guia-indice__inner { width: min(1240px, calc(100% - 64px)); margin-inline: auto; }
-.guia-indice h2 { margin-top: 22px; font-size: clamp(34px, 4.15vw, 58px); line-height: 1.12; letter-spacing: -.05em; }
-.guia-indice__grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 20px; margin-top: 54px; }
+/* El lema es el titular del índice: centrado, contenido, con un hilo lima que se dibuja. */
+.guia-indice .guia-kicker { justify-content: center; }
+.guia-indice h2.guia-lema {
+  margin: 26px auto 0; text-align: center;
+  font-size: clamp(2.4rem, 4.2vw, 4.2rem); font-weight: 400;
+  line-height: 1.12; letter-spacing: -.045em; color: #122c33; text-wrap: balance;
+}
+.guia-lema em { display: block; color: #5b6934; font-style: italic; }
+.guia-lema::after {
+  content: ""; display: block; width: 56px; height: 1px; margin: 34px auto 0;
+  background: #839950; transform: scaleX(0);
+  transition: transform 1400ms var(--ease-editorial) 500ms;
+}
+.guia-lema.is-visible::after, html:not(.reveal-ready) .guia-lema::after { transform: scaleX(1); }
+.guia-indice__grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 20px; margin-top: clamp(48px, 5vw, 72px); }
+
+/* Tarjetas de capítulo: foto del capítulo + insignia navy + resumen. */
 .guia-tarjeta {
-  position: relative; overflow: hidden; display: flex; flex-direction: column;
-  padding: 28px; border-radius: 28px; background: #fbfdf5; border: 1px solid #dce3cd;
-  box-shadow: 0 18px 45px #0f25371a; text-decoration: none; color: inherit;
-  transition: transform 450ms cubic-bezier(.22,1,.36,1), box-shadow 450ms cubic-bezier(.22,1,.36,1);
+  position: relative; display: flex; flex-direction: column;
+  border-radius: 24px; background: #fbfdf5; border: 1px solid #dce3cd;
+  box-shadow: 0 14px 36px #0f253714; text-decoration: none; color: inherit; overflow: hidden;
+  transition: transform 450ms var(--ease-editorial), box-shadow 450ms var(--ease-editorial);
 }
-.guia-tarjeta::before {
-  content: attr(data-num); position: absolute; right: 14px; bottom: -26px;
-  font-family: var(--font-heading); font-size: 120px; line-height: 1; color: #2ea88f2e; letter-spacing: -.05em;
+.guia-tarjeta__media { position: relative; margin: 0; aspect-ratio: 16 / 9; }
+.guia-tarjeta__frame { position: absolute; inset: 0; overflow: hidden; background: #e2edc9; }
+.guia-tarjeta__frame::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, #0f253740, transparent 55%); }
+.guia-tarjeta__frame img { width: 100%; height: 100%; object-fit: cover; object-position: center 22%; transition: transform 900ms var(--ease-editorial); }
+.guia-tarjeta__num {
+  position: absolute; left: 20px; bottom: -20px; z-index: 2;
+  display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%;
+  background: #122c33; color: #f5fbdf; font-family: var(--font-heading); font-size: 17px;
+  box-shadow: 0 0 0 4px #fbfdf5;
 }
-.guia-tarjeta h3 { position: relative; margin-top: 14px; font-size: clamp(20px, 1.8vw, 26px); line-height: 1.25; letter-spacing: -.03em; }
-.guia-tarjeta p { position: relative; margin-top: 10px; font-size: 14px; line-height: 1.7; color: #526149; }
-.guia-tarjeta > span:first-of-type { font-size: 11px; font-weight: 600; letter-spacing: .12em; color: #1f7a63; }
+.guia-tarjeta__body { display: flex; flex: 1; flex-direction: column; padding: 32px 22px 22px; }
+.guia-tarjeta__label { font-size: 9.5px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: #1f7a63; }
+.guia-tarjeta h3 { margin-top: 10px; font-size: clamp(19px, 1.5vw, 22px); font-weight: 400; line-height: 1.2; letter-spacing: -.03em; text-wrap: balance; }
+.guia-tarjeta p { margin-top: 8px; font-size: 13.5px; line-height: 1.65; color: #526149; }
+.guia-tarjeta__cta {
+  display: inline-flex; align-items: center; gap: 10px; align-self: flex-start;
+  margin-top: auto; padding-top: 18px; font-size: 12px; font-weight: 500; color: #122c33;
+}
+.guia-tarjeta__cta::after { content: "↗"; font-size: 16px; transition: translate 450ms var(--ease-editorial); }
+
+/* Séptima tarjeta: el recorrido práctico, ancha y en navy. */
+.guia-tarjeta--pasos {
+  grid-column: 1 / -1; flex-direction: row; align-items: center; gap: 26px;
+  padding: 30px 36px; border: 0;
+  background: radial-gradient(ellipse at 100% 0, #2ea88f40, transparent 60%), #0f2537; color: #f5fbdf;
+}
+.guia-tarjeta--pasos .guia-tarjeta__num { position: static; flex: 0 0 64px; width: 64px; height: 64px; font-size: 28px; background: #d8eaa4; color: #122c33; box-shadow: none; }
+.guia-tarjeta--pasos .guia-tarjeta__body { padding: 0; }
+.guia-tarjeta--pasos .guia-tarjeta__label { color: #bfe0d6; }
+.guia-tarjeta--pasos h3 { margin-top: 8px; font-size: clamp(26px, 2.6vw, 38px); }
+.guia-tarjeta--pasos .guia-tarjeta__cta {
+  flex: 0 0 auto; margin: 0 0 0 auto; padding: 14px 24px; border-radius: 100px;
+  background: #d8eaa4; color: #122c33; font-size: 13px;
+}
+
 @media (hover:hover) and (pointer:fine) {
   .guia-tarjeta:hover { transform: translateY(-6px); box-shadow: 0 30px 60px #0f25371f; }
+  .guia-tarjeta:hover .guia-tarjeta__frame img { transform: scale(1.06); }
+  .guia-tarjeta:hover .guia-tarjeta__cta::after { translate: 3px -3px; }
+  .guia-tarjeta--pasos:hover .guia-tarjeta__cta { background: #e9f6c4; }
 }
 
 /* ---------- Capítulos ---------- */
@@ -220,7 +284,9 @@
   .guia-rail {
     display: block; position: fixed; left: 34px; top: 50%; transform: translateY(-50%);
     z-index: 30; max-width: 190px;
+    transition: opacity 600ms var(--ease-editorial), translate 600ms var(--ease-editorial);
   }
+  .guia-rail.is-ready:not(.is-shown) { opacity: 0; translate: -12px 0; pointer-events: none; }
   .guia-rail ol { list-style: none; margin: 0; padding: 0 0 0 18px; position: relative; }
   .guia-rail ol::before { content: ''; position: absolute; left: 0; top: 6px; bottom: 6px; border-left: 1px dashed #122c3333; }
   .guia-rail__progreso { position: absolute; left: -2px; top: 6px; width: 4px; height: 0; background: #2ea88f; border-radius: 4px; box-shadow: 0 0 8px #2ea88f66; transition: height 200ms linear; }
@@ -287,10 +353,30 @@
 @media (max-width: 767px) {
   .guia-indice__inner, .guia-pasos > *, .guia-cierre__inner, .guia-ayuda { width: calc(100% - 40px); }
   .guia-capitulo__inner { width: calc(100% - 40px); }
-  .guia-hero { height: auto; min-height: 620px; border-radius: 0 0 32px 32px; }
-  .guia-hero h1 { font-size: clamp(2.6rem, 11vw, 3.4rem); }
-  .guia-hero__entradilla { font-size: 16px; }
+  .guia-hero { height: auto; min-height: 0; max-height: none; border-radius: 0 0 32px 32px; }
+  .guia-hero__img { width: 100%; opacity: .5; mask-image: linear-gradient(180deg, #000, transparent 75%); -webkit-mask-image: linear-gradient(180deg, #000, transparent 75%); }
+  .guia-hero__scrim { background: linear-gradient(180deg, #0f253799 0%, #0f2537 70%); }
+  .inner-page .site-main > section.guia-hero { padding: 130px 0 56px; }
+  .guia-hero__content { width: calc(100% - 40px); }
+  .guia-hero h1 { margin-top: 22px; font-size: clamp(2.8rem, 12.5vw, 3.8rem); }
+  .guia-indice h2.guia-lema { font-size: clamp(2.1rem, 9vw, 2.6rem); }
+  /* Tarjetas compactas en horizontal: miniatura a la izquierda, texto a la derecha. */
+  .guia-indice__grid { gap: 14px; }
+  .guia-tarjeta:not(.guia-tarjeta--pasos) { flex-direction: row; border-radius: 20px; }
+  .guia-tarjeta__media { flex: 0 0 104px; aspect-ratio: auto; }
+  .guia-tarjeta__num { left: 10px; top: 10px; bottom: auto; width: 30px; height: 30px; font-size: 14px; box-shadow: 0 0 0 3px #fbfdf5; }
+  .guia-tarjeta__body { padding: 16px 16px 16px 18px; }
+  .guia-tarjeta h3 { margin-top: 6px; font-size: 18px; }
+  .guia-tarjeta p { font-size: 13px; line-height: 1.55; }
+  .guia-tarjeta__cta { padding-top: 10px; }
+  .guia-tarjeta--pasos { flex-direction: column; align-items: flex-start; gap: 14px; padding: 24px 22px; border-radius: 20px; }
+  .guia-tarjeta--pasos .guia-tarjeta__num { flex-basis: 46px; width: 46px; height: 46px; font-size: 21px; }
+  .guia-tarjeta--pasos h3 { font-size: 24px; }
+  .guia-tarjeta--pasos .guia-tarjeta__cta { margin-left: 0; }
+  .guia-hero__entradilla { font-size: 15px; margin-top: 24px; }
   .guia-hero__actions { flex-direction: column; align-items: stretch; width: 100%; max-width: 340px; }
+  .guia-hero__bottom { width: calc(100% - 40px); margin-top: 44px; flex-direction: column; align-items: flex-start; }
+  .guia-hero__meta { gap: 6px 22px; }
   .guia-indice__grid { grid-template-columns: 1fr; }
   .guia-tabs { display: none; }
   .guia-acordeon { display: block; }

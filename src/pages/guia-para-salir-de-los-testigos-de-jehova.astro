@@ -72,34 +72,53 @@ const jsonLdHowTo = {
         <p class="guia-kicker guia-kicker--crema">{intro.kicker}</p>
         <h1>{intro.titulo}</h1>
         <p class="guia-hero__entradilla">{intro.entradilla}</p>
-        <p class="guia-hero__meta">
-          {intro.minutosLectura} min de lectura<span aria-hidden="true">·</span>{capitulos.length} capítulos<span aria-hidden="true">·</span>7 pasos
-        </p>
         <div class="guia-hero__actions">
           <a class="guia-pill guia-pill--solid" href="#el-comienzo">Empezar la guía</a>
           <a class="guia-pill guia-pill--ghost" href="/contacto">Necesito ayuda ahora</a>
         </div>
       </div>
+      <div class="guia-hero__bottom">
+        <ul class="guia-hero__meta" aria-label="Sobre esta guía">
+          <li><strong>{intro.minutosLectura}</strong> min de lectura</li>
+          <li><strong>{capitulos.length}</strong> capítulos</li>
+          <li><strong>7</strong> pasos</li>
+        </ul>
+        <a class="guia-hero__scroll" href="#guia-indice">Ver el índice <span aria-hidden="true">↓</span></a>
+      </div>
       <TornEdge />
-      <a class="guia-hero__scroll" href="#guia-indice" aria-label="Bajar al índice de la guía">
-        <span aria-hidden="true"></span>
-      </a>
     </section>
 
     <section class="guia-indice" id="guia-indice" aria-labelledby="guia-indice-titulo">
       <div class="guia-indice__inner">
         <p class="guia-kicker" data-reveal>En esta guía</p>
-        <h2 id="guia-indice-titulo" data-reveal>Seis capítulos y un recorrido práctico</h2>
+        <h2 id="guia-indice-titulo" class="guia-lema" data-reveal>{intro.lema.texto} <em>{intro.lema.enfasis}</em></h2>
         <div class="guia-indice__grid">
           {
-            capitulos.map((capitulo) => (
-              <a class="guia-tarjeta" href={`#${capitulo.id}`} data-num={capitulo.n} data-reveal>
-                <span aria-hidden="true">Capítulo {capitulo.n}</span>
-                <h3>{capitulo.titulo}</h3>
-                <p>{capitulo.resumen}</p>
+            capitulos.map((capitulo, i) => (
+              <a class="guia-tarjeta" href={`#${capitulo.id}`} data-reveal style={`transition-delay:${(i % 3) * 150}ms`}>
+                <figure class="guia-tarjeta__media">
+                  <span class="guia-tarjeta__frame">
+                    <img src={capitulo.imagen.src} alt="" width={capitulo.imagen.width} height={capitulo.imagen.height} loading="lazy" decoding="async" />
+                  </span>
+                  <span class="guia-tarjeta__num" aria-hidden="true">{capitulo.n}</span>
+                </figure>
+                <div class="guia-tarjeta__body">
+                  <span class="guia-tarjeta__label">Capítulo {capitulo.n}</span>
+                  <h3>{capitulo.titulo}</h3>
+                  <p>{capitulo.resumen}</p>
+                  <span class="guia-tarjeta__cta" aria-hidden="true">Leer capítulo</span>
+                </div>
               </a>
             ))
           }
+          <a class="guia-tarjeta guia-tarjeta--pasos" href="#siete-pasos" data-reveal>
+            <span class="guia-tarjeta__num" aria-hidden="true">7</span>
+            <div class="guia-tarjeta__body">
+              <span class="guia-tarjeta__label">Recorrido práctico</span>
+              <h3>7 pasos para afrontar la salida</h3>
+            </div>
+            <span class="guia-tarjeta__cta" aria-hidden="true">Ver los pasos</span>
+          </a>
         </div>
       </div>
     </section>
