@@ -31,3 +31,8 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
           server-dir: /nuevo/
+
+      - name: Remove Hostinger placeholder default.php
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq lftp
+          lftp -u "${{ secrets.FTP_USERNAME }}","${{ secrets.FTP_PASSWORD }}" "${{ secrets.FTP_SERVER }}" -e "set ssl:verify-certificate no; set ftp:ssl-allow no; cd /nuevo/; rm -f default.php; ls -la; bye" || true
