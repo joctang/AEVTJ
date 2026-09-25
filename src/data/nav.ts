@@ -17,6 +17,7 @@ export const mainNav = [
     ],
   },
   { label: "Hazte socio / Donaciones", href: "/hazte-socio/" },
+  { label: "Otras asociaciones", href: "/otras-asociaciones/" },
   { label: "Contacto", href: "/contacto/" },
 ];
 

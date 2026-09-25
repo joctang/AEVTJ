@@ -22,3 +22,11 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# backups locales de la recuperación del git roto (25/09/2026)
+.git.broken-backup-*
+_local-session-*
+
+# imagenes extra del backup completo de WordPress: el repo solo versiona
+# las que usa cada pagina (ya trackeadas); el resto queda solo en local.
+public/uploads/*

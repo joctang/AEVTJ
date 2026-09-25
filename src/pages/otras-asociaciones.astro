@@ -1,0 +1,133 @@
+---
+import "../styles/international-directory.css";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { remoteResources, supportCountries } from "../data/international-support";
+
+const kindLabels = { specific: "Específico de ex Testigos", general: "Apoyo general", specialist: "Abuso sexual", remote: "Remoto / internacional" };
+const telHref = (phone: string) => `tel:${phone.replace(/[^+\d]/g, "")}`;
+---
+
+<BaseLayout title="Asociaciones y recursos de apoyo por país" description="Directorio de asociaciones y recursos de apoyo por país, con canales de contacto documentados y fecha de revisión.">
+  <section class="directory-hero"><div class="directory-shell">
+    <p class="directory-kicker">Directorio internacional · revisión 25-09-2026</p>
+    <h1>Asociaciones y recursos de apoyo <em>por país</em></h1>
+    <p>Encuentra recursos según tu país y el tipo de ayuda que buscas. Cada ficha recoge canales publicados por la entidad o por un directorio identificado.</p>
+    <a class="directory-hero__link" href="#como-usar">Cómo usar este directorio <span aria-hidden="true">↓</span></a>
+  </div></section>
+  <div class="directory-shell directory-content">
+    <aside id="como-usar" class="directory-notice" aria-label="Alcance del directorio">
+      <strong>Antes de contactar</strong>
+      <p>Estas entidades son independientes. AEVTJ no ha comprobado que respondan ni mantiene necesariamente un convenio con ellas. Comprueba si el servicio encaja con tu situación y, en una urgencia, acude a los servicios de emergencia de tu zona.</p>
+    </aside>
+    <nav class="country-nav" aria-label="Ir a un país">
+      {supportCountries.map(({ code, country }) => <a href={`#pais-${code}`}><img src={`/flags/${code}.svg`} alt="" loading="lazy" /> {country}</a>)}
+      <a href="#recursos-remotos"><span aria-hidden="true">🌍</span> Internacional</a>
+    </nav>
+    <div class="directory-tools">
+      <div><label for="directory-search">Buscar país o entidad</label><input id="directory-search" type="search" placeholder="Ej. Alemania o JZ Help" autocomplete="off" /></div>
+      <fieldset class="directory-filters"><legend>Tipo de recurso</legend><div class="directory-filters__items">
+        <label><input type="radio" name="resource-type" value="all" checked /> Todos</label>
+        <label><input type="radio" name="resource-type" value="specific" /> Específicos de ex Testigos</label>
+        <label><input type="radio" name="resource-type" value="general" /> Apoyo general</label>
+        <label><input type="radio" name="resource-type" value="specialist" /> Abuso sexual</label>
+        <label><input type="radio" name="resource-type" value="remote" /> Remoto / internacional</label>
+      </div></fieldset>
+      <p id="directory-results" class="directory-results" role="status" aria-live="polite"></p>
+    </div>
+    <div class="country-list">
+      {supportCountries.map(({ code, country, resources }) => (
+        <details class="country-group" id={`pais-${code}`} data-country={country.toLocaleLowerCase("es")}>
+          <summary><img class="country-group__flag" src={`/flags/${code}.svg`} alt="" loading="lazy" /><span class="country-group__heading"><strong>{country}</strong><small>{resources.length} {resources.length === 1 ? "recurso publicado" : "recursos publicados"} · Consulta los canales disponibles</small></span><span class="country-group__chevron" aria-hidden="true">⌄</span></summary>
+          <div class="country-group__cards">
+            {resources.map((resource) => (
+              <article class="support-card" data-name={resource.name.toLocaleLowerCase("es")} data-kind={resource.kind} data-abuse={resource.sexualAbuse ? "true" : "false"}>
+                <div class="support-card__top"><span class="support-card__type">{kindLabels[resource.kind]}</span>{resource.city && <span class="support-card__city">{resource.city}</span>}</div>
+                <h3>{resource.name}</h3><p>{resource.summary}</p>
+                {resource.notice && <p class="support-card__notice"><strong>Atención:</strong> {resource.notice}</p>}
+                {resource.languages && <p class="support-card__detail">{resource.languages}</p>}
+                {resource.hours && <p class="support-card__detail"><strong>Horario:</strong> {resource.hours}</p>}
+                <div class="support-card__actions">
+                  {resource.website && <a href={resource.website} target="_blank" rel="noopener noreferrer">Web <span aria-hidden="true">↗</span></a>}
+                  {resource.email && <a href={`mailto:${resource.email}`}>Correo <span class="sr-only">a {resource.email}</span></a>}
+                  {resource.phone && <a href={telHref(resource.phone)}>Llamar <span class="sr-only">al {resource.phone}</span></a>}
+                  {resource.formUrl && <a href={resource.formUrl} target="_blank" rel="noopener noreferrer">Formulario <span aria-hidden="true">↗</span></a>}
+                </div>
+                {(resource.email || resource.phone) && <p class="support-card__contact">{resource.email && <span>{resource.email}</span>}{resource.phone && <span>{resource.phone}</span>}</p>}
+                <p class="support-card__source">Verificado: <time datetime={resource.verifiedAt}>25-09-2026</time> · <a href={resource.sourceUrl} target="_blank" rel="noopener noreferrer">Ver fuente</a></p>
+              </article>
+            ))}
+          </div>
+        </details>
+      ))}
+    </div>
+    <section id="recursos-remotos" class="remote-section" aria-labelledby="remote-title"><p class="directory-kicker">Sin país único</p><h2 id="remote-title">Recursos internacionales remotos</h2>
+      {remoteResources.map((resource) => (
+        <article class="support-card" data-name={resource.name.toLocaleLowerCase("es")} data-kind="remote">
+          <span class="support-card__type">Remoto / internacional</span><h3>{resource.name}</h3><p>{resource.summary}</p>
+          {resource.notice && <p class="support-card__notice">{resource.notice}</p>}
+          <div class="support-card__actions">{resource.website && <a href={resource.website} target="_blank" rel="noopener noreferrer">Web <span aria-hidden="true">↗</span></a>}{resource.formUrl && <a href={resource.formUrl} target="_blank" rel="noopener noreferrer">Formulario / webcall <span aria-hidden="true">↗</span></a>}</div>
+          <p class="support-card__source">Verificado: <time datetime={resource.verifiedAt}>25-09-2026</time> · <a href={resource.sourceUrl} target="_blank" rel="noopener noreferrer">Ver fuente</a></p>
+        </article>
+      ))}
+    </section>
+    <p class="directory-correction">¿Has encontrado un dato desactualizado? <a href="/contacto/">Escribe a AEVTJ para corregirlo</a>.</p>
+  </div>
+</BaseLayout>
+
+<script>
+  const search = document.querySelector<HTMLInputElement>("#directory-search");
+  const filters = [...document.querySelectorAll<HTMLInputElement>('input[name="resource-type"]')];
+  const groups = [...document.querySelectorAll<HTMLDetailsElement>(".country-group")];
+  const remote = document.querySelector<HTMLElement>(".remote-section");
+  const status = document.querySelector<HTMLElement>("#directory-results");
+  const normalize = (value: string) => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("es");
+  function update() {
+    const query = normalize(search?.value.trim() ?? "");
+    const type = filters.find((filter) => filter.checked)?.value ?? "all";
+    let shown = 0;
+    for (const group of groups) {
+      const countryMatch = normalize(group.dataset.country ?? "").includes(query);
+      let visible = 0;
+      for (const card of group.querySelectorAll<HTMLElement>(".support-card")) {
+        const textMatch = !query || countryMatch || normalize(card.dataset.name ?? "").includes(query);
+        const kindMatch = type === "all" || (type === "specialist" ? card.dataset.abuse === "true" : card.dataset.kind === type);
+        card.hidden = !(textMatch && kindMatch);
+        if (!card.hidden) visible++;
+      }
+      group.hidden = visible === 0;
+      if ((query || type !== "all") && visible) group.open = true;
+      shown += visible;
+    }
+    const remoteCard = remote?.querySelector<HTMLElement>(".support-card");
+    if (remote && remoteCard) {
+      remote.hidden = !((!query || normalize(remoteCard.dataset.name ?? "").includes(query) || "internacional".includes(query)) && (type === "all" || type === "remote"));
+      if (!remote.hidden) shown++;
+    }
+    if (status) status.textContent = `${shown} ${shown === 1 ? "recurso encontrado" : "recursos encontrados"}`;
+  }
+  search?.addEventListener("input", update);
+  filters.forEach((filter) => filter.addEventListener("change", update));
+  function openHash() {
+    const id = decodeURIComponent(location.hash.slice(1));
+    if (!id) return;
+    const target = document.getElementById(id);
+    if (target instanceof HTMLDetailsElement) {
+      if (target.hidden) {
+        if (search) search.value = "";
+        const all = filters.find((filter) => filter.value === "all");
+        if (all) all.checked = true;
+        update();
+      }
+      target.hidden = false;
+      target.open = true;
+      requestAnimationFrame(() => target.scrollIntoView({ block: "start" }));
+    }
+  }
+  window.addEventListener("hashchange", openHash);
+  openHash();
+  update();
+  const mobile = window.matchMedia("(max-width: 767px)");
+  groups.forEach((group) => group.addEventListener("toggle", () => {
+    if (mobile.matches && group.open) groups.forEach((other) => { if (other !== group) other.open = false; });
+  }));
+</script>
