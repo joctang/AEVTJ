@@ -7,6 +7,7 @@ import TornEdge from "../components/TornEdge.astro";
 import IntroQuote from "../components/IntroQuote.astro";
 import HelpNotice from "../components/HelpNotice.astro";
 import { stats, worldPartners } from "../data/partners";
+import { supportCountries } from "../data/international-support";
 import { memberCount, spainMembers } from "../data/members";
 
 const resourceCards = [
@@ -55,6 +56,10 @@ const evidenceCards = [
 ];
 
 const globalPartners = worldPartners.map((p) => ({ label: p.name, image: p.flag, href: p.href }));
+// Dos filas del carrusel, en sentidos opuestos.
+const half = Math.ceil(globalPartners.length / 2);
+const partnerRows = [globalPartners.slice(0, half), globalPartners.slice(half)];
+const partnerCountryCount = supportCountries.length;
 ---
 
 <BaseLayout title="Inicio">
@@ -147,15 +152,40 @@ const globalPartners = worldPartners.map((p) => ({ label: p.name, image: p.flag,
           contra el ostracismo que la organización de los testigos de Jehová les ha causado en sus vidas.
         </p>
       </div>
-      <div class="partner-grid" data-reveal>
+      <div class="partner-marquee" data-reveal>
         {
-          globalPartners.map((partner) => (
-            <a href={partner.href} target="_blank" rel="nofollow noopener" class="partner-card">
-              <img src={partner.image} alt="" loading="lazy" />
-              <span>{partner.label}</span>
-            </a>
+          partnerRows.map((row, i) => (
+            <div class:list={["partner-marquee__row", { "partner-marquee__row--reverse": i === 1 }]}>
+              <ul class="partner-marquee__track">
+                {row.map((partner) => (
+                  <li>
+                    <a href={partner.href ?? undefined} target="_blank" rel="nofollow noopener" class="partner-card">
+                      <img src={partner.image} alt="" loading="lazy" />
+                      <span>{partner.label}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              <ul class="partner-marquee__track" aria-hidden="true">
+                {row.map((partner) => (
+                  <li>
+                    <a href={partner.href ?? undefined} target="_blank" rel="nofollow noopener" class="partner-card" tabindex="-1">
+                      <img src={partner.image} alt="" loading="lazy" />
+                      <span>{partner.label}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
           ))
         }
+      </div>
+      <div class="partner-cta" data-reveal>
+        <div>
+          <p class="partner-cta__title">Busca tu país</p>
+          <p>Consulta el directorio de asociaciones y recursos de apoyo en {partnerCountryCount} países, con sus canales de contacto.</p>
+        </div>
+        <a class="partner-cta__link" href="/otras-asociaciones/">Ver otras asociaciones <span aria-hidden="true">→</span></a>
       </div>
       <div class="map-panel" data-reveal>
         <DottedWorldMap />

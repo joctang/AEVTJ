@@ -1,51 +1,104 @@
 ---
+import "../styles/_editorial-ui.css";
 import "../styles/international-directory.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { remoteResources, supportCountries } from "../data/international-support";
+import DottedMap from "dotted-map";
+import { internationalSupport, remoteResources, supportCountries } from "../data/international-support";
 
 const kindLabels = { specific: "Específico de ex Testigos", general: "Apoyo general", specialist: "Abuso sexual", remote: "Remoto / internacional" };
 const telHref = (phone: string) => `tel:${phone.replace(/[^+\d]/g, "")}`;
+
+// Mapa de puntos de la cabecera: se genera en build y marca cada país del directorio.
+const countryLocations: Record<string, { lat: number; lng: number }> = {
+  ar: { lat: -34.6, lng: -64.2 }, au: { lat: -25.3, lng: 133.8 }, ca: { lat: 51.5, lng: -90 },
+  ch: { lat: 46.8, lng: 8.2 }, de: { lat: 51.2, lng: 10.5 }, dk: { lat: 56, lng: 9.5 },
+  fi: { lat: 62, lng: 25.7 }, fr: { lat: 46.6, lng: 2.2 }, gb: { lat: 53, lng: -1.8 },
+  it: { lat: 42.8, lng: 12.6 }, no: { lat: 61, lng: 8.5 }, nz: { lat: -42, lng: 172.5 },
+  us: { lat: 38.5, lng: -97 }, za: { lat: -30.6, lng: 24 },
+};
+const project = (lat: number, lng: number) => ({ x: (lng + 180) * (800 / 360), y: (90 - lat) * (400 / 180) });
+const svgMap = new DottedMap({ height: 70, grid: "diagonal" }).getSVG({ radius: 0.24, color: "#f5fbdf2e", shape: "circle", backgroundColor: "transparent" });
+const spain = project(40.4, -3.7);
+const pins = supportCountries.filter(({ code }) => countryLocations[code]).map(({ code, country, resources }) => ({ code, country, count: resources.length, ...project(countryLocations[code].lat, countryLocations[code].lng) }));
+const kindOrder = ["specific", "general", "specialist", "remote"] as const;
 ---
 
 <BaseLayout title="Asociaciones y recursos de apoyo por país" description="Directorio de asociaciones y recursos de apoyo por país, con canales de contacto documentados y fecha de revisión.">
-  <section class="directory-hero"><div class="directory-shell">
-    <p class="directory-kicker">Directorio internacional · revisión 25-09-2026</p>
-    <h1>Asociaciones y recursos de apoyo <em>por país</em></h1>
-    <p>Encuentra recursos según tu país y el tipo de ayuda que buscas. Cada ficha recoge canales publicados por la entidad o por un directorio identificado.</p>
-    <a class="directory-hero__link" href="#como-usar">Cómo usar este directorio <span aria-hidden="true">↓</span></a>
+  <section class="directory-hero"><div class="directory-shell directory-hero__grid">
+    <div class="directory-hero__copy">
+      <p class="guia-kicker guia-kicker--crema directory-kicker">Directorio internacional · revisión 25-09-2026</p>
+      <h1>Asociaciones y recursos de apoyo <em>por país</em></h1>
+      <p>Encuentra recursos según tu país y el tipo de ayuda que buscas. Cada ficha recoge canales publicados por la entidad o por un directorio identificado.</p>
+      <dl class="directory-stats">
+        <div><dt>Países</dt><dd>{supportCountries.length}</dd></div>
+        <div><dt>Recursos</dt><dd>{internationalSupport.length}</dd></div>
+        <div><dt>Con fuente citada</dt><dd>100%</dd></div>
+      </dl>
+      <a class="directory-hero__link" href="#como-usar">Cómo usar este directorio <span aria-hidden="true">↓</span></a>
+    </div>
+    <div class="directory-map" aria-hidden="true">
+      <Fragment set:html={svgMap} />
+      <svg class="directory-map__pins" viewBox="0 0 800 400">
+        <circle class="directory-map__home" cx={spain.x} cy={spain.y} r="4" />
+        {pins.map((pin) => (
+          <a href={`#pais-${pin.code}`} tabindex="-1" class="directory-map__pin">
+            <circle class="directory-map__pulse" cx={pin.x} cy={pin.y} r="6" />
+            <circle cx={pin.x} cy={pin.y} r="5" />
+            <title>{pin.country}</title>
+          </a>
+        ))}
+      </svg>
+      <p class="directory-map__legend"><span class="directory-map__dot"></span>Países con recursos <span class="directory-map__dot directory-map__dot--home"></span>España · AEVTJ</p>
+    </div>
   </div></section>
+
   <div class="directory-shell directory-content">
     <aside id="como-usar" class="directory-notice" aria-label="Alcance del directorio">
-      <strong>Antes de contactar</strong>
-      <p>Estas entidades son independientes. AEVTJ no ha comprobado que respondan ni mantiene necesariamente un convenio con ellas. Comprueba si el servicio encaja con tu situación y, en una urgencia, acude a los servicios de emergencia de tu zona.</p>
+      <span class="directory-notice__icon" aria-hidden="true">i</span>
+      <div>
+        <strong>Antes de contactar</strong>
+        <p>Estas entidades son independientes. AEVTJ no ha comprobado que respondan ni mantiene necesariamente un convenio con ellas. Comprueba si el servicio encaja con tu situación y, en una urgencia, acude a los servicios de emergencia de tu zona.</p>
+      </div>
     </aside>
+
     <nav class="country-nav" aria-label="Ir a un país">
-      {supportCountries.map(({ code, country }) => <a href={`#pais-${code}`}><img src={`/flags/${code}.svg`} alt="" loading="lazy" /> {country}</a>)}
-      <a href="#recursos-remotos"><span aria-hidden="true">🌍</span> Internacional</a>
+      {supportCountries.map(({ code, country, resources }) => <a href={`#pais-${code}`}><img src={`/flags/${code}.svg`} alt="" loading="lazy" /> <span>{country}</span><small aria-hidden="true">{resources.length}</small></a>)}
+      <a href="#recursos-remotos" class="country-nav__remote"><span aria-hidden="true" class="country-nav__globe">🌍</span> <span>Internacional</span></a>
     </nav>
+
     <div class="directory-tools">
-      <div><label for="directory-search">Buscar país o entidad</label><input id="directory-search" type="search" placeholder="Ej. Alemania o JZ Help" autocomplete="off" /></div>
+      <div class="directory-search"><label for="directory-search">Buscar país o entidad</label><input id="directory-search" type="search" placeholder="Ej. Alemania o JZ Help" autocomplete="off" /></div>
       <fieldset class="directory-filters"><legend>Tipo de recurso</legend><div class="directory-filters__items">
         <label><input type="radio" name="resource-type" value="all" checked /> Todos</label>
-        <label><input type="radio" name="resource-type" value="specific" /> Específicos de ex Testigos</label>
-        <label><input type="radio" name="resource-type" value="general" /> Apoyo general</label>
-        <label><input type="radio" name="resource-type" value="specialist" /> Abuso sexual</label>
-        <label><input type="radio" name="resource-type" value="remote" /> Remoto / internacional</label>
+        <label data-kind="specific"><input type="radio" name="resource-type" value="specific" /> Específicos de ex Testigos</label>
+        <label data-kind="general"><input type="radio" name="resource-type" value="general" /> Apoyo general</label>
+        <label data-kind="specialist"><input type="radio" name="resource-type" value="specialist" /> Abuso sexual</label>
+        <label data-kind="remote"><input type="radio" name="resource-type" value="remote" /> Remoto / internacional</label>
       </div></fieldset>
       <p id="directory-results" class="directory-results" role="status" aria-live="polite"></p>
     </div>
+
     <div class="country-list">
       {supportCountries.map(({ code, country, resources }) => (
         <details class="country-group" id={`pais-${code}`} data-country={country.toLocaleLowerCase("es")}>
-          <summary><img class="country-group__flag" src={`/flags/${code}.svg`} alt="" loading="lazy" /><span class="country-group__heading"><strong>{country}</strong><small>{resources.length} {resources.length === 1 ? "recurso publicado" : "recursos publicados"} · Consulta los canales disponibles</small></span><span class="country-group__chevron" aria-hidden="true">⌄</span></summary>
+          <summary>
+            <img class="country-group__flag" src={`/flags/${code}.svg`} alt="" loading="lazy" />
+            <span class="country-group__heading"><strong>{country}</strong><small>{resources.length} {resources.length === 1 ? "recurso publicado" : "recursos publicados"} · Consulta los canales disponibles</small></span>
+            <span class="country-group__kinds" aria-hidden="true">{kindOrder.filter((k) => resources.some((r) => r.kind === k)).map((k) => <span class="kind-dot" data-kind={k} title={kindLabels[k]}></span>)}</span>
+            <span class="country-group__chevron" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg></span>
+          </summary>
           <div class="country-group__cards">
             {resources.map((resource) => (
               <article class="support-card" data-name={resource.name.toLocaleLowerCase("es")} data-kind={resource.kind} data-abuse={resource.sexualAbuse ? "true" : "false"}>
-                <div class="support-card__top"><span class="support-card__type">{kindLabels[resource.kind]}</span>{resource.city && <span class="support-card__city">{resource.city}</span>}</div>
+                <div class="support-card__top"><span class="support-card__type" data-kind={resource.kind}>{kindLabels[resource.kind]}</span>{resource.city && <span class="support-card__city">{resource.city}</span>}</div>
                 <h3>{resource.name}</h3><p>{resource.summary}</p>
                 {resource.notice && <p class="support-card__notice"><strong>Atención:</strong> {resource.notice}</p>}
-                {resource.languages && <p class="support-card__detail">{resource.languages}</p>}
-                {resource.hours && <p class="support-card__detail"><strong>Horario:</strong> {resource.hours}</p>}
+                {(resource.languages || resource.hours) && (
+                  <div class="support-card__meta">
+                    {resource.languages && <p class="support-card__detail support-card__detail--lang">{resource.languages}</p>}
+                    {resource.hours && <p class="support-card__detail support-card__detail--hours"><strong>Horario:</strong> {resource.hours}</p>}
+                  </div>
+                )}
                 <div class="support-card__actions">
                   {resource.website && <a href={resource.website} target="_blank" rel="noopener noreferrer">Web <span aria-hidden="true">↗</span></a>}
                   {resource.email && <a href={`mailto:${resource.email}`}>Correo <span class="sr-only">a {resource.email}</span></a>}
@@ -60,17 +113,27 @@ const telHref = (phone: string) => `tel:${phone.replace(/[^+\d]/g, "")}`;
         </details>
       ))}
     </div>
-    <section id="recursos-remotos" class="remote-section" aria-labelledby="remote-title"><p class="directory-kicker">Sin país único</p><h2 id="remote-title">Recursos internacionales remotos</h2>
+
+    <section id="recursos-remotos" class="remote-section" aria-labelledby="remote-title">
+      <div class="remote-section__intro">
+        <p class="guia-kicker guia-kicker--crema directory-kicker">Sin país único</p>
+        <h2 id="remote-title">Recursos internacionales remotos</h2>
+        <p class="remote-section__lead">Si tu país no aparece en el directorio, estos servicios atienden a distancia.</p>
+      </div>
       {remoteResources.map((resource) => (
         <article class="support-card" data-name={resource.name.toLocaleLowerCase("es")} data-kind="remote">
-          <span class="support-card__type">Remoto / internacional</span><h3>{resource.name}</h3><p>{resource.summary}</p>
+          <span class="support-card__type" data-kind="remote">Remoto / internacional</span><h3>{resource.name}</h3><p>{resource.summary}</p>
           {resource.notice && <p class="support-card__notice">{resource.notice}</p>}
           <div class="support-card__actions">{resource.website && <a href={resource.website} target="_blank" rel="noopener noreferrer">Web <span aria-hidden="true">↗</span></a>}{resource.formUrl && <a href={resource.formUrl} target="_blank" rel="noopener noreferrer">Formulario / webcall <span aria-hidden="true">↗</span></a>}</div>
           <p class="support-card__source">Verificado: <time datetime={resource.verifiedAt}>25-09-2026</time> · <a href={resource.sourceUrl} target="_blank" rel="noopener noreferrer">Ver fuente</a></p>
         </article>
       ))}
     </section>
-    <p class="directory-correction">¿Has encontrado un dato desactualizado? <a href="/contacto/">Escribe a AEVTJ para corregirlo</a>.</p>
+
+    <div class="directory-correction">
+      <p>¿Has encontrado un dato desactualizado? <a href="/contacto/">Escribe a AEVTJ para corregirlo</a>.</p>
+      <a class="guia-pill guia-pill--navy" href="/contacto/">Contactar con AEVTJ</a>
+    </div>
   </div>
 </BaseLayout>
 
@@ -80,7 +143,7 @@ const telHref = (phone: string) => `tel:${phone.replace(/[^+\d]/g, "")}`;
   const groups = [...document.querySelectorAll<HTMLDetailsElement>(".country-group")];
   const remote = document.querySelector<HTMLElement>(".remote-section");
   const status = document.querySelector<HTMLElement>("#directory-results");
-  const normalize = (value: string) => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("es");
+  const normalize = (value: string) => value.normalize("NFD").replace(/[̀-ͯ]/g, "").toLocaleLowerCase("es");
   function update() {
     const query = normalize(search?.value.trim() ?? "");
     const type = filters.find((filter) => filter.checked)?.value ?? "all";

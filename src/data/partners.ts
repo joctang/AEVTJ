@@ -1,4 +1,17 @@
 import { memberCount } from "./members";
+import { internationalSupport } from "./international-support";
+
+// Entidades del directorio internacional (/otras-asociaciones/) que aún no estaban
+// en la lista original; ASOCAVICS y JZ Help ya figuraban arriba.
+const alreadyListed = new Set(["asocavics", "jz-help"]);
+const directoryPartners = internationalSupport
+  .filter((r) => !alreadyListed.has(r.id))
+  .map((r) => ({
+    name: r.name,
+    href: r.website ?? r.formUrl ?? r.sourceUrl,
+    flag: r.countryCode === "international" ? "/uploads/2025/11/internacional-b2f5cb.svg" : `/flags/${r.countryCode}.svg`,
+    country: r.countryCode === "international" ? null : r.countryCode,
+  }));
 
 export const worldPartners = [
   { name: "Asociación Civil Argentina de Ayuda a Víctimas de Sectas", href: "https://asocavics.org/", flag: "/uploads/2025/10/mundo-5bf827.svg", country: "ar" },
@@ -12,6 +25,7 @@ export const worldPartners = [
   { name: "Jehovah's Witnesses Support Network (informal, linked to Royal Commission advocacy)", href: "https://www.aawa.co/", flag: "/uploads/2025/10/australia-d02556.svg", country: "au" },
   { name: "Stop Mandated Shunning", href: "https://stopmandatedshunning.org/", flag: "/uploads/2025/11/internacional-b2f5cb.svg", country: null },
   { name: "Reddit r/exjw", href: "https://www.reddit.com/r/exjw/", flag: "/uploads/2025/11/internacional-3ad5aa.svg", country: null },
+  ...directoryPartners,
 ];
 
 export const stats = [

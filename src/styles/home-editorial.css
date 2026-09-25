@@ -74,9 +74,30 @@
 .section-head .premium-kicker { grid-column: 1/-1; }
 .section-head h2 { text-transform: none; }
 .section-head p:not(.premium-kicker) { font-size: 14px; }
-.partner-grid { display: grid; grid-template-columns: repeat(6,minmax(0,1fr)); gap: 12px; }
-.partner-card { display: flex; flex-direction: column; align-items: flex-start; gap: 20px; padding: 22px 14px; border-top: 1px solid #b7c2a3; font-size: 11px; line-height: 1.6; color: #536146; }
-.partner-card img { width: 34px; height: 34px; object-fit: contain; }
+/* Carrusel de asociaciones: dos filas continuas en sentidos opuestos; se pausa al pasar el cursor. */
+.partner-marquee { display: grid; gap: 12px; overflow: hidden; padding-block: 4px; -webkit-mask-image: linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent); mask-image: linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent); }
+.partner-marquee__row { display: flex; width: max-content; }
+.partner-marquee__track { display: flex; gap: 12px; margin: 0; padding: 0 12px 0 0; list-style: none; animation: partner-marquee 70s linear infinite; }
+.partner-marquee__row--reverse .partner-marquee__track { animation-direction: reverse; animation-duration: 80s; }
+.partner-marquee:hover .partner-marquee__track,.partner-marquee:focus-within .partner-marquee__track { animation-play-state: paused; }
+@keyframes partner-marquee { to { transform: translateX(-100%); } }
+.partner-card { display: flex; align-items: center; gap: 12px; max-width: 340px; min-height: 60px; padding: 10px 22px 10px 12px; border: 1px solid #d4dec5; border-radius: 100px; background: #ffffffa6; font-size: 13px; line-height: 1.35; color: #36432c; white-space: nowrap; transition: border-color 250ms, background-color 250ms, color 250ms; }
+.partner-card span { overflow: hidden; text-overflow: ellipsis; }
+.partner-card img { flex: none; width: 34px; height: 34px; object-fit: contain; }
+.partner-card img[src^="/flags/"] { border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 1px #0000001a; }
+.partner-card:focus-visible { outline: 3px solid #2ea88f; outline-offset: 2px; }
+.partner-cta { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px 32px; margin-top: 30px; padding: 26px 30px; border-radius: 28px; background: #122c33; color: #f5fbdfcc; }
+.partner-cta__title { margin: 0 0 4px; color: #f5fbdf; font: 400 clamp(26px,3vw,36px)/1.1 var(--font-heading); letter-spacing: -.04em; }
+.partner-cta p:not(.partner-cta__title) { max-width: 560px; margin: 0; font-size: 15px; line-height: 1.6; }
+.partner-cta__link { display: inline-flex; align-items: center; gap: 14px; min-height: 54px; padding: 14px 28px; border-radius: 100px; background: #d8eaa4; color: #122c33; font-size: 14px; font-weight: 600; text-decoration: none; transition: background-color 450ms var(--ease-editorial), transform 450ms var(--ease-editorial); }
+.partner-cta__link span { transition: translate 450ms var(--ease-editorial); }
+@media (hover:hover) and (pointer:fine) { .partner-cta__link:hover { background: #e9f6c4; transform: translateY(-3px); } .partner-cta__link:hover span { translate: 4px 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .partner-marquee { -webkit-mask-image: none; mask-image: none; }
+  .partner-marquee__row { width: auto; overflow-x: auto; scrollbar-width: thin; }
+  .partner-marquee__track { animation: none; }
+  .partner-marquee__track[aria-hidden] { display: none; }
+}
 .map-panel { margin-top: 36px; border-radius: 28px; background: #ffffff75; border: 1px solid #d4dec5; padding: 30px; }
 .map-panel--split { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 48px; align-items: center; }
 .map-panel--spain { margin-top: 0; padding: 24px; }
@@ -182,7 +203,6 @@
   .layered-media { min-height: 470px; }
   .dark-story__grid { gap: 50px; }
   .section-head { gap: 20px 40px; }
-  .partner-grid { grid-template-columns: repeat(3,minmax(0,1fr)); }
   .evidence-card > div { padding: 20px; }
   .evidence-card h3 { font-size: 23px; }
 }
@@ -218,7 +238,9 @@
   .story-text { font-size: 14px; gap: 20px; }
   .world-section,.evidence-section { padding-block: 80px; }
   .section-head { gap: 0; margin-bottom: 35px; }
-  .partner-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .partner-card { max-width: 250px; font-size: 12px; min-height: 52px; }
+  .partner-cta { padding: 24px 22px; }
+  .partner-cta__link { width: 100%; justify-content: center; }
   .map-panel--split { grid-template-columns: 1fr; gap: 30px; }
   .map-panel { padding: 15px; }
   .evidence-grid { grid-template-columns: 1fr; gap: 24px; }
