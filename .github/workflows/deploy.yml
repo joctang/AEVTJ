@@ -31,4 +31,3 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
           server-dir: /domains/victimasdetestigosdejehova.org/public_html/
-          dangerous-clean-slate: true
