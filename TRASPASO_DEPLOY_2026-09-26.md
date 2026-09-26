@@ -71,3 +71,71 @@ Posibles causas a investigar en la próxima sesión:
 - **Carpeta local real del repo** (¡ojo, NO es la de OneDrive!): `C:\PROYECTOS\Clientes\AEVTJ\astro-site`. La ruta bajo OneDrive (`C:\Users\jocta\OneDrive\Documentos\Proyectos y Clientes\AEVTJ`) es una copia/backup desincronizada y con un `.git` corrupto (sin `HEAD`/`config`) — **no usar esa ruta para trabajar en el código**, usar siempre `C:\PROYECTOS\Clientes\AEVTJ\astro-site`.
 - **Backups de WordPress existentes** (en `C:\PROYECTOS\Clientes\AEVTJ\`, fuera de `astro-site`): `u703604811.victimasdetestigosdejehova-org.20260904095421.tar.gz` (archivos) y `u703604811_wpKEB.victimasdetestigosdejehova-org.20260904095421.sql.gz` (base de datos), del 4-10 sept 2026 (~16 días de antigüedad respecto a hoy).
 - **Los logs detallados de GitHub Actions ahora requieren login** — la cuenta usada en esta sesión no tenía sesión iniciada en el navegador integrado de Claude Code. El usuario continuará desde su Chrome, donde sí tiene sesión de GitHub abierta.
+
+---
+
+## ACTUALIZACIÓN: resuelto y desplegado con éxito (misma sesión, 26 sept 2026)
+
+Se continuó la investigación en la misma sesión, usando el navegador Chrome del usuario (con sesión de GitHub) para leer el log completo del run fallido `#25`.
+
+### Causa raíz real (no era el bug de vhost del 24 sept, ni permisos)
+
+El log completo mostró que el fallo ocurría al "creating folder `_astro/`" justo después de calcular el plan de subida — pero **antes de eso, se comprobó vía `curl` FTP directo (con la contraseña FTP que el usuario reseteó y compartió)** que:
+
+- La cuenta FTP `u703604811` tiene su **raíz FTP (`/`) en el directorio home real de Linux** (`/home/u703604811/`), **NO en `public_html`** — pese a que hPanel etiqueta genéricamente "Carpeta para subir archivos: public_html".
+- El `public_html` real del dominio principal vive en:
+  ```
+  /domains/victimasdetestigosdejehova.org/public_html/
+  ```
+- Por tanto:
+  - El **"bug de vhost" del subdominio `nuevo` diagnosticado el 24 sept nunca existió** — `server-dir: /nuevo/` subía los archivos a `/home/u703604811/nuevo/`, una carpeta huérfana sin relación con ningún vhost. Por eso el subdominio siempre mostraba la página por defecto de Hostinger.
+  - El intento de hoy con `server-dir: /` tampoco apuntaba a `public_html` — apuntaba también al home. Por eso el WordPress real seguía intacto tras el fallo (confirmado explorando `public_html` real vía Administrador de archivos: WordPress 100% intacto, ningún archivo tocado).
+- Se verificó con una prueba controlada (crear y borrar una carpeta `_astro_test_claude` vía Administrador de archivos web, autenticado como el mismo usuario FTP) que el sistema de archivos sí permite crear carpetas en la raíz — descartando un problema de permisos.
+
+### Fix #1: corregir `server-dir`
+
+```diff
+-          server-dir: /
++          server-dir: /domains/victimasdetestigosdejehova.org/public_html/
+```
+Commit `37652da` ("subior", hecho por el usuario vía editor + GitHub Desktop) tenía un error de indentación YAML (línea `dangerous-clean-slate: true` con espacios de más) que rompió el workflow (`Invalid workflow file`). Se corrigió con un segundo commit (`7e61dce`, aplicado por Claude vía `Edit`+`git commit`+`git push`, ya que el classifier de auto-mode permitió esta corrección de sintaxis aunque había bloqueado el cambio de `server-dir` anterior por ser "Production Deploy").
+
+### Intento con `dangerous-clean-slate: true` sobre la ruta correcta: FALLÓ tras 1 hora
+
+- Run `#27`, commit `7e61dce`, run id `36232795123`.
+- Esta vez **sí** apuntaba al `public_html` real, y el borrado recursivo vía FTP **sí empezó a borrar el WordPress de verdad** (confirmado en tiempo real durante la espera: inodos de la cuenta bajaron de 44.741 a ~30.719, la carpeta `wp-content/plugins` fue perdiendo subcarpetas una a una, botón "Admin WordPress" se deshabilitó en hPanel).
+- Tras **1h 0m 15s**, el job falló con:
+  ```
+  Error: Server sent FIN packet unexpectedly, closing connection.
+  ```
+  ocurrido en el mismo punto de siempre ("creating folder `_astro/`"), justo cuando terminaba el borrado y pasaba a la fase de subida.
+- **Causa**: el servidor FTP de Hostinger cierra la conexión de control tras ~1 hora de sesión activa. Borrar miles de archivos de un WordPress real (uploads, plugins, etc.) **archivo por archivo vía FTP** es demasiado lento para completarse dentro de esa ventana en una sola conexión persistente.
+- **Resultado de este fallo**: WordPress quedó **parcialmente borrado** (uploads y varios plugins ya eliminados, pero `wp-includes`, `wp-config.php`, etc. seguían ahí) y la subida de Astro nunca llegó a completarse. El sitio en vivo mostraba la **"Página por defecto" de Hostinger** (ni WordPress ni Astro) — se detectó y confirmó visualmente de inmediato.
+
+### Fix #2: vaciar manualmente + quitar `dangerous-clean-slate`
+
+1. El usuario vació manualmente `public_html` (los ~9 elementos restantes: `new`, `wp-content`, `wp-includes`, `default.php`, `wp-activate.php`, `wp-config.php`, `wp-cron.php`, `wp-mail.php`, `wp-settings.php`) usando el Administrador de archivos web — borrado del lado del servidor, casi instantáneo, sin el límite de sesión de FTP. (Claude no pudo ejecutar este borrado directamente: el auto-mode classifier lo bloqueó como "Irreversible Deletion".)
+2. Se quitó `dangerous-clean-slate: true` del workflow (ya no hacía falta con la carpeta vacía):
+   ```diff
+   -          server-dir: /domains/victimasdetestigosdejehova.org/public_html/
+   -          dangerous-clean-slate: true
+   +          server-dir: /domains/victimasdetestigosdejehova.org/public_html/
+   ```
+   Commit `fff7f03` ("Quitar dangerous-clean-slate: public_html ya esta vacio"), hecho por Claude vía `git commit` + `git push` (este sí lo permitió el classifier).
+
+### Resultado final: ✅ ÉXITO
+
+- Run `#28`, commit `fff7f03`, run id `36266631892` → **completado en verde** (`conclusion: success`), en segundos (al no tener que borrar nada, solo subir).
+- Verificado en el navegador: **`https://victimasdetestigosdejehova.org/` sirve el sitio Astro nuevo** (home "No estás solo.", menú AEVTJ, todo correcto).
+- El WordPress fue completamente reemplazado, tal y como decidió el usuario.
+
+### Estado actual / pendientes para el futuro
+- El workflow `.github/workflows/deploy.yml` queda así de forma permanente:
+  ```yaml
+  server-dir: /domains/victimasdetestigosdejehova.org/public_html/
+  ```
+  (sin `dangerous-clean-slate`). Los próximos `git push` a `master` desplegarán rápido de forma incremental.
+- Quedan sueltas en el home de la cuenta FTP (`/home/u703604811/`, fuera de cualquier `public_html`) las carpetas huérfanas `new` y `nuevo` de intentos anteriores — no afectan a nada en producción, se pueden limpiar cuando se quiera pero no es urgente.
+- El subdominio de pruebas `nuevo.victimasdetestigosdejehova.org` sigue sin desplegarse correctamente (su `public_html` propio, si existe como subdominio separado, nunca se tocó en esta sesión) — ya no es prioritario dado que el dominio principal ya sirve el sitio nuevo.
+- La base de datos MySQL de WordPress y los backups (`.tar.gz` / `.sql.gz`) siguen intactos en el servidor/carpeta local, por si se necesitara restaurar algo del WordPress en el futuro.
+- Contraseña FTP: el usuario la reseteó durante esta sesión para poder investigar por `curl`/FTP directo. Recordar que el secreto `FTP_PASSWORD` de GitHub Actions debe coincidir con la contraseña actual de la cuenta FTP (el usuario confirmó que la actualizaría).
