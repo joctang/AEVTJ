@@ -1,0 +1,428 @@
+/* ===== Quiénes somos — rediseño ===== */
+
+.qs section[id] {
+  scroll-margin-top: 6.5rem;
+}
+
+.qs-reading {
+  max-width: 68ch;
+}
+
+/* --- Reveal on scroll (rápido, 250ms ease-out, escalonado) --- */
+.qs [data-qs-reveal] {
+  opacity: 0;
+  transform: translateY(8px);
+  transition:
+    opacity 250ms ease-out,
+    transform 250ms ease-out;
+  transition-delay: var(--qs-delay, 0ms);
+}
+
+.qs [data-qs-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .qs [data-qs-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .qs-hero-anim,
+  .qs-hero-anim::before {
+    animation: none !important;
+  }
+}
+
+/* --- Hero: entrada escalonada etiqueta → título → subtítulo --- */
+@keyframes qs-rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.qs-hero-anim {
+  opacity: 0;
+  animation: qs-rise 250ms ease-out forwards;
+}
+
+.qs-hero-label { animation-delay: 0ms; }
+.qs-hero-title { animation-delay: 120ms; }
+.qs-hero-sub { animation-delay: 240ms; }
+.qs-hero-anchors { animation-delay: 360ms; }
+
+/* --- Tarjetas solapadas sobre el hero --- */
+.qs-overlap {
+  margin-top: -60px;
+  position: relative;
+  z-index: 10;
+}
+
+.qs-lift {
+  transition:
+    transform 300ms ease-out,
+    box-shadow 300ms ease-out;
+}
+
+.qs-lift:hover,
+.qs-lift:focus-within {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 40px -18px rgba(18, 44, 51, 0.45);
+}
+
+.qs-zoom-img {
+  transition: transform 900ms ease-out;
+}
+
+.qs-lift:hover .qs-zoom-img,
+.qs-lift:focus-within .qs-zoom-img {
+  transform: scale(1.06);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .qs-lift,
+  .qs-zoom-img {
+    transition: none;
+  }
+}
+
+/* --- Misión: strong con subrayado tipo marcador --- */
+.qs-marker strong {
+  background-image: linear-gradient(
+    to top,
+    rgb(131 153 80 / 0.35) 0 34%,
+    transparent 34%
+  );
+  background-repeat: no-repeat;
+  padding: 0 0.1em;
+}
+
+/* --- Junta: retratos gris → color, bio desplegable --- */
+.qs-board-card .qs-portrait {
+  filter: grayscale(1);
+  transition: filter 400ms ease-out;
+}
+
+.qs-board-card.is-open .qs-portrait,
+.qs-board-card:hover .qs-portrait,
+.qs-board-card:focus-within .qs-portrait {
+  filter: grayscale(0);
+}
+
+.qs-bio-wrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 350ms ease-out;
+}
+
+.qs-bio-wrap > div {
+  overflow: hidden;
+}
+
+.qs-board-card.is-open .qs-bio-wrap {
+  grid-template-rows: 1fr;
+}
+
+.qs-board-toggle .qs-icon {
+  transition: transform 250ms ease-out;
+}
+
+.qs-board-card.is-open .qs-board-toggle .qs-icon {
+  transform: rotate(45deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .qs-portrait,
+  .qs-bio-wrap,
+  .qs-board-toggle .qs-icon {
+    transition: none;
+  }
+}
+
+/* --- Transparencia: acordeón con altura animada --- */
+.qs-acc-item .qs-acc-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 300ms ease-out;
+}
+
+.qs-acc-panel > div {
+  overflow: hidden;
+  min-height: 0;
+}
+
+.qs-acc-item.is-open .qs-acc-panel {
+  grid-template-rows: 1fr;
+}
+
+.qs-acc-item .qs-acc-icon {
+  transition: transform 250ms ease-out;
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.qs-acc-item.is-open .qs-acc-icon {
+  transform: rotate(45deg); /* + → × */
+}
+
+.qs-acc-item.is-open .qs-acc-icon {
+  font-size: 1.6rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .qs-acc-panel,
+  .qs-acc-icon {
+    transition: none;
+  }
+}
+
+/* Índice lateral sticky */
+.qs-acc-index {
+  position: sticky;
+  top: 6.5rem;
+}
+
+.qs-acc-index a.is-current {
+  color: var(--color-brand-ink);
+  border-left-color: var(--color-brand-olive);
+  font-weight: 600;
+}
+
+/* --- Conducta: checklist --- */
+.qs-check-never li::marker {
+  content: "✕ ";
+  color: #a4443c;
+  font-weight: 700;
+}
+
+.qs-check-always li::marker {
+  content: "✓ ";
+  color: var(--color-brand-olive);
+  font-weight: 700;
+}
+
+.qs-check-neutral li::marker {
+  content: "· ";
+  color: var(--color-brand-olive);
+  font-weight: 700;
+}
+
+.qs-check-list li {
+  padding-left: 0.5em;
+}
+
+/* --- Modal de trayectoria (dialog nativo) --- */
+.qs-modal {
+  max-width: min(92vw, 720px);
+  max-height: 82vh;
+  overflow-y: auto;
+  border: none;
+  border-radius: 1rem;
+  padding: 0;
+  background: #fff;
+  color: var(--color-brand-ink);
+  box-shadow: 0 30px 60px -20px rgba(18, 44, 51, 0.5);
+}
+
+.qs-modal::backdrop {
+  background: rgba(18, 44, 51, 0.6);
+  backdrop-filter: blur(2px);
+}
+
+/* --- Chips de credenciales --- */
+.qs-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  border-radius: 9999px;
+  border: 1px solid rgb(18 44 51 / 0.18);
+  background: #fff;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-brand-ink);
+}
+
+/* Disciplinas */
+.qs-disc-derecho { --qs-disc: var(--color-brand-olive); }
+.qs-disc-psicologia { --qs-disc: #8a5a3b; }
+.qs-disc-teologia { --qs-disc: #37596b; }
+
+.qs-disc-badge {
+  color: #fff;
+  background: var(--qs-disc, var(--color-brand-olive));
+}
+
+.qs-disc-ring {
+  box-shadow: inset 0 0 0 3px var(--qs-disc, var(--color-brand-olive));
+}
+
+/* ===== Pulido global: interactividad y elegancia ===== */
+
+.qs {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .qs { scroll-behavior: auto; }
+}
+
+/* Selección de texto con color de marca */
+.qs ::selection {
+  background: rgb(131 153 80 / 0.35);
+}
+
+/* Anillos de foco coherentes y visibles en toda la página */
+.qs a:focus-visible,
+.qs button:focus-visible,
+.qs summary:focus-visible {
+  outline: 2px solid var(--color-brand-olive);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Subrayado animado en enlaces de texto */
+.qs-underline-link {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1.5px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  transition: background-size 300ms ease-out;
+}
+
+.qs-underline-link:hover,
+.qs-underline-link:focus-visible {
+  background-size: 100% 1.5px;
+}
+
+/* --- Junta: elevación y retrato con zoom suave --- */
+.qs-board-card {
+  transition:
+    transform 300ms ease-out,
+    box-shadow 300ms ease-out,
+    background-color 300ms ease-out;
+}
+
+.qs-board-card:hover,
+.qs-board-card:focus-within {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 36px -18px rgba(0, 0, 0, 0.55);
+}
+
+.qs-board-card .qs-portrait {
+  transition:
+    filter 400ms ease-out,
+    transform 500ms ease-out;
+}
+
+.qs-board-card:hover .qs-portrait,
+.qs-board-card:focus-within .qs-portrait,
+.qs-board-card.is-open .qs-portrait {
+  filter: grayscale(0);
+  transform: scale(1.03);
+}
+
+/* --- Transparencia: filas con hover y botones con feedback --- */
+.qs-acc-item {
+  transition: background-color 250ms ease-out;
+}
+
+.qs-acc-item:hover {
+  background-color: rgb(245 251 223 / 0.6);
+}
+
+.qs-acc-btn .qs-acc-icon {
+  transform-origin: center;
+}
+
+.qs-acc-index a {
+  position: relative;
+  transition:
+    color 200ms ease-out,
+    border-color 200ms ease-out,
+    padding-left 250ms ease-out;
+}
+
+.qs-acc-index a:hover {
+  color: var(--color-brand-ink);
+  padding-left: 1.75rem;
+}
+
+/* --- Conducta: filas del checklist con hover sutil --- */
+.qs-check-list li {
+  transition: background-color 200ms ease-out;
+  border-radius: 6px;
+}
+
+.qs-check-list li:hover {
+  background-color: rgb(255 255 255 / 0.06);
+}
+
+/* --- Colaboradores: tarjeta elevada con zoom de retrato --- */
+.qs-collab-card {
+  transition:
+    transform 300ms ease-out,
+    box-shadow 300ms ease-out;
+}
+
+.qs-collab-card:hover,
+.qs-collab-card:focus-within {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 44px -20px rgba(18, 44, 51, 0.35);
+}
+
+.qs-collab-card .qs-disc-ring img {
+  transition: transform 700ms ease-out;
+}
+
+.qs-collab-card:hover .qs-disc-ring img,
+.qs-collab-card:focus-within .qs-disc-ring img {
+  transform: scale(1.05);
+}
+
+.qs-chip {
+  transition:
+    border-color 200ms ease-out,
+    background-color 200ms ease-out,
+    color 200ms ease-out;
+}
+
+.qs-collab-card:hover .qs-chip,
+.qs-collab-card:focus-within .qs-chip {
+  border-color: var(--qs-disc, var(--color-brand-olive));
+  color: var(--qs-disc, var(--color-brand-olive));
+}
+
+/* Botón de trayectoria: flecha que avanza */
+.qs-trayectoria-btn .qs-arrow {
+  display: inline-block;
+  transition: transform 250ms ease-out;
+}
+
+.qs-trayectoria-btn:hover .qs-arrow,
+.qs-trayectoria-btn:focus-visible .qs-arrow {
+  transform: translateX(4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .qs-board-card,
+  .qs-portrait,
+  .qs-acc-item,
+  .qs-acc-index a,
+  .qs-check-list li,
+  .qs-collab-card,
+  .qs-collab-card .qs-disc-ring img,
+  .qs-chip,
+  .qs-trayectoria-btn .qs-arrow,
+  .qs-underline-link {
+    transition: none;
+  }
+}

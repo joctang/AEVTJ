@@ -1,14 +1,9 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import TornEdge from "../components/TornEdge.astro";
+import "../styles/quienes-somos.css";
 
 const board = [
-  {
-    name: "Natán Verdés",
-    role: "Secretario",
-    photo: "/uploads/2025/10/natan-e1759935877900.webp",
-    bio: "Ex Testigo de Jehová, graduado en Filosofía (UB), hoy aporta una mirada informada y humanista para visibilizar el ostracismo y el control que sufren los exmiembros, impulsando apoyo y reparación",
-  },
   {
     name: "Samuel Ferrando",
     role: "Presidente",
@@ -22,6 +17,12 @@ const board = [
     bio: "Coordina la defensa y acompañamiento a víctimas, impulsando campañas de sensibilización y mejora de protocolos de atención.",
   },
   {
+    name: "Natán Verdés",
+    role: "Secretario",
+    photo: "/uploads/2025/10/natan-e1759935877900.webp",
+    bio: "Ex Testigo de Jehová, graduado en Filosofía (UB), hoy aporta una mirada informada y humanista para visibilizar el ostracismo y el control que sufren los exmiembros, impulsando apoyo y reparación",
+  },
+  {
     name: "Rebeca Quesada",
     role: "Tesorera",
     photo: "/uploads/2025/10/Rebeca-Quesada.webp",
@@ -33,6 +34,7 @@ const mission = [
   {
     id: "agrupar",
     label: "Agrupar",
+    icon: "users",
     text: [
       "<strong>Reunir y crear una comunidad abierta</strong> para todas aquellas personas que, de alguna manera, se consideren <strong>víctimas</strong> de la organización de los Testigos Cristianos de Jehová.",
       "Nuestro objetivo es proporcionar un <strong>espacio de apoyo</strong> mutuo, donde puedan <strong>compartir</strong> sus experiencias, encontrar <strong>comprensión</strong> y <strong>obtener recursos útiles para superar las consecuencias</strong> emocionales, sociales, legales o psicológicas derivadas de su vinculación con esta organización.",
@@ -41,6 +43,7 @@ const mission = [
   {
     id: "ayudar",
     label: "Ayudar",
+    icon: "heart",
     text: [
       "<strong>Brindamos apoyo</strong> integral a quienes desean <strong>salir de manera digna</strong> de la organización de los Testigos de Jehová, con un enfoque en dos pilares fundamentales: <strong>ayuda psicológica y soporte legal</strong>.",
       "Proporcionamos <strong>orientación</strong> detallada sobre los recursos legales disponibles para proteger sus derechos y facilitar su transición, así como <strong>acceso a asesoramiento psicológico</strong> especializado para abordar las <strong>secuelas</strong> emocionales que puedan surgir durante este proceso.",
@@ -50,6 +53,7 @@ const mission = [
   {
     id: "visibilidad",
     label: "Dar visibilidad",
+    icon: "eye",
     text: [
       "Dar visibilidad a la problemática que enfrentan las víctimas de los Testigos de Jehová, con el <strong>objetivo de prevenir casos similares e informar</strong> de manera clara a la sociedad, especialmente a quienes consideren acercarse a esta “organización religiosa” conocida por prácticas de persuasión y comportamientos sectarios.",
       "Buscamos <strong>sensibilizar sobre las consecuencias</strong> emocionales, sociales y legales que estas dinámicas pueden generar, promoviendo así la protección de los derechos individuales y la toma de decisiones informadas.",
@@ -58,6 +62,7 @@ const mission = [
   {
     id: "presion",
     label: "Ejercer de grupo de presión",
+    icon: "landmark",
     text: [
       "Actuar como Grupo de presión <strong>ante los distintos niveles de gobierno en España</strong>, con el objetivo de garantizar que la organización de los Testigos de Jehová ajuste sus prácticas y dinámicas internas a la legislación vigente tanto a nivel nacional como europeo.",
       "Este esfuerzo busca <strong>asegurar el cumplimiento de las normativas</strong> que protegen los <strong>derechos fundamentales</strong>, promoviendo un entorno en el que se respeten las libertades individuales y se erradiquen conductas que puedan vulnerar estos principios.",
@@ -108,302 +113,491 @@ const transparency = [
 const collaborators = [
   {
     name: "Dr. Carlos Bardavío Antón",
+    discipline: "Derecho",
+    disciplineClass: "qs-disc-derecho",
     role: "Abogado - Doctor en derecho penal",
     photo: "/uploads/2025/10/carlos-bardavo-a.jpg",
+    chips: ["RedUNE", "RIES", "Ministerio de Sanidad", "APETP"],
     bio: `<p><strong>Una autoridad práctica en el combate contra el sectarismo</strong></p><p>Más allá de su formación, Bardavío es un <strong>profesional activo en el terreno</strong>. Desde 2017, colabora como asesor jurídico-legal con <strong>RedUNE</strong>, una organización sin ánimo de lucro dedicada a combatir el sectarismo y el abuso de debilidad. A través de esta colaboración, <strong>ha trabajado en casos reales</strong>, asesorando a víctimas y promoviendo cambios legislativos para tipificar el delito de persuasión coercitiva en el Código Penal.</p><p>También forma parte de la <strong>Red Iberoamericana de Estudio de las Sectas (RIES)</strong>, experiencia que le ha permitido identificar patrones de abuso y crear estrategias legales para proteger a las víctimas.</p><p>Ha asesorado al <strong>Ministerio de Sanidad</strong> en el desarrollo del Plan para la protección de la salud frente a las pseudoterapias, y colabora con la <strong>Asociación para Proteger al Enfermo de Terapias Pseudocientíficas (APETP)</strong>.</p>`,
   },
   {
     name: "Miguel Perlado",
+    discipline: "Psicología",
+    disciplineClass: "qs-disc-psicologia",
     role: "Psicólogo clínico y psicoterapeuta. Investigador sobre el sectarismo.",
     photo: "/uploads/2025/10/Miguel_Perlado-256x300-1.jpg",
+    chips: ["FEAP", "SEP · IPA", "ICSA", "COPC", "AIIAP"],
     bio: `<ul class="list-disc space-y-1 pl-5"><li>Trabaja desde hace 25 años como psicólogo, tanto en la atención clínica como forense, especializado en psicoterapia individual, de pareja y familia.</li><li>Forma parte de la Federación Española de Asociaciones de Psicoterapeutas (FEAP).</li><li>Miembro asociado de la Sociedad Española de Psicoanálisis (SEP), integrada en la International Psychoanalytic Association (IPA).</li><li>Pertenece a la International Cultic Studies Association (ICSA).</li><li>Coordina desde 2010 el Grupo de Trabajo sobre Derivas Sectarias del Colegio Oficial de Psicología de Cataluña (COPC).</li><li>Creó la Asociación Iberoamericana para la Investigación del Abuso Psicológico (AIIAP) en 2010.</li></ul>`,
   },
   {
     name: "Luis Santamaría del Río",
+    discipline: "Teología",
+    disciplineClass: "qs-disc-teologia",
     role: "Teólogo experto en sectas",
     photo: "/uploads/2025/10/Luis_Santamaria-e1644150790228.jpeg",
+    chips: ["RIES", "U. Salamanca"],
     bio: `<ul class="list-disc space-y-1 pl-5"><li>Licenciado en Teología, máster en Ciencias de las Religiones y experto universitario en Comunicación Social.</li><li>Miembro fundador de la Red Iberoamericana de Estudio de las Sectas (RIES), director de su Biblioteca-Centro de documentación «José María Baamonde».</li><li>Profesor en el máster de Análisis de la Conducta Criminal de la Universidad de Salamanca.</li><li>Autor de varios libros y numerosos artículos sobre el fenómeno sectario.</li><li>Ha impartido cursos y conferencias en varios países de Europa e Iberoamérica.</li></ul>`,
   },
 ];
+
+const conducta = {
+  intro: [
+    "En la actual junta directiva de la Asociación Española de Víctimas de los testigos de Jehová -AEVTJ-, creemos en la consecución de nuestras metas sin violencia ni malos modales, como ya se ha comunicado en el apartado «nuestra misión», una de ellas es dar a conocer a la sociedad los comportamientos internos y desconocidos de la organización de los testigos de Jehová.",
+    "A pesar del daño recibido y que nuestro fuero interno nos lo demande, caeríamos en malas prácticas si participáramos en malos comportamientos, en tal caso estaríamos actuando de manera indecorosa y similar a la de ellos como cuando insultan a la sociedad en general, a las personas en particular o a las organizaciones religiosas de distinto origen con calificativos impresentables.",
+  ],
+  claim:
+    "Es por tanto que invitamos a nuestros socios y simpatizantes a ganarles en comportamiento, modales, habla con respeto, derecho a la propiedad y libertad de culto.",
+  always: [
+    "Siempre fomentamos la concordia con los testigos de Jehová, aunque ellos mismos no nos hablen.",
+  ],
+  never: [
+    "Nunca les insultaremos, incluso en las peores circunstancias, llamándolos de manera que no podamos demostrar.",
+    "Nunca les acusamos de cosas indemostrables, solo informamos a la sociedad de asuntos que pueden ser comprobados y contrastados.",
+    "Nunca fomentaremos ni incitaremos al odio a las personas bajo ningún concepto.",
+    "Nunca pintamos ni manchamos sus propiedades, ni tendremos la intención de destruir cualquier propiedad de los testigos de Jehová ni de su organización.",
+    "Nunca nos introduciremos en sus locales de culto para dar escándalos en su interior, ni vituperar sus emblemas sagrados.",
+    "Nunca fomentaremos el asalto a sus instalaciones centrales ni locales.",
+  ],
+  neutral: [
+    "Nuestro propósito es que se cumpla la legalidad para todos, y que cada uno se haga cargo de su parte de responsabilidad ante las autoridades.",
+    "Nos reservamos el derecho a manifestarnos de forma y modo legal con permiso de las autoridades.",
+    "Nos desvinculamos de cualquier actividad que hayan hecho personas de manera independiente y privada que no haya estado autorizada y dirigida por esta junta directiva o alguno de sus órganos rectores.",
+    "Nuestro trabajo está en las oficinas, en los despachos, en los medios de comunicación y en la calle, con el máximo respeto, siempre con verdad y con intensidad.",
+  ],
+};
+
+const missionIcons: Record<string, string> = {
+  users:
+    '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
+  heart:
+    '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>',
+  eye:
+    '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>',
+  landmark:
+    '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" x2="21" y1="22" y2="22"/><line x1="6" x2="6" y1="18" y2="11"/><line x1="10" x2="10" y1="18" y2="11"/><line x1="14" x2="14" y1="18" y2="11"/><line x1="18" x2="18" y1="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg>',
+};
 ---
 
 <BaseLayout title="Quienes somos">
-  <!-- Hero -->
-  <section class="relative overflow-hidden bg-brand-ink text-white">
-    <img
-      src="/uploads/2025/10/16690551373007.jpg"
-      alt="Miembros de la junta directiva de la AEVTJ frente a la sede de los Testigos de Jehová en España"
-      class="absolute inset-0 h-full w-full object-cover"
-    />
-    <div class="absolute inset-0 bg-brand-ink/75"></div>
-    <div class="relative mx-auto max-w-[900px] px-5 py-24 text-center lg:px-8 lg:py-32">
-      <p class="font-heading text-sm uppercase tracking-[0.2em] text-white/80">
-        Asociación de víctimas de los Testigos de Jehová
-      </p>
-      <h1 class="mt-3 font-heading text-5xl font-bold uppercase tracking-wide sm:text-6xl">
-        Quienes somos
-      </h1>
-      <div class="mx-auto mt-3 h-1 w-24 bg-brand-olive"></div>
-      <p class="mt-6 text-lg text-white/90">Esta asociación está fundada por miembros como tú.</p>
-      <p class="mt-1 text-lg text-white/90">Por personas que han pasado o están pasando lo mismo que tú.</p>
-      <a
-        href="/uploads/2026/08/ESTATUTOS_WEB.pdf"
-        class="mt-8 inline-block rounded-md bg-brand-olive px-6 py-3 font-heading text-sm font-semibold uppercase tracking-wide text-white hover:bg-brand-olive-dark"
+  <div class="qs">
+    <!-- HERO: degradado solo abajo, texto abajo a la izquierda -->
+    <section class="relative overflow-hidden bg-brand-ink text-white">
+      <img
+        src="/uploads/2025/10/16690551373007.jpg"
+        alt="Miembros de la junta directiva de la AEVTJ frente a la sede de los Testigos de Jehová en España"
+        class="absolute inset-0 h-full w-full object-cover object-[center_20%]"
+      />
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-brand-ink/95 via-brand-ink/35 to-transparent"
       >
-        Nuestros Estatutos
-      </a>
-    </div>
-    <TornEdge />
-  </section>
+      </div>
+      <div class="relative mx-auto flex min-h-[70vh] max-w-[1200px] flex-col justify-end px-5 pb-24 pt-40 lg:px-8">
+        <p class="qs-hero-anim qs-hero-label font-heading text-sm uppercase tracking-[0.2em] text-white/90 drop-shadow-[0_1px_4px_rgba(18,44,51,0.6)]">
+          Asociación de víctimas de los Testigos de Jehová
+        </p>
+        <h1 class="qs-hero-anim qs-hero-title mt-3 font-heading text-5xl font-bold uppercase tracking-wide sm:text-6xl">
+          Quienes somos
+        </h1>
+        <div class="qs-hero-anim qs-hero-sub mt-4 max-w-xl">
+          <p class="text-lg text-white/90">Esta asociación está fundada por miembros como tú.</p>
+          <p class="mt-1 text-lg text-white/90">Por personas que han pasado o están pasando lo mismo que tú.</p>
+          <a
+            href="/uploads/2026/08/ESTATUTOS_WEB.pdf"
+            class="mt-6 inline-block rounded-md bg-brand-olive px-6 py-3 font-heading text-sm font-semibold uppercase tracking-wide text-white hover:bg-brand-olive-dark"
+          >
+            Nuestros Estatutos
+          </a>
+        </div>
+      </div>
+      <TornEdge />
+    </section>
 
-  <!-- Dos tarjetas -->
-  <section class="mx-auto max-w-[1200px] px-5 py-12 lg:px-8">
-    <div class="grid gap-6 sm:grid-cols-2">
-      <div class="relative flex min-h-[220px] flex-col justify-end overflow-hidden rounded-xl p-6 text-white shadow-lg">
-        <img
-          src="/uploads/2025/10/f857f1c1-ec62-4f58-8a6a-21d4322d9b2d.webp"
-          alt=""
-          class="absolute inset-0 h-full w-full object-cover"
-        />
-        <div class="absolute inset-0 bg-brand-ink/70"></div>
-        <div class="relative">
-          <h3 class="font-heading text-2xl font-semibold uppercase">Te necesitamos</h3>
-          <p class="mt-1 text-sm text-white/85">
+    <!-- Dos tarjetas solapadas sobre el hero -->
+    <section class="mx-auto max-w-[1200px] px-5 pb-16 lg:px-8">
+      <div class="qs-overlap grid gap-6 sm:grid-cols-2">
+        <div class="qs-lift relative flex min-h-[220px] flex-col overflow-hidden rounded-xl border border-white/10 bg-brand-ink p-7 text-white shadow-lg">
+          <span class="absolute inset-x-0 top-0 h-1.5 bg-brand-terracotta" aria-hidden="true"></span>
+          <span class="font-heading text-4xl font-bold leading-none text-white/15 select-none" aria-hidden="true">01</span>
+          <h3 class="mt-3 font-heading text-2xl font-semibold uppercase">Te necesitamos</h3>
+          <span class="mt-2 h-0.5 w-10 bg-brand-terracotta" aria-hidden="true"></span>
+          <p class="mt-3 text-sm leading-relaxed text-white/85">
             Miles de personas alrededor del mundo están sufriendo prácticas coercitivas
           </p>
           <a
             href="/hazte-socio/"
-            class="mt-4 inline-block rounded-md bg-brand-olive px-5 py-2 font-heading text-sm font-semibold uppercase tracking-wide text-white hover:bg-brand-olive-dark"
+            class="mt-auto self-start pt-5 font-heading text-sm font-semibold uppercase tracking-wide text-brand-terracotta underline-offset-4 transition-colors hover:text-white hover:underline"
           >
             Hazte socio ya
+            <span class="qs-arrow ml-1" aria-hidden="true">→</span>
           </a>
         </div>
-      </div>
-      <div class="relative flex min-h-[220px] flex-col justify-end overflow-hidden rounded-xl p-6 text-white shadow-lg">
-        <img
-          src="/uploads/2025/10/47f01e58-1a39-43ec-98ad-567033247c45.webp"
-          alt=""
-          class="absolute inset-0 h-full w-full object-cover"
-        />
-        <div class="absolute inset-0 bg-brand-olive-dark/75"></div>
-        <div class="relative">
-          <img src="/uploads/2025/10/right-quote-300x300.png" alt="" class="h-8 w-8" />
+        <div class="qs-lift relative flex min-h-[220px] flex-col overflow-hidden rounded-xl border border-brand-olive/25 bg-white p-7 text-brand-ink shadow-lg">
+          <span class="absolute inset-x-0 top-0 h-1.5 bg-brand-olive" aria-hidden="true"></span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="currentColor" class="mt-3 text-brand-olive" aria-hidden="true"><path d="M10 8c-3 1-5 3.5-5 7v1h5v-6H7.5C8 9 9 8.5 10 8.2V8zm9 0c-3 1-5 3.5-5 7v1h5v-6h-2.5c.5-1 1.5-1.5 2.5-1.8V8z"/></svg>
           <h3 class="mt-3 font-heading text-2xl font-semibold uppercase">Recursos</h3>
-          <p class="mt-1 text-sm text-white/85">¿Necesitas ayuda legal o psicológica?</p>
+          <span class="mt-2 h-0.5 w-10 bg-brand-olive" aria-hidden="true"></span>
+          <p class="mt-3 text-sm leading-relaxed text-brand-ink/75">¿Necesitas ayuda legal o psicológica?</p>
           <a
             href="/contacto/"
-            class="mt-4 inline-block rounded-md bg-white px-5 py-2 font-heading text-sm font-semibold uppercase tracking-wide text-brand-ink hover:bg-brand-cream"
+            class="mt-auto self-start pt-5 font-heading text-sm font-semibold uppercase tracking-wide text-brand-olive underline-offset-4 transition-colors hover:text-brand-olive-dark hover:underline"
           >
             Contacta con nosotros
+            <span class="qs-arrow ml-1" aria-hidden="true">→</span>
           </a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Nuestra misión -->
-  <section class="bg-brand-cream">
-    <div class="mx-auto max-w-[900px] px-5 py-16 lg:px-8">
-      <h2 class="text-center font-heading text-3xl font-semibold uppercase tracking-wide text-brand-ink sm:text-4xl">
-        Nuestra misión
-      </h2>
-      <div class="mission-tabs mt-8">
-        <div class="flex flex-wrap justify-center gap-3">
+    <!-- MISIÓN -->
+    <section id="mision" class="bg-brand-cream py-20">
+      <div class="mx-auto max-w-[1200px] px-5 lg:px-8">
+        <h2
+          data-qs-reveal
+          class="text-center font-heading text-3xl font-semibold uppercase tracking-wide text-brand-ink sm:text-4xl"
+        >
+          Nuestra misión
+        </h2>
+
+        <div class="mt-14 grid gap-8 lg:grid-cols-2">
           {
             mission.map((m, i) => (
-              <button
-                type="button"
-                data-tab={m.id}
-                class={`tab-btn rounded-full px-5 py-2 font-heading text-sm font-semibold uppercase tracking-wide transition-colors ${i === 1 ? "is-active bg-brand-ink text-white" : "bg-white text-brand-ink hover:bg-brand-olive/10"}`}
+              <article
+                id={`mision-${m.id}`}
+                data-qs-reveal
+                style={`--qs-delay: ${(i % 2) * 90}ms`}
+                class="scroll-mt-28 flex flex-col overflow-hidden rounded-2xl bg-white ring-1 ring-brand-ink/8"
               >
-                {m.label}
-              </button>
-            ))
-          }
-        </div>
-        <div class="mt-8 rounded-xl bg-white p-6 shadow-sm sm:p-8">
-          {
-            mission.map((m, i) => (
-              <div class="tab-panel space-y-4 text-brand-ink/80" data-panel={m.id} hidden={i !== 1}>
-                {m.text.map((t) => <p set:html={t} />)}
-              </div>
+                <header class="flex items-center gap-5 border-b border-brand-ink/8 bg-brand-cream/60 px-7 py-5">
+                  <span class="font-heading text-4xl font-bold leading-none text-brand-olive/30" aria-hidden="true">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-brand-olive/10 text-brand-olive" set:html={missionIcons[m.icon]} />
+                  <h3 class="font-heading text-lg font-semibold uppercase tracking-wide text-brand-ink sm:text-xl">
+                    {m.label}
+                  </h3>
+                </header>
+                <div class="qs-marker qs-reading flex-1 px-7 py-6 text-[0.95rem] leading-relaxed text-brand-ink/80">
+                  {m.text.map((t) => (
+                    <p class="mb-4 last:mb-0" set:html={t} />
+                  ))}
+                </div>
+              </article>
             ))
           }
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Junta directiva -->
-  <section class="relative overflow-hidden bg-brand-ink py-20">
-    <div
-      class="pointer-events-none absolute inset-0 opacity-[0.06]"
-      style="background-image: radial-gradient(circle, #fff 1px, transparent 1px); background-size: 22px 22px;"
-    >
-    </div>
-    <div class="relative mx-auto max-w-[1200px] px-5 lg:px-8">
-      <p class="text-center font-heading text-xs font-semibold uppercase tracking-[0.35em] text-brand-terracotta">
-        Un mismo equipo, una misma causa
-      </p>
-      <h2 class="mt-3 text-center font-heading text-3xl font-semibold uppercase tracking-wide text-white sm:text-4xl">
-        Nuestra junta directiva
-      </h2>
-      <p class="mx-auto mt-4 max-w-2xl text-center text-white/70">
-        Cuatro personas unidas por una misma experiencia y un mismo propósito: acompañar,
-        defender y dar voz a quienes han sufrido el ostracismo de los Testigos de Jehová.
-      </p>
+    <!-- JUNTA DIRECTIVA -->
+    <section id="junta" class="relative overflow-hidden bg-brand-ink py-20">
+      <div
+        class="pointer-events-none absolute inset-0 opacity-[0.06]"
+        style="background-image: radial-gradient(circle, #fff 1px, transparent 1px); background-size: 22px 22px;"
+      >
+      </div>
+      <div class="relative mx-auto max-w-[1200px] px-5 lg:px-8">
+        <p data-qs-reveal class="text-center font-heading text-xs font-semibold uppercase tracking-[0.35em] text-brand-terracotta">
+          Un mismo equipo, una misma causa
+        </p>
+        <h2 data-qs-reveal style="--qs-delay: 90ms" class="mt-3 text-center font-heading text-3xl font-semibold uppercase tracking-wide text-white sm:text-4xl">
+          Nuestra junta directiva
+        </h2>
+        <p data-qs-reveal style="--qs-delay: 180ms" class="qs-reading mx-auto mt-4 text-center text-white/70">
+          Cuatro personas unidas por una misma experiencia y un mismo propósito: acompañar,
+          defender y dar voz a quienes han sufrido el ostracismo de los Testigos de Jehová.
+        </p>
 
-      <div class="relative mt-16">
-        <div
-          class="pointer-events-none absolute inset-x-8 top-[7.5rem] hidden h-px bg-gradient-to-r from-transparent via-white/25 to-transparent sm:block"
-        >
-        </div>
-        <div class="grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {
-            board.map((m) => (
-              <div class="group relative flex flex-col items-center text-center">
-                <span class="absolute -top-4 z-20 hidden h-2.5 w-2.5 rounded-full bg-brand-terracotta ring-4 ring-brand-ink sm:block" />
-                <div class="relative flex h-52 w-full items-end justify-center">
-                  <div class="absolute inset-x-6 top-4 bottom-2 rounded-[2rem] bg-gradient-to-b from-white/10 to-white/0 ring-1 ring-white/10 transition-colors duration-300 group-hover:ring-brand-terracotta/40" />
+            board.map((m, i) => (
+              <article data-qs-reveal style={`--qs-delay: ${i * 90}ms`} class="qs-board-card group flex flex-col overflow-hidden rounded-xl bg-white/5 ring-1 ring-white/10 transition-colors hover:ring-brand-terracotta/40">
+                <div class="relative">
                   <img
                     src={m.photo}
-                    alt={m.name}
-                    class="relative z-10 h-full w-auto object-contain drop-shadow-[0_16px_22px_rgba(0,0,0,0.45)] transition-transform duration-300 group-hover:-translate-y-1"
+                    alt={`Retrato de ${m.name}`}
+                    class="qs-portrait aspect-[4/5] w-full object-cover"
+                    loading="lazy"
                   />
+                  <span class="absolute left-3 top-3 rounded-full bg-brand-ink/85 px-3 py-1 font-heading text-[11px] font-semibold uppercase tracking-wider text-white ring-1 ring-white/20">
+                    {m.role}
+                  </span>
                 </div>
-                <h3 class="mt-6 font-heading text-lg font-bold uppercase tracking-wide text-white">{m.name}</h3>
-                <span class="mt-2 inline-block rounded-full bg-brand-terracotta px-3.5 py-1 font-heading text-[11px] font-semibold uppercase tracking-wider text-white">
-                  {m.role}
-                </span>
-                <p class="mt-3 text-sm leading-relaxed text-white/65">{m.bio}</p>
-              </div>
+                <div class="flex flex-1 flex-col p-5">
+                  <h3 class="font-heading text-lg font-bold uppercase tracking-wide text-white">{m.name}</h3>
+                  <span class="mt-2 block h-0.5 w-8 bg-brand-terracotta/70" aria-hidden="true"></span>
+                  <p class="mt-3 text-sm leading-relaxed text-white/70">{m.bio}</p>
+                </div>
+              </article>
             ))
           }
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Portal de transparencia -->
-  <section class="bg-brand-cream">
-    <div class="mx-auto max-w-[820px] px-5 py-16 lg:px-8">
-      <h2 class="text-center font-heading text-3xl font-semibold uppercase tracking-wide text-brand-ink sm:text-4xl">
-        Portal de transparencia
-      </h2>
-      <div class="mt-8 divide-y divide-black/10 rounded-xl bg-white shadow-sm">
-        {
-          transparency.map((item) => (
-            <details class="group px-6 py-4 open:pb-5">
-              <summary class="flex cursor-pointer list-none items-center justify-between font-heading text-base font-semibold uppercase tracking-wide text-brand-ink">
-                {item.title}
-                <span class="ml-4 text-xl text-brand-olive transition-transform group-open:rotate-45">+</span>
-              </summary>
-              <div class="prose prose-sm mt-3 max-w-none text-brand-ink/75" set:html={item.body} />
-            </details>
-          ))
-        }
-      </div>
-    </div>
-  </section>
+    <!-- PORTAL DE TRANSPARENCIA -->
+    <section id="transparencia" class="bg-white py-20">
+      <div class="mx-auto max-w-[1200px] px-5 lg:px-8">
+        <div class="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
+          <h2 data-qs-reveal class="font-heading text-3xl font-semibold uppercase tracking-wide text-brand-ink sm:text-4xl">
+            Portal de transparencia
+          </h2>
+          <span data-qs-reveal style="--qs-delay: 90ms" class="inline-flex items-center gap-2 rounded-full border border-brand-olive/30 bg-brand-cream px-4 py-1.5 font-heading text-xs font-semibold uppercase tracking-wider text-brand-olive">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+            Transparencia
+            <span class="font-normal normal-case tracking-normal text-brand-ink/60">· Última actualización: 27 de abril de 2026</span>
+          </span>
+        </div>
 
-  <!-- Colaboradores -->
-  <section class="mx-auto max-w-[1200px] px-5 py-16 lg:px-8">
-    <h2 class="text-center font-heading text-3xl font-semibold uppercase tracking-wide text-brand-ink sm:text-4xl">
-      Nuestros colaboradores
-    </h2>
-    <p class="mx-auto mt-4 max-w-2xl text-center text-brand-ink/75">
-      El haber podido contar con grandes expertos en la materia nos ha hecho infinitamente
-      más conscientes de la necesidad y la buena dirección de la asociación
-    </p>
-    <div class="mt-12 space-y-12">
-      {
-        collaborators.map((c) => (
-          <div class="grid gap-8 rounded-xl bg-brand-cream p-6 lg:grid-cols-[1fr_320px] lg:p-10">
-            <div>
-              <h3 class="font-heading text-2xl font-bold uppercase text-brand-ink">{c.name}</h3>
-              <p class="mt-1 font-heading text-sm uppercase tracking-wide text-brand-olive">{c.role}</p>
-              <div class="prose prose-sm mt-5 max-w-none text-brand-ink/80" set:html={c.bio} />
-            </div>
-            <div class="aspect-[4/5] w-full overflow-hidden rounded-xl shadow-lg lg:order-2">
-              <img src={c.photo} alt={c.name} class="h-full w-full object-cover" />
-            </div>
+        <div class="mt-10 grid gap-10 lg:grid-cols-[260px_1fr]">
+          <!-- Índice lateral sticky (escritorio) -->
+          <nav aria-label="Índice del Portal de transparencia" class="qs-acc-index hidden lg:block" data-qs-reveal>
+            <ul class="space-y-1 border-l border-black/10">
+              {
+                transparency.map((item) => (
+                  <li>
+                    <a
+                      href={`#transparencia-${item.title.replace(/[^a-z0-9]+/gi, "-").toLowerCase()}`}
+                      class="qs-index-link -ml-px block border-l-2 border-transparent py-1.5 pl-4 text-sm text-brand-ink/60 transition-colors hover:text-brand-ink"
+                    >
+                      {item.title}
+                    </a>
+                  </li>
+                ))
+              }
+            </ul>
+          </nav>
+
+          <!-- Contenido: acordeón compacto, un bloque abierto -->
+          <div class="qs-accordion divide-y divide-brand-ink/8 rounded-2xl bg-white ring-1 ring-brand-ink/8" data-qs-reveal style="--qs-delay: 120ms">
+            {
+              transparency.map((item, i) => {
+                const slug = item.title.replace(/[^a-z0-9]+/gi, "-").toLowerCase();
+                return (
+                  <div class="qs-acc-item" id={`transparencia-${slug}`} data-acc-open={i === 0 ? "true" : "false"}>
+                    <h3>
+                      <button
+                        type="button"
+                        class="qs-acc-btn flex w-full cursor-pointer items-center justify-between gap-4 px-5 py-3.5 text-left font-heading text-sm font-semibold uppercase tracking-wide text-brand-ink sm:px-6"
+                        aria-expanded={i === 0 ? "true" : "false"}
+                        aria-controls={`panel-${slug}`}
+                      >
+                        {item.title}
+                        <span class="qs-acc-icon shrink-0 text-brand-olive" aria-hidden="true">+</span>
+                      </button>
+                    </h3>
+                    <div class="qs-acc-panel">
+                      <div>
+                        <div class="prose prose-sm mx-5 mb-5 mt-1 max-w-none border-l-2 border-brand-olive/30 pl-4 text-brand-ink/75 sm:mx-6 sm:pl-5" set:html={item.body} />
+                      </div>
+                    </div>
+                  </div>
+                );
+              })
+            }
           </div>
-        ))
-      }
-    </div>
-  </section>
-
-  <!-- Comportamientos inaceptables -->
-  <section class="bg-brand-cream">
-    <div class="mx-auto max-w-[820px] px-5 py-16 lg:px-8">
-      <h2 class="text-center font-heading text-3xl font-semibold uppercase tracking-wide text-brand-ink sm:text-4xl">
-        Sobre comportamientos inaceptables
-      </h2>
-      <div class="prose prose-sm mt-6 max-w-none text-brand-ink/80">
-        <p>
-          En la actual junta directiva de la Asociación Española de Víctimas de los
-          testigos de Jehová -AEVTJ-, creemos en la consecución de nuestras metas sin
-          violencia ni malos modales, como ya se ha comunicado en el apartado «nuestra
-          misión», una de ellas es dar a conocer a la sociedad los comportamientos
-          internos y desconocidos de la organización de los testigos de Jehová.
-        </p>
-        <p>
-          A pesar del daño recibido y que nuestro fuero interno nos lo demande,
-          caeríamos en malas prácticas si participáramos en malos comportamientos, en
-          tal caso estaríamos actuando de manera indecorosa y similar a la de ellos
-          como cuando insultan a la sociedad en general, a las personas en particular o
-          a las organizaciones religiosas de distinto origen con calificativos
-          impresentables.
-        </p>
-        <p>
-          <strong>
-            Es por tanto que invitamos a nuestros socios y simpatizantes a ganarles en
-            comportamiento, modales, habla con respeto, derecho a la propiedad y
-            libertad de culto.
-          </strong>
-        </p>
-        <p>Y por tanto, declaramos que:</p>
-        <ul>
-          <li>Siempre fomentamos la concordia con los testigos de Jehová, aunque ellos mismos no nos hablen.</li>
-          <li>Nunca les insultaremos, incluso en las peores circunstancias, llamándolos de manera que no podamos demostrar.</li>
-          <li>Nunca les acusamos de cosas indemostrables, solo informamos a la sociedad de asuntos que pueden ser comprobados y contrastados.</li>
-          <li>Nunca fomentaremos ni incitaremos al odio a las personas bajo ningún concepto.</li>
-          <li>Nunca pintamos ni manchamos sus propiedades, ni tendremos la intención de destruir cualquier propiedad de los testigos de Jehová ni de su organización.</li>
-          <li>Nunca nos introduciremos en sus locales de culto para dar escándalos en su interior, ni vituperar sus emblemas sagrados.</li>
-          <li>Nunca fomentaremos el asalto a sus instalaciones centrales ni locales.</li>
-          <li>Nuestro propósito es que se cumpla la legalidad para todos, y que cada uno se haga cargo de su parte de responsabilidad ante las autoridades.</li>
-          <li>Nos reservamos el derecho a manifestarnos de forma y modo legal con permiso de las autoridades.</li>
-          <li>Nos desvinculamos de cualquier actividad que hayan hecho personas de manera independiente y privada que no haya estado autorizada y dirigida por esta junta directiva o alguno de sus órganos rectores.</li>
-          <li>Nuestro trabajo está en las oficinas, en los despachos, en los medios de comunicación y en la calle, con el máximo respeto, siempre con verdad y con intensidad.</li>
-        </ul>
-        <p>
-          <strong>
-            Recordamos que estas normas son una extensión del artículo 20 del apartado 3
-            denominado socios, de nuestros estatutos.
-          </strong>
-          <u>Un socio que viole estas normas podría causar baja de la asociación según ese artículo.</u>
-        </p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- COLABORADORES -->
+    <section id="colaboradores" class="bg-brand-cream py-20">
+      <div class="mx-auto max-w-[1200px] px-5 lg:px-8">
+        <h2 data-qs-reveal class="text-center font-heading text-3xl font-semibold uppercase tracking-wide text-brand-ink sm:text-4xl">
+          Nuestros colaboradores
+        </h2>
+        <p data-qs-reveal style="--qs-delay: 90ms" class="qs-reading mx-auto mt-4 text-center text-brand-ink/75">
+          El haber podido contar con grandes expertos en la materia nos ha hecho infinitamente
+          más conscientes de la necesidad y la buena dirección de la asociación
+        </p>
+
+        <div class="mt-12 space-y-8">
+          {
+            collaborators.map((c, i) => (
+              <article
+                data-qs-reveal
+                style={`--qs-delay: ${(i % 2) * 90}ms`}
+                class={`qs-collab-card ${c.disciplineClass} grid overflow-hidden rounded-2xl bg-white ring-1 ring-brand-ink/8 lg:grid-cols-[1fr_320px]`}
+              >
+                <div class="flex flex-col p-7 sm:p-9">
+                  <span class="qs-disc-badge inline-flex w-fit rounded-full px-3 py-1 font-heading text-[11px] font-semibold uppercase tracking-wider">
+                    {c.discipline}
+                  </span>
+                  <h3 class="mt-3 font-heading text-2xl font-bold uppercase text-brand-ink">{c.name}</h3>
+                  <p class="mt-1 font-heading text-sm uppercase tracking-wide text-brand-olive">{c.role}</p>
+                  <div class="prose prose-sm mt-5 max-w-none text-brand-ink/80" set:html={c.bio} />
+                </div>
+                <div class="qs-disc-ring relative overflow-hidden lg:min-h-[420px]">
+                  <img
+                    src={c.photo}
+                    alt={`Retrato de ${c.name}`}
+                    class="h-72 w-full object-cover object-[center_15%] sm:h-80 lg:absolute lg:inset-0 lg:h-full"
+                    loading="lazy"
+                  />
+                </div>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE COMPORTAMIENTOS INACEPTABLES -->
+    <section id="conducta" class="bg-brand-ink py-20">
+      <div class="mx-auto max-w-[900px] px-5 lg:px-8">
+        <h2 data-qs-reveal class="text-center font-heading text-3xl font-semibold uppercase tracking-wide text-white sm:text-4xl">
+          Sobre comportamientos inaceptables
+        </h2>
+
+        <div data-qs-reveal style="--qs-delay: 90ms" class="mt-8 space-y-4 rounded-xl bg-white/5 p-6 ring-1 ring-white/10 sm:p-8">
+          <div class="qs-reading space-y-4 text-white/80">
+            {conducta.intro.map((p) => <p>{p}</p>)}
+          </div>
+          <p class="qs-reading font-heading text-lg font-semibold text-white">{conducta.claim}</p>
+
+          <div class="qs-reading mt-6 space-y-6">
+            <p class="text-white/80">Y por tanto, declaramos que:</p>
+            <div>
+              <h3 class="font-heading text-sm font-semibold uppercase tracking-[0.2em] text-brand-terracotta">Siempre fomentamos</h3>
+              <ul class="qs-check-list qs-check-always mt-2 list-outside list-none space-y-2 text-white/80">
+                {conducta.always.map((li) => <li class="flex gap-2"><span class="font-bold text-brand-terracotta" aria-hidden="true">✓</span><span>{li}</span></li>)}
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-heading text-sm font-semibold uppercase tracking-[0.2em] text-[#d08a82]">Nunca</h3>
+              <ul class="qs-check-list qs-check-never mt-2 list-outside list-none space-y-2 text-white/80">
+                {conducta.never.map((li) => <li class="flex gap-2"><span class="font-bold text-[#d08a82]" aria-hidden="true">✕</span><span>{li}</span></li>)}
+              </ul>
+            </div>
+            <ul class="qs-check-list qs-check-neutral mt-2 list-outside list-none space-y-2 text-white/80">
+              {conducta.neutral.map((li) => <li class="flex gap-2"><span class="font-bold text-brand-terracotta" aria-hidden="true">·</span><span>{li}</span></li>)}
+            </ul>
+          </div>
+
+          <blockquote class="mt-8 border-l-4 border-brand-terracotta bg-brand-ink/60 p-5 text-white/85">
+            <p class="font-semibold">
+              Recordamos que estas normas son una extensión del artículo 20 del apartado 3
+              denominado socios, de nuestros estatutos.
+            </p>
+            <p class="mt-1 underline decoration-brand-terracotta/60 underline-offset-4">
+              Un socio que viole estas normas podría causar baja de la asociación según ese artículo.
+            </p>
+            <a
+              href="/uploads/2026/08/ESTATUTOS_WEB.pdf"
+              class="mt-3 inline-block font-heading text-sm font-semibold uppercase tracking-wide text-brand-terracotta hover:text-white"
+            >
+              Ver los estatutos (PDF)
+            </a>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="relative flex min-h-[80vh] flex-col items-center justify-center overflow-hidden bg-brand-olive py-24 text-center text-white">
+      <div
+        class="pointer-events-none absolute inset-0 opacity-10"
+        style="background-image: radial-gradient(circle, #fff 1px, transparent 1px); background-size: 22px 22px;"
+        aria-hidden="true"
+      >
+      </div>
+      <div class="relative mx-auto max-w-[900px] px-5 lg:px-8" data-qs-reveal>
+        <h2 class="font-heading text-4xl font-bold uppercase tracking-wide sm:text-5xl">
+          Esta asociación está fundada por miembros como tú.
+        </h2>
+        <p class="mx-auto mt-4 max-w-2xl text-lg text-white/85">
+          Por personas que han pasado o están pasando lo mismo que tú.
+        </p>
+        <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
+          <a
+            href="/hazte-socio/"
+            class="rounded-md bg-white px-8 py-3.5 font-heading text-sm font-semibold uppercase tracking-wide text-brand-ink transition-transform hover:-translate-y-0.5 hover:bg-brand-cream"
+          >
+            Hazte socio
+          </a>
+          <a
+            href="/contacto/"
+            class="rounded-md border border-white/50 px-8 py-3.5 font-heading text-sm font-semibold uppercase tracking-wide text-white transition-colors hover:bg-white/10"
+          >
+            Contacta
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
 </BaseLayout>
 
 <script>
-  const buttons = document.querySelectorAll<HTMLButtonElement>(".tab-btn");
-  const panels = document.querySelectorAll<HTMLElement>(".tab-panel");
-  buttons.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const target = btn.dataset.tab;
-      buttons.forEach((b) => {
-        b.classList.toggle("is-active", b === btn);
-        b.classList.toggle("bg-brand-ink", b === btn);
-        b.classList.toggle("text-white", b === btn);
-        b.classList.toggle("bg-white", b !== btn);
-        b.classList.toggle("text-brand-ink", b !== btn);
-      });
-      panels.forEach((p) => {
-        p.hidden = p.dataset.panel !== target;
-      });
+  // --- Reveal on scroll (250ms ease-out, escalonado, reduced-motion friendly) ---
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const revealEls = document.querySelectorAll<HTMLElement>("[data-qs-reveal]");
+  if (!reduceMotion && "IntersectionObserver" in window) {
+    const obs = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) {
+            (e.target as HTMLElement).classList.add("is-visible");
+            obs.unobserve(e.target);
+          }
+        }
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+    );
+    revealEls.forEach((el) => obs.observe(el));
+  } else {
+    revealEls.forEach((el) => el.classList.add("is-visible"));
+  }
+
+  // --- Transparencia: acordeón exclusivo (un bloque abierto) ---
+  const accordion = document.querySelector<HTMLElement>(".qs-accordion");
+  const accItems = Array.from(document.querySelectorAll<HTMLElement>(".qs-acc-item"));
+
+  function setItem(item: HTMLElement, open: boolean) {
+    item.classList.toggle("is-open", open);
+    item.querySelector<HTMLButtonElement>(".qs-acc-btn")?.setAttribute("aria-expanded", String(open));
+  }
+
+  function openExclusive(target: HTMLElement) {
+    accItems.forEach((other) => setItem(other, other === target));
+  }
+
+  accItems.forEach((item) => {
+    setItem(item, item.dataset.accOpen === "true");
+  });
+
+  accordion?.addEventListener("click", (ev) => {
+    const btn = (ev.target as HTMLElement).closest<HTMLButtonElement>(".qs-acc-btn");
+    if (!btn) return;
+    const item = btn.closest<HTMLElement>(".qs-acc-item");
+    if (!item) return;
+    if (item.classList.contains("is-open")) {
+      setItem(item, false);
+    } else {
+      openExclusive(item);
+    }
+  });
+
+  // Índice sticky: resaltar sección visible
+  const indexLinks = Array.from(document.querySelectorAll<HTMLAnchorElement>(".qs-index-link"));
+  if ("IntersectionObserver" in window && indexLinks.length) {
+    const idxObs = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (!e.isIntersecting) continue;
+          const id = (e.target as HTMLElement).id;
+          indexLinks.forEach((l) => l.classList.toggle("is-current", l.getAttribute("href") === `#${id}`));
+        }
+      },
+      { rootMargin: "-30% 0px -60% 0px" }
+    );
+    accItems.forEach((i) => idxObs.observe(i));
+  }
+
+  // Índice sticky: al clicar, abrir la sección correspondiente
+  indexLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      const target = accItems.find((i) => `#${i.id}` === link.getAttribute("href"));
+      if (target) openExclusive(target);
+      indexLinks.forEach((l) => l.classList.toggle("is-current", l === link));
     });
   });
 </script>
