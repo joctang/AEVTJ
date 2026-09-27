@@ -89,9 +89,9 @@ export const casos: CasoLegal[] = [
     ],
     situacion: [],
     documentos: [
-      { etiqueta: "Demanda 1ª instancia", href: "/uploads/2023/12/demanda_juzgado_ta_madrid_borrados.pdf" },
-      { etiqueta: "SENTENCIA 1ª instancia", href: "/uploads/2023/12/SentenciaProc729-2021_sin_nombres_fin.pdf" },
-      { etiqueta: "SENTENCIA 2ª instancia", href: "/uploads/2026/04/Sentencia_Apelacion_AEVTJ_borrado.pdf" },
+      { etiqueta: "Demanda 1ª instancia", href: "/uploads/2023/12/caso1-demanda-1a-instancia.pdf" },
+      { etiqueta: "SENTENCIA 1ª instancia", href: "/uploads/2023/12/caso1-sentencia-1a-instancia.pdf" },
+      { etiqueta: "SENTENCIA 2ª instancia", href: "/uploads/2026/04/caso1-sentencia-2a-instancia.pdf" },
     ],
     // Audios del juicio oral despublicados mientras la asociación recibe
     // asesoramiento jurídico sobre la difusión de grabaciones de vistas orales.
@@ -119,10 +119,10 @@ export const casos: CasoLegal[] = [
       "Apelación de los TdJ inadmitida por el Tribunal Supremo.",
     ],
     documentos: [
-      { etiqueta: "DEMANDA 1ª instancia", href: "/uploads/2023/12/SIN-NOMBRES_5912-Demanda-TESTIGOS-CRISTIANOS-JEHOVA-Vs-CARMONA-VDEF.pdf" },
-      { etiqueta: "SENTENCIA 1ª instancia", href: "/uploads/2023/12/Proc-432-2021_Sentencia-contr-enrique-carmona-sin-nombres.pdf" },
-      { etiqueta: "INADMISION APEL. TRIBUNAL SUPREMO", href: "/uploads/2026/04/inadmision_supremo_Enrique_borrado.pdf" },
-      { etiqueta: "DIFERENCIAS DEMANDA VS SENTENCIA 1ª instancia", href: "/uploads/2023/12/diferencias_que_piden_que_obtienen_juicioEcarmona.pdf" },
+      { etiqueta: "DEMANDA 1ª instancia", href: "/uploads/2023/12/caso2-demanda-1a-instancia.pdf" },
+      { etiqueta: "SENTENCIA 1ª instancia", href: "/uploads/2023/12/caso2-sentencia-1a-instancia.pdf" },
+      { etiqueta: "INADMISION APEL. TRIBUNAL SUPREMO", href: "/uploads/2026/04/caso2-inadmision-recurso-supremo.pdf" },
+      { etiqueta: "DIFERENCIAS DEMANDA VS SENTENCIA 1ª instancia", href: "/uploads/2023/12/caso2-diferencias-demanda-sentencia.pdf" },
     ],
   },
   {
@@ -136,7 +136,7 @@ export const casos: CasoLegal[] = [
       "Situación: ganada en 1ª instancia, perdida en Audiencia Provincial de Madrid. Pendiente de recurso de amparo ante el Tribunal Constitucional.",
     ],
     documentos: [
-      { etiqueta: "SENTENCIA 2ª instancia", href: "/uploads/2026/04/sentencia_apelacion_Gabriel_borrado.pdf" },
+      { etiqueta: "SENTENCIA 2ª instancia", href: "/uploads/2026/04/caso3-sentencia-2a-instancia.pdf" },
     ],
   },
 ];
