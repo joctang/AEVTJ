@@ -93,10 +93,8 @@ export const casos: CasoLegal[] = [
       { etiqueta: "SENTENCIA 1ª instancia", href: "/uploads/2023/12/SentenciaProc729-2021_sin_nombres_fin.pdf" },
       { etiqueta: "SENTENCIA 2ª instancia", href: "/uploads/2026/04/Sentencia_Apelacion_AEVTJ_borrado.pdf" },
     ],
-    audiosJuicio: {
-      titulo: "Audios del Juicio Oral",
-      href: "https://www.youtube.com/channel/UCTRZtQS3Zf8jwrByyjE6rgg",
-    },
+    // Audios del juicio oral despublicados mientras la asociación recibe
+    // asesoramiento jurídico sobre la difusión de grabaciones de vistas orales.
   },
   {
     id: "caso-israel-florez",
@@ -118,7 +116,7 @@ export const casos: CasoLegal[] = [
     hitos: [],
     situacion: [
       "Situación: ganada por Enrique Carmona en la Audiencia Provincial de Madrid en 2024.",
-      "Apelación de los TdJ rechazada por el Tribunal Supremo.",
+      "Apelación de los TdJ inadmitida por el Tribunal Supremo.",
     ],
     documentos: [
       { etiqueta: "DEMANDA 1ª instancia", href: "/uploads/2023/12/SIN-NOMBRES_5912-Demanda-TESTIGOS-CRISTIANOS-JEHOVA-Vs-CARMONA-VDEF.pdf" },
@@ -132,10 +130,10 @@ export const casos: CasoLegal[] = [
     demandado: "Gabriel Pedrero",
     rol: "Ex-vocal de gestión de redes sociales de la AEVTJ",
     descripcion: "Demanda contra el ex-vocal de gestión de redes sociales de la AEVTJ, Gabriel Pedrero.",
-    estado: { etiqueta: "Recurrida al Constitucional", tono: "recurrido" },
+    estado: { etiqueta: "Recurso de amparo pendiente", tono: "recurrido" },
     hitos: [],
     situacion: [
-      "Situación: ganada en 1ª instancia, perdida en Audiencia Provincial de Madrid. Pendiente de apelación al Constitucional.",
+      "Situación: ganada en 1ª instancia, perdida en Audiencia Provincial de Madrid. Pendiente de recurso de amparo ante el Tribunal Constitucional.",
     ],
     documentos: [
       { etiqueta: "SENTENCIA 2ª instancia", href: "/uploads/2026/04/sentencia_apelacion_Gabriel_borrado.pdf" },
@@ -143,10 +141,13 @@ export const casos: CasoLegal[] = [
   },
 ];
 
-export const audiosJuicio: { titulo: string; href: string } = {
-  titulo: "Audios del Juicio Oral",
-  href: "https://www.youtube.com/channel/UCTRZtQS3Zf8jwrByyjE6rgg",
-};
+// Audios del juicio oral despublicados mientras la asociación recibe
+// asesoramiento jurídico sobre la difusión de grabaciones de vistas orales.
+// Restaurar solo con visto bueno legal:
+// export const audiosJuicio: { titulo: string; href: string } = {
+//   titulo: "Audios del Juicio Oral",
+//   href: "https://www.youtube.com/channel/UCTRZtQS3Zf8jwrByyjE6rgg",
+// };
 
 export const internacionales: CasoInternacional[] = [
   {

@@ -10,6 +10,11 @@ const contacts = [
     email: "info@victimasdetestigosdejehova.org",
   },
   {
+    title: "Ayuda legal",
+    para: "Asesoramiento por parte de nuestro equipo jurídico.",
+    email: "soportelegal@victimasdetestigosdejehova.org",
+  },
+  {
     title: "Organismos, instituciones y periodistas",
     para: "Consultas de medios, administraciones y entidades.",
     email: "medios@victimasdetestigosdejehova.org",
@@ -22,7 +27,7 @@ const contacts = [
 ];
 
 const description =
-  "Contacta con la Asociación Española de Víctimas de los Testigos de Jehová: bienvenida y ayuda, medios de comunicación e instituciones, y secretaría.";
+  "Contacta con la Asociación Española de Víctimas de los Testigos de Jehová: bienvenida y ayuda, ayuda legal, medios de comunicación e instituciones, y secretaría.";
 ---
 
 <BaseLayout title="Contacto" description={description}>
@@ -52,11 +57,7 @@ const description =
     <section class="contacto-correos" aria-labelledby="contacto-correos-titulo">
       <div class="contacto-correos__inner">
         <p class="guia-kicker" data-reveal>Correos de contacto</p>
-        <h2 id="contacto-correos-titulo" data-reveal>Escribe a quien mejor pueda ayudarte</h2>
-        <p class="contacto-correos__intro" data-reveal>
-          Cada dirección la atiende un área distinta de la asociación. Elegir la correcta acelera la
-          respuesta.
-        </p>
+        <h2 id="contacto-correos-titulo" data-reveal>Escribe directamente a quien puede ayudarte</h2>
         <div class="contacto-correos__grid">
           {
             contacts.map((c) => (
@@ -108,7 +109,7 @@ const description =
           <p class="contacto-form__nota">
             Este formulario no envía nada por sí mismo ni guarda tus datos: abre tu gestor de correo
             con el mensaje preparado. Si prefieres escribirnos directamente, usa una de las
-            direcciones de arriba. Tratamos tus datos según nuestra
+            direcciones de arriba. Tratamos tus datos según nuestra{" "}
             <a href="/politica-de-privacidad/">Política de Privacidad</a>.
           </p>
           <div class="contacto-form__acciones">

@@ -43,7 +43,7 @@ export const noticia: Noticia = {
     {
       tipo: "parrafo",
       texto:
-        "La entrevista se enmarca en el estreno del documental <a href=\"/estreno-del-documental-expulsados-de-los-testigos-de-jehova-en-el-pais/\"><strong>“Expulsados de los Testigos de Jehová”</strong></a> (28 minutos), una producción de <strong>EL PAÍS</strong> dirigida por <strong>Rebeca Carranco, Berta Vila y Álvaro González Roldán</strong>, que reúne <strong>seis testimonios</strong> y visibiliza las consecuencias personales y sociales de dejar la congregación.",
+        "La entrevista se enmarca en el estreno del documental <a href=\"/noticias/estreno-del-documental-expulsados-de-los-testigos-de-jehova-en-el-pais/\"><strong>“Expulsados de los Testigos de Jehová”</strong></a> (28 minutos), una producción de <strong>EL PAÍS</strong> dirigida por <strong>Rebeca Carranco, Berta Vila y Álvaro González Roldán</strong>, que reúne <strong>seis testimonios</strong> y visibiliza las consecuencias personales y sociales de dejar la congregación.",
     },
   ],
   contexto: [
