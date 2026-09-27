@@ -103,6 +103,68 @@
   padding: 0 0.1em;
 }
 
+/* --- Misión: título con subrayado lima editorial --- */
+.qs-title-marker {
+  display: inline;
+  background-image: linear-gradient(0deg, rgb(216 234 164 / 0.8), rgb(216 234 164 / 0.8));
+  background-repeat: no-repeat;
+  background-size: 100% 72%;
+  background-position: 0 85%;
+  padding: 0 0.18em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+/* --- Misión: pestañas píldora --- */
+.qs-pill {
+  background-color: #fff;
+  color: rgb(18 44 51 / 0.75);
+  box-shadow: inset 0 0 0 1px rgb(18 44 51 / 0.12);
+  transition:
+    background-color 200ms ease-out,
+    color 200ms ease-out,
+    box-shadow 200ms ease-out;
+}
+
+.qs-pill:hover {
+  color: var(--color-brand-ink);
+  box-shadow: inset 0 0 0 1px rgb(18 44 51 / 0.32);
+}
+
+.qs-pill[aria-selected="true"] {
+  background-color: var(--color-brand-ink);
+  color: #fff;
+  box-shadow: inset 0 0 0 1px var(--color-brand-ink);
+}
+
+.qs-pill[aria-selected="true"]:hover {
+  background-color: #1c3d47;
+}
+
+/* --- Misión: entrada del panel al cambiar de pestaña --- */
+.qs-panel.qs-panel-in {
+  animation: qs-panel-in 220ms ease-out;
+}
+
+@keyframes qs-panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .qs-pill,
+  .qs-panel.qs-panel-in {
+    transition: none;
+    animation: none;
+  }
+}
+
 /* --- Junta: retratos gris → color, bio desplegable --- */
 .qs-board-card .qs-portrait {
   filter: grayscale(1);

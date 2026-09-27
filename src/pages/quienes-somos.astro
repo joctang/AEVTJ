@@ -248,35 +248,62 @@ const missionIcons: Record<string, string> = {
       </div>
     </section>
 
-    <!-- MISIÓN -->
+    <!-- MISIÓN: pestañas, una tarjeta visible -->
     <section id="mision" class="bg-brand-cream py-20">
       <div class="mx-auto max-w-[1200px] px-5 lg:px-8">
         <h2
           data-qs-reveal
-          class="text-center font-heading text-3xl font-semibold uppercase tracking-wide text-brand-ink sm:text-4xl"
+          class="text-center font-heading text-3xl font-semibold tracking-wide text-brand-ink sm:text-4xl"
         >
-          Nuestra misión
+          <span class="qs-title-marker">Nuestra misión</span>
         </h2>
 
-        <div class="mt-14 grid gap-8 lg:grid-cols-2">
+        <div
+          data-qs-reveal
+          style="--qs-delay: 90ms"
+          role="tablist"
+          aria-label="Áreas de nuestra misión"
+          class="mt-9 flex flex-wrap items-center justify-center gap-2.5 sm:gap-3"
+        >
+          {
+            mission.map((m, i) => (
+              <button
+                type="button"
+                role="tab"
+                id={`tab-${m.id}`}
+                aria-selected={i === 0 ? "true" : "false"}
+                aria-controls={`mision-${m.id}`}
+                tabindex={i === 0 ? 0 : -1}
+                class="qs-pill inline-flex items-center gap-2 rounded-full px-5 py-2.5 font-heading text-[13px] font-semibold uppercase tracking-wider sm:px-6 sm:text-sm"
+              >
+                <span class="[&_svg]:h-4 [&_svg]:w-4" aria-hidden="true" set:html={missionIcons[m.icon]} />
+                {m.label}
+              </button>
+            ))
+          }
+        </div>
+
+        <div data-qs-reveal style="--qs-delay: 180ms" class="mt-8">
           {
             mission.map((m, i) => (
               <article
                 id={`mision-${m.id}`}
-                data-qs-reveal
-                style={`--qs-delay: ${(i % 2) * 90}ms`}
-                class="scroll-mt-28 flex flex-col overflow-hidden rounded-2xl bg-white ring-1 ring-brand-ink/8"
+                role="tabpanel"
+                aria-labelledby={`tab-${m.id}`}
+                tabindex="0"
+                hidden={i !== 0}
+                class="qs-panel scroll-mt-28 mx-auto max-w-3xl rounded-2xl bg-white shadow-[0_24px_48px_-36px_rgba(18,44,51,0.35)] ring-1 ring-brand-ink/8"
               >
-                <header class="flex items-center gap-5 border-b border-brand-ink/8 bg-brand-cream/60 px-7 py-5">
-                  <span class="font-heading text-4xl font-bold leading-none text-brand-olive/30" aria-hidden="true">
+                <header class="flex items-center gap-4 border-b border-brand-ink/8 bg-brand-cream/60 px-7 py-5 sm:px-9">
+                  <span class="font-heading text-3xl font-bold leading-none text-brand-olive/30 select-none" aria-hidden="true">
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-brand-olive/10 text-brand-olive" set:html={missionIcons[m.icon]} />
-                  <h3 class="font-heading text-lg font-semibold uppercase tracking-wide text-brand-ink sm:text-xl">
+                  <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand-olive/10 text-brand-olive" set:html={missionIcons[m.icon]} />
+                  <h3 class="font-heading text-lg font-semibold tracking-wide text-brand-ink sm:text-xl">
                     {m.label}
                   </h3>
                 </header>
-                <div class="qs-marker qs-reading flex-1 px-7 py-6 text-[0.95rem] leading-relaxed text-brand-ink/80">
+                <div class="qs-marker qs-reading px-7 py-7 text-[1.02rem] leading-[1.7] text-brand-ink/80 sm:px-9 sm:py-8">
                   {m.text.map((t) => (
                     <p class="mb-4 last:mb-0" set:html={t} />
                   ))}
@@ -575,6 +602,56 @@ const missionIcons: Record<string, string> = {
       openExclusive(item);
     }
   });
+
+  // --- Misión: pestañas (una tarjeta visible) ---
+  const missionTabs = Array.from(document.querySelectorAll<HTMLButtonElement>(".qs-pill"));
+  const missionPanels = Array.from(document.querySelectorAll<HTMLElement>(".qs-panel"));
+
+  function restartPanelAnim(panel: HTMLElement) {
+    panel.classList.remove("qs-panel-in");
+    void panel.offsetWidth; // reinicia la animación al cambiar de pestaña
+    panel.classList.add("qs-panel-in");
+  }
+
+  function selectMissionTab(tab: HTMLButtonElement, focus = false) {
+    missionTabs.forEach((t) => {
+      const selected = t === tab;
+      t.setAttribute("aria-selected", String(selected));
+      t.tabIndex = selected ? 0 : -1;
+    });
+    missionPanels.forEach((p) => {
+      const show = p.id === tab.getAttribute("aria-controls");
+      p.hidden = !show;
+      if (show) restartPanelAnim(p);
+    });
+    if (focus) tab.focus();
+  }
+
+  missionTabs.forEach((tab) => {
+    tab.addEventListener("click", () => selectMissionTab(tab));
+  });
+
+  document
+    .querySelector('[role="tablist"][aria-label="Áreas de nuestra misión"]')
+    ?.addEventListener("keydown", (ev) => {
+      const e = ev as KeyboardEvent;
+      const current = missionTabs.indexOf(document.activeElement as HTMLButtonElement);
+      if (current === -1) return;
+      let next = -1;
+      if (e.key === "ArrowRight") next = (current + 1) % missionTabs.length;
+      else if (e.key === "ArrowLeft") next = (current - 1 + missionTabs.length) % missionTabs.length;
+      else if (e.key === "Home") next = 0;
+      else if (e.key === "End") next = missionTabs.length - 1;
+      if (next === -1) return;
+      e.preventDefault();
+      selectMissionTab(missionTabs[next], true);
+    });
+
+  // Deep-link: #mision-<id> activa directamente esa pestaña
+  if (window.location.hash.startsWith("#mision-")) {
+    const linked = missionTabs.find((t) => t.getAttribute("aria-controls") === window.location.hash.slice(1));
+    if (linked) selectMissionTab(linked);
+  }
 
   // Índice sticky: resaltar sección visible
   const indexLinks = Array.from(document.querySelectorAll<HTMLAnchorElement>(".qs-index-link"));
