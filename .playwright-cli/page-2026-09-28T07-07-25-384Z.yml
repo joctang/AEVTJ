@@ -1,0 +1,469 @@
+- generic [active] [ref=e1]:
+  - link "Saltar al contenido" [ref=e2] [cursor=pointer]:
+    - /url: "#contenido"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img "AEVTJ - Asociación Española de Víctimas de los Testigos de Jehová" [ref=e6]
+      - navigation "Menú principal" [ref=e7]:
+        - list [ref=e8]:
+          - listitem [ref=e9]:
+            - link "¿Quiénes somos?" [ref=e10] [cursor=pointer]:
+              - /url: /quienes-somos/
+          - listitem [ref=e11]:
+            - link "Noticias" [ref=e12] [cursor=pointer]:
+              - /url: /noticias/
+          - listitem [ref=e13]:
+            - link "Documentos" [ref=e14] [cursor=pointer]:
+              - /url: /recursos-de-ayuda/
+          - listitem [ref=e17]:
+            - link "Hazte socio / Donaciones" [ref=e18] [cursor=pointer]:
+              - /url: /hazte-socio/
+          - listitem [ref=e19]:
+            - link "Otras asociaciones" [ref=e20] [cursor=pointer]:
+              - /url: /otras-asociaciones/
+          - listitem [ref=e21]:
+            - link "Contacto" [ref=e22] [cursor=pointer]:
+              - /url: /contacto/
+      - generic [ref=e23]:
+        - link "Facebook" [ref=e24] [cursor=pointer]:
+          - /url: https://www.facebook.com/asoc.aevtj
+        - link "Youtube" [ref=e27] [cursor=pointer]:
+          - /url: https://www.youtube.com/@AEVTJ
+        - link "X" [ref=e30] [cursor=pointer]:
+          - /url: https://x.com
+        - link "Instagram" [ref=e33] [cursor=pointer]:
+          - /url: https://instagram.com
+  - main [ref=e36]:
+    - generic [ref=e37]:
+      - navigation "Capítulos de la guía":
+        - list:
+          - listitem:
+            - link "1. El comienzo":
+              - /url: "#el-comienzo"
+          - listitem:
+            - link "2. Love bombing":
+              - /url: "#love-bombing"
+          - listitem:
+            - 'link "3. La vida dentro: la sensación de “familia espiritual”"':
+              - /url: "#la-vida-dentro"
+          - listitem:
+            - link "4. El bautismo":
+              - /url: "#el-bautismo"
+          - listitem:
+            - 'link "5. Empezar a cuestionar: cuando surgen las dudas"':
+              - /url: "#empezar-a-cuestionar"
+          - listitem:
+            - link "6. El impacto emocional de plantearse la salida":
+              - /url: "#el-impacto-emocional"
+          - listitem:
+            - link "7 pasos para afrontar la salida":
+              - /url: "#siete-pasos"
+      - generic [ref=e38]:
+        - img "Puente en penumbra con tráfico avanzando hacia la niebla, en tonos rojizos" [ref=e39]
+        - generic [ref=e41]:
+          - paragraph [ref=e42]: Guía · Acompañamiento
+          - heading "Guía para salir de los Testigos de Jehová" [level=1] [ref=e43]
+          - paragraph [ref=e44]: Si empiezas a preguntarte si las enseñanzas y las prácticas de los Testigos de Jehová son realmente lo que necesitas en tu vida, esta guía explica qué implica dejar la organización y dónde encontrar apoyo en cada paso.
+          - generic [ref=e45]:
+            - link "Empezar la guía ↗" [ref=e46] [cursor=pointer]:
+              - /url: "#el-comienzo"
+            - link "Necesito ayuda ahora ↗" [ref=e47] [cursor=pointer]:
+              - /url: /contacto
+        - generic [ref=e48]:
+          - list "Sobre esta guía" [ref=e49]:
+            - listitem [ref=e50]:
+              - strong [ref=e51]: "6"
+              - text: min de lectura
+            - listitem [ref=e52]:
+              - strong [ref=e53]: "6"
+              - text: capítulos
+            - listitem [ref=e54]:
+              - strong [ref=e55]: "7"
+              - text: pasos
+          - link "Ver el índice" [ref=e56] [cursor=pointer]:
+            - /url: "#guia-indice"
+            - text: Ver el índice
+            - generic [aria-hidden] [ref=e57]: ↓
+      - region [ref=e58]:
+        - generic [ref=e59]:
+          - paragraph [ref=e60]: En esta guía
+          - heading [level=2] [ref=e61]:
+            - text: Salir no es el final.
+            - emphasis [ref=e62]: Es el principio.
+          - generic [ref=e63]:
+            - link "Capítulo 1 El comienzo Por qué llegas hasta aquí y por qué entender el proceso marca la diferencia." [ref=e64] [cursor=pointer]:
+              - /url: "#el-comienzo"
+              - figure [ref=e65]:
+                - generic [aria-hidden] [ref=e67]: "1"
+              - generic [ref=e68]:
+                - generic [ref=e69]: Capítulo 1
+                - heading "El comienzo" [level=3] [ref=e70]
+                - paragraph [ref=e71]: Por qué llegas hasta aquí y por qué entender el proceso marca la diferencia.
+                - generic [aria-hidden] [ref=e72]: Leer capítulo ↗
+            - link "Capítulo 2 Love bombing El estudio bíblico que se convierte en una cascada de afecto y pertenencia." [ref=e73] [cursor=pointer]:
+              - /url: "#love-bombing"
+              - figure [ref=e74]:
+                - generic [aria-hidden] [ref=e76]: "2"
+              - generic [ref=e77]:
+                - generic [ref=e78]: Capítulo 2
+                - heading "Love bombing" [level=3] [ref=e79]
+                - paragraph [ref=e80]: El estudio bíblico que se convierte en una cascada de afecto y pertenencia.
+                - generic [aria-hidden] [ref=e81]: Leer capítulo ↗
+            - 'link "Capítulo 3 La vida dentro: la sensación de “familia espiritual” Lazos intensos, técnicas de influencia y un círculo social del que cuesta salir." [ref=e82] [cursor=pointer]':
+              - /url: "#la-vida-dentro"
+              - figure [ref=e83]:
+                - generic [aria-hidden] [ref=e85]: "3"
+              - generic [ref=e86]:
+                - generic [ref=e87]: Capítulo 3
+                - 'heading "La vida dentro: la sensación de “familia espiritual”" [level=3] [ref=e88]'
+                - paragraph [ref=e89]: Lazos intensos, técnicas de influencia y un círculo social del que cuesta salir.
+                - generic [aria-hidden] [ref=e90]: Leer capítulo ↗
+            - link "Capítulo 4 El bautismo Un compromiso presentado como honor que hace la salida mucho más difícil." [ref=e91] [cursor=pointer]:
+              - /url: "#el-bautismo"
+              - figure [ref=e92]:
+                - generic [aria-hidden] [ref=e94]: "4"
+              - generic [ref=e95]:
+                - generic [ref=e96]: Capítulo 4
+                - heading "El bautismo" [level=3] [ref=e97]
+                - paragraph [ref=e98]: Un compromiso presentado como honor que hace la salida mucho más difícil.
+                - generic [aria-hidden] [ref=e99]: Leer capítulo ↗
+            - 'link "Capítulo 5 Empezar a cuestionar: cuando surgen las dudas Contradicciones, denuncias y el choque entre el discurso y la realidad." [ref=e100] [cursor=pointer]':
+              - /url: "#empezar-a-cuestionar"
+              - figure [ref=e101]:
+                - generic [aria-hidden] [ref=e103]: "5"
+              - generic [ref=e104]:
+                - generic [ref=e105]: Capítulo 5
+                - 'heading "Empezar a cuestionar: cuando surgen las dudas" [level=3] [ref=e106]'
+                - paragraph [ref=e107]: Contradicciones, denuncias y el choque entre el discurso y la realidad.
+                - generic [aria-hidden] [ref=e108]: Leer capítulo ↗
+            - link "Capítulo 6 El impacto emocional de plantearse la salida Ostracismo, miedo a perder los lazos y cómo cuidar la salud mental." [ref=e109] [cursor=pointer]:
+              - /url: "#el-impacto-emocional"
+              - figure [ref=e110]:
+                - generic [aria-hidden] [ref=e112]: "6"
+              - generic [ref=e113]:
+                - generic [ref=e114]: Capítulo 6
+                - heading "El impacto emocional de plantearse la salida" [level=3] [ref=e115]
+                - paragraph [ref=e116]: Ostracismo, miedo a perder los lazos y cómo cuidar la salud mental.
+                - generic [aria-hidden] [ref=e117]: Leer capítulo ↗
+            - link "Recorrido práctico 7 pasos para afrontar la salida" [ref=e118] [cursor=pointer]:
+              - /url: "#siete-pasos"
+              - generic [aria-hidden] [ref=e119]: "7"
+              - generic [ref=e120]:
+                - generic [ref=e121]: Recorrido práctico
+                - heading "7 pasos para afrontar la salida" [level=3] [ref=e122]
+              - generic [aria-hidden] [ref=e123]: Ver los pasos ↗
+      - generic [ref=e125]:
+        - generic [ref=e126]:
+          - generic [ref=e128]: "1"
+          - heading "El comienzo" [level=2] [ref=e129]
+          - paragraph [ref=e130]: Tal vez has llegado a este texto porque comienzas a preguntarte si las enseñanzas y las prácticas de los Testigos de Jehová son realmente lo que necesitas o deseas en tu vida. A lo mejor llevas tiempo sintiendo que algo no encaja, o que tus dudas cada día crecen un poco más. O simplemente has notado que tu visión del mundo ha cambiado y ya no se alinea con la de la organización. Sean cuales sean tus motivos, entender lo que implica dejar este grupo y cómo encontrar ayuda puede marcar la diferencia en tu experiencia.
+        - generic [ref=e132]:
+          - img "Ilustración de dos personas conversando con una Biblia abierta sobre la mesa" [ref=e134]
+          - text: +
+      - generic [ref=e136]:
+        - generic [ref=e137]:
+          - generic [ref=e139]: "2"
+          - heading "Love bombing" [level=2] [ref=e140]
+          - paragraph [ref=e141]: El inicio casi siempre se presenta como un “estudio bíblico”, una actividad que promete enseñarte las verdades de la Biblia. Sin embargo, en muchos casos, se centra en estudiar publicaciones de la Watchtower, más que en realizar un análisis profundo e imparcial de las Escrituras. Te invitan a reuniones, te rodean de gestos amables y de sonrisas que generan una sensación muy cálida de pertenencia. A este fenómeno suele llamársele “love bombing” o “bombardeo de amor”, y funciona tan bien que, al poco tiempo, sientes que has encontrado a una nueva familia y a verdaderos amigos.
+        - generic [ref=e143]:
+          - 'img "Ilustración sobre el love bombing: gestos de afecto y bienvenida de un grupo" [ref=e145]'
+          - text: +
+      - blockquote [ref=e147]: «al poco tiempo, sientes que has encontrado a una nueva familia y a verdaderos amigos»
+      - generic [ref=e149]:
+        - generic [ref=e150]:
+          - generic [ref=e152]: "3"
+          - 'heading "La vida dentro: la sensación de “familia espiritual”" [level=2] [ref=e153]'
+          - paragraph [ref=e154]: Mientras vives como Testigo de Jehová, tu forma de ver el mundo y de expresarte puede transformarse. No siempre se trata de un cambio brusco, sino de una serie de pequeños ajustes en tu forma de pensar y actuar. La organización utiliza diversas técnicas de influencia psicológica que refuerzan la confianza en su doctrina y potencian el sentimiento de grupo exclusivo y privilegiado.
+          - paragraph [ref=e155]: A lo largo de tu permanencia, estableces lazos intensos con otros miembros. Estas amistades se vuelven cruciales porque son, en muchos casos, el único círculo social con el que te relacionas profundamente. Para quienes nacieron y crecieron en la organización, esto se acentúa aún más, pues no han conocido otra comunidad más allá de la congregación.
+        - generic [ref=e157]:
+          - img "Ilustración de la predicación puerta a puerta con publicaciones de la organización" [ref=e159]
+          - text: +
+      - generic [ref=e161]:
+        - generic [ref=e162]:
+          - generic [ref=e164]: "4"
+          - heading "El bautismo" [level=2] [ref=e165]
+          - paragraph [ref=e166]: Conforme avanza el tiempo, adoptas poco a poco sus normas de conducta y aprendes que ciertas actividades sociales o incluso amistades fuera del grupo se consideran inapropiadas. Cuando ya estás totalmente inmerso en esas enseñanzas y crees firmemente que has encontrado la “verdad”, te plantean la dedicación y el bautismo como un paso de fe, un honor para servir a Dios. Lo que no se menciona abiertamente es que, una vez bautizado, tu vida y tus relaciones cambiarán de forma irreversible. Si en algún momento decides marcharte, la salida será mucho más complicada que la entrada.
+        - generic [ref=e168]:
+          - img "Ilustración de un bautismo" [ref=e170]
+          - text: +
+      - generic [ref=e172]:
+        - generic [ref=e173]:
+          - generic [ref=e175]: "5"
+          - 'heading "Empezar a cuestionar: cuando surgen las dudas" [level=2] [ref=e176]'
+          - paragraph [ref=e177]:
+            - text: "Los primeros indicios de que algo no encaja pueden llegar en el momento más inesperado: tal vez escuchas un discurso con el que no concuerdas, lees"
+            - strong [ref=e178]: declaraciones contradictorias en las publicaciones oficiales
+            - text: o descubres casos de abuso y encubrimientos que sacuden tus convicciones.
+          - paragraph [ref=e179]:
+            - text: También puede ser que veas cómo, con frecuencia,
+            - strong [ref=e180]: las normas se ajustan o cambian según las necesidades de la dirigencia
+            - text: ", o cómo piden donaciones para grandes proyectos a largo plazo mientras predican que el “fin del mundo” está muy cerca."
+          - paragraph [ref=e181]:
+            - text: En algunos países, han salido a la luz denuncias legales y declaraciones bajo juramento que no coinciden con la imagen impecable que la organización desea proyectar. Todo ello crea
+            - strong [ref=e182]: un choque entre lo que siempre has escuchado en los discursos y la realidad que comienzas a observar
+            - text: .
+          - paragraph [ref=e183]: Esto puede despertar en ti preguntas profundas sobre la coherencia de la doctrina y sobre si de verdad estás en “la única organización que Dios aprueba”.
+        - generic [ref=e185]:
+          - img "Ilustración sobre las técnicas de influencia psicológica" [ref=e187]
+          - text: +
+      - blockquote [ref=e189]: «el choque entre lo que siempre has escuchado en los discursos y la realidad que comienzas a observar»
+      - generic [ref=e191]:
+        - generic [ref=e192]:
+          - generic [ref=e194]: "6"
+          - heading "El impacto emocional de plantearse la salida" [level=2] [ref=e195]
+          - paragraph [ref=e196]:
+            - text: Tomar la decisión de salir no es un proceso sencillo. A menudo experimentas un
+            - strong [ref=e197]: conflicto interno
+            - text: ": por un lado, te sientes aliviado al pensar en liberarte de normas y rutinas que ya no compartes; por otro,"
+            - strong [ref=e198]: te aterra perder los lazos
+            - text: con amigos y familiares que siguen dentro.
+          - paragraph [ref=e199]: "En esta organización, la práctica habitual cuando alguien se aleja o es expulsado conlleva el ostracismo: los miembros tienen prohibido dirigirte la palabra o mantener contacto cercano contigo. Para una persona que ha invertido años de su vida ahí, esto puede ser devastador y desencadenar sentimientos de ansiedad, soledad, vergüenza o culpa."
+          - paragraph [ref=e200]:
+            - text: Algunos testigos que deciden irse y tienen familiares muy apegados a la congregación se enfrentan al miedo de ser rechazados o incluso de que sus seres queridos los corten de su vida por completo. Este escenario puede provocar
+            - strong [ref=e201]: episodios depresivos
+            - text: y, en los casos más graves, llevar a
+            - strong [ref=e202]: pensamientos suicidas
+            - text: ". No es un asunto menor: la salud mental está en juego, por lo que es fundamental que busques o cuentes con redes de apoyo."
+        - generic [ref=e204]:
+          - img "Ilustración de una persona ante una puerta de salida" [ref=e206]
+          - text: +
+      - complementary [ref=e208]:
+        - generic [ref=e212]:
+          - heading "Si sientes que la desesperación te supera" [level=3] [ref=e213]
+          - paragraph [ref=e214]: Si en algún momento sientes que la desesperación te supera, busca ayuda inmediata. Acude a un profesional de la salud mental o utiliza líneas de atención en crisis en tu país.
+          - paragraph [ref=e215]:
+            - link "Contacta con la asociación" [ref=e216] [cursor=pointer]:
+              - /url: /contacto
+            - link "Recursos de ayuda" [ref=e217] [cursor=pointer]:
+              - /url: /recursos-de-ayuda
+      - generic [ref=e218]:
+        - generic [ref=e219]:
+          - paragraph [ref=e220]: Cómo afrontarlo
+          - heading "7 pasos para afrontar la salida" [level=2] [ref=e221]
+        - generic [ref=e222]:
+          - tablist "Pasos para afrontar la salida" [ref=e223]:
+            - 'tab "Paso 1: Recupera el contacto con tus seres queridos" [selected] [ref=e224] [cursor=pointer]':
+              - generic [aria-hidden] [ref=e225]: "1"
+            - 'tab "Paso 2: Busca ayuda profesional" [ref=e226] [cursor=pointer]':
+              - generic [aria-hidden] [ref=e227]: "2"
+            - 'tab "Paso 3: Infórmate" [ref=e228] [cursor=pointer]':
+              - generic [aria-hidden] [ref=e229]: "3"
+            - 'tab "Paso 4: Mantén la mente abierta y el espíritu crítico" [ref=e230] [cursor=pointer]':
+              - generic [aria-hidden] [ref=e231]: "4"
+            - 'tab "Paso 5: Crea o refuerza nuevas redes de apoyo" [ref=e232] [cursor=pointer]':
+              - generic [aria-hidden] [ref=e233]: "5"
+            - 'tab "Paso 6: Si decides quedarte por motivos personales" [ref=e234] [cursor=pointer]':
+              - generic [aria-hidden] [ref=e235]: "6"
+            - 'tab "Paso 7: Conclusión: no estás solo" [ref=e236] [cursor=pointer]':
+              - generic [aria-hidden] [ref=e237]: "7"
+          - generic [ref=e238]:
+            - 'tabpanel "Paso 1: Recupera el contacto con tus seres queridos" [ref=e239]':
+              - heading "Recupera el contacto con tus seres queridos" [level=3] [ref=e240]
+              - paragraph [ref=e241]:
+                - strong [ref=e242]: Recupera el contacto con tus seres queridos
+                - text: fuera de la organización. Si te has distanciado de familiares o amigos que no son Testigos,
+                - strong [ref=e243]: retoma esos vínculos
+                - text: en la medida de lo posible.
+              - paragraph [ref=e244]:
+                - text: Explícales la situación y las razones de tu alejamiento; a menudo,
+                - strong [ref=e245]: estas personas están dispuestas a apoyarte
+                - text: y a recibirte con los brazos abiertos.
+            - 'tabpanel "Paso 2: Busca ayuda profesional"':
+              - heading "Busca ayuda profesional" [level=3]
+              - paragraph: Un psicólogo o psiquiatra especializado en salidas de grupos de alta demanda o que entienda de coerción psicológica puede orientarte mientras atraviesas el proceso.
+              - paragraph: La terapia es muy útil para manejar la culpa, la necesidad y el dolor que implica perder a personas queridas. Si te citan a un comité judicial o te llaman, no tienes por qué ir ni coger la llamada.
+              - paragraph:
+                - strong: En caso de acoso o abuso no dudes en acudir a la policía o pedir ayuda legal
+                - text: . Tampoco tienes la obligación legal de hacer una carta de renuncia si no quieres.
+            - 'tabpanel "Paso 3: Infórmate"':
+              - heading "Infórmate" [level=3]
+              - paragraph: Revisa tu perspectiva.
+              - paragraph: Se pueden encontrar fácilmente en PDF buscando en Google.
+              - paragraph:
+                - text: Estos libros y recursos son testimonios y análisis de gran ayuda para
+                - strong: entender las estructuras internas y los mecanismos de control en organizaciones religiosas de alta demanda
+                - text: .
+              - paragraph: Descubrirás que muchas de las situaciones que te han generado dudas o temor las han vivido también otras personas.
+              - generic:
+                - article:
+                  - img "Portada del libro Combatiendo el control mental de las sectas, de Steve Hassan"
+                  - generic:
+                    - heading "Combatiendo el control mental de las sectas" [level=4]
+                    - paragraph: Steve Hassan · 1988
+                - article:
+                  - img "Portada del libro Crisis de conciencia, de Raymond Franz"
+                  - generic:
+                    - heading "Crisis de conciencia" [level=4]
+                    - paragraph: Raymond Franz · 1983
+            - 'tabpanel "Paso 4: Mantén la mente abierta y el espíritu crítico"':
+              - heading "Mantén la mente abierta y el espíritu crítico" [level=3]
+              - paragraph:
+                - text: Mantén la
+                - strong: mente abierta y el espíritu crítico
+                - text: .
+              - paragraph:
+                - strong: Date permiso para indagar
+                - text: en temas bíblicos con expertos independientes o estudiosos de arqueología y lenguas antiguas. Explora textos científicos y estadísticos actuales.
+              - paragraph: Verás que un mundo de conocimiento está a tu alcance, libre de los filtros que la organización impone.
+            - 'tabpanel "Paso 5: Crea o refuerza nuevas redes de apoyo"':
+              - heading "Crea o refuerza nuevas redes de apoyo" [level=3]
+              - paragraph:
+                - strong: Crea o refuerza nuevas redes de apoyo
+              - paragraph
+              - list:
+                - listitem: Asociaciones en tu barrio sobre diferentes actividades
+                - listitem: Grupos de ex-Testigos de Jehová en redes sociales o foros.
+                - listitem: Canales de YouTube donde se comparten experiencias de salida.
+                - listitem: Encuentros presenciales de exmiembros en tu región.
+              - paragraph
+              - paragraph:
+                - strong: Conocer a otras personas que han pasado por lo mismo
+                - text: puede darte la fuerza que necesitas para seguir adelante. De todas formas, también es importante aprender a tener contacto con personas que no sean ex-testigos.
+            - 'tabpanel "Paso 6: Si decides quedarte por motivos personales"':
+              - heading "Si decides quedarte por motivos personales" [level=3]
+              - paragraph: Hay personas que, aun teniendo dudas, eligen no romper sus lazos con la congregación de forma oficial para evitar el doloroso proceso de expulsión y el ostracismo que esto conlleva.
+              - paragraph:
+                - text: Si te encuentras en esta circunstancia,
+                - strong: procura no expresar tus nuevas ideas ni comentar tus hallazgos con quienes puedan denunciarte
+                - text: . La realidad es que cada situación es diferente, y tu decisión debe basarse en tu bienestar y tus circunstancias familiares, económicas y emocionales.
+            - 'tabpanel "Paso 7: Conclusión: no estás solo"':
+              - 'heading "Conclusión: no estás solo" [level=3]'
+              - paragraph:
+                - text: Salir de la organización de los Testigos de Jehová
+                - strong: es un tránsito que puede resultar duro
+                - text: ", pero no tienes por qué llevarlo a cabo en soledad. Existe una comunidad de exmiembros y profesionales que te brindarán apoyo y comprensión en cada paso. Aunque el proceso sea difícil, es posible reconstruir tu vida con libertad, paz y"
+                - strong: la satisfacción de ser fiel a ti mismo
+                - text: .
+              - paragraph:
+                - text: "Si en algún momento sientes que la desesperación te supera, busca ayuda inmediata. Acude a un profesional de la salud mental o utiliza líneas de atención en crisis en tu país. Recuerda:"
+                - strong: tu vida y tu bienestar son más importantes que cualquier riesgo o miedo al rechazo
+                - text: .
+              - paragraph:
+                - strong: ¡No estás solo/a!
+              - paragraph:
+                - text: Cada historia de salida es un testimonio de valentía y un acto de confianza en uno mismo.
+                - strong: Te mereces ser escuchado, apoyado y comprendido
+                - text: ". Mantén la esperanza: hay futuro más allá de la organización y, con el tiempo, descubrirás que este paso te ayudará a descubrir quién eres en realidad."
+        - text: + + + + + + +
+      - region [ref=e246]:
+        - generic [ref=e247]:
+          - paragraph [ref=e248]: El camino continúa
+          - heading "No estás solo/a" [level=2] [ref=e249]
+          - generic [ref=e250]:
+            - generic [ref=e251]:
+              - heading "Si decides quedarte por motivos personales" [level=3] [ref=e252]
+              - paragraph [ref=e253]: Hay personas que, aun teniendo dudas, eligen no romper sus lazos con la congregación de forma oficial para evitar el doloroso proceso de expulsión y el ostracismo que esto conlleva.
+              - paragraph [ref=e254]:
+                - text: Si te encuentras en esta circunstancia,
+                - strong [ref=e255]: procura no expresar tus nuevas ideas ni comentar tus hallazgos con quienes puedan denunciarte
+                - text: . La realidad es que cada situación es diferente, y tu decisión debe basarse en tu bienestar y tus circunstancias familiares, económicas y emocionales.
+            - generic [ref=e256]:
+              - 'heading "Conclusión: no estás solo" [level=3] [ref=e257]'
+              - paragraph [ref=e258]:
+                - text: Salir de la organización de los Testigos de Jehová
+                - strong [ref=e259]: es un tránsito que puede resultar duro
+                - text: ", pero no tienes por qué llevarlo a cabo en soledad. Existe una comunidad de exmiembros y profesionales que te brindarán apoyo y comprensión en cada paso. Aunque el proceso sea difícil, es posible reconstruir tu vida con libertad, paz y"
+                - strong [ref=e260]: la satisfacción de ser fiel a ti mismo
+                - text: .
+              - paragraph [ref=e261]:
+                - text: "Si en algún momento sientes que la desesperación te supera, busca ayuda inmediata. Acude a un profesional de la salud mental o utiliza líneas de atención en crisis en tu país. Recuerda:"
+                - strong [ref=e262]: tu vida y tu bienestar son más importantes que cualquier riesgo o miedo al rechazo
+                - text: .
+              - paragraph [ref=e263]:
+                - strong [ref=e264]: ¡No estás solo/a!
+              - paragraph [ref=e265]:
+                - text: Cada historia de salida es un testimonio de valentía y un acto de confianza en uno mismo.
+                - strong [ref=e266]: Te mereces ser escuchado, apoyado y comprendido
+                - text: ". Mantén la esperanza: hay futuro más allá de la organización y, con el tiempo, descubrirás que este paso te ayudará a descubrir quién eres en realidad."
+          - generic [ref=e267]:
+            - generic [ref=e268]:
+              - heading "Tú puedes salir de los Testigos de Jehová" [level=3] [ref=e269]
+              - paragraph [ref=e270]: Guía y testimonios para acompañar el proceso de salida.
+              - text: ↗
+            - generic [ref=e271]:
+              - heading "Territorio Salida" [level=3] [ref=e272]
+              - paragraph [ref=e273]: Cuenta de Instagram con contenido sobre el proceso de salida.
+              - text: ↗
+            - generic [ref=e274]:
+              - heading "La verdad sobre la verdad" [level=3] [ref=e275]
+              - paragraph [ref=e276]: Canal de YouTube con experiencias y análisis sobre la organización.
+              - text: ↗
+            - link [ref=e277] [cursor=pointer]:
+              - /url: https://verdadtj.com
+              - heading "Verdadtj.com" [level=3] [ref=e278]
+              - paragraph [ref=e279]: Portal con información y recursos para quienes plantean salir.
+              - text: ↗
+          - generic [ref=e280]:
+            - link "Contacta con la asociación ↗" [ref=e281] [cursor=pointer]:
+              - /url: /contacto
+            - link "Hazte socio ↗" [ref=e282] [cursor=pointer]:
+              - /url: /hazte-socio
+  - contentinfo [ref=e283]:
+    - generic [ref=e284]:
+      - generic [ref=e285]:
+        - generic [ref=e286]:
+          - img "AEVTJ" [ref=e287]
+          - paragraph [ref=e288]: Asociación Española de Víctimas de los Testigos de Jehová y la JW.ORG. Estamos aquí para escucharte, ayudarte a recuperar tu vida y darte el apoyo que necesitas para dejar atrás la organización.
+          - generic [ref=e289]:
+            - link "Facebook" [ref=e290] [cursor=pointer]:
+              - /url: https://www.facebook.com/asoc.aevtj
+            - link "Youtube" [ref=e293] [cursor=pointer]:
+              - /url: https://www.youtube.com/@AEVTJ
+            - link "X" [ref=e296] [cursor=pointer]:
+              - /url: https://x.com
+            - link "Instagram" [ref=e299] [cursor=pointer]:
+              - /url: https://instagram.com
+        - navigation "Menú de pie de página" [ref=e302]:
+          - heading "Menú" [level=2] [ref=e303]
+          - list [ref=e304]:
+            - listitem [ref=e305]:
+              - link "¿Quiénes somos?" [ref=e306] [cursor=pointer]:
+                - /url: /quienes-somos/
+            - listitem [ref=e307]:
+              - link "Noticias" [ref=e308] [cursor=pointer]:
+                - /url: /noticias/
+            - listitem [ref=e309]:
+              - link "Documentos" [ref=e310] [cursor=pointer]:
+                - /url: /legal/
+            - listitem [ref=e311]:
+              - link "Hazte socio / Donaciones" [ref=e312] [cursor=pointer]:
+                - /url: /hazte-socio/
+            - listitem [ref=e313]:
+              - link "Otras asociaciones" [ref=e314] [cursor=pointer]:
+                - /url: /otras-asociaciones/
+            - listitem [ref=e315]:
+              - link "Contacto" [ref=e316] [cursor=pointer]:
+                - /url: /contacto/
+        - generic [ref=e317]:
+          - heading "Boletín de noticias" [level=2] [ref=e318]
+          - paragraph [ref=e319]: Recibe nuestro boletín de noticias mensual de forma totalmente gratuita y mantente informado.
+          - generic [ref=e320]:
+            - textbox "Tu correo electrónico" [ref=e321]
+            - paragraph [ref=e322]:
+              - text: Al suscribirte se abrirá tu gestor de correo con un mensaje ya preparado; no enviamos ni guardamos nada desde esta página. Tratamos tus datos según nuestra
+              - link "Política de Privacidad" [ref=e323] [cursor=pointer]:
+                - /url: /politica-de-privacidad/
+              - text: .
+            - button "Suscribirme" [ref=e324] [cursor=pointer]
+            - status
+      - generic [ref=e325]:
+        - paragraph [ref=e326]: © 2026 Asociación Española de Victimas de los Testigos de Jehová
+        - list [ref=e327]:
+          - listitem [ref=e328]:
+            - link "Aviso Legal" [ref=e329] [cursor=pointer]:
+              - /url: /aviso-legal/
+          - listitem [ref=e330]:
+            - link "Política de Cookies" [ref=e331] [cursor=pointer]:
+              - /url: /politica-de-cookies/
+          - listitem [ref=e332]:
+            - link "Política de privacidad" [ref=e333] [cursor=pointer]:
+              - /url: /politica-de-privacidad/
+  - generic [ref=e335]:
+    - paragraph [ref=e336]: Para ofrecer las mejores experiencias, utilizamos tecnologías como las cookies para almacenar y/o acceder a la información del dispositivo. El consentimiento de estas tecnologías nos permitirá procesar datos como el comportamiento de navegación o las identificaciones únicas en este sitio. No consentir o retirar el consentimiento, puede afectar negativamente a ciertas características y funciones.
+    - generic [ref=e337]:
+      - button "Denegar" [ref=e338] [cursor=pointer]
+      - button "Aceptar" [ref=e339] [cursor=pointer]
+      - link "Ver preferencias" [ref=e340] [cursor=pointer]:
+        - /url: /politica-de-cookies/

@@ -1,0 +1,349 @@
+- generic [active] [ref=e1]:
+  - link "Saltar al contenido" [ref=e2] [cursor=pointer]:
+    - /url: "#contenido"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img "AEVTJ - Asociación Española de Víctimas de los Testigos de Jehová" [ref=e6]
+      - navigation "Menú principal" [ref=e7]:
+        - list [ref=e8]:
+          - listitem [ref=e9]:
+            - link "¿Quiénes somos?" [ref=e10] [cursor=pointer]:
+              - /url: /quienes-somos/
+          - listitem [ref=e11]:
+            - link "Noticias" [ref=e12] [cursor=pointer]:
+              - /url: /noticias/
+          - listitem [ref=e13]:
+            - link "Documentos" [ref=e14] [cursor=pointer]:
+              - /url: /recursos-de-ayuda/
+          - listitem [ref=e17]:
+            - link "Hazte socio / Donaciones" [ref=e18] [cursor=pointer]:
+              - /url: /hazte-socio/
+          - listitem [ref=e19]:
+            - link "Otras asociaciones" [ref=e20] [cursor=pointer]:
+              - /url: /otras-asociaciones/
+          - listitem [ref=e21]:
+            - link "Contacto" [ref=e22] [cursor=pointer]:
+              - /url: /contacto/
+      - generic [ref=e23]:
+        - link "Facebook" [ref=e24] [cursor=pointer]:
+          - /url: https://www.facebook.com/asoc.aevtj
+        - link "Youtube" [ref=e27] [cursor=pointer]:
+          - /url: https://www.youtube.com/@AEVTJ
+        - link "X" [ref=e30] [cursor=pointer]:
+          - /url: https://x.com
+        - link "Instagram" [ref=e33] [cursor=pointer]:
+          - /url: https://instagram.com
+  - main [ref=e36]:
+    - generic [ref=e37]:
+      - navigation "Casos del expediente" [ref=e38]:
+        - list [ref=e39]:
+          - listitem [ref=e40]:
+            - link "Asociación Española de Víctimas de los Testigos de Jehová" [ref=e41] [cursor=pointer]:
+              - /url: "#caso-aevtj"
+          - listitem [ref=e43]:
+            - link "Israel Flórez" [ref=e44] [cursor=pointer]:
+              - /url: "#caso-israel-florez"
+          - listitem [ref=e46]:
+            - link "Enrique Carmona" [ref=e47] [cursor=pointer]:
+              - /url: "#caso-enrique-carmona"
+          - listitem [ref=e49]:
+            - link "Gabriel Pedrero" [ref=e50] [cursor=pointer]:
+              - /url: "#caso-gabriel-pedrero"
+          - listitem [ref=e52]:
+            - link "Juicios fuera de España" [ref=e53] [cursor=pointer]:
+              - /url: "#juicios-fuera-de-espana"
+      - generic [ref=e55]:
+        - img "Sede de la asociación" [ref=e56]
+        - generic [ref=e58]:
+          - paragraph [ref=e59]: Transparencia · Vía judicial
+          - heading "Demandas, juicios y sentencias judiciales" [level=1] [ref=e60]
+          - paragraph [ref=e61]:
+            - text: Durante el año
+            - strong [ref=e62]: "2021"
+            - text: la Asociación Española de Víctimas de los Testigos de Jehová (AEVTJ) recibió en su sede social
+            - strong [ref=e63]: 4 demandas civiles
+            - text: procedentes de
+            - strong [ref=e64]: una demanda interpuesta al juzgado de primera instancia de Torrejón de Ardoz (Madrid)
+            - text: ", desde la"
+            - strong [ref=e65]: central de los Testigos de Jehová en españa desde su sede en Ajalvir (Madrid)
+            - text: . La situación de cada una de estas demandas se expresa debajo.
+          - paragraph [ref=e66]: 4 demandas en España·4 casos internacionales·Actualizado abril de 2026
+          - link "Descargar sentencias ↗" [ref=e68] [cursor=pointer]:
+            - /url: "#caso-aevtj"
+      - region "Estado actual de los casos" [ref=e69]:
+        - generic [ref=e70]:
+          - link [ref=e71] [cursor=pointer]:
+            - /url: "#caso-aevtj"
+            - heading "Asociación Española de Víctimas de los Testigos de Jehová" [level=2] [ref=e72]
+            - paragraph [ref=e73]: Entidad jurídica registrada en el Registro Nacional de Asociaciones
+            - generic [ref=e74]: Ganada en 2ª instancia
+          - link [ref=e76] [cursor=pointer]:
+            - /url: "#caso-israel-florez"
+            - heading "Israel Flórez" [level=2] [ref=e77]
+            - paragraph [ref=e78]: Ex-presidente de la AEVTJ
+            - generic [ref=e79]: En proceso
+          - link [ref=e81] [cursor=pointer]:
+            - /url: "#caso-enrique-carmona"
+            - heading "Enrique Carmona" [level=2] [ref=e82]
+            - paragraph [ref=e83]: Ex-secretario de la AEVTJ
+            - generic [ref=e84]: Ganada · apelación inadmitida
+          - link [ref=e86] [cursor=pointer]:
+            - /url: "#caso-gabriel-pedrero"
+            - heading "Gabriel Pedrero" [level=2] [ref=e87]
+            - paragraph [ref=e88]: Ex-vocal de gestión de redes sociales de la AEVTJ
+            - generic [ref=e89]: Recurso de amparo pendiente
+        - generic [ref=e91]:
+          - paragraph [ref=e93]:
+            - text: Durante el año
+            - strong [ref=e94]: "2021"
+            - text: la Asociación Española de Víctimas de los Testigos de Jehová (AEVTJ) recibió en su sede social
+            - strong [ref=e95]: 4 demandas civiles
+            - text: procedentes de
+            - strong [ref=e96]: una demanda interpuesta al juzgado de primera instancia de Torrejón de Ardoz (Madrid)
+            - text: ", desde la"
+            - strong [ref=e97]: central de los Testigos de Jehová en españa desde su sede en Ajalvir (Madrid)
+            - text: . La situación de cada una de estas demandas se expresa debajo.
+          - complementary [ref=e98]: Todo el material ha sido editado con la exclusiva finalidad de cumplir con la ley de protección de datos.
+      - region "Casos en España" [ref=e99]:
+        - generic [ref=e100]:
+          - article [ref=e101]:
+            - generic [ref=e102]:
+              - generic [ref=e103]:
+                - heading "Contra Asociación Española de Víctimas de los Testigos de Jehová" [level=3] [ref=e104]
+                - paragraph [ref=e105]: Entidad jurídica registrada en el Registro Nacional de Asociaciones
+              - generic [ref=e106]: Ganada en 2ª instancia
+            - paragraph [ref=e108]: Demanda contra la entidad jurídica registrada en el Registro Nacional de Asociaciones.
+            - list [ref=e109]:
+              - listitem [ref=e110]:
+                - generic [ref=e111]: "2021"
+                - paragraph [ref=e112]: Llega la demanda.
+              - listitem [ref=e113]:
+                - generic [ref=e114]: Diciembre 2023
+                - paragraph [ref=e115]: Gana la Asociación en 1ª instancia.
+              - listitem [ref=e116]:
+                - generic [ref=e117]: Diciembre 2023
+                - paragraph [ref=e118]: TdJ apelan a Audiencia Provincial.
+              - listitem [ref=e119]:
+                - generic [ref=e120]: Abril 2026
+                - paragraph [ref=e121]: Gana la Asociación en 2ª instancia.
+            - list [ref=e122]:
+              - listitem [ref=e123]:
+                - link "Descargar Demanda 1ª instancia (PDF, 1,2 MB)" [ref=e124] [cursor=pointer]:
+                  - /url: /uploads/2023/12/caso1-demanda-1a-instancia.pdf
+                  - generic [ref=e128]: Demanda 1ª instancia
+                  - generic [ref=e129]: PDF · 1,2 MB
+                  - generic [aria-hidden] [ref=e130]: ↓
+              - listitem [ref=e131]:
+                - link "Descargar SENTENCIA 1ª instancia (PDF, 2,1 MB)" [ref=e132] [cursor=pointer]:
+                  - /url: /uploads/2023/12/caso1-sentencia-1a-instancia.pdf
+                  - generic [ref=e136]: SENTENCIA 1ª instancia
+                  - generic [ref=e137]: PDF · 2,1 MB
+                  - generic [aria-hidden] [ref=e138]: ↓
+              - listitem [ref=e139]:
+                - link "Descargar SENTENCIA 2ª instancia (PDF, 926 KB)" [ref=e140] [cursor=pointer]:
+                  - /url: /uploads/2026/04/caso1-sentencia-2a-instancia.pdf
+                  - generic [ref=e144]: SENTENCIA 2ª instancia
+                  - generic [ref=e145]: PDF · 926 KB
+                  - generic [aria-hidden] [ref=e146]: ↓
+          - article [ref=e147]:
+            - generic [ref=e148]:
+              - generic [ref=e149]:
+                - heading "Contra Israel Flórez" [level=3] [ref=e150]
+                - paragraph [ref=e151]: Ex-presidente de la AEVTJ
+              - generic [ref=e152]: En proceso
+            - paragraph [ref=e154]: Demanda contra el ex-presidente de la AEVTJ, Israel Flórez.
+            - paragraph [ref=e156]: El juicio aún no se ha celebrado
+            - paragraph [ref=e157]: En proceso
+          - article [ref=e158]:
+            - generic [ref=e159]:
+              - generic [ref=e160]:
+                - heading "Contra Enrique Carmona" [level=3] [ref=e161]
+                - paragraph [ref=e162]: Ex-secretario de la AEVTJ
+              - generic [ref=e163]: Ganada · apelación inadmitida
+            - paragraph [ref=e165]: Demanda contra el ex-secretario de la AEVTJ, Enrique Carmona.
+            - generic [ref=e166]:
+              - paragraph [ref=e167]: "Situación: ganada por Enrique Carmona en la Audiencia Provincial de Madrid en 2024."
+              - paragraph [ref=e168]: Apelación de los TdJ inadmitida por el Tribunal Supremo.
+            - list [ref=e169]:
+              - listitem [ref=e170]:
+                - link "Descargar DEMANDA 1ª instancia (PDF, 1,2 MB)" [ref=e171] [cursor=pointer]:
+                  - /url: /uploads/2023/12/caso2-demanda-1a-instancia.pdf
+                  - generic [ref=e175]: DEMANDA 1ª instancia
+                  - generic [ref=e176]: PDF · 1,2 MB
+                  - generic [aria-hidden] [ref=e177]: ↓
+              - listitem [ref=e178]:
+                - link "Descargar SENTENCIA 1ª instancia (PDF, 877 KB)" [ref=e179] [cursor=pointer]:
+                  - /url: /uploads/2023/12/caso2-sentencia-1a-instancia.pdf
+                  - generic [ref=e183]: SENTENCIA 1ª instancia
+                  - generic [ref=e184]: PDF · 877 KB
+                  - generic [aria-hidden] [ref=e185]: ↓
+              - listitem [ref=e186]:
+                - link "Descargar INADMISION APEL. TRIBUNAL SUPREMO (PDF, 119 KB)" [ref=e187] [cursor=pointer]:
+                  - /url: /uploads/2026/04/caso2-inadmision-recurso-supremo.pdf
+                  - generic [ref=e191]: INADMISION APEL. TRIBUNAL SUPREMO
+                  - generic [ref=e192]: PDF · 119 KB
+                  - generic [aria-hidden] [ref=e193]: ↓
+              - listitem [ref=e194]:
+                - link "Descargar DIFERENCIAS DEMANDA VS SENTENCIA 1ª instancia (PDF, 209 KB)" [ref=e195] [cursor=pointer]:
+                  - /url: /uploads/2023/12/caso2-diferencias-demanda-sentencia.pdf
+                  - generic [ref=e199]: DIFERENCIAS DEMANDA VS SENTENCIA 1ª instancia
+                  - generic [ref=e200]: PDF · 209 KB
+                  - generic [aria-hidden] [ref=e201]: ↓
+          - article [ref=e202]:
+            - generic [ref=e203]:
+              - generic [ref=e204]:
+                - heading "Contra Gabriel Pedrero" [level=3] [ref=e205]
+                - paragraph [ref=e206]: Ex-vocal de gestión de redes sociales de la AEVTJ
+              - generic [ref=e207]: Recurso de amparo pendiente
+            - paragraph [ref=e209]: Demanda contra el ex-vocal de gestión de redes sociales de la AEVTJ, Gabriel Pedrero.
+            - paragraph [ref=e211]: "Situación: ganada en 1ª instancia, perdida en Audiencia Provincial de Madrid. Pendiente de recurso de amparo ante el Tribunal Constitucional."
+            - list [ref=e212]:
+              - listitem [ref=e213]:
+                - link "Descargar SENTENCIA 2ª instancia (PDF, 299 KB)" [ref=e214] [cursor=pointer]:
+                  - /url: /uploads/2026/04/caso3-sentencia-2a-instancia.pdf
+                  - generic [ref=e218]: SENTENCIA 2ª instancia
+                  - generic [ref=e219]: PDF · 299 KB
+                  - generic [aria-hidden] [ref=e220]: ↓
+        - paragraph [ref=e221]: "Última actualización: abril de 2026"
+      - region [ref=e222]:
+        - generic [ref=e223]:
+          - paragraph [ref=e224]: Contexto internacional
+          - heading "Juicios fuera de España" [level=2] [ref=e225]
+          - paragraph [ref=e226]: Aquí les vamos a ofrecer toda la información acerca de los juicios que otras víctimas o incluso los propios Testigos de Jehová están teniendo en todo el mundo
+        - generic [ref=e227]:
+          - article [ref=e228]:
+            - generic [ref=e229]: "2015"
+            - heading "Estados Unidos · California" [level=3] [ref=e230]
+            - paragraph [ref=e231]:
+              - text: El Tribunal de Apelación de California confirmó la
+              - strong [ref=e232]: responsabilidad por negligencia
+              - text: de Watchtower y de la congregación por no limitar/supervisar actividades en las que el agresor accedió a la víctima, y
+              - strong [ref=e233]: mantuvo 2,8 M$ en daños compensatorios
+              - text: ", revocando los punitivos y el “deber de advertir”."
+            - link "Más información sobre el caso de Estados Unidos · California (2015) — se abre en un sitio externo" [ref=e234] [cursor=pointer]:
+              - /url: https://law.justia.com/cases/california/court-of-appeal/2015/a136641.html
+              - text: Más información
+          - article [ref=e239]:
+            - generic [ref=e240]: "2024"
+            - heading "Estados Unidos · Montana" [level=3] [ref=e241]
+            - paragraph [ref=e242]:
+              - text: Un juez federal en Montana
+              - strong [ref=e243]: canceló la fecha de juicio
+              - text: en los casos
+              - strong [ref=e244]: Caekaert
+              - text: "y"
+              - strong [ref=e245]: Rowland
+              - text: tras notificarse un
+              - strong [ref=e246]: acuerdo confidencial
+              - text: entre las partes. Llega después de
+              - strong [ref=e247]: varias sanciones
+              - text: a la Watchtower por conductas en el descubrimiento de pruebas. El expediente se cerró administrativamente en semanas posteriores.
+            - link "Más información sobre el caso de Estados Unidos · Montana (2024) — se abre en un sitio externo" [ref=e248] [cursor=pointer]:
+              - /url: https://www.jwchildabuse.org/news/jehovahs-witnesses-settle-historic-child-abuse-cases-in-federal-court/
+              - text: Más información
+          - article [ref=e253]:
+            - generic [ref=e254]: "2025"
+            - heading "Noruega" [level=3] [ref=e255]
+            - paragraph [ref=e256]: El gobierno noruego revocó en 2022 el registro y subsidios de los Testigos de Jehová por prácticas de ostracismo (shunning) consideradas dañinas para niños y libertad de salida. Tras victorias y derrotas en tribunales inferiores (última apelación ganada en marzo 2025), el Estado apeló a la Corte Suprema, que programó audiencia para febrero 2026.
+            - link "Más información sobre el caso de Noruega (2025) — se abre en un sitio externo" [ref=e257] [cursor=pointer]:
+              - /url: https://avoidjw.org/news/norway-supreme-court-shunning-childrens-rights-appeal/
+              - text: Más información
+          - article [ref=e262]:
+            - generic [ref=e263]: "2024"
+            - heading "Estados Unidos · Nueva York" [level=3] [ref=e264]
+            - paragraph [ref=e265]:
+              - text: La Apelación de NY
+              - strong [ref=e266]: confirmó
+              - text: que el Cuerpo Gobernante puede ser
+              - strong [ref=e267]: demandado
+              - text: como asociación no incorporada y que las reclamaciones por
+              - strong [ref=e268]: negligencia
+              - text: estaban suficientemente alegadas.
+              - strong [ref=e269]: No es condena en el fondo
+              - text: ": permite que el pleito siga (descubrimiento, etc.)."
+            - link "Más información sobre el caso de Estados Unidos · Nueva York (2024) — se abre en un sitio externo" [ref=e270] [cursor=pointer]:
+              - /url: https://caselaw.findlaw.com/court/ny-supreme-court/116669237.html
+              - text: Más información
+      - region "Aviso sobre el anonimizado" [ref=e275]:
+        - complementary [ref=e276]:
+          - paragraph [ref=e277]: Todo el material ha sido editado con la exclusiva finalidad de cumplir con la ley de protección de datos.
+          - paragraph [ref=e278]: Los documentos se publican tal como fueron presentados o resueltos.
+      - region [ref=e279]:
+        - generic [ref=e280]:
+          - paragraph [ref=e281]: Transparencia
+          - heading "La defensa jurídica se sostiene entre todos" [level=2] [ref=e282]
+          - paragraph [ref=e283]: Cada sentencia descargable es el resultado del apoyo de personas que hacen posible esta defensa.
+          - generic [ref=e284]:
+            - link "Denuncia tu caso ↗" [ref=e285] [cursor=pointer]:
+              - /url: /contacto
+            - link "Hazte socio ↗" [ref=e286] [cursor=pointer]:
+              - /url: /hazte-socio
+  - contentinfo [ref=e287]:
+    - generic [ref=e288]:
+      - generic [ref=e289]:
+        - generic [ref=e290]:
+          - img "AEVTJ" [ref=e291]
+          - paragraph [ref=e292]: Asociación Española de Víctimas de los Testigos de Jehová y la JW.ORG. Estamos aquí para escucharte, ayudarte a recuperar tu vida y darte el apoyo que necesitas para dejar atrás la organización.
+          - generic [ref=e293]:
+            - link "Facebook" [ref=e294] [cursor=pointer]:
+              - /url: https://www.facebook.com/asoc.aevtj
+            - link "Youtube" [ref=e297] [cursor=pointer]:
+              - /url: https://www.youtube.com/@AEVTJ
+            - link "X" [ref=e300] [cursor=pointer]:
+              - /url: https://x.com
+            - link "Instagram" [ref=e303] [cursor=pointer]:
+              - /url: https://instagram.com
+        - navigation "Menú de pie de página" [ref=e306]:
+          - heading "Menú" [level=2] [ref=e307]
+          - list [ref=e308]:
+            - listitem [ref=e309]:
+              - link "¿Quiénes somos?" [ref=e310] [cursor=pointer]:
+                - /url: /quienes-somos/
+            - listitem [ref=e311]:
+              - link "Noticias" [ref=e312] [cursor=pointer]:
+                - /url: /noticias/
+            - listitem [ref=e313]:
+              - link "Documentos" [ref=e314] [cursor=pointer]:
+                - /url: /legal/
+            - listitem [ref=e315]:
+              - link "Hazte socio / Donaciones" [ref=e316] [cursor=pointer]:
+                - /url: /hazte-socio/
+            - listitem [ref=e317]:
+              - link "Otras asociaciones" [ref=e318] [cursor=pointer]:
+                - /url: /otras-asociaciones/
+            - listitem [ref=e319]:
+              - link "Contacto" [ref=e320] [cursor=pointer]:
+                - /url: /contacto/
+        - generic [ref=e321]:
+          - heading "Boletín de noticias" [level=2] [ref=e322]
+          - paragraph [ref=e323]: Recibe nuestro boletín de noticias mensual de forma totalmente gratuita y mantente informado.
+          - generic [ref=e324]:
+            - textbox "Tu correo electrónico" [ref=e325]
+            - paragraph [ref=e326]:
+              - text: Al suscribirte se abrirá tu gestor de correo con un mensaje ya preparado; no enviamos ni guardamos nada desde esta página. Tratamos tus datos según nuestra
+              - link "Política de Privacidad" [ref=e327] [cursor=pointer]:
+                - /url: /politica-de-privacidad/
+              - text: .
+            - button "Suscribirme" [ref=e328] [cursor=pointer]
+            - status
+      - generic [ref=e329]:
+        - paragraph [ref=e330]: © 2026 Asociación Española de Victimas de los Testigos de Jehová
+        - list [ref=e331]:
+          - listitem [ref=e332]:
+            - link "Aviso Legal" [ref=e333] [cursor=pointer]:
+              - /url: /aviso-legal/
+          - listitem [ref=e334]:
+            - link "Política de Cookies" [ref=e335] [cursor=pointer]:
+              - /url: /politica-de-cookies/
+          - listitem [ref=e336]:
+            - link "Política de privacidad" [ref=e337] [cursor=pointer]:
+              - /url: /politica-de-privacidad/
+  - generic [ref=e339]:
+    - paragraph [ref=e340]: Para ofrecer las mejores experiencias, utilizamos tecnologías como las cookies para almacenar y/o acceder a la información del dispositivo. El consentimiento de estas tecnologías nos permitirá procesar datos como el comportamiento de navegación o las identificaciones únicas en este sitio. No consentir o retirar el consentimiento, puede afectar negativamente a ciertas características y funciones.
+    - generic [ref=e341]:
+      - button "Denegar" [ref=e342] [cursor=pointer]
+      - button "Aceptar" [ref=e343] [cursor=pointer]
+      - link "Ver preferencias" [ref=e344] [cursor=pointer]:
+        - /url: /politica-de-cookies/

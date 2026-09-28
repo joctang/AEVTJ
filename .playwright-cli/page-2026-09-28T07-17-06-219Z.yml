@@ -1,0 +1,454 @@
+- generic [active] [ref=e1]:
+  - link "Saltar al contenido" [ref=e2] [cursor=pointer]:
+    - /url: "#contenido"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img "AEVTJ - Asociación Española de Víctimas de los Testigos de Jehová" [ref=e6]
+      - navigation "Menú principal" [ref=e7]:
+        - list [ref=e8]:
+          - listitem [ref=e9]:
+            - link "¿Quiénes somos?" [ref=e10] [cursor=pointer]:
+              - /url: /quienes-somos/
+          - listitem [ref=e11]:
+            - link "Noticias" [ref=e12] [cursor=pointer]:
+              - /url: /noticias/
+          - listitem [ref=e13]:
+            - link "Documentos" [ref=e14] [cursor=pointer]:
+              - /url: /recursos-de-ayuda/
+          - listitem [ref=e17]:
+            - link "Hazte socio / Donaciones" [ref=e18] [cursor=pointer]:
+              - /url: /hazte-socio/
+          - listitem [ref=e19]:
+            - link "Otras asociaciones" [ref=e20] [cursor=pointer]:
+              - /url: /otras-asociaciones/
+          - listitem [ref=e21]:
+            - link "Contacto" [ref=e22] [cursor=pointer]:
+              - /url: /contacto/
+      - generic [ref=e23]:
+        - link "Facebook" [ref=e24] [cursor=pointer]:
+          - /url: https://www.facebook.com/asoc.aevtj
+        - link "Youtube" [ref=e27] [cursor=pointer]:
+          - /url: https://www.youtube.com/@AEVTJ
+        - link "X" [ref=e30] [cursor=pointer]:
+          - /url: https://x.com
+        - link "Instagram" [ref=e33] [cursor=pointer]:
+          - /url: https://instagram.com
+  - main [ref=e36]:
+    - generic [ref=e37]:
+      - generic [ref=e38]:
+        - img "Miembros de la junta directiva de la AEVTJ frente a la sede de los Testigos de Jehová en España" [ref=e39]
+        - generic [ref=e41]:
+          - paragraph [ref=e42]: Asociación de víctimas de los Testigos de Jehová
+          - heading "Quienes somos" [level=1] [ref=e43]
+          - generic [ref=e44]:
+            - paragraph [ref=e45]: Esta asociación está fundada por miembros como tú.
+            - paragraph [ref=e46]: Por personas que han pasado o están pasando lo mismo que tú.
+            - link "Nuestros Estatutos" [ref=e47] [cursor=pointer]:
+              - /url: /uploads/2026/08/ESTATUTOS_WEB.pdf
+      - generic [ref=e49]:
+        - generic [ref=e50]:
+          - generic [aria-hidden] [ref=e52]: "01"
+          - heading "Te necesitamos" [level=3] [ref=e53]
+          - paragraph [ref=e55]: Miles de personas alrededor del mundo están sufriendo prácticas coercitivas
+          - link "Hazte socio ya" [ref=e56] [cursor=pointer]:
+            - /url: /hazte-socio/
+            - text: Hazte socio ya→
+        - generic [ref=e57]:
+          - heading "Recursos" [level=3] [ref=e61]
+          - paragraph [ref=e63]: ¿Necesitas ayuda legal o psicológica?
+          - link "Contacta con nosotros" [ref=e64] [cursor=pointer]:
+            - /url: /contacto/
+            - text: Contacta con nosotros→
+      - generic [ref=e66]:
+        - heading "Nuestra misión" [level=2] [ref=e67]
+        - tablist "Áreas de nuestra misión" [ref=e68]:
+          - tab "Agrupar" [selected] [ref=e69] [cursor=pointer]
+          - tab "Ayudar" [ref=e76] [cursor=pointer]
+          - tab "Dar visibilidad" [ref=e80] [cursor=pointer]
+          - tab "Ejercer de grupo de presión" [ref=e85] [cursor=pointer]
+        - tabpanel "Agrupar" [ref=e90]:
+          - generic [ref=e91]:
+            - generic [aria-hidden] [ref=e92]: "01"
+            - heading "Agrupar" [level=3] [ref=e99]
+          - generic [ref=e100]:
+            - paragraph [ref=e101]:
+              - strong [ref=e102]: Reunir y crear una comunidad abierta
+              - text: para todas aquellas personas que, de alguna manera, se consideren
+              - strong [ref=e103]: víctimas
+              - text: de la organización de los Testigos Cristianos de Jehová.
+            - paragraph [ref=e104]:
+              - text: Nuestro objetivo es proporcionar un
+              - strong [ref=e105]: espacio de apoyo
+              - text: mutuo, donde puedan
+              - strong [ref=e106]: compartir
+              - text: sus experiencias, encontrar
+              - strong [ref=e107]: comprensión
+              - text: "y"
+              - strong [ref=e108]: obtener recursos útiles para superar las consecuencias
+              - text: emocionales, sociales, legales o psicológicas derivadas de su vinculación con esta organización.
+      - generic [ref=e112]:
+        - paragraph [ref=e113]: Un mismo equipo, una misma causa
+        - heading "Nuestra junta directiva" [level=2] [ref=e114]
+        - paragraph [ref=e115]: "Cuatro personas unidas por una misma experiencia y un mismo propósito: acompañar, defender y dar voz a quienes han sufrido el ostracismo de los Testigos de Jehová."
+        - generic [ref=e116]:
+          - article [ref=e117]:
+            - generic [ref=e118]:
+              - img "Retrato de Samuel Ferrando" [ref=e119]
+              - generic [ref=e120]: Presidente
+            - generic [ref=e121]:
+              - heading "Samuel Ferrando" [level=3] [ref=e122]
+              - paragraph [ref=e124]: Ex testigo y ex anciano de congregación; hoy lidera la AEVTJ para visibilizar el ostracismo y reforzar el apoyo legal e institucional a las víctimas
+          - article [ref=e125]:
+            - generic [ref=e126]:
+              - img "Retrato de Soraya Navarro" [ref=e127]
+              - generic [ref=e128]: Vicepresidenta
+            - generic [ref=e129]:
+              - heading "Soraya Navarro" [level=3] [ref=e130]
+              - paragraph [ref=e132]: Coordina la defensa y acompañamiento a víctimas, impulsando campañas de sensibilización y mejora de protocolos de atención.
+          - article [ref=e133]:
+            - generic [ref=e134]:
+              - img "Retrato de Natán Verdés" [ref=e135]
+              - generic [ref=e136]: Secretario
+            - generic [ref=e137]:
+              - heading "Natán Verdés" [level=3] [ref=e138]
+              - paragraph [ref=e140]: Ex Testigo de Jehová, graduado en Filosofía (UB), hoy aporta una mirada informada y humanista para visibilizar el ostracismo y el control que sufren los exmiembros, impulsando apoyo y reparación
+          - article [ref=e141]:
+            - generic [ref=e142]:
+              - img "Retrato de Rebeca Quesada" [ref=e143]
+              - generic [ref=e144]: Tesorera
+            - generic [ref=e145]:
+              - heading "Rebeca Quesada" [level=3] [ref=e146]
+              - paragraph [ref=e148]: Con dedicación y transparencia, gestiona los recursos de la Asociación Española de Víctimas de los Testigos de Jehová
+      - generic [ref=e150]:
+        - generic [ref=e151]:
+          - heading "Portal de transparencia" [level=2] [ref=e152]
+          - generic [ref=e153]:
+            - text: Transparencia
+            - generic [ref=e156]: "· Última actualización: 27 de abril de 2026"
+        - generic [ref=e157]:
+          - generic [ref=e158]: Documentos destacados
+          - link "Estatutos (PDF)" [ref=e159] [cursor=pointer]:
+            - /url: /uploads/2026/08/ESTATUTOS_WEB.pdf
+          - link "Estado de cuentas de la asociación 2026 (PDF)" [ref=e160] [cursor=pointer]:
+            - /url: /uploads/2026/07/ingresos_gastos_2025.pdf
+        - generic [ref=e161]:
+          - navigation "Índice del Portal de transparencia" [ref=e162]:
+            - list [ref=e163]:
+              - listitem [ref=e164]:
+                - link "Bienvenida" [ref=e165] [cursor=pointer]:
+                  - /url: "#transparencia-bienvenida"
+              - listitem [ref=e166]:
+                - link "1. Información general" [ref=e167] [cursor=pointer]:
+                  - /url: "#transparencia-1-informaci-n-general"
+              - listitem [ref=e168]:
+                - link "2. Organización y gobernanza" [ref=e169] [cursor=pointer]:
+                  - /url: "#transparencia-2-organizaci-n-y-gobernanza"
+              - listitem [ref=e170]:
+                - link "3. Información económica y presupuestaria" [ref=e171] [cursor=pointer]:
+                  - /url: "#transparencia-3-informaci-n-econ-mica-y-presupuestaria"
+              - listitem [ref=e172]:
+                - link "4. Contratos y convenios" [ref=e173] [cursor=pointer]:
+                  - /url: "#transparencia-4-contratos-y-convenios"
+              - listitem [ref=e174]:
+                - link "5. Proyectos y actividades" [ref=e175] [cursor=pointer]:
+                  - /url: "#transparencia-5-proyectos-y-actividades"
+              - listitem [ref=e176]:
+                - link "6. Acceso a la información pública" [ref=e177] [cursor=pointer]:
+                  - /url: "#transparencia-6-acceso-a-la-informaci-n-p-blica"
+              - listitem [ref=e178]:
+                - link "7. Canal ético" [ref=e179] [cursor=pointer]:
+                  - /url: "#transparencia-7-canal-tico"
+              - listitem [ref=e180]:
+                - link "Actualización de datos" [ref=e181] [cursor=pointer]:
+                  - /url: "#transparencia-actualizaci-n-de-datos"
+          - generic [ref=e182]:
+            - generic [ref=e183]:
+              - heading [level=3] [ref=e184]:
+                - button "Bienvenida" [expanded] [ref=e185] [cursor=pointer]:
+                  - text: Bienvenida
+                  - generic [aria-hidden] [ref=e186]: +
+              - generic [ref=e187]:
+                - paragraph [ref=e188]: Bienvenido al Portal de Transparencia de la Asociación Española de Víctimas de los Testigos de Jehová.
+                - paragraph [ref=e189]: Este espacio ha sido creado para garantizar la claridad y accesibilidad de toda la información relevante sobre nuestra organización, promoviendo la confianza y el compromiso con nuestros socios, colaboradores y la sociedad en general.
+                - paragraph [ref=e190]: En cumplimiento de lo establecido por la Ley Orgánica 1/2002, de 22 de marzo, reguladora del Derecho de Asociación, los asociados tienen derecho a acceder a la información y documentación relacionada con la gestión y funcionamiento de la organización. Para ello, podrán hacerlo a través de los órganos de representación, en los términos establecidos por la normativa vigente. Asimismo, este acceso se realiza respetando las garantías de confidencialidad y protección de datos personales previstas en la Ley Orgánica 15/1999, de 13 de diciembre, de Protección de Datos de Carácter Personal.
+            - generic [ref=e191]:
+              - heading [level=3] [ref=e192]:
+                - button "1. Información general" [ref=e193] [cursor=pointer]:
+                  - text: 1. Información general
+                  - generic [aria-hidden] [ref=e194]: +
+              - generic [ref=e195]:
+                - paragraph [ref=e196]: Quiénes SomosLa Asociación Española de Víctimas de los Testigos de Jehová (AEVTJ) es una organización sin ánimo de lucro fundada en 2018, dedicada a brindar apoyo, orientación y representación a las personas que han sufrido daños físicos, psicológicos o sociales como consecuencia de su vinculación con los Testigos de Jehová.
+                - paragraph [ref=e197]:
+                  - text: "EstatutosPuedes consultar nuestros estatutos actualizados en el siguiente enlace:"
+                  - link "Estatutos (revisión julio del 2026)" [ref=e198] [cursor=pointer]:
+                    - /url: /uploads/2026/08/ESTATUTOS_WEB.pdf
+            - generic [ref=e199]:
+              - heading [level=3] [ref=e200]:
+                - button "2. Organización y gobernanza" [ref=e201] [cursor=pointer]:
+                  - text: 2. Organización y gobernanza
+                  - generic [aria-hidden] [ref=e202]: +
+              - generic [ref=e203]:
+                - paragraph [ref=e204]: "Estructura OrganizativaNuestro equipo está compuesto por:"
+                - paragraph [ref=e205]:
+                  - strong [ref=e206]: "Junta Directiva:"
+                  - text: Samuel Ferrando (Presidente)Soraya Navarro (Vicepresidenta)Natán Verdés (Secretario)Rebeca Quesada (Tesorera)
+                - paragraph [ref=e207]:
+                  - strong [ref=e208]: "Vocalías:"
+                  - text: Abigail Aleu Fernandez (Abogada Colegiada 2386 del Ilustre Colegio de Abogados de Lleida, Vocalía Soporte Legal)Misael (Vocalía de Administración)P. (Psicólogo. Vocalía Soporte Psicológico)R. (Psicóloga. Vocalía Soporte Psicológico)Noemí Saura López (Vocalía RRSS, Newsletter y Página Web)Israel Flórez (Vocalía Asesoramiento Institucional)
+                - paragraph [ref=e209]: "La Asamblea General es el máximo órgano de decisión, seguido por la Junta Directiva. Cualquier socio o socia tiene el derecho de solicitar a la Junta Directiva acceso a toda la documentación original relacionada con la asociación:"
+                - paragraph [ref=e210]:
+                  - text: •
+                  - link "Acta de Asamblea del 11 de enero del 2025 (nombres tachados)" [ref=e211] [cursor=pointer]:
+                    - /url: /uploads/2025/01/11_ENERO_ACTA_ASAMBLEA_tachado.pdf
+                - paragraph [ref=e212]:
+                  - text: •
+                  - link "Bases de presentación de candidatura, 23 de diciembre del 2024" [ref=e213] [cursor=pointer]:
+                    - /url: /uploads/2024/12/CANDIDATURAS-ELECCIONES-AEVTJ-2025-1.pdf
+                - paragraph [ref=e214]:
+                  - text: •
+                  - link "Comunicado del 23 de diciembre del 2024" [ref=e215] [cursor=pointer]:
+                    - /url: /uploads/2024/12/Comunicado-oficial-de-la-Asociacion-de-Victimas-de-los-Testigos-de-Jehova-2.pdf
+                - paragraph [ref=e216]:
+                  - text: •
+                  - link "Acta Asamblea Extraordinaria del 21 de diciembre del 2024 (nombres tachado)" [ref=e217] [cursor=pointer]:
+                    - /url: /uploads/2024/12/21-DIC-ACTA-ASAMBLEA_tachado-1.pdf
+            - generic [ref=e218]:
+              - heading [level=3] [ref=e219]:
+                - button "3. Información económica y presupuestaria" [ref=e220] [cursor=pointer]:
+                  - text: 3. Información económica y presupuestaria
+                  - generic [aria-hidden] [ref=e221]: +
+              - generic [ref=e222]:
+                - paragraph [ref=e223]: Presupuesto y cuentas Anuales
+                - paragraph [ref=e224]: • Presupuesto y cuentas anuales 2025 – solicitar a la junta• Presupuesto y cuentas anuales 2024 – solicitar a la junta• Presupuesto y cuentas anuales 2023 – solicitar a la junta
+                - paragraph [ref=e225]: Subvenciones y Ayudas Públicas
+                - paragraph [ref=e226]: Actualmente, la asociación no dispone de ninguna subvención. Estamos trabajando en ello.
+                - paragraph [ref=e227]: Donaciones y Cuotas
+                - paragraph [ref=e228]: Nuestro principal apoyo económico proviene de donaciones de nuestros socios. Actualmente, las donaciones son totalmente voluntarias y no existe ninguna cuota de registro ni mensualidad.
+                - paragraph [ref=e229]:
+                  - link "Estado de cuentas de la asociación 2026" [ref=e230] [cursor=pointer]:
+                    - /url: /uploads/2026/07/ingresos_gastos_2025.pdf
+            - generic [ref=e231]:
+              - heading [level=3] [ref=e232]:
+                - button "4. Contratos y convenios" [ref=e233] [cursor=pointer]:
+                  - text: 4. Contratos y convenios
+                  - generic [aria-hidden] [ref=e234]: +
+              - generic [ref=e235]:
+                - paragraph [ref=e236]: Convenios Firmados
+                - paragraph [ref=e237]: • Con la Universitat de Barcelona.
+            - generic [ref=e238]:
+              - heading [level=3] [ref=e239]:
+                - button "5. Proyectos y actividades" [ref=e240] [cursor=pointer]:
+                  - text: 5. Proyectos y actividades
+                  - generic [aria-hidden] [ref=e241]: +
+              - generic [ref=e242]:
+                - paragraph [ref=e243]: Proyectos en Curso y Resultados de Actividades
+                - paragraph [ref=e244]: • Solicitar a la junta.
+            - generic [ref=e245]:
+              - heading [level=3] [ref=e246]:
+                - button "6. Acceso a la información pública" [ref=e247] [cursor=pointer]:
+                  - text: 6. Acceso a la información pública
+                  - generic [aria-hidden] [ref=e248]: +
+              - generic [ref=e249]:
+                - paragraph [ref=e250]: Formulario de Solicitud
+                - paragraph [ref=e251]: "Si necesitas información adicional o tienes alguna consulta, por favor, envía un correo electrónico a la siguiente dirección: info@victimasdetestigosdejehova.org"
+            - generic [ref=e252]:
+              - heading [level=3] [ref=e253]:
+                - button "7. Canal ético" [ref=e254] [cursor=pointer]:
+                  - text: 7. Canal ético
+                  - generic [aria-hidden] [ref=e255]: +
+              - paragraph [ref=e257]: "Hemos habilitado un canal para comunicar cualquier irregularidad o mal uso de recursos. Tu denuncia será tratada con confidencialidad: info@victimasdetestigosdejehova.org"
+            - generic [ref=e258]:
+              - heading [level=3] [ref=e259]:
+                - button "Actualización de datos" [ref=e260] [cursor=pointer]:
+                  - text: Actualización de datos
+                  - generic [aria-hidden] [ref=e261]: +
+              - generic [ref=e262]:
+                - paragraph [ref=e263]: "Este portal se actualiza periódicamente. Última actualización: 27 de Abril del 2026."
+                - paragraph [ref=e264]: Si tienes alguna sugerencia o comentario sobre el Portal de Transparencia, no dudes en contactarnos. ¡Gracias por tu interés y confianza!
+      - generic [ref=e266]:
+        - heading "Nuestros colaboradores" [level=2] [ref=e267]
+        - paragraph [ref=e268]: El haber podido contar con grandes expertos en la materia nos ha hecho infinitamente más conscientes de la necesidad y la buena dirección de la asociación
+        - generic [ref=e269]:
+          - article [ref=e270]:
+            - generic [ref=e271]:
+              - generic [ref=e272]: Derecho
+              - heading "Dr. Carlos Bardavío Antón" [level=3] [ref=e273]
+              - paragraph [ref=e274]: Abogado - Doctor en derecho penal
+              - generic [ref=e275]:
+                - paragraph [ref=e276]:
+                  - strong [ref=e277]: Una autoridad práctica en el combate contra el sectarismo
+                - paragraph [ref=e278]:
+                  - text: Más allá de su formación, Bardavío es un
+                  - strong [ref=e279]: profesional activo en el terreno
+                  - text: . Desde 2017, colabora como asesor jurídico-legal con
+                  - strong [ref=e280]: RedUNE
+                  - text: ", una organización sin ánimo de lucro dedicada a combatir el sectarismo y el abuso de debilidad. A través de esta colaboración,"
+                  - strong [ref=e281]: ha trabajado en casos reales
+                  - text: ", asesorando a víctimas y promoviendo cambios legislativos para tipificar el delito de persuasión coercitiva en el Código Penal."
+                - paragraph [ref=e282]:
+                  - text: También forma parte de la
+                  - strong [ref=e283]: Red Iberoamericana de Estudio de las Sectas (RIES)
+                  - text: ", experiencia que le ha permitido identificar patrones de abuso y crear estrategias legales para proteger a las víctimas."
+                - paragraph [ref=e284]:
+                  - text: Ha asesorado al
+                  - strong [ref=e285]: Ministerio de Sanidad
+                  - text: en el desarrollo del Plan para la protección de la salud frente a las pseudoterapias, y colabora con la
+                  - strong [ref=e286]: Asociación para Proteger al Enfermo de Terapias Pseudocientíficas (APETP)
+                  - text: .
+            - img "Retrato de Dr. Carlos Bardavío Antón" [ref=e288]
+          - article [ref=e289]:
+            - generic [ref=e290]:
+              - generic [ref=e291]: Psicología
+              - heading "Miguel Perlado" [level=3] [ref=e292]
+              - paragraph [ref=e293]: Psicólogo clínico y psicoterapeuta. Investigador sobre el sectarismo.
+              - list [ref=e295]:
+                - listitem [ref=e296]: Trabaja desde hace 25 años como psicólogo, tanto en la atención clínica como forense, especializado en psicoterapia individual, de pareja y familia.
+                - listitem [ref=e297]: Forma parte de la Federación Española de Asociaciones de Psicoterapeutas (FEAP).
+                - listitem [ref=e298]: Miembro asociado de la Sociedad Española de Psicoanálisis (SEP), integrada en la International Psychoanalytic Association (IPA).
+                - listitem [ref=e299]: Pertenece a la International Cultic Studies Association (ICSA).
+                - listitem [ref=e300]: Coordina desde 2010 el Grupo de Trabajo sobre Derivas Sectarias del Colegio Oficial de Psicología de Cataluña (COPC).
+                - listitem [ref=e301]: Creó la Asociación Iberoamericana para la Investigación del Abuso Psicológico (AIIAP) en 2010.
+            - img "Retrato de Miguel Perlado" [ref=e303]
+          - article [ref=e304]:
+            - generic [ref=e305]:
+              - generic [ref=e306]: Teología
+              - heading "Luis Santamaría del Río" [level=3] [ref=e307]
+              - paragraph [ref=e308]: Teólogo experto en sectas
+              - list [ref=e310]:
+                - listitem [ref=e311]: Licenciado en Teología, máster en Ciencias de las Religiones y experto universitario en Comunicación Social.
+                - listitem [ref=e312]: Miembro fundador de la Red Iberoamericana de Estudio de las Sectas (RIES), director de su Biblioteca-Centro de documentación «José María Baamonde».
+                - listitem [ref=e313]: Profesor en el máster de Análisis de la Conducta Criminal de la Universidad de Salamanca.
+                - listitem [ref=e314]: Autor de varios libros y numerosos artículos sobre el fenómeno sectario.
+                - listitem [ref=e315]: Ha impartido cursos y conferencias en varios países de Europa e Iberoamérica.
+            - img "Retrato de Luis Santamaría del Río" [ref=e317]
+      - generic [ref=e319]:
+        - heading "Sobre comportamientos inaceptables" [level=2] [ref=e320]
+        - generic [ref=e321]:
+          - generic [ref=e322]:
+            - paragraph [ref=e323]: En la actual junta directiva de la Asociación Española de Víctimas de los testigos de Jehová -AEVTJ-, creemos en la consecución de nuestras metas sin violencia ni malos modales, como ya se ha comunicado en el apartado «nuestra misión», una de ellas es dar a conocer a la sociedad los comportamientos internos y desconocidos de la organización de los testigos de Jehová.
+            - paragraph [ref=e324]: A pesar del daño recibido y que nuestro fuero interno nos lo demande, caeríamos en malas prácticas si participáramos en malos comportamientos, en tal caso estaríamos actuando de manera indecorosa y similar a la de ellos como cuando insultan a la sociedad en general, a las personas en particular o a las organizaciones religiosas de distinto origen con calificativos impresentables.
+          - paragraph [ref=e325]: Es por tanto que invitamos a nuestros socios y simpatizantes a ganarles en comportamiento, modales, habla con respeto, derecho a la propiedad y libertad de culto.
+          - generic [ref=e326]:
+            - paragraph [ref=e327]: "Y por tanto, declaramos que:"
+            - generic [ref=e328]:
+              - heading "Siempre fomentamos" [level=3] [ref=e329]
+              - list [ref=e330]:
+                - listitem [ref=e331]:
+                  - generic [aria-hidden] [ref=e332]: ✓
+                  - generic [ref=e333]: Siempre fomentamos la concordia con los testigos de Jehová, aunque ellos mismos no nos hablen.
+            - generic [ref=e334]:
+              - heading "Nunca" [level=3] [ref=e335]
+              - list [ref=e336]:
+                - listitem [ref=e337]:
+                  - generic [aria-hidden] [ref=e338]: ✕
+                  - generic [ref=e339]: Nunca les insultaremos, incluso en las peores circunstancias, llamándolos de manera que no podamos demostrar.
+                - listitem [ref=e340]:
+                  - generic [aria-hidden] [ref=e341]: ✕
+                  - generic [ref=e342]: Nunca les acusamos de cosas indemostrables, solo informamos a la sociedad de asuntos que pueden ser comprobados y contrastados.
+                - listitem [ref=e343]:
+                  - generic [aria-hidden] [ref=e344]: ✕
+                  - generic [ref=e345]: Nunca fomentaremos ni incitaremos al odio a las personas bajo ningún concepto.
+                - listitem [ref=e346]:
+                  - generic [aria-hidden] [ref=e347]: ✕
+                  - generic [ref=e348]: Nunca pintamos ni manchamos sus propiedades, ni tendremos la intención de destruir cualquier propiedad de los testigos de Jehová ni de su organización.
+                - listitem [ref=e349]:
+                  - generic [aria-hidden] [ref=e350]: ✕
+                  - generic [ref=e351]: Nunca nos introduciremos en sus locales de culto para dar escándalos en su interior, ni vituperar sus emblemas sagrados.
+                - listitem [ref=e352]:
+                  - generic [aria-hidden] [ref=e353]: ✕
+                  - generic [ref=e354]: Nunca fomentaremos el asalto a sus instalaciones centrales ni locales.
+            - list [ref=e355]:
+              - listitem [ref=e356]:
+                - generic [aria-hidden] [ref=e357]: ·
+                - generic [ref=e358]: Nuestro propósito es que se cumpla la legalidad para todos, y que cada uno se haga cargo de su parte de responsabilidad ante las autoridades.
+              - listitem [ref=e359]:
+                - generic [aria-hidden] [ref=e360]: ·
+                - generic [ref=e361]: Nos reservamos el derecho a manifestarnos de forma y modo legal con permiso de las autoridades.
+              - listitem [ref=e362]:
+                - generic [aria-hidden] [ref=e363]: ·
+                - generic [ref=e364]: Nos desvinculamos de cualquier actividad que hayan hecho personas de manera independiente y privada que no haya estado autorizada y dirigida por esta junta directiva o alguno de sus órganos rectores.
+              - listitem [ref=e365]:
+                - generic [aria-hidden] [ref=e366]: ·
+                - generic [ref=e367]: Nuestro trabajo está en las oficinas, en los despachos, en los medios de comunicación y en la calle, con el máximo respeto, siempre con verdad y con intensidad.
+          - blockquote [ref=e368]:
+            - paragraph [ref=e369]: Recordamos que estas normas son una extensión del artículo 20 del apartado 3 denominado socios, de nuestros estatutos.
+            - paragraph [ref=e370]: Un socio que viole estas normas podría causar baja de la asociación según ese artículo.
+            - link "Ver los estatutos (PDF)" [ref=e371] [cursor=pointer]:
+              - /url: /uploads/2026/08/ESTATUTOS_WEB.pdf
+      - generic [ref=e375]:
+        - heading "Esta asociación está fundada por miembros como tú." [level=2] [ref=e376]
+        - paragraph [ref=e377]: Por personas que han pasado o están pasando lo mismo que tú.
+        - generic [ref=e378]:
+          - link "Hazte socio" [ref=e379] [cursor=pointer]:
+            - /url: /hazte-socio/
+          - link "Contacta" [ref=e380] [cursor=pointer]:
+            - /url: /contacto/
+  - contentinfo [ref=e381]:
+    - generic [ref=e382]:
+      - generic [ref=e383]:
+        - generic [ref=e384]:
+          - img "AEVTJ" [ref=e385]
+          - paragraph [ref=e386]: Asociación Española de Víctimas de los Testigos de Jehová y la JW.ORG. Estamos aquí para escucharte, ayudarte a recuperar tu vida y darte el apoyo que necesitas para dejar atrás la organización.
+          - generic [ref=e387]:
+            - link "Facebook" [ref=e388] [cursor=pointer]:
+              - /url: https://www.facebook.com/asoc.aevtj
+            - link "Youtube" [ref=e391] [cursor=pointer]:
+              - /url: https://www.youtube.com/@AEVTJ
+            - link "X" [ref=e394] [cursor=pointer]:
+              - /url: https://x.com
+            - link "Instagram" [ref=e397] [cursor=pointer]:
+              - /url: https://instagram.com
+        - navigation "Menú de pie de página" [ref=e400]:
+          - heading "Menú" [level=2] [ref=e401]
+          - list [ref=e402]:
+            - listitem [ref=e403]:
+              - link "¿Quiénes somos?" [ref=e404] [cursor=pointer]:
+                - /url: /quienes-somos/
+            - listitem [ref=e405]:
+              - link "Noticias" [ref=e406] [cursor=pointer]:
+                - /url: /noticias/
+            - listitem [ref=e407]:
+              - link "Documentos" [ref=e408] [cursor=pointer]:
+                - /url: /legal/
+            - listitem [ref=e409]:
+              - link "Hazte socio / Donaciones" [ref=e410] [cursor=pointer]:
+                - /url: /hazte-socio/
+            - listitem [ref=e411]:
+              - link "Otras asociaciones" [ref=e412] [cursor=pointer]:
+                - /url: /otras-asociaciones/
+            - listitem [ref=e413]:
+              - link "Contacto" [ref=e414] [cursor=pointer]:
+                - /url: /contacto/
+        - generic [ref=e415]:
+          - heading "Boletín de noticias" [level=2] [ref=e416]
+          - paragraph [ref=e417]: Recibe nuestro boletín de noticias mensual de forma totalmente gratuita y mantente informado.
+          - generic [ref=e418]:
+            - textbox "Tu correo electrónico" [ref=e419]
+            - paragraph [ref=e420]:
+              - text: Al suscribirte se abrirá tu gestor de correo con un mensaje ya preparado; no enviamos ni guardamos nada desde esta página. Tratamos tus datos según nuestra
+              - link "Política de Privacidad" [ref=e421] [cursor=pointer]:
+                - /url: /politica-de-privacidad/
+              - text: .
+            - button "Suscribirme" [ref=e422] [cursor=pointer]
+            - status
+      - generic [ref=e423]:
+        - paragraph [ref=e424]: © 2026 Asociación Española de Victimas de los Testigos de Jehová
+        - list [ref=e425]:
+          - listitem [ref=e426]:
+            - link "Aviso Legal" [ref=e427] [cursor=pointer]:
+              - /url: /aviso-legal/
+          - listitem [ref=e428]:
+            - link "Política de Cookies" [ref=e429] [cursor=pointer]:
+              - /url: /politica-de-cookies/
+          - listitem [ref=e430]:
+            - link "Política de privacidad" [ref=e431] [cursor=pointer]:
+              - /url: /politica-de-privacidad/
+  - generic [ref=e433]:
+    - paragraph [ref=e434]: Para ofrecer las mejores experiencias, utilizamos tecnologías como las cookies para almacenar y/o acceder a la información del dispositivo. El consentimiento de estas tecnologías nos permitirá procesar datos como el comportamiento de navegación o las identificaciones únicas en este sitio. No consentir o retirar el consentimiento, puede afectar negativamente a ciertas características y funciones.
+    - generic [ref=e435]:
+      - button "Denegar" [ref=e436] [cursor=pointer]
+      - button "Aceptar" [ref=e437] [cursor=pointer]
+      - link "Ver preferencias" [ref=e438] [cursor=pointer]:
+        - /url: /politica-de-cookies/

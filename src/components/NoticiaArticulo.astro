@@ -85,14 +85,35 @@ const kickerPieza = `${verbo} la pieza`;
       <section class="noticia-pieza" data-reveal aria-label={`${esAudio ? "Audio" : "Vídeo"} de la pieza`}>
         <div class="noticia-pieza__inner">
           {noticia.pieza.youtubeId && (
-            <div class="noticia-pieza__marco">
-              <iframe
-                src={`https://www.youtube-nocookie.com/embed/${noticia.pieza.youtubeId}`}
-                title={noticia.pieza.titulo}
-                loading="lazy"
-                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              />
+            <div
+              class="noticia-pieza__marco flex min-h-[240px] flex-col items-center justify-center gap-4 bg-brand-ink px-6 py-10 text-center text-white"
+              data-youtube-consent
+              data-video-id={noticia.pieza.youtubeId}
+              data-video-title={noticia.pieza.titulo}
+            >
+              <p class="max-w-lg text-sm leading-relaxed text-white/80">
+                Este vídeo procede de YouTube. Para cargarlo aquí debes aceptar las tecnologías
+                de terceros. También puedes abrirlo directamente en YouTube.
+              </p>
+              <div class="flex flex-wrap justify-center gap-3">
+                <button
+                  type="button"
+                  class="guia-pill guia-pill--solid"
+                  data-youtube-accept
+                >
+                  Aceptar y cargar vídeo
+                </button>
+                {noticia.pieza.enlaceExterno && (
+                  <a
+                    class="guia-pill guia-pill--navy"
+                    href={noticia.pieza.enlaceExterno.href}
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Abrir en YouTube
+                  </a>
+                )}
+              </div>
             </div>
           )}
 
@@ -324,3 +345,39 @@ const kickerPieza = `${verbo} la pieza`;
     )
   }
 </article>
+
+<script>
+  const youtubeBlocks = document.querySelectorAll<HTMLElement>("[data-youtube-consent]");
+  const consentKey = "aevtj-cookie-consent";
+
+  const loadYoutube = (block: HTMLElement) => {
+    if (block.dataset.loaded === "true") return;
+    const videoId = block.dataset.videoId;
+    if (!videoId) return;
+
+    const iframe = document.createElement("iframe");
+    iframe.src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(videoId)}`;
+    iframe.title = block.dataset.videoTitle || "Vídeo de YouTube";
+    iframe.loading = "lazy";
+    iframe.allow = "accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+    iframe.allowFullscreen = true;
+    block.replaceChildren(iframe);
+    block.dataset.loaded = "true";
+  };
+
+  const loadAllYoutube = () => youtubeBlocks.forEach(loadYoutube);
+
+  if (localStorage.getItem(consentKey) === "accepted") loadAllYoutube();
+
+  youtubeBlocks.forEach((block) => {
+    block.querySelector("[data-youtube-accept]")?.addEventListener("click", () => {
+      localStorage.setItem(consentKey, "accepted");
+      window.dispatchEvent(new CustomEvent("aevtj:cookie-consent", { detail: "accepted" }));
+      loadAllYoutube();
+    });
+  });
+
+  window.addEventListener("aevtj:cookie-consent", (event) => {
+    if (event.detail === "accepted") loadAllYoutube();
+  });
+</script>

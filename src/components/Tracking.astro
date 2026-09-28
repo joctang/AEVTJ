@@ -1,0 +1,30 @@
+---
+const gtmId = import.meta.env.PUBLIC_GTM_ID;
+const searchConsoleVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
+---
+
+{searchConsoleVerification && (
+  <meta name="google-site-verification" content={searchConsoleVerification} />
+)}
+
+{gtmId && (
+  <script is:inline define:vars={{ gtmId }}>
+    const loadGoogleTagManager = () => {
+      if (window.__aevtjGtmLoaded) return;
+      window.__aevtjGtmLoaded = true;
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+      const script = document.createElement("script");
+      script.async = true;
+      script.src = `https://www.googletagmanager.com/gtm.js?id=${encodeURIComponent(gtmId)}`;
+      document.head.appendChild(script);
+    };
+
+    if (localStorage.getItem("aevtj-cookie-consent") === "accepted") {
+      loadGoogleTagManager();
+    }
+    window.addEventListener("aevtj:cookie-consent", (event) => {
+      if (event.detail === "accepted") loadGoogleTagManager();
+    });
+  </script>
+)}

@@ -4,6 +4,7 @@ import "../styles/editorial.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import CookieBanner from "../components/CookieBanner.astro";
+import Tracking from "../components/Tracking.astro";
 
 interface Props {
   title: string;
@@ -24,6 +25,7 @@ const {
     <link rel="icon" type="image/png" href="/uploads/2025/10/Logo-avtj-300x300.png" />
     <title>{title} · AEVTJ</title>
     <meta name="description" content={description} />
+    <Tracking />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

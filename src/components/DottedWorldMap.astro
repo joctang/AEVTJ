@@ -4,7 +4,7 @@
 // en build time con dotted-map (misma librería, sin next/image). Un pequeño script
 // va recorriendo los países uno a uno, de etapa en etapa, cerrando el círculo.
 import DottedMap from "dotted-map";
-import { worldPartners } from "../data/partners";
+import { internationalSupport } from "../data/international-support";
 
 interface Props {
   lineColor?: string;
@@ -33,61 +33,38 @@ const countryLocations: Record<string, { lat: number; lng: number }> = {
   za: { lat: -30.5595, lng: 22.9375 },
 };
 
-const countryNames: Record<string, string> = {
-  ar: "Argentina",
-  mx: "México",
-  gb: "Reino Unido",
-  cz: "República Checa",
-  de: "Alemania",
-  nl: "Países Bajos",
-  us: "Estados Unidos",
-  au: "Australia",
-  ca: "Canadá",
-  ch: "Suiza",
-  dk: "Dinamarca",
-  fi: "Finlandia",
-  fr: "Francia",
-  it: "Italia",
-  no: "Noruega",
-  nz: "Nueva Zelanda",
-  za: "Sudáfrica",
-};
-
 const projectPointPct = (lat: number, lng: number) => ({
   x: ((lng + 180) * (800 / 360)) / 8,
   y: ((90 - lat) * (400 / 180)) / 4,
 });
 
-const partnerCountries = [...new Set(worldPartners.map((p) => p.country).filter((c): c is string => Boolean(c)))];
+const publishedResources = internationalSupport.filter(
+  (resource) => resource.countryCode !== "international" && countryLocations[resource.countryCode],
+);
 
 const spain = countryLocations.es;
 // Camino circular: cada etapa conecta con la siguiente (y la última cierra el
 // círculo con la primera), en vez de partir siempre desde España.
-const stops = partnerCountries.filter((c) => c !== "es" && countryLocations[c]);
-const dots = stops.map((c, i) => {
-  const prev = stops[(i - 1 + stops.length) % stops.length];
-  return { id: c, start: countryLocations[prev], end: countryLocations[c] };
+const dots = publishedResources.map((resource, i) => {
+  const previous = publishedResources[(i - 1 + publishedResources.length) % publishedResources.length];
+  return {
+    id: resource.id,
+    start: countryLocations[previous.countryCode],
+    end: countryLocations[resource.countryCode],
+  };
 });
-
-const orgsByCountry = new Map<string, string[]>();
-for (const p of worldPartners) {
-  if (!p.country) continue;
-  const list = orgsByCountry.get(p.country) ?? [];
-  list.push(p.name);
-  orgsByCountry.set(p.country, list);
-}
 
 // Clamp label position so it never gets clipped by the map's edges.
 const clamp = (n: number, min: number, max: number) => Math.min(max, Math.max(min, n));
 
-const labels = stops.map((c) => {
-    const { x, y } = projectPointPct(countryLocations[c].lat, countryLocations[c].lng);
+const labels = publishedResources.map((resource) => {
+    const { x, y } = projectPointPct(countryLocations[resource.countryCode].lat, countryLocations[resource.countryCode].lng);
     return {
-      id: c,
+      id: resource.id,
       x: clamp(x, 8, 92),
       y: clamp(y, 10, 88),
-      country: countryNames[c] ?? c,
-      orgs: orgsByCountry.get(c) ?? [],
+      country: resource.country,
+      name: resource.name,
     };
   });
 
@@ -124,7 +101,7 @@ const createCurvedPath = (start: { x: number; y: number }, end: { x: number; y: 
           <path
             d={createCurvedPath(startPoint, endPoint)}
             class="arc"
-            data-country={dot.id}
+            data-resource={dot.id}
             pathLength="1"
             fill="none"
           />
@@ -135,7 +112,7 @@ const createCurvedPath = (start: { x: number; y: number }, end: { x: number; y: 
       dots.map((dot) => {
         const end = projectPoint(dot.end.lat, dot.end.lng);
         return (
-          <g class="node-group" data-country={dot.id}>
+          <g class="node-group" data-resource={dot.id}>
             <circle cx={end.x} cy={end.y} r="2" class="node" />
             <circle cx={end.x} cy={end.y} r="2" class="node node--ping" />
           </g>
@@ -146,33 +123,31 @@ const createCurvedPath = (start: { x: number; y: number }, end: { x: number; y: 
   <div class="labels" aria-hidden="true">
     {
       labels.map((label) => (
-        <div class="country-label" style={`left:${label.x}%; top:${label.y}%`} data-country={label.id}>
-          <p class="country-label__name">{label.country}</p>
-          {label.orgs.map((org) => (
-            <p class="country-label__org">{org}</p>
-          ))}
-        </div>
+        <a class="country-label" style={`left:${label.x}%; top:${label.y}%`} data-resource={label.id} href={`/otras-asociaciones/#pais-${publishedResources.find((resource) => resource.id === label.id)?.countryCode}`}>
+          <span class="country-label__name">{label.name}</span>
+          <span class="country-label__org">{label.country} · Ver recursos por país ↗</span>
+        </a>
       ))
     }
   </div>
   <p class="sr-only">
-    Asociaciones aliadas: {labels.map((l) => `${l.country} (${l.orgs.join(", ")})`).join("; ")}.
+    Recursos de apoyo publicados: {labels.map((l) => `${l.name} (${l.country})`).join("; ")}.
   </p>
 </div>
 
-<script define:vars={{ countryIds: labels.map((l) => l.id) }}>
+<script define:vars={{ resourceIds: labels.map((l) => l.id) }}>
   function initDottedMapLabels() {
     const HOLD_MS = 3000;
     const FADE_MS = 900;
     const wrap = document.querySelector(".dotted-world-map");
     if (!wrap) return;
 
-    const steps = countryIds
+    const steps = resourceIds
       .map((id) => ({
         id,
-        label: wrap.querySelector(`.country-label[data-country="${id}"]`),
-        arc: wrap.querySelector(`.arc[data-country="${id}"]`),
-        node: wrap.querySelector(`.node-group[data-country="${id}"]`),
+        label: wrap.querySelector(`.country-label[data-resource="${id}"]`),
+        arc: wrap.querySelector(`.arc[data-resource="${id}"]`),
+        node: wrap.querySelector(`.node-group[data-resource="${id}"]`),
       }))
       .filter((s) => s.label && s.arc && s.node);
     if (!steps.length) return;
@@ -301,6 +276,9 @@ const createCurvedPath = (start: { x: number; y: number }, end: { x: number; y: 
     text-align: center;
     white-space: nowrap;
     opacity: 0;
+    pointer-events: none;
+    color: inherit;
+    text-decoration: none;
     filter: blur(4px);
     transition:
       opacity 0.9s ease,
@@ -310,6 +288,7 @@ const createCurvedPath = (start: { x: number; y: number }, end: { x: number; y: 
 
   .country-label.is-active {
     opacity: 1;
+    pointer-events: auto;
     filter: blur(0);
     transform: translate(-50%, -100%) translateY(-10px) scale(1);
   }
@@ -318,19 +297,26 @@ const createCurvedPath = (start: { x: number; y: number }, end: { x: number; y: 
     font-family: var(--font-heading, inherit);
     font-size: 0.85rem;
     font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    text-transform: none;
     color: var(--line-color);
     background: color-mix(in srgb, var(--line-color) 12%, white 88%);
     border: 1px solid color-mix(in srgb, var(--line-color) 30%, transparent);
     border-radius: 999px;
-    padding: 0.3rem 0.9rem;
+    max-width: 18rem;
+    padding: 0.3rem 0.8rem;
     margin: 0 0 0.3rem;
     display: inline-block;
     box-shadow: 0 0 0 0 transparent;
     transition:
       box-shadow 0.9s ease,
       background 0.9s ease;
+  }
+
+  .country-label:focus-visible {
+    outline: 3px solid var(--line-color);
+    outline-offset: 5px;
+    border-radius: 999px;
   }
 
   .country-label.is-active .country-label__name {
@@ -341,6 +327,7 @@ const createCurvedPath = (start: { x: number; y: number }, end: { x: number; y: 
   }
 
   .country-label__org {
+    display: block;
     font-size: 0.7rem;
     color: var(--color-brand-ink, #22241c);
     opacity: 0.75;

@@ -4,12 +4,10 @@
 >
   <div class="flex flex-col gap-4">
     <p class="text-xs leading-relaxed text-brand-ink/80">
-      Para ofrecer las mejores experiencias, utilizamos tecnologías como las cookies
-      para almacenar y/o acceder a la información del dispositivo. El consentimiento de
-      estas tecnologías nos permitirá procesar datos como el comportamiento de
-      navegación o las identificaciones únicas en este sitio. No consentir o retirar el
-      consentimiento, puede afectar negativamente a ciertas características y
-      funciones.
+      Utilizamos tecnologías necesarias para que la web funcione y, si lo aceptas,
+      herramientas de analítica y vídeos incrustados de plataformas externas. No usamos
+      publicidad personalizada. Consulta la
+      <a href="/politica-de-cookies/" class="underline">Política de cookies</a> para más información.
     </p>
     <div class="flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-wide">
       <button
@@ -40,9 +38,11 @@
   document.getElementById("cookie-accept")?.addEventListener("click", () => {
     localStorage.setItem(KEY, "accepted");
     banner?.classList.add("hidden");
+    window.dispatchEvent(new CustomEvent("aevtj:cookie-consent", { detail: "accepted" }));
   });
   document.getElementById("cookie-decline")?.addEventListener("click", () => {
     localStorage.setItem(KEY, "declined");
     banner?.classList.add("hidden");
+    window.dispatchEvent(new CustomEvent("aevtj:cookie-consent", { detail: "declined" }));
   });
 </script>

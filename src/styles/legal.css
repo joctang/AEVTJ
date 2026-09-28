@@ -212,14 +212,17 @@
 @media (min-width: 1280px) {
   .legal-rail {
     display: block; position: fixed; left: 34px; top: 50%; transform: translateY(-50%);
-    z-index: 30; max-width: 190px;
+    z-index: 30; max-width: 190px; padding: 14px 16px 14px 12px;
+    border: 1px solid #dce3cd; border-radius: 20px;
+    background: #f9fcebeb; box-shadow: 0 18px 42px #0f25371f;
+    backdrop-filter: blur(14px);
   }
   .legal-rail ol { list-style: none; margin: 0; padding: 0 0 0 18px; position: relative; }
   .legal-rail ol::before { content: ''; position: absolute; left: 0; top: 6px; bottom: 6px; border-left: 1px dashed #122c3333; }
   .legal-rail__progreso { position: absolute; left: -1.5px; top: 6px; width: 3px; height: 0; background: #2ea88f; border-radius: 3px; transition: height 200ms linear; }
   .legal-rail a {
     position: relative; display: flex; align-items: center; gap: 8px; min-height: 34px;
-    font-family: var(--font-body); font-size: 12px; line-height: 1.4; color: #7c8a72;
+    font-family: var(--font-body); font-size: 12px; line-height: 1.4; color: #122c33;
     text-decoration: none; transition: color 450ms var(--ease-editorial);
   }
   .legal-rail a::before { content: ''; flex: 0 0 6px; height: 6px; border-radius: 50%; background: transparent; transition: background-color 450ms var(--ease-editorial); }

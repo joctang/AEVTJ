@@ -1,6 +1,8 @@
 ---
 import { mainNav, socialLinks, legalLinks } from "../data/nav";
 import Icon from "./Icon.astro";
+
+const mailchimpFormAction = import.meta.env.PUBLIC_MAILCHIMP_FORM_ACTION;
 ---
 
 <footer class="site-footer bg-brand-ink text-white">
@@ -57,7 +59,12 @@ import Icon from "./Icon.astro";
           Recibe nuestro boletín de noticias mensual de forma totalmente gratuita y mantente
           informado.
         </p>
-        <form class="mt-4 flex flex-col gap-3" id="newsletter-form" novalidate>
+        <form
+          class="mt-4 flex flex-col gap-3"
+          id="newsletter-form"
+          action={mailchimpFormAction || undefined}
+          method={mailchimpFormAction ? "post" : undefined}
+        >
           <input
             type="email"
             name="email"
@@ -66,9 +73,15 @@ import Icon from "./Icon.astro";
             required
             class="rounded-md border border-white/20 bg-white/5 px-3 py-2 text-sm text-white placeholder-white/40 outline-none focus:border-brand-olive"
           />
+          <label class="flex items-start gap-2 text-xs text-white/60">
+            <input type="checkbox" name="consentimiento_newsletter" required class="mt-0.5" />
+            <span>Quiero recibir la newsletter y acepto el tratamiento de mi email para ese fin.</span>
+          </label>
           <p class="text-xs text-white/60">
-            Al suscribirte se abrirá tu gestor de correo con un mensaje ya preparado; no
-            enviamos ni guardamos nada desde esta página. Tratamos tus datos según nuestra{" "}
+            {mailchimpFormAction
+              ? "La suscripción se gestionará mediante Mailchimp."
+              : "La solicitud se remitirá manualmente a la asociación; todavía no hay conexión automática con Mailchimp."}{" "}
+            Tratamos tus datos según nuestra{" "}
             <a href="/politica-de-privacidad/" class="underline hover:text-white">Política de Privacidad</a>.
           </p>
           <button
@@ -100,18 +113,18 @@ import Icon from "./Icon.astro";
 </footer>
 
 <script>
-  // Sin backend de newsletter: compone un mailto con el correo introducido
-  // y abre el gestor de correo del usuario, igual que el formulario de contacto.
+  const mailchimpFormAction = import.meta.env.PUBLIC_MAILCHIMP_FORM_ACTION;
   const form = document.getElementById("newsletter-form") as HTMLFormElement | null;
   const estado = document.getElementById("newsletter-form-estado");
 
   form?.addEventListener("submit", (event) => {
+    if (mailchimpFormAction) return;
     event.preventDefault();
     if (!form.reportValidity()) return;
 
     const email = String(new FormData(form).get("email") ?? "").trim();
     const href =
-      "mailto:secretaria@victimasdetestigosdejehova.org" +
+      "mailto:info@victimasdetestigosdejehova.org" +
       "?subject=" + encodeURIComponent("Alta newsletter") +
       "&body=" + encodeURIComponent(`Quiero apuntarme al boletín de noticias.\n\n${email}`);
 

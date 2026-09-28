@@ -1,0 +1,167 @@
+- generic [active] [ref=e1]:
+  - link "Saltar al contenido" [ref=e2] [cursor=pointer]:
+    - /url: "#contenido"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img "AEVTJ - Asociación Española de Víctimas de los Testigos de Jehová" [ref=e6]
+      - navigation "Menú principal" [ref=e7]:
+        - list [ref=e8]:
+          - listitem [ref=e9]:
+            - link "¿Quiénes somos?" [ref=e10] [cursor=pointer]:
+              - /url: /quienes-somos/
+          - listitem [ref=e11]:
+            - link "Noticias" [ref=e12] [cursor=pointer]:
+              - /url: /noticias/
+          - listitem [ref=e13]:
+            - link "Documentos" [ref=e14] [cursor=pointer]:
+              - /url: /recursos-de-ayuda/
+          - listitem [ref=e17]:
+            - link "Hazte socio / Donaciones" [ref=e18] [cursor=pointer]:
+              - /url: /hazte-socio/
+          - listitem [ref=e19]:
+            - link "Otras asociaciones" [ref=e20] [cursor=pointer]:
+              - /url: /otras-asociaciones/
+          - listitem [ref=e21]:
+            - link "Contacto" [ref=e22] [cursor=pointer]:
+              - /url: /contacto/
+      - generic [ref=e23]:
+        - link "Facebook" [ref=e24] [cursor=pointer]:
+          - /url: https://www.facebook.com/asoc.aevtj
+        - link "Youtube" [ref=e27] [cursor=pointer]:
+          - /url: https://www.youtube.com/@AEVTJ
+        - link "X" [ref=e30] [cursor=pointer]:
+          - /url: https://x.com
+        - link "Instagram" [ref=e33] [cursor=pointer]:
+          - /url: https://instagram.com
+  - main [ref=e36]:
+    - generic [ref=e37]:
+      - generic [ref=e40]:
+        - paragraph [ref=e41]: Estamos aquí
+        - heading "Contacto" [level=1] [ref=e42]
+        - paragraph [ref=e43]: "Queremos ayudarte. Escríbenos al correo que mejor encaje con tu caso o cuéntanos lo que necesitas en el formulario: te responderemos lo antes posible."
+      - region [ref=e44]:
+        - generic [ref=e45]:
+          - paragraph [ref=e46]: Correos de contacto
+          - heading "Escribe directamente a quien puede ayudarte" [level=2] [ref=e47]
+          - generic [ref=e48]:
+            - link "Bienvenida o ayuda Si estás saliendo, ya has salido o necesitas apoyo. info@victimasdetestigosdejehova.org ↗" [ref=e49] [cursor=pointer]:
+              - /url: mailto:info@victimasdetestigosdejehova.org
+              - heading "Bienvenida o ayuda" [level=3] [ref=e50]
+              - paragraph [ref=e51]: Si estás saliendo, ya has salido o necesitas apoyo.
+              - generic [ref=e52]: info@victimasdetestigosdejehova.org ↗
+            - link "Ayuda legal Asesoramiento por parte de nuestro equipo jurídico. soportelegal@victimasdetestigosdejehova.org ↗" [ref=e53] [cursor=pointer]:
+              - /url: mailto:soportelegal@victimasdetestigosdejehova.org
+              - heading "Ayuda legal" [level=3] [ref=e54]
+              - paragraph [ref=e55]: Asesoramiento por parte de nuestro equipo jurídico.
+              - generic [ref=e56]: soportelegal@victimasdetestigosdejehova.org ↗
+            - link "Organismos, instituciones y periodistas Consultas de medios, administraciones y entidades. medios@victimasdetestigosdejehova.org ↗" [ref=e57] [cursor=pointer]:
+              - /url: mailto:medios@victimasdetestigosdejehova.org
+              - heading "Organismos, instituciones y periodistas" [level=3] [ref=e58]
+              - paragraph [ref=e59]: Consultas de medios, administraciones y entidades.
+              - generic [ref=e60]: medios@victimasdetestigosdejehova.org ↗
+            - link "Secretaría Altas de socios, documentación y gestiones internas. secretaria@victimasdetestigosdejehova.org ↗" [ref=e61] [cursor=pointer]:
+              - /url: mailto:secretaria@victimasdetestigosdejehova.org
+              - heading "Secretaría" [level=3] [ref=e62]
+              - paragraph [ref=e63]: Altas de socios, documentación y gestiones internas.
+              - generic [ref=e64]: secretaria@victimasdetestigosdejehova.org ↗
+      - region [ref=e65]:
+        - generic [ref=e66]:
+          - paragraph [ref=e67]: ¿Tienes más preguntas?
+          - heading "Cuéntanos tu caso" [level=2] [ref=e68]
+          - paragraph [ref=e69]: Rellena el formulario y se abrirá tu programa de correo con el mensaje ya redactado, listo para enviar. Así los datos viajan directamente desde tu cuenta a la nuestra.
+          - generic [ref=e70]:
+            - generic [ref=e71]:
+              - generic [ref=e72]:
+                - text: Nombre
+                - textbox "Nombre" [ref=e73]
+              - generic [ref=e74]:
+                - text: Email
+                - textbox "Email" [ref=e75]
+            - generic [ref=e76]:
+              - text: Destinatario
+              - combobox "Destinatario" [ref=e77] [cursor=pointer]:
+                - option "Bienvenida o ayuda" [selected]
+                - option "Ayuda legal"
+                - option "Organismos, instituciones y periodistas"
+                - option "Secretaría"
+            - generic [ref=e78]:
+              - text: Asunto
+              - textbox "Asunto" [ref=e79]
+            - generic [ref=e80]:
+              - text: Mensaje
+              - textbox "Mensaje" [ref=e81]
+            - paragraph [ref=e82]:
+              - text: "Este formulario no envía nada por sí mismo ni guarda tus datos: abre tu gestor de correo con el mensaje preparado. Si prefieres escribirnos directamente, usa una de las direcciones de arriba. Tratamos tus datos según nuestra"
+              - link "Política de Privacidad" [ref=e83] [cursor=pointer]:
+                - /url: /politica-de-privacidad/
+              - text: .
+            - button "Preparar mensaje →" [ref=e85] [cursor=pointer]
+  - contentinfo [ref=e86]:
+    - generic [ref=e87]:
+      - generic [ref=e88]:
+        - generic [ref=e89]:
+          - img "AEVTJ" [ref=e90]
+          - paragraph [ref=e91]: Asociación Española de Víctimas de los Testigos de Jehová y la JW.ORG. Estamos aquí para escucharte, ayudarte a recuperar tu vida y darte el apoyo que necesitas para dejar atrás la organización.
+          - generic [ref=e92]:
+            - link "Facebook" [ref=e93] [cursor=pointer]:
+              - /url: https://www.facebook.com/asoc.aevtj
+            - link "Youtube" [ref=e96] [cursor=pointer]:
+              - /url: https://www.youtube.com/@AEVTJ
+            - link "X" [ref=e99] [cursor=pointer]:
+              - /url: https://x.com
+            - link "Instagram" [ref=e102] [cursor=pointer]:
+              - /url: https://instagram.com
+        - navigation "Menú de pie de página" [ref=e105]:
+          - heading "Menú" [level=2] [ref=e106]
+          - list [ref=e107]:
+            - listitem [ref=e108]:
+              - link "¿Quiénes somos?" [ref=e109] [cursor=pointer]:
+                - /url: /quienes-somos/
+            - listitem [ref=e110]:
+              - link "Noticias" [ref=e111] [cursor=pointer]:
+                - /url: /noticias/
+            - listitem [ref=e112]:
+              - link "Documentos" [ref=e113] [cursor=pointer]:
+                - /url: /legal/
+            - listitem [ref=e114]:
+              - link "Hazte socio / Donaciones" [ref=e115] [cursor=pointer]:
+                - /url: /hazte-socio/
+            - listitem [ref=e116]:
+              - link "Otras asociaciones" [ref=e117] [cursor=pointer]:
+                - /url: /otras-asociaciones/
+            - listitem [ref=e118]:
+              - link "Contacto" [ref=e119] [cursor=pointer]:
+                - /url: /contacto/
+        - generic [ref=e120]:
+          - heading "Boletín de noticias" [level=2] [ref=e121]
+          - paragraph [ref=e122]: Recibe nuestro boletín de noticias mensual de forma totalmente gratuita y mantente informado.
+          - generic [ref=e123]:
+            - textbox "Tu correo electrónico" [ref=e124]
+            - paragraph [ref=e125]:
+              - text: Al suscribirte se abrirá tu gestor de correo con un mensaje ya preparado; no enviamos ni guardamos nada desde esta página. Tratamos tus datos según nuestra
+              - link "Política de Privacidad" [ref=e126] [cursor=pointer]:
+                - /url: /politica-de-privacidad/
+              - text: .
+            - button "Suscribirme" [ref=e127] [cursor=pointer]
+            - status
+      - generic [ref=e128]:
+        - paragraph [ref=e129]: © 2026 Asociación Española de Victimas de los Testigos de Jehová
+        - list [ref=e130]:
+          - listitem [ref=e131]:
+            - link "Aviso Legal" [ref=e132] [cursor=pointer]:
+              - /url: /aviso-legal/
+          - listitem [ref=e133]:
+            - link "Política de Cookies" [ref=e134] [cursor=pointer]:
+              - /url: /politica-de-cookies/
+          - listitem [ref=e135]:
+            - link "Política de privacidad" [ref=e136] [cursor=pointer]:
+              - /url: /politica-de-privacidad/
+  - generic [ref=e138]:
+    - paragraph [ref=e139]: Para ofrecer las mejores experiencias, utilizamos tecnologías como las cookies para almacenar y/o acceder a la información del dispositivo. El consentimiento de estas tecnologías nos permitirá procesar datos como el comportamiento de navegación o las identificaciones únicas en este sitio. No consentir o retirar el consentimiento, puede afectar negativamente a ciertas características y funciones.
+    - generic [ref=e140]:
+      - button "Denegar" [ref=e141] [cursor=pointer]
+      - button "Aceptar" [ref=e142] [cursor=pointer]
+      - link "Ver preferencias" [ref=e143] [cursor=pointer]:
+        - /url: /politica-de-cookies/

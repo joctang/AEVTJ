@@ -1,0 +1,315 @@
+- generic [active] [ref=e1]:
+  - link "Saltar al contenido" [ref=e2] [cursor=pointer]:
+    - /url: "#contenido"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img "AEVTJ - Asociación Española de Víctimas de los Testigos de Jehová" [ref=e6]
+      - navigation "Menú principal" [ref=e7]:
+        - list [ref=e8]:
+          - listitem [ref=e9]:
+            - link "¿Quiénes somos?" [ref=e10] [cursor=pointer]:
+              - /url: /quienes-somos/
+          - listitem [ref=e11]:
+            - link "Noticias" [ref=e12] [cursor=pointer]:
+              - /url: /noticias/
+          - listitem [ref=e13]:
+            - link "Documentos" [ref=e14] [cursor=pointer]:
+              - /url: /recursos-de-ayuda/
+          - listitem [ref=e17]:
+            - link "Hazte socio / Donaciones" [ref=e18] [cursor=pointer]:
+              - /url: /hazte-socio/
+          - listitem [ref=e19]:
+            - link "Otras asociaciones" [ref=e20] [cursor=pointer]:
+              - /url: /otras-asociaciones/
+          - listitem [ref=e21]:
+            - link "Contacto" [ref=e22] [cursor=pointer]:
+              - /url: /contacto/
+      - generic [ref=e23]:
+        - link "Facebook" [ref=e24] [cursor=pointer]:
+          - /url: https://www.facebook.com/asoc.aevtj
+        - link "Youtube" [ref=e27] [cursor=pointer]:
+          - /url: https://www.youtube.com/@AEVTJ
+        - link "X" [ref=e30] [cursor=pointer]:
+          - /url: https://x.com
+        - link "Instagram" [ref=e33] [cursor=pointer]:
+          - /url: https://instagram.com
+  - main [ref=e36]:
+    - generic [ref=e38]:
+      - generic [ref=e39]:
+        - paragraph [ref=e40]: Directorio internacional · revisión 25-09-2026
+        - heading [level=1] [ref=e41]:
+          - text: Asociaciones y recursos de apoyo
+          - emphasis [ref=e42]: por país
+        - paragraph [ref=e43]: Encuentra recursos según tu país y el tipo de ayuda que buscas. Cada ficha recoge canales publicados por la entidad o por un directorio identificado.
+        - generic [ref=e44]:
+          - generic [ref=e45]:
+            - term [ref=e46]: Países
+            - definition [ref=e47]: "14"
+          - generic [ref=e48]:
+            - term [ref=e49]: Asociaciones
+            - definition [ref=e50]: "22"
+        - link "Cómo usar este directorio" [ref=e51] [cursor=pointer]:
+          - /url: "#como-usar"
+          - text: Cómo usar este directorio
+          - generic [aria-hidden] [ref=e52]: ↓
+      - generic [aria-hidden] [ref=e53]:
+        - img [ref=e4217]:
+          - link [ref=e4219] [cursor=pointer]:
+            - /url: "#pais-de"
+          - link [ref=e4222] [cursor=pointer]:
+            - /url: "#pais-ar"
+          - link [ref=e4225] [cursor=pointer]:
+            - /url: "#pais-au"
+          - link [ref=e4228] [cursor=pointer]:
+            - /url: "#pais-ca"
+          - link [ref=e4231] [cursor=pointer]:
+            - /url: "#pais-dk"
+          - link [ref=e4234] [cursor=pointer]:
+            - /url: "#pais-us"
+          - link [ref=e4237] [cursor=pointer]:
+            - /url: "#pais-fi"
+          - link [ref=e4240] [cursor=pointer]:
+            - /url: "#pais-fr"
+          - link [ref=e4243] [cursor=pointer]:
+            - /url: "#pais-it"
+          - link [ref=e4246] [cursor=pointer]:
+            - /url: "#pais-no"
+          - link [ref=e4249] [cursor=pointer]:
+            - /url: "#pais-nz"
+          - link [ref=e4252] [cursor=pointer]:
+            - /url: "#pais-gb"
+          - link [ref=e4255] [cursor=pointer]:
+            - /url: "#pais-za"
+          - link [ref=e4258] [cursor=pointer]:
+            - /url: "#pais-ch"
+        - paragraph [ref=e4261]: Países con recursos España · AEVTJ
+    - generic [ref=e4264]:
+      - complementary "Alcance del directorio" [ref=e4265]:
+        - generic [aria-hidden] [ref=e4266]: i
+        - generic [ref=e4267]:
+          - strong [ref=e4268]: Antes de contactar
+          - paragraph [ref=e4269]: Estas entidades son independientes. AEVTJ no ha comprobado que respondan ni mantiene necesariamente un convenio con ellas. Comprueba si el servicio encaja con tu situación y, en una urgencia, acude a los servicios de emergencia de tu zona.
+      - navigation "Ir a un país" [ref=e4270]:
+        - link "Alemania" [ref=e4271] [cursor=pointer]:
+          - /url: "#pais-de"
+          - generic [aria-hidden] [ref=e4273]: "2"
+        - link "Argentina" [ref=e4274] [cursor=pointer]:
+          - /url: "#pais-ar"
+          - generic [aria-hidden] [ref=e4276]: "1"
+        - link "Australia" [ref=e4277] [cursor=pointer]:
+          - /url: "#pais-au"
+          - generic [aria-hidden] [ref=e4279]: "1"
+        - link "Canadá" [ref=e4280] [cursor=pointer]:
+          - /url: "#pais-ca"
+          - generic [aria-hidden] [ref=e4282]: "2"
+        - link "Dinamarca" [ref=e4283] [cursor=pointer]:
+          - /url: "#pais-dk"
+          - generic [aria-hidden] [ref=e4285]: "1"
+        - link "Estados Unidos" [ref=e4286] [cursor=pointer]:
+          - /url: "#pais-us"
+          - generic [aria-hidden] [ref=e4288]: "2"
+        - link "Finlandia" [ref=e4289] [cursor=pointer]:
+          - /url: "#pais-fi"
+          - generic [aria-hidden] [ref=e4291]: "1"
+        - link "Francia" [ref=e4292] [cursor=pointer]:
+          - /url: "#pais-fr"
+          - generic [aria-hidden] [ref=e4294]: "4"
+        - link "Italia" [ref=e4295] [cursor=pointer]:
+          - /url: "#pais-it"
+          - generic [aria-hidden] [ref=e4297]: "1"
+        - link "Noruega" [ref=e4298] [cursor=pointer]:
+          - /url: "#pais-no"
+          - generic [aria-hidden] [ref=e4300]: "1"
+        - link "Nueva Zelanda" [ref=e4301] [cursor=pointer]:
+          - /url: "#pais-nz"
+          - generic [aria-hidden] [ref=e4303]: "1"
+        - link "Reino Unido" [ref=e4304] [cursor=pointer]:
+          - /url: "#pais-gb"
+          - generic [aria-hidden] [ref=e4306]: "2"
+        - link "Sudáfrica" [ref=e4307] [cursor=pointer]:
+          - /url: "#pais-za"
+          - generic [aria-hidden] [ref=e4309]: "1"
+        - link "Suiza" [ref=e4310] [cursor=pointer]:
+          - /url: "#pais-ch"
+          - generic [aria-hidden] [ref=e4312]: "1"
+        - link "Internacional" [ref=e4313] [cursor=pointer]:
+          - /url: "#recursos-remotos"
+          - generic [aria-hidden] [ref=e4314]: 🌍
+      - generic [ref=e4316]:
+        - generic [ref=e4317]:
+          - text: Buscar país o entidad
+          - searchbox "Buscar país o entidad" [ref=e4318]
+        - status [ref=e4319]: 22 recursos encontrados
+      - generic [ref=e4320]:
+        - group [ref=e4321]:
+          - generic "Alemania 2 recursos publicados · Consulta los canales disponibles" [ref=e4322] [cursor=pointer]:
+            - generic [ref=e4323]:
+              - strong [ref=e4324]: Alemania
+              - generic [ref=e4325]: 2 recursos publicados · Consulta los canales disponibles
+        - group [ref=e4331]:
+          - generic "Argentina 1 recurso publicado · Consulta los canales disponibles" [ref=e4332] [cursor=pointer]:
+            - generic [ref=e4333]:
+              - strong [ref=e4334]: Argentina
+              - generic [ref=e4335]: 1 recurso publicado · Consulta los canales disponibles
+        - group [ref=e4341]:
+          - generic "Australia 1 recurso publicado · Consulta los canales disponibles" [ref=e4342] [cursor=pointer]:
+            - generic [ref=e4343]:
+              - strong [ref=e4344]: Australia
+              - generic [ref=e4345]: 1 recurso publicado · Consulta los canales disponibles
+        - group [ref=e4351]:
+          - generic "Canadá 2 recursos publicados · Consulta los canales disponibles" [ref=e4352] [cursor=pointer]:
+            - generic [ref=e4353]:
+              - strong [ref=e4354]: Canadá
+              - generic [ref=e4355]: 2 recursos publicados · Consulta los canales disponibles
+        - group [ref=e4362]:
+          - generic "Dinamarca 1 recurso publicado · Consulta los canales disponibles" [ref=e4363] [cursor=pointer]:
+            - generic [ref=e4364]:
+              - strong [ref=e4365]: Dinamarca
+              - generic [ref=e4366]: 1 recurso publicado · Consulta los canales disponibles
+        - group [ref=e4372]:
+          - generic "Estados Unidos 2 recursos publicados · Consulta los canales disponibles" [ref=e4373] [cursor=pointer]:
+            - generic [ref=e4374]:
+              - strong [ref=e4375]: Estados Unidos
+              - generic [ref=e4376]: 2 recursos publicados · Consulta los canales disponibles
+        - group [ref=e4383]:
+          - generic "Finlandia 1 recurso publicado · Consulta los canales disponibles" [ref=e4384] [cursor=pointer]:
+            - generic [ref=e4385]:
+              - strong [ref=e4386]: Finlandia
+              - generic [ref=e4387]: 1 recurso publicado · Consulta los canales disponibles
+        - group [ref=e4393]:
+          - generic "Francia 4 recursos publicados · Consulta los canales disponibles" [ref=e4394] [cursor=pointer]:
+            - generic [ref=e4395]:
+              - strong [ref=e4396]: Francia
+              - generic [ref=e4397]: 4 recursos publicados · Consulta los canales disponibles
+        - group [ref=e4404]:
+          - generic "Italia 1 recurso publicado · Consulta los canales disponibles" [ref=e4405] [cursor=pointer]:
+            - generic [ref=e4406]:
+              - strong [ref=e4407]: Italia
+              - generic [ref=e4408]: 1 recurso publicado · Consulta los canales disponibles
+        - group [ref=e4414]:
+          - generic "Noruega 1 recurso publicado · Consulta los canales disponibles" [ref=e4415] [cursor=pointer]:
+            - generic [ref=e4416]:
+              - strong [ref=e4417]: Noruega
+              - generic [ref=e4418]: 1 recurso publicado · Consulta los canales disponibles
+        - group [ref=e4424]:
+          - generic "Nueva Zelanda 1 recurso publicado · Consulta los canales disponibles" [ref=e4425] [cursor=pointer]:
+            - generic [ref=e4426]:
+              - strong [ref=e4427]: Nueva Zelanda
+              - generic [ref=e4428]: 1 recurso publicado · Consulta los canales disponibles
+        - group [ref=e4434]:
+          - generic "Reino Unido 2 recursos publicados · Consulta los canales disponibles" [ref=e4435] [cursor=pointer]:
+            - generic [ref=e4436]:
+              - strong [ref=e4437]: Reino Unido
+              - generic [ref=e4438]: 2 recursos publicados · Consulta los canales disponibles
+        - group [ref=e4445]:
+          - generic "Sudáfrica 1 recurso publicado · Consulta los canales disponibles" [ref=e4446] [cursor=pointer]:
+            - generic [ref=e4447]:
+              - strong [ref=e4448]: Sudáfrica
+              - generic [ref=e4449]: 1 recurso publicado · Consulta los canales disponibles
+        - group [ref=e4455]:
+          - generic "Suiza 1 recurso publicado · Consulta los canales disponibles" [ref=e4456] [cursor=pointer]:
+            - generic [ref=e4457]:
+              - strong [ref=e4458]: Suiza
+              - generic [ref=e4459]: 1 recurso publicado · Consulta los canales disponibles
+      - region [ref=e4465]:
+        - generic [ref=e4466]:
+          - paragraph [ref=e4467]: Sin país único
+          - heading "Recursos internacionales remotos" [level=2] [ref=e4468]
+          - paragraph [ref=e4469]: Si tu país no aparece en el directorio, estos servicios atienden a distancia.
+        - article [ref=e4470]:
+          - generic [ref=e4471]: Remoto / internacional
+          - heading "Recovering from Religion" [level=3] [ref=e4472]
+          - paragraph [ref=e4473]: Apoyo general remoto a quienes dudan, cambian o dejan una religión.
+          - paragraph [ref=e4474]: La disponibilidad inmediata y la atención en español no están garantizadas.
+          - generic [ref=e4475]:
+            - link "Web" [ref=e4476] [cursor=pointer]:
+              - /url: https://www.recoveringfromreligion.org/
+              - text: Web
+              - generic [aria-hidden] [ref=e4477]: ↗
+            - link "Formulario / webcall" [ref=e4478] [cursor=pointer]:
+              - /url: https://www.recoveringfromreligion.org/webcall
+              - text: Formulario / webcall
+              - generic [aria-hidden] [ref=e4479]: ↗
+          - paragraph [ref=e4480]:
+            - text: "Verificado:"
+            - time [ref=e4481]: 25-09-2026
+            - text: ·
+            - link "Ver fuente" [ref=e4482] [cursor=pointer]:
+              - /url: https://www.recoveringfromreligion.org/
+      - generic [ref=e4483]:
+        - paragraph [ref=e4484]:
+          - text: ¿Has encontrado un dato desactualizado?
+          - link "Escribe a AEVTJ para corregirlo" [ref=e4485] [cursor=pointer]:
+            - /url: /contacto/
+          - text: .
+        - link "Contactar con AEVTJ ↗" [ref=e4486] [cursor=pointer]:
+          - /url: /contacto/
+  - contentinfo [ref=e4487]:
+    - generic [ref=e4488]:
+      - generic [ref=e4489]:
+        - generic [ref=e4490]:
+          - img "AEVTJ" [ref=e4491]
+          - paragraph [ref=e4492]: Asociación Española de Víctimas de los Testigos de Jehová y la JW.ORG. Estamos aquí para escucharte, ayudarte a recuperar tu vida y darte el apoyo que necesitas para dejar atrás la organización.
+          - generic [ref=e4493]:
+            - link "Facebook" [ref=e4494] [cursor=pointer]:
+              - /url: https://www.facebook.com/asoc.aevtj
+            - link "Youtube" [ref=e4497] [cursor=pointer]:
+              - /url: https://www.youtube.com/@AEVTJ
+            - link "X" [ref=e4500] [cursor=pointer]:
+              - /url: https://x.com
+            - link "Instagram" [ref=e4503] [cursor=pointer]:
+              - /url: https://instagram.com
+        - navigation "Menú de pie de página" [ref=e4506]:
+          - heading "Menú" [level=2] [ref=e4507]
+          - list [ref=e4508]:
+            - listitem [ref=e4509]:
+              - link "¿Quiénes somos?" [ref=e4510] [cursor=pointer]:
+                - /url: /quienes-somos/
+            - listitem [ref=e4511]:
+              - link "Noticias" [ref=e4512] [cursor=pointer]:
+                - /url: /noticias/
+            - listitem [ref=e4513]:
+              - link "Documentos" [ref=e4514] [cursor=pointer]:
+                - /url: /legal/
+            - listitem [ref=e4515]:
+              - link "Hazte socio / Donaciones" [ref=e4516] [cursor=pointer]:
+                - /url: /hazte-socio/
+            - listitem [ref=e4517]:
+              - link "Otras asociaciones" [ref=e4518] [cursor=pointer]:
+                - /url: /otras-asociaciones/
+            - listitem [ref=e4519]:
+              - link "Contacto" [ref=e4520] [cursor=pointer]:
+                - /url: /contacto/
+        - generic [ref=e4521]:
+          - heading "Boletín de noticias" [level=2] [ref=e4522]
+          - paragraph [ref=e4523]: Recibe nuestro boletín de noticias mensual de forma totalmente gratuita y mantente informado.
+          - generic [ref=e4524]:
+            - textbox "Tu correo electrónico" [ref=e4525]
+            - paragraph [ref=e4526]:
+              - text: Al suscribirte se abrirá tu gestor de correo con un mensaje ya preparado; no enviamos ni guardamos nada desde esta página. Tratamos tus datos según nuestra
+              - link "Política de Privacidad" [ref=e4527] [cursor=pointer]:
+                - /url: /politica-de-privacidad/
+              - text: .
+            - button "Suscribirme" [ref=e4528] [cursor=pointer]
+            - status
+      - generic [ref=e4529]:
+        - paragraph [ref=e4530]: © 2026 Asociación Española de Victimas de los Testigos de Jehová
+        - list [ref=e4531]:
+          - listitem [ref=e4532]:
+            - link "Aviso Legal" [ref=e4533] [cursor=pointer]:
+              - /url: /aviso-legal/
+          - listitem [ref=e4534]:
+            - link "Política de Cookies" [ref=e4535] [cursor=pointer]:
+              - /url: /politica-de-cookies/
+          - listitem [ref=e4536]:
+            - link "Política de privacidad" [ref=e4537] [cursor=pointer]:
+              - /url: /politica-de-privacidad/
+  - generic [ref=e4539]:
+    - paragraph [ref=e4540]: Para ofrecer las mejores experiencias, utilizamos tecnologías como las cookies para almacenar y/o acceder a la información del dispositivo. El consentimiento de estas tecnologías nos permitirá procesar datos como el comportamiento de navegación o las identificaciones únicas en este sitio. No consentir o retirar el consentimiento, puede afectar negativamente a ciertas características y funciones.
+    - generic [ref=e4541]:
+      - button "Denegar" [ref=e4542] [cursor=pointer]
+      - button "Aceptar" [ref=e4543] [cursor=pointer]
+      - link "Ver preferencias" [ref=e4544] [cursor=pointer]:
+        - /url: /politica-de-cookies/

@@ -1,14 +1,14 @@
 /* Directorio internacional (/otras-asociaciones/).
    Lenguaje editorial del sitio: cabecera tinta con mapa de puntos,
-   herramientas fijas al hacer scroll y fichas con color por tipo de recurso. */
+   herramientas fijas al hacer scroll y fichas con señales de tipo accesibles. */
 
 .directory-shell { width: min(1180px, calc(100% - 40px)); margin-inline: auto; }
 
 /* Colores por tipo de recurso */
 [data-kind="specific"] { --kind: #2ea88f; --kind-bg: #e2f5ef; --kind-ink: #11574a; }
-[data-kind="general"] { --kind: #7d9446; --kind-bg: #eef3de; --kind-ink: #3e5122; }
-[data-kind="specialist"] { --kind: #c0673d; --kind-bg: #fbe9df; --kind-ink: #7d3516; }
-[data-kind="remote"] { --kind: #3f6f8f; --kind-bg: #e3edf4; --kind-ink: #1d4460; }
+[data-kind="general"] { --kind: #839950; --kind-bg: #eef6d9; --kind-ink: #445522; }
+[data-kind="specialist"] { --kind: #122c33; --kind-bg: #e8efe1; --kind-ink: #122c33; }
+[data-kind="remote"] { --kind: #0f2537; --kind-bg: #e6eef0; --kind-ink: #0f2537; }
 
 /* ── Cabecera ─────────────────────────────────────────── */
 .inner-page .site-main > section.directory-hero:first-child {
@@ -46,11 +46,11 @@
 .directory-content { padding-block: 0 110px; color: #263821; }
 .directory-notice {
   position: relative; z-index: 1; display: flex; gap: 18px; margin-top: -44px; padding: 26px 30px;
-  border: 1px solid #e3d3b0; border-radius: 22px; background: #fff8ea; box-shadow: 0 18px 45px #0f253714; scroll-margin-top: 120px;
+  border: 1px solid #dce3cd; border-radius: 22px; background: #f9fceb; box-shadow: 0 18px 45px #0f253714; scroll-margin-top: 120px;
 }
-.directory-notice__icon { display: grid; flex: none; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: #a57837; color: #fff; font: italic 600 18px/1 var(--font-heading, Georgia, serif); }
-.directory-notice strong { display: block; margin-bottom: 6px; color: #5c3f14; font-size: 16px; }
-.directory-notice p { max-width: 940px; margin: 0; color: #4b3b22; line-height: 1.65; }
+.directory-notice__icon { display: grid; flex: none; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: #2ea88f; color: #122c33; font: italic 600 18px/1 var(--font-heading, Georgia, serif); }
+.directory-notice strong { display: block; margin-bottom: 6px; color: #122c33; font-size: 16px; }
+.directory-notice p { max-width: 940px; margin: 0; color: #263821; line-height: 1.65; }
 
 .country-nav { display: grid; grid-template-columns: repeat(auto-fill, minmax(168px, 1fr)); gap: 10px; padding: 40px 0 8px; }
 .country-nav a {
