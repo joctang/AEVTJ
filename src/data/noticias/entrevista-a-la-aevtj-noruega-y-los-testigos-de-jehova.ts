@@ -59,7 +59,7 @@ export const noticia: Noticia = {
     {
       tipo: "parrafo",
       texto:
-        "<strong>Laia Santander</strong> y <strong>Dani Ataraxia</strong> relataron las secuelas psicológicas de vivir bajo esta presión. Dani compartió cómo el rechazo hacia su sexualidad y la amenaza de perder a su familia lo llevaron a situaciones críticas de salud mental [00:46:05]. Laia, por su parte, describió la sensación de sentirse <strong>«huérfana con padres vivos»</strong>, una realidad que afecta a miles de expulsados en todo el mundo [00:43:51].",
+        "<strong>Laia Santander</strong> y <strong>Dani Ataraxia</strong> relataron las secuelas psicológicas de vivir bajo esta presión. Dani explicó cómo el rechazo hacia su sexualidad y la amenaza de perder a su familia afectaron a su bienestar emocional, según relató durante la entrevista [00:46:05]. Laia, por su parte, describió su sensación de sentirse <strong>«huérfana con padres vivos»</strong> [00:43:51].",
     },
     {
       tipo: "parrafo",

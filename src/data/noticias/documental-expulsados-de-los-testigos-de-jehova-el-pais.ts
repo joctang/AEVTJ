@@ -68,7 +68,7 @@ export const noticia: Noticia = {
       valor: "09:20",
       etiqueta: "Gestión de abusos",
       detalle:
-        "Antiguos miembros relatan experiencias sobre la gestión interna de casos de abuso infantil y protocolos que evitaron la denuncia externa.",
+        "El documental recoge testimonios de antiguos miembros sobre la gestión interna de casos de abuso infantil y sobre protocolos que, según esos testimonios, pudieron dificultar la denuncia externa.",
     },
     {
       valor: "11:50",
@@ -80,7 +80,7 @@ export const noticia: Noticia = {
       valor: "18:40",
       etiqueta: "Aislamiento y salud mental",
       detalle:
-        "El documental visibiliza casos de ansiedad y depresión vinculados al ostracismo, destacando también la capacidad de recuperación y libertad.",
+        "El documental recoge testimonios de personas que describen ansiedad y depresión en relación con el ostracismo, y también muestra sus procesos de recuperación y libertad.",
     },
     {
       valor: "21:00",

@@ -51,7 +51,7 @@ export const noticia: Noticia = {
     {
       tipo: "parrafo",
       texto:
-        "Estas historias muestran no solo el dolor individual, sino un <strong>mecanismo institucional</strong> que legitima las expulsiones bajo criterios doctrinales del grupo.",
+        "Estas historias muestran el dolor individual y describen un funcionamiento interno que, según los testimonios recogidos, puede llevar a expulsiones bajo criterios doctrinales del grupo.",
     },
     { tipo: "imagen", src: "/uploads/2025/03/image-53.webp", alt: "Natan, joven expulsado de los Testigos de Jehová, en el documental de 3Cat" },
     { tipo: "cita", texto: "Esta noche búscate dónde dormir, aquí no será", autor: "Marta Jael" },
@@ -61,7 +61,7 @@ export const noticia: Noticia = {
       items: [
         "<strong>Visibiliza</strong> una problemática que rara vez trasciende al público.",
         "<strong>Sensibiliza</strong> a audiencias que desconocen estas dinámicas de control y exclusión.",
-        '<strong>Refuerza la dignidad</strong> de las víctimas: no son "culpables", fueron discriminadas por ser quienes son.',
+        '<strong>Refuerza la dignidad</strong> de las personas entrevistadas: su orientación sexual no debe presentarse como una culpa ni como una justificación para el rechazo.',
         "<strong>Impulsa acciones</strong> legales y políticas: sirve como base para iniciativas legislativas y quejas ante organismos de derechos humanos.",
       ],
     },
@@ -82,7 +82,7 @@ export const noticia: Noticia = {
     {
       tipo: "parrafo",
       texto:
-        'La publicación de este documental confirma algo que la AEVTJ sostiene desde su fundación: el <strong>silencio no puede ser herramienta de control ni escudo de impunidad</strong>. Dar espacio a estas vivencias no solo denuncia hechos; también <strong>reconoce la dignidad</strong> de quienes han sido excluidos por afirmar su identidad y su verdad. Ojalá esta obra sea una <strong>llama más de visibilidad, memoria y reparación</strong>.',
+        'La publicación de este documental refuerza algo que la AEVTJ sostiene desde su fundación: el <strong>silencio no debería impedir que se conozcan estas experiencias</strong>. Dar espacio a las vivencias recogidas en la obra permite <strong>reconocer la dignidad</strong> de quienes han sufrido rechazo por afirmar su identidad. Ojalá contribuya a la <strong>visibilidad, la memoria y la reparación</strong>.',
     },
   ],
   recursos: [

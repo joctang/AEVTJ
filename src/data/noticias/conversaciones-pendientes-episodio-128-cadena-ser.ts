@@ -23,7 +23,7 @@ export const noticia: Noticia = {
     alt: "Cabecera de Cadena SER para el episodio 128 de Conversaciones pendientes con el testimonio de Dani",
   },
   entradilla:
-    "Cadena SER dedica parte de su episodio 128 de Conversaciones pendientes a escuchar a Dani, ex Testigo de Jehová y miembro del colectivo LGTBIQ+, sobre la represión y el control que vivió dentro de la organización.",
+    "Cadena SER dedica parte de su episodio 128 de Conversaciones pendientes a escuchar a Dani, ex Testigo de Jehová y miembro del colectivo LGTBIQ+, sobre la represión y el control que, según explica en el programa, vivió dentro de la organización.",
   citaDestacada: {
     texto:
       "Cuando una organización controla la identidad, la sexualidad, los vínculos y la pertenencia, salir no es solo dejar de asistir: es recuperar el derecho a existir sin miedo.",
@@ -43,12 +43,12 @@ export const noticia: Noticia = {
     {
       tipo: "parrafo",
       texto:
-        "Este audio importa porque une dos realidades que muchas veces se han tratado por separado: el control religioso de alta demanda y el daño específico que puede sufrir una persona LGTBIQ+ cuando su identidad choca con las normas del grupo.",
+        "Este audio importa porque une dos realidades que muchas veces se han tratado por separado: el control religioso de alta demanda y las dificultades que puede vivir una persona LGTBIQ+ cuando su identidad choca con las normas del grupo.",
     },
     {
       tipo: "parrafo",
       texto:
-        "Según la información publicada por Cadena SER, en el episodio se habla con <strong>Dani</strong>, ex Testigo de Jehová y miembro del colectivo LGTBIQ+, sobre la represión y el control que sufrió dentro de la organización.",
+        "Según la información publicada por Cadena SER, en el episodio se habla con <strong>Dani</strong>, ex Testigo de Jehová y miembro del colectivo LGTBIQ+, sobre la represión y el control que, según su relato, sufrió dentro de la organización.",
     },
     {
       tipo: "parrafo",
@@ -71,7 +71,7 @@ export const noticia: Noticia = {
       items: [
         "<strong>No es solo una historia personal:</strong> el testimonio permite mirar patrones de control que pueden afectar a muchas personas, aunque cada salida sea distinta.",
         "<strong>La identidad también puede ser controlada:</strong> cuando el grupo define qué puedes sentir, amar o expresar, el daño no es solo doctrinal: también es emocional y social.",
-        "<strong>Escuchar reduce la culpa:</strong> oír a otra persona nombrar lo vivido puede ayudar a entender que el problema no era la propia identidad, sino el sistema que la reprimía.",
+        "<strong>Escuchar puede ayudar:</strong> oír a otra persona nombrar lo vivido puede ayudar a separar la identidad personal de la presión del entorno.",
       ],
     },
     { tipo: "seccion", titulo: "Qué puede reconocer una persona al escucharlo" },

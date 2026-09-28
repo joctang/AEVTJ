@@ -44,13 +44,13 @@ export const noticia: Noticia = {
     {
       tipo: "parrafo",
       texto:
-        "En su intervención, Marcos explica cómo el entorno que hasta entonces era su apoyo fundamental —amigos y familiares— <strong>cesó toda comunicación</strong> con él debido a las normas internas de la organización. Subraya que esta práctica no es un alejamiento voluntario, sino una consecuencia directa de la expulsión o desasociación.",
+        "En su intervención, Marcos explica cómo el entorno que hasta entonces era su apoyo fundamental —amigos y familiares— <strong>cesó toda comunicación</strong> con él tras su salida del grupo. En su relato, describe esa ruptura como una consecuencia de la expulsión o la desasociación, y no como un alejamiento voluntario.",
     },
     { tipo: "seccion", titulo: "Valoración de la AEVTJ" },
     {
       tipo: "parrafo",
       texto:
-        "Que los medios públicos visibilicen el impacto del ostracismo es un paso crucial. El relato de Marcos no es un caso aislado: refleja la experiencia de cientos de personas que contactan con la AEVTJ buscando ayuda tras perder sus vínculos afectivos más básicos. Consideramos fundamental que se analice cómo estas dinámicas afectan a la libertad de conciencia y al bienestar emocional de las personas.",
+        "Que los medios públicos visibilicen el impacto del ostracismo es un paso crucial. El relato de Marcos ayuda a visibilizar una situación que también trasladan algunas personas que contactan con la AEVTJ después de perder vínculos afectivos importantes. Consideramos fundamental que se analice cómo estas dinámicas pueden afectar a la libertad de conciencia y al bienestar emocional de las personas.",
     },
   ],
   contexto: [
