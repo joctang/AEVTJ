@@ -2,7 +2,9 @@
 import { mainNav, socialLinks, legalLinks } from "../data/nav";
 import Icon from "./Icon.astro";
 
-const mailchimpFormAction = import.meta.env.PUBLIC_MAILCHIMP_FORM_ACTION;
+const mailchimpFormAction =
+  import.meta.env.PUBLIC_MAILCHIMP_FORM_ACTION ||
+  "https://mc.us10.list-manage.com/subscribe/landing-page?u=534a203867dd0e94cef782ecd&id=450429a9c2&f_id=00fcdce5f0";
 ---
 
 <footer class="site-footer bg-brand-ink text-white">
@@ -119,7 +121,9 @@ const mailchimpFormAction = import.meta.env.PUBLIC_MAILCHIMP_FORM_ACTION;
 </footer>
 
 <script>
-  const mailchimpFormAction = import.meta.env.PUBLIC_MAILCHIMP_FORM_ACTION;
+  const mailchimpFormAction =
+    import.meta.env.PUBLIC_MAILCHIMP_FORM_ACTION ||
+    "https://mc.us10.list-manage.com/subscribe/landing-page?u=534a203867dd0e94cef782ecd&id=450429a9c2&f_id=00fcdce5f0";
   const form = document.getElementById("newsletter-form") as HTMLFormElement | null;
   const estado = document.getElementById("newsletter-form-estado");
 
