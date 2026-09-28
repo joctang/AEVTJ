@@ -15,6 +15,8 @@ const {
   title,
   description = "Asociación Española de Víctimas de los Testigos de Jehová y la JW.ORG. Escuchamos, apoyamos y ayudamos a recuperar la vida tras salir de la organización.",
 } = Astro.props;
+const canonicalPath = Astro.url.pathname.endsWith("/") ? Astro.url.pathname : `${Astro.url.pathname}/`;
+const canonicalUrl = `https://victimasdetestigosdejehova.org${canonicalPath}`;
 ---
 
 <!doctype html>
@@ -25,6 +27,7 @@ const {
     <link rel="icon" type="image/png" href="/uploads/2025/10/Logo-avtj-300x300.png" />
     <title>{title} · AEVTJ</title>
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
     <Tracking />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
