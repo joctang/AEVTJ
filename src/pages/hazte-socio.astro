@@ -4,6 +4,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import TornEdge from "../components/TornEdge.astro";
 
 const FORMULARIO_SOCIO = "https://forms.gle/Hzx99iAKP6BZyqFx6";
+const FORMULARIO_NEWSLETTER =
+  import.meta.env.PUBLIC_MAILCHIMP_NEWSLETTER_URL ||
+  "https://mailchi.mp/victimasdetestigosdejehova/newsletter";
 
 const benefits = [
   "Recibe mensualmente nuestro boletín de noticias",
@@ -75,6 +78,14 @@ const description =
             Hazte socio, es gratis
           </a>
           <a class="guia-pill guia-pill--ghost" href="#donaciones">Quiero donar</a>
+          <a
+            class="guia-pill guia-pill--ghost"
+            href={FORMULARIO_NEWSLETTER}
+            target="_blank"
+            rel="nofollow noopener"
+          >
+            Solo recibir noticias
+          </a>
         </div>
       </div>
       <TornEdge />

@@ -1,0 +1,187 @@
+- generic [active] [ref=f36e1]:
+  - generic [ref=f36e4]:
+    - banner [ref=f36e5]:
+      - generic:
+        - link "Saltar al contenido principal" [ref=f36e6] [cursor=pointer]:
+          - /url: "#content"
+        - region "Banner de mensajes del sitio"
+      - navigation "Principal" [ref=f36e9]:
+        - generic [ref=f36e10]:
+          - link "Inicio" [ref=f36e12] [cursor=pointer]
+          - button [ref=f36e16] [cursor=pointer]:
+            - paragraph [ref=f36e20]: Buscar...
+          - generic [ref=f36e22]:
+            - button "persistent invite button" [ref=f36e24] [cursor=pointer]
+            - button "Consulta con un experto" [ref=f36e28] [cursor=pointer]
+            - generic [ref=f36e37]:
+              - button "account settings button" [ref=f36e38] [cursor=pointer]:
+                - img "Has iniciado sesión como Asociación Asociación Española de Víctimas de los Testigos de Jehová, Menú Cuenta" [ref=f36e40]
+              - generic [ref=f36e41]: "1"
+              - generic [ref=f36e42]: notificación
+    - navigation "Principal" [ref=f36e47]:
+      - generic [ref=f36e48]:
+        - list [ref=f36e49]:
+          - listitem [ref=f36e50]:
+            - link "Crear" [ref=f36e51] [cursor=pointer]:
+              - /url: "#/create-campaign"
+        - list [ref=f36e54]:
+          - listitem [ref=f36e55]:
+            - link "Inicio" [ref=f36e56] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=f36e60]:
+            - link "Campañas" [ref=f36e61] [cursor=pointer]:
+              - /url: /campaigns
+          - listitem [ref=f36e65]:
+            - link "Automatizaciones" [ref=f36e66] [cursor=pointer]:
+              - /url: /customer-journey
+          - listitem [ref=f36e70]:
+            - link "SMS Nuevo" [ref=f36e71] [cursor=pointer]:
+              - /url: /sms
+              - generic [ref=f36e73]:
+                - generic [ref=f36e74]: SMS
+                - generic [ref=f36e75]: Nuevo
+          - listitem [ref=f36e76]:
+            - link "Formularios" [ref=f36e77] [cursor=pointer]:
+              - /url: /forms
+          - listitem [ref=f36e81]:
+            - link "Público" [expanded] [ref=f36e82] [cursor=pointer]:
+              - /url: /audience/contacts
+            - group [ref=f36e467]:
+              - listitem [ref=f36e468]:
+                - link "Etiquetas" [ref=f36e469] [cursor=pointer]:
+                  - /url: /audience/tags
+              - listitem [ref=f36e472]:
+                - link "Segmentos" [ref=f36e473] [cursor=pointer]:
+                  - /url: /audience/segments
+              - listitem [ref=f36e476]:
+                - link "Encuestas" [ref=f36e477] [cursor=pointer]:
+                  - /url: /lists/surveys
+              - listitem [ref=f36e480]:
+                - link "Preferencias de suscriptor" [ref=f36e481] [cursor=pointer]:
+                  - /url: /audience/subscriber-preferences/
+              - listitem [ref=f36e484]:
+                - link "Bandeja de entrada" [ref=f36e485] [cursor=pointer]:
+                  - /url: /audience/inbox
+          - listitem [ref=f36e86]:
+            - link "Análisis" [ref=f36e87] [cursor=pointer]:
+              - /url: /analytics/marketing-dashboard/
+          - listitem [ref=f36e91]:
+            - link "Sitio web" [ref=f36e92] [cursor=pointer]:
+              - /url: /website/dashboard
+          - listitem [ref=f36e96]:
+            - link "Contenido" [ref=f36e97] [cursor=pointer]:
+              - /url: /content/#myfiles
+          - listitem [ref=f36e101]:
+            - link "Integraciones" [ref=f36e102] [cursor=pointer]:
+              - /url: /account/connected-sites/discover/
+      - button "Minimizar navegación" [ref=f36e108] [cursor=pointer]
+    - list [ref=f36e110]:
+      - listitem [ref=f36e111]:
+        - button "Help" [ref=f36e113] [cursor=pointer]
+    - main [ref=f36e117]:
+      - generic [ref=f36e2434]:
+        - generic [ref=f36e2436]:
+          - generic [ref=f36e2439]:
+            - navigation "Rutas de navegación" [ref=f36e2440]:
+              - list [ref=f36e2442]:
+                - listitem [ref=f36e2443]:
+                  - link "Contactos" [ref=f36e2444] [cursor=pointer]:
+                    - /url: /audience/contacts
+            - heading "Configuración del público" [level=1] [ref=f36e2446]
+          - link "Gestionar públicos" [ref=f36e2449] [cursor=pointer]:
+            - /url: /audience/manage
+        - generic [ref=f36e2451]:
+          - generic [ref=f36e2452]:
+            - generic [ref=f36e2453]: Compartir comentarios
+            - link "Abrir encuesta de comentarios positivos en una pestaña nueva" [ref=f36e2454] [cursor=pointer]:
+              - /url: https://mailchimp.iad1.qualtrics.com/jfe/form/SV_3Q8BdnFyX7IC1cq?thumb=Up&mcu=228617842&fsSession=https://app.fullstory.com/ui/ZHBMT/client-session/4173554e-6645-40c4-9366-bd7beaa17247%3Ab50c2124-79b8-42eb-a81e-05528e692116?integration_src=qualtrics
+            - link "Abrir encuesta de comentarios negativos en una pestaña nueva" [ref=f36e2458] [cursor=pointer]:
+              - /url: https://mailchimp.iad1.qualtrics.com/jfe/form/SV_3Q8BdnFyX7IC1cq?thumb=Down&mcu=228617842&fsSession=https://app.fullstory.com/ui/ZHBMT/client-session/4173554e-6645-40c4-9366-bd7beaa17247%3Ab50c2124-79b8-42eb-a81e-05528e692116?integration_src=qualtrics
+          - generic [ref=f36e2462]:
+            - list [ref=f36e2465]:
+              - listitem [ref=f36e2466]:
+                - generic [ref=f36e2469]:
+                  - paragraph [ref=f36e2473]: Nombre del público
+                  - generic [ref=f36e2475]:
+                    - paragraph [ref=f36e2476]: Asociación Española de Víctimas de los Testigos de Jehová
+                    - button "Editar" [ref=f36e2477] [cursor=pointer]
+              - listitem [ref=f36e2478]:
+                - generic [ref=f36e2481]:
+                  - paragraph [ref=f36e2485]: Campos de público y etiquetas Merge
+                  - link [ref=f36e2486] [cursor=pointer]:
+                    - /url: /audience/merge-fields/?id=906754
+                    - paragraph [ref=f36e2489]: Editar campos de público
+              - listitem [ref=f36e2492]:
+                - generic [ref=f36e2495]:
+                  - paragraph [ref=f36e2499]: Webhooks
+                  - link [ref=f36e2500] [cursor=pointer]:
+                    - /url: /audience/webhooks?id=906754
+                    - paragraph [ref=f36e2503]: Gestionar webhooks
+              - listitem [ref=f36e2506]:
+                - generic [ref=f36e2509]:
+                  - paragraph [ref=f36e2513]: Google Analytics en páginas de archivo
+                  - button "Editar" [ref=f36e2516] [cursor=pointer]
+              - listitem [ref=f36e2517]:
+                - generic [ref=f36e2520]:
+                  - generic [ref=f36e2523]:
+                    - paragraph [ref=f36e2524]: Id. del público
+                    - button "Acerca de esta configuración" [ref=f36e2525] [cursor=pointer]
+                    - status
+                  - generic [ref=f36e2532]:
+                    - paragraph [ref=f36e2533]: 450429a9c2
+                    - button "copy" [ref=f36e2534] [cursor=pointer]
+            - generic [ref=f36e2538]:
+              - paragraph [ref=f36e2539]: Opciones de correo electrónico (valores predeterminados para todo el público)
+              - list [ref=f36e2541]:
+                - listitem [ref=f36e2542]:
+                  - generic [ref=f36e2545]:
+                    - paragraph [ref=f36e2549]: Correo electrónico del remitente predeterminado
+                    - generic [ref=f36e2553]:
+                      - paragraph [ref=f36e2554]: info@victimasdetestigosdejehova.org
+                      - button "Editar" [ref=f36e2555] [cursor=pointer]
+                - listitem [ref=f36e2556]:
+                  - generic [ref=f36e2559]:
+                    - paragraph [ref=f36e2563]: Nombre del remitente predeterminado
+                    - generic [ref=f36e2565]:
+                      - paragraph [ref=f36e2566]: Asociación Española de Víctimas de los Testigos de Jehová
+                      - button "Editar" [ref=f36e2567] [cursor=pointer]
+                - listitem [ref=f36e2568]:
+                  - generic [ref=f36e2571]:
+                    - paragraph [ref=f36e2575]: Contenido obligatorio del pie de página del correo electrónico
+                    - button "Editar" [ref=f36e2578] [cursor=pointer]
+                - listitem [ref=f36e2579]:
+                  - generic [ref=f36e2582]:
+                    - paragraph [ref=f36e2586]: Correos electrónicos de notificación para suscriptores
+                    - button "Editar" [ref=f36e2589] [cursor=pointer]
+                - listitem [ref=f36e2590]:
+                  - generic [ref=f36e2593]:
+                    - paragraph [ref=f36e2597]: URL de la campaña por correo electrónico
+                    - generic [ref=f36e2599]:
+                      - paragraph [ref=f36e2600]: https://mailchi.mp/[xxxxx]
+                      - button "Editar" [ref=f36e2601] [cursor=pointer]
+                - listitem [ref=f36e2602]:
+                  - generic [ref=f36e2605]:
+                    - generic [ref=f36e2608]:
+                      - paragraph [ref=f36e2609]: Barra de archivo
+                      - button "Acerca de esta configuración" [ref=f36e2610] [cursor=pointer]
+                      - status
+                    - generic [ref=f36e2616]:
+                      - generic [ref=f36e2617]: Activado
+                      - button "Activado" [pressed] [ref=f36e2620] [cursor=pointer]
+                - listitem [ref=f36e2623]:
+                  - generic [ref=f36e2626]:
+                    - generic [ref=f36e2629]:
+                      - paragraph [ref=f36e2630]: Email Beamer
+                      - button "Acerca de esta configuración" [ref=f36e2631] [cursor=pointer]
+                      - status
+                    - generic [ref=f36e2638]:
+                      - paragraph [ref=f36e2639]: us10-0858409ccc-aef050799a@inbound.mailchimp.com
+                      - button "copy" [ref=f36e2640] [cursor=pointer]
+    - status
+    - status
+  - generic:
+    - status [ref=f36e455]
+    - alert [ref=f36e456]
+  - button "Opiniones" [ref=f36e2644] [cursor=pointer]
+  - dialog [aria-hidden] [ref=f36e2647]:
+    - button [ref=f36e2649] [cursor=pointer]

@@ -1,0 +1,760 @@
+- generic [active] [ref=e1]:
+  - link "Saltar al contenido" [ref=e2] [cursor=pointer]:
+    - /url: "#contenido"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img "AEVTJ - Asociación Española de Víctimas de los Testigos de Jehová" [ref=e6]
+      - navigation "Menú principal" [ref=e7]:
+        - list [ref=e8]:
+          - listitem [ref=e9]:
+            - link "¿Quiénes somos?" [ref=e10] [cursor=pointer]:
+              - /url: /quienes-somos/
+          - listitem [ref=e11]:
+            - link "Noticias" [ref=e12] [cursor=pointer]:
+              - /url: /noticias/
+          - listitem [ref=e13]:
+            - link "Documentos" [ref=e14] [cursor=pointer]:
+              - /url: /recursos-de-ayuda/
+          - listitem [ref=e17]:
+            - link "Hazte socio / Donaciones" [ref=e18] [cursor=pointer]:
+              - /url: /hazte-socio/
+          - listitem [ref=e19]:
+            - link "Otras asociaciones" [ref=e20] [cursor=pointer]:
+              - /url: /otras-asociaciones/
+          - listitem [ref=e21]:
+            - link "Contacto" [ref=e22] [cursor=pointer]:
+              - /url: /contacto/
+      - generic [ref=e23]:
+        - link "Facebook" [ref=e24] [cursor=pointer]:
+          - /url: https://www.facebook.com/asoc.aevtj
+        - link "Youtube" [ref=e27] [cursor=pointer]:
+          - /url: https://www.youtube.com/@AEVTJ
+        - link "X" [ref=e30] [cursor=pointer]:
+          - /url: https://x.com
+        - link "Instagram" [ref=e33] [cursor=pointer]:
+          - /url: https://instagram.com
+  - main [ref=e36]:
+    - dialog "Cita de bienvenida" [ref=e37] [cursor=pointer]:
+      - figure [ref=e38]:
+        - generic [ref=e39]: AEVTJ
+        - blockquote [ref=e40]:
+          - paragraph [ref=e41]:
+            - generic [ref=e42]: En los infiernos
+            - generic [ref=e44]: que yo atravesé,
+            - generic [ref=e46]: no había ni monstruos ni diablos,
+            - generic [ref=e49]:
+              - text: había
+              - emphasis [ref=e50]: personas que yo amaba
+              - text: …
+      - button "Entrar" [ref=e51]:
+        - text: Entrar
+        - generic [aria-hidden] [ref=e52]: ↗
+    - generic [ref=e53]:
+      - region [ref=e54]:
+        - img "Varias manos unidas en un gesto de apoyo mutuo" [ref=e55]
+        - generic [ref=e57]:
+          - generic [ref=e58]:
+            - generic [aria-hidden] [ref=e59]: ↗
+            - text: Una vida por delante
+          - generic [ref=e60]:
+            - paragraph [ref=e61]: Asociación Española de Víctimas de los Testigos de Jehová y la JW.ORG
+            - heading [level=1] [ref=e62]:
+              - text: No estás
+              - emphasis [ref=e63]: solo.
+            - paragraph [ref=e64]: Estamos aquí para escucharte, para ayudarte a recuperar tu vida como hemos hecho nosotros y darte el apoyo que necesitas para dejar atrás la organización.
+            - generic [ref=e65]:
+              - link "Únete a nuestra asociación ↗" [ref=e66] [cursor=pointer]:
+                - /url: /hazte-socio/
+              - link "Guía de cómo salir de los Testigos de Jehová ↗" [ref=e67] [cursor=pointer]:
+                - /url: /guia-para-salir-de-los-testigos-de-jehova/
+          - generic [ref=e68]:
+            - generic [ref=e69]:
+              - text: Apoyo, comunidad y
+              - strong [ref=e70]: libertad para ser tú.
+            - link "Descubre cómo podemos ayudarte" [ref=e71] [cursor=pointer]:
+              - /url: "#ayuda"
+              - text: Descubre cómo podemos ayudarte
+              - generic [aria-hidden] [ref=e72]: ↓
+      - region "Rutas de ayuda" [ref=e73]:
+        - paragraph [ref=e74]: Empieza por tu situación
+        - link "01 ↗ Quiero salir Guía para preparar el proceso con más seguridad y menos soledad. Ver guía" [ref=e75] [cursor=pointer]:
+          - /url: /guia-para-salir-de-los-testigos-de-jehova/
+          - generic [ref=e76]: 01 ↗
+          - heading "Quiero salir" [level=2] [ref=e77]
+          - paragraph [ref=e78]: Guía para preparar el proceso con más seguridad y menos soledad.
+          - strong [ref=e79]: Ver guía
+        - link "02 ↗ Necesito apoyo Contacto para ayuda legal, psicológica o comunitaria. Contactar" [ref=e80] [cursor=pointer]:
+          - /url: /contacto/
+          - generic [ref=e81]: 02 ↗
+          - heading "Necesito apoyo" [level=2] [ref=e82]
+          - paragraph [ref=e83]: Contacto para ayuda legal, psicológica o comunitaria.
+          - strong [ref=e84]: Contactar
+        - link "03 ↗ Busco recursos Documentos y materiales para entender qué ocurre. Ver recursos" [ref=e85] [cursor=pointer]:
+          - /url: /recursos-de-ayuda/
+          - generic [ref=e86]: 03 ↗
+          - heading "Busco recursos" [level=2] [ref=e87]
+          - paragraph [ref=e88]: Documentos y materiales para entender qué ocurre.
+          - strong [ref=e89]: Ver recursos
+      - generic [ref=e90]:
+        - generic [ref=e91]:
+          - paragraph [ref=e92]: Ayuda y recursos
+          - heading "Tanto si tienes dudas como si no sabes cuál es el siguiente paso que vas a dar, estamos aquí para AYUDAR" [level=2] [ref=e93]
+          - paragraph [ref=e94]: Todos los que pertenecen a la asociación han sido Testigos de Jehová por muchos años, por lo que conocemos todas las piedras del camino a recorrer.
+          - link "Consulta nuestros recursos ↗" [ref=e95] [cursor=pointer]:
+            - /url: /recursos-de-ayuda/
+        - generic [ref=e96]:
+          - img "Grupo de personas compartiendo un momento de cercanía" [ref=e97]
+          - text: +
+      - generic [ref=e100]:
+        - generic [ref=e101]:
+          - paragraph [ref=e102]: Somos víctimas
+          - heading "Cuando la fe te condena" [level=2] [ref=e103]
+        - generic [ref=e104]:
+          - paragraph [ref=e105]:
+            - text: La religión es en ocasiones un refugio, un lugar donde
+            - strong [ref=e106]: encontrar paz, apoyo y comprensión
+            - text: . Pero, ¿qué pasa cuando se convierte en una prisión invisible?
+          - paragraph [ref=e107]:
+            - text: Los
+            - strong [ref=e108]: Testigos de Jehová
+            - text: tienen, en ocasiones, un estricto control sobre el comportamiento de cómo debes vivir, pensar, sentir, o a quién tienes que obedecer. Para algunos, esta presión es asfixiante. Si decides irte, las consecuencias, además, pueden ser devastadoras desde un plano social, como el ostracismo, pero también psicológicamente.
+          - paragraph [ref=e109]: Desde la Asociación Española de Víctimas de los Testigos de Jehová abogamos por los derechos humanos, y podemos explicar qué hay detrás de esta organización a la que durante años hemos entregado nuestra vida.
+      - generic [ref=e110]:
+        - generic [ref=e111]:
+          - paragraph [ref=e112]: Somos un movimiento mundial
+          - heading "Somos un movimiento mundial" [level=2] [ref=e113]
+          - paragraph [ref=e114]: Algunas de las asociaciones de víctimas que por todo el mundo se han unido para apoyarse mutuamente contra el ostracismo que la organización de los testigos de Jehová les ha causado en sus vidas.
+        - generic [ref=e115]:
+          - generic [ref=e116]:
+            - list [ref=e117]:
+              - listitem [ref=e118]:
+                - link "Asociación Civil Argentina de Ayuda a Víctimas de Sectas" [ref=e119] [cursor=pointer]:
+                  - /url: https://asocavics.org/
+              - listitem [ref=e121]:
+                - link "Comunidad de Ex Testigos de Jehová México" [ref=e122] [cursor=pointer]:
+                  - /url: https://www.facebook.com/p/Comunidad-de-Ex-Testigos-de-Jehov%C3%A1-M%C3%A9xico-61562062544131/
+              - listitem [ref=e124]:
+                - link "Dales Unidos contra la Violencia Coercitiva" [ref=e125] [cursor=pointer]:
+                  - /url: https://www.instagram.com/dales.a.c/
+              - listitem [ref=e127]:
+                - link "exJW Support, UK peer support network" [ref=e128] [cursor=pointer]:
+                  - /url: http://www.exjwsupport.co.uk/
+              - listitem [ref=e130]:
+                - link "Probudili jsme se - \"Nos despertamos\"" [ref=e131] [cursor=pointer]:
+                  - /url: http://facebook.com/groups/309238966897350
+              - listitem [ref=e133]:
+                - link "JZ Help e.V - Ayuda para las víctimas y los afectados por los Testigos de Jehová" [ref=e134] [cursor=pointer]:
+                  - /url: https://jz.help/
+              - listitem [ref=e136]:
+                - generic [ref=e137]: Stichting Against Watchtower Shunning
+              - listitem [ref=e139]:
+                - link "Advocates for Awareness of Watchtower Abuses (AAWA)" [ref=e140] [cursor=pointer]:
+                  - /url: https://www.aawa.co/
+              - listitem [ref=e142]:
+                - link "Jehovah's Witnesses Support Network (informal, linked to Royal Commission advocacy)" [ref=e143] [cursor=pointer]:
+                  - /url: https://www.aawa.co/
+              - listitem [ref=e145]:
+                - link "Stop Mandated Shunning" [ref=e146] [cursor=pointer]:
+                  - /url: https://stopmandatedshunning.org/
+              - listitem [ref=e148]:
+                - link "Reddit r/exjw" [ref=e149] [cursor=pointer]:
+                  - /url: https://www.reddit.com/r/exjw/
+              - listitem [ref=e151]:
+                - link "Cult Information and Family Support (CIFS)" [ref=e152] [cursor=pointer]:
+                  - /url: https://www.cifs.org.au/
+              - listitem [ref=e154]:
+                - link "Info-Secte / Info-Cult" [ref=e155] [cursor=pointer]:
+                  - /url: https://infosecte.org/
+              - listitem [ref=e157]:
+                - link "Change of Path · Shunning Recovery Support Group" [ref=e158] [cursor=pointer]:
+                  - /url: https://211ontario.ca/service/71895166/change-of-path-support-group-for-people-leaving-faith-communities-shunning-recovery-support-group/
+              - listitem [ref=e160]:
+                - link "infoSekta" [ref=e161] [cursor=pointer]:
+                  - /url: https://www.infosekta.ch/was-wir-bieten/
+              - listitem [ref=e163]:
+                - link "Ausstieg e.V." [ref=e164] [cursor=pointer]:
+                  - /url: https://ausstieg-info.de/kontakt/
+            - list [aria-hidden] [ref=e166]:
+              - listitem [ref=e167]:
+                - link [ref=e168] [cursor=pointer]:
+                  - /url: https://asocavics.org/
+                  - generic [ref=e169]: Asociación Civil Argentina de Ayuda a Víctimas de Sectas
+              - listitem [ref=e170]:
+                - link [ref=e171] [cursor=pointer]:
+                  - /url: https://www.facebook.com/p/Comunidad-de-Ex-Testigos-de-Jehov%C3%A1-M%C3%A9xico-61562062544131/
+                  - generic [ref=e172]: Comunidad de Ex Testigos de Jehová México
+              - listitem [ref=e173]:
+                - link [ref=e174] [cursor=pointer]:
+                  - /url: https://www.instagram.com/dales.a.c/
+                  - generic [ref=e175]: Dales Unidos contra la Violencia Coercitiva
+              - listitem [ref=e176]:
+                - link [ref=e177] [cursor=pointer]:
+                  - /url: http://www.exjwsupport.co.uk/
+                  - generic [ref=e178]: exJW Support, UK peer support network
+              - listitem [ref=e179]:
+                - link [ref=e180] [cursor=pointer]:
+                  - /url: http://facebook.com/groups/309238966897350
+                  - generic [ref=e181]: Probudili jsme se - "Nos despertamos"
+              - listitem [ref=e182]:
+                - link [ref=e183] [cursor=pointer]:
+                  - /url: https://jz.help/
+                  - generic [ref=e184]: JZ Help e.V - Ayuda para las víctimas y los afectados por los Testigos de Jehová
+              - listitem [ref=e185]:
+                - generic [ref=e186]: Stichting Against Watchtower Shunning
+              - listitem [ref=e188]:
+                - link [ref=e189] [cursor=pointer]:
+                  - /url: https://www.aawa.co/
+                  - generic [ref=e190]: Advocates for Awareness of Watchtower Abuses (AAWA)
+              - listitem [ref=e191]:
+                - link [ref=e192] [cursor=pointer]:
+                  - /url: https://www.aawa.co/
+                  - generic [ref=e193]: Jehovah's Witnesses Support Network (informal, linked to Royal Commission advocacy)
+              - listitem [ref=e194]:
+                - link [ref=e195] [cursor=pointer]:
+                  - /url: https://stopmandatedshunning.org/
+                  - generic [ref=e196]: Stop Mandated Shunning
+              - listitem [ref=e197]:
+                - link [ref=e198] [cursor=pointer]:
+                  - /url: https://www.reddit.com/r/exjw/
+                  - generic [ref=e199]: Reddit r/exjw
+              - listitem [ref=e200]:
+                - link [ref=e201] [cursor=pointer]:
+                  - /url: https://www.cifs.org.au/
+                  - generic [ref=e202]: Cult Information and Family Support (CIFS)
+              - listitem [ref=e203]:
+                - link [ref=e204] [cursor=pointer]:
+                  - /url: https://infosecte.org/
+                  - generic [ref=e205]: Info-Secte / Info-Cult
+              - listitem [ref=e206]:
+                - link [ref=e207] [cursor=pointer]:
+                  - /url: https://211ontario.ca/service/71895166/change-of-path-support-group-for-people-leaving-faith-communities-shunning-recovery-support-group/
+                  - generic [ref=e208]: Change of Path · Shunning Recovery Support Group
+              - listitem [ref=e209]:
+                - link [ref=e210] [cursor=pointer]:
+                  - /url: https://www.infosekta.ch/was-wir-bieten/
+                  - generic [ref=e211]: infoSekta
+              - listitem [ref=e212]:
+                - link [ref=e213] [cursor=pointer]:
+                  - /url: https://ausstieg-info.de/kontakt/
+                  - generic [ref=e214]: Ausstieg e.V.
+          - generic [ref=e215]:
+            - list [ref=e216]:
+              - listitem [ref=e217]:
+                - link "Støtteforeningen for tidligere Jehovas Vidner" [ref=e218] [cursor=pointer]:
+                  - /url: https://xjv.dk/
+              - listitem [ref=e220]:
+                - link "Uskontojen uhrien tuki UUT ry" [ref=e221] [cursor=pointer]:
+                  - /url: https://www.uskontojenuhrientuki.fi/
+              - listitem [ref=e223]:
+                - link "Escape Cult Mind Control France" [ref=e224] [cursor=pointer]:
+                  - /url: https://www.gemppi.org/contact/
+              - listitem [ref=e226]:
+                - link "GEMPPI" [ref=e227] [cursor=pointer]:
+                  - /url: https://www.gemppi.org/contact/
+              - listitem [ref=e229]:
+                - link "CAFFES" [ref=e230] [cursor=pointer]:
+                  - /url: https://caffes.fr/contact/
+              - listitem [ref=e232]:
+                - link "UNADFI / ADFI" [ref=e233] [cursor=pointer]:
+                  - /url: https://www.unadfi.org/contactez-votre-adfi/
+              - listitem [ref=e235]:
+                - link "Faith to Faithless · Humanists UK" [ref=e236] [cursor=pointer]:
+                  - /url: https://humanists.uk/faith-to-faithless/
+              - listitem [ref=e238]:
+                - link "DialogCentre UK" [ref=e239] [cursor=pointer]:
+                  - /url: https://dialogcentre.org.uk/contact/
+              - listitem [ref=e241]:
+                - link "Quo Vadis APS · Veramente Liberi" [ref=e242] [cursor=pointer]:
+                  - /url: https://www.veramenteliberi.org/
+              - listitem [ref=e244]:
+                - link "Tro uten tvang" [ref=e245] [cursor=pointer]:
+                  - /url: https://troutentvang.no/
+              - listitem [ref=e247]:
+                - link "Uncult Ōtautahi" [ref=e248] [cursor=pointer]:
+                  - /url: https://www.uncult.support/
+              - listitem [ref=e250]:
+                - link "The Liberati" [ref=e251] [cursor=pointer]:
+                  - /url: https://theliberati.org/
+              - listitem [ref=e253]:
+                - link "Silentlambs" [ref=e254] [cursor=pointer]:
+                  - /url: https://silentlambs.org/
+              - listitem [ref=e256]:
+                - link "Free From Faith Helpline · South African Secular Society" [ref=e257] [cursor=pointer]:
+                  - /url: https://www.secularsociety.org.za/the-sass-free-from-faith-helpline/
+              - listitem [ref=e259]:
+                - link "Recovering from Religion" [ref=e260] [cursor=pointer]:
+                  - /url: https://www.recoveringfromreligion.org/
+            - list [aria-hidden] [ref=e262]:
+              - listitem [ref=e263]:
+                - link [ref=e264] [cursor=pointer]:
+                  - /url: https://xjv.dk/
+                  - generic [ref=e265]: Støtteforeningen for tidligere Jehovas Vidner
+              - listitem [ref=e266]:
+                - link [ref=e267] [cursor=pointer]:
+                  - /url: https://www.uskontojenuhrientuki.fi/
+                  - generic [ref=e268]: Uskontojen uhrien tuki UUT ry
+              - listitem [ref=e269]:
+                - link [ref=e270] [cursor=pointer]:
+                  - /url: https://www.gemppi.org/contact/
+                  - generic [ref=e271]: Escape Cult Mind Control France
+              - listitem [ref=e272]:
+                - link [ref=e273] [cursor=pointer]:
+                  - /url: https://www.gemppi.org/contact/
+                  - generic [ref=e274]: GEMPPI
+              - listitem [ref=e275]:
+                - link [ref=e276] [cursor=pointer]:
+                  - /url: https://caffes.fr/contact/
+                  - generic [ref=e277]: CAFFES
+              - listitem [ref=e278]:
+                - link [ref=e279] [cursor=pointer]:
+                  - /url: https://www.unadfi.org/contactez-votre-adfi/
+                  - generic [ref=e280]: UNADFI / ADFI
+              - listitem [ref=e281]:
+                - link [ref=e282] [cursor=pointer]:
+                  - /url: https://humanists.uk/faith-to-faithless/
+                  - generic [ref=e283]: Faith to Faithless · Humanists UK
+              - listitem [ref=e284]:
+                - link [ref=e285] [cursor=pointer]:
+                  - /url: https://dialogcentre.org.uk/contact/
+                  - generic [ref=e286]: DialogCentre UK
+              - listitem [ref=e287]:
+                - link [ref=e288] [cursor=pointer]:
+                  - /url: https://www.veramenteliberi.org/
+                  - generic [ref=e289]: Quo Vadis APS · Veramente Liberi
+              - listitem [ref=e290]:
+                - link [ref=e291] [cursor=pointer]:
+                  - /url: https://troutentvang.no/
+                  - generic [ref=e292]: Tro uten tvang
+              - listitem [ref=e293]:
+                - link [ref=e294] [cursor=pointer]:
+                  - /url: https://www.uncult.support/
+                  - generic [ref=e295]: Uncult Ōtautahi
+              - listitem [ref=e296]:
+                - link [ref=e297] [cursor=pointer]:
+                  - /url: https://theliberati.org/
+                  - generic [ref=e298]: The Liberati
+              - listitem [ref=e299]:
+                - link [ref=e300] [cursor=pointer]:
+                  - /url: https://silentlambs.org/
+                  - generic [ref=e301]: Silentlambs
+              - listitem [ref=e302]:
+                - link [ref=e303] [cursor=pointer]:
+                  - /url: https://www.secularsociety.org.za/the-sass-free-from-faith-helpline/
+                  - generic [ref=e304]: Free From Faith Helpline · South African Secular Society
+              - listitem [ref=e305]:
+                - link [ref=e306] [cursor=pointer]:
+                  - /url: https://www.recoveringfromreligion.org/
+                  - generic [ref=e307]: Recovering from Religion
+        - generic [ref=e308]:
+          - generic [ref=e309]:
+            - paragraph [ref=e310]: Busca tu país
+            - paragraph [ref=e311]: Consulta el directorio de asociaciones y recursos de apoyo en 14 países, con sus canales de contacto.
+          - link "Ver otras asociaciones" [ref=e312] [cursor=pointer]:
+            - /url: /otras-asociaciones/
+            - text: Ver otras asociaciones
+            - generic [aria-hidden] [ref=e313]: →
+        - generic [ref=e315]:
+          - generic [aria-hidden]:
+            - link [ref=e316] [cursor=pointer]:
+              - /url: /otras-asociaciones/#pais-ar
+              - generic [ref=e317]: ASOCAVICS
+              - generic [ref=e318]: Argentina · Ver recursos por país ↗
+            - link:
+              - /url: /otras-asociaciones/#pais-au
+              - generic: Cult Information and Family Support (CIFS)
+              - generic: Australia · Ver recursos por país ↗
+            - link:
+              - /url: /otras-asociaciones/#pais-ca
+              - generic: Info-Secte / Info-Cult
+              - generic: Canadá · Ver recursos por país ↗
+            - link:
+              - /url: /otras-asociaciones/#pais-ca
+              - generic: Change of Path · Shunning Recovery Support Group
+              - generic: Canadá · Ver recursos por país ↗
+            - link:
+              - /url: /otras-asociaciones/#pais-ch
+              - generic: infoSekta
+              - generic: Suiza · Ver recursos por país ↗
+            - link:
+              - /url: /otras-asociaciones/#pais-de
+              - generic: JZ Help e.V.
+              - generic: Alemania · Ver recursos por país ↗
+            - link:
+              - /url: /otras-asociaciones/#pais-de
+              - generic: Ausstieg e.V.
+              - generic: Alemania · Ver recursos por país ↗
+            - link:
+              - /url: /otras-asociaciones/#pais-dk
+              - generic: Støtteforeningen for tidligere Jehovas Vidner
+              - generic: Dinamarca · Ver recursos por país ↗
+            - link:
+              - /url: /otras-asociaciones/#pais-fi
+              - generic: Uskontojen uhrien tuki UUT ry
+              - generic: Finlandia · Ver recursos por país ↗
+            - link:
+              - /url: /otras-asociaciones/#pais-fr
+              - generic: Escape Cult Mind Control France
+              - generic: Francia · Ver recursos por país ↗
+            - link:
+              - /url: /otras-asociaciones/#pais-fr
+              - generic: GEMPPI
+              - generic: Francia · Ver recursos por país ↗
+            - link:
+              - /url: /otras-asociaciones/#pais-fr
+              - generic: CAFFES
+              - generic: Francia · Ver recursos por país ↗
+            - link:
+              - /url: /otras-asociaciones/#pais-fr
+              - generic: UNADFI / ADFI
+              - generic: Francia · Ver recursos por país ↗
+            - link:
+              - /url: /otras-asociaciones/#pais-gb
+              - generic: Faith to Faithless · Humanists UK
+              - generic: Reino Unido · Ver recursos por país ↗
+            - link:
+              - /url: /otras-asociaciones/#pais-gb
+              - generic: DialogCentre UK
+              - generic: Reino Unido · Ver recursos por país ↗
+            - link:
+              - /url: /otras-asociaciones/#pais-it
+              - generic: Quo Vadis APS · Veramente Liberi
+              - generic: Italia · Ver recursos por país ↗
+            - link:
+              - /url: /otras-asociaciones/#pais-no
+              - generic: Tro uten tvang
+              - generic: Noruega · Ver recursos por país ↗
+            - link:
+              - /url: /otras-asociaciones/#pais-nz
+              - generic: Uncult Ōtautahi
+              - generic: Nueva Zelanda · Ver recursos por país ↗
+            - link:
+              - /url: /otras-asociaciones/#pais-us
+              - generic: The Liberati
+              - generic: Estados Unidos · Ver recursos por país ↗
+            - link:
+              - /url: /otras-asociaciones/#pais-us
+              - generic: Silentlambs
+              - generic: Estados Unidos · Ver recursos por país ↗
+            - link:
+              - /url: /otras-asociaciones/#pais-za
+              - generic: Free From Faith Helpline · South African Secular Society
+              - generic: Sudáfrica · Ver recursos por país ↗
+          - paragraph [ref=e319]: "Recursos de apoyo publicados: ASOCAVICS (Argentina); Cult Information and Family Support (CIFS) (Australia); Info-Secte / Info-Cult (Canadá); Change of Path · Shunning Recovery Support Group (Canadá); infoSekta (Suiza); JZ Help e.V. (Alemania); Ausstieg e.V. (Alemania); Støtteforeningen for tidligere Jehovas Vidner (Dinamarca); Uskontojen uhrien tuki UUT ry (Finlandia); Escape Cult Mind Control France (Francia); GEMPPI (Francia); CAFFES (Francia); UNADFI / ADFI (Francia); Faith to Faithless · Humanists UK (Reino Unido); DialogCentre UK (Reino Unido); Quo Vadis APS · Veramente Liberi (Italia); Tro uten tvang (Noruega); Uncult Ōtautahi (Nueva Zelanda); The Liberati (Estados Unidos); Silentlambs (Estados Unidos); Free From Faith Helpline · South African Secular Society (Sudáfrica)."
+      - generic [ref=e320]:
+        - generic [ref=e321]:
+          - paragraph [ref=e322]: Presencia en España
+          - heading [level=2] [ref=e323]:
+            - text: 815 socios,
+            - emphasis [ref=e324]: 778 en España
+          - paragraph [ref=e325]: En España, en poco tiempo, la Asociación Española de Víctimas de los Testigos de Jehová ha conseguido reunir a más de 800 miembros en lo que es un movimiento imparable, teniendo presencia en todas las comunidades autónomas del país.
+          - paragraph [ref=e326]:
+            - text: Pasa tu cursor por el
+            - strong [ref=e327]: mapa interactivo
+            - text: para ver los socios por comunidad autónoma.
+        - generic [ref=e329]:
+          - img "Mapa de España con el número de socios por comunidad autónoma" [ref=e330]:
+            - 'generic "Andalucía: 60 socios" [ref=e331] [cursor=pointer]'
+            - 'generic "Aragón: 24 socios" [ref=e332] [cursor=pointer]'
+            - 'generic "Asturias: 12 socios" [ref=e333] [cursor=pointer]'
+            - 'generic "Islas Baleares: 15 socios" [ref=e334] [cursor=pointer]'
+            - 'generic "País Vasco: 21 socios" [ref=e335] [cursor=pointer]'
+            - 'generic "Islas Canarias: 35 socios" [ref=e336] [cursor=pointer]'
+            - 'generic "Cantabria: 12 socios" [ref=e337] [cursor=pointer]'
+            - 'generic "Castilla y León: 13 socios" [ref=e338] [cursor=pointer]'
+            - 'generic "Castilla-La Mancha: 65 socios" [ref=e339] [cursor=pointer]'
+            - 'generic "Cataluña: 208 socios" [ref=e340] [cursor=pointer]'
+            - 'generic "Extremadura: 3 socios" [ref=e341] [cursor=pointer]'
+            - 'generic "Galicia: 24 socios" [ref=e342] [cursor=pointer]'
+            - 'generic "La Rioja: 3 socios" [ref=e343] [cursor=pointer]'
+            - 'generic "Madrid: 161 socios" [ref=e344] [cursor=pointer]'
+            - 'generic "Región de Murcia: 26 socios" [ref=e345] [cursor=pointer]'
+            - 'generic "Navarra: 5 socios" [ref=e346] [cursor=pointer]'
+            - 'generic "C. Valenciana: 88 socios" [ref=e347] [cursor=pointer]'
+          - paragraph [ref=e348]:
+            - text: "Ceuta:"
+            - strong [ref=e349]: "1"
+            - text: "· Melilla:"
+            - strong [ref=e350]: "2"
+            - text: "· Fuera de España:"
+            - strong [ref=e351]: "37"
+          - paragraph [ref=e353]: Pasa el cursor por una comunidad para ver sus socios
+      - generic [ref=e354]:
+        - generic [ref=e355]:
+          - paragraph [ref=e356]: Qué hay detrás de sus creencias
+          - heading "¿Quiénes son los Testigos de Jehová?" [level=2] [ref=e357]
+          - paragraph [ref=e358]:
+            - text: ¿En qué
+            - strong [ref=e359]: creen
+            - text: los testigos de Jehová? ¿Por qué no celebran
+            - strong [ref=e360]: cumpleaños
+            - text: "? ¿Qué los lleva a rechazar"
+            - strong [ref=e361]: transfusiones de sangre
+            - text: "? Sus creencias no solo son diferentes,"
+            - strong [ref=e362]: pueden cambiar para siempre la vida de quienes las siguen
+            - text: .
+          - paragraph [ref=e363]: Te explicaremos qué hay detrás de esta organización a la que durante años hemos entregado nuestra vida.
+        - generic [ref=e364]:
+          - img "Niño en una representación simbólica" [ref=e365]
+          - text: +
+      - generic [ref=e368]:
+        - generic [ref=e369]:
+          - paragraph [ref=e370]: Ostracismo o exclusión social
+          - 'heading "El precio de salir de la JW.ORG: Ostracismo o exclusión social" [level=2] [ref=e371]'
+        - generic [ref=e372]:
+          - paragraph [ref=e373]: ¿Qué pasa cuando alguien decide abandonar la organización?
+          - paragraph [ref=e374]:
+            - text: El castigo no es físico, pero duele igual (o más). Se llama
+            - strong [ref=e375]: ostracismo
+            - text: ":"
+            - strong [ref=e376]: nadie te habla, nadie te mira, nadie te recuerda que existes
+            - text: . Tu familia, tus amigos, toda tu vida anterior… se esfuma. Y no porque tú lo elijas, sino porque
+            - strong [ref=e377]: así lo dictan sus reglas
+            - text: .
+          - paragraph [ref=e378]: Pero eso no es todo. También está la culpa interiorizada. Te han enseñado que, fuera de su mundo, no hay salvación. Que sin ellos, eres un traidor, un pecador, un alma perdida. Y el miedo se clava hondo. Porque ¿qué haces cuando todo lo que conocías desaparece de un día para otro? Tienes que aprender a vivir con normalidad fuera de los Testigos de Jehová.
+          - paragraph [ref=e379]:
+            - text: Por eso,
+            - strong [ref=e380]: cada vez más exadeptos de los Testigos de Jehová en España nos atrevemos a expresar
+            - text: "públicamente lo que antes callábamos:"
+            - strong [ref=e381]: la presión emocional
+            - text: ", la vulneración de la dignidad, el honor y la intimidad, la imposición de una verdad inapelable que"
+            - strong [ref=e382]: aplasta derechos, especialmente los de las mujeres y la comunidad LGTBIQ+
+            - text: .
+          - paragraph [ref=e383]:
+            - text: "Y lo peor: denuncias de presunto encubrimiento de delitos graves, incluso abusos sexuales. Porque"
+            - strong [ref=e384]: dentro, el silencio existe
+            - text: . Y salir de ahí no es fácil.
+      - generic [ref=e385]:
+        - generic [ref=e386]:
+          - img "Persona alejándose por una calle, simbolizando el camino de salida" [ref=e387]
+          - text: +
+        - generic [ref=e389]:
+          - paragraph [ref=e390]: Tienes dudas
+          - heading "¿Te estás planteando poder dejar a los Testigos de Jehová?" [level=2] [ref=e391]
+          - paragraph [ref=e392]:
+            - emphasis [ref=e393]:
+              - text: Es posible que tengas miedo, o que te sientas
+              - strong [ref=e394]: atrapado
+              - text: . Pero no es así. Aquí vamos a mostrarte
+              - strong [ref=e395]: cómo
+              - text: recuperarte y volver a ser tú mismo. Queremos que sepas que no estás solo. Ya has dado el primer paso al buscar
+              - strong [ref=e396]: información
+              - text: . Nosotros estamos contigo.
+          - link "Pasos para salir ↗" [ref=e397] [cursor=pointer]:
+            - /url: /guia-para-salir-de-los-testigos-de-jehova/
+      - region "Nuestro principio" [ref=e398]:
+        - figure "Si necesitas apoyo, estamos aquí. Escríbenos ↗ Hazte socio ↗" [ref=e399]:
+          - text: “
+          - blockquote [ref=e400]:
+            - text: Nadie debería tener que elegir entre su
+            - emphasis [ref=e401]: libertad
+            - text: y su
+            - emphasis [ref=e402]: familia.
+          - generic [ref=e403]:
+            - generic [ref=e404]: Si necesitas apoyo, estamos aquí.
+            - generic [ref=e405]:
+              - link "Escríbenos ↗" [ref=e406] [cursor=pointer]:
+                - /url: /contacto/
+              - link "Hazte socio ↗" [ref=e407] [cursor=pointer]:
+                - /url: /hazte-socio/
+      - generic [ref=e409]:
+        - generic [ref=e410]:
+          - paragraph [ref=e411]: Somos víctimas de los testigos de Jehová
+          - heading [level=2] [ref=e412]:
+            - text: No eres un traidor, ni un pecador, ni un alma perdida.
+            - emphasis [ref=e413]: Eres alguien que ha elegido la libertad.
+        - generic [ref=e414]:
+          - paragraph [ref=e415]:
+            - text: "Si has pasado por algo parecido, hay algo que debes saber:"
+            - strong [ref=e416]: no estás solo.
+            - text: Aunque ahora duela, hay vida después. Hay personas que te entienden y no van a juzgarte por pensar diferente.
+          - generic [ref=e417]:
+            - paragraph [ref=e418]: Las secuelas son reales
+            - list [ref=e419]:
+              - listitem [ref=e420]: Ansiedad
+              - listitem [ref=e421]: Depresión
+              - listitem [ref=e422]: Pensamientos suicidas
+            - paragraph [ref=e423]: Cuando te arrebatan tu entorno y te enseñan a temer al mundo, romper esas cadenas es una batalla diaria. No tienes que librarla a solas.
+            - link [ref=e424] [cursor=pointer]:
+              - /url: tel:024
+              - generic [aria-hidden] [ref=e425]: "024"
+              - generic [ref=e426]:
+                - text: Si piensas en quitarte la vida, llama al
+                - strong [ref=e427]: "024"
+                - text: . Gratuito y confidencial, 24 horas.
+      - region [ref=e428]:
+        - generic [ref=e429]:
+          - paragraph [ref=e430]: Visibilizar y denunciar
+          - heading [level=2] [ref=e431]:
+            - text: Estamos aquí
+            - emphasis [ref=e432]: para eso.
+        - list [ref=e433]:
+          - listitem [ref=e434]:
+            - generic [ref=e435]: "01"
+            - heading "Visibilizar" [level=3] [ref=e436]
+            - paragraph [ref=e437]: Lo que muchos prefieren callar.
+          - listitem [ref=e438]:
+            - generic [ref=e439]: "02"
+            - heading "Expresar" [level=3] [ref=e440]
+            - paragraph [ref=e441]: El daño que se esconde detrás de estas prácticas.
+          - listitem [ref=e442]:
+            - generic [ref=e443]: "03"
+            - heading "Acompañar" [level=3] [ref=e444]
+            - paragraph [ref=e445]: Con apoyo y asesoramiento psicológico y legal a quienes siguen atrapados en esa red de control y culpa.
+        - generic [ref=e446]:
+          - paragraph [ref=e447]:
+            - text: "Si estás leyendo esto y has pasado por algo parecido, hay algo que debes saber:"
+            - strong [ref=e448]: no estás solo
+            - text: .
+          - paragraph [ref=e449]:
+            - strong [ref=e450]: No eres un traidor, ni un pecador, ni un alma perdida
+            - text: . Eres una persona que
+            - strong [ref=e451]: has elegido la libertad
+            - text: . Y aunque ahora duela, hay vida después de ellos. Hay personas que te entienden, que te escuchan y que no van a juzgarte por pensar diferente.
+          - paragraph [ref=e452]:
+            - text: Porque las secuelas son reales.
+            - strong [ref=e453]: Muchas personas que han logrado salir arrastran ansiedad, depresión e incluso pensamientos suicidas.
+            - text: Cuando te arrebatan tu entorno, cuando te enseñan a vivir con miedo al mundo, cuando te hacen creer que fuera de su mundo solo hay vacío… romper esas cadenas se convierte en una batalla diaria hasta conseguir asumir confianza en el mundo.
+          - paragraph [ref=e454]:
+            - text: Desde esta asociación,
+            - strong [ref=e455]: estamos aquí para eso
+            - text: . Para
+            - strong [ref=e456]: VISIBILIZAR
+            - text: lo que muchos prefieren callar. Para
+            - strong [ref=e457]: EXPRESAR
+            - text: el daño que se esconde detrás de estas prácticas y
+            - strong [ref=e458]: ofrecer apoyo y asesoramiento psicológico y legal
+            - text: a quienes siguen atrapados en esa red de control y culpa.
+          - paragraph [ref=e459]:
+            - text: "Porque creemos en algo muy simple, pero que a algunos les cuesta aceptar:"
+            - strong [ref=e460]: nadie debería tener que elegir entre su libertad y su familia.
+          - paragraph [ref=e461]:
+            - strong [ref=e462]: Si necesitas apoyo, estamos aquí. Escríbenos o date de alta como socio.
+          - link "¿Necesitas ayuda ahora? Habla con nosotros" [ref=e463] [cursor=pointer]:
+            - /url: /contacto/
+      - generic [ref=e465]:
+        - generic [ref=e466]:
+          - paragraph [ref=e467]: Visibilidad pública
+          - heading "Noticias y documentos destacados" [level=2] [ref=e468]
+        - generic [ref=e469]:
+          - link [ref=e470] [cursor=pointer]:
+            - /url: /noticias/rtve-da-voz-a-las-victimas-del-ostracismo-el-testimonio-de-marcos-en-directo-al-grano/
+            - img "RTVE da voz a las víctimas del ostracismo" [ref=e471]
+            - generic [ref=e472]:
+              - paragraph [ref=e473]: Medios · RTVE
+              - heading "RTVE da voz a las víctimas del ostracismo" [level=3] [ref=e474]
+          - link [ref=e475] [cursor=pointer]:
+            - /url: /noticias/conversaciones-pendientes-episodio-128-cadena-ser/
+            - img "Conversaciones pendientes" [ref=e476]
+            - generic [ref=e477]:
+              - paragraph [ref=e478]: Radio · Cadena SER
+              - heading "Conversaciones pendientes" [level=3] [ref=e479]
+          - link [ref=e480] [cursor=pointer]:
+            - /url: /noticias/victoria-historica-de-aevtj/
+            - img "Victoria histórica de la AEVTJ" [ref=e481]
+            - generic [ref=e482]:
+              - paragraph [ref=e483]: Legal
+              - heading "Victoria histórica de la AEVTJ" [level=3] [ref=e484]
+      - generic [ref=e485]:
+        - generic [ref=e486]:
+          - paragraph [ref=e487]: Diste el paso más difícil
+          - 'heading "Ex Testigos de Jehová: Recupera tu libertad y aprende a ser tú" [level=2] [ref=e488]'
+          - paragraph [ref=e489]:
+            - strong [ref=e490]: Salir no es el final, es el principio
+            - text: de algo nuevo. Pero también es un camino lleno de desafíos. Si eres un ex Testigo de Jehová, aquí tienes
+            - strong [ref=e491]: herramientas, consejos y apoyo
+            - text: para dejar atrás el pasado y construir una vida que realmente sea tuya. Te acompañamos.
+          - link "Únete a la comunidad ↗" [ref=e492] [cursor=pointer]:
+            - /url: /hazte-socio/
+        - generic [ref=e493]:
+          - img "Grupo de personas apoyándose" [ref=e494]
+          - text: +
+      - generic [ref=e497]:
+        - img "Firma de Sam Harris" [ref=e498]
+        - blockquote [ref=e499]: "\"La fe ciega en la autoridad es el mayor enemigo de la verdad. Mientras aceptemos sin cuestionar las palabras de profetas muertos y textos antiguos, seguiremos siendo prisioneros de nuestra propia ignorancia.\""
+        - paragraph [ref=e500]: Sam Harris · neurocientífico, filósofo y autor estadounidense
+      - generic [ref=e502]:
+        - generic [ref=e503]:
+          - strong [ref=e504]: "+815"
+          - paragraph [ref=e505]: Socios
+        - generic [ref=e506]:
+          - strong [ref=e507]: "+25"
+          - paragraph [ref=e508]: Asociaciones de víctimas
+        - generic [ref=e509]:
+          - strong [ref=e510]: "+8"
+          - paragraph [ref=e511]: Juicios ganados
+  - contentinfo [ref=e512]:
+    - generic [ref=e513]:
+      - generic [ref=e514]:
+        - generic [ref=e515]:
+          - img "AEVTJ" [ref=e516]
+          - paragraph [ref=e517]: Asociación Española de Víctimas de los Testigos de Jehová y la JW.ORG. Estamos aquí para escucharte, ayudarte a recuperar tu vida y darte el apoyo que necesitas para dejar atrás la organización.
+          - generic [ref=e518]:
+            - link "Facebook" [ref=e519] [cursor=pointer]:
+              - /url: https://www.facebook.com/asoc.aevtj
+            - link "Youtube" [ref=e522] [cursor=pointer]:
+              - /url: https://www.youtube.com/@AEVTJ
+            - link "X" [ref=e525] [cursor=pointer]:
+              - /url: https://x.com
+            - link "Instagram" [ref=e528] [cursor=pointer]:
+              - /url: https://instagram.com
+        - navigation "Menú de pie de página" [ref=e531]:
+          - heading "Menú" [level=2] [ref=e532]
+          - list [ref=e533]:
+            - listitem [ref=e534]:
+              - link "¿Quiénes somos?" [ref=e535] [cursor=pointer]:
+                - /url: /quienes-somos/
+            - listitem [ref=e536]:
+              - link "Noticias" [ref=e537] [cursor=pointer]:
+                - /url: /noticias/
+            - listitem [ref=e538]:
+              - link "Documentos" [ref=e539] [cursor=pointer]:
+                - /url: /legal/
+            - listitem [ref=e540]:
+              - link "Hazte socio / Donaciones" [ref=e541] [cursor=pointer]:
+                - /url: /hazte-socio/
+            - listitem [ref=e542]:
+              - link "Otras asociaciones" [ref=e543] [cursor=pointer]:
+                - /url: /otras-asociaciones/
+            - listitem [ref=e544]:
+              - link "Contacto" [ref=e545] [cursor=pointer]:
+                - /url: /contacto/
+        - generic [ref=e546]:
+          - heading "Boletín de noticias" [level=2] [ref=e547]
+          - paragraph [ref=e548]: Recibe nuestro boletín de noticias mensual de forma totalmente gratuita y mantente informado.
+          - generic [ref=e549]:
+            - textbox "Tu correo electrónico" [ref=e550]
+            - generic [ref=e551]:
+              - checkbox "Quiero recibir la newsletter y acepto el tratamiento de mi email para ese fin." [ref=e552]
+              - generic [ref=e553]: Quiero recibir la newsletter y acepto el tratamiento de mi email para ese fin.
+            - paragraph [ref=e554]:
+              - text: La suscripción se gestionará mediante Mailchimp. Tratamos tus datos según nuestra
+              - link "Política de Privacidad" [ref=e555] [cursor=pointer]:
+                - /url: /politica-de-privacidad/
+              - text: .
+            - button "Suscribirme" [ref=e556] [cursor=pointer]
+            - status
+      - generic [ref=e557]:
+        - paragraph [ref=e558]: © 2026 Asociación Española de Victimas de los Testigos de Jehová
+        - list [ref=e559]:
+          - listitem [ref=e560]:
+            - link "Aviso Legal" [ref=e561] [cursor=pointer]:
+              - /url: /aviso-legal/
+          - listitem [ref=e562]:
+            - link "Política de Cookies" [ref=e563] [cursor=pointer]:
+              - /url: /politica-de-cookies/
+          - listitem [ref=e564]:
+            - link "Política de privacidad" [ref=e565] [cursor=pointer]:
+              - /url: /politica-de-privacidad/
+  - generic [ref=e567]:
+    - paragraph [ref=e568]:
+      - text: Utilizamos tecnologías necesarias para que la web funcione y, si lo aceptas, herramientas de analítica y vídeos incrustados de plataformas externas. No usamos publicidad personalizada. Consulta la
+      - link "Política de cookies" [ref=e569] [cursor=pointer]:
+        - /url: /politica-de-cookies/
+      - text: para más información.
+    - generic [ref=e570]:
+      - button "Denegar" [ref=e571] [cursor=pointer]
+      - button "Aceptar" [ref=e572] [cursor=pointer]
+      - link "Ver preferencias" [ref=e573] [cursor=pointer]:
+        - /url: /politica-de-cookies/

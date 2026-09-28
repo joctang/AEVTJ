@@ -1,0 +1,242 @@
+- generic [active] [ref=f1e1]:
+  - link "Saltar al contenido" [ref=f1e2] [cursor=pointer]:
+    - /url: "#contenido"
+  - banner [ref=f1e3]:
+    - generic [ref=f1e4]:
+      - link [ref=f1e5] [cursor=pointer]:
+        - /url: /
+        - img "AEVTJ - Asociación Española de Víctimas de los Testigos de Jehová" [ref=f1e6]
+      - navigation "Menú principal" [ref=f1e7]:
+        - list [ref=f1e8]:
+          - listitem [ref=f1e9]:
+            - link "¿Quiénes somos?" [ref=f1e10] [cursor=pointer]:
+              - /url: /quienes-somos/
+          - listitem [ref=f1e11]:
+            - link "Noticias" [ref=f1e12] [cursor=pointer]:
+              - /url: /noticias/
+          - listitem [ref=f1e13]:
+            - link "Documentos" [ref=f1e14] [cursor=pointer]:
+              - /url: /recursos-de-ayuda/
+          - listitem [ref=f1e17]:
+            - link "Hazte socio / Donaciones" [ref=f1e18] [cursor=pointer]:
+              - /url: /hazte-socio/
+          - listitem [ref=f1e19]:
+            - link "Otras asociaciones" [ref=f1e20] [cursor=pointer]:
+              - /url: /otras-asociaciones/
+          - listitem [ref=f1e21]:
+            - link "Contacto" [ref=f1e22] [cursor=pointer]:
+              - /url: /contacto/
+      - generic [ref=f1e23]:
+        - link "Facebook" [ref=f1e24] [cursor=pointer]:
+          - /url: https://www.facebook.com/asoc.aevtj
+        - link "Youtube" [ref=f1e27] [cursor=pointer]:
+          - /url: https://www.youtube.com/@AEVTJ
+        - link "X" [ref=f1e30] [cursor=pointer]:
+          - /url: https://x.com
+        - link "Instagram" [ref=f1e33] [cursor=pointer]:
+          - /url: https://instagram.com
+  - main [ref=f1e36]:
+    - generic [ref=f1e37]:
+      - generic [ref=f1e40]:
+        - paragraph [ref=f1e41]: Únete a la asociación
+        - heading "Hazte socio" [level=1] [ref=f1e42]
+        - paragraph [ref=f1e43]: Tu apoyo marca la diferencia
+        - paragraph [ref=f1e44]: Somos una asociación española sin ánimo de lucro dedicada a ayudar a las víctimas de los Testigos de Jehová. Contamos con el compromiso y la solidaridad de personas como tú para brindar apoyo a quienes lo necesitan y defendernos de posibles demandas legales.
+        - generic [ref=f1e45]:
+          - link "Hazte socio, es gratis ↗" [ref=f1e46] [cursor=pointer]:
+            - /url: https://forms.gle/Hzx99iAKP6BZyqFx6
+          - link "Quiero donar ↗" [ref=f1e47] [cursor=pointer]:
+            - /url: "#donaciones"
+          - link "Solo recibir noticias ↗" [ref=f1e48] [cursor=pointer]:
+            - /url: https://mailchi.mp/victimasdetestigosdejehova/newsletter
+      - region [ref=f1e49]:
+        - generic [ref=f1e50]:
+          - paragraph [ref=f1e51]: Formas de colaborar
+          - heading "¿Cómo puedes colaborar con la asociación?" [level=2] [ref=f1e52]
+          - generic [ref=f1e53]:
+            - generic [ref=f1e54]:
+              - heading "Hazte socio de forma gratuita" [level=3] [ref=f1e55]
+              - paragraph [ref=f1e56]: Forma parte del cambio
+              - generic [ref=f1e57]: Boletín mensual
+              - list [ref=f1e58]:
+                - listitem [ref=f1e59]: Recibe mensualmente nuestro boletín de noticias
+                - listitem [ref=f1e62]: Formar parte de la toma de decisiones
+                - listitem [ref=f1e65]: Crear y participar en comisiones de ayuda a las víctimas
+                - listitem [ref=f1e68]: Acceder a la información financiera interna de la asociación
+                - listitem [ref=f1e71]: Acceso a los grupos de apoyo de WhatsApp
+                - listitem [ref=f1e74]: Presentar candidaturas para la junta directiva
+              - link "Rellenar el formulario ↗" [ref=f1e77] [cursor=pointer]:
+                - /url: https://forms.gle/Hzx99iAKP6BZyqFx6
+            - generic [ref=f1e78]:
+              - heading "Donaciones" [level=3] [ref=f1e79]
+              - paragraph [ref=f1e80]: Cualquier cantidad, por pequeña que sea, es invaluable para continuar con nuestra labor. Te invitamos a considerar hacer aportaciones periódicas; puedes fijar una fecha en tu calendario para contribuir de manera constante y apoyar este proyecto que no tiene límite temporal.
+              - generic [ref=f1e81]:
+                - heading "PayPal" [level=4] [ref=f1e82]
+                - paragraph [ref=f1e83]:
+                  - text: Para donaciones a través de PayPal, utiliza la dirección
+                  - strong [ref=f1e84]: admon.aevtj@gmail.com
+                  - text: . Selecciona la opción entre particulares para ahorrar en comisiones.
+      - region [ref=f1e85]:
+        - generic [ref=f1e86]:
+          - paragraph [ref=f1e87]: Transferencia bancaria
+          - heading "Apoya a la asociación desde tu banco" [level=2] [ref=f1e88]
+          - paragraph [ref=f1e89]:
+            - text: Haz tus donaciones por transferencia a la cuenta de la
+            - strong [ref=f1e90]: Asociación Española de Víctimas de los Testigos de Jehová (AEVTJ)
+            - text: .
+          - heading "Datos bancarios" [level=3] [ref=f1e91]
+          - generic [ref=f1e92]:
+            - generic [ref=f1e93]:
+              - generic [ref=f1e94]: Banco
+              - generic [ref=f1e95]: BANCO SABADELL
+            - generic [ref=f1e96]:
+              - generic [ref=f1e97]: IBAN
+              - generic [ref=f1e98]: ES66 0081 7171 7500 0181 3989
+              - button "Copiar el IBAN al portapapeles" [ref=f1e99] [cursor=pointer]: Copiar
+            - generic [ref=f1e103]:
+              - generic [ref=f1e104]: BIC/SWIFT
+              - generic [ref=f1e105]: BSABESBB
+          - heading "Cómo realizar la transferencia" [level=3] [ref=f1e106]
+          - list [ref=f1e107]:
+            - listitem [ref=f1e108]:
+              - generic [aria-hidden] [ref=f1e109]: "1"
+              - generic [ref=f1e110]: Accede a tu banca online o aplicación móvil
+            - listitem [ref=f1e111]:
+              - generic [aria-hidden] [ref=f1e112]: "2"
+              - generic [ref=f1e113]: Introduce el número de cuenta (IBAN) de AEVTJ
+            - listitem [ref=f1e114]:
+              - generic [aria-hidden] [ref=f1e115]: "3"
+              - generic [ref=f1e116]: Indica el importe que deseas donar
+            - listitem [ref=f1e117]:
+              - generic [aria-hidden] [ref=f1e118]: "4"
+              - generic [ref=f1e119]:
+                - text: "En el concepto/asunto escribe:"
+                - strong [ref=f1e120]: DONATIVO a AEVTJ
+            - listitem [ref=f1e121]:
+              - generic [aria-hidden] [ref=f1e122]: "5"
+              - generic [ref=f1e123]: Confirma y realiza la transferencia
+          - generic [ref=f1e124]:
+            - paragraph [ref=f1e125]:
+              - strong [ref=f1e126]: Sobre el asunto o concepto.
+            - paragraph [ref=f1e127]:
+              - strong [ref=f1e128]: No es necesario incluir tu nombre
+              - text: en el concepto de la transferencia si deseas permanecer en el anonimato. Si decides incluir tu nombre, ten la tranquilidad de que
+              - strong [ref=f1e129]: no se hará público
+              - text: . Respetamos tu privacidad.
+          - generic [ref=f1e130]:
+            - paragraph [ref=f1e131]: ¡Gracias por tu solidaridad!
+            - paragraph [ref=f1e132]: Tu donación ayuda a apoyar a las víctimas y promover la concienciación sobre esta problemática.
+      - region [ref=f1e133]:
+        - generic [ref=f1e134]:
+          - img "GoFundMe" [ref=f1e135]
+          - generic [ref=f1e136]:
+            - heading "Otra forma de colaborar" [level=2] [ref=f1e137]
+            - paragraph [ref=f1e138]:
+              - text: Puedes colaborar con nosotros también a través de GoFundMe, la plataforma de
+              - emphasis [ref=f1e139]: crowdfunding
+              - text: (o micromecenazgo) en línea más grande y popular del mundo, que permite a organizaciones como la nuestra recaudar dinero y ayudarlas a seguir con sus proyectos.
+            - link "Ir a nuestra campaña en GoFundMe ↗" [ref=f1e140] [cursor=pointer]:
+              - /url: https://www.gofundme.com/f/ayuda-a-la-asociacion-de-victimas-de-los-testigos-de-jehova
+      - region [ref=f1e141]:
+        - generic [ref=f1e142]:
+          - paragraph [ref=f1e143]: ¿Tienes más preguntas?
+          - heading "Estamos aquí para ayudarte" [level=2] [ref=f1e144]
+          - paragraph [ref=f1e145]: Escríbenos al área que mejor encaje con tu consulta y nos pondremos en contacto a la mayor brevedad.
+          - generic [ref=f1e146]:
+            - generic [ref=f1e147]:
+              - heading "Ayuda y bienvenida" [level=3] [ref=f1e148]
+              - link "info@victimasdetestigosdejehova.org" [ref=f1e149] [cursor=pointer]:
+                - /url: mailto:info@victimasdetestigosdejehova.org
+            - generic [ref=f1e150]:
+              - heading "Organismos, instituciones y periodistas" [level=3] [ref=f1e151]
+              - link "medios@victimasdetestigosdejehova.org" [ref=f1e152] [cursor=pointer]:
+                - /url: mailto:medios@victimasdetestigosdejehova.org
+              - link "Noticias y comunicados" [ref=f1e153] [cursor=pointer]:
+                - /url: /noticias/
+            - generic [ref=f1e154]:
+              - heading "Secretaría" [level=3] [ref=f1e155]
+              - paragraph [ref=f1e156]:
+                - link "+34 611 21 82 86" [ref=f1e157] [cursor=pointer]:
+                  - /url: https://wa.me/34611218286
+                - text: · Solo WhatsApp
+              - link "secretaria@victimasdetestigosdejehova.org" [ref=f1e158] [cursor=pointer]:
+                - /url: mailto:secretaria@victimasdetestigosdejehova.org
+          - generic [ref=f1e159]:
+            - link "Hazte socio ↗" [ref=f1e160] [cursor=pointer]:
+              - /url: https://forms.gle/Hzx99iAKP6BZyqFx6
+            - link "Escríbenos ↗" [ref=f1e161] [cursor=pointer]:
+              - /url: /contacto/
+  - contentinfo [ref=f1e162]:
+    - generic [ref=f1e163]:
+      - generic [ref=f1e164]:
+        - generic [ref=f1e165]:
+          - img "AEVTJ" [ref=f1e166]
+          - paragraph [ref=f1e167]: Asociación Española de Víctimas de los Testigos de Jehová y la JW.ORG. Estamos aquí para escucharte, ayudarte a recuperar tu vida y darte el apoyo que necesitas para dejar atrás la organización.
+          - generic [ref=f1e168]:
+            - link "Facebook" [ref=f1e169] [cursor=pointer]:
+              - /url: https://www.facebook.com/asoc.aevtj
+            - link "Youtube" [ref=f1e172] [cursor=pointer]:
+              - /url: https://www.youtube.com/@AEVTJ
+            - link "X" [ref=f1e175] [cursor=pointer]:
+              - /url: https://x.com
+            - link "Instagram" [ref=f1e178] [cursor=pointer]:
+              - /url: https://instagram.com
+        - navigation "Menú de pie de página" [ref=f1e181]:
+          - heading "Menú" [level=2] [ref=f1e182]
+          - list [ref=f1e183]:
+            - listitem [ref=f1e184]:
+              - link "¿Quiénes somos?" [ref=f1e185] [cursor=pointer]:
+                - /url: /quienes-somos/
+            - listitem [ref=f1e186]:
+              - link "Noticias" [ref=f1e187] [cursor=pointer]:
+                - /url: /noticias/
+            - listitem [ref=f1e188]:
+              - link "Documentos" [ref=f1e189] [cursor=pointer]:
+                - /url: /legal/
+            - listitem [ref=f1e190]:
+              - link "Hazte socio / Donaciones" [ref=f1e191] [cursor=pointer]:
+                - /url: /hazte-socio/
+            - listitem [ref=f1e192]:
+              - link "Otras asociaciones" [ref=f1e193] [cursor=pointer]:
+                - /url: /otras-asociaciones/
+            - listitem [ref=f1e194]:
+              - link "Contacto" [ref=f1e195] [cursor=pointer]:
+                - /url: /contacto/
+        - generic [ref=f1e196]:
+          - heading "Boletín de noticias" [level=2] [ref=f1e197]
+          - paragraph [ref=f1e198]: Recibe nuestro boletín de noticias mensual de forma totalmente gratuita y mantente informado.
+          - generic [ref=f1e199]:
+            - textbox "Tu correo electrónico" [ref=f1e200]
+            - generic [ref=f1e201]:
+              - checkbox "Quiero recibir la newsletter y acepto el tratamiento de mi email para ese fin." [ref=f1e202]
+              - generic [ref=f1e203]: Quiero recibir la newsletter y acepto el tratamiento de mi email para ese fin.
+            - paragraph [ref=f1e204]:
+              - text: La suscripción se gestionará mediante Mailchimp. Tratamos tus datos según nuestra
+              - link "Política de Privacidad" [ref=f1e205] [cursor=pointer]:
+                - /url: /politica-de-privacidad/
+              - text: .
+            - button "Suscribirme" [ref=f1e206] [cursor=pointer]
+            - status
+      - generic [ref=f1e207]:
+        - paragraph [ref=f1e208]: © 2026 Asociación Española de Victimas de los Testigos de Jehová
+        - list [ref=f1e209]:
+          - listitem [ref=f1e210]:
+            - link "Aviso Legal" [ref=f1e211] [cursor=pointer]:
+              - /url: /aviso-legal/
+          - listitem [ref=f1e212]:
+            - link "Política de Cookies" [ref=f1e213] [cursor=pointer]:
+              - /url: /politica-de-cookies/
+          - listitem [ref=f1e214]:
+            - link "Política de privacidad" [ref=f1e215] [cursor=pointer]:
+              - /url: /politica-de-privacidad/
+  - generic [ref=f1e217]:
+    - paragraph [ref=f1e218]:
+      - text: Utilizamos tecnologías necesarias para que la web funcione y, si lo aceptas, herramientas de analítica y vídeos incrustados de plataformas externas. No usamos publicidad personalizada. Consulta la
+      - link "Política de cookies" [ref=f1e219] [cursor=pointer]:
+        - /url: /politica-de-cookies/
+      - text: para más información.
+    - generic [ref=f1e220]:
+      - button "Denegar" [ref=f1e221] [cursor=pointer]
+      - button "Aceptar" [ref=f1e222] [cursor=pointer]
+      - link "Ver preferencias" [ref=f1e223] [cursor=pointer]:
+        - /url: /politica-de-cookies/

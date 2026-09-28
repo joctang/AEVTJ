@@ -1,0 +1,66 @@
+- generic [active] [ref=f50e1]:
+  - generic [ref=f50e4]:
+    - banner [ref=f50e5]:
+      - link "Skip to main content" [ref=f50e6] [cursor=pointer]:
+        - /url: "#content"
+      - navigation "Main" [ref=f50e9]:
+        - generic [ref=f50e10]:
+          - link "Home" [ref=f50e12] [cursor=pointer]
+          - button [ref=f50e16] [cursor=pointer]:
+            - paragraph [ref=f50e20]: Search...
+          - generic [ref=f50e22]:
+            - button "Help" [ref=f50e23] [cursor=pointer]
+            - button "account settings button" [ref=f50e32] [cursor=pointer]:
+              - img "Signed in as Asociación Asociación Española de Víctimas de los Testigos de Jehová, Account Menu" [ref=f50e34]
+    - navigation "Primary" [ref=f50e39]:
+      - generic [ref=f50e40]:
+        - list [ref=f50e41]:
+          - listitem [ref=f50e42]:
+            - link "Crear" [ref=f50e43] [cursor=pointer]:
+              - /url: "#/create-campaign"
+        - list [ref=f50e46]:
+          - listitem [ref=f50e47]:
+            - link "Inicio" [ref=f50e48] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=f50e52]:
+            - link "Campañas" [ref=f50e53] [cursor=pointer]:
+              - /url: /campaigns
+          - listitem [ref=f50e57]:
+            - link "Automatizaciones" [ref=f50e58] [cursor=pointer]:
+              - /url: /customer-journey
+          - listitem [ref=f50e62]:
+            - link "SMS Nuevo" [ref=f50e63] [cursor=pointer]:
+              - /url: /sms
+              - generic [ref=f50e65]:
+                - generic [ref=f50e66]: SMS
+                - generic [ref=f50e67]: Nuevo
+          - listitem [ref=f50e68]:
+            - link "Formularios" [ref=f50e69] [cursor=pointer]:
+              - /url: /forms
+          - listitem [ref=f50e73]:
+            - link "Público" [ref=f50e74] [cursor=pointer]:
+              - /url: /audience/contacts
+          - listitem [ref=f50e78]:
+            - link "Análisis" [ref=f50e79] [cursor=pointer]:
+              - /url: /analytics/marketing-dashboard/
+          - listitem [ref=f50e83]:
+            - link "Sitio web" [ref=f50e84] [cursor=pointer]:
+              - /url: /website/dashboard
+          - listitem [ref=f50e88]:
+            - link "Contenido" [ref=f50e89] [cursor=pointer]:
+              - /url: /content/#myfiles
+          - listitem [ref=f50e93]:
+            - link "Integraciones" [ref=f50e94] [cursor=pointer]:
+              - /url: /account/connected-sites/discover/
+      - generic [ref=f50e98]:
+        - paragraph [ref=f50e102]: Loading
+        - button "Minimize navigation" [ref=f50e104] [cursor=pointer]
+    - list [ref=f50e106]:
+      - listitem [ref=f50e107]:
+        - button "Help" [ref=f50e109] [cursor=pointer]
+    - main [ref=f50e113]
+    - status
+    - status
+  - generic:
+    - status [ref=f50e115]
+    - alert [ref=f50e116]

@@ -1,0 +1,47 @@
+- generic [ref=e1]:
+  - text: 
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - link [ref=e5] [cursor=pointer]:
+        - /url: https://mailchimp.com/
+        - img "Mailchimp logo" [ref=e6]
+    - main [ref=e8]:
+      - generic [ref=e10]:
+        - generic: Mailchimp Login
+        - generic [ref=e12]:
+          - generic [ref=e13]:
+            - heading "Iniciar sesión en Mailchimp" [level=1] [ref=e14]
+            - paragraph [ref=e15]:
+              - generic [ref=e16]: ¿Necesitas una cuenta de Mailchimp?
+              - link "Crear una cuenta" [ref=e17] [cursor=pointer]:
+                - /url: /signup/
+          - generic [ref=e18]:
+            - group [ref=e19]:
+              - generic [ref=e21]:
+                - generic [ref=e22]: Nombre de usuario o correo electrónico
+                - textbox "Nombre de usuario o correo electrónico" [active] [ref=e23]
+              - generic [ref=e24]:
+                - button "Inicia sesión" [ref=e25]
+                - generic [ref=e26]:
+                  - paragraph [ref=e27]:
+                    - link "¿Has olvidado tu nombre de usuario?" [ref=e28] [cursor=pointer]:
+                      - /url: /login/forgot-username/
+                  - paragraph [ref=e29]:
+                    - link "¿Has olvidado la contraseña?" [ref=e30] [cursor=pointer]:
+                      - /url: /login/forgot/
+            - generic [ref=e31]:
+              - generic [ref=e32]: "O bien, si has creado tu cuenta de Mailchimp con Google:"
+              - button [ref=e34]:
+                - link "Continuar con Google" [ref=e35] [cursor=pointer]:
+                  - /url: /login/google
+    - contentinfo [ref=e36]:
+      - paragraph [ref=e37]:
+        - text: "©2026 Intuit Inc. Todos los derechos reservados. Mailchimp® es una marca comercial registrada de The Rocket Science Group:"
+        - link "Preferencias de cookies" [ref=e38] [cursor=pointer]:
+          - /url: https://mailchimp.com/legal/cookies/#optanon-toggle-display/
+        - text: ","
+        - link "Privacidad" [ref=e39] [cursor=pointer]:
+          - /url: https://www.intuit.com/privacy/statement/es/
+        - text: "y"
+        - link "Condiciones" [ref=e40] [cursor=pointer]:
+          - /url: https://mailchimp.com/es/legal/terms/

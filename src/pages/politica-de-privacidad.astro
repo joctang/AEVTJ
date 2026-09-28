@@ -1,0 +1,24 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ArticleContent from "../components/ArticleContent.astro";
+
+const entries = await getCollection("pages");
+const entry = entries.find((item) => item.data.slug === "politica-de-privacidad");
+
+if (!entry) throw new Error("No se ha encontrado la política de privacidad");
+
+const html = entry.data.html
+  .replace(
+    "NO se prevén transferencia de datos a terceros países.",
+    "Para gestionar la newsletter utilizamos Mailchimp como proveedor encargado del tratamiento. El correo electrónico y la preferencia de comunicación se envían a Mailchimp únicamente cuando la persona marca expresamente su consentimiento. Mailchimp puede tratar estos datos fuera del Espacio Económico Europeo conforme a sus garantías y condiciones aplicables; puedes consultar su política de privacidad en https://www.intuit.com/privacy/statement/es/.",
+  )
+  .replace(
+    "<p><strong>Newsletter:</strong> Únicamente tratamos su dirección de correo electrónico con la finalidad exclusiva de remitirle comunicaciones informativas.</p>",
+    "<p><strong>Newsletter:</strong> Tratamos su dirección de correo electrónico y su preferencia de comunicación con la finalidad exclusiva de remitirle comunicaciones informativas. La suscripción se gestiona mediante Mailchimp y requiere consentimiento específico.</p>",
+  );
+---
+
+<BaseLayout title="Política de privacidad">
+  <ArticleContent title="Política de privacidad" html={html} />
+</BaseLayout>

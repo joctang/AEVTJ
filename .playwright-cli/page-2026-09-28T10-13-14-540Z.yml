@@ -1,0 +1,15 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e9]:
+    - heading "AEVTJ Newsletter" [level=1] [ref=e14]
+    - generic [ref=e23]:
+      - generic [ref=e24]:
+        - generic [ref=e25]:
+          - generic [ref=e26]: Dirección de correo electrónico
+          - textbox "Dirección de correo electrónico" [ref=e27]
+        - textbox [ref=e29]
+      - button "Subscribe" [ref=e30] [cursor=pointer]
+  - generic [ref=e33] [cursor=pointer]:
+    - link "Report Abuse" [ref=e35]:
+      - /url: https://mailchimp.com/contact/abuse/
+    - link [ref=e36]:
+      - /url: https://mailchimp.com/referral/?utm_source=freemium_landingpage&utm_medium=landingpage&utm_campaign=referral_marketing

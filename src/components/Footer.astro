@@ -67,16 +67,22 @@ const mailchimpFormAction = import.meta.env.PUBLIC_MAILCHIMP_FORM_ACTION;
         >
           <input
             type="email"
-            name="email"
+            name="EMAIL"
             aria-label="Tu correo electrónico"
             placeholder="Tu correo electrónico"
             required
             class="rounded-md border border-white/20 bg-white/5 px-3 py-2 text-sm text-white placeholder-white/40 outline-none focus:border-brand-olive"
           />
           <label class="flex items-start gap-2 text-xs text-white/60">
-            <input type="checkbox" name="consentimiento_newsletter" required class="mt-0.5" />
+            <input type="checkbox" name="gdpr[27789]" value="Y" required class="mt-0.5" />
             <span>Quiero recibir la newsletter y acepto el tratamiento de mi email para ese fin.</span>
           </label>
+          <div class="hidden" aria-hidden="true">
+            <label>
+              No rellenar
+              <input type="text" name="b_534a203867dd0e94cef782ecd_906754" tabindex="-1" autocomplete="off" />
+            </label>
+          </div>
           <p class="text-xs text-white/60">
             {mailchimpFormAction
               ? "La suscripción se gestionará mediante Mailchimp."

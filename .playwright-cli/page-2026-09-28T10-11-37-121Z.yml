@@ -1,0 +1,900 @@
+- generic [ref=f36e1]:
+  - generic [ref=f36e4]:
+    - banner [ref=f36e5]:
+      - generic:
+        - link "Saltar al contenido principal" [ref=f36e6] [cursor=pointer]:
+          - /url: "#content"
+        - region "Banner de mensajes del sitio"
+      - navigation "Principal" [ref=f36e9]:
+        - generic [ref=f36e10]:
+          - link "Inicio" [ref=f36e12] [cursor=pointer]
+          - button [ref=f36e16] [cursor=pointer]:
+            - paragraph [ref=f36e20]: Buscar...
+          - generic [ref=f36e22]:
+            - button "persistent invite button" [ref=f36e24] [cursor=pointer]
+            - button "Consulta con un experto" [ref=f36e28] [cursor=pointer]
+            - generic [ref=f36e37]:
+              - button "account settings button" [ref=f36e38] [cursor=pointer]:
+                - img "Has iniciado sesión como Asociación Asociación Española de Víctimas de los Testigos de Jehová, Menú Cuenta" [ref=f36e40]
+              - generic [ref=f36e41]: "1"
+              - generic [ref=f36e42]: notificación
+    - navigation "Principal" [ref=f36e47]:
+      - generic [ref=f36e48]:
+        - list [ref=f36e49]:
+          - listitem [ref=f36e50]:
+            - link "Crear" [ref=f36e51] [cursor=pointer]:
+              - /url: "#/create-campaign"
+        - list [ref=f36e54]:
+          - listitem [ref=f36e55]:
+            - link "Inicio" [ref=f36e56] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=f36e60]:
+            - link "Campañas" [ref=f36e61] [cursor=pointer]:
+              - /url: /campaigns
+          - listitem [ref=f36e65]:
+            - link "Automatizaciones" [ref=f36e66] [cursor=pointer]:
+              - /url: /customer-journey
+          - listitem [ref=f36e70]:
+            - link "SMS Nuevo" [ref=f36e71] [cursor=pointer]:
+              - /url: /sms
+              - generic [ref=f36e73]:
+                - generic [ref=f36e74]: SMS
+                - generic [ref=f36e75]: Nuevo
+          - listitem [ref=f36e76]:
+            - link "Formularios" [ref=f36e77] [cursor=pointer]:
+              - /url: /forms
+          - listitem [ref=f36e81]:
+            - link "Público" [expanded] [active] [ref=f36e82] [cursor=pointer]:
+              - /url: /audience/contacts
+            - group [ref=f36e467]:
+              - listitem [ref=f36e468]:
+                - link "Etiquetas" [ref=f36e469] [cursor=pointer]:
+                  - /url: /audience/tags
+              - listitem [ref=f36e472]:
+                - link "Segmentos" [ref=f36e473] [cursor=pointer]:
+                  - /url: /audience/segments
+              - listitem [ref=f36e476]:
+                - link "Encuestas" [ref=f36e477] [cursor=pointer]:
+                  - /url: /lists/surveys
+              - listitem [ref=f36e480]:
+                - link "Preferencias de suscriptor" [ref=f36e481] [cursor=pointer]:
+                  - /url: /audience/subscriber-preferences/
+              - listitem [ref=f36e484]:
+                - link "Bandeja de entrada" [ref=f36e485] [cursor=pointer]:
+                  - /url: /audience/inbox
+          - listitem [ref=f36e86]:
+            - link "Análisis" [ref=f36e87] [cursor=pointer]:
+              - /url: /analytics/marketing-dashboard/
+          - listitem [ref=f36e91]:
+            - link "Sitio web" [ref=f36e92] [cursor=pointer]:
+              - /url: /website/dashboard
+          - listitem [ref=f36e96]:
+            - link "Contenido" [ref=f36e97] [cursor=pointer]:
+              - /url: /content/#myfiles
+          - listitem [ref=f36e101]:
+            - link "Integraciones" [ref=f36e102] [cursor=pointer]:
+              - /url: /account/connected-sites/discover/
+      - button "Minimizar navegación" [ref=f36e108] [cursor=pointer]
+    - list [ref=f36e110]:
+      - listitem [ref=f36e111]:
+        - button "Help" [ref=f36e113] [cursor=pointer]
+    - main [ref=f36e117]:
+      - generic [ref=f36e489]:
+        - generic [ref=f36e491]:
+          - generic [ref=f36e494]:
+            - navigation "Rutas de navegación":
+              - list
+            - heading "Contactos" [level=1] [ref=f36e497]
+          - generic [ref=f36e501]:
+            - button "..." [ref=f36e503] [cursor=pointer]
+            - button [ref=f36e507] [cursor=pointer]:
+              - generic [ref=f36e508]:
+                - img "Zapier" [ref=f36e509]
+                - text: Conectar Zapier
+            - button "Añadir contactos" [ref=f36e511] [cursor=pointer]
+        - generic [ref=f36e516]:
+          - generic [ref=f36e519]:
+            - generic [ref=f36e522]:
+              - generic [ref=f36e524]:
+                - generic: Buscar contactos
+                - textbox "Buscar contactos" [ref=f36e530]
+              - button "Segmentos" [ref=f36e536] [cursor=pointer]
+              - button "Estado de la suscripción" [ref=f36e543] [cursor=pointer]
+              - button "Etiquetas" [ref=f36e549] [cursor=pointer]
+              - button "Fuente de suscripción" [ref=f36e556] [cursor=pointer]
+              - button "Filtros avanzados" [ref=f36e557] [cursor=pointer]
+            - generic [ref=f36e563]:
+              - paragraph [ref=f36e564]:
+                - button "829" [ref=f36e565] [cursor=pointer]
+                - text: contactos en total.
+                - button "742" [ref=f36e567] [cursor=pointer]
+                - text: suscriptores de correo electrónico.
+              - button "Ver análisis del público" [ref=f36e569] [cursor=pointer]
+          - generic [ref=f36e572]:
+            - generic [ref=f36e577]:
+              - button "Columnas" [ref=f36e578] [cursor=pointer]
+              - button "Exportar todos los contactos" [ref=f36e583] [cursor=pointer]
+            - table [ref=f36e589]:
+              - caption [ref=f36e590]: Contactos de tu público
+              - rowgroup [ref=f36e591]:
+                - row [ref=f36e592]:
+                  - columnheader "Seleccionar o anular selección de todos los contactos Seleccionar tipo" [ref=f36e593]:
+                    - generic [ref=f36e595]:
+                      - generic [ref=f36e596]:
+                        - checkbox "Seleccionar o anular selección de todos los contactos" [ref=f36e598] [cursor=pointer]
+                        - generic: Seleccionar o anular selección de todos los contactos
+                      - button "Seleccionar tipo" [ref=f36e601] [cursor=pointer]
+                  - columnheader [ref=f36e605]:
+                    - paragraph [ref=f36e608]: Dirección de correo electrónico
+                  - columnheader [ref=f36e609]:
+                    - paragraph [ref=f36e612]: Nombre
+                  - columnheader [ref=f36e613]:
+                    - paragraph [ref=f36e616]: Apellidos
+                  - columnheader [ref=f36e617]:
+                    - paragraph [ref=f36e620]: Dirección
+                  - columnheader [ref=f36e621]:
+                    - paragraph [ref=f36e624]: Número de teléfono
+                  - columnheader [ref=f36e625]:
+                    - paragraph [ref=f36e628]: Birthday
+                  - columnheader [ref=f36e629]:
+                    - paragraph [ref=f36e632]: Company
+                  - columnheader [ref=f36e633]:
+                    - paragraph [ref=f36e636]: First Name, Last Name
+                  - columnheader [ref=f36e637]:
+                    - paragraph [ref=f36e640]: Etiquetas
+                  - columnheader [ref=f36e641]:
+                    - generic [ref=f36e643]:
+                      - paragraph [ref=f36e644]: Marketing por correo electrónico
+                      - button "¿Qué significan estos estados?" [ref=f36e646] [cursor=pointer]
+                  - columnheader [ref=f36e651]:
+                    - paragraph [ref=f36e654]: Fuente
+                  - columnheader [ref=f36e655]:
+                    - paragraph [ref=f36e658]: Calificación
+                  - columnheader [ref=f36e659]:
+                    - paragraph [ref=f36e662]: Fecha de incorporación del contacto
+                  - columnheader [ref=f36e665]:
+                    - paragraph [ref=f36e668]: Última modificación
+            - table [ref=f36e670]:
+              - caption [ref=f36e671]: Contactos de tu público
+              - rowgroup:
+                - row "Seleccionar o anular selección de todos los contactos Seleccionar tipo Dirección de correo electrónico Nombre Apellidos Dirección Número de teléfono Birthday Company First Name, Last Name Etiquetas Marketing por correo electrónico ¿Qué significan estos estados? Fuente Calificación Fecha de incorporación del contacto Última modificación":
+                  - columnheader "Seleccionar o anular selección de todos los contactos Seleccionar tipo":
+                    - generic:
+                      - generic:
+                        - generic:
+                          - checkbox "Seleccionar o anular selección de todos los contactos" [ref=f36e672] [cursor=pointer]
+                          - generic: Seleccionar o anular selección de todos los contactos
+                        - generic:
+                          - button "Seleccionar tipo":
+                            - img [aria-hidden] [ref=f36e675] [cursor=pointer]
+                  - columnheader "Dirección de correo electrónico":
+                    - generic:
+                      - generic:
+                        - paragraph: Dirección de correo electrónico
+                  - columnheader "Nombre":
+                    - generic:
+                      - generic:
+                        - paragraph: Nombre
+                  - columnheader "Apellidos":
+                    - generic:
+                      - generic:
+                        - paragraph: Apellidos
+                  - columnheader "Dirección":
+                    - generic:
+                      - generic:
+                        - paragraph: Dirección
+                  - columnheader "Número de teléfono":
+                    - generic:
+                      - generic:
+                        - paragraph: Número de teléfono
+                  - columnheader "Birthday":
+                    - generic:
+                      - generic:
+                        - paragraph: Birthday
+                  - columnheader "Company":
+                    - generic:
+                      - generic:
+                        - paragraph: Company
+                  - columnheader "First Name, Last Name":
+                    - generic:
+                      - generic:
+                        - paragraph: First Name, Last Name
+                  - columnheader "Etiquetas":
+                    - generic:
+                      - generic:
+                        - paragraph: Etiquetas
+                  - columnheader "Marketing por correo electrónico ¿Qué significan estos estados?":
+                    - generic:
+                      - generic:
+                        - paragraph: Marketing por correo electrónico
+                        - generic:
+                          - button "¿Qué significan estos estados?":
+                            - generic [ref=f36e678] [cursor=pointer]
+                            - generic [ref=f36e679] [cursor=pointer]
+                  - columnheader "Fuente":
+                    - generic:
+                      - generic:
+                        - paragraph: Fuente
+                  - columnheader "Calificación":
+                    - generic:
+                      - generic:
+                        - paragraph: Calificación
+                  - columnheader "Fecha de incorporación del contacto":
+                    - generic:
+                      - generic:
+                        - paragraph: Fecha de incorporación del contacto
+                  - columnheader "Última modificación":
+                    - generic:
+                      - generic:
+                        - paragraph: Última modificación
+              - rowgroup [ref=f36e682]:
+                - row [ref=f36e683]:
+                  - cell "Seleccionar contacto" [ref=f36e684]:
+                    - generic [ref=f36e688]:
+                      - checkbox "Seleccionar contacto" [ref=f36e690] [cursor=pointer]
+                      - generic: Seleccionar contacto
+                  - cell [ref=f36e692]:
+                    - link [ref=f36e696] [cursor=pointer]:
+                      - /url: /audience/contact-profile?contact_id=d28ebc0ace603a13f3849515cf833005&use_segment=N&page=1&pageSize=25&sort=timestamp_opt&asc=DESC
+                      - paragraph [ref=f36e697]: Noelgarcia14@gmail.com
+                  - cell "Noel" [ref=f36e698]
+                  - cell "GARCIA ENDERSON" [ref=f36e702]
+                  - cell [ref=f36e706]
+                  - cell [ref=f36e708]
+                  - cell [ref=f36e710]
+                  - cell [ref=f36e712]
+                  - cell [ref=f36e714]
+                  - cell [ref=f36e716]:
+                    - generic [ref=f36e717]:
+                      - generic:
+                        - generic:
+                          - list
+                  - cell "Suscrito" [ref=f36e718]
+                  - cell "Admin Add" [ref=f36e723]
+                  - cell [ref=f36e727]
+                  - cell "25/09/2026 4:17 PM" [ref=f36e743]
+                  - cell "25/09/2026 4:17 PM" [ref=f36e747]
+                - row [ref=f36e751]:
+                  - cell "Seleccionar contacto" [ref=f36e752]:
+                    - generic [ref=f36e756]:
+                      - checkbox "Seleccionar contacto" [ref=f36e758] [cursor=pointer]
+                      - generic: Seleccionar contacto
+                  - cell [ref=f36e760]:
+                    - link [ref=f36e764] [cursor=pointer]:
+                      - /url: /audience/contact-profile?contact_id=1aab403543a181e338c5ae8fc6c731dd&use_segment=N&page=1&pageSize=25&sort=timestamp_opt&asc=DESC
+                      - paragraph [ref=f36e765]: Anamcapilla@gmail.com
+                  - cell "Ana María" [ref=f36e766]
+                  - cell "Capilla vela" [ref=f36e770]
+                  - cell [ref=f36e774]
+                  - cell [ref=f36e776]
+                  - cell [ref=f36e778]
+                  - cell [ref=f36e780]
+                  - cell [ref=f36e782]
+                  - cell [ref=f36e784]:
+                    - generic [ref=f36e785]:
+                      - generic:
+                        - generic:
+                          - list
+                  - cell "Suscrito" [ref=f36e786]
+                  - cell "Admin Add" [ref=f36e791]
+                  - cell [ref=f36e795]
+                  - cell "24/09/2026 7:42 AM" [ref=f36e811]
+                  - cell "24/09/2026 7:42 AM" [ref=f36e815]
+                - row [ref=f36e819]:
+                  - cell "Seleccionar contacto" [ref=f36e820]:
+                    - generic [ref=f36e824]:
+                      - checkbox "Seleccionar contacto" [ref=f36e826] [cursor=pointer]
+                      - generic: Seleccionar contacto
+                  - cell [ref=f36e828]:
+                    - link [ref=f36e832] [cursor=pointer]:
+                      - /url: /audience/contact-profile?contact_id=4e63651af36fa7146cbabaca93dfcebe&use_segment=N&page=1&pageSize=25&sort=timestamp_opt&asc=DESC
+                      - paragraph [ref=f36e833]: tamayogar@hotmail.com
+                  - cell "Antonio" [ref=f36e834]
+                  - cell "Tamayo García" [ref=f36e838]
+                  - cell [ref=f36e842]
+                  - cell [ref=f36e844]
+                  - cell [ref=f36e846]
+                  - cell [ref=f36e848]
+                  - cell [ref=f36e850]
+                  - cell [ref=f36e852]:
+                    - generic [ref=f36e853]:
+                      - generic:
+                        - generic:
+                          - list
+                  - cell "Suscrito" [ref=f36e854]
+                  - cell "Admin Add" [ref=f36e859]
+                  - cell [ref=f36e863]
+                  - cell "21/09/2026 12:00 PM" [ref=f36e879]
+                  - cell "21/09/2026 12:00 PM" [ref=f36e883]
+                - row [ref=f36e887]:
+                  - cell "Seleccionar contacto" [ref=f36e888]:
+                    - generic [ref=f36e892]:
+                      - checkbox "Seleccionar contacto" [ref=f36e894] [cursor=pointer]
+                      - generic: Seleccionar contacto
+                  - cell [ref=f36e896]:
+                    - link [ref=f36e900] [cursor=pointer]:
+                      - /url: /audience/contact-profile?contact_id=10e76ef75a4957b76cd8c63fa445c568&use_segment=N&page=1&pageSize=25&sort=timestamp_opt&asc=DESC
+                      - paragraph [ref=f36e901]: rikyyyy@hotmail.es
+                  - cell "Ricardo" [ref=f36e902]
+                  - cell "Arizcuren Romero" [ref=f36e906]
+                  - cell [ref=f36e910]
+                  - cell [ref=f36e912]
+                  - cell [ref=f36e914]
+                  - cell [ref=f36e916]
+                  - cell [ref=f36e918]
+                  - cell [ref=f36e920]:
+                    - generic [ref=f36e921]:
+                      - generic:
+                        - generic:
+                          - list
+                  - cell "Suscrito" [ref=f36e922]
+                  - cell "Admin Add" [ref=f36e927]
+                  - cell [ref=f36e931]
+                  - cell "19/09/2026 7:11 PM" [ref=f36e947]
+                  - cell "19/09/2026 7:11 PM" [ref=f36e951]
+                - row [ref=f36e955]:
+                  - cell "Seleccionar contacto" [ref=f36e956]:
+                    - generic [ref=f36e960]:
+                      - checkbox "Seleccionar contacto" [ref=f36e962] [cursor=pointer]
+                      - generic: Seleccionar contacto
+                  - cell [ref=f36e964]:
+                    - link [ref=f36e968] [cursor=pointer]:
+                      - /url: /audience/contact-profile?contact_id=4fc072c68fcc8b32a435851ca5af1ecf&use_segment=N&page=1&pageSize=25&sort=timestamp_opt&asc=DESC
+                      - paragraph [ref=f36e969]: Rutgalvezlozano@gmail.com
+                  - cell "Rut" [ref=f36e970]
+                  - cell "Galvez Lozano" [ref=f36e974]
+                  - cell [ref=f36e978]
+                  - cell [ref=f36e980]
+                  - cell [ref=f36e982]
+                  - cell [ref=f36e984]
+                  - cell [ref=f36e986]
+                  - cell [ref=f36e988]:
+                    - generic [ref=f36e989]:
+                      - generic:
+                        - generic:
+                          - list
+                  - cell "Suscrito" [ref=f36e990]
+                  - cell "Admin Add" [ref=f36e995]
+                  - cell [ref=f36e999]
+                  - cell "17/09/2026 1:35 PM" [ref=f36e1015]
+                  - cell "17/09/2026 1:35 PM" [ref=f36e1019]
+                - row [ref=f36e1023]:
+                  - cell "Seleccionar contacto" [ref=f36e1024]:
+                    - generic [ref=f36e1028]:
+                      - checkbox "Seleccionar contacto" [ref=f36e1030] [cursor=pointer]
+                      - generic: Seleccionar contacto
+                  - cell [ref=f36e1032]:
+                    - link [ref=f36e1036] [cursor=pointer]:
+                      - /url: /audience/contact-profile?contact_id=8d23ba1fa0404802e79de06d0bb6e8d2&use_segment=N&page=1&pageSize=25&sort=timestamp_opt&asc=DESC
+                      - paragraph [ref=f36e1037]: rocioarellanoventura@hotmail.com
+                  - cell "Rocío" [ref=f36e1038]
+                  - cell "Arellano Ventura" [ref=f36e1042]
+                  - cell [ref=f36e1046]
+                  - cell [ref=f36e1048]
+                  - cell [ref=f36e1050]
+                  - cell [ref=f36e1052]
+                  - cell [ref=f36e1054]
+                  - cell [ref=f36e1056]:
+                    - generic [ref=f36e1057]:
+                      - generic:
+                        - generic:
+                          - list
+                  - cell "Suscrito" [ref=f36e1058]
+                  - cell "Admin Add" [ref=f36e1063]
+                  - cell [ref=f36e1067]
+                  - cell "14/09/2026 10:39 AM" [ref=f36e1083]
+                  - cell "14/09/2026 10:39 AM" [ref=f36e1087]
+                - row [ref=f36e1091]:
+                  - cell "Seleccionar contacto" [ref=f36e1092]:
+                    - generic [ref=f36e1096]:
+                      - checkbox "Seleccionar contacto" [ref=f36e1098] [cursor=pointer]
+                      - generic: Seleccionar contacto
+                  - cell [ref=f36e1100]:
+                    - link [ref=f36e1104] [cursor=pointer]:
+                      - /url: /audience/contact-profile?contact_id=3fb7c00e9ef16f81f34c6501d784eb75&use_segment=N&page=1&pageSize=25&sort=timestamp_opt&asc=DESC
+                      - paragraph [ref=f36e1105]: saraferreracruz1986@gmail.com
+                  - cell "Sara" [ref=f36e1106]
+                  - cell "Ferrera Cruz" [ref=f36e1110]
+                  - cell [ref=f36e1114]
+                  - cell [ref=f36e1116]
+                  - cell [ref=f36e1118]
+                  - cell [ref=f36e1120]
+                  - cell [ref=f36e1122]
+                  - cell [ref=f36e1124]:
+                    - generic [ref=f36e1125]:
+                      - generic:
+                        - generic:
+                          - list
+                  - cell "Suscrito" [ref=f36e1126]
+                  - cell "List Import from Archivo copiado/pegado" [ref=f36e1131]
+                  - cell [ref=f36e1135]
+                  - cell "11/09/2026 6:04 PM" [ref=f36e1151]
+                  - cell "11/09/2026 6:04 PM" [ref=f36e1155]
+                - row [ref=f36e1159]:
+                  - cell "Seleccionar contacto" [ref=f36e1160]:
+                    - generic [ref=f36e1164]:
+                      - checkbox "Seleccionar contacto" [ref=f36e1166] [cursor=pointer]
+                      - generic: Seleccionar contacto
+                  - cell [ref=f36e1168]:
+                    - link [ref=f36e1172] [cursor=pointer]:
+                      - /url: /audience/contact-profile?contact_id=41f538b86304ec1830730547cb03f2d1&use_segment=N&page=1&pageSize=25&sort=timestamp_opt&asc=DESC
+                      - paragraph [ref=f36e1173]: Gouldita@gmail.com
+                  - cell "Esperanza" [ref=f36e1174]
+                  - cell "Lopez Aguado" [ref=f36e1178]
+                  - cell [ref=f36e1182]
+                  - cell [ref=f36e1184]
+                  - cell [ref=f36e1186]
+                  - cell [ref=f36e1188]
+                  - cell [ref=f36e1190]
+                  - cell [ref=f36e1192]:
+                    - generic [ref=f36e1193]:
+                      - generic:
+                        - generic:
+                          - list
+                  - cell "Suscrito" [ref=f36e1194]
+                  - cell "List Import from Archivo copiado/pegado" [ref=f36e1199]
+                  - cell [ref=f36e1203]
+                  - cell "11/09/2026 6:04 PM" [ref=f36e1219]
+                  - cell "11/09/2026 6:04 PM" [ref=f36e1223]
+                - row [ref=f36e1227]:
+                  - cell "Seleccionar contacto" [ref=f36e1228]:
+                    - generic [ref=f36e1232]:
+                      - checkbox "Seleccionar contacto" [ref=f36e1234] [cursor=pointer]
+                      - generic: Seleccionar contacto
+                  - cell [ref=f36e1236]:
+                    - link [ref=f36e1240] [cursor=pointer]:
+                      - /url: /audience/contact-profile?contact_id=451e9a262609b25fcdbb0310e7a4de3b&use_segment=N&page=1&pageSize=25&sort=timestamp_opt&asc=DESC
+                      - paragraph [ref=f36e1241]: josuecondes@gmail.com
+                  - cell "Josué" [ref=f36e1242]
+                  - cell "Condes Merino" [ref=f36e1246]
+                  - cell [ref=f36e1250]
+                  - cell [ref=f36e1252]
+                  - cell [ref=f36e1254]
+                  - cell [ref=f36e1256]
+                  - cell [ref=f36e1258]
+                  - cell [ref=f36e1260]:
+                    - generic [ref=f36e1261]:
+                      - generic:
+                        - generic:
+                          - list
+                  - cell "Suscrito" [ref=f36e1262]
+                  - cell "List Import from Archivo copiado/pegado" [ref=f36e1267]
+                  - cell [ref=f36e1271]
+                  - cell "11/09/2026 6:04 PM" [ref=f36e1287]
+                  - cell "11/09/2026 6:04 PM" [ref=f36e1291]
+                - row [ref=f36e1295]:
+                  - cell "Seleccionar contacto" [ref=f36e1296]:
+                    - generic [ref=f36e1300]:
+                      - checkbox "Seleccionar contacto" [ref=f36e1302] [cursor=pointer]
+                      - generic: Seleccionar contacto
+                  - cell [ref=f36e1304]:
+                    - link [ref=f36e1308] [cursor=pointer]:
+                      - /url: /audience/contact-profile?contact_id=b419c8320344b3f881d73ae3b308b3e7&use_segment=N&page=1&pageSize=25&sort=timestamp_opt&asc=DESC
+                      - paragraph [ref=f36e1309]: Maryre200@gmail.com
+                  - cell "Elizabeth" [ref=f36e1310]
+                  - cell "González Tinoco" [ref=f36e1314]
+                  - cell [ref=f36e1318]
+                  - cell [ref=f36e1320]
+                  - cell [ref=f36e1322]
+                  - cell [ref=f36e1324]
+                  - cell [ref=f36e1326]
+                  - cell [ref=f36e1328]:
+                    - generic [ref=f36e1329]:
+                      - generic:
+                        - generic:
+                          - list
+                  - cell "Suscrito" [ref=f36e1330]
+                  - cell "List Import from Archivo copiado/pegado" [ref=f36e1335]
+                  - cell [ref=f36e1339]
+                  - cell "11/09/2026 6:04 PM" [ref=f36e1355]
+                  - cell "11/09/2026 6:04 PM" [ref=f36e1359]
+                - row [ref=f36e1363]:
+                  - cell "Seleccionar contacto" [ref=f36e1364]:
+                    - generic [ref=f36e1368]:
+                      - checkbox "Seleccionar contacto" [ref=f36e1370] [cursor=pointer]
+                      - generic: Seleccionar contacto
+                  - cell [ref=f36e1372]:
+                    - link [ref=f36e1376] [cursor=pointer]:
+                      - /url: /audience/contact-profile?contact_id=c4a5bffda5b9a0c91aeafcb1c6291036&use_segment=N&page=1&pageSize=25&sort=timestamp_opt&asc=DESC
+                      - paragraph [ref=f36e1377]: contact.rebeccamiu@gmail.com
+                  - cell "Rebecca" [ref=f36e1378]
+                  - cell "Miu" [ref=f36e1382]
+                  - cell [ref=f36e1386]
+                  - cell [ref=f36e1388]
+                  - cell [ref=f36e1390]
+                  - cell [ref=f36e1392]
+                  - cell [ref=f36e1394]
+                  - cell [ref=f36e1396]:
+                    - generic [ref=f36e1397]:
+                      - generic:
+                        - generic:
+                          - list
+                  - cell "Suscrito" [ref=f36e1398]
+                  - cell "List Import from Archivo copiado/pegado" [ref=f36e1403]
+                  - cell [ref=f36e1407]
+                  - cell "11/09/2026 6:04 PM" [ref=f36e1423]
+                  - cell "11/09/2026 6:04 PM" [ref=f36e1427]
+                - row [ref=f36e1431]:
+                  - cell "Seleccionar contacto" [ref=f36e1432]:
+                    - generic [ref=f36e1436]:
+                      - checkbox "Seleccionar contacto" [ref=f36e1438] [cursor=pointer]
+                      - generic: Seleccionar contacto
+                  - cell [ref=f36e1440]:
+                    - link [ref=f36e1444] [cursor=pointer]:
+                      - /url: /audience/contact-profile?contact_id=d530099318c60699ed5a295da89961e0&use_segment=N&page=1&pageSize=25&sort=timestamp_opt&asc=DESC
+                      - paragraph [ref=f36e1445]: fjpdoral@gmail.com
+                  - cell "Francisco Javier" [ref=f36e1446]
+                  - cell "Palacio Doral" [ref=f36e1450]
+                  - cell [ref=f36e1454]
+                  - cell [ref=f36e1456]
+                  - cell [ref=f36e1458]
+                  - cell [ref=f36e1460]
+                  - cell [ref=f36e1462]
+                  - cell [ref=f36e1464]:
+                    - generic [ref=f36e1465]:
+                      - generic:
+                        - generic:
+                          - list
+                  - cell "Suscrito" [ref=f36e1466]
+                  - cell "List Import from Archivo copiado/pegado" [ref=f36e1471]
+                  - cell [ref=f36e1475]
+                  - cell "11/09/2026 6:04 PM" [ref=f36e1491]
+                  - cell "11/09/2026 6:04 PM" [ref=f36e1495]
+                - row [ref=f36e1499]:
+                  - cell "Seleccionar contacto" [ref=f36e1500]:
+                    - generic [ref=f36e1504]:
+                      - checkbox "Seleccionar contacto" [ref=f36e1506] [cursor=pointer]
+                      - generic: Seleccionar contacto
+                  - cell [ref=f36e1508]:
+                    - link [ref=f36e1512] [cursor=pointer]:
+                      - /url: /audience/contact-profile?contact_id=e045f8582ecde5eec00c4c728d0e81a8&use_segment=N&page=1&pageSize=25&sort=timestamp_opt&asc=DESC
+                      - paragraph [ref=f36e1513]: Jessicadh.1979@gmail.com
+                  - cell "Jessica" [ref=f36e1514]
+                  - cell "Diaz Hernandez" [ref=f36e1518]
+                  - cell [ref=f36e1522]
+                  - cell [ref=f36e1524]
+                  - cell [ref=f36e1526]
+                  - cell [ref=f36e1528]
+                  - cell [ref=f36e1530]
+                  - cell [ref=f36e1532]:
+                    - generic [ref=f36e1533]:
+                      - generic:
+                        - generic:
+                          - list
+                  - cell "Suscrito" [ref=f36e1534]
+                  - cell "List Import from Archivo copiado/pegado" [ref=f36e1539]
+                  - cell [ref=f36e1543]
+                  - cell "11/09/2026 6:04 PM" [ref=f36e1559]
+                  - cell "11/09/2026 6:04 PM" [ref=f36e1563]
+                - row [ref=f36e1567]:
+                  - cell "Seleccionar contacto" [ref=f36e1568]:
+                    - generic [ref=f36e1572]:
+                      - checkbox "Seleccionar contacto" [ref=f36e1574] [cursor=pointer]
+                      - generic: Seleccionar contacto
+                  - cell [ref=f36e1576]:
+                    - link [ref=f36e1580] [cursor=pointer]:
+                      - /url: /audience/contact-profile?contact_id=b139f02c7e04097d724b15eabe3ad706&use_segment=N&page=1&pageSize=25&sort=timestamp_opt&asc=DESC
+                      - paragraph [ref=f36e1581]: immanos9@gmail.com
+                  - cell "Inmaculada" [ref=f36e1582]
+                  - cell "Sánchez Zorrilla" [ref=f36e1586]
+                  - cell [ref=f36e1590]
+                  - cell [ref=f36e1592]
+                  - cell [ref=f36e1594]
+                  - cell [ref=f36e1596]
+                  - cell [ref=f36e1598]
+                  - cell [ref=f36e1600]:
+                    - generic [ref=f36e1601]:
+                      - generic:
+                        - generic:
+                          - list
+                  - cell "Suscrito" [ref=f36e1602]
+                  - cell "Admin Add" [ref=f36e1607]
+                  - cell [ref=f36e1611]
+                  - cell "29/08/2026 10:57 AM" [ref=f36e1627]
+                  - cell "29/08/2026 10:57 AM" [ref=f36e1631]
+                - row [ref=f36e1635]:
+                  - cell "Seleccionar contacto" [ref=f36e1636]:
+                    - generic [ref=f36e1640]:
+                      - checkbox "Seleccionar contacto" [ref=f36e1642] [cursor=pointer]
+                      - generic: Seleccionar contacto
+                  - cell [ref=f36e1644]:
+                    - link [ref=f36e1648] [cursor=pointer]:
+                      - /url: /audience/contact-profile?contact_id=ec7b04fabfbe54572fbd139b202d17f6&use_segment=N&page=1&pageSize=25&sort=timestamp_opt&asc=DESC
+                      - paragraph [ref=f36e1649]: aira.jose@gmail.com
+                  - cell "José Antonio" [ref=f36e1650]
+                  - cell "Aira" [ref=f36e1654]
+                  - cell [ref=f36e1658]
+                  - cell [ref=f36e1660]
+                  - cell [ref=f36e1662]
+                  - cell [ref=f36e1664]
+                  - cell [ref=f36e1666]
+                  - cell [ref=f36e1668]:
+                    - generic [ref=f36e1669]:
+                      - generic:
+                        - generic:
+                          - list
+                  - cell "Suscrito" [ref=f36e1670]
+                  - cell "List Import from Archivo copiado/pegado" [ref=f36e1675]
+                  - cell [ref=f36e1679]
+                  - cell "23/08/2026 8:07 AM" [ref=f36e1695]
+                  - cell "23/08/2026 8:07 AM" [ref=f36e1699]
+                - row [ref=f36e1703]:
+                  - cell "Seleccionar contacto" [ref=f36e1704]:
+                    - generic [ref=f36e1708]:
+                      - checkbox "Seleccionar contacto" [ref=f36e1710] [cursor=pointer]
+                      - generic: Seleccionar contacto
+                  - cell [ref=f36e1712]:
+                    - link [ref=f36e1716] [cursor=pointer]:
+                      - /url: /audience/contact-profile?contact_id=ff1d804f86124af43e0f8cb045739af9&use_segment=N&page=1&pageSize=25&sort=timestamp_opt&asc=DESC
+                      - paragraph [ref=f36e1717]: carlotacorredoir@gmail.com
+                  - cell "Carlota" [ref=f36e1718]
+                  - cell "Corredoira Barrera" [ref=f36e1722]
+                  - cell [ref=f36e1726]
+                  - cell [ref=f36e1728]
+                  - cell [ref=f36e1730]
+                  - cell [ref=f36e1732]
+                  - cell [ref=f36e1734]
+                  - cell [ref=f36e1736]:
+                    - generic [ref=f36e1737]:
+                      - generic:
+                        - generic:
+                          - list
+                  - cell "Suscrito" [ref=f36e1738]
+                  - cell "List Import from Archivo copiado/pegado" [ref=f36e1743]
+                  - cell [ref=f36e1747]
+                  - cell "23/08/2026 8:07 AM" [ref=f36e1763]
+                  - cell "23/08/2026 8:07 AM" [ref=f36e1767]
+                - row [ref=f36e1771]:
+                  - cell "Seleccionar contacto" [ref=f36e1772]:
+                    - generic [ref=f36e1776]:
+                      - checkbox "Seleccionar contacto" [ref=f36e1778] [cursor=pointer]
+                      - generic: Seleccionar contacto
+                  - cell [ref=f36e1780]:
+                    - link [ref=f36e1784] [cursor=pointer]:
+                      - /url: /audience/contact-profile?contact_id=7662be03539863d7a8d46ee3760a620e&use_segment=N&page=1&pageSize=25&sort=timestamp_opt&asc=DESC
+                      - paragraph [ref=f36e1785]: Yessica240789@gmail.com
+                  - cell "Yessica" [ref=f36e1786]
+                  - cell "Perez liria" [ref=f36e1790]
+                  - cell [ref=f36e1794]
+                  - cell [ref=f36e1796]
+                  - cell [ref=f36e1798]
+                  - cell [ref=f36e1800]
+                  - cell [ref=f36e1802]
+                  - cell [ref=f36e1804]:
+                    - generic [ref=f36e1805]:
+                      - generic:
+                        - generic:
+                          - list
+                  - cell "Suscrito" [ref=f36e1806]
+                  - cell "Admin Add" [ref=f36e1811]
+                  - cell [ref=f36e1815]
+                  - cell "21/08/2026 8:13 AM" [ref=f36e1831]
+                  - cell "21/08/2026 8:13 AM" [ref=f36e1835]
+                - row [ref=f36e1839]:
+                  - cell "Seleccionar contacto" [ref=f36e1840]:
+                    - generic [ref=f36e1844]:
+                      - checkbox "Seleccionar contacto" [ref=f36e1846] [cursor=pointer]
+                      - generic: Seleccionar contacto
+                  - cell [ref=f36e1848]:
+                    - link [ref=f36e1852] [cursor=pointer]:
+                      - /url: /audience/contact-profile?contact_id=fdc03dc483a7cd8dcfde8986efe9161c&use_segment=N&page=1&pageSize=25&sort=timestamp_opt&asc=DESC
+                      - paragraph [ref=f36e1853]: sanchezgema92@gmail.com
+                  - cell "Gema" [ref=f36e1854]
+                  - cell "Corcoles sanchez" [ref=f36e1858]
+                  - cell [ref=f36e1862]
+                  - cell [ref=f36e1864]
+                  - cell [ref=f36e1866]
+                  - cell [ref=f36e1868]
+                  - cell [ref=f36e1870]
+                  - cell [ref=f36e1872]:
+                    - generic [ref=f36e1873]:
+                      - generic:
+                        - generic:
+                          - list
+                  - cell "Suscrito" [ref=f36e1874]
+                  - cell "Admin Add" [ref=f36e1879]
+                  - cell [ref=f36e1883]
+                  - cell "17/08/2026 10:02 AM" [ref=f36e1899]
+                  - cell "17/08/2026 10:02 AM" [ref=f36e1903]
+                - row [ref=f36e1907]:
+                  - cell "Seleccionar contacto" [ref=f36e1908]:
+                    - generic [ref=f36e1912]:
+                      - checkbox "Seleccionar contacto" [ref=f36e1914] [cursor=pointer]
+                      - generic: Seleccionar contacto
+                  - cell [ref=f36e1916]:
+                    - link [ref=f36e1920] [cursor=pointer]:
+                      - /url: /audience/contact-profile?contact_id=71b3299cdc84d0954ac10cf3de7cc5e2&use_segment=N&page=1&pageSize=25&sort=timestamp_opt&asc=DESC
+                      - paragraph [ref=f36e1921]: rhr82@hotmail.com
+                  - cell "Rubén" [ref=f36e1922]
+                  - cell "Herrera Rodríguez" [ref=f36e1926]
+                  - cell [ref=f36e1930]
+                  - cell [ref=f36e1932]
+                  - cell [ref=f36e1934]
+                  - cell [ref=f36e1936]
+                  - cell [ref=f36e1938]
+                  - cell [ref=f36e1940]:
+                    - generic [ref=f36e1941]:
+                      - generic:
+                        - generic:
+                          - list
+                  - cell "Suscrito" [ref=f36e1942]
+                  - cell "Admin Add" [ref=f36e1947]
+                  - cell [ref=f36e1951]
+                  - cell "13/08/2026 1:16 PM" [ref=f36e1967]
+                  - cell "13/08/2026 1:16 PM" [ref=f36e1971]
+                - row [ref=f36e1975]:
+                  - cell "Seleccionar contacto" [ref=f36e1976]:
+                    - generic [ref=f36e1980]:
+                      - checkbox "Seleccionar contacto" [ref=f36e1982] [cursor=pointer]
+                      - generic: Seleccionar contacto
+                  - cell [ref=f36e1984]:
+                    - link [ref=f36e1988] [cursor=pointer]:
+                      - /url: /audience/contact-profile?contact_id=2dfa2b490a9d384f102d6bba4c6ced39&use_segment=N&page=1&pageSize=25&sort=timestamp_opt&asc=DESC
+                      - paragraph [ref=f36e1989]: dimore.ro@gmail.com
+                  - cell "Dina" [ref=f36e1990]
+                  - cell "Moreno Rodrigo" [ref=f36e1994]
+                  - cell [ref=f36e1998]
+                  - cell [ref=f36e2000]
+                  - cell [ref=f36e2002]
+                  - cell [ref=f36e2004]
+                  - cell [ref=f36e2006]
+                  - cell [ref=f36e2008]:
+                    - generic [ref=f36e2009]:
+                      - generic:
+                        - generic:
+                          - list
+                  - cell "Suscrito" [ref=f36e2010]
+                  - cell "List Import from Archivo copiado/pegado" [ref=f36e2015]
+                  - cell [ref=f36e2019]
+                  - cell "11/08/2026 3:06 PM" [ref=f36e2035]
+                  - cell "11/08/2026 3:06 PM" [ref=f36e2039]
+                - row [ref=f36e2043]:
+                  - cell "Seleccionar contacto" [ref=f36e2044]:
+                    - generic [ref=f36e2048]:
+                      - checkbox "Seleccionar contacto" [ref=f36e2050] [cursor=pointer]
+                      - generic: Seleccionar contacto
+                  - cell [ref=f36e2052]:
+                    - link [ref=f36e2056] [cursor=pointer]:
+                      - /url: /audience/contact-profile?contact_id=89ca00c0231e6cd1e575e75db7bb0c07&use_segment=N&page=1&pageSize=25&sort=timestamp_opt&asc=DESC
+                      - paragraph [ref=f36e2057]: Internetmarino@gmail.com
+                  - cell "Marino" [ref=f36e2058]
+                  - cell "IZQUIERDO JUAN" [ref=f36e2062]
+                  - cell [ref=f36e2066]
+                  - cell [ref=f36e2068]
+                  - cell [ref=f36e2070]
+                  - cell [ref=f36e2072]
+                  - cell [ref=f36e2074]
+                  - cell [ref=f36e2076]:
+                    - generic [ref=f36e2077]:
+                      - generic:
+                        - generic:
+                          - list
+                  - cell "Suscrito" [ref=f36e2078]
+                  - cell "List Import from Archivo copiado/pegado" [ref=f36e2083]
+                  - cell [ref=f36e2087]
+                  - cell "11/08/2026 3:06 PM" [ref=f36e2103]
+                  - cell "11/08/2026 3:06 PM" [ref=f36e2107]
+                - row [ref=f36e2111]:
+                  - cell "Seleccionar contacto" [ref=f36e2112]:
+                    - generic [ref=f36e2116]:
+                      - checkbox "Seleccionar contacto" [ref=f36e2118] [cursor=pointer]
+                      - generic: Seleccionar contacto
+                  - cell [ref=f36e2120]:
+                    - link [ref=f36e2124] [cursor=pointer]:
+                      - /url: /audience/contact-profile?contact_id=ae4a6e2bd21187b95cd342f30594abf4&use_segment=N&page=1&pageSize=25&sort=timestamp_opt&asc=DESC
+                      - paragraph [ref=f36e2125]: Pinedavicente.sara@gmail.com
+                  - cell "Sara" [ref=f36e2126]
+                  - cell "Pineda" [ref=f36e2130]
+                  - cell [ref=f36e2134]
+                  - cell [ref=f36e2136]
+                  - cell [ref=f36e2138]
+                  - cell [ref=f36e2140]
+                  - cell [ref=f36e2142]
+                  - cell [ref=f36e2144]:
+                    - generic [ref=f36e2145]:
+                      - generic:
+                        - generic:
+                          - list
+                  - cell "Suscrito" [ref=f36e2146]
+                  - cell "Admin Add" [ref=f36e2151]
+                  - cell [ref=f36e2155]
+                  - cell "07/08/2026 8:07 AM" [ref=f36e2171]
+                  - cell "07/08/2026 8:07 AM" [ref=f36e2175]
+                - row [ref=f36e2179]:
+                  - cell "Seleccionar contacto" [ref=f36e2180]:
+                    - generic [ref=f36e2184]:
+                      - checkbox "Seleccionar contacto" [ref=f36e2186] [cursor=pointer]
+                      - generic: Seleccionar contacto
+                  - cell [ref=f36e2188]:
+                    - link [ref=f36e2192] [cursor=pointer]:
+                      - /url: /audience/contact-profile?contact_id=0b993687a87421cebedfa1c5fbdf3bd6&use_segment=N&page=1&pageSize=25&sort=timestamp_opt&asc=DESC
+                      - paragraph [ref=f36e2193]: angelamurillascaicedo@gmail.com
+                  - cell "Ángela Patricia" [ref=f36e2194]
+                  - cell "Murillas Caicedo" [ref=f36e2198]
+                  - cell [ref=f36e2202]
+                  - cell [ref=f36e2204]
+                  - cell [ref=f36e2206]
+                  - cell [ref=f36e2208]
+                  - cell [ref=f36e2210]
+                  - cell [ref=f36e2212]:
+                    - generic [ref=f36e2213]:
+                      - generic:
+                        - generic:
+                          - list
+                  - cell "Suscrito" [ref=f36e2214]
+                  - cell "List Import from Archivo copiado/pegado" [ref=f36e2219]
+                  - cell [ref=f36e2223]
+                  - cell "02/08/2026 5:46 PM" [ref=f36e2239]
+                  - cell "02/08/2026 5:46 PM" [ref=f36e2243]
+                - row [ref=f36e2247]:
+                  - cell "Seleccionar contacto" [ref=f36e2248]:
+                    - generic [ref=f36e2252]:
+                      - checkbox "Seleccionar contacto" [ref=f36e2254] [cursor=pointer]
+                      - generic: Seleccionar contacto
+                  - cell [ref=f36e2256]:
+                    - link [ref=f36e2260] [cursor=pointer]:
+                      - /url: /audience/contact-profile?contact_id=4ad9bb9e9bb7ae9ae47c2d30f160f47c&use_segment=N&page=1&pageSize=25&sort=timestamp_opt&asc=DESC
+                      - paragraph [ref=f36e2261]: frydark@gmail.com
+                  - cell "Alfredo" [ref=f36e2262]
+                  - cell "Navarro Mateo" [ref=f36e2266]
+                  - cell [ref=f36e2270]
+                  - cell [ref=f36e2272]
+                  - cell [ref=f36e2274]
+                  - cell [ref=f36e2276]
+                  - cell [ref=f36e2278]
+                  - cell [ref=f36e2280]:
+                    - generic [ref=f36e2281]:
+                      - generic:
+                        - generic:
+                          - list
+                  - cell "Suscrito" [ref=f36e2282]
+                  - cell "List Import from Archivo copiado/pegado" [ref=f36e2287]
+                  - cell [ref=f36e2291]
+                  - cell "02/08/2026 5:46 PM" [ref=f36e2307]
+                  - cell "02/08/2026 5:46 PM" [ref=f36e2311]
+                - row [ref=f36e2315]:
+                  - cell "Seleccionar contacto" [ref=f36e2316]:
+                    - generic [ref=f36e2320]:
+                      - checkbox "Seleccionar contacto" [ref=f36e2322] [cursor=pointer]
+                      - generic: Seleccionar contacto
+                  - cell [ref=f36e2324]:
+                    - link [ref=f36e2328] [cursor=pointer]:
+                      - /url: /audience/contact-profile?contact_id=dac59f329950a01c8ccb8c325bbd94cf&use_segment=N&page=1&pageSize=25&sort=timestamp_opt&asc=DESC
+                      - paragraph [ref=f36e2329]: Carlesreformes@gmail.com
+                  - cell "Carlos" [ref=f36e2330]
+                  - cell "Adamuz Pastor" [ref=f36e2334]
+                  - cell [ref=f36e2338]
+                  - cell [ref=f36e2340]
+                  - cell [ref=f36e2342]
+                  - cell [ref=f36e2344]
+                  - cell [ref=f36e2346]
+                  - cell [ref=f36e2348]:
+                    - generic [ref=f36e2349]:
+                      - generic:
+                        - generic:
+                          - list
+                  - cell "Suscripción cancelada" [ref=f36e2350]
+                  - cell "List Import from Archivo copiado/pegado" [ref=f36e2355]
+                  - cell [ref=f36e2359]
+                  - cell "02/08/2026 5:46 PM" [ref=f36e2375]
+                  - cell "02/08/2026 5:46 PM" [ref=f36e2379]
+            - generic [ref=f36e2385]:
+              - generic [ref=f36e2386]:
+                - generic [ref=f36e2387]: Items per page
+                - combobox "Items per page" [ref=f36e2390] [cursor=pointer]:
+                  - option "10"
+                  - option "25" [selected]
+                  - option "50"
+                  - option "100"
+              - generic [ref=f36e2392]:
+                - button "previous" [disabled] [ref=f36e2393]
+                - paragraph [ref=f36e2397]: 1-25
+                - button "next" [ref=f36e2398] [cursor=pointer]
+    - status
+    - status
+  - generic:
+    - status [ref=f36e455]
+    - alert [ref=f36e456]
+  - button "Opiniones" [ref=f36e2402] [cursor=pointer]
+  - dialog [aria-hidden] [ref=f36e2405]:
+    - button [ref=f36e2407] [cursor=pointer]
