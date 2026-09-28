@@ -1,0 +1,193 @@
+- generic [active] [ref=e1]:
+  - link "Saltar al contenido" [ref=e2] [cursor=pointer]:
+    - /url: "#contenido"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img "AEVTJ - Asociación Española de Víctimas de los Testigos de Jehová" [ref=e6]
+      - navigation "Menú principal" [ref=e7]:
+        - list [ref=e8]:
+          - listitem [ref=e9]:
+            - link "¿Quiénes somos?" [ref=e10] [cursor=pointer]:
+              - /url: /quienes-somos/
+          - listitem [ref=e11]:
+            - link "Noticias" [ref=e12] [cursor=pointer]:
+              - /url: /noticias/
+          - listitem [ref=e13]:
+            - link "Documentos" [ref=e14] [cursor=pointer]:
+              - /url: /recursos-de-ayuda/
+          - listitem [ref=e17]:
+            - link "Hazte socio / Donaciones" [ref=e18] [cursor=pointer]:
+              - /url: /hazte-socio/
+          - listitem [ref=e19]:
+            - link "Otras asociaciones" [ref=e20] [cursor=pointer]:
+              - /url: /otras-asociaciones/
+          - listitem [ref=e21]:
+            - link "Contacto" [ref=e22] [cursor=pointer]:
+              - /url: /contacto/
+      - generic [ref=e23]:
+        - link "Facebook" [ref=e24] [cursor=pointer]:
+          - /url: https://www.facebook.com/asoc.aevtj
+        - link "Youtube" [ref=e27] [cursor=pointer]:
+          - /url: https://www.youtube.com/@AEVTJ
+        - link "X" [ref=e30] [cursor=pointer]:
+          - /url: https://x.com
+        - link "Instagram" [ref=e33] [cursor=pointer]:
+          - /url: https://instagram.com
+  - main [ref=e36]:
+    - article [ref=e37]:
+      - generic [ref=e38]:
+        - img "Samuel Ferrando, presidente de la AEVTJ, durante la entrevista en el programa cafè Dröm" [ref=e39]
+        - generic [ref=e41]:
+          - paragraph [ref=e42]:
+            - generic [ref=e43]: AEVTJ · Redacción
+            - generic [aria-hidden] [ref=e44]: ·
+            - generic [ref=e45]: Programa
+            - generic [ref=e46]: cafè Dröm · Ràdio Molins de Rei
+          - heading "Entrevista a Samuel Ferrando, presidente de la AEVTJ, en el programa cafè Dröm" [level=1] [ref=e47]
+          - paragraph [ref=e48]: Virginia Dröm entrevista a Samuel Ferrando, presidente de la AEVTJ, para dar voz y reivindicación a quienes afirman haber sufrido dentro de la congregación de los Testigos de Jehová.
+          - paragraph [ref=e49]:
+            - time [ref=e50]: 26 de octubre de 2025
+      - generic [ref=e53]:
+        - paragraph [ref=e54]:
+          - strong [ref=e55]: Virginia Dröm (Ràdio Molins de Rei)
+          - text: entrevista a
+          - strong [ref=e56]: Samuel Ferrando
+          - text: ", presidente de la AEVTJ, con el objetivo de"
+          - strong [ref=e57]: dar voz y reivindicación
+          - text: a quienes afirman haber sufrido dentro de la congregación religiosa de los Testigos de Jehová.
+        - paragraph [ref=e58]:
+          - text: El vídeo reúne
+          - strong [ref=e59]: relatos de exmiembros
+          - text: que describen traumas y
+          - strong [ref=e60]: rupturas dolorosas
+          - text: tras abandonar la confesión. Ferrando expone los
+          - strong [ref=e61]: desafíos sociales y emocionales
+          - text: "que las víctimas dicen afrontar:"
+          - strong [ref=e62]: aislamiento familiar
+          - text: ","
+          - strong [ref=e63]: pérdida de la red de apoyo
+          - text: y, en algunos casos,
+          - strong [ref=e64]: secuelas psicológicas de largo alcance
+          - text: . La AEVTJ recuerda que ofrece
+          - strong [ref=e65]: mecanismos de acompañamiento y asesoría
+          - text: —apoyo entre pares, orientación jurídica básica y derivación psicológica— para
+          - strong [ref=e66]: visibilizar su lucha
+          - text: y fomentar
+          - strong [ref=e67]: apoyo colectivo
+          - text: .
+        - paragraph [ref=e68]:
+          - text: El episodio también profundiza en las
+          - strong [ref=e69]: barreras legales
+          - text: y en la
+          - strong [ref=e70]: falta de reconocimiento institucional
+          - text: que señalan los ex-Testigos de Jehová, subrayando la necesidad de
+          - strong [ref=e71]: información
+          - text: ","
+          - strong [ref=e72]: protección
+          - text: "y"
+          - strong [ref=e73]: respeto a los derechos humanos
+          - text: de quienes deciden salir de la organización.
+      - generic [ref=e76]:
+        - link "← Volver a noticias" [ref=e77] [cursor=pointer]:
+          - /url: /noticias/
+        - generic [ref=e78]:
+          - link "Cuéntanos tu caso ↗" [ref=e79] [cursor=pointer]:
+            - /url: /contacto/
+          - link "Hazte socio ↗" [ref=e80] [cursor=pointer]:
+            - /url: /hazte-socio/
+      - region [ref=e81]:
+        - generic [ref=e82]:
+          - paragraph [ref=e83]: Seguir leyendo
+          - heading "Otras noticias" [level=2] [ref=e84]
+          - generic [ref=e85]:
+            - link [ref=e86] [cursor=pointer]:
+              - /url: /noticias/la-aevtj-reclama-libertad-medica-plena-tras-el-cambio-sobre-transfusiones/
+              - generic [ref=e87]:
+                - time [ref=e88]: 18 de septiembre de 2026
+                - heading "La AEVTJ reclama libertad médica plena tras el cambio sobre transfusiones" [level=3] [ref=e89]
+            - link [ref=e90] [cursor=pointer]:
+              - /url: /noticias/conversaciones-pendientes-episodio-128-cadena-ser/
+              - generic [ref=e91]:
+                - time [ref=e92]: 9 de julio de 2026
+                - heading "Conversaciones pendientes | Episodio 128 Cadena SER" [level=3] [ref=e93]
+            - link [ref=e94] [cursor=pointer]:
+              - /url: /noticias/organizaciones-coercitivas-salir-de-la-trampa-000906-21-06-2026/
+              - generic [ref=e95]:
+                - time [ref=e96]: 9 de julio de 2026
+                - 'heading "Organizaciones coercitivas: salir de la trampa" [level=3] [ref=e97]'
+  - contentinfo [ref=e98]:
+    - generic [ref=e99]:
+      - generic [ref=e100]:
+        - generic [ref=e101]:
+          - img "AEVTJ" [ref=e102]
+          - paragraph [ref=e103]: Asociación Española de Víctimas de los Testigos de Jehová y la JW.ORG. Estamos aquí para escucharte, ayudarte a recuperar tu vida y darte el apoyo que necesitas para dejar atrás la organización.
+          - generic [ref=e104]:
+            - link "Facebook" [ref=e105] [cursor=pointer]:
+              - /url: https://www.facebook.com/asoc.aevtj
+            - link "Youtube" [ref=e108] [cursor=pointer]:
+              - /url: https://www.youtube.com/@AEVTJ
+            - link "X" [ref=e111] [cursor=pointer]:
+              - /url: https://x.com
+            - link "Instagram" [ref=e114] [cursor=pointer]:
+              - /url: https://instagram.com
+        - navigation "Menú de pie de página" [ref=e117]:
+          - heading "Menú" [level=2] [ref=e118]
+          - list [ref=e119]:
+            - listitem [ref=e120]:
+              - link "¿Quiénes somos?" [ref=e121] [cursor=pointer]:
+                - /url: /quienes-somos/
+            - listitem [ref=e122]:
+              - link "Noticias" [ref=e123] [cursor=pointer]:
+                - /url: /noticias/
+            - listitem [ref=e124]:
+              - link "Documentos" [ref=e125] [cursor=pointer]:
+                - /url: /legal/
+            - listitem [ref=e126]:
+              - link "Hazte socio / Donaciones" [ref=e127] [cursor=pointer]:
+                - /url: /hazte-socio/
+            - listitem [ref=e128]:
+              - link "Otras asociaciones" [ref=e129] [cursor=pointer]:
+                - /url: /otras-asociaciones/
+            - listitem [ref=e130]:
+              - link "Contacto" [ref=e131] [cursor=pointer]:
+                - /url: /contacto/
+        - generic [ref=e132]:
+          - heading "Boletín de noticias" [level=2] [ref=e133]
+          - paragraph [ref=e134]: Recibe nuestro boletín de noticias mensual de forma totalmente gratuita y mantente informado.
+          - generic [ref=e135]:
+            - textbox "Tu correo electrónico" [ref=e136]
+            - generic [ref=e137]:
+              - checkbox "Quiero recibir la newsletter y acepto el tratamiento de mi email para ese fin." [ref=e138]
+              - generic [ref=e139]: Quiero recibir la newsletter y acepto el tratamiento de mi email para ese fin.
+            - paragraph [ref=e140]:
+              - text: La solicitud se remitirá manualmente a la asociación; todavía no hay conexión automática con Mailchimp. Tratamos tus datos según nuestra
+              - link "Política de Privacidad" [ref=e141] [cursor=pointer]:
+                - /url: /politica-de-privacidad/
+              - text: .
+            - button "Suscribirme" [ref=e142] [cursor=pointer]
+            - status
+      - generic [ref=e143]:
+        - paragraph [ref=e144]: © 2026 Asociación Española de Victimas de los Testigos de Jehová
+        - list [ref=e145]:
+          - listitem [ref=e146]:
+            - link "Aviso Legal" [ref=e147] [cursor=pointer]:
+              - /url: /aviso-legal/
+          - listitem [ref=e148]:
+            - link "Política de Cookies" [ref=e149] [cursor=pointer]:
+              - /url: /politica-de-cookies/
+          - listitem [ref=e150]:
+            - link "Política de privacidad" [ref=e151] [cursor=pointer]:
+              - /url: /politica-de-privacidad/
+  - generic [ref=e153]:
+    - paragraph [ref=e154]:
+      - text: Utilizamos tecnologías necesarias para que la web funcione y, si lo aceptas, herramientas de analítica y vídeos incrustados de plataformas externas. No usamos publicidad personalizada. Consulta la
+      - link "Política de cookies" [ref=e155] [cursor=pointer]:
+        - /url: /politica-de-cookies/
+      - text: para más información.
+    - generic [ref=e156]:
+      - button "Denegar" [ref=e157] [cursor=pointer]
+      - button "Aceptar" [ref=e158] [cursor=pointer]
+      - link "Ver preferencias" [ref=e159] [cursor=pointer]:
+        - /url: /politica-de-cookies/

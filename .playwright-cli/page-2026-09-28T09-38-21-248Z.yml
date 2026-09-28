@@ -1,0 +1,254 @@
+- generic [active] [ref=e1]:
+  - link "Saltar al contenido" [ref=e2] [cursor=pointer]:
+    - /url: "#contenido"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img "AEVTJ - Asociación Española de Víctimas de los Testigos de Jehová" [ref=e6]
+      - navigation "Menú principal" [ref=e7]:
+        - list [ref=e8]:
+          - listitem [ref=e9]:
+            - link "¿Quiénes somos?" [ref=e10] [cursor=pointer]:
+              - /url: /quienes-somos/
+          - listitem [ref=e11]:
+            - link "Noticias" [ref=e12] [cursor=pointer]:
+              - /url: /noticias/
+          - listitem [ref=e13]:
+            - link "Documentos" [ref=e14] [cursor=pointer]:
+              - /url: /recursos-de-ayuda/
+          - listitem [ref=e17]:
+            - link "Hazte socio / Donaciones" [ref=e18] [cursor=pointer]:
+              - /url: /hazte-socio/
+          - listitem [ref=e19]:
+            - link "Otras asociaciones" [ref=e20] [cursor=pointer]:
+              - /url: /otras-asociaciones/
+          - listitem [ref=e21]:
+            - link "Contacto" [ref=e22] [cursor=pointer]:
+              - /url: /contacto/
+      - generic [ref=e23]:
+        - link "Facebook" [ref=e24] [cursor=pointer]:
+          - /url: https://www.facebook.com/asoc.aevtj
+        - link "Youtube" [ref=e27] [cursor=pointer]:
+          - /url: https://www.youtube.com/@AEVTJ
+        - link "X" [ref=e30] [cursor=pointer]:
+          - /url: https://x.com
+        - link "Instagram" [ref=e33] [cursor=pointer]:
+          - /url: https://instagram.com
+  - main [ref=e36]:
+    - article [ref=e37]:
+      - generic [ref=e38]:
+        - img "Cartel del documental Expulsados de los Testigos de Jehová de El País" [ref=e39]
+        - generic [ref=e41]:
+          - paragraph [ref=e42]:
+            - generic [ref=e43]: AEVTJ · Redacción
+            - generic [aria-hidden] [ref=e44]: ·
+            - generic [ref=e45]: Publicado en
+            - generic [ref=e46]: El País
+          - heading "Documental «Expulsados de los Testigos de Jehová» · El País" [level=1] [ref=e47]
+          - paragraph [ref=e48]: El País publica el documental «Expulsados de los Testigos de Jehová», que pone nombre y rostro a las víctimas de las políticas de expulsión y describe la «muerte social» que sufren quienes abandonan la confesión.
+          - paragraph [ref=e49]:
+            - time [ref=e50]: 3 de marzo de 2026
+      - blockquote [ref=e52]:
+        - paragraph [ref=e53]: "«El precio del ostracismo: voces silenciadas durante décadas»"
+        - generic [ref=e54]:
+          - text: El País
+          - generic [ref=e55]: Subtítulo del documental
+      - region "Vídeo de la pieza" [ref=e56]:
+        - generic [ref=e57]:
+          - iframe [ref=e218]:
+            - generic [ref=f1e1]:
+              - generic "Reproductor de vídeo de YouTube" [ref=f1e3]
+              - generic [ref=f1e5]:
+                - generic:
+                  - generic:
+                    - generic [ref=f1e6] [cursor=pointer]
+                    - button "Reproducir vídeo" [ref=f1e10] [cursor=pointer]
+                    - button "Ocultar controles del reproductor" [ref=f1e12] [cursor=pointer]
+                    - generic [ref=f1e14]:
+                      - generic [ref=f1e19]:
+                        - generic [ref=f1e20]:
+                          - link "Documental | Expulsados de los Testigos de Jehová | EL PAÍS" [ref=f1e21] [cursor=pointer]:
+                            - /url: https://www.youtube.com/watch?v=dF85vscQnYE
+                          - link "EL PAÍS" [ref=f1e22] [cursor=pointer]:
+                            - /url: /channel/UCnsvJeZO4RigQ898WdDNoBw
+                        - generic [ref=f1e24]:
+                          - button [ref=f1e25] [cursor=pointer]
+                          - generic [ref=f1e27]:
+                            - generic: EL PAÍS
+                            - generic: 3,36 M de suscriptores
+                      - generic [ref=f1e28]:
+                        - button "Copiar enlace" [ref=f1e31] [cursor=pointer]
+                        - link "Ver en YouTube" [ref=f1e42] [cursor=pointer]:
+                          - /url: https://www.youtube.com/watch?v=dF85vscQnYE
+                          - generic [ref=f1e43]: Ver en
+          - paragraph [ref=e62]:
+            - generic [ref=e63]: Documental original de El País · Disponible en YouTube · Acceso libre y gratuito
+      - generic [ref=e65]:
+        - generic [ref=e66]:
+          - heading "Un documental sobre la «muerte social»" [level=2] [ref=e67]
+          - paragraph [ref=e68]:
+            - text: El diario El País ha publicado su documental
+            - emphasis [ref=e69]: "\"Expulsados de los Testigos de Jehová\""
+            - text: ", que pone nombre y rostro a las víctimas de las políticas de expulsión de la organización religiosa. A través de testimonios directos, el documento describe lo que se conoce como"
+            - emphasis [ref=e70]: "\"muerte social\""
+            - text: ": el cese total de contacto con familiares y amigos tras abandonar la confesión."
+          - paragraph [ref=e71]:
+            - strong [ref=e72]: Samuel Ferrando, presidente de la AEVTJ
+            - text: participa en el documental aportando una visión privilegiada sobre los mecanismos de control interno y los llamados "comités judiciales". Su testimonio como exanciano enriquece el análisis de las dinámicas organizativas.
+          - heading "Necesitas ayuda" [level=2] [ref=e73]
+          - paragraph [ref=e74]: No estás solo. Si atraviesas una situación difícil, existen recursos y profesionales disponibles.
+          - list [ref=e76]:
+            - listitem [ref=e77]:
+              - strong [ref=e78]: "Salud mental:"
+              - text: si atraviesas una crisis o pensamientos de autolesión, contacta con servicios de emergencia o asociaciones especializadas.
+            - listitem [ref=e79]:
+              - strong [ref=e80]: "Asesoría legal:"
+              - text: si consideras que tus derechos fundamentales han sido vulnerados, la AEVTJ ofrece orientación legal especializada.
+            - listitem [ref=e81]:
+              - strong [ref=e82]: "Derecho de réplica:"
+              - text: la asociación mantiene espacio abierto para debate plural, garantizando la transparencia y postura oficial.
+          - paragraph [ref=e83]: Celebramos que medios de referencia den voz a quienes han sido silenciados. Este documental es un paso hacia la transparencia.
+        - complementary [ref=e84]:
+          - generic [ref=e85]:
+            - heading "Contexto" [level=2] [ref=e86]
+            - generic [ref=e87]:
+              - generic [ref=e88]:
+                - generic [ref=e89]: 09:20
+                - generic [ref=e90]: Gestión de abusos
+                - paragraph [ref=e91]: Antiguos miembros relatan experiencias sobre la gestión interna de casos de abuso infantil y protocolos que evitaron la denuncia externa.
+              - generic [ref=e92]:
+                - generic [ref=e93]: 11:50
+                - generic [ref=e94]: Identidad LGBTQ+
+                - paragraph [ref=e95]: Se expone la vulnerabilidad especial del colectivo, con testimonios de presión para "curar" la orientación sexual.
+              - generic [ref=e96]:
+                - generic [ref=e97]: 18:40
+                - generic [ref=e98]: Aislamiento y salud mental
+                - paragraph [ref=e99]: El documental visibiliza casos de ansiedad y depresión vinculados al ostracismo, destacando también la capacidad de recuperación y libertad.
+              - generic [ref=e100]:
+                - generic [ref=e101]: 21:00
+                - generic [ref=e102]: Control desde la infancia
+                - paragraph [ref=e103]: Se analiza cómo el miedo al Armagedón y las normas estrictas moldean la psique de los miembros desde edades tempranas.
+          - generic [ref=e104]:
+            - heading "Conceptos clave" [level=2] [ref=e105]
+            - generic [ref=e106]:
+              - term [ref=e107]: Muerte social
+              - definition [ref=e108]: Cese total de contacto con familiares y amigos tras la expulsión o el abandono voluntario de la organización.
+              - term [ref=e109]: Comité judicial
+              - definition [ref=e110]: Órgano interno de la organización que juzga la conducta de los miembros y puede decretar la expulsión.
+          - generic [ref=e111]:
+            - heading "Samuel Ferrando en el documental" [level=2] [ref=e112]
+            - paragraph [ref=e113]: Presidente de la AEVTJ y exanciano de los Testigos de Jehová. Participa en el documental aportando una visión privilegiada sobre los mecanismos de control interno y los llamados «comités judiciales».
+      - region [ref=e114]:
+        - generic [ref=e115]:
+          - paragraph [ref=e116]: Recursos y apoyo
+          - heading "Si esta historia te toca de cerca" [level=2] [ref=e117]
+          - generic [ref=e118]:
+            - link "Ver el documental completo Documental original de El País, disponible en YouTube con acceso libre y gratuito. Abrir en YouTube ↗" [ref=e119] [cursor=pointer]:
+              - /url: https://www.youtube.com/watch?v=dF85vscQnYE
+              - heading "Ver el documental completo" [level=3] [ref=e120]
+              - paragraph [ref=e121]: Documental original de El País, disponible en YouTube con acceso libre y gratuito.
+              - generic [ref=e122]: Abrir en YouTube ↗
+            - link "Orientación legal y apoyo Si consideras que tus derechos fundamentales han sido vulnerados, la AEVTJ ofrece orientación. Contactar ↗" [ref=e123] [cursor=pointer]:
+              - /url: /contacto/
+              - heading "Orientación legal y apoyo" [level=3] [ref=e124]
+              - paragraph [ref=e125]: Si consideras que tus derechos fundamentales han sido vulnerados, la AEVTJ ofrece orientación.
+              - generic [ref=e126]: Contactar ↗
+      - generic [ref=e128]:
+        - generic [ref=e129]:
+          - heading "Fuentes" [level=2] [ref=e130]
+          - list [ref=e131]:
+            - listitem [ref=e132]:
+              - link "Documental en YouTube · El País" [ref=e133] [cursor=pointer]:
+                - /url: https://www.youtube.com/watch?v=dF85vscQnYE
+        - generic [ref=e134]:
+          - link "← Volver a noticias" [ref=e135] [cursor=pointer]:
+            - /url: /noticias/
+          - generic [ref=e136]:
+            - link "Cuéntanos tu caso ↗" [ref=e137] [cursor=pointer]:
+              - /url: /contacto/
+            - link "Hazte socio ↗" [ref=e138] [cursor=pointer]:
+              - /url: /hazte-socio/
+      - region [ref=e139]:
+        - generic [ref=e140]:
+          - paragraph [ref=e141]: Seguir leyendo
+          - heading "Otras noticias" [level=2] [ref=e142]
+          - generic [ref=e143]:
+            - link [ref=e144] [cursor=pointer]:
+              - /url: /noticias/la-aevtj-reclama-libertad-medica-plena-tras-el-cambio-sobre-transfusiones/
+              - generic [ref=e145]:
+                - time [ref=e146]: 18 de septiembre de 2026
+                - heading "La AEVTJ reclama libertad médica plena tras el cambio sobre transfusiones" [level=3] [ref=e147]
+            - link [ref=e148] [cursor=pointer]:
+              - /url: /noticias/conversaciones-pendientes-episodio-128-cadena-ser/
+              - generic [ref=e149]:
+                - time [ref=e150]: 9 de julio de 2026
+                - heading "Conversaciones pendientes | Episodio 128 Cadena SER" [level=3] [ref=e151]
+            - link [ref=e152] [cursor=pointer]:
+              - /url: /noticias/organizaciones-coercitivas-salir-de-la-trampa-000906-21-06-2026/
+              - generic [ref=e153]:
+                - time [ref=e154]: 9 de julio de 2026
+                - 'heading "Organizaciones coercitivas: salir de la trampa" [level=3] [ref=e155]'
+  - contentinfo [ref=e156]:
+    - generic [ref=e157]:
+      - generic [ref=e158]:
+        - generic [ref=e159]:
+          - img "AEVTJ" [ref=e160]
+          - paragraph [ref=e161]: Asociación Española de Víctimas de los Testigos de Jehová y la JW.ORG. Estamos aquí para escucharte, ayudarte a recuperar tu vida y darte el apoyo que necesitas para dejar atrás la organización.
+          - generic [ref=e162]:
+            - link "Facebook" [ref=e163] [cursor=pointer]:
+              - /url: https://www.facebook.com/asoc.aevtj
+            - link "Youtube" [ref=e166] [cursor=pointer]:
+              - /url: https://www.youtube.com/@AEVTJ
+            - link "X" [ref=e169] [cursor=pointer]:
+              - /url: https://x.com
+            - link "Instagram" [ref=e172] [cursor=pointer]:
+              - /url: https://instagram.com
+        - navigation "Menú de pie de página" [ref=e175]:
+          - heading "Menú" [level=2] [ref=e176]
+          - list [ref=e177]:
+            - listitem [ref=e178]:
+              - link "¿Quiénes somos?" [ref=e179] [cursor=pointer]:
+                - /url: /quienes-somos/
+            - listitem [ref=e180]:
+              - link "Noticias" [ref=e181] [cursor=pointer]:
+                - /url: /noticias/
+            - listitem [ref=e182]:
+              - link "Documentos" [ref=e183] [cursor=pointer]:
+                - /url: /legal/
+            - listitem [ref=e184]:
+              - link "Hazte socio / Donaciones" [ref=e185] [cursor=pointer]:
+                - /url: /hazte-socio/
+            - listitem [ref=e186]:
+              - link "Otras asociaciones" [ref=e187] [cursor=pointer]:
+                - /url: /otras-asociaciones/
+            - listitem [ref=e188]:
+              - link "Contacto" [ref=e189] [cursor=pointer]:
+                - /url: /contacto/
+        - generic [ref=e190]:
+          - heading "Boletín de noticias" [level=2] [ref=e191]
+          - paragraph [ref=e192]: Recibe nuestro boletín de noticias mensual de forma totalmente gratuita y mantente informado.
+          - generic [ref=e193]:
+            - textbox "Tu correo electrónico" [ref=e194]
+            - generic [ref=e195]:
+              - checkbox "Quiero recibir la newsletter y acepto el tratamiento de mi email para ese fin." [ref=e196]
+              - generic [ref=e197]: Quiero recibir la newsletter y acepto el tratamiento de mi email para ese fin.
+            - paragraph [ref=e198]:
+              - text: La solicitud se remitirá manualmente a la asociación; todavía no hay conexión automática con Mailchimp. Tratamos tus datos según nuestra
+              - link "Política de Privacidad" [ref=e199] [cursor=pointer]:
+                - /url: /politica-de-privacidad/
+              - text: .
+            - button "Suscribirme" [ref=e200] [cursor=pointer]
+            - status
+      - generic [ref=e201]:
+        - paragraph [ref=e202]: © 2026 Asociación Española de Victimas de los Testigos de Jehová
+        - list [ref=e203]:
+          - listitem [ref=e204]:
+            - link "Aviso Legal" [ref=e205] [cursor=pointer]:
+              - /url: /aviso-legal/
+          - listitem [ref=e206]:
+            - link "Política de Cookies" [ref=e207] [cursor=pointer]:
+              - /url: /politica-de-cookies/
+          - listitem [ref=e208]:
+            - link "Política de privacidad" [ref=e209] [cursor=pointer]:
+              - /url: /politica-de-privacidad/

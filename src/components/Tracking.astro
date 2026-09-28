@@ -1,6 +1,10 @@
 ---
 const gtmId = import.meta.env.PUBLIC_GTM_ID;
-const searchConsoleVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
+// El token de Search Console es público. Dejamos un respaldo para que el
+// despliegue no dependa de que el proveedor lea el archivo .env ignorado.
+const searchConsoleVerification =
+  import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION ||
+  "DXuhPfvdtiSsCdCShxbFFqs7gUmbD5H43xUVnvoC_LM";
 ---
 
 {searchConsoleVerification && (
