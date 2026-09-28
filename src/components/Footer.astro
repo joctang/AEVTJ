@@ -57,24 +57,27 @@ import Icon from "./Icon.astro";
           Recibe nuestro boletín de noticias mensual de forma totalmente gratuita y mantente
           informado.
         </p>
-        <form class="mt-4 flex flex-col gap-3" onsubmit="return false">
+        <form class="mt-4 flex flex-col gap-3" id="newsletter-form" novalidate>
           <input
             type="email"
+            name="email"
             aria-label="Tu correo electrónico"
             placeholder="Tu correo electrónico"
+            required
             class="rounded-md border border-white/20 bg-white/5 px-3 py-2 text-sm text-white placeholder-white/40 outline-none focus:border-brand-olive"
           />
-          <label class="flex items-start gap-2 text-xs text-white/60">
-            <input type="checkbox" class="mt-0.5" />
-            Acepto la Política de Privacidad y el tratamiento de mis datos con el fin de
-            recibir la boletín de noticias.
-          </label>
+          <p class="text-xs text-white/60">
+            Al suscribirte se abrirá tu gestor de correo con un mensaje ya preparado; no
+            enviamos ni guardamos nada desde esta página. Tratamos tus datos según nuestra{" "}
+            <a href="/politica-de-privacidad/" class="underline hover:text-white">Política de Privacidad</a>.
+          </p>
           <button
             type="submit"
             class="rounded-md bg-brand-olive px-4 py-2 text-sm font-semibold uppercase tracking-wide text-white transition-colors hover:bg-brand-olive-dark"
           >
             Suscribirme
           </button>
+          <p class="text-xs text-white/60" id="newsletter-form-estado" role="status" aria-live="polite"></p>
         </form>
       </div>
     </div>
@@ -95,3 +98,24 @@ import Icon from "./Icon.astro";
     </div>
   </div>
 </footer>
+
+<script>
+  // Sin backend de newsletter: compone un mailto con el correo introducido
+  // y abre el gestor de correo del usuario, igual que el formulario de contacto.
+  const form = document.getElementById("newsletter-form") as HTMLFormElement | null;
+  const estado = document.getElementById("newsletter-form-estado");
+
+  form?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    if (!form.reportValidity()) return;
+
+    const email = String(new FormData(form).get("email") ?? "").trim();
+    const href =
+      "mailto:secretaria@victimasdetestigosdejehova.org" +
+      "?subject=" + encodeURIComponent("Alta newsletter") +
+      "&body=" + encodeURIComponent(`Quiero apuntarme al boletín de noticias.\n\n${email}`);
+
+    if (estado) estado.textContent = "Abriendo tu gestor de correo…";
+    window.location.href = href;
+  });
+</script>
