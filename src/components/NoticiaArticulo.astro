@@ -331,7 +331,7 @@ const kickerPieza = `${verbo} la pieza`;
             {relacionadas.map((r) => (
               <a class="noticia-relacionada" href={`/noticias/${r.slug}/`} data-reveal>
                 {r.imagen && (
-                  <img src={r.imagen} alt="" width="640" height="400" loading="lazy" decoding="async" />
+                  <img src={r.imagen} alt={r.titulo} width="640" height="400" loading="lazy" decoding="async" />
                 )}
                 <div class="noticia-relacionada__texto">
                   {r.fecha && <time datetime={r.fecha}>{formatearFecha(r.fecha)}</time>}

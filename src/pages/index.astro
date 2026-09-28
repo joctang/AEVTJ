@@ -160,7 +160,7 @@ const partnerCountryCount = supportCountries.length;
                 {row.map((partner) => (
                   <li>
                     <a href={partner.href ?? undefined} target="_blank" rel="nofollow noopener" class="partner-card">
-                      <img src={partner.image} alt="" loading="lazy" />
+                      <img src={partner.image} alt={partner.label} loading="lazy" />
                       <span>{partner.label}</span>
                     </a>
                   </li>
@@ -393,7 +393,7 @@ const partnerCountryCount = supportCountries.length;
     </section>
 
     <section class="stats-section">
-      <img src="/uploads/2025/10/a-cinematic-medium-shot-of-multiple-arms_MslghtrpSxODFr56MFRwOA_wRBDBTaGS1GzAsbmLgfzeg.jpeg" alt="" loading="lazy" />
+    <img src="/uploads/2025/10/a-cinematic-medium-shot-of-multiple-arms_MslghtrpSxODFr56MFRwOA_wRBDBTaGS1GzAsbmLgfzeg.jpeg" alt="Varias personas uniendo sus brazos como símbolo de apoyo y colaboración" loading="lazy" />
       <div class="premium-shell stats-grid">
         {
           stats.map((s, i) => (

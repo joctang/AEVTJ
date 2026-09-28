@@ -24,8 +24,8 @@ export const mainNav = [
 export const socialLinks = [
   { label: "Facebook", href: "https://www.facebook.com/asoc.aevtj", icon: "facebook" },
   { label: "Youtube", href: "https://www.youtube.com/@AEVTJ", icon: "youtube" },
-  { label: "X", href: "https://x.com", icon: "x" },
-  { label: "Instagram", href: "https://instagram.com", icon: "instagram" },
+  { label: "X", href: "https://x.com/aevtj", icon: "x" },
+  { label: "Instagram", href: "https://www.instagram.com/asoc.aevtj/", icon: "instagram" },
 ];
 
 export const legalLinks = [

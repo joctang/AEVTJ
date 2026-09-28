@@ -98,7 +98,7 @@ const jsonLdHowTo = {
               <a class="guia-tarjeta" href={`#${capitulo.id}`} data-reveal style={`transition-delay:${(i % 3) * 150}ms`}>
                 <figure class="guia-tarjeta__media">
                   <span class="guia-tarjeta__frame">
-                    <img src={capitulo.imagen.src} alt="" width={capitulo.imagen.width} height={capitulo.imagen.height} loading="lazy" decoding="async" />
+                    <img src={capitulo.imagen.src} alt={capitulo.imagen.alt} width={capitulo.imagen.width} height={capitulo.imagen.height} loading="lazy" decoding="async" />
                   </span>
                   <span class="guia-tarjeta__num" aria-hidden="true">{capitulo.n}</span>
                 </figure>
