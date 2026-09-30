@@ -1,3 +1,7 @@
+## Regla de autorización (Joctan)
+
+No hacer cambios importantes sin la aprobación explícita de Joctan sobre el cambio concreto, especialmente: contenido editorial, textos sensibles, URLs y despliegues. Antes de corregir, mostrar el antes/después y el motivo. Solo está siempre permitido leer, verificar y documentar.
+
 ## Development
 
 When starting the dev server, use background mode:
