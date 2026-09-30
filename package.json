@@ -13,6 +13,7 @@
     "auditar:noticias": "node scripts/auditar-noticias.mjs"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.7.4",
     "@svg-maps/spain": "^2.0.0",
     "@svg-maps/world": "^2.0.0",
     "@tailwindcss/vite": "^4.3.3",

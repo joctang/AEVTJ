@@ -2,10 +2,12 @@
 import { defineConfig } from 'astro/config';
 
 import tailwindcss from '@tailwindcss/vite';
+import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://victimasdetestigosdejehova.org',
+  integrations: [sitemap()],
   devToolbar: {
     enabled: false
   },
