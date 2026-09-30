@@ -39,7 +39,11 @@ const migrada = getNoticiaMigrada(entry.data.slug);
 const description = migrada?.entradilla ?? entry.data.excerpt.slice(0, 180);
 ---
 
-<BaseLayout title={migrada?.titulo ?? title} description={description}>
+<BaseLayout
+  title={migrada?.titulo ?? title}
+  description={description}
+  breadcrumbs={[{ label: "Noticias", href: "/noticias/" }, { label: migrada?.titulo ?? title }]}
+>
   {
     migrada ? (
       <NoticiaArticulo noticia={migrada} relacionadas={relacionadas} />

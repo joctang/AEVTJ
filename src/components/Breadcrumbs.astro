@@ -1,0 +1,45 @@
+---
+interface Crumb {
+  label: string;
+  href?: string;
+}
+
+interface Props {
+  items: Crumb[];
+}
+
+const { items } = Astro.props;
+const site = "https://victimasdetestigosdejehova.org";
+const all: Crumb[] = [{ label: "Inicio", href: "/" }, ...items];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: all.map((crumb, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    name: crumb.label,
+    ...(crumb.href ? { item: `${site}${crumb.href}` } : {}),
+  })),
+};
+---
+
+<nav aria-label="Miga de pan" class="breadcrumbs">
+  <div class="mx-auto max-w-[1200px] px-5 lg:px-8">
+    <ol>
+      {
+        all.map((crumb) => (
+          <li>
+            {crumb.href ? (
+              <a href={crumb.href}>{crumb.label}</a>
+            ) : (
+              <span aria-current="page">{crumb.label}</span>
+            )}
+          </li>
+        ))
+      }
+    </ol>
+  </div>
+</nav>
+
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />

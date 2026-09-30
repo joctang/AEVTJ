@@ -86,3 +86,18 @@ No completada todavía: faltan revisión visual efectiva, rutas completas, build
 
 ## Estado real de cobertura
 - El build local ya tiene comprobación responsive, pero la auditoría de producción queda bloqueada por el dominio aparcado de Hostinger. No se debe certificar la web publicada hasta corregir DNS/hosting y repetir rutas, recursos y conversión.
+
+## Actualización SEO — 2026-09-30
+
+Dominio real publicado: https://victimasdetestigosdejehova.org (el dominio aevtj.org de este documento quedó obsoleto).
+
+Resuelto (verificado en producción la misma fecha):
+- [AEVTJ-AUD-05] robots.txt y sitemap: ahora vía `@astrojs/sitemap` + `public/robots.txt`. Se eliminaron los endpoints manuales `src/pages/robots.txt.ts` (bug: unía líneas con `\n` literal) y `src/pages/sitemap.xml.ts` (omitía páginas). Producción: robots 200, sitemap-index 200, 39 URLs.
+- Canonical por ruta: ya presente en BaseLayout; verificado en build.
+- Meta de `/noticias/`: título y description descriptivos.
+- Breadcrumbs: componente `src/components/Breadcrumbs.astro` con JSON-LD `BreadcrumbList`, integrado en BaseLayout vía prop `breadcrumbs` y aplicado a todas las páginas interiores (noticias, noticia individual, guías, legal, contacto, socios, quiénes somos, directorio, política de privacidad, páginas de colección).
+- Search Console: dado de alta; sitemap enviado el 2026-09-30.
+
+Pendiente tras esta actualización:
+- Desplegar los breadcrumbs y validar visualmente la barra en tablet (relacionado con [AEVTJ-AUD-03], overflow a 768 px aún sin corregir).
+- Quick wins editoriales del `INFORME_SEO_EDITORIAL_AEVTJ_2026.md`: revisar dato «815 miembros», ficha del comunicado de sangre 2026, ficha de sentencia, registro de fecha de revisión/responsable editorial.

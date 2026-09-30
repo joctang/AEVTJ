@@ -23,7 +23,11 @@ const pins = supportCountries.filter(({ code }) => countryLocations[code]).map((
 const kindOrder = ["specific", "general", "specialist", "remote"] as const;
 ---
 
-<BaseLayout title="Asociaciones y recursos de apoyo por país" description="Directorio de asociaciones y recursos de apoyo por país, con canales de contacto documentados y fecha de revisión.">
+<BaseLayout
+  title="Asociaciones y recursos de apoyo por país"
+  description="Directorio de asociaciones y recursos de apoyo por país, con canales de contacto documentados y fecha de revisión."
+  breadcrumbs={[{ label: "Asociaciones y recursos de apoyo por país" }]}
+>
   <section class="directory-hero"><div class="directory-shell directory-hero__grid">
     <div class="directory-hero__copy">
       <p class="guia-kicker guia-kicker--crema directory-kicker">Directorio internacional · revisión 25-09-2026</p>

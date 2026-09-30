@@ -5,15 +5,18 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import CookieBanner from "../components/CookieBanner.astro";
 import Tracking from "../components/Tracking.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
 
 interface Props {
   title: string;
   description?: string;
+  breadcrumbs?: { label: string; href?: string }[];
 }
 
 const {
   title,
   description = "Asociación Española de Víctimas de los Testigos de Jehová y la JW.ORG. Escuchamos, apoyamos y ayudamos a recuperar la vida tras salir de la organización.",
+  breadcrumbs,
 } = Astro.props;
 const canonicalPath = Astro.url.pathname.endsWith("/") ? Astro.url.pathname : `${Astro.url.pathname}/`;
 const canonicalUrl = `https://victimasdetestigosdejehova.org${canonicalPath}`;
@@ -42,6 +45,7 @@ const canonicalUrl = `https://victimasdetestigosdejehova.org${canonicalPath}`;
     <div class="site-progress" aria-hidden="true"></div>
     <Header />
     <main id="contenido" class="site-main flex-1" tabindex="-1">
+      {breadcrumbs && <Breadcrumbs items={breadcrumbs} />}
       <slot />
     </main>
     <Footer />
