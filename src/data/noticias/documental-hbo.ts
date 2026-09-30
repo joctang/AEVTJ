@@ -11,6 +11,7 @@ import type { Noticia } from "./tipos";
  */
 export const noticia: Noticia = {
   slug: "documental-hbo",
+  metaDescription: "El 20 de febrero de 2026 se estrenó en HBO «Sobreviviendo a los Testigos de Jehová», con testimonios de personas que han salido de la organización.",
   titulo: "Estreno mundial del documental de HBO “Sobreviviendo a los Testigos de Jehová”",
   fecha: "2026-02-24T20:20:47",
   autoria: "AEVTJ · Redacción",

@@ -13,6 +13,7 @@ import type { Noticia } from "./tipos";
  */
 export const noticia: Noticia = {
   slug: "organizaciones-coercitivas-salir-de-la-trampa-000906-21-06-2026",
+  metaDescription: "Un reportaje de RTVE retrata la manipulación, el aislamiento y el miedo a romper con el grupo que describen muchas víctimas de organizaciones coercitivas.",
   titulo: "Organizaciones coercitivas: salir de la trampa",
   fecha: "2026-07-09T10:33:10",
   autoria: "AEVTJ · Redacción",

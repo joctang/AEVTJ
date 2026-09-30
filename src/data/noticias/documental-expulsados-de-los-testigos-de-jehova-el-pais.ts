@@ -11,6 +11,7 @@ import type { Noticia } from "./tipos";
  */
 export const noticia: Noticia = {
   slug: "documental-expulsados-de-los-testigos-de-jehova-el-pais",
+  metaDescription: "El País publica el documental «Expulsados de los Testigos de Jehová», sobre la «muerte social» que sufren quienes abandonan la confesión.",
   titulo: "Documental «Expulsados de los Testigos de Jehová» · El País",
   fecha: "2026-03-03T19:17:32",
   autoria: "AEVTJ · Redacción",

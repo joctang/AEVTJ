@@ -14,6 +14,7 @@ import type { Noticia } from "./tipos";
 export const noticia: Noticia = {
   slug:
     "el-precio-de-salir-de-los-testigos-de-jehova-3cat-visibiliza-el-impacto-del-ostracismo-y-la-salud-mental",
+  metaDescription: "El programa de 3Cat del 16 de octubre recoge testimonios de exmiembros sobre el silencio, la soledad y la ruptura de la red de apoyo tras la expulsión.",
   titulo:
     "“El precio de salir de los Testigos de Jehová”: 3Cat visibiliza el impacto del ostracismo y la salud mental",
   fecha: "2025-10-23T18:20:44",

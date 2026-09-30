@@ -16,6 +16,7 @@ import type { Noticia } from "./tipos";
  */
 export const noticia: Noticia = {
   slug: "mas-alla-del-prejuicio-nuestra-opinion",
+  metaDescription: "La AEVTJ responde a la columna de Fini Falcó en La Voz de Asturias: defender la fe no exige silenciar los relatos de daño.",
   titulo: "Más allá del prejuicio: nuestra opinión",
   fecha: "2025-11-07T10:40:45",
   autoria: "AEVTJ · Redacción",

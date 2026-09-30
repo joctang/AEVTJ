@@ -11,15 +11,21 @@ interface Props {
   title: string;
   description?: string;
   breadcrumbs?: { label: string; href?: string }[];
+  image?: string;
 }
 
 const {
   title,
   description = "Asociación Española de Víctimas de los Testigos de Jehová y la JW.ORG. Escuchamos, apoyamos y ayudamos a recuperar la vida tras salir de la organización.",
   breadcrumbs,
+  image,
 } = Astro.props;
 const canonicalPath = Astro.url.pathname.endsWith("/") ? Astro.url.pathname : `${Astro.url.pathname}/`;
 const canonicalUrl = `https://victimasdetestigosdejehova.org${canonicalPath}`;
+const ogImage = image
+  ? image.startsWith("http") ? image : `https://victimasdetestigosdejehova.org/${image.replace(/^\//, "")}`
+  : "https://victimasdetestigosdejehova.org/uploads/2025/10/Logo-avtj-300x300.png";
+const twitterCard = image ? "summary_large_image" : "summary";
 ---
 
 <!doctype html>
@@ -31,6 +37,17 @@ const canonicalUrl = `https://victimasdetestigosdejehova.org${canonicalPath}`;
     <title>{title} · AEVTJ</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalUrl} />
+    <meta property="og:site_name" content="AEVTJ" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content={twitterCard} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
     <Tracking />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />

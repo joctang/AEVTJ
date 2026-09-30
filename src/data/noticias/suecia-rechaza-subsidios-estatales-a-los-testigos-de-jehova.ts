@@ -13,6 +13,7 @@ import type { Noticia } from "./tipos";
  */
 export const noticia: Noticia = {
   slug: "suecia-rechaza-subsidios-estatales-a-los-testigos-de-jehova",
+  metaDescription: "Suecia deniega a los Testigos de Jehová los subsidios estatales por discriminar y ejercer presión indebida, incluido el «no trato» a expulsados.",
   titulo: "Suecia rechaza subsidios estatales a los Testigos de Jehová",
   fecha: "2025-11-03T20:22:12",
   autoria: "AEVTJ · Redacción",

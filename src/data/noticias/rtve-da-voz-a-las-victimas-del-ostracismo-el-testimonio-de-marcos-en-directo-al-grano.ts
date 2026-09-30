@@ -11,6 +11,7 @@ import type { Noticia } from "./tipos";
  */
 export const noticia: Noticia = {
   slug: "rtve-da-voz-a-las-victimas-del-ostracismo-el-testimonio-de-marcos-en-directo-al-grano",
+  metaDescription: "En Directo al Grano (programa 154), Marcos relata el aislamiento familiar y social que sufrió tras salir de los Testigos de Jehová.",
   titulo: "RTVE da voz a las víctimas del ostracismo: el testimonio de Marcos en Directo al Grano",
   fecha: "2026-04-30T06:37:49",
   autoria: "AEVTJ · Redacción",

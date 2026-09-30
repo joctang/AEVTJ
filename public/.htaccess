@@ -1,5 +1,35 @@
-# Canonical unico: HTTPS y sin www
 RewriteEngine On
+
+# Archivos renombrados: los enlaces antiguos (WordPress, buscadores, prensa) redirigen a la URL nueva
+RewriteRule ^uploads/2026/04/Sentencia_Apelacion_AEVTJ_borrado\.pdf$ https://victimasdetestigosdejehova.org/uploads/2026/04/caso1-sentencia-2a-instancia.pdf [R=301,L]
+RewriteRule ^uploads/2026/04/inadmision_supremo_Enrique_borrado\.pdf$ https://victimasdetestigosdejehova.org/uploads/2026/04/caso2-inadmision-recurso-supremo.pdf [R=301,L]
+RewriteRule ^uploads/2026/04/sentencia_apelacion_Gabriel_borrado\.pdf$ https://victimasdetestigosdejehova.org/uploads/2026/04/caso3-sentencia-2a-instancia.pdf [R=301,L]
+RewriteRule ^uploads/2023/12/SentenciaProc729-2021_sin_nombres_fin\.pdf$ https://victimasdetestigosdejehova.org/uploads/2023/12/caso1-sentencia-1a-instancia.pdf [R=301,L]
+RewriteRule ^uploads/2023/12/demanda_juzgado_ta_madrid_borrados\.pdf$ https://victimasdetestigosdejehova.org/uploads/2023/12/caso1-demanda-1a-instancia.pdf [R=301,L]
+RewriteRule ^uploads/2023/12/Proc-432-2021_Sentencia-contr-enrique-carmona-sin-nombres\.pdf$ https://victimasdetestigosdejehova.org/uploads/2023/12/caso2-sentencia-1a-instancia.pdf [R=301,L]
+RewriteRule ^uploads/2023/12/SIN-NOMBRES_5912-Demanda-TESTIGOS-CRISTIANOS-JEHOVA-Vs-CARMONA-VDEF\.pdf$ https://victimasdetestigosdejehova.org/uploads/2023/12/caso2-demanda-1a-instancia.pdf [R=301,L]
+RewriteRule ^uploads/2023/12/diferencias_que_piden_que_obtienen_juicioEcarmona\.pdf$ https://victimasdetestigosdejehova.org/uploads/2023/12/caso2-diferencias-demanda-sentencia.pdf [R=301,L]
+
+# Imágenes con nombre interno de generador: redirigen (incluidas sus miniaturas) al nombre descriptivo
+RewriteRule ^uploads/(2025/10|elementor/thumbs)/a-realistic-image-of-a-young-boy-standin__[^/]+\.jpeg$ https://victimasdetestigosdejehova.org/uploads/2025/10/nino-ilustracion-testigos-de-jehova.jpeg [R=301,L]
+RewriteRule ^uploads/(2025/10|elementor/thumbs)/a-cinematic-medium-shot-of-multiple-arms_[^/]+\.jpeg$ https://victimasdetestigosdejehova.org/uploads/2025/10/personas-unidas-brazos-apoyo-victimas.jpeg [R=301,L]
+
+RewriteRule ^uploads/2023/12/DALL.{1,2}E-2023-12-14-[^/]+$ https://victimasdetestigosdejehova.org/uploads/2023/12/libertad-personas-cumbre-montana.png [R=301,L]
+RewriteRule ^uploads/2023/12/DALL.{1,2}E-2023-12-29-[^/]+$ https://victimasdetestigosdejehova.org/uploads/2023/12/mujer-joven-llorando-murmuraciones.jpg [R=301,L]
+RewriteRule ^uploads/2024/02/DALL.{1,2}E-2024-02-04-[^/]+$ https://victimasdetestigosdejehova.org/uploads/2024/02/justicia-honor-verdad-balanza-libro.webp [R=301,L]
+RewriteRule ^uploads/2025/10/ChatGPT-Image-13-oct-2025-18_16_25(-[0-9]+x[0-9]+)?\.webp$ https://victimasdetestigosdejehova.org/uploads/2025/10/escaladores-ayudandose-cumbre-atardecer$1.webp [R=301,L]
+RewriteRule ^uploads/2026/01/ChatGPT-Image-30-ene-2026-19_10_43(-[0-9]+x[0-9]+)?\.png$ https://victimasdetestigosdejehova.org/uploads/2026/01/banner-estudio-cientifico-invictus-ex-testigos$1.png [R=301,L]
+
+# URLs de páginas del legado WordPress con equivalente en el sitio Astro (30/09/2026).
+# RedirectMatch anclado para no capturar por prefijo (p. ej. /aviso no debe capturar /aviso-legal/).
+RedirectMatch 301 ^/aviso/?$ /aviso-legal/
+RedirectMatch 301 ^/privacy/?$ /politica-de-privacidad/
+RedirectMatch 301 ^/alta/?$ /hazte-socio/
+RedirectMatch 301 ^/donaciones/?$ /hazte-socio/
+RedirectMatch 301 ^/inicio/?$ /
+RedirectMatch 301 ^/category/.+ /noticias/
+
+# Canonical unico: HTTPS y sin www
 RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} ^www\.victimasdetestigosdejehova\.org$ [NC]
 RewriteRule ^(.*)$ https://victimasdetestigosdejehova.org/$1 [R=301,L]

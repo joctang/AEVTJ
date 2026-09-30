@@ -14,6 +14,7 @@ import type { Noticia } from "./tipos";
  */
 export const noticia: Noticia = {
   slug: "conversaciones-pendientes-episodio-128-cadena-ser",
+  metaDescription: "Dani, ex Testigo de Jehová y miembro del colectivo LGTBIQ+, cuenta en Cadena SER la represión y el control que vivió en la organización.",
   titulo: "Represión, control y diversidad: el testimonio de Dani en la SER",
   fecha: "2026-07-09T10:50:08",
   autoria: "AEVTJ · Redacción",

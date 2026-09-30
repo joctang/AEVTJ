@@ -63,6 +63,8 @@ export interface Noticia {
     nombre: string;
   };
   portada: { src: string; alt: string; width?: number; height?: number };
+  /** Meta description propia (máx. ~155 caracteres). Si falta, se usa la entradilla. */
+  metaDescription?: string;
   /** Resumen de 1-2 frases. Se reutiliza como meta description. */
   entradilla: string;
   /** Cita que abre la pieza, cuando el original la destaca. */

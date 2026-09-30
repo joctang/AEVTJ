@@ -17,6 +17,7 @@ import type { Noticia } from "./tipos";
  */
 export const noticia: Noticia = {
   slug: "la-aevtj-reclama-libertad-medica-plena-tras-el-cambio-sobre-transfusiones",
+  metaDescription: "La AEVTJ valora que los Testigos de Jehová permitan aceptar componentes sanguíneos, pero exige una disculpa pública y estudia acciones legales.",
   titulo:
     "La AEVTJ reclama libertad médica plena tras el cambio sobre transfusiones",
   fecha: "2026-09-18T10:00:00",

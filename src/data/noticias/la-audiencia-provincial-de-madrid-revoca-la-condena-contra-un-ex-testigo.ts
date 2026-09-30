@@ -12,6 +12,7 @@ import type { Noticia } from "./tipos";
  */
 export const noticia: Noticia = {
   slug: "la-audiencia-provincial-de-madrid-revoca-la-condena-contra-un-ex-testigo",
+  metaDescription: "La Audiencia Provincial de Madrid anula la condena de 2023 a un exmiembro: llamar «secta» en sentido sociológico o testimonial no vulnera el honor.",
   titulo: "La Audiencia Provincial de Madrid revoca la condena contra un ex testigo de Jehová",
   fecha: "2025-03-14T15:09:45",
   autoria: "AEVTJ · Redacción",

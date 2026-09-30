@@ -14,6 +14,7 @@ import type { Noticia } from "./tipos";
  */
 export const noticia: Noticia = {
   slug: "entrevista-a-samuel-ferrando-presidente-de-la-aevtj",
+  metaDescription: "Virginia Dröm entrevista en cafè Dröm a Samuel Ferrando, presidente de la AEVTJ, sobre el daño vivido dentro de los Testigos de Jehová.",
   titulo: "Entrevista a Samuel Ferrando, presidente de la AEVTJ, en el programa cafè Dröm",
   fecha: "2025-10-26T19:51:19",
   autoria: "AEVTJ · Redacción",

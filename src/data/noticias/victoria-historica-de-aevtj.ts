@@ -12,6 +12,7 @@ import type { Noticia } from "./tipos";
  */
 export const noticia: Noticia = {
   slug: "victoria-historica-de-aevtj",
+  metaDescription: "La Audiencia Provincial de Madrid avala que las víctimas llamen «secta destructiva» a los Testigos de Jehová y la prensa internacional se hace eco.",
   titulo:
     "Victoria histórica de la AEVTJ: la justicia española sienta un precedente que resuena en toda Europa",
   fecha: "2026-04-22T10:59:44",
@@ -48,7 +49,7 @@ export const noticia: Noticia = {
     {
       titulo: "Sentencia completa",
       texto: "Lee el fallo de la Audiencia Provincial de Madrid que ratifica la sentencia (PDF).",
-      href: "/uploads/2026/04/Sentencia_Apelacion_AEVTJ_borrado.pdf",
+      href: "/uploads/2026/04/caso1-sentencia-2a-instancia.pdf",
       etiqueta: "Leer PDF",
     },
     {
@@ -59,7 +60,7 @@ export const noticia: Noticia = {
     },
   ],
   fuentes: [
-    { etiqueta: "Leer la sentencia completa (PDF)", href: "/uploads/2026/04/Sentencia_Apelacion_AEVTJ_borrado.pdf" },
+    { etiqueta: "Leer la sentencia completa (PDF)", href: "/uploads/2026/04/caso1-sentencia-2a-instancia.pdf" },
     { etiqueta: "El País", href: "https://elpais.com" },
     { etiqueta: "ABC", href: "https://www.abc.es/sociedad/audiencia-provincial-madrid-avala-pueda-calificar-secta-20260421133553-nt.html" },
     { etiqueta: "elDiario.es", href: "https://www.eldiario.es/sociedad/justicia-avala-llame-secta-destructiva-testigos-jehova_1_13158958.html" },

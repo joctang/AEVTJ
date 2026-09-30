@@ -102,7 +102,7 @@ const kindOrder = ["specific", "general", "specialist", "remote"] as const;
                   {resource.formUrl && <a href={resource.formUrl} target="_blank" rel="noopener noreferrer">Formulario <span aria-hidden="true">↗</span></a>}
                 </div>
                 {(resource.email || resource.phone) && <p class="support-card__contact">{resource.email && <span>{resource.email}</span>}{resource.phone && <span>{resource.phone}</span>}</p>}
-                <p class="support-card__source">Verificado: <time datetime={resource.verifiedAt}>25-09-2026</time> · <a href={resource.sourceUrl} target="_blank" rel="noopener noreferrer">Ver fuente</a></p>
+                <p class="support-card__source">Verificado: <time datetime={resource.verifiedAt}>25-09-2026</time>{resource.sourceUrl && <> · <a href={resource.sourceUrl} target="_blank" rel="noopener noreferrer">Ver fuente</a></>}</p>
               </article>
             ))}
           </div>
@@ -121,7 +121,7 @@ const kindOrder = ["specific", "general", "specialist", "remote"] as const;
           <span class="support-card__type" data-kind="remote">Remoto / internacional</span><h3>{resource.name}</h3><p>{resource.summary}</p>
           {resource.notice && <p class="support-card__notice">{resource.notice}</p>}
           <div class="support-card__actions">{resource.website && <a href={resource.website} target="_blank" rel="noopener noreferrer">Web <span aria-hidden="true">↗</span></a>}{resource.formUrl && <a href={resource.formUrl} target="_blank" rel="noopener noreferrer">Formulario / webcall <span aria-hidden="true">↗</span></a>}</div>
-          <p class="support-card__source">Verificado: <time datetime={resource.verifiedAt}>25-09-2026</time> · <a href={resource.sourceUrl} target="_blank" rel="noopener noreferrer">Ver fuente</a></p>
+          <p class="support-card__source">Verificado: <time datetime={resource.verifiedAt}>25-09-2026</time>{resource.sourceUrl && <> · <a href={resource.sourceUrl} target="_blank" rel="noopener noreferrer">Ver fuente</a></>}</p>
         </article>
       ))}
     </section>

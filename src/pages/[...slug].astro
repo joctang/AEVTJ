@@ -48,6 +48,6 @@ const heroTitle = heroTitles[entry.data.slug];
 const bodyHtml = heroPhoto ? html.replace(/<h1>.*?<\/h1>/s, "") : html;
 ---
 
-<BaseLayout title={title} breadcrumbs={[{ label: heroTitle ?? title }]}>
+<BaseLayout title={title} breadcrumbs={[{ label: heroTitle ?? title }]} image={heroPhoto}>
   <ArticleContent title={heroTitle ?? title} html={bodyHtml} heroPhoto={heroPhoto} />
 </BaseLayout>

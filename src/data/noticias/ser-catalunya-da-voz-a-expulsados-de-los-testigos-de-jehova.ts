@@ -13,6 +13,7 @@ import type { Noticia } from "./tipos";
  */
 export const noticia: Noticia = {
   slug: "ser-catalunya-da-voz-a-expulsados-de-los-testigos-de-jehova",
+  metaDescription: "El Balcó de SER Catalunya entrevista a Samuel, presidente de la AEVTJ, que pasó 45 años en los Testigos de Jehová, sobre el corte de lazos y la culpa.",
   titulo: "SER Catalunya da voz a expulsados de los Testigos de Jehová",
   fecha: "2025-11-07T09:44:21",
   autoria: "AEVTJ · Redacción",

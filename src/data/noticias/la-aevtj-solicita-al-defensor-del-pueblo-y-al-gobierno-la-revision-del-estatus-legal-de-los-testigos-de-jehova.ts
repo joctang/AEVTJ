@@ -12,6 +12,7 @@ import type { Noticia } from "./tipos";
 export const noticia: Noticia = {
   slug:
     "la-aevtj-solicita-al-defensor-del-pueblo-y-al-gobierno-la-revision-del-estatus-legal-de-los-testigos-de-jehova",
+  metaDescription: "La AEVTJ pide al Defensor del Pueblo y al Gobierno revisar el estatus legal de los Testigos de Jehová y alerta de la emergencia en salud mental.",
   titulo:
     "La AEVTJ solicita al Defensor del Pueblo y al Gobierno la revisión del estatus legal de los Testigos de Jehová",
   fecha: "2026-03-05T06:50:36",

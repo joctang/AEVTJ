@@ -11,6 +11,7 @@ import type { Noticia } from "./tipos";
  */
 export const noticia: Noticia = {
   slug: "israel-florez-y-soraya-narez-en-onda-cero-el-vacio-de-una-vida-borrada-por-la-expulsion",
+  metaDescription: "Israel Flórez y Soraya Narez relatan en Onda Cero las secuelas del ostracismo familiar: la norma que obliga a ignorar a quienes abandonan el grupo.",
   titulo: "Israel Flórez y Soraya Narez en Onda Cero: el vacío de una vida «borrada» por la expulsión",
   fecha: "2026-03-11T07:24:25",
   autoria: "Redacción AEVTJ · Madrid",

@@ -14,7 +14,7 @@ const directoryPartners = internationalSupport
   }));
 
 export const worldPartners = [
-  { name: "Asociación Civil Argentina de Ayuda a Víctimas de Sectas", href: "https://asocavics.org/", flag: "/uploads/2025/10/mundo-5bf827.svg", country: "ar" },
+  { name: "Asociación Civil Argentina de Ayuda a Víctimas de Sectas", href: null, flag: "/uploads/2025/10/mundo-5bf827.svg", country: "ar" },
   { name: "Comunidad de Ex Testigos de Jehová México", href: "https://www.facebook.com/p/Comunidad-de-Ex-Testigos-de-Jehov%C3%A1-M%C3%A9xico-61562062544131/", flag: "/uploads/2025/10/bandera-13b538.svg", country: "mx" },
   { name: "Dales Unidos contra la Violencia Coercitiva", href: "https://www.instagram.com/dales.a.c/", flag: "/uploads/2025/10/bandera-13b538.svg", country: "mx" },
   { name: 'Probudili jsme se - "Nos despertamos"', href: "https://facebook.com/groups/309238966897350", flag: "/uploads/2025/10/republica-checa-8eae56.svg", country: "cz" },

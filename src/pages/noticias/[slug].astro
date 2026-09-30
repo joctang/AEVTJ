@@ -36,13 +36,14 @@ const { title, html, image, date } = entry.data;
 // `src/data/noticias/`, se pinta con la plantilla canónica; si no, sigue
 // saliendo el HTML heredado de WordPress. Ver PLANTILLA-NOTICIAS.md.
 const migrada = getNoticiaMigrada(entry.data.slug);
-const description = migrada?.entradilla ?? entry.data.excerpt.slice(0, 180);
+const description = migrada?.metaDescription ?? migrada?.entradilla ?? entry.data.excerpt.slice(0, 180);
 ---
 
 <BaseLayout
   title={migrada?.titulo ?? title}
   description={description}
   breadcrumbs={[{ label: "Noticias", href: "/noticias/" }, { label: migrada?.titulo ?? title }]}
+  image={image ?? undefined}
 >
   {
     migrada ? (
