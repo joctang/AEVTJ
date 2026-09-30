@@ -1,0 +1,5 @@
+# Canonical unico: HTTPS y sin www
+RewriteEngine On
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\.victimasdetestigosdejehova\.org$ [NC]
+RewriteRule ^(.*)$ https://victimasdetestigosdejehova.org/$1 [R=301,L]
