@@ -14,6 +14,10 @@ export const mainNav = [
         label: "Guía para proteger tus derechos sanitarios en caso de interferencia familiar",
         href: "/guia-para-proteger-tus-derechos-sanitarios-en-caso-de-interferencia-familiar/",
       },
+      {
+        label: "Guía para suprimir tus datos personales (derecho de supresión)",
+        href: "/derecho-de-supresion/",
+      },
     ],
   },
   { label: "Hazte socio / Donaciones", href: "/hazte-socio/" },

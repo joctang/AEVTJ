@@ -1,0 +1,95 @@
+/* Añadidos de la guía del derecho de supresión sobre derechos-sanitarios.css:
+   hero sin foto, tarjetas de descarga, modelos de texto y checklists. */
+
+.supresion-hero { height: auto; min-height: 460px; }
+.supresion-hero .derechos-hero__entradilla { font-size: 16px; }
+
+/* ---------- Descargas ---------- */
+.supresion-descargas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; margin-top: 26px; }
+.supresion-descarga {
+  display: flex; gap: 18px; padding: 26px; border-radius: 28px;
+  background: #fbfdf5; border: 1px solid #dce3cd; box-shadow: 0 20px 50px #0f25371a;
+  color: inherit; text-decoration: none;
+  transition: transform 450ms var(--ease-editorial), box-shadow 450ms var(--ease-editorial), border-color 450ms var(--ease-editorial);
+}
+@media (hover:hover) and (pointer:fine) {
+  .supresion-descarga:hover { transform: translateY(-4px); border-color: #2ea88f; box-shadow: 0 26px 60px #0f253726; }
+}
+.supresion-descarga__icono {
+  width: 52px; height: 52px; flex: 0 0 auto; display: grid; place-items: center;
+  border-radius: 16px; background: #d8eaa4; color: #122c33;
+}
+.supresion-descarga__icono svg { width: 26px; height: 26px; }
+.supresion-descarga__texto { display: flex; flex-direction: column; gap: 8px; }
+.supresion-descarga__titulo { font-family: var(--font-heading); font-size: 19px; line-height: 1.3; letter-spacing: -.02em; color: #122c33; }
+.supresion-descarga__desc { font-size: 14px; line-height: 1.7; color: #435043; }
+.supresion-descarga__meta { margin-top: auto; font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: #1f7a63; }
+
+/* ---------- Email del DPD ---------- */
+.supresion-email { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 14px; }
+.supresion-email a {
+  padding: 12px 18px; border-radius: 14px; background: #f0f7dd;
+  font-family: ui-monospace, "Cascadia Mono", "Source Code Pro", Menlo, monospace;
+  font-size: 15px; color: #122c33; overflow-wrap: anywhere; text-decoration: none;
+}
+.supresion-email .paso__copiado { margin-top: 0; }
+.supresion-mini {
+  min-height: 44px; padding: 8px 18px; border: 1px solid #122c33; border-radius: 100px;
+  background: transparent; color: #122c33; cursor: pointer;
+  font-family: var(--font-body); font-size: 13px; font-weight: 500;
+  transition: background-color 450ms var(--ease-editorial), color 450ms var(--ease-editorial);
+}
+@media (hover:hover) and (pointer:fine) { .supresion-mini:hover { background: #122c33; color: #f5fbdf; } }
+
+.supresion-sublista { margin-top: 10px; gap: 6px; }
+.supresion-sublista li::before { background: transparent; border: 1.5px solid #2ea88f; }
+
+/* ---------- Modelos de texto ---------- */
+.supresion-modelo { margin-top: 2em; }
+.supresion-modelo__barra { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
+.supresion-modelo__barra .paso__etiqueta { margin-top: 0; }
+.supresion-modelo__barra .paso__copiar { margin-top: 0; }
+.supresion-modelo__papel {
+  margin-top: 14px; padding: clamp(20px, 3vw, 32px); border-radius: 18px;
+  background: #fff; border: 1px dashed #122c3366;
+  font-size: 14.5px; line-height: 1.8; color: #1f2a22; white-space: pre-line;
+}
+.supresion-modelo__papel p + p { margin-top: .9em; }
+.supresion-modelo__asunto { padding-bottom: .9em; border-bottom: 1px solid #122c331a; }
+
+/* ---------- Dónde presentar ---------- */
+.supresion-donde { margin-top: 2em; padding-top: 1.6em; border-top: 1px solid #dce3cd; }
+.supresion-donde .paso__etiqueta { margin-top: 0; }
+.supresion-donde .paso__parrafo { margin-top: .6em; }
+.supresion-donde__acciones { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 18px; }
+
+/* ---------- Checklists ---------- */
+.supresion-checklist { margin-top: 14px; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.supresion-checklist li { position: relative; padding-left: 32px; font-size: 15.5px; line-height: 1.7; color: #435043; }
+.supresion-checklist li::before {
+  content: '✓'; position: absolute; left: 0; top: .15em; width: 22px; height: 22px;
+  display: grid; place-items: center; border-radius: 7px; background: #d8eaa4;
+  font-size: 13px; font-weight: 700; color: #122c33;
+}
+.supresion-checklist--grande {
+  display: block; columns: 2; column-gap: 36px; margin-top: 26px;
+  padding: clamp(24px, 3vw, 36px); border-radius: 28px; background: #fbfdf5; border: 1px solid #dce3cd;
+}
+
+.supresion a:focus-visible, .supresion button:focus-visible { outline: 3px solid #2ea88f; outline-offset: 5px; border-radius: 8px; }
+.supresion-checklist--grande li { break-inside: avoid; margin-bottom: 12px; }
+.derechos-cierre h2 { text-wrap: pretty; }
+
+@media (prefers-reduced-motion: reduce) {
+  .supresion-descarga, .supresion-mini { transition: none; }
+}
+@media (max-width: 767px) {
+  .supresion-descargas { grid-template-columns: 1fr; }
+  .supresion-checklist--grande { columns: 1; }
+  .supresion-descarga { flex-direction: column; }
+  .supresion-donde__acciones { flex-direction: column; align-items: stretch; }
+}
+@media print {
+  .supresion-mini, .supresion-donde__acciones { display: none !important; }
+  .supresion-descarga { box-shadow: none; }
+}

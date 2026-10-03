@@ -1,0 +1,257 @@
+---
+// Guía del derecho de supresión de datos ante los Testigos de Jehová.
+// Reutiliza la maquetación de la guía de derechos sanitarios (hero, aviso,
+// tarjetas de paso, rail) y añade descargas DOCX y modelos de texto a copiar.
+// Contenido literal desde src/data/derecho-supresion.ts.
+import "../styles/derechos-sanitarios.css";
+import "../styles/derecho-supresion.css";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import {
+  intro,
+  avisoLegal,
+  emailDpd,
+  descargas,
+  queSolicitar,
+  modeloDpd,
+  congregacion,
+  modeloCongregacion,
+  cuandoReclamar,
+  modeloAepd,
+  sedeAepd,
+  recomendaciones,
+  cierre,
+  pasos,
+  type ModeloTexto,
+} from "../data/derecho-supresion";
+
+const description =
+  "Cómo ejercer el derecho de supresión de tus datos ante los Testigos de Jehová: modelo para el DPD, respuesta si piden la congregación y reclamación ante la AEPD.";
+
+const modelos: Record<number, { etiqueta: string; modelo: ModeloTexto }> = {
+  1: { etiqueta: "Texto que se puede enviar al DPD", modelo: modeloDpd },
+  2: { etiqueta: "La respuesta puede ser esta", modelo: modeloCongregacion },
+  4: { etiqueta: "Contenido orientativo de la reclamación", modelo: modeloAepd },
+};
+const textoModelo = (m: ModeloTexto) =>
+  [m.asunto ? `Asunto: ${m.asunto}` : null, ...m.parrafos].filter(Boolean).join("\n\n");
+
+const jsonLdHowTo = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  name: intro.titulo,
+  description,
+  author: {
+    "@type": "Organization",
+    name: "AEVTJ — Asociación Española de Víctimas de los Testigos de Jehová",
+  },
+  step: pasos.map((paso) => ({ "@type": "HowToStep", position: paso.n, name: paso.titulo })),
+};
+---
+
+<BaseLayout title={intro.titulo} description={description} breadcrumbs={[{ label: intro.h1 }]} image={intro.heroImage.src}>
+  <div class="derechos supresion">
+    <nav class="derechos-rail" aria-label="Secciones de la guía">
+      <ol>
+        <li><a href="#descargas"><span>Documentos descargables</span></a></li>
+        {pasos.map((paso) => (
+          <li><a href={`#${paso.id}`}><span>{paso.n}. {paso.titulo}</span></a></li>
+        ))}
+        <li><a href="#recomendaciones"><span>Recomendaciones</span></a></li>
+      </ol>
+      <span class="guia-rail__progreso" aria-hidden="true"></span>
+    </nav>
+
+    <section class="derechos-hero supresion-hero">
+      <img
+        class="derechos-hero__img"
+        src={intro.heroImage.src}
+        alt={intro.heroImage.alt}
+        width="1600"
+        height="1068"
+        fetchpriority="high"
+        decoding="async"
+      />
+      <div class="derechos-hero__scrim" aria-hidden="true"></div>
+      <div class="derechos-hero__content">
+        <p class="guia-kicker guia-kicker--crema">{intro.kicker}</p>
+        <h1>{intro.h1}</h1>
+        <p class="derechos-hero__entradilla">{intro.entradilla}</p>
+        <div class="derechos-hero__actions">
+          <a class="guia-pill guia-pill--solid" href={`#${pasos[0].id}`}>Ver los pasos</a>
+          <a class="guia-pill guia-pill--ghost" href="#descargas">Descargar los documentos</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="derechos-aviso-wrap">
+      <aside class="derechos-aviso" role="note" aria-label={avisoLegal.titulo} data-reveal>
+        <div class="derechos-aviso__icono" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9"></circle>
+            <path d="M12 8h.01M12 11v5"></path>
+          </svg>
+        </div>
+        <div>
+          <h2>{avisoLegal.titulo}</h2>
+          <p>{avisoLegal.texto}</p>
+        </div>
+      </aside>
+    </div>
+
+    <section class="derechos-necesitas" id="descargas" aria-labelledby="descargas-titulo">
+      <div class="derechos-necesitas__inner">
+        <p class="guia-kicker" data-reveal>Documentos descargables</p>
+        <h2 id="descargas-titulo" class="sr-only">Documentos descargables</h2>
+        <div class="supresion-descargas">
+          {descargas.map((doc) => (
+            <a class="supresion-descarga" href={doc.href} download data-reveal
+               aria-label={`Descargar ${doc.titulo} (Word, ${doc.tamano})`}>
+              <span class="supresion-descarga__icono" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"></path>
+                  <path d="M14 3v5h5M12 11v6M9.5 14.5 12 17l2.5-2.5"></path>
+                </svg>
+              </span>
+              <span class="supresion-descarga__texto">
+                <span class="supresion-descarga__titulo">{doc.titulo}</span>
+                <span class="supresion-descarga__desc">{doc.descripcion}</span>
+                <span class="supresion-descarga__meta">Word (.docx) · {doc.tamano}</span>
+              </span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <div class="derechos-pasos">
+      <div class="derechos-pasos__cuerpo">
+        {pasos.map((paso) => (
+          <section class="paso" id={paso.id} data-reveal>
+            <header class="paso__cabecera">
+              <span class="paso__badge" aria-hidden="true">{paso.n}</span>
+              <h2>{paso.titulo}</h2>
+            </header>
+
+            {paso.n === 1 && (
+              <>
+                <p class="paso__parrafo">En este caso, la solicitud puede dirigirse al DPD en:</p>
+                <div class="supresion-email">
+                  <a href={`mailto:${emailDpd}`} id="email-dpd">{emailDpd}</a>
+                  <button type="button" class="supresion-mini" data-copiar="email-dpd">Copiar</button>
+                  <span class="paso__copiado" aria-live="polite" role="status"></span>
+                </div>
+                <p class="paso__etiqueta">{queSolicitar.etiqueta}</p>
+                <ul class="paso__lista">
+                  {queSolicitar.items.map((i) => <li>{i}</li>)}
+                  <li>
+                    {queSolicitar.confirmacion.texto}
+                    <ul class="paso__lista supresion-sublista">
+                      {queSolicitar.confirmacion.items.map((i) => <li>{i}</li>)}
+                    </ul>
+                  </li>
+                </ul>
+              </>
+            )}
+
+            {paso.n === 2 && <p class="paso__parrafo">{congregacion.texto}</p>}
+
+            {paso.n === 3 && (
+              <>
+                <p class="paso__etiqueta">{cuandoReclamar.etiqueta}</p>
+                <ul class="paso__lista">{cuandoReclamar.items.map((i) => <li>{i}</li>)}</ul>
+                <p class="paso__etiqueta">{cuandoReclamar.guardarEtiqueta}</p>
+                <ul class="supresion-checklist">{cuandoReclamar.guardar.map((i) => <li>{i}</li>)}</ul>
+              </>
+            )}
+
+            {modelos[paso.n] && (
+              <div class="supresion-modelo">
+                <div class="supresion-modelo__barra">
+                  <p class="paso__etiqueta">{modelos[paso.n].etiqueta}</p>
+                  <button type="button" class="paso__copiar" data-copiar={modelos[paso.n].modelo.id}>
+                    <span aria-hidden="true">⧉</span> Copiar texto
+                  </button>
+                </div>
+                <div class="supresion-modelo__papel">
+                  {modelos[paso.n].modelo.asunto && (
+                    <p class="supresion-modelo__asunto"><strong>Asunto:</strong> {modelos[paso.n].modelo.asunto}</p>
+                  )}
+                  {modelos[paso.n].modelo.parrafos.map((p) => <p>{p}</p>)}
+                </div>
+                <pre class="sr-only" id={modelos[paso.n].modelo.id} aria-hidden="true">{textoModelo(modelos[paso.n].modelo)}</pre>
+                <p class="paso__copiado" aria-live="polite" role="status"></p>
+              </div>
+            )}
+
+            {paso.n === 2 && (
+              <>
+                <p class="paso__etiqueta">{congregacion.motivosTitulo}</p>
+                <ul class="paso__lista">{congregacion.motivos.map((i) => <li>{i}</li>)}</ul>
+              </>
+            )}
+
+            {paso.n === 4 && (
+              <div class="supresion-donde">
+                <p class="paso__etiqueta">Dónde presentarla</p>
+                <p class="paso__parrafo">{sedeAepd.texto}</p>
+                <div class="supresion-donde__acciones">
+                  <a class="guia-pill guia-pill--solid" href={sedeAepd.href} target="_blank" rel="noopener noreferrer">
+                    Ir a la sede electrónica de la AEPD ↗
+                  </a>
+                  <a class="guia-pill guia-pill--navy" href={descargas[1].href} download>
+                    Descargar el modelo completo (Word)
+                  </a>
+                </div>
+              </div>
+            )}
+          </section>
+        ))}
+      </div>
+    </div>
+
+    <section class="derechos-registros" id="recomendaciones" aria-labelledby="recomendaciones-titulo">
+      <div class="derechos-registros__inner">
+        <p class="guia-kicker" data-reveal>Antes de enviar</p>
+        <h2 id="recomendaciones-titulo" data-reveal>Recomendaciones</h2>
+        <ul class="supresion-checklist supresion-checklist--grande" data-reveal>
+          {recomendaciones.map((r) => <li>{r}</li>)}
+        </ul>
+      </div>
+    </section>
+
+    <section class="derechos-cierre" aria-labelledby="supresion-cierre-titulo">
+      <div class="derechos-cierre__inner" data-reveal>
+        <h2 id="supresion-cierre-titulo">{cierre.titular}</h2>
+        <p>{cierre.texto}</p>
+        <div class="derechos-cierre__actions">
+          <a class="guia-pill guia-pill--solid" href="/contacto">Consúltanos tu caso</a>
+          <a class="guia-pill guia-pill--navy" href="/hazte-socio">Hazte socio</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLdHowTo)} />
+
+  <script>
+    import { initRail } from "../scripts/rail";
+    initRail(".derechos-rail");
+
+    const copiar = async (boton: HTMLButtonElement) => {
+      const origen = document.getElementById(boton.dataset.copiar ?? "");
+      const aviso = boton.closest(".supresion-modelo, .supresion-email")?.querySelector(".paso__copiado");
+      const texto = origen?.textContent ?? "";
+      let ok = false;
+      try {
+        await navigator.clipboard.writeText(texto);
+        ok = true;
+      } catch {
+        ok = false;
+      }
+      if (aviso) aviso.textContent = ok ? "Texto copiado." : "No se pudo copiar; selecciónalo y cópialo a mano.";
+    };
+    document.querySelectorAll<HTMLButtonElement>("[data-copiar]").forEach((boton) => {
+      boton.addEventListener("click", () => void copiar(boton));
+    });
+  </script>
+</BaseLayout>
