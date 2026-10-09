@@ -4,9 +4,11 @@ import "../styles/international-directory.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import DottedMap from "dotted-map";
 import { internationalSupport, remoteResources, supportCountries } from "../data/international-support";
+import { imageSize } from "../lib/img-size";
 
 const kindLabels = { specific: "Específico de ex Testigos", general: "Apoyo general", specialist: "Abuso sexual", remote: "Remoto / internacional" };
 const telHref = (phone: string) => `tel:${phone.replace(/[^+\d]/g, "")}`;
+const flagDim = new Map(supportCountries.map(({ code }) => [`/flags/${code}.svg`, imageSize(`/flags/${code}.svg`)]));
 
 // Mapa de puntos de la cabecera: se genera en build y marca cada país del directorio.
 const countryLocations: Record<string, { lat: number; lng: number }> = {
@@ -65,7 +67,7 @@ const kindOrder = ["specific", "general", "specialist", "remote"] as const;
     </aside>
 
     <nav class="country-nav" aria-label="Ir a un país">
-      {supportCountries.map(({ code, country, resources }) => <a href={`#pais-${code}`}><img src={`/flags/${code}.svg`} alt="" loading="lazy" /> <span>{country}</span><small aria-hidden="true">{resources.length}</small></a>)}
+      {supportCountries.map(({ code, country, resources }) => <a href={`#pais-${code}`}><img src={`/flags/${code}.svg`} alt="" width={flagDim.get(`/flags/${code}.svg`)?.w} height={flagDim.get(`/flags/${code}.svg`)?.h} loading="lazy" /> <span>{country}</span><small aria-hidden="true">{resources.length}</small></a>)}
       <a href="#recursos-remotos" class="country-nav__remote"><span aria-hidden="true" class="country-nav__globe">🌍</span> <span>Internacional</span></a>
     </nav>
 
@@ -78,7 +80,7 @@ const kindOrder = ["specific", "general", "specialist", "remote"] as const;
       {supportCountries.map(({ code, country, resources }) => (
         <details class="country-group" id={`pais-${code}`} data-country={country.toLocaleLowerCase("es")}>
           <summary>
-            <img class="country-group__flag" src={`/flags/${code}.svg`} alt="" loading="lazy" />
+            <img class="country-group__flag" src={`/flags/${code}.svg`} alt="" width={flagDim.get(`/flags/${code}.svg`)?.w} height={flagDim.get(`/flags/${code}.svg`)?.h} loading="lazy" />
             <span class="country-group__heading"><strong>{country}</strong><small>{resources.length} {resources.length === 1 ? "recurso publicado" : "recursos publicados"} · Consulta los canales disponibles</small></span>
             <span class="country-group__kinds" aria-hidden="true">{kindOrder.filter((k) => resources.some((r) => r.kind === k)).map((k) => <span class="kind-dot" data-kind={k} title={kindLabels[k]}></span>)}</span>
             <span class="country-group__chevron" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg></span>
