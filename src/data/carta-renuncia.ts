@@ -13,10 +13,11 @@ export const intro = {
   // HTML
   entradilla:
     "<strong>No. No necesitas escribir una carta para dejar de ser Testigo de Jehová.</strong> La ley española reconoce tu derecho a abandonar una religión sin que nadie te lo impida, y la propia organización acepta que una persona deje de participar sin presentar ninguna renuncia.",
-  // Ilustración original de la serie geométrica; original PNG en 06_Contenido/carta-de-renuncia-testigos-de-jehova/ilustraciones/.
+  // Foto de Towfiqu barbhuiya en Unsplash (Licencia Unsplash), compartida con /derecho-de-supresion/.
+  // Provisional hasta tener ilustración propia de la serie geométrica.
   heroImage: {
-    src: "/uploads/2026/10/tdj-renuncia-comunidad-hilo-1536.webp",
-    alt: "Ilustración geométrica de un grupo que ofrece apoyo a través de un hilo verde, con espacio abierto para el texto.",
+    src: "/uploads/2026/10/pluma-y-papeles-derecho-de-supresion.webp",
+    alt: "Pluma estilográfica sobre papeles y sobres en una mesa",
   },
 };
 
@@ -85,8 +86,8 @@ export const secciones: Seccion[] = [
     corto: "Qué ocurre si la envías",
     // Compartida con /testigos-de-jehova/ (sección «Dejar de ser Testigo»).
     imagen: {
-      nombre: "tdj-renuncia-celebracion-hilo-cortado",
-      alt: "Ilustración geométrica de una tarta de cumpleaños y un regalo sin abrir, separados por un hilo verde cortado.",
+      nombre: "tdj-silla-vacia-hilo-cortado",
+      alt: "Ilustración de una familia sentada a un extremo de una mesa larga y una silla vacía al otro, con un hilo verde cortado entre ambos.",
       pos: "portada",
     },
     titulo: "Qué ocurre si envías la carta",
@@ -106,8 +107,8 @@ export const secciones: Seccion[] = [
     id: "por-que-la-desaconsejamos",
     corto: "Por qué la desaconsejamos",
     imagen: {
-      nombre: "tdj-renuncia-pasillo-hilo-libre",
-      alt: "Ilustración geométrica de una persona que sale de un pasillo oscuro hacia un espacio abierto, con un hilo verde libre tras ella.",
+      nombre: "tdj-renuncia-arco-hilo-libre",
+      alt: "Ilustración de una persona que sale caminando de un arco hacia un espacio abierto, con un hilo verde en la mano que se extiende tras ella por el suelo.",
       pos: "flotante",
     },
     titulo: "Por qué la AEVTJ desaconseja la carta",
@@ -122,8 +123,8 @@ export const secciones: Seccion[] = [
     id: "cuando-puede-ayudarte",
     corto: "Cuándo puede ayudarte",
     imagen: {
-      nombre: "tdj-renuncia-apoyo-manos-sobre-hilo",
-      alt: "Ilustración geométrica de dos personas que se acompañan mientras unen sus manos sobre un hilo verde; hay un sobre sin marcas en una mesa cercana.",
+      nombre: "tdj-renuncia-sobre-hilo",
+      alt: "Ilustración de un sobre cerrado sobre una mesa redonda, rodeado por un hilo verde cuyo extremo queda suelto.",
       pos: "arco",
     },
     titulo: "Cuándo la carta sí puede ayudarte",

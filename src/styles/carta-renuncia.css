@@ -1,20 +1,6 @@
 /* Añadidos de /carta-de-renuncia-testigos-de-jehova/ sobre derechos-sanitarios.css
    y derecho-supresion.css: lista numerada, bloque de modelos, FAQ y fuentes. */
 
-/* La cabecera acompaña la nueva ilustración propia sin oscurecerla. */
-.renuncia .derechos-hero {
-  justify-content: flex-start; background: #f5fbdf; color: #122c33; text-align: left;
-}
-.renuncia .derechos-hero__img {
-  inset: 0 2% 0 auto; width: 58%; height: 100%; object-fit: contain; object-position: right center;
-}
-.renuncia .derechos-hero__scrim { display: none; }
-.renuncia .derechos-hero__content { align-items: flex-start; width: min(52%, 760px); margin-right: auto; }
-.renuncia .derechos-hero .guia-kicker { justify-content: flex-start; color: #1f7a63; }
-.renuncia .derechos-hero__entradilla,
-.renuncia .derechos-hero__entradilla strong { color: #435043; }
-.renuncia .derechos-hero .guia-pill--ghost { border-color: #122c3365; color: #122c33; }
-
 .renuncia .paso__parrafo a,
 .renuncia .paso__lista a,
 .renuncia .supresion-checklist a,
@@ -41,7 +27,7 @@
 .renuncia-paso--portada { overflow: hidden; }
 .renuncia-portada { margin: calc(-1 * var(--paso-pad)) calc(-1 * var(--paso-pad)) clamp(4px, 1vw, 12px); background: #f5fbdf; }
 .renuncia-portada img {
-  display: block; width: 100%; height: auto; aspect-ratio: 2.3 / 1; object-fit: contain; object-position: 50% 50%;
+  display: block; width: 100%; height: auto; aspect-ratio: 2.3 / 1; object-fit: cover; object-position: 50% 38%;
   -webkit-mask-image: linear-gradient(#000 72%, transparent 100%); mask-image: linear-gradient(#000 72%, transparent 100%);
 }
 
@@ -53,7 +39,7 @@
 .renuncia-flotante { position: relative; aspect-ratio: 1.08; }
 .renuncia-flotante span { position: absolute; inset: 10% 0 0 10%; border-radius: 32px; background: linear-gradient(150deg, #e6f2c3, #d5e9a6); }
 .renuncia-flotante img {
-  position: absolute; inset: 0 7% 7% 0; z-index: 2; width: 93%; height: 93%; object-fit: contain; object-position: 30% 50%;
+  position: absolute; inset: 0 7% 7% 0; z-index: 2; width: 93%; height: 93%; object-fit: cover; object-position: 30% 50%;
   border-radius: 32px; background: #f5fbdf; box-shadow: 0 30px 70px #0f25371f;
 }
 .renuncia-abierta__texto .paso__cabecera { flex-direction: column; align-items: flex-start; gap: 18px; }
@@ -63,7 +49,7 @@
 .renuncia-lado { display: grid; grid-template-columns: minmax(0, 1fr) minmax(200px, 36%); gap: clamp(24px, 4vw, 48px); align-items: start; }
 .renuncia-arco { position: sticky; top: 110px; margin: 0; }
 .renuncia-arco img {
-  display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: contain; object-position: 38% 50%;
+  display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; object-position: 38% 50%;
   border-radius: 220px 220px 32px 32px; background: #f5fbdf;
 }
 @supports (animation-timeline: view()) {
@@ -72,17 +58,12 @@
 }
 
 @media (max-width: 899px) {
-  .renuncia .derechos-hero { display: flex; flex-direction: column; align-items: stretch; gap: 8px; padding-top: 104px; padding-bottom: 34px; }
-  .renuncia .derechos-hero__img { position: relative; inset: auto; order: 0; width: min(100%, 560px); height: auto; max-height: 300px; margin-inline: auto; object-fit: contain; }
-  .renuncia .derechos-hero__content { order: 1; align-items: center; width: 100%; max-width: 700px; margin: 0 auto; text-align: center; }
-  .renuncia .derechos-hero .guia-kicker { justify-content: center; }
   .renuncia-abierta { grid-template-columns: 1fr; }
   .renuncia-flotante { aspect-ratio: 1.25; width: calc(100% - 8px); }
   .renuncia-lado { grid-template-columns: 1fr; }
   .renuncia-arco { position: static; order: -1; max-width: 340px; margin-top: 24px; }
   .renuncia-arco img { aspect-ratio: 4 / 3; border-radius: 160px 160px 28px 28px; }
   .renuncia-portada img { aspect-ratio: 16 / 9; }
-  .renuncia-arco img { object-fit: contain; }
 }
 @media (prefers-reduced-motion: reduce) {
   .renuncia-arco img { animation: none; }
