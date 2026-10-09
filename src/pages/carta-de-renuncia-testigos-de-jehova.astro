@@ -1,0 +1,313 @@
+---
+// Carta de renuncia a los Testigos de Jehová: responde primero que no hace falta,
+// explica consecuencias y postura de la AEVTJ, y ofrece dos modelos opcionales.
+// Reutiliza la maquetación de /derecho-de-supresion/ (hero, aviso, tarjetas, rail,
+// modelos con «Copiar texto»). Contenido en src/data/carta-renuncia.ts.
+import "../styles/derechos-sanitarios.css";
+import "../styles/derecho-supresion.css";
+import "../styles/carta-renuncia.css";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import type { ModeloTexto } from "../data/derecho-supresion";
+import {
+  intro,
+  postura,
+  secciones,
+  recomendaciones,
+  avisoModelos,
+  elegirModelo,
+  emailDpd,
+  modeloRenuncia,
+  modeloRenunciaSupresion,
+  preguntas,
+  fuentes,
+  cierre,
+} from "../data/carta-renuncia";
+
+const description =
+  "No necesitas una carta para dejar de ser Testigo de Jehová. Qué ocurre si la envías, cuándo puede servirte y dos modelos por si decides hacerlo.";
+
+const textoModelo = (m: ModeloTexto) =>
+  [m.asunto ? `Asunto: ${m.asunto}` : null, ...m.parrafos].filter(Boolean).join("\n\n");
+
+const modelos = [
+  {
+    id: "modelo-1",
+    titulo: "Modelo 1. Solo renuncia",
+    destino: "Envíalo al cuerpo de ancianos de tu congregación.",
+    modelo: modeloRenuncia,
+  },
+  {
+    id: "modelo-2",
+    titulo: "Modelo 2. Renuncia y supresión de datos",
+    destino: "Envíalo al Delegado de Protección de Datos:",
+    email: emailDpd,
+    modelo: modeloRenunciaSupresion,
+  },
+];
+
+const sinHtml = (s: string) => s.replace(/<[^>]+>/g, "");
+
+const jsonLdFaq = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: preguntas.map((p) => ({
+    "@type": "Question",
+    name: p.pregunta,
+    acceptedAnswer: { "@type": "Answer", text: sinHtml(p.respuesta) },
+  })),
+};
+---
+
+<BaseLayout title={intro.titulo} description={description} breadcrumbs={[{ label: "Carta de renuncia" }]} image={intro.heroImage.src}>
+  <div class="derechos supresion renuncia">
+    <nav class="derechos-rail" aria-label="Secciones de la página">
+      <ol>
+        {secciones.map((s) => (
+          <li><a href={`#${s.id}`}><span>{s.n}. {s.corto}</span></a></li>
+        ))}
+        <li><a href="#recomendaciones"><span>Si decides enviarla</span></a></li>
+        <li><a href="#modelos"><span>Modelos de carta</span></a></li>
+        <li><a href="#preguntas"><span>Preguntas frecuentes</span></a></li>
+      </ol>
+      <span class="guia-rail__progreso" aria-hidden="true"></span>
+    </nav>
+
+    <section class="derechos-hero supresion-hero">
+      <img
+        class="derechos-hero__img"
+        src={intro.heroImage.src}
+        alt={intro.heroImage.alt}
+        width="1600"
+        height="1068"
+        fetchpriority="high"
+        decoding="async"
+      />
+      <div class="derechos-hero__scrim" aria-hidden="true"></div>
+      <div class="derechos-hero__content">
+        <p class="guia-kicker guia-kicker--crema">{intro.kicker}</p>
+        <h1>{intro.h1}</h1>
+        <p class="derechos-hero__entradilla" set:html={intro.entradilla} />
+        <div class="derechos-hero__actions">
+          <a class="guia-pill guia-pill--solid" href={`#${secciones[0].id}`}>Leer antes de decidir</a>
+          <a class="guia-pill guia-pill--ghost" href="#modelos">Ir a los modelos</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="derechos-aviso-wrap">
+      <aside class="derechos-aviso renuncia-postura" role="note" aria-label={postura.titulo} data-reveal>
+        <div class="derechos-aviso__icono" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9"></circle>
+            <path d="M12 8h.01M12 11v5"></path>
+          </svg>
+        </div>
+        <div>
+          <h2>{postura.titulo}</h2>
+          <p>{postura.texto}</p>
+        </div>
+      </aside>
+    </div>
+
+    <div class="derechos-pasos">
+      <div class="derechos-pasos__cuerpo">
+        {secciones.map((s) => {
+          const pos = s.imagen?.pos;
+          const img = s.imagen && (
+            <img
+              src={`/uploads/2026/10/${s.imagen.nombre}-1536.webp`}
+              srcset={`/uploads/2026/10/${s.imagen.nombre}-900.webp 900w, /uploads/2026/10/${s.imagen.nombre}-1536.webp 1536w`}
+              sizes={pos === "portada" ? "(max-width: 767px) 100vw, 900px" : "(max-width: 899px) 100vw, 420px"}
+              width="1536" height="1024" alt={s.imagen.alt} loading="lazy" decoding="async"
+            />
+          );
+          const cabecera = (
+            <header class="paso__cabecera">
+              <span class="paso__badge" aria-hidden="true">{s.n}</span>
+              <h2>{s.titulo}</h2>
+            </header>
+          );
+          const cuerpo = (
+            <>
+              {s.parrafos?.map((p) => <p class="paso__parrafo" set:html={p} />)}
+              {s.vias && (
+                <div class="paso__vias renuncia-vias">
+                  {s.vias.map((v) => (
+                    <div class="paso__via">
+                      <h3>{v.titulo}</h3>
+                      <p>{v.texto}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
+              {s.lista && (s.listaNumerada ? (
+                <ol class="renuncia-numerada">{s.lista.map((i) => <li set:html={i} />)}</ol>
+              ) : (
+                <ul class="paso__lista">{s.lista.map((i) => <li set:html={i} />)}</ul>
+              ))}
+            </>
+          );
+          const cierreSeccion = s.cierre?.map((p) => <p class="paso__parrafo" set:html={p} />);
+
+          // Sección abierta, sin tarjeta: imagen flotante con bloque de color detrás.
+          if (pos === "flotante") return (
+            <section class="renuncia-abierta" id={s.id} data-variante="lima">
+              <div class="layered-media renuncia-flotante" data-reveal>
+                <span aria-hidden="true"></span>
+                {img}
+              </div>
+              <div class="renuncia-abierta__texto" data-reveal>
+                {cabecera}
+                {cuerpo}
+                {cierreSeccion}
+              </div>
+            </section>
+          );
+
+          return (
+            <section class:list={["paso", { "renuncia-paso--portada": pos === "portada" }]} id={s.id} data-reveal>
+              {pos === "portada" && <figure class="renuncia-portada">{img}</figure>}
+
+              {pos === "arco" ? (
+                <div class="renuncia-lado">
+                  <div class="renuncia-lado__texto">
+                    {cabecera}
+                    {cuerpo}
+                  </div>
+                  <figure class="renuncia-arco">{img}</figure>
+                </div>
+              ) : (
+                <>
+                  {cabecera}
+                  {cuerpo}
+                </>
+              )}
+
+              {cierreSeccion}
+            </section>
+          );
+        })}
+      </div>
+    </div>
+
+    <section class="derechos-registros" id="recomendaciones" aria-labelledby="recomendaciones-titulo">
+      <div class="derechos-registros__inner">
+        <p class="guia-kicker" data-reveal>Antes de enviar</p>
+        <h2 id="recomendaciones-titulo" data-reveal>Si decides enviarla</h2>
+        <ul class="supresion-checklist supresion-checklist--grande" data-reveal>
+          {recomendaciones.map((r) => <li set:html={r} />)}
+        </ul>
+      </div>
+    </section>
+
+    <section class="derechos-registros renuncia-modelos" id="modelos" aria-labelledby="modelos-titulo">
+      <div class="derechos-registros__inner">
+        <p class="guia-kicker" data-reveal>Opcional</p>
+        <h2 id="modelos-titulo" data-reveal>Modelos de carta</h2>
+
+        <aside class="renuncia-aviso" role="note" data-reveal>
+          <strong>{avisoModelos.titulo}.</strong> {avisoModelos.texto}
+        </aside>
+
+        <p class="paso__etiqueta" data-reveal>¿Cuál elegir?</p>
+        <ul class="paso__lista" data-reveal>
+          {elegirModelo.map((i) => <li set:html={i} />)}
+        </ul>
+
+        {modelos.map((m) => (
+          <article class="paso renuncia-modelo" id={m.id} data-reveal>
+            <h3 class="renuncia-modelo__titulo">{m.titulo}</h3>
+            <p class="paso__parrafo">{m.destino}</p>
+            {m.email && (
+              <div class="supresion-email">
+                <a href={`mailto:${m.email}`} id={`email-${m.id}`}>{m.email}</a>
+                <button type="button" class="supresion-mini" data-copiar={`email-${m.id}`}>Copiar</button>
+                <span class="paso__copiado" aria-live="polite" role="status"></span>
+              </div>
+            )}
+            <div class="supresion-modelo">
+              <div class="supresion-modelo__barra">
+                <p class="paso__etiqueta">Texto de la carta</p>
+                <button type="button" class="paso__copiar" data-copiar={m.modelo.id}>
+                  <span aria-hidden="true">⧉</span> Copiar texto
+                </button>
+              </div>
+              <div class="supresion-modelo__papel">
+                {m.modelo.asunto && (
+                  <p class="supresion-modelo__asunto"><strong>Asunto:</strong> {m.modelo.asunto}</p>
+                )}
+                {m.modelo.parrafos.map((p) => <p>{p}</p>)}
+              </div>
+              <pre class="sr-only" id={m.modelo.id} aria-hidden="true">{textoModelo(m.modelo)}</pre>
+              <p class="paso__copiado" aria-live="polite" role="status"></p>
+            </div>
+            {m.email && (
+              <p class="paso__parrafo">
+                Si responden pidiendo tu congregación o no atienden la petición, sigue los pasos 2 a 4 de la
+                <a href="/derecho-de-supresion/">guía del derecho de supresión</a>.
+              </p>
+            )}
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="derechos-registros renuncia-faq" id="preguntas" aria-labelledby="preguntas-titulo">
+      <div class="derechos-registros__inner">
+        <p class="guia-kicker" data-reveal>Dudas habituales</p>
+        <h2 id="preguntas-titulo" data-reveal>Preguntas frecuentes</h2>
+        <div class="renuncia-faq__lista">
+          {preguntas.map((p) => (
+            <details class="renuncia-faq__item" data-reveal>
+              <summary>
+                <h3>{p.pregunta}</h3>
+                <span class="renuncia-faq__signo" aria-hidden="true"></span>
+              </summary>
+              <p set:html={p.respuesta} />
+            </details>
+          ))}
+        </div>
+
+        <div class="renuncia-fuentes" data-reveal>
+          <p class="paso__etiqueta">Fuentes</p>
+          <ul>{fuentes.map((f) => <li set:html={f} />)}</ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="derechos-cierre" aria-labelledby="renuncia-cierre-titulo">
+      <div class="derechos-cierre__inner" data-reveal>
+        <h2 id="renuncia-cierre-titulo">{cierre.titular}</h2>
+        <p>{cierre.texto}</p>
+        <div class="derechos-cierre__actions">
+          <a class="guia-pill guia-pill--solid" href="/contacto">Habla con nosotros</a>
+          <a class="guia-pill guia-pill--navy" href="/guia-para-salir-de-los-testigos-de-jehova/">Guía para salir</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLdFaq)} />
+
+  <script>
+    import { initRail } from "../scripts/rail";
+    initRail(".derechos-rail");
+
+    const copiar = async (boton: HTMLButtonElement) => {
+      const origen = document.getElementById(boton.dataset.copiar ?? "");
+      const aviso = boton.closest(".supresion-modelo, .supresion-email")?.querySelector(".paso__copiado");
+      const texto = origen?.textContent ?? "";
+      let ok = false;
+      try {
+        await navigator.clipboard.writeText(texto);
+        ok = true;
+      } catch {
+        ok = false;
+      }
+      if (aviso) aviso.textContent = ok ? "Texto copiado." : "No se pudo copiar; selecciónalo y cópialo a mano.";
+    };
+    document.querySelectorAll<HTMLButtonElement>("[data-copiar]").forEach((boton) => {
+      boton.addEventListener("click", () => void copiar(boton));
+    });
+  </script>
+</BaseLayout>

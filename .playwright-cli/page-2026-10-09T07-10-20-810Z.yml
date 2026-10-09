@@ -1,0 +1,414 @@
+- generic [active] [ref=e1]:
+  - link "Saltar al contenido" [ref=e2] [cursor=pointer]:
+    - /url: "#contenido"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img "AEVTJ - Asociación Española de Víctimas de los Testigos de Jehová" [ref=e6]
+      - navigation "Menú principal" [ref=e7]:
+        - list [ref=e8]:
+          - listitem [ref=e9]:
+            - link "¿Quiénes somos?" [ref=e10] [cursor=pointer]:
+              - /url: /quienes-somos/
+          - listitem [ref=e11]:
+            - link "Noticias" [ref=e12] [cursor=pointer]:
+              - /url: /noticias/
+          - listitem [ref=e13]:
+            - link "Documentos" [ref=e14] [cursor=pointer]:
+              - /url: /recursos-de-ayuda/
+          - listitem [ref=e17]:
+            - link "Hazte socio / Donaciones" [ref=e18] [cursor=pointer]:
+              - /url: /hazte-socio/
+          - listitem [ref=e19]:
+            - link "Otras asociaciones" [ref=e20] [cursor=pointer]:
+              - /url: /otras-asociaciones/
+          - listitem [ref=e21]:
+            - link "Contacto" [ref=e22] [cursor=pointer]:
+              - /url: /contacto/
+      - generic [ref=e23]:
+        - link "Facebook" [ref=e24] [cursor=pointer]:
+          - /url: https://www.facebook.com/asoc.aevtj
+        - link "Youtube" [ref=e27] [cursor=pointer]:
+          - /url: https://www.youtube.com/@AEVTJ
+        - link "X" [ref=e30] [cursor=pointer]:
+          - /url: https://x.com/aevtj
+        - link "Instagram" [ref=e33] [cursor=pointer]:
+          - /url: https://www.instagram.com/asoc.aevtj/
+  - main [ref=e36]:
+    - navigation "Miga de pan" [ref=e37]:
+      - list [ref=e39]:
+        - listitem [ref=e40]:
+          - link "Inicio" [ref=e41] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=e42]:
+          - text: /
+          - link "Testigos de Jehová" [ref=e43] [cursor=pointer]:
+            - /url: /testigos-de-jehova/
+        - listitem [ref=e44]:
+          - text: /
+          - generic [ref=e45]: Documentales
+    - generic [ref=e46]:
+      - navigation "Secciones de la página":
+        - list:
+          - listitem:
+            - link "1. En servicios españoles":
+              - /url: "#en-espana"
+          - listitem:
+            - link "2. Acceso por confirmar":
+              - /url: "#por-confirmar"
+          - listitem:
+            - link "3. Referencias internacionales":
+              - /url: "#internacionales"
+          - listitem:
+            - link "Antes de elegir":
+              - /url: "#antes-de-elegir"
+          - listitem:
+            - link "Preguntas frecuentes":
+              - /url: "#preguntas"
+      - generic [ref=e47]:
+        - img "Ilustración geométrica de varios fotogramas abstractos unidos por un hilo lima; no representa una obra concreta." [ref=e48]
+        - generic [ref=e50]:
+          - generic [ref=e51]:
+            - paragraph [ref=e52]: Guía de documentales
+            - 'heading "Documentales sobre los Testigos de Jehová: cuáles ver y dónde verlos" [level=1] [ref=e53]'
+            - paragraph [ref=e54]: ¿Buscas un documental sobre los Testigos de Jehová? Compara qué aborda cada obra, su formato y dónde consultar su ficha o disponibilidad en España. Distinguimos los títulos listados en servicios españoles de los que requieren confirmar el acceso.
+            - generic [ref=e55]:
+              - link "Ver los documentales ↗" [ref=e56] [cursor=pointer]:
+                - /url: "#en-espana"
+              - link "Antes de elegir ↗" [ref=e57] [cursor=pointer]:
+                - /url: "#antes-de-elegir"
+          - list "Obras por estado de acceso" [ref=e58]:
+            - listitem [ref=e59]:
+              - link "2 En servicios españoles" [ref=e60] [cursor=pointer]:
+                - /url: "#en-espana"
+                - strong [ref=e61]: "2"
+                - generic [ref=e62]: En servicios españoles
+            - listitem [ref=e63]:
+              - link "3 Acceso por confirmar" [ref=e64] [cursor=pointer]:
+                - /url: "#por-confirmar"
+                - strong [ref=e65]: "3"
+                - generic [ref=e66]: Acceso por confirmar
+            - listitem [ref=e67]:
+              - link "4 Referencias internacionales" [ref=e68] [cursor=pointer]:
+                - /url: "#internacionales"
+                - strong [ref=e69]: "4"
+                - generic [ref=e70]: Referencias internacionales
+        - generic [ref=e71]:
+          - list "Sobre esta página" [ref=e72]:
+            - listitem [ref=e73]:
+              - strong [ref=e74]: "9"
+              - text: obras
+            - listitem [ref=e75]:
+              - strong [ref=e76]: "3"
+              - text: min de lectura
+            - listitem [ref=e77]: Catálogo actualizado el 8 de octubre de 2026
+          - link "Ver el listado" [ref=e78] [cursor=pointer]:
+            - /url: "#en-espana"
+            - text: Ver el listado
+            - generic [aria-hidden] [ref=e79]: ↓
+      - region [ref=e80]:
+        - generic [ref=e81]:
+          - generic [ref=e83]: "1"
+          - generic [ref=e84]:
+            - heading "Documentales listados en servicios españoles" [level=2] [ref=e85]
+            - paragraph [ref=e86]: Estas producciones aparecen en catálogos españoles. Comprueba el plan o la suscripción que exige cada servicio antes de reproducirlas.
+        - list [ref=e87]:
+          - listitem [ref=e88]:
+            - figure [ref=e89]:
+              - 'img "Portada promocional de Sobrevivir al Paraíso: dos personas sostienen libros en una calle, con los rostros ocultos por trazos amarillos y el título de HBO Original." [ref=e90]'
+              - 'link "Portada: Movistar Plus+ ↗" [ref=e92] [cursor=pointer]':
+                - /url: https://www.movistarplus.es/documentales/sobrevivir-al-paraiso-mas-alla-de-los-testigos-de-jehova/ficha?id=4242958&tipo=E
+            - generic [ref=e93]:
+              - generic [ref=e94]:
+                - generic [ref=e95]: "2026"
+                - generic [ref=e96]: ·Docuserie · 3 episodios
+                - generic [ref=e97]: ·España · HBO Max / Movistar Plus
+              - generic [ref=e98]: Listado en España
+              - heading [level=3] [ref=e99]:
+                - emphasis [ref=e100]: "Sobrevivir al Paraíso: más allá de los Testigos de Jehová"
+              - paragraph [ref=e101]: Docuserie española dirigida por Pablo Aguinaga y producida por Boxfish para HBO Max. Reúne testimonios de antiguos miembros sobre sus experiencias dentro de la organización y después de salir. Movistar Plus la incluye en su catálogo; las condiciones dependen del plan vigente.
+              - generic [ref=e102]:
+                - link "Consultar en Movistar Plus" [ref=e103] [cursor=pointer]:
+                  - /url: https://www.movistarplus.es/documentales/sobrevivir-al-paraiso-mas-alla-de-los-testigos-de-jehova/ficha?id=4242958&tipo=E
+                  - text: Consultar en Movistar Plus
+                  - generic [aria-hidden] [ref=e104]: ↗
+                - link "Noticia sobre el estreno de HBO" [ref=e105] [cursor=pointer]:
+                  - /url: /noticias/documental-hbo/
+                  - text: Noticia sobre el estreno de HBO →
+              - group [ref=e106]:
+                - generic "Fuentes y episodios" [ref=e107] [cursor=pointer]
+          - listitem [ref=e108]:
+            - figure [ref=e109]:
+              - 'img "Portada de Hijos del fin del mundo: una persona con traje sostiene un libro oscuro sobre un fondo rojizo; aparece el título de la docuserie." [ref=e110]'
+              - 'link "Portada: Movistar Plus+ ↗" [ref=e112] [cursor=pointer]':
+                - /url: https://www.movistarplus.es/documentales/hijos-del-fin-del-mundo/ficha?id=4264520&tipo=E
+            - generic [ref=e113]:
+              - generic [ref=e114]:
+                - generic [ref=e115]: "2025"
+                - generic [ref=e116]: ·Docuserie · 3 episodios
+                - generic [ref=e117]: ·España · Movistar Plus
+              - generic [ref=e118]: Listado en España
+              - heading [level=3] [ref=e119]:
+                - emphasis [ref=e120]: Hijos del fin del mundo
+              - paragraph [ref=e121]: "La serie documental sigue el viaje de Becky Rubio, que creció como Testigo de Jehová, y Danny Boy-Rivera. Su ficha recoge tres episodios: «Mierda, he crecido en una secta», «Jehová S.L.» y «¡Despertad!». La serie aparece en el catálogo de Movistar Plus; consulta allí el plan y acceso vigentes."
+              - link "Consultar la serie en Movistar Plus" [ref=e123] [cursor=pointer]:
+                - /url: https://www.movistarplus.es/documentales/hijos-del-fin-del-mundo/ficha?id=4264520&tipo=E
+                - text: Consultar la serie en Movistar Plus
+                - generic [aria-hidden] [ref=e124]: ↗
+              - group [ref=e125]:
+                - generic "Fuentes y episodios" [ref=e126] [cursor=pointer]
+      - region [ref=e127]:
+        - generic [ref=e128]:
+          - generic [ref=e130]: "2"
+          - generic [ref=e131]:
+            - heading "Otras obras con acceso actual por confirmar" [level=2] [ref=e132]
+            - paragraph [ref=e133]: Hay una ficha o página del medio, pero no hemos podido confirmar que el reproductor funcione o que la suscripción incluya la obra hoy. Las enlazamos como referencias, sin prometer visionado.
+        - list [ref=e134]:
+          - listitem [ref=e135]:
+            - figure "Ilustración editorial original de AEVTJ; no es la portada oficial." [ref=e136]
+            - generic [ref=e146]:
+              - generic [ref=e147]:
+                - generic [ref=e148]: "2025"
+                - generic [ref=e149]: ·Documental · 28 min
+                - generic [ref=e150]: ·España · EL PAÍS
+              - generic [ref=e151]: Acceso por confirmar
+              - heading [level=3] [ref=e152]:
+                - emphasis [ref=e153]: Expulsados de los Testigos de Jehová
+              - paragraph [ref=e154]: Documental de EL PAÍS con testimonios de seis personas que dejaron la organización o fueron expulsadas. El medio describe las consecuencias que cuentan los protagonistas; sus experiencias no representan por sí solas todas las vivencias.
+              - generic [ref=e155]:
+                - link "Consultar en EL PAÍS" [ref=e156] [cursor=pointer]:
+                  - /url: https://elpais.com/videos/2025-09-26/documental-expulsados-de-los-testigos-de-jehova.html
+                  - text: Consultar en EL PAÍS
+                  - generic [aria-hidden] [ref=e157]: ↗
+                - link "Noticia sobre el documental" [ref=e158] [cursor=pointer]:
+                  - /url: /noticias/documental-expulsados-de-los-testigos-de-jehova-el-pais/
+                  - text: Noticia sobre el documental →
+              - group [ref=e159]:
+                - generic "Fuentes y episodios" [ref=e160] [cursor=pointer]
+          - listitem [ref=e161]:
+            - figure "Ilustración editorial original de AEVTJ; no es la portada oficial." [ref=e162]
+            - generic [ref=e173]:
+              - generic [ref=e174]:
+                - generic [ref=e175]: "2025"
+                - generic [ref=e176]: ·Reportaje · 24 min
+                - generic [ref=e177]: ·Cataluña · 3Cat
+              - generic [ref=e178]: Acceso por confirmar
+              - heading [level=3] [ref=e179]:
+                - emphasis [ref=e180]: El preu de sortir dels Testimonis de Jehovà
+                - text: ", El precio de salir de los Testigos de Jehová"
+              - paragraph [ref=e181]: Reportaje emitido en Tot es mou el 16 de octubre de 2025. Recoge testimonios de personas que salieron de los Testigos de Jehová y aborda la ruptura de vínculos que describen. 3Cat mantiene la ficha del vídeo; no hemos podido verificar la reproducción actual desde España.
+              - generic [ref=e182]:
+                - link "Consultar el vídeo en 3Cat" [ref=e183] [cursor=pointer]:
+                  - /url: https://www.3cat.cat/3cat/el-preu-de-sortir-dels-testimonis-de-jehova/video/6363943/
+                  - text: Consultar el vídeo en 3Cat
+                  - generic [aria-hidden] [ref=e184]: ↗
+                - link "Contexto y cobertura de la AEVTJ" [ref=e185] [cursor=pointer]:
+                  - /url: /noticias/el-precio-de-salir-de-los-testigos-de-jehova-3cat-visibiliza-el-impacto-del-ostracismo-y-la-salud-mental/
+                  - text: Contexto y cobertura de la AEVTJ →
+          - listitem [ref=e186]:
+            - figure "Ilustración editorial original de AEVTJ; no es la portada oficial." [ref=e187]
+            - generic [ref=e198]:
+              - generic [ref=e199]:
+                - generic [ref=e200]: "2020"
+                - generic [ref=e201]: ·Especial de investigación · 2 episodios
+                - generic [ref=e202]: ·Estados Unidos · Oxygen
+              - generic [ref=e203]: Acceso por confirmar
+              - heading [level=3] [ref=e204]:
+                - emphasis [ref=e205]: The Witnesses
+              - paragraph [ref=e206]: Especial de Oxygen que sigue los testimonios de cuatro antiguos Testigos de Jehová y una investigación periodística sobre las políticas relacionadas con denuncias de abuso sexual. El acceso desde España no está confirmado.
+              - link "Consultar la ficha de Oxygen" [ref=e208] [cursor=pointer]:
+                - /url: https://www.oxygen.com/the-witnesses
+                - text: Consultar la ficha de Oxygen
+                - generic [aria-hidden] [ref=e209]: ↗
+      - region [ref=e210]:
+        - generic [ref=e211]:
+          - generic [ref=e213]: "3"
+          - generic [ref=e214]:
+            - heading "Referencias internacionales sin acceso confirmado en España" [level=2] [ref=e215]
+            - paragraph [ref=e216]: Estas obras amplían los enfoques del catálogo. Sus fichas oficiales sirven para identificarlas; no garantizan que se puedan reproducir desde España ni que incluyan subtítulos en español.
+        - list [ref=e217]:
+          - listitem [ref=e218]:
+            - figure "Ilustración editorial original de AEVTJ; no es la portada oficial." [ref=e219]
+            - generic [ref=e229]:
+              - generic [ref=e230]:
+                - generic [ref=e231]: "2006"
+                - generic [ref=e232]: ·Documental · estreno en PBS en 2007
+                - generic [ref=e233]: ·Estados Unidos · PBS
+              - generic [ref=e234]: Sin acceso confirmado en España
+              - heading [level=3] [ref=e235]:
+                - emphasis [ref=e236]: Knocking
+              - paragraph [ref=e237]: Sigue a dos familias Testigos de Jehová y aborda su fe, las libertades civiles, la objeción de conciencia y las decisiones médicas. PBS conserva la ficha, pero su página indica que el vídeo dejó de estar disponible tras caducar en 2016.
+              - link "Consultar la ficha de PBS" [ref=e239] [cursor=pointer]:
+                - /url: https://www.pbs.org/independentlens/documentaries/knocking/
+                - text: Consultar la ficha de PBS
+                - generic [aria-hidden] [ref=e240]: ↗
+              - group [ref=e241]:
+                - generic "Fuentes y episodios" [ref=e242] [cursor=pointer]
+          - listitem [ref=e243]:
+            - figure "Ilustración editorial original de AEVTJ; no es la portada oficial." [ref=e244]
+            - generic [ref=e255]:
+              - generic [ref=e256]:
+                - generic [ref=e257]: "2021"
+                - generic [ref=e258]: ·Documental
+                - generic [ref=e259]: ·Estados Unidos
+              - generic [ref=e260]: Sin acceso confirmado en España
+              - heading [level=3] [ref=e261]:
+                - emphasis [ref=e262]: Witness Underground
+              - paragraph [ref=e263]: Documental de Scott Homan que conecta su experiencia como antiguo Testigo de Jehová con la escena musical independiente de Minnesota. El sitio de la película enlaza a opciones de visionado, pero no hemos confirmado su acceso desde España ni los subtítulos disponibles.
+              - link "Consultar el sitio oficial" [ref=e265] [cursor=pointer]:
+                - /url: https://www.witnessunderground.com/
+                - text: Consultar el sitio oficial
+                - generic [aria-hidden] [ref=e266]: ↗
+          - listitem [ref=e267]:
+            - figure "Ilustración editorial original de AEVTJ; no es la portada oficial." [ref=e268]
+            - generic [ref=e281]:
+              - generic [ref=e282]:
+                - generic [ref=e283]: "2024"
+                - generic [ref=e284]: ·Reportaje documental · 31 min
+                - generic [ref=e285]: ·Alemania · ARTE / ZDF
+              - generic [ref=e286]: Sin acceso confirmado en España
+              - heading [level=3] [ref=e287]:
+                - emphasis [ref=e288]: "Alemania: los Testigos de Jehová, desde dentro"
+              - paragraph [ref=e289]: Reportaje de ARTE/ZDF sobre la vida cotidiana de miembros en Alemania, con imágenes filmadas en la sede del país. La ficha de ARTE indica que el programa no está disponible en España por cuestiones de derechos.
+              - link "Consultar la ficha de ARTE" [ref=e291] [cursor=pointer]:
+                - /url: https://www.arte.tv/es/videos/111748-012-A/arte-regards/
+                - text: Consultar la ficha de ARTE
+                - generic [aria-hidden] [ref=e292]: ↗
+          - listitem [ref=e293]:
+            - figure "Ilustración editorial original de AEVTJ; no es la portada oficial." [ref=e294]
+            - generic [ref=e306]:
+              - generic [ref=e307]:
+                - generic [ref=e308]: "2024"
+                - generic [ref=e309]: ·Docuserie · 3 partes
+                - generic [ref=e310]: ·Países Bajos · Videoland
+              - generic [ref=e311]: Sin acceso confirmado en España
+              - heading [level=3] [ref=e312]:
+                - emphasis [ref=e313]: "Jehovah: Van God Los"
+              - paragraph [ref=e314]: Docuserie neerlandesa sobre experiencias de antiguos miembros. RTL la identifica como una producción original de Videoland; no hemos encontrado subtítulos en español ni confirmado acceso legal desde España.
+              - link "Consultar la ficha de RTL" [ref=e316] [cursor=pointer]:
+                - /url: https://www.rtl.nl/programma/5438417/jehovah-van-god-los
+                - text: Consultar la ficha de RTL
+                - generic [aria-hidden] [ref=e317]: ↗
+      - region [ref=e318]:
+        - generic [ref=e319]:
+          - paragraph [ref=e320]: Cómo leer este listado
+          - heading "Antes de elegir un documental" [level=2] [ref=e321]
+          - paragraph [ref=e322]: "Cada obra tiene un enfoque propio: puede seguir a miembros activos, recoger testimonios de antiguos miembros o tratar una investigación concreta. Ninguna representa por sí sola todas las experiencias de quienes son o han sido Testigos de Jehová."
+          - paragraph [ref=e323]: Separamos la descripción que ofrece el medio de los testimonios que aparecen en pantalla y de los hechos que pueden contrastarse con otras fuentes. El acceso depende del territorio, el catálogo y la suscripción; consulta el servicio antes de contratarlo.
+      - region [ref=e324]:
+        - generic [ref=e325]:
+          - paragraph [ref=e326]: Dudas habituales
+          - heading "Preguntas frecuentes" [level=2] [ref=e327]
+          - generic [ref=e328]:
+            - group [ref=e329]:
+              - heading "¿Dónde puedo ver documentales sobre los Testigos de Jehová?" [level=3] [ref=e331] [cursor=pointer]
+            - group [ref=e333]:
+              - heading "¿Qué documental sobre los Testigos de Jehová puedo ver en España?" [level=3] [ref=e335] [cursor=pointer]
+            - group [ref=e337]:
+              - heading "¿Hay películas de ficción sobre los Testigos de Jehová?" [level=3] [ref=e339] [cursor=pointer]
+      - region [ref=e341]:
+        - generic [ref=e342]:
+          - paragraph [ref=e343]: Más sobre los Testigos de Jehová
+          - heading "Sigue leyendo" [level=2] [ref=e344]
+          - generic [ref=e345]:
+            - link [ref=e346] [cursor=pointer]:
+              - /url: /testigos-de-jehova/
+              - heading "Testigos de Jehová" [level=3] [ref=e347]
+              - paragraph [ref=e348]: Quiénes son, qué creen y cómo viven.
+              - text: ↗
+            - link [ref=e349] [cursor=pointer]:
+              - /url: /testigos-de-jehova/sangre/
+              - heading "Transfusiones de sangre" [level=3] [ref=e350]
+              - paragraph [ref=e351]: Historia de la postura y cambios de 2026.
+              - text: ↗
+            - link [ref=e352] [cursor=pointer]:
+              - /url: /guia-para-salir-de-los-testigos-de-jehova/
+              - heading "Guía para salir" [level=3] [ref=e353]
+              - paragraph [ref=e354]: El proceso de salida explicado paso a paso.
+              - text: ↗
+            - link [ref=e355] [cursor=pointer]:
+              - /url: /quienes-somos/
+              - heading "Quiénes somos" [level=3] [ref=e356]
+              - paragraph [ref=e357]: La asociación, su junta directiva y sus colaboradores.
+              - text: ↗
+          - generic [ref=e358]:
+            - link "Contacta con la asociación ↗" [ref=e359] [cursor=pointer]:
+              - /url: /contacto/
+            - link "Recursos de ayuda ↗" [ref=e360] [cursor=pointer]:
+              - /url: /recursos-de-ayuda/
+      - paragraph [ref=e361]: "Catálogo actualizado el 8 de octubre de 2026. La disponibilidad puede cambiar por país, catálogo y suscripción: comprueba las condiciones del servicio antes de reproducir o contratar. Las carátulas y las ilustraciones propias se acreditan en cada ficha; su inclusión no implica patrocinio ni relación con las productoras. Los enlaces externos abren en una pestaña nueva."
+  - contentinfo [ref=e362]:
+    - generic [ref=e363]:
+      - generic [ref=e364]:
+        - generic [ref=e365]:
+          - img "AEVTJ" [ref=e366]
+          - paragraph [ref=e367]: Asociación Española de Víctimas de los Testigos de Jehová y la JW.ORG. Estamos aquí para escucharte, ayudarte a recuperar tu vida y darte el apoyo que necesitas para dejar atrás la organización.
+          - generic [ref=e368]:
+            - link "Facebook" [ref=e369] [cursor=pointer]:
+              - /url: https://www.facebook.com/asoc.aevtj
+            - link "Youtube" [ref=e372] [cursor=pointer]:
+              - /url: https://www.youtube.com/@AEVTJ
+            - link "X" [ref=e375] [cursor=pointer]:
+              - /url: https://x.com/aevtj
+            - link "Instagram" [ref=e378] [cursor=pointer]:
+              - /url: https://www.instagram.com/asoc.aevtj/
+        - navigation "Menú de pie de página" [ref=e381]:
+          - heading "Menú" [level=2] [ref=e382]
+          - list [ref=e383]:
+            - listitem [ref=e384]:
+              - link "¿Quiénes somos?" [ref=e385] [cursor=pointer]:
+                - /url: /quienes-somos/
+            - listitem [ref=e386]:
+              - link "Noticias" [ref=e387] [cursor=pointer]:
+                - /url: /noticias/
+            - listitem [ref=e388]:
+              - link "Documentos" [ref=e389] [cursor=pointer]:
+                - /url: /legal/
+            - listitem [ref=e390]:
+              - link "Hazte socio / Donaciones" [ref=e391] [cursor=pointer]:
+                - /url: /hazte-socio/
+            - listitem [ref=e392]:
+              - link "Otras asociaciones" [ref=e393] [cursor=pointer]:
+                - /url: /otras-asociaciones/
+            - listitem [ref=e394]:
+              - link "Contacto" [ref=e395] [cursor=pointer]:
+                - /url: /contacto/
+        - generic [ref=e396]:
+          - heading "Boletín de noticias" [level=2] [ref=e397]
+          - paragraph [ref=e398]: Recibe nuestro boletín de noticias mensual de forma totalmente gratuita y mantente informado.
+          - generic [ref=e399]:
+            - textbox "Tu correo electrónico" [ref=e400]
+            - generic [ref=e401]:
+              - checkbox "Quiero recibir la newsletter y acepto el tratamiento de mi email para ese fin." [ref=e402]
+              - generic [ref=e403]: Quiero recibir la newsletter y acepto el tratamiento de mi email para ese fin.
+            - paragraph [ref=e404]:
+              - text: La suscripción se gestionará mediante Mailchimp. Tratamos tus datos según nuestra
+              - link "Política de Privacidad" [ref=e405] [cursor=pointer]:
+                - /url: /politica-de-privacidad/
+              - text: .
+            - button "Suscribirme" [ref=e406] [cursor=pointer]
+            - status
+      - generic [ref=e407]:
+        - paragraph [ref=e408]: © 2026 Asociación Española de Victimas de los Testigos de Jehová
+        - list [ref=e409]:
+          - listitem [ref=e410]:
+            - link "Aviso Legal" [ref=e411] [cursor=pointer]:
+              - /url: /aviso-legal/
+          - listitem [ref=e412]:
+            - link "Política de Cookies" [ref=e413] [cursor=pointer]:
+              - /url: /politica-de-cookies/
+          - listitem [ref=e414]:
+            - link "Política de privacidad" [ref=e415] [cursor=pointer]:
+              - /url: /politica-de-privacidad/
+  - generic [ref=e417]:
+    - paragraph [ref=e418]:
+      - text: Utilizamos tecnologías necesarias para que la web funcione y, si lo aceptas, herramientas de analítica y vídeos incrustados de plataformas externas. No usamos publicidad personalizada. Consulta la
+      - link "Política de cookies" [ref=e419] [cursor=pointer]:
+        - /url: /politica-de-cookies/
+      - text: para más información.
+    - generic [ref=e420]:
+      - button "Denegar" [ref=e421] [cursor=pointer]
+      - button "Aceptar" [ref=e422] [cursor=pointer]
+      - link "Ver preferencias" [ref=e423] [cursor=pointer]:
+        - /url: /politica-de-cookies/

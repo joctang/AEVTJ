@@ -1,0 +1,209 @@
+---
+// /testigos-de-jehova/documentales/: catálogo breve de documentales, docuseries y reportajes.
+// Contenido en src/data/testigos-de-jehova-documentales.ts (literal del borrador editorial).
+// Diferencia entre fichas españolas y reproducción aún no confirmada fuera de España.
+// Carátulas e imágenes oficiales acreditadas por obra (ver INVESTIGACION.md, derechos).
+import "../../styles/guia-salida.css";
+import "../../styles/documentales.css";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import TornEdge from "../../components/TornEdge.astro";
+import DocumentalIlustracion from "../../components/DocumentalIlustracion.astro";
+import { intro, grupos, antesDeElegir, preguntas } from "../../data/testigos-de-jehova-documentales";
+
+const textoPlano = (s: string) => s.replace(/<[^>]+>/g, "");
+const palabras = [intro.entradilla, ...grupos.flatMap((g) => [g.intro ?? "", ...g.obras.map((o) => o.descripcion)]), ...antesDeElegir.parrafos]
+  .map(textoPlano).join(" ").split(/\s+/).length;
+const minutos = Math.max(1, Math.round(palabras / 200));
+
+const sigueLeyendo = [
+  { titulo: "Testigos de Jehová", descripcion: "Quiénes son, qué creen y cómo viven.", href: "/testigos-de-jehova/" },
+  { titulo: "Transfusiones de sangre", descripcion: "Historia de la postura y cambios de 2026.", href: "/testigos-de-jehova/sangre/" },
+  { titulo: "Guía para salir", descripcion: "El proceso de salida explicado paso a paso.", href: "/guia-para-salir-de-los-testigos-de-jehova/" },
+  { titulo: "Quiénes somos", descripcion: "La asociación, su junta directiva y sus colaboradores.", href: "/quienes-somos/" },
+];
+
+const url = `${Astro.site ?? "https://victimasdetestigosdejehova.org/"}testigos-de-jehova/documentales/`;
+const jsonLdArticle = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: intro.titulo,
+  description: intro.descripcion,
+  author: { "@type": "Organization", name: "AEVTJ — Asociación Española de Víctimas de los Testigos de Jehová" },
+  publisher: { "@type": "Organization", name: "AEVTJ" },
+  dateModified: intro.revisadoIso,
+  mainEntityOfPage: url,
+  image: `${Astro.site ?? "https://victimasdetestigosdejehova.org/"}${intro.imagen.src.replace(/^\//, "")}`,
+};
+const jsonLdLista = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: intro.titulo,
+  itemListElement: grupos.flatMap((g) => g.obras).map((o, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    name: textoPlano(o.titulo),
+    url: `${url}#${o.id}`,
+  })),
+};
+const jsonLdFaq = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: preguntas.map((p) => ({
+    "@type": "Question",
+    name: p.pregunta,
+    acceptedAnswer: { "@type": "Answer", text: textoPlano(p.respuesta) },
+  })),
+};
+---
+
+<BaseLayout
+  title={intro.tituloSeo}
+  description={intro.descripcion}
+  image={intro.imagen.src}
+  breadcrumbs={[{ label: "Testigos de Jehová", href: "/testigos-de-jehova/" }, { label: "Documentales" }]}
+>
+  <div class="guia dc">
+    <nav class="guia-rail" aria-label="Secciones de la página">
+      <ol>
+        {grupos.map((g, i) => <li><a href={`#${g.id}`}><span>{i + 1}. {g.corto}</span></a></li>)}
+        <li><a href={`#${antesDeElegir.id}`}><span>{antesDeElegir.corto}</span></a></li>
+        <li><a href="#preguntas"><span>Preguntas frecuentes</span></a></li>
+      </ol>
+      <span class="guia-rail__progreso" aria-hidden="true"></span>
+    </nav>
+
+    <section class="guia-hero dc-hero">
+      <img class="guia-hero__img" src={intro.imagen.src} alt={intro.imagen.alt} width="1536" height="1024" fetchpriority="high" decoding="async" />
+      <div class="guia-hero__scrim" aria-hidden="true"></div>
+      <div class="guia-hero__content dc-hero__grid">
+        <div>
+          <h1 class="dc-hero__titulo">{intro.titulo}</h1>
+          <p class="guia-hero__entradilla">{intro.entradilla}</p>
+          <div class="guia-hero__actions">
+            <a class="guia-pill guia-pill--solid" href={`#${grupos[0].id}`}>Explorar el catálogo</a>
+            <a class="guia-pill guia-pill--ghost" href={`#${antesDeElegir.id}`}>Cómo leer este listado</a>
+          </div>
+        </div>
+      </div>
+      <div class="guia-hero__bottom">
+        <ul class="guia-hero__meta" aria-label="Sobre esta página">
+          <li><strong>{minutos}</strong> min de lectura</li>
+          <li>Revisado el {intro.revisado}</li>
+        </ul>
+        <a class="guia-hero__scroll" href={`#${grupos[0].id}`}>Ver el listado <span aria-hidden="true">↓</span></a>
+      </div>
+      <TornEdge />
+    </section>
+
+    {grupos.map((g, i) => (
+      <section id={g.id} class:list={["dc-grupo", `dc-grupo--${g.estado}`]} aria-labelledby={`${g.id}-titulo`}>
+        <header class="dc-ancho dc-grupo__cabecera" data-reveal>
+          <div class="guia-badge" aria-hidden="true"><span>{i + 1}</span></div>
+          <div>
+            <h2 id={`${g.id}-titulo`}>{g.titulo}</h2>
+            {g.intro && <p class="dc-grupo__intro">{g.intro}</p>}
+          </div>
+        </header>
+
+        <ol class="dc-ancho dc-fichas">
+          {g.obras.map((o, j) => (
+            <li id={o.id} class="dc-ficha" data-reveal style={`transition-delay:${(j % 2) * 120}ms`}>
+              <figure class:list={["dc-ficha__arte", o.portada && "dc-ficha__arte--portada"]}>
+                  {o.portada ? (
+                  <img src={o.portada.src} alt={o.portada.alt} width={o.portada.ancho ?? 313} height={o.portada.alto ?? 470} loading="lazy" decoding="async" />
+                ) : (
+                  o.arte && <DocumentalIlustracion arte={o.arte} />
+                )}
+                <figcaption>
+                  {o.portada ? (
+                    <a href={o.portada.fuente} target="_blank" rel="noopener noreferrer">{o.portada.credito} ↗</a>
+                  ) : "Ilustración editorial original de AEVTJ; no es la portada oficial."}
+                </figcaption>
+              </figure>
+              <div class="dc-ficha__cuerpo">
+                <div class="dc-ficha__meta">
+                  <span class="dc-ficha__dato">{o.anio}</span>
+                  <span class="dc-ficha__dato">{o.formato}</span>
+                  <span class="dc-ficha__dato">{o.origen}</span>
+                </div>
+                <span class={`dc-estado dc-estado--${g.estado}`}>{g.estado === "es" ? "España" : g.etiqueta}</span>
+                <h3><em>{o.titulo}</em>{o.tituloExtra && <Fragment set:html={`, ${o.tituloExtra}`} />}</h3>
+                <p>{o.descripcion}</p>
+                <div class="dc-ficha__acciones">
+                  <a class="dc-ficha__cta" href={o.accion.href} target="_blank" rel="noopener noreferrer">{o.accion.etiqueta} <span aria-hidden="true">↗</span></a>
+                  {o.contexto && <a class="dc-ficha__contexto" href={o.contexto.href}>{o.contexto.etiqueta} <span aria-hidden="true">→</span></a>}
+                </div>
+                {o.fuentes.length > 0 && (
+                  <details class="dc-ficha__fuentes">
+                    <summary>Fuentes y episodios</summary>
+                    <ul>
+                      {o.fuentes.map((fuente) => <li><a href={fuente.href} target="_blank" rel="noopener noreferrer">{fuente.etiqueta} ↗</a></li>)}
+                    </ul>
+                  </details>
+                )}
+              </div>
+            </li>
+          ))}
+        </ol>
+      </section>
+    ))}
+
+    <section id={antesDeElegir.id} class="dc-antes" aria-labelledby="dc-antes-titulo">
+      <div class="dc-columna dc-antes__caja" data-reveal>
+        <p class="guia-kicker">Cómo leer este listado</p>
+        <h2 id="dc-antes-titulo">{antesDeElegir.titulo}</h2>
+        {antesDeElegir.parrafos.map((p) => <p>{p}</p>)}
+      </div>
+    </section>
+
+    <section class="dc-faq" id="preguntas" aria-labelledby="dc-faq-titulo">
+      <div class="dc-columna">
+        <p class="guia-kicker" data-reveal>Dudas habituales</p>
+        <h2 id="dc-faq-titulo" data-reveal>Preguntas frecuentes</h2>
+        <div class="dc-faq__lista">
+          {preguntas.map((p) => (
+            <details class="dc-faq__item" data-reveal>
+              <summary>
+                <h3>{p.pregunta}</h3>
+                <span class="dc-faq__signo" aria-hidden="true"></span>
+              </summary>
+              <p set:html={p.respuesta} />
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="guia-cierre" aria-labelledby="dc-sigue-titulo">
+      <div class="guia-cierre__inner">
+        <p class="guia-kicker guia-kicker--crema" data-reveal>Más sobre los Testigos de Jehová</p>
+        <h2 id="dc-sigue-titulo" data-reveal>Sigue leyendo</h2>
+        <div class="guia-recursos">
+          {sigueLeyendo.map((r) => (
+            <a class="guia-recurso" href={r.href} data-reveal>
+              <h3>{r.titulo}</h3>
+              <p>{r.descripcion}</p>
+            </a>
+          ))}
+        </div>
+        <div class="guia-cierre__actions" data-reveal>
+          <a class="guia-pill guia-pill--solid" href="/contacto/">Contacta con la asociación</a>
+          <a class="guia-pill guia-pill--ghost" href="/recursos-de-ayuda/">Recursos de ayuda</a>
+        </div>
+      </div>
+    </section>
+
+    <p class="dc-columna dc-revision">
+      Catálogo actualizado el {intro.revisado}. La disponibilidad puede cambiar por país, catálogo y suscripción: comprueba las condiciones del servicio antes de reproducir o contratar. Las carátulas y las ilustraciones propias se acreditan en cada ficha; su inclusión no implica patrocinio ni relación con las productoras. Los enlaces externos abren en una pestaña nueva.
+    </p>
+  </div>
+
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLdArticle)} />
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLdLista)} />
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLdFaq)} />
+
+  <script>
+    import { initRail } from "../../scripts/rail";
+    initRail(".guia-rail");
+  </script>
+</BaseLayout>

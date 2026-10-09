@@ -1,0 +1,15 @@
+---
+// Tarjeta con el texto original de una fuente, para separarlo visualmente del texto de la AEVTJ.
+interface Props { citas: string[]; fuente: string; ancho?: boolean; imagen?: { src: string; alt: string } }
+const { citas, fuente, ancho = false, imagen } = Astro.props;
+---
+<figure class:list={["sg-cita", { "sg-cita--portada": imagen }, ancho ? "sg-ancho" : "sg-columna"]} data-reveal>
+  {imagen && <img class="sg-cita__portada" src={imagen.src} alt={imagen.alt} width="720" height="984" loading="lazy" />}
+  <div class="sg-cita__cuerpo">
+  <figcaption class="sg-cita__etiqueta">Texto original</figcaption>
+  <blockquote class="sg-cita__texto">
+    {citas.map((c) => <p set:html={c} />)}
+  </blockquote>
+  {fuente && <p class="sg-cita__fuente" set:html={fuente} />}
+  </div>
+</figure>

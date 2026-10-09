@@ -1,0 +1,533 @@
+---
+// /testigos-de-jehova/sangre/: página documental sobre la sangre y las transfusiones.
+// El texto procede literalmente del borrador editorial y se genera con
+// `node scripts/sangre-desde-borrador.mjs` (src/data/testigos-de-jehova-sangre.json).
+// Aquí solo se decide la presentación de cada bloque. Las ilustraciones aún no existen:
+// se muestran huecos reservados con la escena prevista (docs-ilustraciones/GUIA-ILUSTRACIONES.md).
+import "../../styles/guia-salida.css";
+import "../../styles/sangre.css";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import TornEdge from "../../components/TornEdge.astro";
+import CitaTextual from "../../components/CitaTextual.astro";
+import datos from "../../data/testigos-de-jehova-sangre.json";
+
+type Bloque =
+  | { tipo: "parrafo"; html: string }
+  | { tipo: "lista"; items: { etiqueta: string; html: string }[] }
+  | { tipo: "tabla"; cabecera: string[]; filas: string[][] }
+  | { tipo: "hito"; titulo: string }
+  | { tipo: "destacado"; html: string }
+  | { tipo: "nota"; titulo: string; html: string }
+  | { tipo: "cita"; citas: string[]; fuente: string; imagen?: { src: string; alt: string } };
+type Sub = { titulo: string; bloques: Bloque[] };
+type Seccion = { id: string; titulo: string; bloques: Bloque[]; subsecciones: Sub[] };
+
+const secciones = datos.secciones as Seccion[];
+const contenido = secciones.filter((s) => s.id !== "mirada-aevtj");
+const mirada = secciones.find((s) => s.id === "mirada-aevtj")!;
+
+const tituloSeo = "Testigos de Jehová y transfusiones de sangre: historia y cambios";
+const descripcion =
+  "Por qué los Testigos de Jehová rechazan la sangre, cómo ha cambiado su postura desde 1945 hasta 2026, qué textos usan, qué consecuencias ha tenido y qué examinan hoy tribunales y gobiernos.";
+const revisado = "8 de octubre de 2026";
+const revisadoIso = "2026-10-08";
+
+const cortos: Record<string, string> = {
+  "postura-actual": "Qué dicen hoy",
+  "textos-biblicos": "Textos bíblicos",
+  cronologia: "Cómo ha cambiado",
+  "otras-religiones": "Otras religiones",
+  jovenes: "Jóvenes como ejemplo de fe",
+  "muertes-y-riesgos": "Muertes y riesgos",
+  autonomia: "Autonomía del paciente",
+  espana: "El cambio en España",
+  "otros-paises": "Otros países",
+};
+
+const heroFoto = {
+  src: "/uploads/2026/10/tdj-sangre-portada.webp",
+  alt: "Pasillo de hospital en penumbra con un gotero colgado de un soporte en primer plano.",
+};
+
+// Ilustraciones (estilo geométrico «hilo lima», docs-ilustraciones/GUIA-ILUSTRACIONES.md).
+// Mientras no exista el WebP, se muestra el hueco con la escena prevista.
+// Al tener la imagen: node scripts/ilustracion.mjs original.png <nombre> 2026/10 y poner lista: true.
+const ilustraciones: Record<string, { nombre: string; escena: string; alt: string; lista?: boolean; pos: "derecha" | "izquierda" | "arriba" | "baja" }> = {
+  cronologia: { nombre: "tdj-sangre-puerta-entreabierta-hilo", escena: "Una puerta cerrada durante décadas que por fin se entreabre; el hilo vuelve atrás, a un gotero vacío.", alt: "Ilustración de una persona ante una puerta que se entreabre, con un hilo verde que vuelve hasta un soporte de gotero vacío al fondo.", lista: true, pos: "derecha" },
+  "otras-religiones": { nombre: "tdj-sangre-sala-espera-hilo-tenso", escena: "Sala de espera: varias personas distintas, libres; una sola, apartada, sujeta por un hilo tenso.", alt: "Ilustración de una sala de espera con varias personas juntas y una sentada aparte, sujeta por un hilo verde tenso.", lista: true, pos: "izquierda" },
+  jovenes: { nombre: "tdj-sangre-habitacion-vacia-hilo-cortado", escena: "Habitación juvenil vacía al amanecer, la revista abierta en el escritorio; el hilo, cortado.", alt: "Ilustración de una habitación juvenil vacía, con la cama hecha, una mochila y una revista abierta sobre el escritorio, y un hilo verde cortado en el suelo.", lista: true, pos: "arriba" },
+  espana: { nombre: "tdj-sangre-habitacion-hospital-hilo", escena: "Paciente acompañado en la cama; el gotero con tres bolsas y un gancho que sigue vacío.", alt: "Ilustración de una persona en una cama de hospital que da la mano a un familiar, unidos por un hilo verde, junto a un gotero con tres bolsas y un gancho vacío.", lista: true, pos: "baja" },
+};
+
+// Cifra destacada de cada estudio, tomada del propio texto.
+const cifras: Record<string, string> = { "Partos.": "×44", "Cirugía.": "34,4 %", "Mortalidad materna en el Reino Unido.": "15" };
+// Qué significa cada cifra y, cuando hay comparación directa, dos barras a la misma escala.
+const lecturas: Record<string, { frase: string; barras?: { texto: string; valor: number; max: number; unidad: string; alerta?: boolean }[] }> = {
+  "Partos.": {
+    frase: "veces más riesgo de morir en el parto",
+    barras: [
+      { texto: "Pacientes Testigos", valor: 512, max: 512, unidad: "muertes por 100.000 partos", alerta: true },
+      { texto: "Resto de pacientes", valor: 12, max: 512, unidad: "muertes por 100.000 partos" },
+    ],
+  },
+  "Cirugía.": {
+    frase: "murió con la hemoglobina más baja",
+    barras: [
+      { texto: "Hemoglobina 4,1-5 g/dL", valor: 34.4, max: 34.4, unidad: "% murió", alerta: true },
+      { texto: "Hemoglobina 7,1-8 g/dL", valor: 0, max: 34.4, unidad: "% murió" },
+    ],
+  },
+  "Mortalidad materna en el Reino Unido.": { frase: "muertes por hemorragia en 52 años" },
+};
+
+// Pacientes transfundidos en España en 2025 por tipo de componente (Informe 2025, tabla 7).
+const transfundidos = { total: 470784, completa: 16, partes: [
+  { nombre: "Glóbulos rojos", n: 389406 },
+  { nombre: "Plaquetas", n: 56164 },
+  { nombre: "Plasma", n: 25151 },
+] };
+// Estado de cada celda de la tabla antes/después, para colorearla.
+// «Sin cambios» hereda el estado de la columna anterior.
+const estado = (c: string, antes = ""): string =>
+  /rechaza|prohibid/i.test(c) ? "no" : /conciencia|personal/i.test(c) ? "si" : antes ? estado(antes) : "igual";
+// Gráfico propio de cada estudio.
+const graficos: Record<string, "puntos" | "anillos" | "recuento"> = {
+  "Partos.": "puntos", "Cirugía.": "anillos", "Mortalidad materna en el Reino Unido.": "recuento",
+};
+const fmt = (n: number) => n.toLocaleString("es-ES");
+const unoDeCada = Math.round(transfundidos.total / transfundidos.completa);
+
+const etapa = (titulo: string) => {
+  const i = titulo.indexOf(":");
+  return i === -1 ? { periodo: titulo, titulo: "" } : { periodo: titulo.slice(0, i), titulo: titulo.slice(i + 1).trim() };
+};
+
+// Un «#### Título» seguido de un párrafo, fuera de la cronología, se pinta como nota destacada.
+const agrupar = (bloques: Bloque[]): Bloque[] =>
+  bloques.flatMap((b, i) => {
+    if (b.tipo === "hito") {
+      const sig = bloques[i + 1];
+      return sig?.tipo === "parrafo" ? [{ tipo: "nota", titulo: b.titulo, html: sig.html } as Bloque] : [];
+    }
+    return b.tipo === "parrafo" && bloques[i - 1]?.tipo === "hito" ? [] : [b];
+  });
+
+const textoPlano = (s: string) => s.replace(/<[^>]+>/g, "");
+const todo = [
+  ...datos.entrada.map((b: any) => b.html),
+  ...secciones.flatMap((s) => [...s.bloques, ...s.subsecciones.flatMap((x) => x.bloques)])
+    .flatMap((b) => (b.tipo === "parrafo" ? [b.html] : b.tipo === "lista" ? b.items.map((i) => i.html) : [])),
+];
+const minutos = Math.max(1, Math.round(todo.map(textoPlano).join(" ").split(/\s+/).length / 200));
+
+const sigueLeyendo = [
+  { titulo: "Testigos de Jehová", descripcion: "Quiénes son, qué creen y cómo viven.", href: "/testigos-de-jehova/" },
+  { titulo: "Guía de derechos sanitarios", descripcion: "Representante, voluntades anticipadas y tarjeta de emergencia.", href: "/guia-para-proteger-tus-derechos-sanitarios-en-caso-de-interferencia-familiar/" },
+  { titulo: "Nuestro comunicado", descripcion: "La AEVTJ ante el cambio de septiembre de 2026.", href: "/noticias/la-aevtj-reclama-libertad-medica-plena-tras-el-cambio-sobre-transfusiones/" },
+  { titulo: "Guía para salir", descripcion: "El proceso de salida explicado paso a paso.", href: "/guia-para-salir-de-los-testigos-de-jehova/" },
+];
+
+const url = `${Astro.site ?? "https://victimasdetestigosdejehova.org/"}testigos-de-jehova/sangre/`;
+const jsonLdArticle = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: datos.titulo,
+  description: descripcion,
+  author: { "@type": "Organization", name: "AEVTJ — Asociación Española de Víctimas de los Testigos de Jehová" },
+  publisher: { "@type": "Organization", name: "AEVTJ" },
+  dateModified: revisadoIso,
+  mainEntityOfPage: url,
+};
+const jsonLdFaq = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: datos.preguntas.map((p: { pregunta: string; respuesta: string }) => ({
+    "@type": "Question",
+    name: p.pregunta,
+    acceptedAnswer: { "@type": "Answer", text: textoPlano(p.respuesta) },
+  })),
+};
+---
+
+<BaseLayout
+  title={tituloSeo}
+  description={descripcion}
+  breadcrumbs={[{ label: "Testigos de Jehová", href: "/testigos-de-jehova/" }, { label: "Transfusiones de sangre" }]}
+  image={heroFoto.src}
+>
+  <div class="guia sg">
+    <nav class="guia-rail" aria-label="Secciones de la página">
+      <ol>
+        {contenido.map((s, i) => <li><a href={`#${s.id}`}><span>{i + 1}. {cortos[s.id] ?? s.titulo}</span></a></li>)}
+        <li><a href="#preguntas"><span>Preguntas frecuentes</span></a></li>
+        <li><a href={`#${mirada.id}`}><span>La mirada de la AEVTJ</span></a></li>
+      </ol>
+      <span class="guia-rail__progreso" aria-hidden="true"></span>
+    </nav>
+
+    <section class="guia-hero sg-hero">
+      <img class="guia-hero__img" src={heroFoto.src} alt={heroFoto.alt} width="1672" height="941" fetchpriority="high" decoding="async" />
+      <div class="guia-hero__scrim" aria-hidden="true"></div>
+      <div class="guia-hero__content">
+        <h1 class="sg-hero__titulo">{datos.titulo}</h1>
+        <p class="guia-hero__entradilla" set:html={datos.entrada[0].html} />
+        <div class="guia-hero__actions">
+          <a class="guia-pill guia-pill--solid" href="#cronologia">Ver la cronología</a>
+          <a class="guia-pill guia-pill--ghost" href={`#${mirada.id}`}>Busco apoyo</a>
+        </div>
+      </div>
+      <div class="guia-hero__bottom">
+        <ul class="guia-hero__meta" aria-label="Sobre esta página">
+          <li><strong>{minutos}</strong> min de lectura</li>
+          <li>Revisado el {revisado}</li>
+        </ul>
+        <a class="guia-hero__scroll" href="#sg-indice">Ver los temas <span aria-hidden="true">↓</span></a>
+      </div>
+      <TornEdge />
+    </section>
+
+    <section class="sg-indice" id="sg-indice" aria-labelledby="sg-indice-titulo">
+      <div class="sg-ancho">
+        {datos.entrada.slice(1).map((b: { html: string }) => <p class="sg-presentacion" data-reveal set:html={b.html} />)}
+        <h2 id="sg-indice-titulo" class="sr-only">En esta página</h2>
+        <ol class="sg-indice__lista">
+          {contenido.map((s, i) => (
+            <li data-reveal style={`transition-delay:${(i % 4) * 90}ms`}>
+              <a href={`#${s.id}`}>
+                <span class="sg-indice__num" aria-hidden="true">{String(i + 1).padStart(2, "0")}</span>
+                <span class="sg-indice__titulo">{s.titulo}</span>
+                <span class="sg-indice__ir" aria-hidden="true">↓</span>
+              </a>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
+
+    {contenido.map((s, i) => {
+      const ilus = ilustraciones[s.id];
+      // Con ilustración, el título y los párrafos iniciales comparten fila con ella.
+      const nIntro = ilus ? s.bloques.findIndex((b) => b.tipo !== "parrafo") : 0;
+      const intro = ilus ? s.bloques.slice(0, nIntro === -1 ? s.bloques.length : nIntro) : [];
+      const resto = s.bloques.slice(intro.length);
+      return (
+      <section id={s.id} class:list={["sg-seccion", `sg-seccion--${s.id}`]} aria-labelledby={`${s.id}-titulo`}>
+        {ilus ? (
+          <div class={`sg-ancho sg-apertura sg-apertura--${ilus.pos}`}>
+            <div class="sg-apertura__texto">
+              <header class="sg-seccion__cabecera" data-reveal>
+                <div class="guia-badge" aria-hidden="true"><span>{i + 1}</span></div>
+                <h2 id={`${s.id}-titulo`}>{s.titulo}</h2>
+              </header>
+              {intro.map((b) => b.tipo === "parrafo" && <p class="sg-p" data-reveal set:html={b.html} />)}
+            </div>
+            <figure class="sg-apertura__img" data-reveal>
+              {ilus.lista ? (
+                <img
+                  src={`/uploads/2026/10/${ilus.nombre}-1536.webp`}
+                  srcset={`/uploads/2026/10/${ilus.nombre}-900.webp 900w, /uploads/2026/10/${ilus.nombre}-1536.webp 1536w`}
+                  sizes="(max-width: 899px) 100vw, 46vw" width="1536" height="1024"
+                  alt={ilus.alt} loading="lazy" decoding="async"
+                />
+              ) : (
+                <span class="sg-hueco"><strong>Ilustración pendiente</strong>{ilus.escena}</span>
+              )}
+            </figure>
+          </div>
+        ) : (
+          <header class="sg-columna sg-seccion__cabecera" data-reveal>
+            <div class="guia-badge" aria-hidden="true"><span>{i + 1}</span></div>
+            <h2 id={`${s.id}-titulo`}>{s.titulo}</h2>
+          </header>
+        )}
+
+        {/* Bloques directos de la sección */}
+        {resto.map((b) =>
+          b.tipo === "parrafo" ? (
+            <p class="sg-columna sg-p" data-reveal set:html={b.html} />
+          ) : b.tipo === "lista" && s.id === "textos-biblicos" ? (
+            <div class="sg-ancho sg-versos">
+              {b.items.map((item, j) => (
+                <article class="sg-verso" data-reveal style={`transition-delay:${j * 120}ms`}>
+                  <span class="sg-verso__num" aria-hidden="true">{String(j + 1).padStart(2, "0")}</span>
+                  <h3>{item.etiqueta.replace(/\.$/, "")}</h3>
+                  <p set:html={item.html} />
+                  <span class="sg-verso__hilo" aria-hidden="true"></span>
+                </article>
+              ))}
+            </div>
+          ) : b.tipo === "lista" ? (
+            <ul class="sg-columna sg-lista" data-reveal>
+              {b.items.map((item) => <li>{item.etiqueta && <strong set:html={item.etiqueta} />} <Fragment set:html={item.html} /></li>)}
+            </ul>
+          ) : b.tipo === "cita" ? (
+            <CitaTextual citas={b.citas} fuente={b.fuente} imagen={b.imagen} />
+          ) : b.tipo === "destacado" ? (
+            <p class="sg-columna sg-destacado" data-reveal set:html={b.html} />
+          ) : null
+        )}
+
+        {s.id === "espana" && (
+          <figure class="sg-ancho sg-sc" data-reveal aria-labelledby="sg-sc-titulo">
+            <figcaption>
+              <h3 id="sg-sc-titulo">Sangre completa: 1 de cada {fmt(unoDeCada)} pacientes</h3>
+              <p>Pacientes transfundidos en España en 2025, según el tipo de transfusión.</p>
+            </figcaption>
+            <div class="sg-sc__bloque">
+              <div class="sg-sc__cabeza">
+                <span class="sg-sc__etiqueta">Pacientes transfundidos</span>
+                <span class="sg-sc__valor" data-contar>{fmt(transfundidos.total)}</span>
+              </div>
+              <span class="sg-sc__apilada" aria-hidden="true">
+                {transfundidos.partes.map((p, k) => <span class={`sg-sc__tramo sg-sc__tramo--${k}`} style={`flex:${p.n} 1 0`}></span>)}
+              </span>
+              <ul class="sg-sc__partes">
+                {transfundidos.partes.map((p, k) => (
+                  <li><i class={`sg-sc__muestra sg-sc__muestra--${k}`} aria-hidden="true"></i><strong>{fmt(p.n)}</strong> {p.nombre.toLowerCase()}</li>
+                ))}
+              </ul>
+            </div>
+            <div class="sg-sc__bloque sg-sc__bloque--sc">
+              <div class="sg-sc__cabeza">
+                <span class="sg-sc__etiqueta">De ellos, con sangre completa</span>
+                <span class="sg-sc__valor sg-sc__valor--sc">{fmt(transfundidos.completa)}</span>
+              </div>
+              <span class="sg-sc__pista" aria-hidden="true">
+                <span class="sg-sc__barra sg-sc__barra--sc"></span>
+                <span class="sg-sc__globo">{fmt(transfundidos.completa)} pacientes</span>
+              </span>
+            </div>
+            <p class="sg-sc__nota">La barra roja mide el 0,003 % de la de arriba. Es la parte que la organización sigue rechazando.</p>
+          </figure>
+        )}
+
+        {/* Cronología: cada subsección es una etapa de la línea de tiempo */}
+        {s.id === "cronologia" ? (
+          <ol class="sg-columna sg-linea" data-linea>
+            {s.subsecciones.map((sub, j) => {
+              const e = etapa(sub.titulo);
+              const ultima = j === s.subsecciones.length - 1;
+              return (
+                <li class:list={["sg-etapa", { "sg-etapa--actual": ultima }]} data-reveal>
+                  <span class="sg-etapa__periodo">{e.periodo}</span>
+                  {e.titulo && <h3>{e.titulo.charAt(0).toUpperCase() + e.titulo.slice(1)}</h3>}
+                  {sub.bloques.map((b) =>
+                    b.tipo === "parrafo" ? <p set:html={b.html} /> : b.tipo === "lista" ? <ul class="sg-lista sg-lista--etapa">{b.items.map((item) => <li><strong set:html={item.etiqueta} /> <Fragment set:html={item.html} /></li>)}</ul> : b.tipo === "hito" ? <h4 class="sg-hito">{b.titulo}</h4> : b.tipo === "cita" ? <CitaTextual citas={b.citas} fuente={b.fuente} imagen={b.imagen} /> : null
+                  )}
+                </li>
+              );
+            })}
+          </ol>
+        ) : (
+          s.subsecciones.map((sub) => {
+            const caso = sub.titulo.startsWith("El caso de Marcos");
+            return (
+              <div class:list={["sg-sub", { "sg-sub--caso": caso }]}>
+                <h3 class="sg-columna sg-sub__titulo" data-reveal>{sub.titulo}</h3>
+                {caso ? (
+                  <>
+                    <div class="sg-columna sg-caso" data-reveal>
+                      {sub.bloques.map((b) => b.tipo === "parrafo" && <p set:html={b.html} />)}
+                    </div>
+                    {sub.bloques.map((b) => b.tipo === "cita" && <CitaTextual citas={b.citas} fuente={b.fuente} imagen={b.imagen} />)}
+                  </>
+                ) : (
+                  agrupar(sub.bloques).map((b) =>
+                    b.tipo === "nota" ? (
+                      <aside class="sg-columna sg-nota" data-reveal>
+                        <p class="sg-nota__etiqueta">Contexto médico</p>
+                        <h4>{b.titulo}</h4>
+                        <p set:html={b.html} />
+                      </aside>
+                    ) : b.tipo === "parrafo" ? (
+                      <p class="sg-columna sg-p" data-reveal set:html={b.html} />
+                    ) : b.tipo === "lista" && s.id === "jovenes" && sub.titulo.startsWith("«") ? (
+                      <ul class="sg-columna sg-relatos">
+                        {b.items.map((item) => (
+                          <li data-reveal><strong set:html={item.etiqueta} /> <Fragment set:html={item.html} /></li>
+                        ))}
+                      </ul>
+                    ) : b.tipo === "lista" && s.id === "muertes-y-riesgos" ? (
+                      <div class="sg-ancho sg-estudios">
+                        {b.items.map((item, j) => (
+                          <article class="sg-estudio" data-reveal style={`transition-delay:${j * 120}ms`}>
+                            <strong class="sg-estudio__cifra" data-contar>{cifras[item.etiqueta] ?? ""}</strong>
+                            <p class="sg-estudio__frase">{lecturas[item.etiqueta]?.frase}</p>
+                            <div class={`sg-grafico sg-grafico--${graficos[item.etiqueta]}`} aria-hidden="true">
+                              {graficos[item.etiqueta] === "puntos" && lecturas[item.etiqueta].barras!.map((br) => (
+                                <div class:list={["sg-puntos", { "sg-puntos--alerta": br.alerta }]}>
+                                  <span class="sg-grafico__texto">{br.texto}</span>
+                                  <span class="sg-puntos__fila">
+                                    {Array.from({ length: Math.max(1, Math.round(br.valor / 12)) }, (_, k) => <i style={`--k:${k}`}></i>)}
+                                  </span>
+                                  <span class="sg-grafico__valor">{br.valor} {br.unidad}</span>
+                                </div>
+                              ))}
+                              {graficos[item.etiqueta] === "puntos" && <span class="sg-grafico__clave"><i></i> = 12 muertes por 100.000 partos</span>}
+                              {graficos[item.etiqueta] === "anillos" && (
+                                <div class="sg-anillos">
+                                  {lecturas[item.etiqueta].barras!.map((br) => (
+                                    <div class:list={["sg-anillo", { "sg-anillo--alerta": br.alerta }]} style={`--p:${br.valor}`}>
+                                      <span class="sg-anillo__disco"><b>{String(br.valor).replace(".", ",")} %</b></span>
+                                      <span class="sg-grafico__texto">{br.texto}</span>
+                                    </div>
+                                  ))}
+                                </div>
+                              )}
+                              {graficos[item.etiqueta] === "anillos" && <span class="sg-grafico__clave">Porcentaje de pacientes que murieron</span>}
+                              {graficos[item.etiqueta] === "recuento" && (
+                                <>
+                                  <span class="sg-recuento">{Array.from({ length: 15 }, (_, k) => <i style={`--k:${k}`}></i>)}</span>
+                                  <span class="sg-recuento__eje"><span>1967</span><span>52 años</span><span>2019</span></span>
+                                </>
+                              )}
+                            </div>
+                            <h4>{item.etiqueta.replace(/\.$/, "")}</h4>
+                            <p set:html={item.html} />
+                          </article>
+                        ))}
+                      </div>
+                    ) : b.tipo === "lista" ? (
+                      <ul class="sg-columna sg-lista sg-lista--claves" data-reveal>
+                        {b.items.map((item) => <li>{item.etiqueta && <strong set:html={item.etiqueta} />} <Fragment set:html={item.html} /></li>)}
+                      </ul>
+                    ) : b.tipo === "cita" ? (
+                      <CitaTextual citas={b.citas} fuente={b.fuente} imagen={b.imagen} />
+                    ) : b.tipo === "destacado" ? (
+                      <p class="sg-columna sg-destacado" data-reveal set:html={b.html} />
+                    ) : null
+                  )
+                )}
+              </div>
+            );
+          })
+        )}
+
+        {/* Tabla de antes/después (cronología) */}
+        {s.subsecciones.flatMap((sub) => sub.bloques).filter((b) => b.tipo === "tabla").map((b) =>
+          b.tipo === "tabla" && (
+            <div class="sg-ancho sg-tabla-wrap" data-reveal>
+              <table class="sg-tabla">
+                <caption>Antes y después de 2026</caption>
+                <thead><tr>{b.cabecera.map((c, k) => <th scope="col" class={k === 2 ? "sg-tabla__ahora" : undefined} set:html={c} />)}</tr></thead>
+                <tbody>
+                  {b.filas.map((f) => {
+                    const cambia = estado(f[1]) !== estado(f[2], f[1]);
+                    return (
+                      <tr class:list={[{ "sg-tabla__cambia": cambia }]}>
+                        {f.map((c, k) => (k === 0
+                          ? <th scope="row"><span set:html={c} /></th>
+                          : <td data-etiqueta={textoPlano(b.cabecera[k])} set:html={c} />))}
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+          )
+        )}
+      </section>
+      );
+    })}
+
+    <section class="sg-faq" id="preguntas" aria-labelledby="sg-faq-titulo">
+      <div class="sg-columna">
+        <p class="guia-kicker" data-reveal>Dudas habituales</p>
+        <h2 id="sg-faq-titulo" data-reveal>Preguntas frecuentes</h2>
+        <div class="sg-faq__lista">
+          {datos.preguntas.map((p: { pregunta: string; respuesta: string }) => (
+            <details class="sg-faq__item" data-reveal>
+              <summary>
+                <h3>{p.pregunta}</h3>
+                <span class="sg-faq__signo" aria-hidden="true"></span>
+              </summary>
+              <p set:html={p.respuesta} />
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="guia-cierre" id={mirada.id} aria-labelledby="sg-mirada-titulo">
+      <div class="guia-cierre__inner">
+        <p class="guia-kicker guia-kicker--crema" data-reveal>Nuestra perspectiva</p>
+        <h2 id="sg-mirada-titulo" class="sg-mirada__titulo" data-reveal>{mirada.titulo}</h2>
+        <div class="sg-mirada__texto">
+          {mirada.bloques.map((b) => b.tipo === "parrafo" && <p data-reveal set:html={b.html} />)}
+        </div>
+
+        <p class="guia-kicker guia-kicker--crema sg-sigue" data-reveal>Sigue leyendo</p>
+        <div class="guia-recursos">
+          {sigueLeyendo.map((r) => (
+            <a class="guia-recurso" href={r.href} data-reveal>
+              <h3>{r.titulo}</h3>
+              <p>{r.descripcion}</p>
+            </a>
+          ))}
+        </div>
+
+        <div class="guia-cierre__actions" data-reveal>
+          <a class="guia-pill guia-pill--solid" href="/contacto/">Contacta con la asociación</a>
+          <a class="guia-pill guia-pill--ghost" href="/recursos-de-ayuda/">Recursos de ayuda</a>
+        </div>
+      </div>
+    </section>
+
+    <p class="sg-columna sg-revision">
+      Revisado el {revisado}. Las publicaciones de la organización citadas describen su postura en cada fecha; los estudios y sentencias se citan con su ámbito y sus límites. Esta página no sustituye el consejo médico ni jurídico. Los enlaces externos se abren en una pestaña nueva.
+    </p>
+  </div>
+
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLdArticle)} />
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLdFaq)} />
+
+  <script>
+    import { initRail } from "../../scripts/rail";
+    initRail(".guia-rail");
+
+    const quieto = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    // Cifras que cuentan hasta su valor al entrar (respeta prefijos, sufijos y decimales).
+    const contadores = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting) continue;
+        contadores.unobserve(entry.target);
+        const el = entry.target as HTMLElement;
+        const final = el.textContent ?? "";
+        const m = final.match(/^(\D*)([\d.]+(?:,\d+)?)(.*)$/s);
+        if (!m || quieto) continue;
+        const decimales = m[2].split(",")[1]?.length ?? 0;
+        const objetivo = Number(m[2].replace(/\./g, "").replace(",", "."));
+        const inicio = performance.now();
+        const paso = (ahora: number) => {
+          const t = Math.min(1, (ahora - inicio) / 1400);
+          const v = objetivo * (1 - (1 - t) ** 3);
+          el.textContent = t < 1
+            ? m[1] + v.toLocaleString("es-ES", { minimumFractionDigits: decimales, maximumFractionDigits: decimales, useGrouping: true }) + m[3]
+            : final;
+          if (t < 1) requestAnimationFrame(paso);
+        };
+        requestAnimationFrame(paso);
+      }
+    }, { threshold: 0.6 });
+    document.querySelectorAll("[data-contar]").forEach((el) => contadores.observe(el));
+
+    // Línea de tiempo: se rellena con la lectura y marca las etapas ya recorridas.
+    const linea = document.querySelector<HTMLElement>("[data-linea]");
+    if (linea) {
+      const etapas = [...linea.querySelectorAll<HTMLElement>(".sg-etapa")];
+      let pendiente = false;
+      const pintar = () => {
+        pendiente = false;
+        const caja = linea.getBoundingClientRect();
+        const lectura = window.innerHeight * 0.55;
+        linea.style.setProperty("--avance", String(Math.max(0, Math.min(1, (lectura - caja.top) / caja.height))));
+        for (const e of etapas) e.classList.toggle("is-pasada", e.getBoundingClientRect().top < lectura);
+      };
+      const programar = () => { if (!pendiente) { pendiente = true; requestAnimationFrame(pintar); } };
+      window.addEventListener("scroll", programar, { passive: true });
+      window.addEventListener("resize", programar);
+      pintar();
+    }
+  </script>
+</BaseLayout>

@@ -161,6 +161,25 @@ flotación en bucle de elementos decorativos (7s).
 - ¿Nueva sección? → kicker con punto + H2 serif enorme + mucho aire (padding 130-140px).
 - ¿Nueva imagen? → nunca a sangre completa en secciones claras; tarjeta flotante 28-32px
   con bloque de color detrás.
+- ¿Nueva ilustración? → serie geométrica con hilo lima: seguir `docs-ilustraciones/GUIA-ILUSTRACIONES.md`.
 - ¿Nueva página? → cabecera navy con degradado o banda lima; fondo pálido con deriva.
 - ¿Texto enfatizado? → `strong` navy; enlaces teal `#1f7a63`.
 - ¿Animación? → lenta (1,5s+), easing expo, siempre con `prefers-reduced-motion`.
+
+---
+
+## 8. Imágenes
+
+Cada tipo de imagen tiene un papel; no se mezclan estilos dentro del mismo papel.
+
+| Tipo | Uso | Tratamiento |
+|---|---|---|
+| **Foto atmosférica o de lugar real** | Heroes de páginas y guías | Sin caras reconocibles de personas anónimas; tintada con el scrim navy del hero |
+| **Ilustración geométrica con hilo** | Capítulos, conceptos, índices | Guía completa en [`docs-ilustraciones/GUIA-ILUSTRACIONES.md`](./docs-ilustraciones/GUIA-ILUSTRACIONES.md) |
+| **Documental real** | Junta, colaboradores, actos | Solo personas de la propia asociación, con su permiso |
+| **Prensa** | Noticias | Miniatura del medio, enmarcada igual que el resto de tarjetas |
+
+Prohibido: stock alegre o corporativo, hiperrealismo hecho con IA, menores, y cualquier
+imagen que recuerde al estilo visual de JW.ORG. Toda foto necesita autoría y licencia
+confirmadas antes de publicarse.
+

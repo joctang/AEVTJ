@@ -8,6 +8,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "review:package": "npm run build && powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/prepare-review-package.ps1",
     "preview": "astro preview",
     "astro": "astro",
     "auditar:noticias": "node scripts/auditar-noticias.mjs"

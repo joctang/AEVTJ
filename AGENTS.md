@@ -2,6 +2,10 @@
 
 No hacer cambios importantes sin la aprobación explícita de Joctan sobre el cambio concreto, especialmente: contenido editorial, textos sensibles, URLs y despliegues. Antes de corregir, mostrar el antes/después y el motivo. Solo está siempre permitido leer, verificar y documentar.
 
+## Imágenes e ilustraciones
+
+Antes de proponer, generar o colocar cualquier ilustración, leer `docs-ilustraciones/GUIA-ILUSTRACIONES.md` (estilo geométrico con hilo lima, prompts base, conversión con `scripts/ilustracion.mjs`). Reglas generales de imagen en `MANUAL-ESTILO.md` §8.
+
 ## Development
 
 When starting the dev server, use background mode:

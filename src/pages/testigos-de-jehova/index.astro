@@ -1,0 +1,276 @@
+---
+// Página pilar /testigos-de-jehova/: introduce el tema y enlaza a las páginas
+// temáticas cuando estén publicadas. Contenido en src/data/testigos-de-jehova.ts.
+// Estructura de capítulos de la guía de salida (guia-salida.css). Las ilustraciones
+// que faltan se muestran como huecos reservados con la escena prevista.
+import "../../styles/guia-salida.css";
+import "../../styles/testigos-de-jehova.css";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import TornEdge from "../../components/TornEdge.astro";
+import { intro, heroFoto, presentacion, secciones, mirada, preguntas } from "../../data/testigos-de-jehova";
+import type { Ilustracion, Bloque } from "../../data/testigos-de-jehova";
+
+const textoPlano = (s: string) => s.replace(/<[^>]+>/g, "");
+const base = (i: Ilustracion) => `/uploads/${i.carpeta ?? "2026/10"}/${i.nombre}`;
+const ilus = (i: Ilustracion) => ({
+  src: `${base(i)}-1536.webp`,
+  srcset: `${base(i)}-900.webp 900w, ${base(i)}-1536.webp 1536w`,
+  alt: i.alt,
+  width: 1536,
+  height: 1024,
+});
+
+// Escenas previstas para secciones que aún no tengan ilustración (se muestran como hueco
+// reservado). Hoy todas la tienen; ver docs-ilustraciones/GUIA-ILUSTRACIONES.md.
+const pendientes: Record<string, string> = {};
+
+const variantes = ["lima", "salvia", "arena"];
+
+// Divide los bloques en: texto antes de la primera lista, la lista y el texto posterior.
+const partir = (bloques: Bloque[]) => {
+  const i = bloques.findIndex((b) => b.tipo === "lista");
+  if (i === -1) return { antes: bloques, lista: null, despues: [] as Bloque[] };
+  const lista = bloques[i];
+  return { antes: bloques.slice(0, i), lista: lista.tipo === "lista" ? lista : null, despues: bloques.slice(i + 1) };
+};
+
+const palabras = [intro.entradilla, presentacion, ...secciones.flatMap((s) => s.bloques.map((b) => (b.tipo === "parrafo" ? b.texto : b.items.map((it) => it.texto).join(" "))))]
+  .map(textoPlano).join(" ").split(/\s+/).length;
+const minutos = Math.max(1, Math.round(palabras / 200));
+
+const situaciones = ["Dejar de asistir a las reuniones", "Renunciar a la religión", "Ser expulsado"];
+
+const sigueLeyendo = [
+  { titulo: "Guía para salir de los Testigos de Jehová", descripcion: "El proceso de salida explicado en seis capítulos y siete pasos.", href: "/guia-para-salir-de-los-testigos-de-jehova/" },
+  { titulo: "Guía de derechos sanitarios", descripcion: "Representante, voluntades anticipadas y tarjeta de emergencia.", href: "/guia-para-proteger-tus-derechos-sanitarios-en-caso-de-interferencia-familiar/" },
+  { titulo: "Derecho de supresión", descripcion: "Cómo pedir que se borren tus datos personales.", href: "/derecho-de-supresion/" },
+  { titulo: "Quiénes somos", descripcion: "La asociación, su junta directiva y sus colaboradores.", href: "/quienes-somos/" },
+];
+
+const url = `${Astro.site ?? "https://victimasdetestigosdejehova.org/"}testigos-de-jehova/`;
+
+const jsonLdArticle = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: intro.titulo,
+  description: intro.descripcion,
+  author: { "@type": "Organization", name: "AEVTJ — Asociación Española de Víctimas de los Testigos de Jehová" },
+  publisher: { "@type": "Organization", name: "AEVTJ" },
+  dateModified: intro.revisadoIso,
+  mainEntityOfPage: url,
+};
+
+const jsonLdFaq = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: preguntas.map((p) => ({
+    "@type": "Question",
+    name: p.pregunta,
+    acceptedAnswer: { "@type": "Answer", text: textoPlano(p.respuesta) },
+  })),
+};
+---
+
+<BaseLayout title={intro.tituloSeo} description={intro.descripcion} breadcrumbs={[{ label: "Testigos de Jehová" }]} image={heroFoto.src}>
+  <div class="guia tj">
+    <nav class="guia-rail" aria-label="Secciones de la página">
+      <ol>
+        {secciones.map((s, i) => <li><a href={`#${s.id}`}><span>{i + 1}. {s.corto}</span></a></li>)}
+        <li><a href={`#${mirada.id}`}><span>{mirada.corto}</span></a></li>
+        <li><a href="#preguntas"><span>Otras preguntas</span></a></li>
+      </ol>
+      <span class="guia-rail__progreso" aria-hidden="true"></span>
+    </nav>
+
+    <section class="guia-hero">
+      <img class="guia-hero__img" src={heroFoto.src} alt={heroFoto.alt} width={heroFoto.width} height={heroFoto.height} fetchpriority="high" decoding="async" />
+      <div class="guia-hero__scrim" aria-hidden="true"></div>
+      <div class="guia-hero__content">
+        <p class="guia-kicker guia-kicker--crema">{intro.kicker}</p>
+        <h1 class="tj-hero__titulo">{intro.titulo}</h1>
+        <p class="guia-hero__entradilla">{intro.entradilla}</p>
+        <div class="guia-hero__actions">
+          <a class="guia-pill guia-pill--solid" href="#tj-indice">Ver los temas</a>
+          <a class="guia-pill guia-pill--ghost" href={`#${mirada.id}`}>Busco apoyo</a>
+        </div>
+      </div>
+      <div class="guia-hero__bottom">
+        <ul class="guia-hero__meta" aria-label="Sobre esta página">
+          <li><strong>{minutos}</strong> min de lectura</li>
+          <li>Revisado el {intro.revisado}</li>
+        </ul>
+        <a class="guia-hero__scroll" href="#tj-indice">Ver los temas <span aria-hidden="true">↓</span></a>
+      </div>
+      <TornEdge />
+    </section>
+
+    <section class="guia-indice" id="tj-indice" aria-labelledby="tj-indice-titulo">
+      <div class="guia-indice__inner">
+        <p class="guia-kicker" data-reveal>En esta página</p>
+        <h2 id="tj-indice-titulo" class="sr-only">Temas</h2>
+        <p class="tj-presentacion" data-reveal>{presentacion}</p>
+        <div class="guia-indice__grid">
+          {
+            secciones.map((s, i) => (
+              <a class="guia-tarjeta" href={`#${s.id}`} data-reveal style={`transition-delay:${(i % 3) * 150}ms`}>
+                <figure class="guia-tarjeta__media">
+                  <span class="guia-tarjeta__frame">
+                    {s.imagen ? (
+                      <img src={`${base(s.imagen)}-900.webp`} alt="" width="900" height="600" loading="lazy" decoding="async" />
+                    ) : (
+                      <span class="tj-hueco tj-hueco--mini">Ilustración pendiente</span>
+                    )}
+                  </span>
+                  <span class="guia-tarjeta__num" aria-hidden="true">{i + 1}</span>
+                </figure>
+                <div class="guia-tarjeta__body">
+                  <span class="guia-tarjeta__label">Tema {i + 1}</span>
+                  <h3>{s.titulo}</h3>
+                  <span class="guia-tarjeta__cta" aria-hidden="true">Leer</span>
+                </div>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    {
+      secciones.map((s, i) => {
+        const { antes, lista, despues } = partir(s.bloques);
+        return (
+          <>
+            <section id={s.id} class:list={["guia-capitulo", "tj-capitulo", { "guia-capitulo--invertido": i % 2 === 1 }]} data-variante={variantes[i % 3]} aria-labelledby={`${s.id}-titulo`}>
+              <div class="guia-capitulo__inner">
+                <div class="guia-capitulo__texto" data-reveal>
+                  <div class="guia-badge" aria-hidden="true"><span>{i + 1}</span></div>
+                  <h2 id={`${s.id}-titulo`}>{s.titulo}</h2>
+                  {antes.map((b) => b.tipo === "parrafo" && <p set:html={b.texto} />)}
+                </div>
+                <div class="guia-capitulo__media" data-reveal>
+                  {s.imagen ? (
+                    <div class="layered-media layered-media--guia tj-media">
+                      <span aria-hidden="true"></span>
+                      <img {...ilus(s.imagen)} sizes="(max-width: 899px) 100vw, 600px" loading="lazy" decoding="async" />
+                    </div>
+                  ) : (
+                    <div class="tj-media tj-media--hueco">
+                      <span class="tj-hueco">
+                        <strong>Ilustración pendiente</strong>
+                        {pendientes[s.id] ?? ""}
+                      </span>
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              {lista && (
+                <div class="tj-normas">
+                  {lista.items.map((item, j) => (
+                    <article class="tj-norma" data-reveal style={`transition-delay:${(j % 2) * 120}ms`}>
+                      <span class="tj-norma__num" aria-hidden="true">{String(j + 1).padStart(2, "0")}</span>
+                      <h3>{item.etiqueta.replace(/\.$/, "")}</h3>
+                      <p set:html={item.texto} />
+                    </article>
+                  ))}
+                </div>
+              )}
+              {despues.length > 0 && (
+                <div class="tj-despues" data-reveal>
+                  {despues.map((b) => b.tipo === "parrafo" && <p set:html={b.texto} />)}
+                </div>
+              )}
+
+              {s.id === "salida" && (
+                <div class="tj-situaciones" data-reveal>
+                  <p class="guia-kicker">Tres situaciones distintas</p>
+                  <ol>
+                    {situaciones.map((t, j) => <li><span aria-hidden="true">{j + 1}</span>{t}</li>)}
+                  </ol>
+                </div>
+              )}
+            </section>
+
+            {s.nota && (
+              <div class="guia-ayuda-wrap">
+                <aside class="guia-ayuda" role="note" data-reveal>
+                  <div class="guia-ayuda__icono" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="9"></circle>
+                      <path d="M12 8h.01M12 11v5"></path>
+                    </svg>
+                  </div>
+                  <div><p set:html={s.nota} /></div>
+                </aside>
+              </div>
+            )}
+
+          </>
+        );
+      })
+    }
+
+    <section class="guia-cierre" id={mirada.id} aria-labelledby="tj-mirada-titulo">
+      <div class="guia-cierre__inner">
+        <div class="tj-mirada">
+          <div>
+            <p class="guia-kicker guia-kicker--crema" data-reveal>{mirada.kicker}</p>
+            <h2 id="tj-mirada-titulo" data-reveal>{mirada.titulo}</h2>
+            <div class="tj-mirada__texto">
+              {mirada.parrafos.map((p) => <p data-reveal set:html={p} />)}
+            </div>
+          </div>
+          <figure class="tj-mirada__figura" data-reveal>
+            <img {...ilus(mirada.imagen)} sizes="(max-width: 899px) 100vw, 480px" loading="lazy" decoding="async" />
+          </figure>
+        </div>
+
+        <p class="guia-kicker guia-kicker--crema tj-sigue" data-reveal>Sigue leyendo</p>
+        <div class="guia-recursos">
+          {
+            sigueLeyendo.map((r) => (
+              <a class="guia-recurso" href={r.href} data-reveal>
+                <h3>{r.titulo}</h3>
+                <p>{r.descripcion}</p>
+              </a>
+            ))
+          }
+        </div>
+
+        <div class="guia-cierre__actions" data-reveal>
+          <a class="guia-pill guia-pill--solid" href="/recursos-de-ayuda/">Recursos de ayuda</a>
+          <a class="guia-pill guia-pill--ghost" href="/contacto/">Contacta con la asociación</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="tj-faq" id="preguntas" aria-labelledby="tj-faq-titulo">
+      <div class="tj-faq__inner">
+        <p class="guia-kicker" data-reveal>Dudas habituales</p>
+        <h2 id="tj-faq-titulo" data-reveal>Otras preguntas frecuentes</h2>
+        <div class="tj-faq__lista">
+          {
+            preguntas.map((p) => (
+              <details class="tj-faq__item" data-reveal>
+                <summary>
+                  <h3>{p.pregunta}</h3>
+                  <span class="tj-faq__signo" aria-hidden="true"></span>
+                </summary>
+                <p set:html={p.respuesta} />
+              </details>
+            ))
+          }
+        </div>
+        <p class="tj-revision">Revisado el {intro.revisado}. Las fuentes oficiales citadas describen la postura de la organización; los enlaces externos se abren en una pestaña nueva.</p>
+      </div>
+    </section>
+  </div>
+
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLdArticle)} />
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLdFaq)} />
+
+  <script>
+    import { initRail } from "../../scripts/rail";
+    initRail(".guia-rail");
+  </script>
+</BaseLayout>
