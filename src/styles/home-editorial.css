@@ -55,6 +55,8 @@
 .section-copy .premium-button { margin-top: 28px; }
 .layered-media { position: relative; min-height: 560px; }
 .layered-media img { position: absolute; inset: 0 6% 6% 0; z-index: 2; width: 94%; height: 94%; object-fit: cover; border-radius: 32px; box-shadow: 0 30px 70px #0f25371f; }
+.layered-media.layered-media--geometric { min-height: 0; aspect-ratio: 3 / 2; }
+.layered-media--geometric img { inset: 0 5% 5% 0; width: 95%; height: 95%; object-fit: contain; border-radius: 0; box-shadow: none; }
 .layered-media span { position: absolute; inset: 10% 0 0 10%; border-radius: 32px; background: linear-gradient(150deg,#e6f2c3,#d5e9a6); }
 .layered-media--soft span { background: linear-gradient(150deg,#dcead2,#c9e2c5); }
 .layered-media--round span { background: linear-gradient(150deg,#f3e3c2,#ecd6a8); }
