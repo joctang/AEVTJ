@@ -148,6 +148,11 @@ const jsonLdFaq = {
                   <div class="guia-badge" aria-hidden="true"><span>{i + 1}</span></div>
                   <h2 id={`${s.id}-titulo`}>{s.titulo}</h2>
                   {antes.map((b) => b.tipo === "parrafo" && <p set:html={b.texto} />)}
+                  {s.id === "sangre" && (
+                    <a class="tj-capitulo__cta guia-pill guia-pill--solid" href="/testigos-de-jehova/sangre/">
+                      Los Testigos de Jehová y su postura sobre la sangre
+                    </a>
+                  )}
                 </div>
                 <div class="guia-capitulo__media" data-reveal>
                   {s.imagen ? (

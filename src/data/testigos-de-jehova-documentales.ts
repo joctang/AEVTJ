@@ -130,7 +130,7 @@ export const grupos: Grupo[] = [
           },
         ],
         accion: {
-          href: "https://www.movistarplus.es/documentales/hijos-del-fin-del-mundo/ficha?id=4264520&tipo=E",
+          href: "https://www.movistarplus.es/documentales/hijos-del-fin-del-mundo/ficha?tipo=E&id=4264517",
           etiqueta: "Consultar la serie en Movistar Plus",
         },
       },

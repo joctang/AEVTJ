@@ -30,3 +30,5 @@ _local-session-*
 # imagenes extra del backup completo de WordPress: el repo solo versiona
 # las que usa cada pagina (ya trackeadas); el resto queda solo en local.
 public/uploads/*
+# las imagenes nuevas (2026) si se versionan para que se desplieguen
+!public/uploads/2026/

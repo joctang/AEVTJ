@@ -67,6 +67,7 @@
 .tj-despues { width: min(760px, calc(100% - 64px)); margin: 40px auto 0; }
 .tj-despues p { font-size: 16.5px; line-height: 1.9; color: #435043; }
 .tj-despues p + p { margin-top: 1.2em; }
+.tj-capitulo__cta { display: inline-flex; width: fit-content; max-width: 100%; margin-top: 22px; }
 
 /* Dejar de ser Testigo: tres situaciones como regleta numerada. */
 .tj-situaciones { width: min(1180px, calc(100% - 64px)); margin: clamp(48px, 5vw, 72px) auto 0; }
