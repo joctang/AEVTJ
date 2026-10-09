@@ -60,6 +60,31 @@ const globalPartners = worldPartners.map((p) => ({ label: p.name, image: p.flag,
 const half = Math.ceil(globalPartners.length / 2);
 const partnerRows = [globalPartners.slice(0, half), globalPartners.slice(half)];
 const partnerCountryCount = supportCountries.length;
+
+const schemaOrg = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "NGO",
+      "@id": "https://victimasdetestigosdejehova.org/#organization",
+      name: "Asociación Española de Víctimas de los Testigos de Jehová",
+      alternateName: "AEVTJ",
+      url: "https://victimasdetestigosdejehova.org/",
+      logo: "https://victimasdetestigosdejehova.org/uploads/2025/10/Logo-avtj-300x300.png",
+      email: "info@victimasdetestigosdejehova.org",
+      description:
+        "Asociación que escucha, apoya y acompaña legal y psicológicamente a las víctimas de los Testigos de Jehová y la JW.ORG en España.",
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://victimasdetestigosdejehova.org/#website",
+      url: "https://victimasdetestigosdejehova.org/",
+      name: "AEVTJ — Asociación Española de Víctimas de los Testigos de Jehová",
+      inLanguage: "es",
+      publisher: { "@id": "https://victimasdetestigosdejehova.org/#organization" },
+    },
+  ],
+};
 ---
 
 <BaseLayout
@@ -67,6 +92,7 @@ const partnerCountryCount = supportCountries.length;
   suffix=""
   description="Recupera tu vida tras salir de los Testigos de Jehová. Pide apoyo legal y psicológico, cuenta tu caso, únete a la asociación."
 >
+  <script type="application/ld+json" set:html={JSON.stringify(schemaOrg)} />
   <IntroQuote />
   <div class="home-premium bg-brand-cream text-brand-ink">
     <div class="home-ambient" aria-hidden="true"></div>
