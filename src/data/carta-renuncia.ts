@@ -152,6 +152,19 @@ export const secciones: Seccion[] = [
   },
 ];
 
+// Texto literal redactado por la abogada de la AEVTJ (9-10-2026); no modificar sin su
+// revisión. Se muestra tras la sección «Qué ocurre si envías la carta».
+export const advertenciaLegal = {
+  titulo: "Advertencia legal sobre anuncios y tratamiento de datos personales",
+  parrafos: [
+    "Conviene tener en cuenta que la baja, renuncia, desasociación o expulsión de una confesión religiosa no puede limitar los derechos reconocidos por el ordenamiento jurídico español. Los procedimientos internos de una organización religiosa no sustituyen a la ley civil ni pueden prevalecer sobre los derechos fundamentales de la persona.",
+    "Además, cuando la salida de una persona se anuncia de forma que permita identificarla, ese anuncio puede implicar el tratamiento y la comunicación de datos personales especialmente protegidos, al revelar información sobre sus creencias o su pertenencia religiosa. Por eso, cualquier comunicación de este tipo debe respetar la normativa de protección de datos, así como los derechos al honor, a la intimidad y a la propia imagen.",
+    "En particular, la difusión pública de la expulsión, desasociación o desvinculación, así como las prácticas de aislamiento u ostracismo vinculadas a esa comunicación, pueden ser impugnadas o denunciadas ante las autoridades competentes cuando vulneren esos derechos.",
+  ],
+  // Sección tras la que se coloca.
+  despuesDe: "que-ocurre-si-la-envias",
+};
+
 // HTML
 export const recomendaciones = [
   "<strong>Escribe poco.</strong> Basta con comunicar tu decisión. No argumentes ni debatas sobre doctrina.",

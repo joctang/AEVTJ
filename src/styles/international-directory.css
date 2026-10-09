@@ -11,8 +11,8 @@
 [data-kind="remote"] { --kind: #0f2537; --kind-bg: #e6eef0; --kind-ink: #0f2537; }
 
 /* ── Cabecera ─────────────────────────────────────────── */
-.inner-page .site-main > section.directory-hero:first-child {
-  position: relative; overflow: clip; margin-top: -108px; padding: 170px 0 90px;
+.inner-page .site-main > section.directory-hero {
+  position: relative; overflow: clip; margin-top: 0; padding: 72px 0 90px;
   background: radial-gradient(120% 90% at 85% 20%, #1d4150 0%, #122c33 55%, #0f2537 100%); color: #f5fbdf;
 }
 .directory-hero__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: 56px; align-items: center; }
@@ -174,7 +174,7 @@
   .directory-results { grid-column: 1; }
 }
 @media (max-width: 767px) {
-  .inner-page .site-main > section.directory-hero:first-child { padding: 140px 0 80px; }
+  .inner-page .site-main > section.directory-hero { padding: 56px 0 80px; }
   .directory-hero__copy > p:not(.directory-kicker) { font-size: 16px; }
   .directory-stats { gap: 12px 28px; }
   .directory-stats dd { font-size: 32px; }

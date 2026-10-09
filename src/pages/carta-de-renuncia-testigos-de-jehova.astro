@@ -11,6 +11,7 @@ import type { ModeloTexto } from "../data/derecho-supresion";
 import {
   intro,
   postura,
+  advertenciaLegal,
   secciones,
   recomendaciones,
   avisoModelos,
@@ -63,7 +64,10 @@ const jsonLdFaq = {
     <nav class="derechos-rail" aria-label="Secciones de la página">
       <ol>
         {secciones.map((s) => (
-          <li><a href={`#${s.id}`}><span>{s.n}. {s.corto}</span></a></li>
+          <>
+            <li><a href={`#${s.id}`}><span>{s.n}. {s.corto}</span></a></li>
+            {advertenciaLegal.despuesDe === s.id && <li><a href="#advertencia-legal"><span>Advertencia legal</span></a></li>}
+          </>
         ))}
         <li><a href="#recomendaciones"><span>Si decides enviarla</span></a></li>
         <li><a href="#modelos"><span>Modelos de carta</span></a></li>
@@ -164,7 +168,22 @@ const jsonLdFaq = {
             </section>
           );
 
+          const advertencia = advertenciaLegal.despuesDe === s.id && (
+            <aside class="derechos-aviso renuncia-legal" id="advertencia-legal" role="note" aria-labelledby="advertencia-legal-titulo" data-reveal>
+              <div class="derechos-aviso__icono" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 3v18M7 21h10M5 7h14M5 7l-3 7a3 3 0 0 0 6 0zM19 7l-3 7a3 3 0 0 0 6 0z"></path>
+                </svg>
+              </div>
+              <div>
+                <h2 id="advertencia-legal-titulo">{advertenciaLegal.titulo}</h2>
+                {advertenciaLegal.parrafos.map((p) => <p>{p}</p>)}
+              </div>
+            </aside>
+          );
+
           return (
+            <>
             <section class:list={["paso", { "renuncia-paso--portada": pos === "portada" }]} id={s.id} data-reveal>
               {pos === "portada" && <figure class="renuncia-portada">{img}</figure>}
 
@@ -185,6 +204,8 @@ const jsonLdFaq = {
 
               {cierreSeccion}
             </section>
+            {advertencia}
+            </>
           );
         })}
       </div>

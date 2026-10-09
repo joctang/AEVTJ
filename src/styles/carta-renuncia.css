@@ -69,6 +69,12 @@
   .renuncia-arco img { animation: none; }
 }
 
+/* ---------- Advertencia legal (tras «Qué ocurre si envías la carta») ---------- */
+.renuncia-legal { width: 100%; border-left-color: #122c33; background: #f0f7dd; scroll-margin-top: 90px; }
+.renuncia-legal .derechos-aviso__icono { background: #122c33; color: #d8eaa4; }
+.renuncia-legal p + p { margin-top: .8em; }
+@media (max-width: 767px) { .renuncia-legal { flex-direction: column; padding: 24px; } }
+
 /* ---------- Modelos ---------- */
 .renuncia-modelos { scroll-margin-top: 60px; }
 .renuncia-aviso {

@@ -86,10 +86,10 @@
   box-shadow: 0 14px 36px #0f253714; text-decoration: none; color: inherit; overflow: hidden;
   transition: transform 450ms var(--ease-editorial), box-shadow 450ms var(--ease-editorial);
 }
-.guia-tarjeta__media { position: relative; margin: 0; aspect-ratio: 16 / 9; }
-.guia-tarjeta__frame { position: absolute; inset: 0; overflow: hidden; background: #e2edc9; }
-.guia-tarjeta__frame::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, #0f253740, transparent 55%); }
-.guia-tarjeta__frame img { width: 100%; height: 100%; object-fit: cover; object-position: center 22%; transition: transform 900ms var(--ease-editorial); }
+.guia-tarjeta__media { position: relative; margin: 0; aspect-ratio: 2 / 1; }
+.guia-tarjeta__frame { position: absolute; inset: 0; overflow: hidden; background: #f5fbdf; }
+.guia-tarjeta__frame::after { content: none; }
+.guia-tarjeta__frame img { width: 100%; height: 100%; object-fit: contain; object-position: center; background: #f5fbdf; transition: transform 900ms var(--ease-editorial); }
 .guia-tarjeta__num {
   position: absolute; left: 20px; bottom: -20px; z-index: 2;
   display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%;
@@ -150,14 +150,14 @@
 .guia-capitulo__texto strong { color: #122c33; }
 
 /* Imagen flotante (parallax gestionado por editorial.ts vía .layered-media). */
-.layered-media--guia { position: relative; aspect-ratio: 1.08; min-height: 320px; }
+.layered-media--guia { position: relative; aspect-ratio: 3 / 2; min-height: 0; }
 .layered-media--guia span { position: absolute; inset: 9% 0 0 9%; border-radius: 32px; }
 [data-variante='lima'] .layered-media--guia span { background: linear-gradient(150deg, #e6f2c3, #d5e9a6); }
 [data-variante='salvia'] .layered-media--guia span { background: linear-gradient(150deg, #e2edc9, #d3e4bd); }
 [data-variante='arena'] .layered-media--guia span { background: linear-gradient(150deg, #f3f3d8, #eef0d7); }
 .layered-media--guia img {
-  position: absolute; inset: 0 6% 6% 0; z-index: 2; width: 94%; height: 94%;
-  object-fit: cover; border-radius: 32px; box-shadow: 0 30px 70px #0f25371f;
+  position: absolute; inset: 0 5% 5% 0; z-index: 2; width: 95%; height: 95%;
+  object-fit: contain; border-radius: 0; box-shadow: none;
 }
 .layered-media--guia::after {
   content: '+'; position: absolute; right: -2%; top: -5%; z-index: 3;
@@ -350,7 +350,7 @@
   .guia-capitulo__texto { order: 2 !important; }
   .guia-capitulo--invertido .guia-capitulo__texto { order: 2; }
   .guia-capitulo--invertido .guia-capitulo__media { order: -1; }
-  .layered-media--guia { aspect-ratio: 1.25; min-height: 0; }
+  .layered-media--guia { aspect-ratio: 3 / 2; min-height: 0; }
 }
 
 @media (max-width: 767px) {
@@ -366,7 +366,7 @@
   /* Tarjetas compactas en horizontal: miniatura a la izquierda, texto a la derecha. */
   .guia-indice__grid { gap: 14px; }
   .guia-tarjeta:not(.guia-tarjeta--pasos) { flex-direction: row; border-radius: 20px; }
-  .guia-tarjeta__media { flex: 0 0 104px; aspect-ratio: auto; }
+  .guia-tarjeta__media { flex: 0 0 88px; aspect-ratio: 1 / 1; align-self: center; }
   .guia-tarjeta__num { left: 10px; top: 10px; bottom: auto; width: 30px; height: 30px; font-size: 14px; box-shadow: 0 0 0 3px #fbfdf5; }
   .guia-tarjeta__body { padding: 16px 16px 16px 18px; }
   .guia-tarjeta h3 { margin-top: 6px; font-size: 18px; }

@@ -90,12 +90,18 @@ respeta mejor las restricciones.
 ### Escena u objeto (3:2)
 
 ```
-Modern minimalist editorial illustration built from simple geometric shapes (circles, half-circles, arches, rounded rectangles). Flat colors, no outlines, subtle fine grain/noise texture over the color areas. Strict palette: deep navy (#122c33), soft teal (#2ea88f), lime (#d8eaa4), warm sand. Background: plain pale cream with a faint lime tint (#f5fbdf), generous empty space, asymmetric balanced composition. Any figures have NO facial features (no eyes, no mouth) and their heads are plain navy or teal circles, never skin tones: anonymous, universal and dignified. A single thin lime-green thread appears in the scene and carries its meaning. Calm, honest, contemporary, design-forward mood.
+Modern minimalist editorial illustration built from simple geometric shapes (circles, half-circles, arches, rounded rectangles). Flat colors, no outlines, subtle fine grain/noise texture over the color areas. Strict palette: deep navy (#122c33), soft teal (#2ea88f), lime (#d8eaa4), warm sand. Background: plain pale cream with a faint lime tint (#f5fbdf), generous empty space, asymmetric balanced composition. Any figures have NO facial features (no eyes, no mouth) and their heads are plain navy or teal circles, never skin tones: anonymous, universal and dignified. A single thin lime-green thread appears in the scene and carries its meaning. Contemporary, design-forward, emotionally honest. Let the emotional tone come only from posture, distance between figures, light and the lime thread; do not add facial expressions.
 
 Avoid: 3D render, cartoon or mascot style, outlines, glossy gradients, realistic painting, golden or sunset light, paradise or garden imagery, saturated colors, smiling faces, religious symbols, the JW.ORG logo, any text or letters, logos. Aspect ratio 3:2.
 
-Scene: [DESCRIBIR AQUÍ LA ESCENA Y QUÉ HACE EL HILO]
+Emotional tone: [DESCRIBIR EN UNA FRASE EL TONO DE ESTA ESCENA].
+Scene: [DESCRIBIR AQUÍ LA ESCENA Y QUÉ HACE EL HILO].
 ```
+
+Usa el bloque entero en cualquier conversación. Debajo añade únicamente las dos
+líneas `Emotional tone` y `Scene`; cambia la emoción según el contenido de cada
+sección. La escena debe describir cosas visibles y concretas, y aclarar qué hace el
+hilo. No pidas a la imagen que explique ideas con texto.
 
 ### Icono (1:1)
 
@@ -114,9 +120,37 @@ Icon: [DESCRIBIR LA FORMA]
 2. Al empezar, **adjuntar 2 o 3 imágenes de [`referencias/`](./referencias/)** y añadir
    al principio del prompt:
    `Use the attached images as a strict style reference: same shapes, same colors, same grain, same proportions of the figures, same thread.`
+   Si no puedes adjuntar referencias en otra conversación, pega el bloque base completo; no dependas del historial de este chat.
 3. Si sale algo fuera de estilo, no corregir a mano: pedir otra versión recordando la
    regla que ha fallado (ej.: `Again, but the heads must be plain navy circles, no skin tones.`).
 4. Descargar en PNG, a la máxima resolución.
+
+## 6.1 Ejemplos de escena
+
+**Dudas iniciales — curiosidad serena, con algo de incertidumbre.**
+
+```text
+Emotional tone: quiet curiosity and uncertainty, with room to decide at one's own pace.
+Scene: objects only: a closed book beside a slightly open door; the lime thread leads from under the book toward the narrow opening.
+```
+
+**Bienvenida intensa — calidez inicial, con una pequeña distancia crítica.**
+
+```text
+Emotional tone: warmth and belonging, with a restrained sense that the welcome is unusually immediate.
+Scene: four simple figures stand close together and offer one open hand to a fifth figure at the edge of the group; one lime thread passes through their hands, gently connecting them.
+```
+
+**Pérdida de vínculos — ausencia, tratada con respeto.**
+
+```text
+Emotional tone: absence and loss, devastating but restrained and respectful; nobody is shown.
+Scene: objects only: one empty chair and a small personal bag beside a dark doorway; the lime thread lies across the floor, cut in the middle, its two ends not touching.
+```
+
+No repitas automáticamente estos ejemplos. Ajusta objetos y emoción al contenido
+real de la sección y evita mostrar como hecho universal una experiencia que varía
+entre familias y congregaciones.
 
 ## 7. Control de calidad antes de usarla
 
@@ -129,6 +163,18 @@ Icon: [DESCRIBIR LA FORMA]
 - [ ] Icono: ¿se entiende reducido a 64 px?
 
 ## 8. Cómo meterla en la web
+
+### Antes de sustituir imágenes de una página
+
+1. Revisa el hero y cada imagen de contenido por separado. Una fotografía editorial,
+   documental o de prensa puede quedarse si encaja; no se sustituye automáticamente.
+2. Haz una tabla de ubicación actual, tema y sustitución propuesta. Cambia solo las
+   imágenes incluidas en el encargo.
+3. Conserva los originales y las imágenes de otras páginas. Reutiliza un asset solo
+   cuando su escena encaje claramente y la reutilización sea intencionada; no cruces
+   referencias de rutas por parecido de nombre.
+4. Mantén el `alt` descriptivo y revisa las versiones WebP, el recorte y el diseño
+   móvil antes de darlo por terminado.
 
 1. Guardar el PNG original en `06_Contenido/<pagina>/ilustraciones/` con el **mismo nombre
    que tendrá en la web** (ej. `06_Contenido/testigos-de-jehova/ilustraciones/tdj-origen-imprenta-hilo.png`).
@@ -176,6 +222,18 @@ en `referencias-visuales/`). Versiones web en `public/uploads/2026/10/`.
 | `tdj-silla-vacia-hilo-cortado` (reutilizada) | Escena | Carta de renuncia · 3. Qué ocurre si envías la carta |
 | `tdj-renuncia-arco-hilo-libre` | Escena | Carta de renuncia · 4. Por qué la AEVTJ desaconseja la carta |
 | `tdj-renuncia-sobre-hilo` | Objeto | Carta de renuncia · 5. Cuándo la carta sí puede ayudarte |
+
+Ilustraciones aplicadas a `/guia-para-salir-de-los-testigos-de-jehova/` (el hero
+fotográfico se conserva):
+
+| Archivo | Uso |
+|---|---|
+| `tdj-libro-puerta-hilo` | Capítulo 1 · El comienzo |
+| `tdj-renuncia-comunidad-hilo` (reutilizada) | Capítulo 2 · Love bombing |
+| `tdj-direccion-mesa-sillas-hilo` | Capítulo 3 · La vida dentro |
+| `tdj-guia-salida-bautismo-hilo` | Capítulo 4 · El bautismo |
+| `tdj-guia-salida-dudas-hilo` | Capítulo 5 · Empezar a cuestionar |
+| `tdj-guia-salida-impacto-emocional-hilo-cortado` | Capítulo 6 · El impacto emocional |
 
 Escenas de ejemplo para nuevas ilustraciones (formato de la línea `Scene:`):
 
