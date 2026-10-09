@@ -9,16 +9,20 @@ import Breadcrumbs from "../components/Breadcrumbs.astro";
 
 interface Props {
   title: string;
+  suffix?: string;
   description?: string;
   breadcrumbs?: { label: string; href?: string }[];
   image?: string;
+  noindex?: boolean;
 }
 
 const {
   title,
+  suffix = " · AEVTJ",
   description = "Asociación Española de Víctimas de los Testigos de Jehová y la JW.ORG. Escuchamos, apoyamos y ayudamos a recuperar la vida tras salir de la organización.",
   breadcrumbs,
   image,
+  noindex = false,
 } = Astro.props;
 const canonicalPath = Astro.url.pathname.endsWith("/") ? Astro.url.pathname : `${Astro.url.pathname}/`;
 const canonicalUrl = `https://victimasdetestigosdejehova.org${canonicalPath}`;
@@ -34,8 +38,9 @@ const twitterCard = image ? "summary_large_image" : "summary";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="/uploads/2025/10/Logo-avtj-300x300.png" />
-    <title>{title} · AEVTJ</title>
+    <title>{title}{suffix}</title>
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, follow" />}
     <link rel="canonical" href={canonicalUrl} />
     <meta property="og:site_name" content="AEVTJ" />
     <meta property="og:locale" content="es_ES" />
