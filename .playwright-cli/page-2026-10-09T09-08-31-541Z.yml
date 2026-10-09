@@ -1,0 +1,397 @@
+- generic [active] [ref=e1]:
+  - link "Saltar al contenido" [ref=e2] [cursor=pointer]:
+    - /url: "#contenido"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img "AEVTJ - Asociación Española de Víctimas de los Testigos de Jehová" [ref=e6]
+      - navigation "Menú principal" [ref=e7]:
+        - list [ref=e8]:
+          - listitem [ref=e9]:
+            - link "¿Quiénes somos?" [ref=e10] [cursor=pointer]:
+              - /url: /quienes-somos/
+          - listitem [ref=e11]:
+            - link "Noticias" [ref=e12] [cursor=pointer]:
+              - /url: /noticias/
+          - listitem [ref=e13]:
+            - link "Documentos" [ref=e14] [cursor=pointer]:
+              - /url: /recursos-de-ayuda/
+          - listitem [ref=e17]:
+            - link "Hazte socio / Donaciones" [ref=e18] [cursor=pointer]:
+              - /url: /hazte-socio/
+          - listitem [ref=e19]:
+            - link "Otras asociaciones" [ref=e20] [cursor=pointer]:
+              - /url: /otras-asociaciones/
+          - listitem [ref=e21]:
+            - link "Contacto" [ref=e22] [cursor=pointer]:
+              - /url: /contacto/
+      - generic [ref=e23]:
+        - link "Facebook" [ref=e24] [cursor=pointer]:
+          - /url: https://www.facebook.com/asoc.aevtj
+        - link "Youtube" [ref=e27] [cursor=pointer]:
+          - /url: https://www.youtube.com/@AEVTJ
+        - link "X" [ref=e30] [cursor=pointer]:
+          - /url: https://x.com/aevtj
+        - link "Instagram" [ref=e33] [cursor=pointer]:
+          - /url: https://www.instagram.com/asoc.aevtj/
+  - main [ref=e36]:
+    - navigation "Miga de pan" [ref=e37]:
+      - list [ref=e39]:
+        - listitem [ref=e40]:
+          - link "Inicio" [ref=e41] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=e42]:
+          - text: /
+          - generic [ref=e43]: Carta de renuncia
+    - generic [ref=e44]:
+      - generic [ref=e45]:
+        - img "Ilustración geométrica de un grupo que ofrece apoyo a través de un hilo verde, con espacio abierto para el texto." [ref=e46]
+        - generic [ref=e47]:
+          - paragraph [ref=e48]: Salir de los Testigos · Carta de renuncia
+          - 'heading "Carta de renuncia a los Testigos de Jehová: ¿hace falta?" [level=1] [ref=e49]'
+          - paragraph [ref=e50]:
+            - strong [ref=e51]: No. No necesitas escribir una carta para dejar de ser Testigo de Jehová.
+            - text: La ley española reconoce tu derecho a abandonar una religión sin que nadie te lo impida, y la propia organización acepta que una persona deje de participar sin presentar ninguna renuncia.
+          - generic [ref=e52]:
+            - link "Leer antes de decidir ↗" [ref=e53] [cursor=pointer]:
+              - /url: "#nadie-tiene-que-darte-permiso"
+            - link "Ir a los modelos ↗" [ref=e54] [cursor=pointer]:
+              - /url: "#modelos"
+      - note "La postura de la AEVTJ" [ref=e56]:
+        - generic [ref=e61]:
+          - heading "La postura de la AEVTJ" [level=2] [ref=e62]
+          - paragraph [ref=e63]: Desde la AEVTJ no recomendamos enviarla. Aun así, sabemos que a algunas personas les sirve, sobre todo si quieren dejar de constar como miembros o que se borren sus datos. Por eso, al final de esta página tienes dos modelos.
+      - generic [ref=e65]:
+        - generic [ref=e66]:
+          - generic [ref=e67]:
+            - generic [aria-hidden] [ref=e68]: "1"
+            - heading "Nadie tiene que darte permiso" [level=2] [ref=e69]
+          - paragraph [ref=e70]: La Ley Orgánica de Libertad Religiosa reconoce el derecho de toda persona a «cambiar de confesión o abandonar la que tenía», sin coacción (artículo 2.1.a). La Constitución añade que nadie puede ser obligado a declarar sobre sus creencias (artículo 16).
+          - paragraph [ref=e71]: La organización dice lo mismo a su manera. Según jw.org, se puede renunciar de palabra, por escrito o con una conducta que muestre que ya no se quiere pertenecer, y los ancianos no pueden obligar a nadie a seguir siendo Testigo.
+        - generic [ref=e72]:
+          - generic [ref=e73]:
+            - generic [aria-hidden] [ref=e74]: "2"
+            - heading "Tres situaciones distintas" [level=2] [ref=e75]
+          - generic [ref=e76]:
+            - generic [ref=e77]:
+              - heading "Dejar de asistir" [level=3] [ref=e78]
+              - paragraph [ref=e79]: "No envías nada. La organización no lo considera una renuncia: sigues constando como Testigo, aunque inactivo. Pueden visitarte o intentar que vuelvas."
+            - generic [ref=e80]:
+              - heading "Renunciar o desasociarte" [level=3] [ref=e81]
+              - paragraph [ref=e82]: Comunicas formalmente que ya no quieres ser Testigo. Es el caso de la carta.
+            - generic [ref=e83]:
+              - heading "Ser sacado de la congregación" [level=3] [ref=e84]
+              - paragraph [ref=e85]: Antes se decía «expulsado». Lo deciden los ancianos en su procedimiento interno. No depende de una carta tuya.
+          - paragraph [ref=e86]:
+            - text: Si estás valorando cómo salir, te puede ayudar la
+            - link "guía para salir de los Testigos de Jehová" [ref=e87] [cursor=pointer]:
+              - /url: /guia-para-salir-de-los-testigos-de-jehova/
+            - text: .
+        - generic [ref=e88]:
+          - figure [ref=e89]:
+            - img "Ilustración geométrica de una tarta de cumpleaños y un regalo sin abrir, separados por un hilo verde cortado." [ref=e90]
+          - generic [ref=e91]:
+            - generic [aria-hidden] [ref=e92]: "3"
+            - heading "Qué ocurre si envías la carta" [level=2] [ref=e93]
+          - paragraph [ref=e94]: "Las publicaciones de la organización describen lo que sucede tras una renuncia formal:"
+          - list [ref=e95]:
+            - listitem [ref=e96]:
+              - strong [ref=e97]: Se anuncia en la congregación.
+              - text: El libro
+              - emphasis [ref=e98]: Organizados para hacer la voluntad de Jehová
+              - text: "indica que se hace un breve anuncio: «[Nombre] ya no es testigo de Jehová». No se dice si la persona renunció o fue sacada."
+            - listitem [ref=e99]:
+              - strong [ref=e100]: Se te trata como a una persona expulsada.
+              - text: El mismo libro equipara la desasociación con la expulsión. Según sus normas, los miembros dejan de relacionarse socialmente contigo.
+            - listitem [ref=e101]:
+              - strong [ref=e102]: La familia que vive contigo mantiene la convivencia,
+              - text: según jw.org.
+          - paragraph [ref=e103]: Cada familia y cada congregación lo viven de forma distinta. Hay quien mantiene el contacto con los suyos y hay quien lo pierde. Pero una vez anunciada, la renuncia tiene las mismas consecuencias sociales que una expulsión.
+        - generic [ref=e104]:
+          - img "Ilustración geométrica de una persona que sale de un pasillo oscuro hacia un espacio abierto, con un hilo verde libre tras ella." [ref=e107]
+          - generic [ref=e108]:
+            - generic [ref=e109]:
+              - generic [aria-hidden] [ref=e110]: "4"
+              - heading "Por qué la AEVTJ desaconseja la carta" [level=2] [ref=e111]
+            - paragraph [ref=e112]: "Enviar una carta de renuncia es, en la práctica, pedir a la organización que registre tu salida y la anuncie. Es seguir dándole un papel en tu vida: aceptar que su sistema disciplinario interno decida cómo te ven y te tratan tus familiares y amistades."
+            - paragraph [ref=e113]:
+              - strong [ref=e114]: Tu libertad para irte no depende de ellos.
+              - text: No necesitas su aprobación, ni una reunión con los ancianos, ni un anuncio en el Salón del Reino para dejar de creer o de participar.
+            - paragraph [ref=e115]: Además, la carta suele adelantar el aislamiento social. Muchas personas prefieren alejarse poco a poco y conservar sus relaciones mientras puedan.
+        - generic [ref=e116]:
+          - generic [ref=e117]:
+            - generic [ref=e118]:
+              - generic [ref=e119]:
+                - generic [aria-hidden] [ref=e120]: "5"
+                - heading "Cuándo la carta sí puede ayudarte" [level=2] [ref=e121]
+              - paragraph [ref=e122]: "Aun así, la decisión es tuya, y hay situaciones en las que puede tener sentido:"
+              - list [ref=e123]:
+                - listitem [ref=e124]:
+                  - strong [ref=e125]: Quieres dejar de constar como miembro.
+                  - text: Mientras no renuncies, la organización te sigue considerando Testigo, aunque lleves años sin ir.
+                - listitem [ref=e126]:
+                  - strong [ref=e127]: Quieres que borren tus datos.
+                  - text: La organización ha llegado a denegar el borrado de datos alegando que la persona seguía siendo miembro. Tras la salida, el Tribunal Supremo limitó lo que puede conservar a tu nombre, la fecha de bautismo y la fecha de salida, y solo por si algún día pides volver.
+                - listitem [ref=e128]:
+                  - strong [ref=e129]: Quieres que dejen de visitarte o llamarte
+                  - text: para que vuelvas.
+                - listitem [ref=e130]:
+                  - strong [ref=e131]: Te importa hacerlo de forma coherente
+                  - text: con lo que piensas, o cerrar esa etapa con un acto concreto.
+            - figure [ref=e132]:
+              - img "Ilustración geométrica de dos personas que se acompañan mientras unen sus manos sobre un hilo verde; hay un sobre sin marcas en una mesa cercana." [ref=e133]
+          - paragraph [ref=e134]: "Sobre las cifras: los recuentos públicos de la organización solo incluyen a los «publicadores», las personas que predican e informan su actividad. Si ya no participas, no apareces en esas cifras, envíes o no la carta. La carta sí cambia cómo constas en sus registros internos."
+        - generic [ref=e135]:
+          - generic [ref=e136]:
+            - generic [aria-hidden] [ref=e137]: "6"
+            - 'heading "Renuncia y datos personales: dos cosas distintas" [level=2] [ref=e138]'
+          - list [ref=e139]:
+            - listitem [ref=e140]:
+              - text: La
+              - strong [ref=e141]: carta de renuncia
+              - text: comunica que dejas de pertenecer. Por sí sola no borra tus datos.
+            - listitem [ref=e142]:
+              - text: El
+              - strong [ref=e143]: derecho de supresión
+              - text: es la petición legal para que eliminen tus datos personales. Se dirige al Delegado de Protección de Datos de la organización. Te lo explicamos en la
+              - link "guía del derecho de supresión" [ref=e144] [cursor=pointer]:
+                - /url: /derecho-de-supresion/
+              - text: .
+          - paragraph [ref=e145]: "Si quieres las dos cosas, puedes hacerlas en un solo escrito: es el modelo 2."
+      - region [ref=e146]:
+        - generic [ref=e147]:
+          - paragraph [ref=e148]: Antes de enviar
+          - heading "Si decides enviarla" [level=2] [ref=e149]
+          - list [ref=e150]:
+            - listitem [ref=e151]:
+              - text: ✓
+              - strong [ref=e152]: Escribe poco.
+              - text: Basta con comunicar tu decisión. No argumentes ni debatas sobre doctrina.
+            - listitem [ref=e153]:
+              - text: ✓
+              - strong [ref=e154]: No pidas permiso.
+              - text: Es una comunicación, no una solicitud.
+            - listitem [ref=e155]:
+              - text: ✓
+              - strong [ref=e156]: Guarda una copia
+              - text: y una prueba de envío o de entrega (correo certificado, burofax, correo electrónico con acuse o entrega en mano con recibí firmado).
+            - listitem [ref=e157]:
+              - text: ✓
+              - strong [ref=e158]: No tienes que acudir a ninguna reunión
+              - text: para hablar de ella.
+            - listitem [ref=e159]:
+              - text: ✓
+              - strong [ref=e160]: Piensa antes en tu apoyo.
+              - text: Si temes perder relaciones, prepara antes a quién puedes acudir. Puedes
+              - link "contactar con nosotros" [ref=e161] [cursor=pointer]:
+                - /url: /contacto/
+              - text: .
+      - region [ref=e162]:
+        - generic [ref=e163]:
+          - paragraph [ref=e164]: Opcional
+          - heading "Modelos de carta" [level=2] [ref=e165]
+          - note [ref=e166]:
+            - strong [ref=e167]: Modelos orientativos.
+            - text: No sustituyen el asesoramiento jurídico. Adáptalos a tu caso antes de enviarlos.
+          - paragraph [ref=e168]: ¿Cuál elegir?
+          - list [ref=e169]:
+            - listitem [ref=e170]:
+              - strong [ref=e171]: "Modelo 1. Solo renuncia:"
+              - text: si solo quieres comunicar que dejas de pertenecer. Se envía a los ancianos de tu congregación.
+            - listitem [ref=e172]:
+              - strong [ref=e173]: "Modelo 2. Renuncia y supresión de datos:"
+              - text: si además quieres que borren tus datos. Se envía al Delegado de Protección de Datos.
+            - listitem [ref=e174]:
+              - text: Si
+              - strong [ref=e175]: solo
+              - text: quieres que borren tus datos, sin renunciar, usa la
+              - link "guía del derecho de supresión" [ref=e176] [cursor=pointer]:
+                - /url: /derecho-de-supresion/
+              - text: .
+          - article [ref=e177]:
+            - heading "Modelo 1. Solo renuncia" [level=3] [ref=e178]
+            - paragraph [ref=e179]: Envíalo al cuerpo de ancianos de tu congregación.
+            - generic [ref=e180]:
+              - generic [ref=e181]:
+                - paragraph [ref=e182]: Texto de la carta
+                - button "Copiar texto" [ref=e183] [cursor=pointer]:
+                  - generic [aria-hidden] [ref=e184]: ⧉
+                  - text: Copiar texto
+              - generic [ref=e185]:
+                - paragraph [ref=e186]: "[Nombre y apellidos] [Dirección o correo electrónico de contacto] [Lugar], a [fecha]"
+                - paragraph [ref=e187]: Al cuerpo de ancianos de la congregación [nombre de la congregación] de los Testigos de Jehová
+                - paragraph [ref=e188]: Por medio de este escrito comunico que, por decisión libre y personal, dejo de ser testigo de Jehová y de formar parte de esa congregación a partir de la fecha de esta carta.
+                - paragraph [ref=e189]: Esta carta es una comunicación, no una solicitud. No requiere respuesta, aprobación ni reunión, y no deseo exponer ni tratar los motivos de mi decisión.
+                - paragraph [ref=e190]: Les pido que respeten esta decisión y que no se pongan en contacto conmigo para tratar este asunto.
+                - paragraph [ref=e191]: Atentamente,
+                - paragraph [ref=e192]: "[Firma] [Nombre y apellidos]"
+              - generic [aria-hidden] [ref=e193]: "[Nombre y apellidos] [Dirección o correo electrónico de contacto] [Lugar], a [fecha] Al cuerpo de ancianos de la congregación [nombre de la congregación] de los Testigos de Jehová Por medio de este escrito comunico que, por decisión libre y personal, dejo de ser testigo de Jehová y de formar parte de esa congregación a partir de la fecha de esta carta. Esta carta es una comunicación, no una solicitud. No requiere respuesta, aprobación ni reunión, y no deseo exponer ni tratar los motivos de mi decisión. Les pido que respeten esta decisión y que no se pongan en contacto conmigo para tratar este asunto. Atentamente, [Firma] [Nombre y apellidos]"
+              - status [ref=e194]
+          - article [ref=e195]:
+            - heading "Modelo 2. Renuncia y supresión de datos" [level=3] [ref=e196]
+            - paragraph [ref=e197]: "Envíalo al Delegado de Protección de Datos:"
+            - generic [ref=e198]:
+              - link "DataProtectionOfficer.ES@jw.org" [ref=e199] [cursor=pointer]:
+                - /url: mailto:DataProtectionOfficer.ES@jw.org
+              - button "Copiar" [ref=e200] [cursor=pointer]
+              - status
+            - generic [ref=e201]:
+              - generic [ref=e202]:
+                - paragraph [ref=e203]: Texto de la carta
+                - button "Copiar texto" [ref=e204] [cursor=pointer]:
+                  - generic [aria-hidden] [ref=e205]: ⧉
+                  - text: Copiar texto
+              - generic [ref=e206]:
+                - paragraph [ref=e207]:
+                  - strong [ref=e208]: "Asunto:"
+                  - text: Renuncia expresa a los Testigos de Jehová y ejercicio de los derechos de supresión y oposición
+                - paragraph [ref=e209]: "Al Delegado de Protección de Datos:"
+                - paragraph [ref=e210]: Por medio del presente escrito, manifiesto de forma expresa, libre e inequívoca mi decisión de dejar de pertenecer a los Testigos de Jehová y de no mantener ningún vínculo religioso con dicha organización.
+                - paragraph [ref=e211]: Asimismo, ejerzo mi derecho de supresión de mis datos personales, conforme al artículo 17 del Reglamento (UE) 2016/679 (RGPD), y mi derecho de oposición al tratamiento de mis datos, conforme a su artículo 21.
+                - paragraph [ref=e212]: "Por tanto, solicito:"
+                - paragraph [ref=e213]: 1. Que se supriman todos mis datos personales que obren en poder de la organización, sus congregaciones, responsables, colaboradores o sistemas de información, salvo aquellos cuya conservación sea legalmente obligatoria. 2. Que se deje de utilizar mi nombre, datos de contacto, domicilio, teléfono, correo electrónico, fotografías, información sobre mi situación personal o cualquier otra información que permita identificarme, para fines religiosos, administrativos, de contacto, visitas, llamadas, comunicaciones o cualquier otra actividad. 3. Que no se me contacte por ningún medio, directamente o a través de terceras personas, con fines religiosos ni para tratar de modificar o cuestionar mi decisión. 4. Que, cuando proceda, se comunique esta solicitud de supresión a los terceros a quienes se hayan comunicado mis datos, conforme al artículo 19 del RGPD. 5. Que se me confirme por escrito la recepción de esta solicitud y las actuaciones realizadas.
+                - paragraph [ref=e214]: Si determinados datos no pudieran suprimirse por existir una obligación legal de conservación, solicito que se me indique qué datos se conservan, durante cuánto tiempo y con qué base jurídica, y que queden bloqueados y no se utilicen para ninguna otra finalidad.
+                - paragraph [ref=e215]: Esta decisión no requiere explicación ni justificación. Solicito que esta petición se tramite en el plazo previsto en el RGPD y en la Ley Orgánica 3/2018, de Protección de Datos Personales y garantía de los derechos digitales.
+                - paragraph [ref=e216]: A efectos de identificación, adjunto copia de mi documento de identidad.
+                - paragraph [ref=e217]: En [lugar], a [fecha].
+                - paragraph [ref=e218]: "[Firma] Nombre y apellidos: [ ] DNI/NIE/Pasaporte: [ ] Correo electrónico a efectos de notificaciones: [ ]"
+              - generic [aria-hidden] [ref=e219]: "Asunto: Renuncia expresa a los Testigos de Jehová y ejercicio de los derechos de supresión y oposición Al Delegado de Protección de Datos: Por medio del presente escrito, manifiesto de forma expresa, libre e inequívoca mi decisión de dejar de pertenecer a los Testigos de Jehová y de no mantener ningún vínculo religioso con dicha organización. Asimismo, ejerzo mi derecho de supresión de mis datos personales, conforme al artículo 17 del Reglamento (UE) 2016/679 (RGPD), y mi derecho de oposición al tratamiento de mis datos, conforme a su artículo 21. Por tanto, solicito: 1. Que se supriman todos mis datos personales que obren en poder de la organización, sus congregaciones, responsables, colaboradores o sistemas de información, salvo aquellos cuya conservación sea legalmente obligatoria. 2. Que se deje de utilizar mi nombre, datos de contacto, domicilio, teléfono, correo electrónico, fotografías, información sobre mi situación personal o cualquier otra información que permita identificarme, para fines religiosos, administrativos, de contacto, visitas, llamadas, comunicaciones o cualquier otra actividad. 3. Que no se me contacte por ningún medio, directamente o a través de terceras personas, con fines religiosos ni para tratar de modificar o cuestionar mi decisión. 4. Que, cuando proceda, se comunique esta solicitud de supresión a los terceros a quienes se hayan comunicado mis datos, conforme al artículo 19 del RGPD. 5. Que se me confirme por escrito la recepción de esta solicitud y las actuaciones realizadas. Si determinados datos no pudieran suprimirse por existir una obligación legal de conservación, solicito que se me indique qué datos se conservan, durante cuánto tiempo y con qué base jurídica, y que queden bloqueados y no se utilicen para ninguna otra finalidad. Esta decisión no requiere explicación ni justificación. Solicito que esta petición se tramite en el plazo previsto en el RGPD y en la Ley Orgánica 3/2018, de Protección de Datos Personales y garantía de los derechos digitales. A efectos de identificación, adjunto copia de mi documento de identidad. En [lugar], a [fecha]. [Firma] Nombre y apellidos: [ ] DNI/NIE/Pasaporte: [ ] Correo electrónico a efectos de notificaciones: [ ]"
+              - status [ref=e220]
+            - paragraph [ref=e221]:
+              - text: Si responden pidiendo tu congregación o no atienden la petición, sigue los pasos 2 a 4 de la
+              - link "guía del derecho de supresión" [ref=e222] [cursor=pointer]:
+                - /url: /derecho-de-supresion/
+              - text: .
+      - region [ref=e223]:
+        - generic [ref=e224]:
+          - paragraph [ref=e225]: Dudas habituales
+          - heading "Preguntas frecuentes" [level=2] [ref=e226]
+          - generic [ref=e227]:
+            - group [ref=e228]:
+              - heading "¿Es obligatorio escribir una carta para dejar de ser Testigo de Jehová?" [level=3] [ref=e230] [cursor=pointer]
+            - group [ref=e232]:
+              - heading "¿Qué pasa si dejo de ir a las reuniones sin enviar nada?" [level=3] [ref=e234] [cursor=pointer]
+            - group [ref=e236]:
+              - heading "¿Anunciarán mi renuncia en la congregación?" [level=3] [ref=e238] [cursor=pointer]
+            - group [ref=e240]:
+              - heading "¿Me pueden obligar a reunirme con los ancianos?" [level=3] [ref=e242] [cursor=pointer]
+            - group [ref=e244]:
+              - heading "¿La carta de renuncia borra mis datos?" [level=3] [ref=e246] [cursor=pointer]
+            - group [ref=e248]:
+              - heading "¿Qué datos pueden guardar si me voy?" [level=3] [ref=e250] [cursor=pointer]
+            - group [ref=e252]:
+              - heading "¿Puedo volver a ser Testigo después de renunciar?" [level=3] [ref=e254] [cursor=pointer]
+          - generic [ref=e256]:
+            - paragraph [ref=e257]: Fuentes
+            - list [ref=e258]:
+              - listitem [ref=e259]:
+                - link "Ley Orgánica 7/1980, de Libertad Religiosa" [ref=e260] [cursor=pointer]:
+                  - /url: https://www.boe.es/buscar/act.php?id=BOE-A-1980-15955
+                - text: ", art. 2.1.a (BOE)."
+              - listitem [ref=e261]:
+                - link "Constitución Española" [ref=e262] [cursor=pointer]:
+                  - /url: https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229
+                - text: ", art. 16 (BOE)."
+              - listitem [ref=e263]:
+                - link "¿Puede una persona dejar de ser testigo de Jehová?" [ref=e264] [cursor=pointer]:
+                  - /url: https://www.jw.org/es/testigos-de-jehov%C3%A1/preguntas-frecuentes/renunciar/
+                - text: (jw.org).
+              - listitem [ref=e265]:
+                - link [ref=e266] [cursor=pointer]:
+                  - /url: https://wol.jw.org/es/wol/d/r4/lp-s/1102014944
+                  - emphasis [ref=e267]: Organizados para hacer la voluntad de Jehová
+                  - text: ", cap. 14, «La desasociación»"
+                - text: (wol.jw.org).
+              - listitem [ref=e268]:
+                - link "¿Cómo tratan los Testigos de Jehová a quienes ya no pertenecen a su religión?" [ref=e269] [cursor=pointer]:
+                  - /url: https://www.jw.org/es/testigos-de-jehov%C3%A1/preguntas-frecuentes/sacados-de-la-congregaci%C3%B3n/
+                - text: (jw.org).
+              - listitem [ref=e270]:
+                - link "Resolución de la AEPD E/05239/2020" [ref=e271] [cursor=pointer]:
+                  - /url: https://www.aepd.es/documento/e-05239-2020.pdf
+                - text: (reclamación de la AEVTJ, 2019).
+              - listitem [ref=e272]: Tribunal Supremo, Sala de lo Contencioso-Administrativo, sentencia 698/2021, de 22 de febrero.
+      - region [ref=e273]:
+        - generic [ref=e274]:
+          - heading "Tu decisión no necesita su permiso." [level=2] [ref=e275]
+          - paragraph [ref=e276]: Envíes o no una carta, dejar de creer o de participar es un derecho tuyo. Si estás pasando por este momento y quieres hablarlo, en la AEVTJ te escuchamos.
+          - generic [ref=e277]:
+            - link "Habla con nosotros ↗" [ref=e278] [cursor=pointer]:
+              - /url: /contacto
+            - link "Guía para salir ↗" [ref=e279] [cursor=pointer]:
+              - /url: /guia-para-salir-de-los-testigos-de-jehova/
+  - contentinfo [ref=e280]:
+    - generic [ref=e281]:
+      - generic [ref=e282]:
+        - generic [ref=e283]:
+          - img "AEVTJ" [ref=e284]
+          - paragraph [ref=e285]: Asociación Española de Víctimas de los Testigos de Jehová y la JW.ORG. Estamos aquí para escucharte, ayudarte a recuperar tu vida y darte el apoyo que necesitas para dejar atrás la organización.
+          - generic [ref=e286]:
+            - link "Facebook" [ref=e287] [cursor=pointer]:
+              - /url: https://www.facebook.com/asoc.aevtj
+            - link "Youtube" [ref=e290] [cursor=pointer]:
+              - /url: https://www.youtube.com/@AEVTJ
+            - link "X" [ref=e293] [cursor=pointer]:
+              - /url: https://x.com/aevtj
+            - link "Instagram" [ref=e296] [cursor=pointer]:
+              - /url: https://www.instagram.com/asoc.aevtj/
+        - navigation "Menú de pie de página" [ref=e299]:
+          - heading "Menú" [level=2] [ref=e300]
+          - list [ref=e301]:
+            - listitem [ref=e302]:
+              - link "¿Quiénes somos?" [ref=e303] [cursor=pointer]:
+                - /url: /quienes-somos/
+            - listitem [ref=e304]:
+              - link "Noticias" [ref=e305] [cursor=pointer]:
+                - /url: /noticias/
+            - listitem [ref=e306]:
+              - link "Documentos" [ref=e307] [cursor=pointer]:
+                - /url: /legal/
+            - listitem [ref=e308]:
+              - link "Hazte socio / Donaciones" [ref=e309] [cursor=pointer]:
+                - /url: /hazte-socio/
+            - listitem [ref=e310]:
+              - link "Otras asociaciones" [ref=e311] [cursor=pointer]:
+                - /url: /otras-asociaciones/
+            - listitem [ref=e312]:
+              - link "Contacto" [ref=e313] [cursor=pointer]:
+                - /url: /contacto/
+        - generic [ref=e314]:
+          - heading "Boletín de noticias" [level=2] [ref=e315]
+          - paragraph [ref=e316]: Recibe nuestro boletín de noticias mensual de forma totalmente gratuita y mantente informado.
+          - generic [ref=e317]:
+            - textbox "Tu correo electrónico" [ref=e318]
+            - generic [ref=e319]:
+              - checkbox "Quiero recibir la newsletter y acepto el tratamiento de mi email para ese fin." [ref=e320]
+              - generic [ref=e321]: Quiero recibir la newsletter y acepto el tratamiento de mi email para ese fin.
+            - paragraph [ref=e322]:
+              - text: La suscripción se gestionará mediante Mailchimp. Tratamos tus datos según nuestra
+              - link "Política de Privacidad" [ref=e323] [cursor=pointer]:
+                - /url: /politica-de-privacidad/
+              - text: .
+            - button "Suscribirme" [ref=e324] [cursor=pointer]
+            - status
+      - generic [ref=e325]:
+        - paragraph [ref=e326]: © 2026 Asociación Española de Victimas de los Testigos de Jehová
+        - list [ref=e327]:
+          - listitem [ref=e328]:
+            - link "Aviso Legal" [ref=e329] [cursor=pointer]:
+              - /url: /aviso-legal/
+          - listitem [ref=e330]:
+            - link "Política de Cookies" [ref=e331] [cursor=pointer]:
+              - /url: /politica-de-cookies/
+          - listitem [ref=e332]:
+            - link "Política de privacidad" [ref=e333] [cursor=pointer]:
+              - /url: /politica-de-privacidad/
+  - generic [ref=e335]:
+    - paragraph [ref=e336]:
+      - text: Utilizamos tecnologías necesarias para que la web funcione y, si lo aceptas, herramientas de analítica y vídeos incrustados de plataformas externas. No usamos publicidad personalizada. Consulta la
+      - link "Política de cookies" [ref=e337] [cursor=pointer]:
+        - /url: /politica-de-cookies/
+      - text: para más información.
+    - generic [ref=e338]:
+      - button "Denegar" [ref=e339] [cursor=pointer]
+      - button "Aceptar" [ref=e340] [cursor=pointer]
+      - link "Ver preferencias" [ref=e341] [cursor=pointer]:
+        - /url: /politica-de-cookies/
