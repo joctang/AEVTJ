@@ -64,16 +64,16 @@ export const grupos: Grupo[] = [
         titulo: "Sobrevivir al Paraíso: más allá de los Testigos de Jehová",
         anio: "2026",
         formato: "Docuserie · 3 episodios",
-        origen: "España · HBO Max / Movistar Plus",
+        origen: "España · HBO Max (producción original)",
         arte: "paraiso",
         portada: {
           src: "/uploads/2026/10/sobrevivir-al-paraiso-portada-movistar-plus.jpg",
           alt: "Portada de Sobrevivir al Paraíso: un hombre sostiene una Biblia ante un fondo nuboso; el título de la docuserie aparece en amarillo.",
-          credito: "Portada: Movistar Plus+",
-          fuente: "https://www.movistarplus.es/documentales/sobrevivir-al-paraiso-mas-alla-de-los-testigos-de-jehova/ficha?id=4242958&tipo=E",
+          credito: "Portada: HBO Max",
+          fuente: "https://press-spain.max.com/post/el-documental-original-sobrevivir-al-paraiso-mas-alla-de-los-tes",
         },
         descripcion:
-          "Docuserie española de tres episodios, dirigida por Pablo Aguinaga y producida por Boxfish. Reúne relatos de antiguos miembros y aborda sus experiencias dentro de la organización y tras dejarla. Movistar Plus muestra la ficha y señala que está incluida en determinados packs; consulta las condiciones vigentes antes de contratar.",
+          "Docuserie española original de HBO Max, producida por Boxfish y dirigida por Pablo Aguinaga. Sus tres episodios reúnen relatos de antiguos miembros y abordan sus experiencias dentro de la organización y tras dejarla. También figura en el catálogo de Movistar Plus+; consulta allí las condiciones vigentes de acceso.",
         fuentes: [
           {
             href: "https://press-spain.max.com/post/el-documental-original-sobrevivir-al-paraiso-mas-alla-de-los-tes",
