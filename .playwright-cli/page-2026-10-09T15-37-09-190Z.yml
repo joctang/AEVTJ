@@ -1,0 +1,533 @@
+- generic [active] [ref=f1e1]:
+  - link "Saltar al contenido" [ref=f1e2] [cursor=pointer]:
+    - /url: "#contenido"
+  - banner [ref=f1e3]:
+    - generic [ref=f1e4]:
+      - link [ref=f1e5] [cursor=pointer]:
+        - /url: /
+        - img "AEVTJ - Asociación Española de Víctimas de los Testigos de Jehová" [ref=f1e6]
+      - navigation "Menú principal" [ref=f1e7]:
+        - list [ref=f1e8]:
+          - listitem [ref=f1e9]:
+            - link "¿Quiénes somos?" [ref=f1e10] [cursor=pointer]:
+              - /url: /quienes-somos/
+          - listitem [ref=f1e11]:
+            - link "Noticias" [ref=f1e12] [cursor=pointer]:
+              - /url: /noticias/
+          - listitem [ref=f1e13]:
+            - link "Documentos" [ref=f1e14] [cursor=pointer]:
+              - /url: /recursos-de-ayuda/
+          - listitem [ref=f1e17]:
+            - link "Hazte socio / Donaciones" [ref=f1e18] [cursor=pointer]:
+              - /url: /hazte-socio/
+          - listitem [ref=f1e19]:
+            - link "Otras asociaciones" [ref=f1e20] [cursor=pointer]:
+              - /url: /otras-asociaciones/
+          - listitem [ref=f1e21]:
+            - link "Contacto" [ref=f1e22] [cursor=pointer]:
+              - /url: /contacto/
+      - generic [ref=f1e23]:
+        - link "Facebook" [ref=f1e24] [cursor=pointer]:
+          - /url: https://www.facebook.com/asoc.aevtj
+        - link "Youtube" [ref=f1e27] [cursor=pointer]:
+          - /url: https://www.youtube.com/@AEVTJ
+        - link "X" [ref=f1e30] [cursor=pointer]:
+          - /url: https://x.com/aevtj
+        - link "Instagram" [ref=f1e33] [cursor=pointer]:
+          - /url: https://www.instagram.com/asoc.aevtj/
+  - main [ref=f1e36]:
+    - navigation "Miga de pan" [ref=f1e37]:
+      - list [ref=f1e39]:
+        - listitem [ref=f1e40]:
+          - link "Inicio" [ref=f1e41] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=f1e42]:
+          - text: /
+          - link "Testigos de Jehová" [ref=f1e43] [cursor=pointer]:
+            - /url: /testigos-de-jehova/
+        - listitem [ref=f1e44]:
+          - text: /
+          - generic [ref=f1e45]: Normas y vida cotidiana
+    - generic [ref=f1e46]:
+      - generic [ref=f1e47]:
+        - img "Comedor con una mesa de madera y varias sillas, fotografiado con luz natural." [ref=f1e48]
+        - generic [ref=f1e50]:
+          - 'heading "Normas de los Testigos de Jehová: qué pueden hacer y qué no" [level=1] [ref=f1e51]'
+          - paragraph [ref=f1e52]: "¿Qué normas siguen en su vida diaria? Aquí repasamos las más conocidas: celebraciones, pareja, estudios, voto y otras decisiones."
+          - generic [ref=f1e53]:
+            - link "Ver los temas ↗" [ref=f1e54] [cursor=pointer]:
+              - /url: "#lista"
+            - link "Cómo leer esta guía ↗" [ref=f1e55] [cursor=pointer]:
+              - /url: "#criterio"
+        - generic [ref=f1e56]:
+          - list "Sobre esta página" [ref=f1e57]:
+            - listitem [ref=f1e58]: 7 temas
+            - listitem [ref=f1e59]: Revisado el 9 de octubre de 2026
+            - listitem [ref=f1e60]:
+              - text: "Foto:"
+              - link "Andreea Măhălean / Unsplash" [ref=f1e61] [cursor=pointer]:
+                - /url: https://unsplash.com/photos/a-dining-room-with-a-table-and-chairs-vUPSWdZMNqM
+          - link "Empezar" [ref=f1e62] [cursor=pointer]:
+            - /url: "#respuesta"
+            - text: Empezar
+            - generic [aria-hidden] [ref=f1e63]: ↓
+      - region [ref=f1e64]:
+        - generic [ref=f1e65]:
+          - paragraph [ref=f1e66]: Respuesta breve
+          - heading "¿Qué normas siguen los Testigos de Jehová?" [level=2] [ref=f1e67]
+          - paragraph [ref=f1e68]: Las normas abarcan celebraciones, relaciones de pareja, participación política y otras decisiones personales. Por ejemplo, no celebran cumpleaños ni Navidad; mantienen neutralidad política y reservan las relaciones sexuales para el matrimonio. En temas como votar, estudiar en la universidad o beber alcohol, conviene explicar con cuidado qué dice la organización y qué decide cada persona.
+          - paragraph [ref=f1e69]: No todas las pautas tienen el mismo alcance. En esta guía distinguimos lo que la organización publica, las decisiones que deja a cada miembro y las experiencias particulares.
+          - link "Cómo explica la organización sus creencias y prácticas ↗" [ref=f1e70] [cursor=pointer]:
+            - /url: https://www.jw.org/es/testigos-de-jehov%C3%A1/preguntas-frecuentes/creencias-testigos-jehova/
+      - region [ref=f1e71]:
+        - generic [ref=f1e72]:
+          - generic [ref=f1e73]:
+            - paragraph [ref=f1e74]: Vida diaria
+            - heading "Temas que suelen generar dudas" [level=2] [ref=f1e75]
+            - paragraph [ref=f1e76]: Un resumen de las principales pautas y de las decisiones que dependen de cada persona.
+          - generic [ref=f1e77]:
+            - article [ref=f1e78]:
+              - generic [ref=f1e79]:
+                - paragraph [ref=f1e80]: No las celebran
+                - heading "01 Cumpleaños y ciertas fiestas" [level=3] [ref=f1e81]:
+                  - generic [ref=f1e82]: "01"
+                  - text: Cumpleaños y ciertas fiestas
+                - paragraph [ref=f1e83]: No celebran los cumpleaños ni la Navidad; la postura sobre otras fechas depende de la fiesta.
+                - link "Leer la explicación" [ref=f1e84] [cursor=pointer]:
+                  - /url: "#celebraciones"
+                  - text: Leer la explicación
+                  - generic [aria-hidden] [ref=f1e85]: →
+            - article [ref=f1e86]:
+              - generic [ref=f1e87]:
+                - paragraph [ref=f1e88]: Pauta religiosa definida
+                - heading "02 Noviazgo y sexualidad" [level=3] [ref=f1e89]:
+                  - generic [ref=f1e90]: "02"
+                  - text: Noviazgo y sexualidad
+                - paragraph [ref=f1e91]: El noviazgo se orienta al matrimonio con una persona bautizada en la misma fe; las relaciones sexuales se reservan al matrimonio.
+                - link "Leer la explicación" [ref=f1e92] [cursor=pointer]:
+                  - /url: "#pareja"
+                  - text: Leer la explicación
+                  - generic [aria-hidden] [ref=f1e93]: →
+            - article [ref=f1e94]:
+              - generic [ref=f1e95]:
+                - paragraph [ref=f1e96]: Mensaje con matices
+                - heading "03 Voto y neutralidad política" [level=3] [ref=f1e97]:
+                  - generic [ref=f1e98]: "03"
+                  - text: Voto y neutralidad política
+                - paragraph [ref=f1e99]: Las publicaciones hablan de neutralidad, conciencia personal y no interferencia; su formulación ha cambiado.
+                - link "Leer la explicación" [ref=f1e100] [cursor=pointer]:
+                  - /url: "#politica"
+                  - text: Leer la explicación
+                  - generic [aria-hidden] [ref=f1e101]: →
+            - article [ref=f1e102]:
+              - generic [ref=f1e103]:
+                - paragraph [ref=f1e104]: Conciencia religiosa
+                - heading "04 Símbolos y servicio militar" [level=3] [ref=f1e105]:
+                  - generic [ref=f1e106]: "04"
+                  - text: Símbolos y servicio militar
+                - paragraph [ref=f1e107]: Sus fuentes explican por qué no participan en ceremonias nacionalistas ni van a la guerra.
+                - link "Leer la explicación" [ref=f1e108] [cursor=pointer]:
+                  - /url: "#politica"
+                  - text: Leer la explicación
+                  - generic [aria-hidden] [ref=f1e109]: →
+            - article [ref=f1e110]:
+              - generic [ref=f1e111]:
+                - paragraph [ref=f1e112]: Orientación publicada en 2026
+                - heading "05 Universidad" [level=3] [ref=f1e113]:
+                  - generic [ref=f1e114]: "05"
+                  - text: Universidad
+                - paragraph [ref=f1e115]: Cada adulto decide si cursa estudios superiores; la publicación también recuerda los consejos y prioridades religiosas.
+                - link "Leer la explicación" [ref=f1e116] [cursor=pointer]:
+                  - /url: "#estudios"
+                  - text: Leer la explicación
+                  - generic [aria-hidden] [ref=f1e117]: →
+            - article [ref=f1e118]:
+              - generic [ref=f1e119]:
+                - paragraph [ref=f1e120]: Depende del asunto
+                - heading "06 Alcohol y ocio" [level=3] [ref=f1e121]:
+                  - generic [ref=f1e122]: "06"
+                  - text: Alcohol y ocio
+                - paragraph [ref=f1e123]: El consumo moderado de alcohol está permitido; la embriaguez se condena. No existe una lista universal de películas o canciones vetadas.
+                - link "Leer la explicación" [ref=f1e124] [cursor=pointer]:
+                  - /url: "#vida-cotidiana"
+                  - text: Leer la explicación
+                  - generic [aria-hidden] [ref=f1e125]: →
+            - article [ref=f1e126]:
+              - generic [ref=f1e127]:
+                - paragraph [ref=f1e128]: Tema específico
+                - heading "07 Sangre y decisiones médicas" [level=3] [ref=f1e129]:
+                  - generic [ref=f1e130]: "07"
+                  - text: Sangre y decisiones médicas
+                - paragraph [ref=f1e131]: La postura institucional y sus cambios recientes requieren una explicación actualizada aparte.
+                - link "Leer la explicación" [ref=f1e132] [cursor=pointer]:
+                  - /url: /testigos-de-jehova/sangre/
+                  - text: Leer la explicación
+                  - generic [aria-hidden] [ref=f1e133]: →
+      - region [ref=f1e134]:
+        - generic [ref=f1e135]:
+          - generic [ref=f1e136]:
+            - paragraph [ref=f1e137]: Celebraciones
+            - heading "¿Celebran cumpleaños y Navidad?" [level=2] [ref=f1e138]
+            - paragraph [ref=f1e139]: "No. Los Testigos de Jehová no celebran los cumpleaños ni la Navidad. Sus publicaciones presentan ambas celebraciones como incompatibles con la adoración que practican: en el caso de los cumpleaños, reconocen que la Biblia no los prohíbe expresamente; en el de Navidad, explican que la rechazan por su origen y por no aparecer como celebración cristiana en la Biblia."
+            - paragraph [ref=f1e140]:
+              - text: La diferencia importante está en las consecuencias internas. Una guía confidencial para ancianos de 2007 —copia archivada fuera del sitio oficial— indica que una persona
+              - emphasis [ref=f1e141]: normalmente no sería expulsada solo por celebrar un cumpleaños
+              - text: ", pero contempla esa medida si insiste en promoverlo y crear división. En cambio, el manual confidencial de ancianos de septiembre de 2025 clasifica celebrar fiestas religiosas falsas dentro del apartado de apostasía, aunque añade que no todas requieren formar un comité. Estos textos no permiten afirmar que cualquier celebración privada termine automáticamente en expulsión; sí muestran que no se trata simplemente de una costumbre que la organización considera indiferente."
+            - paragraph [ref=f1e142]: La norma publicada y la experiencia de una persona pueden diferir en cómo se aplica el consejo, qué se entiende por promoción o qué medidas se toman. Por eso recogemos los testimonios concretos con fecha y contexto, sin convertirlos en una regla universal.
+            - generic [ref=f1e143]:
+              - link "La explicación oficial sobre cumpleaños ↗ ↗" [ref=f1e144] [cursor=pointer]:
+                - /url: https://www.jw.org/es/testigos-de-jehov%C3%A1/preguntas-frecuentes/cumpleanos/
+              - link "La explicación oficial sobre Navidad ↗ ↗" [ref=f1e145] [cursor=pointer]:
+                - /url: https://www.jw.org/es/testigos-de-jehov%C3%A1/preguntas-frecuentes/por-qu%C3%A9-no-celebran-la-navidad/
+            - paragraph [ref=f1e146]:
+              - strong [ref=f1e147]: "Fuentes internas consultadas:"
+              - link "Correspondence Guidelines, 2007, pp. 29 y 63 (copia archivada) ↗" [ref=f1e148] [cursor=pointer]:
+                - /url: https://wtsarchive.com/cfs/files/downloads/MLHN6FTPNL2JaiFpi/cg-E.pdf
+              - text: ·
+              - link "Shepherd the Flock of God, septiembre de 2025, apéndice A, §§38–39 (manual confidencial, copia alojada por terceros) ↗" [ref=f1e149] [cursor=pointer]:
+                - /url: https://www.scribd.com/document/922803273/202509-sfg-E
+              - text: .
+          - complementary [ref=f1e150]:
+            - strong [ref=f1e151]: La regla y su aplicación
+            - paragraph [ref=f1e152]: La propia documentación distingue entre desaconsejar una celebración, aconsejar a una persona y abrir un proceso que pueda acabar en expulsión. No son lo mismo, y el caso concreto importa.
+      - region [ref=f1e153]:
+        - generic [ref=f1e154]:
+          - generic [ref=f1e155]:
+            - paragraph [ref=f1e156]: Noviazgo y matrimonio
+            - heading "¿Pueden tener pareja de otra religión?" [level=2] [ref=f1e157]
+            - paragraph [ref=f1e158]:
+              - text: "La respuesta institucional es más concreta que un consejo genérico: la"
+              - link "FAQ oficial sobre el noviazgo" [ref=f1e159] [cursor=pointer]:
+                - /url: https://www.jw.org/es/testigos-de-jehov%C3%A1/preguntas-frecuentes/testigos-noviazgo/
+              - text: dice que deben empezar una relación y casarse con alguien que también sea Testigo bautizado. Presenta el noviazgo como un paso hacia el matrimonio, y su interpretación de la Biblia reserva las relaciones sexuales para el matrimonio.
+            - paragraph [ref=f1e160]: Eso describe la enseñanza publicada. No es una prohibición civil de relacionarse con personas ajenas a la religión, pero sí marca con quién se espera que un miembro bautizado forme pareja.
+            - paragraph [ref=f1e161]: El manual confidencial para ancianos de septiembre de 2025 incluye la inmoralidad sexual entre los asuntos que pueden requerir un comité. Para miembros bautizados, una conducta que la organización clasifique así puede activar disciplina congregacional; la medida final depende de los hechos y de la evaluación del caso. La copia consultada es un documento interno alojado por terceros.
+          - generic [ref=f1e162]:
+            - text: La pregunta útil
+            - strong [ref=f1e163]: ¿Qué dice la fuente y a quién va dirigida?
+            - paragraph [ref=f1e164]: Una regla para el noviazgo entre miembros no describe automáticamente todos los matrimonios o familias mixtas.
+      - region [ref=f1e165]:
+        - generic [ref=f1e166]:
+          - generic [ref=f1e167]:
+            - paragraph [ref=f1e168]: Universidad y educación superior
+            - heading "¿Pueden ir a la universidad?" [level=2] [ref=f1e169]
+            - paragraph [ref=f1e170]:
+              - strong [ref=f1e171]: Sí; hoy la organización afirma que es una decisión personal.
+              - text: La
+              - link "Atalaya de mayo de 2026" [ref=f1e172] [cursor=pointer]:
+                - /url: https://www.jw.org/es/biblioteca/revistas/atalaya-estudio-mayo-2026/C%C3%B3mo-tomar-buenas-decisiones-sobre-los-estudios-adicionales/
+              - text: reconoce expresamente que publicaciones anteriores recomendaron no ir a la universidad. Añade que ningún cristiano, incluidos los ancianos, debería juzgar la decisión de un adulto. La actualización importa porque antes se comunicó una orientación claramente distinta.
+            - heading "Qué decían antes las publicaciones" [level=3] [ref=f1e173]
+            - paragraph [ref=f1e174]:
+              - text: En
+              - link "1989, un artículo decía que seguía siendo una decisión personal" [ref=f1e175] [cursor=pointer]:
+                - /url: https://wol.jw.org/es/wol/d/r4/lp-s/101989324
+              - text: ", pero dedicaba varios párrafos a los riesgos morales y religiosos de la universidad y señalaba que muchos jóvenes cristianos habían decidido no asistir. En"
+              - link "2005, La Atalaya advirtió a los padres sobre los peligros de la educación superior" [ref=f1e176] [cursor=pointer]:
+                - /url: https://wol.jw.org/es/wol/d/r4/lp-s/2005726
+              - text: y orientó a los jóvenes hacia metas religiosas. En
+              - link "2014" [ref=f1e177] [cursor=pointer]:
+                - /url: https://wol.jw.org/es/wol/d/r4/lp-s/402014442
+              - text: contrapuso las metas que ofrece “este mundo” con servir más a Jehová; incluyó la historia de una mujer que dejó la universidad y afirmó que esta no podía aportar ciertos beneficios. El tono no equivale a una prohibición formal, pero sí desaconseja con fuerza esa opción.
+            - paragraph [ref=f1e178]: La historia más completa, por tanto, no es «estaba prohibido» ni tampoco «siempre fue una elección neutral». La organización reconoce ahora el cambio de orientación. Para describir presión en una familia o congregación concreta, hay que aportar el testimonio y su contexto.
+            - paragraph [ref=f1e179]:
+              - strong [ref=f1e180]: "Fuentes primarias:"
+              - link "¡Despertad!, 22-5-1989 ↗" [ref=f1e181] [cursor=pointer]:
+                - /url: https://wol.jw.org/es/wol/d/r4/lp-s/101989324
+              - text: ·
+              - link "La Atalaya, 1-10-2005 ↗" [ref=f1e182] [cursor=pointer]:
+                - /url: https://wol.jw.org/es/wol/d/r4/lp-s/2005726
+              - text: ·
+              - link "La Atalaya, 15-6-2014 ↗" [ref=f1e183] [cursor=pointer]:
+                - /url: https://wol.jw.org/es/wol/d/r4/lp-s/402014442
+              - text: ·
+              - link "La Atalaya, mayo de 2026 ↗" [ref=f1e184] [cursor=pointer]:
+                - /url: https://www.jw.org/es/biblioteca/revistas/atalaya-estudio-mayo-2026/C%C3%B3mo-tomar-buenas-decisiones-sobre-los-estudios-adicionales/
+              - text: .
+          - figure "Ilustración editorial. El apartado documenta el cambio entre la orientación histórica y la posición oficial de 2026." [ref=f1e185]:
+            - img "Ilustración de una estudiante entrando en un aula universitaria con un hilo lima que avanza hacia el espacio abierto." [ref=f1e186]
+      - region [ref=f1e188]:
+        - generic [ref=f1e189]:
+          - generic [ref=f1e190]:
+            - paragraph [ref=f1e191]: Voto y neutralidad política
+            - heading "¿Qué ocurre si un Testigo de Jehová vota?" [level=2] [ref=f1e192]
+            - paragraph [ref=f1e193]:
+              - text: La respuesta oficial actual tiene dos formulaciones que conviene leer juntas. La
+              - link "FAQ sobre neutralidad" [ref=f1e194] [cursor=pointer]:
+                - /url: https://www.jw.org/es/testigos-de-jehov%C3%A1/preguntas-frecuentes/neutralidad-pol%C3%ADtica/
+              - text: afirma que no interfieren si alguien decide votar; en el mismo artículo, la organización dice que sus miembros “no votamos por ningún partido o candidato”. El mensaje institucional de neutralidad política es, por tanto, más amplio que la mera ausencia de afiliación partidista.
+            - paragraph [ref=f1e195]:
+              - text: Además, la orientación ha cambiado con el tiempo. En
+              - link "1999, La Atalaya decía expresamente que cada Testigo podía decidir en conciencia si votar por un candidato" [ref=f1e196] [cursor=pointer]:
+                - /url: https://wol.jw.org/es/wol/d/r4/lp-s/1999807
+              - text: ; en países donde el voto era obligatorio, decía que cada cual debía decidir qué hacer y que lo escrito en la papeleta quedaba entre esa persona y Dios. La FAQ actual conserva el derecho de decidir, pero formula la neutralidad de manera más categórica.
+            - paragraph [ref=f1e197]: "¿Implica votar expulsión? No encontramos una norma pública actual que establezca una expulsión automática por el mero acto de depositar una papeleta. En cambio, testimonios de exmiembros describen temor, presión o consecuencias cuando una participación política se interpretó como falta de neutralidad. Esas experiencias merecen documentarse caso por caso: no bastan por sí solas para demostrar que toda congregación aplica la misma sanción. Tampoco deben borrarse detrás de la frase institucional “no interferimos”."
+            - paragraph [ref=f1e198]:
+              - text: La neutralidad también se expresa en la negativa a participar en actos como
+              - link "saludar a la bandera o cantar el himno" [ref=f1e199] [cursor=pointer]:
+                - /url: https://www.jw.org/es/testigos-de-jehov%C3%A1/preguntas-frecuentes/por-que-no-participan-ceremonias-nacionalistas-bandera/
+              - text: y en la objeción a
+              - link "participar en guerras" [ref=f1e200] [cursor=pointer]:
+                - /url: https://www.jw.org/es/testigos-de-jehov%C3%A1/preguntas-frecuentes/por-qu%C3%A9-no-van-a-la-guerra/
+              - text: . Las obligaciones legales y alternativas civiles dependen del país.
+            - paragraph [ref=f1e201]:
+              - strong [ref=f1e202]: "Fuentes comparadas:"
+              - link "La Atalaya, 1-11-1999, “Preguntas de los lectores” ↗" [ref=f1e203] [cursor=pointer]:
+                - /url: https://wol.jw.org/es/wol/d/r4/lp-s/1999807
+              - text: ·
+              - link "FAQ institucional vigente ↗" [ref=f1e204] [cursor=pointer]:
+                - /url: https://www.jw.org/es/testigos-de-jehov%C3%A1/preguntas-frecuentes/neutralidad-pol%C3%ADtica/
+              - text: .
+          - complementary [ref=f1e205]:
+            - strong [ref=f1e206]: Texto público y experiencia
+            - paragraph [ref=f1e207]: La abstención mayoritaria aparece como una preferencia religiosa muy marcada; el castigo por votar no figura como automático en las fuentes públicas consultadas. La experiencia concreta puede revelar presión que una FAQ no describe.
+      - region [ref=f1e208]:
+        - generic [ref=f1e209]:
+          - figure "El baile no tiene una prohibición general publicada." [ref=f1e210]:
+            - img "Ilustración de tres personas adultas bailando en una reunión social, unidas visualmente por un hilo lima." [ref=f1e211]
+          - generic [ref=f1e213]:
+            - paragraph [ref=f1e214]: Vida cotidiana
+            - heading "Alcohol, baile y entretenimiento" [level=2] [ref=f1e215]
+            - heading "¿Pueden beber alcohol?" [level=3] [ref=f1e216]
+            - paragraph [ref=f1e217]:
+              - text: Sí. La
+              - link "explicación oficial sobre el alcohol" [ref=f1e218] [cursor=pointer]:
+                - /url: https://www.jw.org/es/ense%C3%B1anzas-b%C3%ADblicas/preguntas/beber-alcohol-pecado/
+              - text: permite beber con moderación y condena la embriaguez. También señala situaciones en las que una persona decide abstenerse. Por tanto, ni «todo alcohol está prohibido» ni «da igual cuánto se beba» resumen su postura.
+            - paragraph [ref=f1e219]: El manual confidencial para ancianos distingue un episodio privado aislado —para el que puede bastar consejo— de la embriaguez repetida o notoria, que puede requerir un comité. No indica que cualquier consumo o incidente implique expulsión.
+            - heading "¿Pueden bailar, escuchar música o ver películas?" [level=3] [ref=f1e220]
+            - paragraph [ref=f1e221]:
+              - text: No consta una prohibición general del baile. La organización dice que
+              - link "no mantiene una lista universal de películas, canciones o libros prohibidos" [ref=f1e222] [cursor=pointer]:
+                - /url: https://www.jw.org/es/testigos-de-jehov%C3%A1/preguntas-frecuentes/censura-entretenimiento-testigos-de-jehov%C3%A1/
+              - text: . Publica principios morales para elegir entretenimiento, mientras que la valoración de una obra o un baile concreto queda ligada a la conciencia, la familia y el contexto.
+      - region [ref=f1e223]:
+        - generic [ref=f1e224]:
+          - paragraph [ref=f1e225]: Otras prácticas relevantes
+          - heading "Predicación, ropa y decisiones médicas" [level=2] [ref=f1e226]
+          - generic [ref=f1e227]:
+            - article [ref=f1e228]:
+              - text: "01"
+              - heading "Predicación" [level=3] [ref=f1e229]
+              - paragraph [ref=f1e230]:
+                - text: La organización presenta hablar de sus creencias como parte importante de la vida religiosa y de la educación de los hijos. Su manual interno prevé registrar mensualmente la actividad de predicación de cada publicador. Eso no demuestra que todos dediquen el mismo tiempo ni que un menor haya elegido bautizarse.
+                - link "Ver la FAQ institucional ↗" [ref=f1e231] [cursor=pointer]:
+                  - /url: https://www.jw.org/es/testigos-de-jehov%C3%A1/preguntas-frecuentes/testigos-jehova-obligan-hijos-religion-predicar/
+                - text: ·
+                - link "Manual interno de 2025, copia externa ↗" [ref=f1e232] [cursor=pointer]:
+                  - /url: https://www.scribd.com/document/922803273/202509-sfg-E
+            - article [ref=f1e233]:
+              - text: "02"
+              - heading "Ropa y aspecto" [level=3] [ref=f1e234]
+              - paragraph [ref=f1e235]:
+                - text: Existen pautas de arreglo para reuniones y actividades, pero algunas instrucciones cambiaron en 2023 y 2024. Afirmaciones como «ningún hombre lleva barba» o «ninguna mujer usa pantalón» no describen bien la situación actual.
+                - link "Ver el informe de 2024 ↗" [ref=f1e236] [cursor=pointer]:
+                  - /url: https://www.jw.org/es/noticias/region/internacionales/2024-Informe-2-del-Cuerpo-Gobernante/
+            - article [ref=f1e237]:
+              - text: "03"
+              - heading "Sangre" [level=3] [ref=f1e238]
+              - paragraph [ref=f1e239]:
+                - text: Las decisiones médicas y la postura sobre componentes sanguíneos han cambiado y requieren más detalle. La
+                - link "página sobre sangre y transfusiones" [ref=f1e240] [cursor=pointer]:
+                  - /url: /testigos-de-jehova/sangre/
+                - text: documenta el alcance conocido hasta 2026.
+      - region [ref=f1e241]:
+        - generic [ref=f1e242]:
+          - paragraph [ref=f1e243]: Una distinción importante
+          - heading "Enseñanza oficial, decisiones y experiencias" [level=2] [ref=f1e244]
+          - generic [ref=f1e245]:
+            - article [ref=f1e246]:
+              - text: "01"
+              - heading "Lo publicado" [level=3] [ref=f1e247]
+              - paragraph [ref=f1e248]: Las fuentes institucionales permiten describir la postura que la organización comunica sobre un tema.
+            - article [ref=f1e249]:
+              - text: "02"
+              - heading "Lo que decide cada persona" [level=3] [ref=f1e250]
+              - paragraph [ref=f1e251]: Algunas pautas dejan margen a la conciencia o dependen de circunstancias personales y familiares.
+            - article [ref=f1e252]:
+              - text: "03"
+              - heading "La experiencia concreta" [level=3] [ref=f1e253]
+              - paragraph [ref=f1e254]: Un testimonio ayuda a comprender un caso, pero no basta para generalizarlo a todos los miembros o congregaciones.
+          - paragraph [ref=f1e255]: Una orientación religiosa tampoco es lo mismo que una ley civil. Las obligaciones legales dependen del país.
+      - region [ref=f1e256]:
+        - generic [ref=f1e257]:
+          - paragraph [ref=f1e258]: Dudas habituales
+          - heading "Preguntas frecuentes" [level=2] [ref=f1e259]
+          - generic [ref=f1e260]:
+            - group [ref=f1e261]:
+              - generic "¿Qué normas influyen más en la vida diaria?" [ref=f1e262] [cursor=pointer]:
+                - text: ¿Qué normas influyen más en la vida diaria?
+                - generic [aria-hidden] [ref=f1e263]: ＋
+            - group [ref=f1e264]:
+              - generic "¿Qué ocurre si un Testigo de Jehová vota?" [ref=f1e265] [cursor=pointer]:
+                - text: ¿Qué ocurre si un Testigo de Jehová vota?
+                - generic [aria-hidden] [ref=f1e266]: ＋
+            - group [ref=f1e267]:
+              - generic "¿Pueden celebrar cumpleaños o Navidad?" [ref=f1e268] [cursor=pointer]:
+                - text: ¿Pueden celebrar cumpleaños o Navidad?
+                - generic [aria-hidden] [ref=f1e269]: ＋
+            - group [ref=f1e270]:
+              - generic "¿Pueden ir a la universidad?" [ref=f1e271] [cursor=pointer]:
+                - text: ¿Pueden ir a la universidad?
+                - generic [aria-hidden] [ref=f1e272]: ＋
+            - group [ref=f1e273]:
+              - generic "¿Pueden beber alcohol y bailar?" [ref=f1e274] [cursor=pointer]:
+                - text: ¿Pueden beber alcohol y bailar?
+                - generic [aria-hidden] [ref=f1e275]: ＋
+            - group [ref=f1e276]:
+              - generic "¿Las normas son iguales para todos?" [ref=f1e277] [cursor=pointer]:
+                - text: ¿Las normas son iguales para todos?
+                - generic [aria-hidden] [ref=f1e278]: ＋
+      - generic [ref=f1e280]:
+        - paragraph [ref=f1e281]: La mirada de la AEVTJ
+        - heading "Respetar la fe y escuchar a las personas" [level=2] [ref=f1e282]
+        - paragraph [ref=f1e283]: Respetamos el derecho de las personas creyentes a practicar su religión. También escuchamos a quienes cuentan que una norma o su aplicación les ha afectado. Para hablar de estas experiencias con rigor, distinguimos los testimonios de las enseñanzas oficiales y damos contexto a ambos.
+        - heading "Fuentes oficiales consultadas" [level=3] [ref=f1e284]
+        - list [ref=f1e285]:
+          - listitem [ref=f1e286]:
+            - link "Creencias, normas y prácticas ↗" [ref=f1e287] [cursor=pointer]:
+              - /url: https://www.jw.org/es/testigos-de-jehov%C3%A1/preguntas-frecuentes/creencias-testigos-jehova/
+          - listitem [ref=f1e288]:
+            - link "Neutralidad política ↗" [ref=f1e289] [cursor=pointer]:
+              - /url: https://www.jw.org/es/testigos-de-jehov%C3%A1/preguntas-frecuentes/neutralidad-pol%C3%ADtica/
+          - listitem [ref=f1e290]:
+            - link "Ceremonias nacionalistas ↗" [ref=f1e291] [cursor=pointer]:
+              - /url: https://www.jw.org/es/testigos-de-jehov%C3%A1/preguntas-frecuentes/por-que-no-participan-ceremonias-nacionalistas-bandera/
+          - listitem [ref=f1e292]:
+            - link "Guerra y servicio militar ↗" [ref=f1e293] [cursor=pointer]:
+              - /url: https://www.jw.org/es/testigos-de-jehov%C3%A1/preguntas-frecuentes/por-qu%C3%A9-no-van-a-la-guerra/
+          - listitem [ref=f1e294]:
+            - link "Noviazgo ↗" [ref=f1e295] [cursor=pointer]:
+              - /url: https://www.jw.org/es/testigos-de-jehov%C3%A1/preguntas-frecuentes/testigos-noviazgo/
+          - listitem [ref=f1e296]:
+            - link "Alcohol ↗" [ref=f1e297] [cursor=pointer]:
+              - /url: https://www.jw.org/es/ense%C3%B1anzas-b%C3%ADblicas/preguntas/beber-alcohol-pecado/
+          - listitem [ref=f1e298]:
+            - link "Entretenimiento ↗" [ref=f1e299] [cursor=pointer]:
+              - /url: https://www.jw.org/es/testigos-de-jehov%C3%A1/preguntas-frecuentes/censura-entretenimiento-testigos-de-jehov%C3%A1/
+          - listitem [ref=f1e300]:
+            - link "Los Testigos de Jehová y la educación ↗" [ref=f1e301] [cursor=pointer]:
+              - /url: https://www.jw.org/es/biblioteca/folletos/Los-testigos-de-Jehov%C3%A1-y-la-educaci%C3%B3n/
+          - listitem [ref=f1e302]:
+            - 'link "Estudios adicionales: orientación de mayo de 2026 ↗" [ref=f1e303] [cursor=pointer]':
+              - /url: https://www.jw.org/es/biblioteca/revistas/atalaya-estudio-mayo-2026/C%C3%B3mo-tomar-buenas-decisiones-sobre-los-estudios-adicionales/
+          - listitem [ref=f1e304]:
+            - link "Cambios de indumentaria de marzo de 2024 ↗" [ref=f1e305] [cursor=pointer]:
+              - /url: https://www.jw.org/es/noticias/region/internacionales/2024-Informe-2-del-Cuerpo-Gobernante/
+          - listitem [ref=f1e306]:
+            - link "Celebraciones ↗" [ref=f1e307] [cursor=pointer]:
+              - /url: https://www.jw.org/es/testigos-de-jehov%C3%A1/preguntas-frecuentes/testigos-jehova-no-celebran-fiestas/
+          - listitem [ref=f1e308]:
+            - link "Educación religiosa y predicación de los hijos ↗" [ref=f1e309] [cursor=pointer]:
+              - /url: https://www.jw.org/es/testigos-de-jehov%C3%A1/preguntas-frecuentes/testigos-jehova-obligan-hijos-religion-predicar/
+          - listitem [ref=f1e310]:
+            - 'link "La Atalaya (1999): voto y conciencia personal ↗" [ref=f1e311] [cursor=pointer]':
+              - /url: https://wol.jw.org/es/wol/d/r4/lp-s/1999807
+          - listitem [ref=f1e312]:
+            - 'link "La Atalaya (2005): educación superior ↗" [ref=f1e313] [cursor=pointer]':
+              - /url: https://wol.jw.org/es/wol/d/r4/lp-s/2005726
+          - listitem [ref=f1e314]:
+            - link "Guía confidencial para ancianos (2007), copia archivada ↗" [ref=f1e315] [cursor=pointer]:
+              - /url: https://wtsarchive.com/cfs/files/downloads/MLHN6FTPNL2JaiFpi/cg-E.pdf
+          - listitem [ref=f1e316]:
+            - link "Manual confidencial para ancianos (2025), copia alojada por terceros ↗" [ref=f1e317] [cursor=pointer]:
+              - /url: https://www.scribd.com/document/922803273/202509-sfg-E
+        - paragraph [ref=f1e318]: Revisado el 9 de octubre de 2026. Las orientaciones pueden cambiar; comprueba la fecha y el alcance de cada fuente.
+      - generic [ref=f1e320]:
+        - paragraph [ref=f1e321]: Más sobre los Testigos de Jehová
+        - heading "Sigue leyendo" [level=2] [ref=f1e322]
+        - generic [ref=f1e323]:
+          - link [ref=f1e324] [cursor=pointer]:
+            - /url: /testigos-de-jehova/
+            - heading "Quiénes son" [level=3] [ref=f1e325]
+            - paragraph [ref=f1e326]: Una introducción a sus creencias y organización.
+            - text: ↗
+          - link [ref=f1e327] [cursor=pointer]:
+            - /url: /testigos-de-jehova/sangre/
+            - heading "Sangre y transfusiones" [level=3] [ref=f1e328]
+            - paragraph [ref=f1e329]: Historia, postura y cambios documentados.
+            - text: ↗
+          - link [ref=f1e330] [cursor=pointer]:
+            - /url: /guia-para-salir-de-los-testigos-de-jehova/
+            - heading "Guía para salir" [level=3] [ref=f1e331]
+            - paragraph [ref=f1e332]: Información para quien se plantea dejar la organización.
+            - text: ↗
+        - generic [ref=f1e333]:
+          - link "Contacta con la asociación ↗" [ref=f1e334] [cursor=pointer]:
+            - /url: /contacto/
+          - link "Recursos de ayuda ↗" [ref=f1e335] [cursor=pointer]:
+            - /url: /recursos-de-ayuda/
+  - contentinfo [ref=f1e336]:
+    - generic [ref=f1e337]:
+      - generic [ref=f1e338]:
+        - generic [ref=f1e339]:
+          - img "AEVTJ" [ref=f1e340]
+          - paragraph [ref=f1e341]: Asociación Española de Víctimas de los Testigos de Jehová y la JW.ORG. Estamos aquí para escucharte, ayudarte a recuperar tu vida y darte el apoyo que necesitas para dejar atrás la organización.
+          - generic [ref=f1e342]:
+            - link "Facebook" [ref=f1e343] [cursor=pointer]:
+              - /url: https://www.facebook.com/asoc.aevtj
+            - link "Youtube" [ref=f1e346] [cursor=pointer]:
+              - /url: https://www.youtube.com/@AEVTJ
+            - link "X" [ref=f1e349] [cursor=pointer]:
+              - /url: https://x.com/aevtj
+            - link "Instagram" [ref=f1e352] [cursor=pointer]:
+              - /url: https://www.instagram.com/asoc.aevtj/
+        - navigation "Menú de pie de página" [ref=f1e355]:
+          - heading "Menú" [level=2] [ref=f1e356]
+          - list [ref=f1e357]:
+            - listitem [ref=f1e358]:
+              - link "¿Quiénes somos?" [ref=f1e359] [cursor=pointer]:
+                - /url: /quienes-somos/
+            - listitem [ref=f1e360]:
+              - link "Noticias" [ref=f1e361] [cursor=pointer]:
+                - /url: /noticias/
+            - listitem [ref=f1e362]:
+              - link "Documentos" [ref=f1e363] [cursor=pointer]:
+                - /url: /legal/
+            - listitem [ref=f1e364]:
+              - link "Hazte socio / Donaciones" [ref=f1e365] [cursor=pointer]:
+                - /url: /hazte-socio/
+            - listitem [ref=f1e366]:
+              - link "Otras asociaciones" [ref=f1e367] [cursor=pointer]:
+                - /url: /otras-asociaciones/
+            - listitem [ref=f1e368]:
+              - link "Contacto" [ref=f1e369] [cursor=pointer]:
+                - /url: /contacto/
+        - generic [ref=f1e370]:
+          - heading "Boletín de noticias" [level=2] [ref=f1e371]
+          - paragraph [ref=f1e372]: Recibe nuestro boletín de noticias mensual de forma totalmente gratuita y mantente informado.
+          - generic [ref=f1e373]:
+            - textbox "Tu correo electrónico" [ref=f1e374]
+            - generic [ref=f1e375]:
+              - checkbox "Quiero recibir la newsletter y acepto el tratamiento de mi email para ese fin." [ref=f1e376]
+              - generic [ref=f1e377]: Quiero recibir la newsletter y acepto el tratamiento de mi email para ese fin.
+            - paragraph [ref=f1e378]:
+              - text: La suscripción se gestionará mediante Mailchimp. Tratamos tus datos según nuestra
+              - link "Política de Privacidad" [ref=f1e379] [cursor=pointer]:
+                - /url: /politica-de-privacidad/
+              - text: .
+            - button "Suscribirme" [ref=f1e380] [cursor=pointer]
+            - status
+      - generic [ref=f1e381]:
+        - paragraph [ref=f1e382]: © 2026 Asociación Española de Victimas de los Testigos de Jehová
+        - list [ref=f1e383]:
+          - listitem [ref=f1e384]:
+            - link "Aviso Legal" [ref=f1e385] [cursor=pointer]:
+              - /url: /aviso-legal/
+          - listitem [ref=f1e386]:
+            - link "Política de Cookies" [ref=f1e387] [cursor=pointer]:
+              - /url: /politica-de-cookies/
+          - listitem [ref=f1e388]:
+            - link "Política de privacidad" [ref=f1e389] [cursor=pointer]:
+              - /url: /politica-de-privacidad/
+  - generic [ref=f1e391]:
+    - paragraph [ref=f1e392]:
+      - text: Utilizamos tecnologías necesarias para que la web funcione y, si lo aceptas, herramientas de analítica y vídeos incrustados de plataformas externas. No usamos publicidad personalizada. Consulta la
+      - link "Política de cookies" [ref=f1e393] [cursor=pointer]:
+        - /url: /politica-de-cookies/
+      - text: para más información.
+    - generic [ref=f1e394]:
+      - button "Denegar" [ref=f1e395] [cursor=pointer]
+      - button "Aceptar" [ref=f1e396] [cursor=pointer]
+      - link "Ver preferencias" [ref=f1e397] [cursor=pointer]:
+        - /url: /politica-de-cookies/

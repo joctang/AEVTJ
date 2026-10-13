@@ -79,6 +79,8 @@
 .supresion a:focus-visible, .supresion button:focus-visible { outline: 3px solid #2ea88f; outline-offset: 5px; border-radius: 8px; }
 .supresion-checklist--grande li { break-inside: avoid; margin-bottom: 12px; }
 .derechos-cierre h2 { text-wrap: pretty; }
+.supresion-cierre__link { color: #1f7a63; font-weight: 600; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+.supresion-cierre__link:hover { color: #122c33; }
 
 @media (prefers-reduced-motion: reduce) {
   .supresion-descarga, .supresion-mini { transition: none; }

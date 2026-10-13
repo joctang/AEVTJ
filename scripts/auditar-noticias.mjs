@@ -101,10 +101,11 @@ for (const post of posts) {
   if (/[?&](utm_[a-z]+|ssm)=/.test(sinComentarios)) err.push("parámetro de rastreo en una URL");
 
   // 4. Campos obligatorios.
-  for (const campo of ["slug", "titulo", "fecha", "autoria", "portada", "entradilla", "cuerpo"]) {
+  for (const campo of ["slug", "titulo", "fecha", "autoria", "entradilla", "cuerpo"]) {
     if (!new RegExp(`\\n\\s*${campo}:`).test(raw)) err.push(`falta el campo obligatorio \`${campo}\``);
   }
-  if (!/alt:\s*"[^"]{10,}/.test(raw)) avi.push("la portada no tiene un `alt` descriptivo");
+  if (/\n\s*portada:/.test(raw) && !/alt:\s*"[^"]{10,}/.test(raw))
+    avi.push("la portada no tiene un `alt` descriptivo");
   // El formateador parte las líneas largas: el valor puede estar en la siguiente.
   if (!new RegExp(`slug:\\s*\\n?\\s*"${post.slug}"`).test(raw))
     err.push("el `slug` no coincide con el del JSON");

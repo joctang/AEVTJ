@@ -1,0 +1,706 @@
+- generic [active] [ref=f13e1]:
+  - link "Saltar al contenido" [ref=f13e2] [cursor=pointer]:
+    - /url: "#contenido"
+  - banner [ref=f13e3]:
+    - generic [ref=f13e4]:
+      - link [ref=f13e5] [cursor=pointer]:
+        - /url: /
+        - img "AEVTJ - Asociación Española de Víctimas de los Testigos de Jehová" [ref=f13e6]
+      - navigation "Menú principal" [ref=f13e7]:
+        - list [ref=f13e8]:
+          - listitem [ref=f13e9]:
+            - link "¿Quiénes somos?" [ref=f13e10] [cursor=pointer]:
+              - /url: /quienes-somos/
+          - listitem [ref=f13e11]:
+            - link "Noticias" [ref=f13e12] [cursor=pointer]:
+              - /url: /noticias/
+          - listitem [ref=f13e13]:
+            - link "Documentos" [ref=f13e14] [cursor=pointer]:
+              - /url: /recursos-de-ayuda/
+          - listitem [ref=f13e17]:
+            - link "Hazte socio / Donaciones" [ref=f13e18] [cursor=pointer]:
+              - /url: /hazte-socio/
+          - listitem [ref=f13e19]:
+            - link "Otras asociaciones" [ref=f13e20] [cursor=pointer]:
+              - /url: /otras-asociaciones/
+          - listitem [ref=f13e21]:
+            - link "Contacto" [ref=f13e22] [cursor=pointer]:
+              - /url: /contacto/
+      - generic [ref=f13e23]:
+        - link "Facebook" [ref=f13e24] [cursor=pointer]:
+          - /url: https://www.facebook.com/asoc.aevtj
+        - link "Youtube" [ref=f13e27] [cursor=pointer]:
+          - /url: https://www.youtube.com/@AEVTJ
+        - link "X" [ref=f13e30] [cursor=pointer]:
+          - /url: https://x.com/aevtj
+        - link "Instagram" [ref=f13e33] [cursor=pointer]:
+          - /url: https://www.instagram.com/asoc.aevtj/
+  - main [ref=f13e36]:
+    - navigation "Miga de pan" [ref=f13e37]:
+      - list [ref=f13e39]:
+        - listitem [ref=f13e40]:
+          - link "Inicio" [ref=f13e41] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=f13e42]:
+          - text: /
+          - link "Testigos de Jehová" [ref=f13e43] [cursor=pointer]:
+            - /url: /testigos-de-jehova/
+        - listitem [ref=f13e44]:
+          - text: /
+          - generic [ref=f13e45]: Navidad
+    - generic [ref=f13e46]:
+      - navigation "Secciones de la página":
+        - list:
+          - listitem:
+            - link "1. Qué dicen hoy":
+              - /url: "#respuesta"
+          - listitem:
+            - link "2. Textos bíblicos":
+              - /url: "#biblia"
+          - listitem:
+            - link "3. Cómo dejaron de celebrarla":
+              - /url: "#historia"
+          - listitem:
+            - link "4. ¿Nació el 25 de diciembre?":
+              - /url: "#fecha"
+          - listitem:
+            - link "5. ¿Una fiesta pagana?":
+              - /url: "#origen"
+          - listitem:
+            - link "6. Árbol y costumbres":
+              - /url: "#costumbres"
+          - listitem:
+            - link "7. Otros cristianos":
+              - /url: "#otros-cristianos"
+          - listitem:
+            - link "8. En el colegio":
+              - /url: "#colegio"
+          - listitem:
+            - link "9. Regalos y familia":
+              - /url: "#familia"
+          - listitem:
+            - link "10. Consecuencias":
+              - /url: "#consecuencias"
+          - listitem:
+            - link "11. Después de salir":
+              - /url: "#despues"
+          - listitem:
+            - link "Preguntas frecuentes":
+              - /url: "#preguntas"
+          - listitem:
+            - link "La mirada de la AEVTJ":
+              - /url: "#mirada-aevtj"
+      - generic [ref=f13e47]:
+        - img "Primer plano de un árbol de Navidad con bolas rojas y luces desenfocadas." [ref=f13e48]
+        - generic [ref=f13e50]:
+          - heading "¿Por qué los Testigos de Jehová no celebran la Navidad?" [level=1] [ref=f13e51]
+          - paragraph [ref=f13e52]:
+            - text: Los Testigos de Jehová creen en Jesús, pero no celebran la Navidad. Su organización explica que Jesús pidió que se recordara su muerte y no dijo nada de celebrar su nacimiento, que la Biblia no da ninguna fecha para ese día y que muchas costumbres navideñas vienen de otras religiones. Así lo cuenta en su
+            - link "respuesta oficial sobre la Navidad" [ref=f13e53] [cursor=pointer]:
+              - /url: https://www.jw.org/es/testigos-de-jehov%C3%A1/preguntas-frecuentes/por-qu%C3%A9-no-celebran-la-navidad/
+            - text: .
+          - generic [ref=f13e54]:
+            - link "Ver la cronología ↗" [ref=f13e55] [cursor=pointer]:
+              - /url: "#historia"
+            - link "Busco apoyo ↗" [ref=f13e56] [cursor=pointer]:
+              - /url: "#mirada-aevtj"
+        - generic [ref=f13e57]:
+          - list "Sobre esta página" [ref=f13e58]:
+            - listitem [ref=f13e59]:
+              - strong [ref=f13e60]: "13"
+              - text: min de lectura
+            - listitem [ref=f13e61]: Revisado el 13 de octubre de 2026
+          - link "Ver los temas" [ref=f13e62] [cursor=pointer]:
+            - /url: "#ad-indice"
+            - text: Ver los temas
+            - generic [aria-hidden] [ref=f13e63]: ↓
+      - region [ref=f13e64]:
+        - generic [ref=f13e65]:
+          - paragraph [ref=f13e66]:
+            - text: Lo que poca gente sabe es que no siempre fue así.
+            - mark [ref=f13e67]: Hasta 1926, en su sede central de Brooklyn se celebraba la Navidad cada año.
+            - text: Aquí te contamos cómo una fiesta que compartían pasó a ser algo que había que abandonar, y cómo lo viven hoy las familias y los niños.
+          - heading "En esta página" [level=2] [ref=f13e68]
+          - list [ref=f13e69]:
+            - listitem [ref=f13e70]:
+              - link "¿Qué dicen hoy sobre la Navidad?" [ref=f13e71] [cursor=pointer]:
+                - /url: "#respuesta"
+                - generic [aria-hidden] [ref=f13e72]: "01"
+                - generic [aria-hidden] [ref=f13e74]: ↓
+            - listitem [ref=f13e75]:
+              - link "¿En qué textos de la Biblia se apoyan?" [ref=f13e76] [cursor=pointer]:
+                - /url: "#biblia"
+                - generic [aria-hidden] [ref=f13e77]: "02"
+                - generic [aria-hidden] [ref=f13e79]: ↓
+            - listitem [ref=f13e80]:
+              - link "¿Cómo pasaron de celebrarla a rechazarla?" [ref=f13e81] [cursor=pointer]:
+                - /url: "#historia"
+                - generic [aria-hidden] [ref=f13e82]: "03"
+                - generic [aria-hidden] [ref=f13e84]: ↓
+            - listitem [ref=f13e85]:
+              - link "¿Nació Jesús el 25 de diciembre?" [ref=f13e86] [cursor=pointer]:
+                - /url: "#fecha"
+                - generic [aria-hidden] [ref=f13e87]: "04"
+                - generic [aria-hidden] [ref=f13e89]: ↓
+            - listitem [ref=f13e90]:
+              - link "¿Se eligió esa fecha para sustituir una fiesta pagana?" [ref=f13e91] [cursor=pointer]:
+                - /url: "#origen"
+                - generic [aria-hidden] [ref=f13e92]: "05"
+                - generic [aria-hidden] [ref=f13e94]: ↓
+            - listitem [ref=f13e95]:
+              - link "¿Y el árbol, los regalos y las demás costumbres?" [ref=f13e96] [cursor=pointer]:
+                - /url: "#costumbres"
+                - generic [aria-hidden] [ref=f13e97]: "06"
+                - generic [aria-hidden] [ref=f13e99]: ↓
+            - listitem [ref=f13e100]:
+              - link "¿Por qué otros cristianos sí la celebran?" [ref=f13e101] [cursor=pointer]:
+                - /url: "#otros-cristianos"
+                - generic [aria-hidden] [ref=f13e102]: "07"
+                - generic [aria-hidden] [ref=f13e104]: ↓
+            - listitem [ref=f13e105]:
+              - link "¿Qué pasa cuando llega la Navidad al colegio?" [ref=f13e106] [cursor=pointer]:
+                - /url: "#colegio"
+                - generic [aria-hidden] [ref=f13e107]: "08"
+                - generic [aria-hidden] [ref=f13e109]: ↓
+            - listitem [ref=f13e110]:
+              - link "¿Pueden aceptar regalos o reunirse con la familia?" [ref=f13e111] [cursor=pointer]:
+                - /url: "#familia"
+                - generic [aria-hidden] [ref=f13e112]: "09"
+                - generic [aria-hidden] [ref=f13e114]: ↓
+            - listitem [ref=f13e115]:
+              - link "¿Celebrar la Navidad puede tener consecuencias?" [ref=f13e116] [cursor=pointer]:
+                - /url: "#consecuencias"
+                - generic [aria-hidden] [ref=f13e117]: "10"
+                - generic [aria-hidden] [ref=f13e119]: ↓
+            - listitem [ref=f13e120]:
+              - link "La primera Navidad después de salir" [ref=f13e121] [cursor=pointer]:
+                - /url: "#despues"
+                - generic [aria-hidden] [ref=f13e122]: "11"
+                - generic [aria-hidden] [ref=f13e124]: ↓
+      - region [ref=f13e125]:
+        - generic [ref=f13e126]:
+          - generic [ref=f13e128]: "1"
+          - heading "¿Qué dicen hoy sobre la Navidad?" [level=2] [ref=f13e129]
+        - paragraph [ref=f13e130]:
+          - text: La organización da cuatro razones en su
+          - link "web oficial" [ref=f13e131] [cursor=pointer]:
+            - /url: https://www.jw.org/es/testigos-de-jehov%C3%A1/preguntas-frecuentes/por-qu%C3%A9-no-celebran-la-navidad/
+          - text: ":"
+        - generic [ref=f13e132]:
+          - article [ref=f13e133]:
+            - text: “
+            - generic [aria-hidden] [ref=f13e134]: "01"
+            - heading "Lo que pidió Jesús" [level=3] [ref=f13e135]
+            - paragraph [ref=f13e136]: Jesús pidió a sus seguidores que recordaran su muerte. Sobre su nacimiento no dijo nada, ni en un sentido ni en otro, y la organización interpreta ese silencio como que no quería que se celebrara.
+          - article [ref=f13e137]:
+            - text: “
+            - generic [aria-hidden] [ref=f13e138]: "02"
+            - heading "El ejemplo de los primeros cristianos" [level=3] [ref=f13e139]
+            - paragraph [ref=f13e140]: Dice que los apóstoles no celebraban la Navidad.
+          - article [ref=f13e141]:
+            - text: “
+            - generic [aria-hidden] [ref=f13e142]: "03"
+            - heading "La fecha" [level=3] [ref=f13e143]
+            - paragraph [ref=f13e144]: La Biblia no dice en ningún sitio que Jesús naciera el 25 de diciembre.
+          - article [ref=f13e145]:
+            - text: “
+            - generic [aria-hidden] [ref=f13e146]: "04"
+            - heading "El origen de la fiesta" [level=3] [ref=f13e147]
+            - paragraph [ref=f13e148]: Considera que sus raíces en otras religiones la hacen incompatible con su fe.
+        - figure [ref=f13e149]:
+          - text: “
+          - generic [ref=f13e150]:
+            - generic [ref=f13e151]: Texto original
+            - blockquote [ref=f13e152]:
+              - paragraph [ref=f13e153]: «Jesús mandó que se recordara su muerte, no su nacimiento. Ni los apóstoles de Jesús ni los primeros cristianos celebraban la Navidad.»
+              - paragraph [ref=f13e154]: «Entendemos que Dios no aprueba la Navidad, pues tiene su origen en costumbres y ritos paganos.»
+            - paragraph [ref=f13e155]:
+              - text: —
+              - link "«¿Por qué no celebran los testigos de Jehová la Navidad?»" [ref=f13e156] [cursor=pointer]:
+                - /url: https://www.jw.org/es/testigos-de-jehov%C3%A1/preguntas-frecuentes/por-qu%C3%A9-no-celebran-la-navidad/
+              - text: ", jw.org"
+        - paragraph [ref=f13e157]: "Eso no quiere decir que no crean en Jesús ni que rechacen los regalos o las reuniones familiares. Por eso, decirle a un Testigo que vaya a la cena de Nochebuena «aunque sea por estar juntos» no suele servir de mucho: para él, el problema es participar en una fiesta que considera que no agrada a Dios."
+      - region [ref=f13e158]:
+        - generic [ref=f13e159]:
+          - generic [ref=f13e161]: "2"
+          - heading "¿En qué textos de la Biblia se apoyan?" [level=2] [ref=f13e162]
+        - paragraph [ref=f13e163]: La Biblia no menciona la Navidad en ningún sitio. Lo que hace la organización es aplicar algunos pasajes a una fiesta que apareció siglos después.
+        - generic [ref=f13e164]:
+          - heading "Recordar la muerte de Jesús" [level=3] [ref=f13e165]
+          - paragraph [ref=f13e166]:
+            - text: En
+            - link "Lucas 22:19-20" [ref=f13e167] [cursor=pointer]:
+              - /url: https://www.jw.org/es/biblioteca/biblia/biblia-estudio/libros/lucas/22/
+            - text: ", durante la última cena, Jesús comparte pan y vino con sus discípulos y les pide que lo hagan en memoria suya. Los Testigos se basan en ese pasaje para su Conmemoración anual. Para ellos es la única celebración que Jesús mandó, y de ahí deducen que recordar su nacimiento no forma parte de lo que él pidió."
+        - generic [ref=f13e168]:
+          - heading "Separarse de otros cultos" [level=3] [ref=f13e169]
+          - paragraph [ref=f13e170]:
+            - link "2 Corintios 6:14-18" [ref=f13e171] [cursor=pointer]:
+              - /url: https://www.jw.org/es/biblioteca/biblia/biblia-estudio/libros/2-corintios/6/
+            - text: pide a los creyentes que se aparten de los ídolos y de lo impuro. La organización lo aplica a la Navidad por el origen que atribuye a sus costumbres. Su artículo
+            - link "«¿Qué dice la Biblia acerca de la Navidad?»" [ref=f13e172] [cursor=pointer]:
+              - /url: https://www.jw.org/es/ense%C3%B1anzas-b%C3%ADblicas/preguntas/qu%C3%A9-dice-la-biblia-acerca-de-la-navidad/
+            - text: "añade el episodio del becerro de oro (Éxodo 32:5-7): aunque una fiesta se dedique a Dios, eso no la hace aceptable."
+          - paragraph [ref=f13e173]: "Su razonamiento une dos ideas: que algunas costumbres navideñas vienen de cultos anteriores al cristianismo y que la Biblia pide apartarse de esos cultos. Sobre el origen de la fecha y de las costumbres también han escrito muchos historiadores; lo resumimos más abajo."
+      - region [ref=f13e174]:
+        - generic [ref=f13e175]:
+          - generic [ref=f13e177]: "3"
+          - heading "¿Cómo pasaron de celebrarla a rechazarla?" [level=2] [ref=f13e178]
+        - paragraph [ref=f13e179]: La historia no empieza en la antigua Roma, sino en Brooklyn.
+        - paragraph [ref=f13e180]:
+          - text: Su libro
+          - link [ref=f13e181] [cursor=pointer]:
+            - /url: https://wol.jw.org/es/wol/pc/r4/lp-s/1200273077/1302/10
+            - emphasis [ref=f13e182]: Los testigos de Jehová, proclamadores del Reino de Dios
+          - text: "cuenta que en Betel, su sede central, se celebraba la Navidad todos los años. Ya sabían que el 25 de diciembre no era la fecha real del nacimiento, pero les parecía bien recordarlo y hacer el bien a los demás. Conocían el problema de la fecha, pero no lo veían como un motivo para dejar de celebrarla. El cambio no llegó de un día para otro: fue un proceso de casi cincuenta años."
+        - figure [ref=f13e183]:
+          - text: “
+          - generic [ref=f13e184]:
+            - generic [ref=f13e185]: Texto original
+            - blockquote [ref=f13e186]:
+              - paragraph [ref=f13e187]: «Durante muchos años habían sabido que el 25 de diciembre no era la fecha correcta, pero pensaban que esta fecha había estado asociada comúnmente al nacimiento del Salvador y que era apropiado hacer el bien a otros en todo momento.»
+            - paragraph [ref=f13e188]:
+              - text: —
+              - link [ref=f13e189] [cursor=pointer]:
+                - /url: https://wol.jw.org/es/wol/pc/r4/lp-s/1200273077/1302/10
+                - emphasis [ref=f13e190]: Los testigos de Jehová, proclamadores del Reino de Dios
+              - text: ", 1993"
+        - list [ref=f13e191]:
+          - listitem [ref=f13e192]:
+            - generic [ref=f13e193]: "1881"
+            - heading "Primeras críticas" [level=3] [ref=f13e194]
+            - paragraph [ref=f13e195]:
+              - text: Según su propia retrospectiva,
+              - link [ref=f13e196] [cursor=pointer]:
+                - /url: https://wol.jw.org/es/wol/d/r4/lp-s/1102014249
+                - emphasis [ref=f13e197]: El Reino de Dios ya está gobernando
+                - text: ", capítulo 10"
+              - text: ", en diciembre de 1881 la revista"
+              - emphasis [ref=f13e198]: Watch Tower
+              - text: ya relacionaba la Navidad con fiestas paganas. Pasarían más de cuarenta años antes de dejar de celebrarla.
+            - figure [ref=f13e199]:
+              - text: “
+              - generic [ref=f13e200]:
+                - generic [ref=f13e201]: Texto original
+                - blockquote [ref=f13e202]:
+                  - paragraph [ref=f13e203]: «Millones de personas paganas se hicieron cristianas. Pero el cambio era mayormente de nombre, pues los sacerdotes paganos se hicieron sacerdotes cristianos y las fiestas paganas adoptaron nombres cristianos, como es el caso de la Navidad.»
+                - paragraph [ref=f13e204]:
+                  - text: —
+                  - emphasis [ref=f13e205]: Watch Tower
+                  - text: ", diciembre de 1881, citada en"
+                  - link [ref=f13e206] [cursor=pointer]:
+                    - /url: https://wol.jw.org/es/wol/d/r4/lp-s/1102014249
+                    - emphasis [ref=f13e207]: El Reino de Dios ya está gobernando
+                  - text: ", capítulo 10"
+          - listitem [ref=f13e208]:
+            - generic [ref=f13e209]: "1883"
+            - heading "Otra fecha para el nacimiento" [level=3] [ref=f13e210]
+            - paragraph [ref=f13e211]: Dos años después, la revista situaba el nacimiento de Jesús a principios de octubre. Hoy su web dice que la Biblia no revela la fecha del nacimiento.
+          - listitem [ref=f13e212]:
+            - generic [ref=f13e213]: "1926"
+            - heading "La última Navidad en Betel" [level=3] [ref=f13e214]
+            - paragraph [ref=f13e215]:
+              - emphasis [ref=f13e216]: Proclamadores
+              - text: señala la de 1926 como la última Navidad celebrada en Brooklyn, y menciona que también se dejó en las sucursales de Inglaterra y Suiza. En aquella época todavía se llamaban Estudiantes de la Biblia; el nombre de Testigos de Jehová llegó en 1931.
+          - listitem [ref=f13e217]:
+            - generic [ref=f13e218]: "1927"
+            - heading "Dejar de celebrarla" [level=3] [ref=f13e219]
+            - paragraph [ref=f13e220]:
+              - text: La historia oficial cita el artículo «El origen de la Navidad», publicado en
+              - emphasis [ref=f13e221]: The Golden Age
+              - text: "del 14 de diciembre de 1927. Decía que era una fiesta pagana que fomentaba la idolatría y terminaba así:"
+            - figure [ref=f13e222]:
+              - text: “
+              - generic [ref=f13e223]:
+                - generic [ref=f13e224]: Texto original
+                - blockquote [ref=f13e225]:
+                  - paragraph [ref=f13e226]: «El hecho de que el mundo, la carne y el Diablo quieran que se perpetúe y celebre es un argumento definitivo y concluyente para que quienes están dedicados por completo al servicio de Jehová no la celebren.»
+                - paragraph [ref=f13e227]:
+                  - text: —
+                  - emphasis [ref=f13e228]: The Golden Age
+                  - text: ", 14 de diciembre de 1927, citada en"
+                  - link [ref=f13e229] [cursor=pointer]:
+                    - /url: https://wol.jw.org/es/wol/d/r4/lp-s/1102014249
+                    - emphasis [ref=f13e230]: El Reino de Dios ya está gobernando
+                  - text: ", capítulo 10"
+            - paragraph [ref=f13e231]: Ese año, en Betel ya no hubo Navidad. Y no volvió a haberla.
+          - listitem [ref=f13e232]:
+            - generic [ref=f13e233]: "1928"
+            - heading "El mensaje llega por radio" [level=3] [ref=f13e234]
+            - paragraph [ref=f13e235]:
+              - text: En diciembre de 1928, Richard H. Barber dio por radio un discurso contra la Navidad. Se publicó en
+              - emphasis [ref=f13e236]: The Golden Age
+              - text: "del 12 de diciembre con el título «La Navidad: su origen y propósito»."
+            - figure [ref=f13e237]:
+              - text: “
+              - generic [ref=f13e238]:
+                - generic [ref=f13e239]: Texto original
+                - blockquote [ref=f13e240]:
+                  - paragraph [ref=f13e241]: «A fin de ocultar la importancia del rescate, Satanás […] ha enseñado a la gente a dar más importancia al nacimiento del niño Jesús que a la muerte del hombre Jesús.»
+                - paragraph [ref=f13e242]:
+                  - text: —
+                  - emphasis [ref=f13e243]: The Golden Age
+                  - text: ", 12 de diciembre de 1928, citada en"
+                  - link [ref=f13e244] [cursor=pointer]:
+                    - /url: https://wol.jw.org/es/wol/d/r4/lp-s/1102014249
+                    - emphasis [ref=f13e245]: El Reino de Dios ya está gobernando
+                  - text: ", capítulo 10"
+          - listitem [ref=f13e246]:
+            - generic [ref=f13e247]: "1955"
+            - heading "La Navidad o el favor de Dios" [level=3] [ref=f13e248]
+            - paragraph [ref=f13e249]:
+              - text: En 1955,
+              - emphasis [ref=f13e250]: La Atalaya
+              - text: "lo planteaba como una elección entre la Navidad y Dios:"
+            - figure [ref=f13e251]:
+              - text: “
+              - generic [ref=f13e252]:
+                - generic [ref=f13e253]: Texto original
+                - blockquote [ref=f13e254]:
+                  - paragraph [ref=f13e255]: «De modo que es un caso de escoger entre el aceptar la Navidad con su espíritu y perder a Dios, o aceptar a Dios y recibir su espíritu y favor y perder la Navidad. No debiera ser difícil escoger lo correcto.»
+                - paragraph [ref=f13e256]:
+                  - text: —
+                  - link [ref=f13e257] [cursor=pointer]:
+                    - /url: https://wol.jw.org/es/wol/pc/r4/lp-s/1200023272/263/28
+                    - emphasis [ref=f13e258]: La Atalaya
+                    - text: ", 15 de diciembre de 1955"
+                  - text: ", «El origen de la Navidad y de su espíritu»"
+            - paragraph [ref=f13e259]: Entre 1926 y 1955, la Navidad pasó de celebrarse en la sede de la organización a presentarse como una decisión que afectaba a la relación con Dios.
+          - listitem [ref=f13e260]:
+            - generic [ref=f13e261]: Hoy
+            - paragraph [ref=f13e262]:
+              - text: "Las publicaciones actuales hablan de situaciones muy concretas: qué hacer cuando te felicitan, si se pueden aceptar regalos, qué pasa si tu pareja quiere celebrar o si tus hijos sienten que se pierden algo. Lo explica el capítulo"
+              - link "«Adore a Dios como él quiere»" [ref=f13e263] [cursor=pointer]:
+                - /url: https://www.jw.org/es/biblioteca/libros/curso-biblico/adorar-dios-como-quiere/
+              - text: ", párrafos 13-17."
+      - region [ref=f13e264]:
+        - generic [ref=f13e265]:
+          - generic [ref=f13e267]: "4"
+          - heading "¿Nació Jesús el 25 de diciembre?" [level=2] [ref=f13e268]
+        - paragraph [ref=f13e269]:
+          - text: No se sabe. Los evangelios no dan ninguna fecha, y el detalle de los pastores en el campo no basta para calcularla. El historiador Andrew McGowan lo explica en
+          - link "«How December 25 Became Christmas»" [ref=f13e270] [cursor=pointer]:
+            - /url: https://www.biblicalarchaeology.org/daily/people-cultures-in-the-bible/jesus-historical-jesus/how-december-25-became-christmas/
+          - text: ", donde repasa cómo se fue formando la tradición:"
+        - list [ref=f13e271]:
+          - listitem [ref=f13e272]:
+            - strong [ref=f13e273]: Hacia el año 200.
+            - text: Clemente de Alejandría recogía varios cálculos sobre el nacimiento, y ninguno era el 25 de diciembre.
+          - listitem [ref=f13e274]:
+            - strong [ref=f13e275]: Siglo IV.
+            - text: Ya se celebraba el 25 de diciembre en Occidente y el 6 de enero en Oriente.
+          - listitem [ref=f13e276]:
+            - strong [ref=f13e277]: Mediados del siglo IV.
+            - text: Un almanaque romano sitúa el nacimiento de Cristo en Belén el 25 de diciembre.
+        - paragraph [ref=f13e278]:
+          - text: "En esto coinciden los Testigos y los historiadores: no se conoce la fecha exacta del nacimiento de Jesús. En la Iglesia católica, el 25 de diciembre es la fecha de la celebración litúrgica, no una fecha histórica demostrada."
+          - link "Juan Pablo II la llamó «convencional»" [ref=f13e279] [cursor=pointer]:
+            - /url: https://www.vatican.va/content/john-paul-ii/es/audiences/1993/documents/hf_jp-ii_aud_19931222.html
+          - text: y explicó que la Navidad conmemora el nacimiento de Jesús.
+      - region [ref=f13e280]:
+        - generic [ref=f13e281]:
+          - generic [ref=f13e283]: "5"
+          - heading "¿Se eligió esa fecha para sustituir una fiesta pagana?" [level=2] [ref=f13e284]
+        - paragraph [ref=f13e285]:
+          - text: Es la explicación más conocida, pero los historiadores no se ponen de acuerdo. El investigador C. P. E. Nothaft repasa las dos grandes teorías en la revista
+          - link [ref=f13e286] [cursor=pointer]:
+            - /url: https://www.cambridge.org/core/journals/church-history/article/abs/origins-of-the-christmas-date-some-recent-trends-in-historical-research/3767138672A4C2DFBED6BD1B004FB78A
+            - emphasis [ref=f13e287]: Church History
+            - text: (2012)
+          - text: ":"
+        - list [ref=f13e288]:
+          - listitem [ref=f13e289]:
+            - strong [ref=f13e290]: Las fiestas del sol.
+            - text: La fecha coincide con celebraciones romanas dedicadas al sol, y la Navidad comparte el simbolismo de la luz. Pero eso no demuestra quién eligió la fecha ni por qué.
+          - listitem [ref=f13e291]:
+            - strong [ref=f13e292]: Los cálculos de los propios cristianos.
+            - text: Algunos situaban la concepción de Jesús el 25 de marzo. Nueve meses después, sale el 25 de diciembre.
+        - paragraph [ref=f13e293]: Nothaft propone tener en cuenta las dos explicaciones a la vez.
+        - paragraph [ref=f13e294]: Los Testigos, por su parte, dan el origen pagano de la fiesta por establecido, y es uno de los motivos principales por los que no la celebran.
+      - region [ref=f13e295]:
+        - generic [ref=f13e296]:
+          - generic [ref=f13e298]: "6"
+          - heading "¿Y el árbol, los regalos y las demás costumbres?" [level=2] [ref=f13e299]
+        - paragraph [ref=f13e300]: No todo en la Navidad tiene el mismo origen. La fecha, el árbol y las tarjetas de felicitación tienen historias distintas.
+        - paragraph [ref=f13e301]:
+          - text: Muchas de las costumbres que hoy nos parecen de toda la vida son bastante recientes. El
+          - link "Victoria and Albert Museum" [ref=f13e302] [cursor=pointer]:
+            - /url: https://www.vam.ac.uk/articles/victorian-christmas-traditions
+          - text: "explica cómo se popularizó el árbol de Navidad en el Reino Unido en el siglo XIX: en 1848 se publicó una ilustración de la reina Victoria y el príncipe Alberto con su familia alrededor de un árbol, y la imagen se hizo enormemente popular."
+        - paragraph [ref=f13e303]:
+          - text: La
+          - link "web de los Testigos" [ref=f13e304] [cursor=pointer]:
+            - /url: https://www.jw.org/es/ense%C3%B1anzas-b%C3%ADblicas/preguntas/qu%C3%A9-dice-la-biblia-acerca-de-la-navidad/
+          - text: relaciona los regalos, las luces y el árbol con prácticas anteriores al cristianismo. Los historiadores suelen estudiar cada costumbre por separado, porque cada una tiene su propia historia y su propia época.
+      - region [ref=f13e305]:
+        - generic [ref=f13e306]:
+          - generic [ref=f13e308]: "7"
+          - heading "¿Por qué otros cristianos sí la celebran?" [level=2] [ref=f13e309]
+        - paragraph [ref=f13e310]:
+          - text: Porque para ellos la Navidad no va de acertar con la fecha. El
+          - link "Catecismo de la Iglesia católica (§§525-526)" [ref=f13e311] [cursor=pointer]:
+            - /url: https://www.vatican.va/archive/catechism_sp/p122a3p3_sp.html
+          - text: la presenta como la celebración de que Dios se hizo hombre, y la relaciona con la humildad y con la vida de cada creyente.
+        - paragraph [ref=f13e312]: La diferencia de fondo está en cómo ve cada uno la tradición y qué considera una forma válida de honrar a Dios.
+        - paragraph [ref=f13e313]:
+          - text: Y hay quien la celebra sin ser creyente. El escritor Jonathan Holloway cuenta en
+          - link "«An Atheist's Christmas»" [ref=f13e314] [cursor=pointer]:
+            - /url: https://www.thinkingfaith.org/articles/20121220_1.htm
+          - text: "que, siendo ateo, la Navidad empezó a significar algo para él cuando tuvo hijos: volver a casa, reunirse con la familia, mantener las tradiciones."
+        - paragraph [ref=f13e315]: Por eso, ante la misma invitación a cenar en Nochebuena, una persona ve una reunión familiar y otra, una celebración religiosa. Entender eso evita muchos malentendidos en las familias.
+      - region [ref=f13e316]:
+        - generic [ref=f13e317]:
+          - generic [ref=f13e318]:
+            - generic [ref=f13e319]:
+              - generic [ref=f13e321]: "8"
+              - heading "¿Qué pasa cuando llega la Navidad al colegio?" [level=2] [ref=f13e322]
+            - paragraph [ref=f13e323]: Cuando en clase se preparan villancicos, adornos o una función de Navidad, el niño Testigo no participa. Y entonces hay que decidir qué hace mientras tanto y cómo se lo explica a sus compañeros.
+          - figure [ref=f13e324]:
+            - img "Ilustración de tres alumnos reunidos en un aula decorada con una guirnalda; un hilo verde pasa por la puerta hasta un pupitre vacío." [ref=f13e325]
+        - article [ref=f13e327]:
+          - paragraph [ref=f13e328]: Testimonio
+          - heading "Jasmine y los villancicos" [level=3] [ref=f13e329]
+          - paragraph [ref=f13e330]:
+            - text: Jasmine Grew lo contó en su
+            - link "declaración ante la Comisión Real de Investigación de Nueva Zelanda" [ref=f13e331] [cursor=pointer]:
+              - /url: https://www.abuseincare.org.nz/__data/assets/pdf_file/0027/26658/witness-statement-of-jasmine-grew-1-june-2022.pdf
+            - text: ", en 2022. Cuando en el colegio se reunían para cantar villancicos, a ella no la dejaban estar. La llevaban a otra sala. Lo recuerda como una experiencia humillante."
+        - generic [ref=f13e332]:
+          - heading "Lo que publica la organización" [level=3] [ref=f13e333]
+          - paragraph [ref=f13e334]:
+            - text: El folleto
+            - link [ref=f13e335] [cursor=pointer]:
+              - /url: https://www.jw.org/es/biblioteca/folletos/Los-testigos-de-Jehov%C3%A1-y-la-educaci%C3%B3n/El-desaf%C3%ADo-que-supone-la-pluralidad-religiosa/
+              - emphasis [ref=f13e336]: Los testigos de Jehová y la educación
+            - text: cuenta otra cosa. Brian, un niño de diez años, dice que no se siente excluido y habla del tiempo que pasa con su familia en vacaciones. Otros niños hablan de los regalos y planes que tienen en otras épocas del año.
+          - paragraph [ref=f13e337]: Son testimonios elegidos por la propia organización para explicar su postura. Lo que cuenta Jasmine, y lo que cuentan otros exmiembros, es bastante distinto. No sabemos cuántos niños lo viven de una manera u otra, pero sí que la versión de las revistas no es la única.
+        - generic [ref=f13e338]:
+          - heading "La Navidad se vive de maneras distintas" [level=3] [ref=f13e339]
+          - paragraph [ref=f13e340]:
+            - text: La Navidad tiene hoy un alcance amplio, también fuera de las comunidades cristianas. Según
+            - link "Pew Research Center" [ref=f13e341] [cursor=pointer]:
+              - /url: https://www.pewresearch.org/short-reads/2026/02/12/which-countries-have-the-most-and-fewest-public-holidays/
+            - text: ", en 2026 al menos 154 países reconocen el día de Navidad como festivo nacional. Ese dato habla de calendarios oficiales, no de cuántas personas la celebran. En India,"
+            - link "una encuesta de Pew realizada en 2019" [ref=f13e342] [cursor=pointer]:
+              - /url: https://www.pewresearch.org/religion/2021/06/29/diversity-and-pluralism/
+            - text: encontró que casi uno de cada cinco hindúes, sijs y jainistas participa en festejos navideños.
+          - paragraph [ref=f13e343]: Para algunas personas es una fiesta religiosa; para otras, una tradición cultural o familiar, y hay quienes no la celebran. El significado depende de cada persona y de su entorno. También cada familia puede valorar qué puede suponer para un niño quedarse al margen cuando sus compañeros viven una actividad como un momento compartido.
+      - region [ref=f13e344]:
+        - generic [ref=f13e345]:
+          - generic [ref=f13e346]:
+            - generic [ref=f13e347]:
+              - generic [ref=f13e349]: "9"
+              - heading "¿Pueden aceptar regalos o reunirse con la familia?" [level=2] [ref=f13e350]
+            - paragraph [ref=f13e351]: Depende. Las publicaciones no prohíben todo contacto con la Navidad.
+            - paragraph [ref=f13e352]:
+              - text: El capítulo
+              - link "«Adore a Dios como él quiere» (§§14-16)" [ref=f13e353] [cursor=pointer]:
+                - /url: https://www.jw.org/es/biblioteca/libros/curso-biblico/adorar-dios-como-quiere/
+              - text: dice que se puede dar las gracias a quien te felicita y deja a la conciencia de cada uno aceptar algunos regalos. Si la familia quiere celebrar, aconseja ser respetuoso y pensarse bien si pasar ese tiempo con ellos.
+            - paragraph [ref=f13e354]: Celebrar sigue sin estar permitido. Pero aceptar un regalo o contestar amablemente a una felicitación no es, sin más, saltarse la norma.
+            - paragraph [ref=f13e355]:
+              - text: Para quien lo vive, no siempre es fácil. En su estudio
+              - link "Doing Tolerance" [ref=f13e356] [cursor=pointer]:
+                - /url: https://www.lancaster.ac.uk/fass/resources/sociology-online-papers/papers/holden-doing-tolerance.pdf
+              - text: "(p. 5), el sociólogo Andrew Holden recoge el caso de una mujer jubilada, Testigo, cuyos hijos no lo eran:"
+          - figure [ref=f13e357]:
+            - img "Ilustración de una mesa puesta para una comida familiar, con una silla vacía conectada por un hilo verde a la ventana." [ref=f13e358]
+        - figure [ref=f13e359]:
+          - text: “
+          - generic [ref=f13e360]:
+            - generic [ref=f13e361]: Texto original
+            - blockquote [ref=f13e362]:
+              - paragraph [ref=f13e363]: "«No poder celebrar la Navidad con ellos ni mandarles una tarjeta de cumpleaños se me hacía terriblemente difícil. De hecho, llegué a pensar: “¿De verdad merece la pena?”.»"
+              - paragraph [ref=f13e364]: «Incluso ahora, mi hijo no me invita a su casa en las fechas señaladas porque sabe que no quiero tener que decirle que no.»
+            - paragraph [ref=f13e365]:
+              - text: — Andrew Holden,
+              - link [ref=f13e366] [cursor=pointer]:
+                - /url: https://www.lancaster.ac.uk/fass/resources/sociology-online-papers/papers/holden-doing-tolerance.pdf
+                - emphasis [ref=f13e367]: Doing Tolerance
+              - text: ", Universidad de Lancaster, p. 5 (traducción de la AEVTJ)"
+        - paragraph [ref=f13e368]: "Si tienes un familiar Testigo, a veces sirve más preguntarle directamente que discutir sobre la doctrina: qué plan le haría sentirse cómodo, qué significa para él y cómo podéis seguir viéndoos."
+      - region [ref=f13e369]:
+        - generic [ref=f13e370]:
+          - generic [ref=f13e372]: "10"
+          - heading "¿Celebrar la Navidad puede tener consecuencias?" [level=2] [ref=f13e373]
+        - paragraph [ref=f13e374]:
+          - text: Sí, puede tenerlas. El manual interno para ancianos,
+          - emphasis [ref=f13e375]: Shepherd the Flock of God
+          - text: ", del que existe una"
+          - link "copia de septiembre de 2025 publicada por terceros" [ref=f13e376] [cursor=pointer]:
+            - /url: https://www.scribd.com/document/922803273/202509-sfg-E
+          - text: ", incluye celebrar fiestas de «religión falsa» dentro del apartado de apostasía (apéndice A, §39). Es una de las faltas más graves para la organización."
+        - paragraph [ref=f13e377]: El mismo párrafo aclara que no todas las fiestas tienen que ver directamente con la religión falsa ni obligan a formar un comité. Es decir, no todo gesto navideño acaba en expulsión. Pero la posibilidad está escrita.
+        - paragraph [ref=f13e378]:
+          - text: Si te han presionado o sancionado por celebrar la Navidad, lo que viviste cuenta, aunque el manual tenga matices. Si quieres,
+          - link "cuéntanoslo" [ref=f13e379] [cursor=pointer]:
+            - /url: /contacto/
+          - text: .
+      - region [ref=f13e380]:
+        - generic [ref=f13e381]:
+          - generic [ref=f13e383]: "11"
+          - heading "La primera Navidad después de salir" [level=2] [ref=f13e384]
+        - paragraph [ref=f13e385]: Cambiar de opinión sobre la Navidad no significa que vayas a sentirte cómodo celebrándola desde el primer día.
+        - paragraph [ref=f13e386]:
+          - text: En un
+          - link "relato publicado en TIME en 2015" [ref=f13e387] [cursor=pointer]:
+            - /url: https://time.com/3654731/grew-up-as-jehovahs-witness/
+          - text: ", una mujer que creció como Testigo recuerda la primera vez que celebró la Navidad, a los doce años, en casa de su tía. Toda la familia la animaba a sentarse en las rodillas de Papá Noel:"
+        - figure [ref=f13e388]:
+          - text: “
+          - generic [ref=f13e389]:
+            - generic [ref=f13e390]: Texto original
+            - blockquote [ref=f13e391]:
+              - paragraph [ref=f13e392]: "«Lo había deseado toda mi vida: sentarme en las rodillas de Papá Noel y contarle mis deseos de Navidad. Pero me pareció horrible, pecaminoso.»"
+              - paragraph [ref=f13e393]: «Tardé años en dejar de preguntarme si Jehová me estaba mirando.»
+            - paragraph [ref=f13e394]:
+              - text: "— «It Happened to Me: I Grew Up as a Jehovah's Witness», xoJane en"
+              - link "TIME" [ref=f13e395] [cursor=pointer]:
+                - /url: https://time.com/3654731/grew-up-as-jehovahs-witness/
+              - text: ", 8 de enero de 2015 (traducción de la AEVTJ)"
+        - paragraph [ref=f13e396]: No hay una forma correcta de hacerlo. Puedes celebrarlo por todo lo alto, ir poco a poco, quedarte con las costumbres que te gusten o seguir sin celebrar. La primera cena de Nochebuena o el primer árbol no tienen que demostrar nada. Y siempre puedes cambiar de idea.
+      - region [ref=f13e397]:
+        - generic [ref=f13e398]:
+          - paragraph [ref=f13e399]: Dudas habituales
+          - heading "Preguntas frecuentes" [level=2] [ref=f13e400]
+          - generic [ref=f13e401]:
+            - group [ref=f13e402]:
+              - heading "¿No celebran la Navidad porque no creen en Jesús?" [level=3] [ref=f13e404] [cursor=pointer]
+            - group [ref=f13e406]:
+              - heading "¿La Biblia prohíbe la Navidad?" [level=3] [ref=f13e408] [cursor=pointer]
+            - group [ref=f13e410]:
+              - heading "¿Alguna vez la celebraron?" [level=3] [ref=f13e412] [cursor=pointer]
+            - group [ref=f13e414]:
+              - heading "¿Cuándo nació Jesús según los Testigos?" [level=3] [ref=f13e416] [cursor=pointer]
+            - group [ref=f13e418]:
+              - heading "¿Pueden aceptar un regalo en Navidad?" [level=3] [ref=f13e420] [cursor=pointer]
+            - group [ref=f13e422]:
+              - heading "¿Celebran otra fiesta en lugar de la Navidad?" [level=3] [ref=f13e424] [cursor=pointer]
+            - group [ref=f13e426]:
+              - heading "¿Todos los niños Testigos lo pasan mal en Navidad?" [level=3] [ref=f13e428] [cursor=pointer]
+      - region [ref=f13e430]:
+        - generic [ref=f13e431]:
+          - paragraph [ref=f13e432]: La mirada de la AEVTJ
+          - heading "Que nadie tenga que elegir entre su conciencia y su familia" [level=2] [ref=f13e433]
+          - generic [ref=f13e434]:
+            - paragraph [ref=f13e435]: Respetamos que cada uno viva su fe como quiera, también en Navidad. Lo que pedimos es que nadie tenga que celebrar en contra de su conciencia para demostrar que quiere a su familia. Y que nadie tenga que callarse sus dudas o su malestar para demostrar que es leal a su congregación.
+            - paragraph [ref=f13e436]: "En el colegio y en casa, lo importante es escuchar a la persona que tienes delante, sobre todo si es un niño. Esta historia empezó con una Navidad en Brooklyn hace casi cien años. Hoy se juega en decisiones mucho más cercanas: una invitación, una cena familiar, una función de Navidad en el colegio."
+          - paragraph [ref=f13e437]: Sigue leyendo
+          - generic [ref=f13e438]:
+            - link [ref=f13e439] [cursor=pointer]:
+              - /url: /testigos-de-jehova/cumpleanos/
+              - heading "Cumpleaños" [level=3] [ref=f13e440]
+              - paragraph [ref=f13e441]: Por qué no celebran los cumpleaños y cómo lo viven los niños.
+              - text: ↗
+            - link [ref=f13e442] [cursor=pointer]:
+              - /url: /testigos-de-jehova/normas/
+              - heading "Normas y vida cotidiana" [level=3] [ref=f13e443]
+              - paragraph [ref=f13e444]: Qué pueden hacer y qué no, tema a tema.
+              - text: ↗
+            - link [ref=f13e445] [cursor=pointer]:
+              - /url: /testigos-de-jehova/sangre/
+              - heading "Transfusiones de sangre" [level=3] [ref=f13e446]
+              - paragraph [ref=f13e447]: Historia, postura y cambios documentados.
+              - text: ↗
+            - link [ref=f13e448] [cursor=pointer]:
+              - /url: /guia-para-salir-de-los-testigos-de-jehova/
+              - heading "Guía para salir" [level=3] [ref=f13e449]
+              - paragraph [ref=f13e450]: El proceso de salida explicado paso a paso.
+              - text: ↗
+          - generic [ref=f13e451]:
+            - link "Contacta con la asociación ↗" [ref=f13e452] [cursor=pointer]:
+              - /url: /contacto/
+            - link "Recursos de ayuda ↗" [ref=f13e453] [cursor=pointer]:
+              - /url: /recursos-de-ayuda/
+      - region [ref=f13e454]:
+        - heading "Fuentes" [level=2] [ref=f13e455]
+        - paragraph [ref=f13e456]: "Enlazamos cada fuente junto al dato que respalda. Hemos usado:"
+        - list [ref=f13e457]:
+          - listitem [ref=f13e458]:
+            - strong [ref=f13e459]: Publicaciones de los Testigos de Jehová
+            - text: ", para explicar sus argumentos y cómo cuentan su propia historia."
+          - listitem [ref=f13e460]:
+            - strong [ref=f13e461]: Investigación histórica
+            - text: ": Nothaft, McGowan y el Victoria and Albert Museum."
+          - listitem [ref=f13e462]:
+            - strong [ref=f13e463]: Otras perspectivas
+            - text: ": el Catecismo católico y el artículo de Holloway."
+          - listitem [ref=f13e464]:
+            - strong [ref=f13e465]: Testimonios y documentos internos
+            - text: ": la declaración de Jasmine Grew, el relato de TIME, el estudio de Holden y la copia del manual de 2025."
+        - paragraph [ref=f13e466]: "Revisión: 13 de octubre de 2026. Las fechas de 1881, 1883, 1927 y 1928 las tomamos de las historias oficiales de la organización, no de los ejemplares originales. Del artículo de Nothaft hemos consultado el resumen y las referencias, no el texto completo. Y no hemos podido confirmar que la copia del manual de 2025 sea la edición vigente hoy."
+        - paragraph [ref=f13e467]: Revisado el 13 de octubre de 2026. Los enlaces externos se abren en una pestaña nueva.
+  - contentinfo [ref=f13e468]:
+    - generic [ref=f13e469]:
+      - generic [ref=f13e470]:
+        - generic [ref=f13e471]:
+          - img "AEVTJ" [ref=f13e472]
+          - paragraph [ref=f13e473]: Asociación Española de Víctimas de los Testigos de Jehová y la JW.ORG. Estamos aquí para escucharte, ayudarte a recuperar tu vida y darte el apoyo que necesitas para dejar atrás la organización.
+          - generic [ref=f13e474]:
+            - link "Facebook" [ref=f13e475] [cursor=pointer]:
+              - /url: https://www.facebook.com/asoc.aevtj
+            - link "Youtube" [ref=f13e478] [cursor=pointer]:
+              - /url: https://www.youtube.com/@AEVTJ
+            - link "X" [ref=f13e481] [cursor=pointer]:
+              - /url: https://x.com/aevtj
+            - link "Instagram" [ref=f13e484] [cursor=pointer]:
+              - /url: https://www.instagram.com/asoc.aevtj/
+        - navigation "Menú de pie de página" [ref=f13e487]:
+          - heading "Menú" [level=2] [ref=f13e488]
+          - list [ref=f13e489]:
+            - listitem [ref=f13e490]:
+              - link "¿Quiénes somos?" [ref=f13e491] [cursor=pointer]:
+                - /url: /quienes-somos/
+            - listitem [ref=f13e492]:
+              - link "Noticias" [ref=f13e493] [cursor=pointer]:
+                - /url: /noticias/
+            - listitem [ref=f13e494]:
+              - link "Documentos" [ref=f13e495] [cursor=pointer]:
+                - /url: /legal/
+            - listitem [ref=f13e496]:
+              - link "Hazte socio / Donaciones" [ref=f13e497] [cursor=pointer]:
+                - /url: /hazte-socio/
+            - listitem [ref=f13e498]:
+              - link "Otras asociaciones" [ref=f13e499] [cursor=pointer]:
+                - /url: /otras-asociaciones/
+            - listitem [ref=f13e500]:
+              - link "Contacto" [ref=f13e501] [cursor=pointer]:
+                - /url: /contacto/
+        - generic [ref=f13e502]:
+          - heading "Boletín de noticias" [level=2] [ref=f13e503]
+          - paragraph [ref=f13e504]: Recibe nuestro boletín de noticias mensual de forma totalmente gratuita y mantente informado.
+          - generic [ref=f13e505]:
+            - textbox "Tu correo electrónico" [ref=f13e506]
+            - generic [ref=f13e507]:
+              - checkbox "Quiero recibir la newsletter y acepto el tratamiento de mi email para ese fin." [ref=f13e508]
+              - generic [ref=f13e509]: Quiero recibir la newsletter y acepto el tratamiento de mi email para ese fin.
+            - paragraph [ref=f13e510]:
+              - text: La suscripción se gestionará mediante Mailchimp. Tratamos tus datos según nuestra
+              - link "Política de Privacidad" [ref=f13e511] [cursor=pointer]:
+                - /url: /politica-de-privacidad/
+              - text: .
+            - button "Suscribirme" [ref=f13e512] [cursor=pointer]
+            - status
+      - generic [ref=f13e513]:
+        - paragraph [ref=f13e514]: © 2026 Asociación Española de Victimas de los Testigos de Jehová
+        - list [ref=f13e515]:
+          - listitem [ref=f13e516]:
+            - link "Aviso Legal" [ref=f13e517] [cursor=pointer]:
+              - /url: /aviso-legal/
+          - listitem [ref=f13e518]:
+            - link "Política de Cookies" [ref=f13e519] [cursor=pointer]:
+              - /url: /politica-de-cookies/
+          - listitem [ref=f13e520]:
+            - link "Política de privacidad" [ref=f13e521] [cursor=pointer]:
+              - /url: /politica-de-privacidad/
+  - generic [ref=f13e523]:
+    - paragraph [ref=f13e524]:
+      - text: Utilizamos tecnologías necesarias para que la web funcione y, si lo aceptas, herramientas de analítica y vídeos incrustados de plataformas externas. No usamos publicidad personalizada. Consulta la
+      - link "Política de cookies" [ref=f13e525] [cursor=pointer]:
+        - /url: /politica-de-cookies/
+      - text: para más información.
+    - generic [ref=f13e526]:
+      - button "Denegar" [ref=f13e527] [cursor=pointer]
+      - button "Aceptar" [ref=f13e528] [cursor=pointer]
+      - link "Ver preferencias" [ref=f13e529] [cursor=pointer]:
+        - /url: /politica-de-cookies/

@@ -1,0 +1,173 @@
+/* Composición específica de /testigos-de-jehova/normas/.
+   Sigue MANUAL-ESTILO.md: fondo pálido único (sin bandas de color por sección),
+   tarjetas crema 28px, imágenes flotantes con bloque detrás y movimiento lento. */
+.normas { --normas-ink: #122c33; --normas-paper: #f5fbdf; --normas-green: #2ea88f; }
+
+/* ---------- Hero ---------- */
+.normas .guia-hero { min-height: min(calc(86svh - 96px), 780px); }
+.normas .guia-hero__img { width: 74%; object-position: center 55%; }
+.normas .guia-hero__scrim { background: linear-gradient(90deg,#0f2537 5%,#0f2537e8 32%,#0f253755 69%,#0f25371c),linear-gradient(0deg,#0f2537 0%,transparent 34%); }
+.normas .guia-hero h1 { max-width: 13ch; margin-top: 0; }
+.normas .guia-hero__content, .normas .guia-hero__bottom { width: min(1160px,calc(100% - 96px)); }
+.normas .guia-hero__bottom { margin-top: 40px; }
+
+/* ---------- Estructura común de secciones ---------- */
+.normas-ancho { width: min(1060px,calc(100% - 64px)); margin-inline: auto; }
+.normas-respuesta, .normas-variacion, .normas-articulo, .normas-estudios, .normas-ocio, .normas-faq {
+  padding-block: clamp(70px,8vw,110px) 0; background: transparent; scroll-margin-top: 70px;
+}
+.normas-respuesta { padding-top: clamp(78px,9vw,120px); }
+.normas-faq { padding-bottom: clamp(70px,8vw,110px); }
+.normas-respuesta h2, .normas-variacion h2, .normas-articulo h2, .normas-estudios h2, .normas-ocio h2, .normas-faq h2 {
+  margin-top: 16px; color: var(--normas-ink); font-size: clamp(2rem,4.6vw,3.5rem); font-weight: 400; line-height: 1.08; letter-spacing: -.045em; text-wrap: balance;
+}
+.normas .guia-kicker:not(.guia-kicker--crema) { color: #1f7a63; }
+.normas-respuesta p:not(.guia-kicker), .normas-variacion p:not(.guia-kicker), .normas-articulo p:not(.guia-kicker), .normas-estudios p:not(.guia-kicker), .normas-ocio p:not(.guia-kicker) {
+  max-width: 760px; margin-top: 20px; color: #435043; font-size: 16.5px; line-height: 1.85;
+}
+.normas-respuesta strong, .normas-articulo strong, .normas-estudios strong, .normas-ocio strong { color: var(--normas-ink); }
+.normas-articulo h3, .normas-estudios h3, .normas-ocio h3 { margin-top: 34px; color: var(--normas-ink); font-size: clamp(1.25rem,2vw,1.5rem); font-weight: 400; letter-spacing: -.025em; }
+.normas-articulo h3 + p, .normas-estudios h3 + p, .normas-ocio h3 + p { margin-top: 10px !important; }
+.normas-articulo p a, .normas-estudios p a, .normas-ocio p a, .normas-variacion p a { color: #1f7a63; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+.normas-respuesta .normas-lead { margin-top: 26px; color: var(--normas-ink); font-size: clamp(18px,2vw,22px); line-height: 1.7; }
+.normas-textlink { display: inline-flex; margin-top: 20px; color: #1f7a63; font-size: 14px; font-weight: 600; text-underline-offset: 4px; }
+.normas-enlaces-tema { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.normas-enlaces-tema .guia-pill { margin: 0; text-decoration: none; }
+
+/* Dos columnas: texto + imagen o nota. */
+.normas-articulo__inner, .normas-vida__inner { display: grid; grid-template-columns: minmax(0,1.4fr) minmax(250px,.6fr); gap: clamp(30px,6vw,84px); align-items: start; }
+.normas-capitulo--pareja .normas-articulo__inner, .normas-capitulo--politica .normas-articulo__inner, #celebraciones .normas-articulo__inner { grid-template-columns: minmax(0,1fr); }
+.normas-capitulo .normas-articulo__inner > div:first-child { max-width: 900px; }
+.normas-estudios__inner { display: grid; grid-template-columns: 1.2fr .8fr; align-items: center; gap: clamp(40px,7vw,92px); }
+.normas-ocio__inner { display: grid; grid-template-columns: .85fr 1.15fr; gap: clamp(35px,6vw,84px); align-items: center; }
+
+/* Nota lateral: tarjeta crema, como el resto de tarjetas del manual. */
+.normas-articulo__nota {
+  position: sticky; top: 110px; margin-top: 70px; padding: 30px 28px; border-radius: 28px;
+  background: #fbfdf5; border: 1px solid #dce3cd; box-shadow: 0 18px 45px #0f25371a; color: var(--normas-ink);
+}
+.normas-articulo__nota strong { display: block; font-family: var(--font-heading); font-size: 22px; line-height: 1.3; font-weight: 400; }
+.normas-articulo .normas-articulo__nota p { margin-top: 12px; font-size: 15px; line-height: 1.7; }
+
+/* Fuentes de cada bloque: nota discreta, sin caja de color. */
+.normas .normas-fuente-interna { margin-top: 30px; padding-top: 16px; border-top: 1px solid #dce3cd; color: #5d6b55; font-size: 13px; line-height: 1.75; }
+
+/* ---------- Imágenes flotantes (patrón .layered-media de la home) ----------
+   La clase layered-media activa el parallax de editorial.ts (imagen y bloque en sentidos opuestos). */
+.normas-media { position: relative; margin: 0; padding: 0 6% 6% 0; }
+.normas-media img { position: relative; z-index: 2; display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: contain; }
+.normas-media span { position: absolute; inset: 12% 0 0 12%; z-index: 1; border-radius: 32px; background: linear-gradient(150deg,#e6f2c3,#d5e9a6); }
+.normas-media--soft span { background: linear-gradient(150deg,#dcead2,#c9e2c5); }
+.normas-media--round span { background: linear-gradient(150deg,#f3e3c2,#ecd6a8); }
+.normas-politica__figura { max-width: 560px; margin: 34px 0 10px; }
+.normas-vida__ilustraciones { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: clamp(28px,5vw,64px); margin-top: 48px; }
+.normas-vida__ilustraciones figcaption { position: relative; z-index: 2; margin-top: 14px; color: #5d6b55; font-size: 14px; line-height: 1.5; }
+.reveal-ready .normas-media.is-visible img { animation: reveal-settle 2000ms cubic-bezier(0.16,1,0.3,1) both; }
+
+/* ---------- Mapa de normas ---------- */
+.normas-filtros { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 28px; }
+.normas-filtro {
+  padding: 11px 18px; border: 1px solid #dce3cd; border-radius: 100px; background: #fbfdf5; color: #1f7a63;
+  cursor: pointer; font: 600 13px/1.2 var(--font-body);
+  transition: background-color 450ms var(--ease-editorial), color 450ms var(--ease-editorial), border-color 450ms var(--ease-editorial), translate 450ms var(--ease-editorial);
+}
+.normas-filtro.is-active { border-color: #122c33; background: #122c33; color: #f5fbdf; }
+@media (hover:hover) and (pointer:fine) { .normas-filtro:not(.is-active):hover { translate: 0 -2px; border-color: #2ea88f; } }
+.normas-respuesta .normas-filtros__estado { margin-top: 12px; color: #6b7a63; font-size: 12px; line-height: 1.4; }
+.normas-mapa { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; margin: 34px 0 0; padding: 0; list-style: none; }
+.normas-mapa__item {
+  --tipo: #2ea88f; position: relative; display: flex; flex-direction: column; min-width: 0;
+  padding: 30px 30px 26px; border: 1px solid #dce3cd; border-radius: 28px; background: #fbfdf5; box-shadow: 0 18px 45px #0f25370f;
+}
+.normas-mapa__item[data-tipo="rechaza"] { --tipo: #8a1d2a; }
+.normas-mapa__item[data-tipo="espera"] { --tipo: #122c33; }
+.reveal-ready .normas-mapa__item[data-reveal] {
+  transition: opacity 1500ms var(--ease-editorial), transform 1500ms var(--ease-editorial), filter 1500ms var(--ease-editorial), translate 450ms var(--ease-editorial), box-shadow 450ms var(--ease-editorial);
+}
+@media (hover:hover) and (pointer:fine) {
+  /* translate (no transform) para no pisar la transición de entrada de data-reveal. */
+  .normas-mapa__item:hover { translate: 0 -6px; box-shadow: 0 26px 50px #0f25371f; }
+}
+.normas-mapa__item[hidden] { display: none; }
+.normas-mapa__estado { display: inline-flex; align-items: center; gap: 8px; align-self: flex-start; color: #435043; font: 600 11px/1.3 var(--font-body); letter-spacing: .14em; text-transform: uppercase; }
+.normas-mapa__estado::before { width: 7px; height: 7px; flex: none; border-radius: 50%; background: var(--tipo); content: ""; }
+.normas-mapa h3 { margin-top: 18px; color: var(--normas-ink); font-size: clamp(23px,2.4vw,29px); font-weight: 400; line-height: 1.16; letter-spacing: -.035em; }
+.normas-respuesta .normas-mapa__resumen { display: block; margin-top: 10px; color: var(--normas-ink); font-size: 15.5px; line-height: 1.65; }
+.normas-mapa__detalle { margin-top: 14px; padding-top: 14px; border-top: 1px solid #e4ebd3; }
+.normas-respuesta .normas-mapa__detalle p { margin: 0; color: #5d6b55; font-size: 14px; line-height: 1.7; }
+.normas-mapa__enlaces { display: flex; flex-wrap: wrap; gap: 7px 16px; margin-top: auto; padding-top: 18px; }
+.normas-mapa__enlaces a { color: #1f7a63; font-size: 13px; font-weight: 600; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+.normas-respuesta .normas-mapa__nota { margin-top: 28px; color: #5d6b55; font-size: 13.5px; line-height: 1.7; }
+
+/* ---------- Tres columnas: cómo leer las normas / otras prácticas ---------- */
+.normas-variacion__grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 18px; margin-top: 38px; }
+.normas-variacion__grid article { padding: 28px 26px 26px; border: 1px solid #dce3cd; border-radius: 28px; background: #fbfdf5; box-shadow: 0 18px 45px #0f25370f; }
+.normas .normas-variacion__grid h3 { margin-top: 0; color: var(--normas-ink); font-size: 21px; font-weight: 400; letter-spacing: -.025em; }
+.normas .normas-variacion__grid p { margin-top: 10px; font-size: 14.5px; line-height: 1.75; }
+.normas-variacion__grid a { color: #1f7a63; }
+.normas-variacion .normas-legal { margin-top: 26px; color: #5d6b55; font-size: 13.5px; }
+.normas-sangre-cta { margin-top: 32px; }
+
+/* ---------- Preguntas frecuentes (mismo acordeón que sangre) ---------- */
+.normas-faq__lista { display: grid; gap: 12px; margin-top: 34px; }
+.normas-faq__lista details { border: 1px solid #dce3cd; border-radius: 24px; background: #fbfdf5; transition: box-shadow 450ms var(--ease-editorial); }
+.normas-faq__lista details[open] { box-shadow: 0 18px 45px #0f25371a; }
+.normas-faq summary { display: flex; justify-content: space-between; align-items: center; gap: 18px; padding: 20px 24px; cursor: pointer; color: var(--normas-ink); font-size: 16.5px; font-weight: 500; list-style: none; }
+.normas-faq summary::-webkit-details-marker { display: none; }
+.normas-faq summary span { display: grid; place-items: center; flex: 0 0 28px; height: 28px; border-radius: 50%; background: #122c33; color: #f5fbdf; font-size: 15px; transition: rotate 450ms var(--ease-editorial), background-color 450ms var(--ease-editorial); }
+.normas-faq details[open] summary span { rotate: 45deg; }
+@media (hover:hover) and (pointer:fine) { .normas-faq summary:hover span { background: #1f7a63; } }
+.normas-faq__lista details > p { max-width: 760px; margin: 0; padding: 0 24px 22px; color: #435043; font-size: 15.5px; line-height: 1.8; }
+
+/* ---------- Cierre: mirada + sigue leyendo en una sola tarjeta navy ---------- */
+.normas-mirada .guia-cierre__inner > p:not(.guia-kicker) { max-width: 780px; margin-top: 18px; color: #f5fbdfcc; font-size: 16px; line-height: 1.8; }
+.normas-mirada .guia-cierre__inner p a { color: #d8eaa4; text-decoration: underline; text-underline-offset: 4px; }
+.normas-mirada .sg-sigue { margin-top: clamp(40px,5vw,56px); }
+.normas-fuentes { width: min(760px,calc(100% - 64px)); margin-inline: auto; padding-block: 0 clamp(70px,8vw,110px); }
+.normas-fuentes h2 { color: var(--normas-ink); font-size: clamp(1.3rem,2vw,1.6rem); font-weight: 400; letter-spacing: -.03em; }
+.normas-fuentes ul { margin: 14px 0 0; padding-left: 1.1em; }
+.normas-fuentes li { margin-top: .5em; color: #5d6b55; font-size: 14px; line-height: 1.7; }
+.normas-fuentes a { color: #1f7a63; text-decoration: underline; text-underline-offset: 3px; }
+.normas-fuentes__fecha { margin-top: 20px; padding-top: 14px; border-top: 1px solid #dce3cd; color: #7c8a72; font-size: 13px; }
+
+.normas a:focus-visible, .normas summary:focus-visible, .normas button:focus-visible { outline: 3px solid #2ea88f; outline-offset: 5px; border-radius: 6px; }
+
+/* Entre 1280 y 1699px el contenido se desplaza a la derecha del índice lateral (misma regla que guia-salida.css). */
+@media (min-width: 1280px) and (max-width: 1699px) {
+  .normas-ancho, .normas-mirada .guia-cierre__inner, .normas-fuentes {
+    width: min(1080px, calc(100% - 370px));
+    margin-left: max(calc((100% - 1080px) / 2 + 130px), 300px);
+    margin-right: auto;
+  }
+}
+@media (max-width: 900px) {
+  .normas-variacion__grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 767px) {
+  .normas .guia-hero { min-height: 690px; }
+  .normas .guia-hero__img { width: 100%; object-position: 58% center; opacity: .58; mask-image: linear-gradient(180deg,#000 0%,#0009 38%,transparent 88%); -webkit-mask-image: linear-gradient(180deg,#000 0%,#0009 38%,transparent 88%); }
+  .normas .guia-hero__scrim { background: linear-gradient(180deg,#0f253733 0%,#0f2537a8 28%,#0f2537 68%); }
+  .normas .guia-hero__content, .normas .guia-hero__bottom { width: calc(100% - 40px); }
+  .normas .guia-hero__content { padding-top: 92px; }
+  .normas .guia-hero h1 { max-width: 12ch; font-size: clamp(2.65rem,11.5vw,3.6rem); }
+  .normas .guia-hero__bottom { margin-top: 30px; gap: 10px; }
+  .normas .guia-hero__meta { gap: 7px 14px; font-size: 11px; }
+  .normas-ancho, .normas-fuentes { width: calc(100% - 40px); }
+  .normas-mapa { grid-template-columns: 1fr; gap: 12px; margin-top: 26px; }
+  .normas-mapa__item { padding: 24px 22px 22px; }
+  .normas-filtros { gap: 8px; margin-top: 20px; }
+  .normas-filtro { padding: 9px 13px; font-size: 12px; }
+  .normas-articulo__inner, .normas-ocio__inner, .normas-vida__inner, .normas-estudios__inner { grid-template-columns: 1fr; gap: 30px; }
+  .normas-articulo__nota { position: static; margin-top: 0; }
+  .normas-vida__ilustraciones { grid-template-columns: 1fr; max-width: 520px; }
+  .normas-ocio figure { order: 2; }
+  .normas-media span { border-radius: 26px; }
+  .normas-faq summary { padding: 18px 20px; font-size: 15.5px; }
+  .normas-faq__lista details > p { padding: 0 20px 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .normas-media img, .normas-media span { transform: none !important; animation: none !important; }
+  .normas-filtro, .normas-mapa__item, .normas-faq summary span { transition: none; }
+}
+/* El bloque de color de las ilustraciones con pie no baja por detrás del texto. */
+.normas-vida__ilustraciones .normas-media span { bottom: 2.6em; }

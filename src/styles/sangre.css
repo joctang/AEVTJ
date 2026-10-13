@@ -501,6 +501,7 @@ html:not(.reveal-ready) .sg-linea::after { scale: 1 1; }
 .sg-apertura--baja .sg-apertura__img { position: static; margin-top: 0; }
 .sg-apertura--baja .sg-apertura__img img { aspect-ratio: 3 / 2; border-radius: 220px 220px 36px 36px; -webkit-mask-image: none; mask-image: none; }
 @media (max-width: 899px) {
+  .sg-apertura--izquierda { grid-template-columns: 1fr; }
   .sg-apertura--izquierda .sg-apertura__img { order: 0; }
   .sg-apertura--arriba .sg-apertura__img { order: -1; }
   .sg-apertura--arriba .sg-apertura__img img { aspect-ratio: 3 / 2; -webkit-mask-image: none; mask-image: none; }

@@ -1,0 +1,60 @@
+---
+// Esqueleto de página temática de /testigos-de-jehova/: título, respuesta inicial del
+// borrador y esquema de apartados por redactar. Se usa con `noindex` hasta que la
+// página se rellene (ver paginasPendientes en astro.config.mjs).
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+interface Props {
+  titulo: string;
+  descripcion: string;
+  etiqueta: string;
+  respuesta: string[];
+  esquema: string[];
+  fuentes: { label: string; href: string }[];
+  carpeta: string;
+}
+
+const { titulo, descripcion, etiqueta, respuesta, esquema, fuentes, carpeta } = Astro.props;
+---
+
+<BaseLayout
+  title={titulo}
+  description={descripcion}
+  noindex
+  breadcrumbs={[
+    { label: "Testigos de Jehová", href: "/testigos-de-jehova/" },
+    { label: "Normas y vida cotidiana", href: "/testigos-de-jehova/normas/" },
+    { label: etiqueta },
+  ]}
+>
+  <article class="tema-pendiente">
+    <p class="tema-pendiente__aviso">Página en construcción · no indexada</p>
+    <h1>{titulo}</h1>
+    {respuesta.map((p) => <p class="tema-pendiente__lead">{p}</p>)}
+
+    <h2>Apartados por redactar</h2>
+    <ol>{esquema.map((e) => <li>{e}</li>)}</ol>
+
+    <h2>Fuentes de partida</h2>
+    <ul>
+      {fuentes.map((f) => <li><a href={f.href} target="_blank" rel="noopener noreferrer">{f.label} ↗</a></li>)}
+    </ul>
+
+    <p class="tema-pendiente__ruta">Borrador de trabajo: <code>06_Contenido/{carpeta}/BORRADOR.md</code></p>
+    <p><a href="/testigos-de-jehova/normas/">← Volver a Normas y vida cotidiana</a></p>
+  </article>
+</BaseLayout>
+
+<style>
+  .tema-pendiente { width: min(780px, calc(100% - 40px)); margin: 0 auto; padding: clamp(48px, 7vw, 96px) 0; color: #122c33; }
+  .tema-pendiente__aviso { display: inline-block; margin: 0 0 18px; padding: 4px 12px; border-radius: 999px; background: #d8eaa4; color: #122c33; font-size: 12px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; }
+  .tema-pendiente h1 { font-size: clamp(2rem, 4.6vw, 3.2rem); line-height: 1.12; letter-spacing: -.04em; text-wrap: balance; }
+  .tema-pendiente__lead { margin-top: 22px; font-size: clamp(17px, 2vw, 20px); line-height: 1.7; }
+  .tema-pendiente h2 { margin-top: 44px; font-size: 1.4rem; letter-spacing: -.02em; }
+  .tema-pendiente ol, .tema-pendiente ul { margin-top: 14px; padding-left: 22px; line-height: 1.8; }
+  .tema-pendiente ol { list-style: decimal; }
+  .tema-pendiente ul { list-style: disc; }
+  .tema-pendiente a { color: #1c725d; text-underline-offset: 3px; }
+  .tema-pendiente__ruta { margin-top: 40px; color: #44544a; font-size: 14px; }
+  .tema-pendiente p:last-child { margin-top: 18px; }
+</style>

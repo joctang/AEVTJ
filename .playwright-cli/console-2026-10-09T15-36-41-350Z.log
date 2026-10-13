@@ -1,0 +1,6 @@
+[ 3612593ms] [LOG] [vite] server connection lost. Polling for restart... @ http://localhost:4321/@vite/client:1736
+[ 8624840ms] [LOG] [vite] server connection lost. Polling for restart... @ http://localhost:4321/@vite/client:1736
+[20537224ms] [LOG] [vite] server connection lost. Polling for restart... @ http://localhost:4321/@vite/client:1736
+[51353922ms] [LOG] [vite] server connection lost. Polling for restart... @ http://localhost:4321/@vite/client:1736
+[142664524ms] [LOG] [vite] server connection lost. Polling for restart... @ http://localhost:4321/@vite/client:1736
+[152308297ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600;700&display=swap:0

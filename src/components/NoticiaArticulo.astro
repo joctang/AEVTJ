@@ -32,21 +32,49 @@ const tieneLateral = Boolean(
 // Los textos de la interfaz cambian si la pieza es de radio o pódcast.
 const esAudio = noticia.pieza?.formato === "audio";
 const verbo = esAudio ? "Escuchar" : "Ver";
-const kickerPieza = `${verbo} la pieza`;
+const kickerPieza = noticia.pieza?.enlaceExterno && !noticia.pieza?.youtubeId
+  ? "Entrevista original"
+  : `${verbo} la pieza`;
+const etiquetaPieza = noticia.pieza?.youtubeId
+  ? `${esAudio ? "Audio" : "Vídeo"} de la pieza`
+  : noticia.pieza?.enlaceExterno
+    ? "Fuente original"
+    : "Pieza relacionada";
 ---
 
-<article class="noticia">
-  <header class="noticia-hero">
-    <img
-      class="noticia-hero__img"
-      src={noticia.portada.src}
-      alt={noticia.portada.alt}
-      width={noticia.portada.width ?? 1600}
-      height={noticia.portada.height ?? 900}
-      fetchpriority="high"
-      decoding="async"
-    />
+<article class:list={["noticia", {
+  "noticia--becky": noticia.slug === "becky-extestigo-transfusiones-y-reencuentro-familiar",
+  "noticia--3cat-ana": noticia.slug === "3cat-familia-ana-montiel-cambio-transfusiones",
+}]}>
+  <header
+    class:list={["noticia-hero", {
+      "noticia-hero--prensa": noticia.presentacion === "prensa",
+      "noticia-hero--sin-imagen": !noticia.portada?.src,
+    }]}
+    style={noticia.presentacion === "prensa" ? "background-color:#edf5d7;color:#122c33;padding:0" : undefined}
+  >
+    {noticia.portada?.src && (
+      <img
+        class="noticia-hero__img"
+        src={noticia.portada.src}
+        alt={noticia.portada.alt}
+        width={noticia.portada.width ?? 1600}
+        height={noticia.portada.height ?? 900}
+        fetchpriority="high"
+        decoding="async"
+      />
+    )}
     <div class="noticia-hero__scrim" aria-hidden="true"></div>
+    {noticia.portada?.credito && (
+      <a
+        class="noticia-hero__credito"
+        href={noticia.portada.credito.href}
+        target={noticia.portada.credito.href ? "_blank" : undefined}
+        rel={noticia.portada.credito.href ? "noopener" : undefined}
+      >
+        {noticia.portada.credito.texto}
+      </a>
+    )}
     <div class="noticia-hero__content">
       <p class="noticia-banda">
         <span>{noticia.autoria}</span>
@@ -63,6 +91,16 @@ const kickerPieza = `${verbo} la pieza`;
       <h1>{noticia.titulo}</h1>
       <p class="noticia-hero__entradilla">{noticia.entradilla}</p>
       {fechaLarga && <p class="noticia-hero__fecha"><time datetime={noticia.fecha}>{fechaLarga}</time></p>}
+      {noticia.presentacion === "prensa" && noticia.pieza?.enlaceExterno && (
+        <a
+          class="guia-pill guia-pill--navy noticia-hero__cta"
+          href={noticia.pieza.enlaceExterno.href}
+          target="_blank"
+          rel="noopener"
+        >
+          {noticia.pieza.enlaceExterno.etiqueta}
+        </a>
+      )}
     </div>
   </header>
 
@@ -81,8 +119,8 @@ const kickerPieza = `${verbo} la pieza`;
   }
 
   {
-    noticia.pieza && (
-      <section class="noticia-pieza" data-reveal aria-label={`${esAudio ? "Audio" : "Vídeo"} de la pieza`}>
+    noticia.pieza && noticia.presentacion !== "prensa" && (
+      <section class="noticia-pieza" data-reveal aria-label={etiquetaPieza}>
         <div class="noticia-pieza__inner">
           {noticia.pieza.youtubeId && (
             <div

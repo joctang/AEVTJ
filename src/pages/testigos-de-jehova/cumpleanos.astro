@@ -1,0 +1,50 @@
+---
+// /testigos-de-jehova/cumpleanos/: texto en 06_Contenido/testigos-de-jehova__cumpleanos/BORRADOR.md.
+// Datos: node scripts/articulo-desde-borrador.mjs cumpleanos · Presentación: ArticuloDocumental.
+import ArticuloDocumental from "../../components/ArticuloDocumental.astro";
+import datos from "../../data/testigos-de-jehova-cumpleanos.json";
+
+const cortos = {
+  respuesta: "Sus argumentos",
+  historia: "Cómo lo han explicado",
+  escuela: "En clase",
+  infancia: "Lo que recuerdan",
+  familia: "Regalos y familia",
+  expulsion: "¿Expulsión?",
+  despues: "Volver a celebrar",
+};
+
+// Ilustraciones del estilo geométrico «hilo lima» ya convertidas (docs-ilustraciones/GUIA-ILUSTRACIONES.md).
+const ilustraciones = {
+  escuela: { nombre: "tdj-cumpleanos-aula-hilo", escena: "", alt: "Ilustración de un pupitre con un regalo y una mesa de alumnos al fondo, conectados por un hilo lima suelto.", lista: true, pos: "derecha" as const },
+  infancia: { nombre: "tdj-cumpleanos-escuela-hilo", escena: "", alt: "Ilustración de una figura infantil sentada aparte de una mesa de cumpleaños; un hilo lima queda suelto entre ambas.", lista: true, pos: "izquierda" as const },
+};
+
+const sigueLeyendo = [
+  { titulo: "Navidad", descripcion: "Por qué no la celebran y cómo dejaron de hacerlo.", href: "/testigos-de-jehova/navidad/" },
+  { titulo: "Normas y vida cotidiana", descripcion: "Qué pueden hacer y qué no, tema a tema.", href: "/testigos-de-jehova/normas/" },
+  { titulo: "Transfusiones de sangre", descripcion: "Historia, postura y cambios documentados.", href: "/testigos-de-jehova/sangre/" },
+  { titulo: "Guía para salir", descripcion: "El proceso de salida explicado paso a paso.", href: "/guia-para-salir-de-los-testigos-de-jehova/" },
+];
+---
+
+<ArticuloDocumental
+  datos={datos}
+  slug="cumpleanos"
+  miga="Cumpleaños"
+  descripcion="Por qué los Testigos de Jehová no celebran cumpleaños: sus razones, cómo las han explicado desde 1936 y lo que cuentan quienes crecieron sin celebrarlos."
+  revisado="13 de octubre de 2026"
+  revisadoIso="2026-10-13"
+  cortos={cortos}
+  hero={{
+    src: "/uploads/2026/10/tdj-cumpleanos-tarta-hero-800.webp",
+    srcset: "/uploads/2026/10/tdj-cumpleanos-tarta-hero-800.webp 800w",
+    alt: "Una mano sostiene una tarta de cumpleaños con velas de colores encendidas sobre un fondo turquesa.",
+  }}
+  accionHero={{ texto: "Ver sus argumentos", href: "#respuesta" }}
+  tarjetas="respuesta"
+  linea="historia"
+  casos={["Lyndi"]}
+  ilustraciones={ilustraciones}
+  sigueLeyendo={sigueLeyendo}
+/>

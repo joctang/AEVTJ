@@ -1,0 +1,57 @@
+---
+// /testigos-de-jehova/navidad/: texto en 06_Contenido/testigos-de-jehova__navidad/BORRADOR.md.
+// Datos: node scripts/articulo-desde-borrador.mjs navidad · Presentación: ArticuloDocumental.
+import ArticuloDocumental from "../../components/ArticuloDocumental.astro";
+import datos from "../../data/testigos-de-jehova-navidad.json";
+
+const cortos = {
+  respuesta: "Qué dicen hoy",
+  biblia: "Textos bíblicos",
+  historia: "Cómo dejaron de celebrarla",
+  fecha: "¿Nació el 25 de diciembre?",
+  origen: "¿Una fiesta pagana?",
+  costumbres: "Árbol y costumbres",
+  "otros-cristianos": "Otros cristianos",
+  colegio: "En el colegio",
+  familia: "Regalos y familia",
+  consecuencias: "Consecuencias",
+  despues: "Después de salir",
+};
+
+// Ilustraciones geométricas «hilo lima» (docs-ilustraciones/GUIA-ILUSTRACIONES.md).
+const ilustraciones = {
+  historia: { nombre: "tdj-navidad-betel-arbol-hilo", escena: "Un despacho de principios del siglo XX en Brooklyn, con un árbol de Navidad junto al escritorio. El hilo lima conecta el árbol con la mesa de trabajo.", alt: "Ilustración de un árbol de Navidad junto a un escritorio antiguo; un hilo verde los conecta.", lista: true, pos: "derecha" as const },
+  costumbres: { nombre: "tdj-navidad-arbol-papa-noel-hilo", escena: "Un árbol decorado, varios regalos y una figura geométrica de Papá Noel. El hilo lima recorre el árbol y llega a los regalos.", alt: "Ilustración de un árbol de Navidad decorado, regalos y una figura de Papá Noel unidos por un hilo verde.", lista: true, pos: "izquierda" as const },
+  colegio: { nombre: "tdj-navidad-aula-villancicos-hilo", escena: "Un aula con guirnaldas y un grupo que canta; al fondo, una puerta entreabierta a otra sala con un pupitre solo. El hilo lima se estira entre ambos espacios.", alt: "Ilustración de tres alumnos reunidos en un aula decorada con una guirnalda; un hilo verde pasa por la puerta hasta un pupitre vacío.", lista: true, pos: "derecha" as const },
+  familia: { nombre: "tdj-navidad-cena-silla-vacia-hilo", escena: "Mesa de Nochebuena puesta para una familia, con una silla vacía; el hilo lima sale de esa silla hacia una ventana iluminada.", alt: "Ilustración de una mesa puesta para una comida familiar, con una silla vacía conectada por un hilo verde a la ventana.", lista: true, pos: "izquierda" as const },
+  despues: { nombre: "tdj-navidad-papa-noel-regalo-hilo", escena: "Una figura geométrica de Papá Noel junto a una silla vacía y un regalo. El hilo lima queda suelto entre los objetos.", alt: "Ilustración de una figura de Papá Noel junto a una silla vacía y un regalo; el hilo verde queda suelto entre ellos.", lista: true, pos: "derecha" as const },
+};
+
+const sigueLeyendo = [
+  { titulo: "Cumpleaños", descripcion: "Por qué no celebran los cumpleaños y cómo lo viven los niños.", href: "/testigos-de-jehova/cumpleanos/" },
+  { titulo: "Normas y vida cotidiana", descripcion: "Qué pueden hacer y qué no, tema a tema.", href: "/testigos-de-jehova/normas/" },
+  { titulo: "Transfusiones de sangre", descripcion: "Historia, postura y cambios documentados.", href: "/testigos-de-jehova/sangre/" },
+  { titulo: "Guía para salir", descripcion: "El proceso de salida explicado paso a paso.", href: "/guia-para-salir-de-los-testigos-de-jehova/" },
+];
+---
+
+<ArticuloDocumental
+  datos={datos}
+  slug="navidad"
+  miga="Navidad"
+  descripcion="Por qué los Testigos de Jehová no celebran la Navidad, cómo dejaron de celebrarla en los años veinte y cómo lo viven hoy las familias y los niños."
+  revisado="13 de octubre de 2026"
+  revisadoIso="2026-10-13"
+  cortos={cortos}
+  hero={{
+    src: "/uploads/2026/10/tdj-navidad-hero-600.webp",
+    srcset: "/uploads/2026/10/tdj-navidad-hero-600.webp 600w",
+    alt: "Primer plano de un árbol de Navidad con bolas rojas y luces desenfocadas.",
+  }}
+  accionHero={{ texto: "Ver la cronología", href: "#historia" }}
+  tarjetas="respuesta"
+  linea="historia"
+  casos={["Jasmine"]}
+  ilustraciones={ilustraciones}
+  sigueLeyendo={sigueLeyendo}
+/>

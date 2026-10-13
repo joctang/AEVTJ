@@ -23,10 +23,10 @@ export const noticia: Noticia = {
   fecha: "2026-09-18T10:00:00",
   autoria: "AEVTJ · Nota de prensa",
   portada: {
-    src: "/uploads/2026/09/comunicado-transfusiones-aevtj.jpg",
-    alt: "Ilustración de gotas concéntricas en líneas verde lima sobre fondo azul marino",
-    width: 1600,
-    height: 900,
+    src: "/uploads/2026/10/tdj-sangre-portada.webp",
+    alt: "Pasillo de hospital en penumbra con un gotero colgado de un soporte en primer plano",
+    width: 1672,
+    height: 941,
   },
   entradilla:
     "Los Testigos de Jehová dejan a la conciencia de cada miembro aceptar componentes sanguíneos. La AEVTJ valora el cambio, pero advierte de que la sangre completa sigue siendo una falta grave, exige una disculpa pública y estudiará emprender acciones legales.",

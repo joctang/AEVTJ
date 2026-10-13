@@ -157,7 +157,7 @@ export const secciones: Seccion[] = [
           },
         ],
       },
-      p("Estas principales pautas forman parte de las enseñanzas comunes de la organización en todo el mundo."),
+      p("Estas pautas no abarcan todos los aspectos ni describen por sí solas cómo vive cada persona cada situación."),
     ],
   },
   {
