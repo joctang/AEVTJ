@@ -1,3 +1,5 @@
 [    1123ms] [WARNING] Ignoring Event: localhost @ https://analytics.ahrefs.com/analytics.js:0
 [  188936ms] [WARNING] Ignoring Event: localhost @ https://analytics.ahrefs.com/analytics.js:0
 [  211342ms] [WARNING] Ignoring Event: localhost @ https://analytics.ahrefs.com/analytics.js:0
+[ 1640411ms] [LOG] [vite] server connection lost. Polling for restart... @ http://localhost:4322/@vite/client:1736
+[ 3239638ms] [WARNING] Ignoring Event: localhost @ https://analytics.ahrefs.com/analytics.js:0
