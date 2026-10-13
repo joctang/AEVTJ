@@ -5,10 +5,17 @@ const gtmId = import.meta.env.PUBLIC_GTM_ID;
 const searchConsoleVerification =
   import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION ||
   "RVBlSfeIPVuSVeuedCV-MKpqSBvVHED99fDAtM8W4uw";
+const bingVerification =
+  import.meta.env.PUBLIC_BING_SITE_VERIFICATION ||
+  "8C0A1245ED1D9D96F4AEAEAA69094AEC";
 ---
 
 {searchConsoleVerification && (
   <meta name="google-site-verification" content={searchConsoleVerification} />
+)}
+
+{bingVerification && (
+  <meta name="msvalidate.01" content={bingVerification} />
 )}
 
 {gtmId && (
