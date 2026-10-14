@@ -141,7 +141,7 @@ export const secciones: Seccion[] = [
         items: [
           {
             etiqueta: "Celebraciones.",
-            texto: "No celebran cumpleaños ni Navidad por motivos religiosos. Eso no significa que no celebren nada: pueden reunirse con familiares y amigos o celebrar una boda.",
+            texto: "No celebran <a href=\"/testigos-de-jehova/cumpleanos/\">cumpleaños</a> ni <a href=\"/testigos-de-jehova/navidad/\">Navidad</a> por motivos religiosos. Eso no significa que no celebren nada: pueden reunirse con familiares y amigos o celebrar una boda.",
           },
           {
             etiqueta: "Ropa y aspecto.",

@@ -2,6 +2,14 @@ export const mainNav = [
   { label: "¿Quiénes somos?", href: "/quienes-somos/" },
   { label: "Noticias", href: "/noticias/" },
   {
+    label: "Testigos de Jehová",
+    href: "/testigos-de-jehova/",
+    children: [
+      { label: "Transfusiones de sangre", href: "/testigos-de-jehova/sangre/" },
+      { label: "Normas y vida cotidiana", href: "/testigos-de-jehova/normas/" },
+    ],
+  },
+  {
     label: "Documentos",
     href: "#",
     children: [
@@ -21,7 +29,16 @@ export const mainNav = [
     ],
   },
   { label: "Hazte socio / Donaciones", href: "/hazte-socio/" },
+  { label: "Contacto", href: "/contacto/" },
+];
+
+// Pie de página: lista corta propia (no repite el menú entero).
+export const footerNav = [
+  { label: "Testigos de Jehová", href: "/testigos-de-jehova/" },
+  { label: "Transfusiones de sangre", href: "/testigos-de-jehova/sangre/" },
+  { label: "Guía para salir", href: "/guia-para-salir-de-los-testigos-de-jehova/" },
   { label: "Otras asociaciones", href: "/otras-asociaciones/" },
+  { label: "Ex testigos en las redes", href: "/victimas/" },
   { label: "Contacto", href: "/contacto/" },
 ];
 
@@ -36,4 +53,5 @@ export const legalLinks = [
   { label: "Aviso Legal", href: "/aviso-legal/" },
   { label: "Política de Cookies", href: "/politica-de-cookies/" },
   { label: "Política de privacidad", href: "/politica-de-privacidad/" },
+  { label: "Transparencia", href: "/transparencia/" },
 ];

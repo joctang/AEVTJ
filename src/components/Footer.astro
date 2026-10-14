@@ -1,5 +1,5 @@
 ---
-import { mainNav, socialLinks, legalLinks } from "../data/nav";
+import { footerNav, socialLinks, legalLinks } from "../data/nav";
 import Icon from "./Icon.astro";
 
 const mailchimpFormAction =
@@ -39,12 +39,12 @@ const mailchimpFormAction =
       </div>
 
       <nav aria-label="Menú de pie de página">
-        <h2 class="font-heading text-sm uppercase tracking-widest text-white/50">Menú</h2>
+        <h2 class="font-heading text-sm uppercase tracking-widest text-white/50">Explora</h2>
         <ul class="mt-4 flex flex-col gap-2 text-sm">
           {
-            mainNav.map((item) => (
+            footerNav.map((item) => (
               <li>
-                <a href={item.href === "#" ? "/legal/" : item.href} class="text-white/80 hover:text-white">
+                <a href={item.href} class="text-white/80 hover:text-white">
                   {item.label}
                 </a>
               </li>
