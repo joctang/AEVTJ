@@ -127,3 +127,17 @@ h6 {
     transition: none !important;
   }
 }
+
+/* Enlaces dentro del texto: siempre subrayados (14/10/2026).
+   Solo afecta a enlaces sin clase dentro de párrafos, listas y citas del contenido;
+   botones, tarjetas y menús llevan clase y no se tocan. */
+main :is(p, li, dd, td, blockquote, figcaption, summary) a:not([class]):not(nav a),
+.prose a:not([class]) {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+main :is(p, li, dd, td, blockquote, figcaption, summary) a:not([class]):not(nav a):hover,
+.prose a:not([class]):hover {
+  text-decoration-thickness: 2px;
+}
