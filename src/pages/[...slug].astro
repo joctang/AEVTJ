@@ -10,6 +10,24 @@ const heroPhotos: Record<string, string> = {
     "/uploads/2025/10/Serene-Seascape-at-Sunset.webp",
 };
 
+// Título y descripción SEO por página (el título visible/H1 sigue siendo el del contenido).
+const seo: Record<string, { title?: string; description?: string }> = {
+  "recursos-de-ayuda": {
+    title: "Recursos de ayuda para ex Testigos de Jehová",
+    description: "Guías en PDF y recursos de apoyo para quienes salen de los Testigos de Jehová, incluida una guía sobre el trauma religioso.",
+  },
+  transparencia: {
+    title: "Transparencia de la AEVTJ",
+    description: "Portal de transparencia de la AEVTJ: información clara y accesible sobre la Asociación Española de Víctimas de los Testigos de Jehová.",
+  },
+  "aviso-legal": {
+    description: "Aviso legal de la AEVTJ: datos identificativos del titular, condiciones de uso y propiedad intelectual de victimasdetestigosdejehova.org.",
+  },
+  "politica-de-cookies": {
+    description: "Política de cookies de la AEVTJ: qué cookies usa esta web, para qué sirven y cómo aceptarlas, rechazarlas o configurarlas.",
+  },
+};
+
 const heroTitles: Record<string, string> = {
   legal: "Demandas, juicios y sentencias judiciales",
   "guia-para-salir-de-los-testigos-de-jehova": "Guía para salir de los Testigos de Jehová",
@@ -27,6 +45,8 @@ export async function getStaticPaths() {
     "contacto", // has its own custom page
     "politica-de-privacidad", // has a custom legal page with Mailchimp disclosure
     "legal", // has its own custom page
+    "demandas", // versión antigua de /legal/: redirigida con 301 en .htaccess
+    "colaboradores", // integrada en /quienes-somos/#colaboradores: 301 en .htaccess
     "guia-para-proteger-tus-derechos-sanitarios-en-caso-de-interferencia-familiar", // has its own custom page
   ]);
   const entries = await getCollection("pages");
@@ -48,6 +68,6 @@ const heroTitle = heroTitles[entry.data.slug];
 const bodyHtml = heroPhoto ? html.replace(/<h1>.*?<\/h1>/s, "") : html;
 ---
 
-<BaseLayout title={title} breadcrumbs={[{ label: heroTitle ?? title }]} image={heroPhoto}>
+<BaseLayout title={seo[entry.data.slug]?.title ?? title} description={seo[entry.data.slug]?.description} breadcrumbs={[{ label: heroTitle ?? title }]} image={heroPhoto}>
   <ArticleContent title={heroTitle ?? title} html={bodyHtml} heroPhoto={heroPhoto} />
 </BaseLayout>

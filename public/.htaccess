@@ -52,6 +52,12 @@ RedirectMatch 301 ^/ser-catalunya-da-voz-a-expulsados-de-los-testigos-de-jehova/
 RedirectMatch 301 ^/suecia-rechaza-subsidios-estatales-a-los-testigos-de-jehova/?$ /noticias/suecia-rechaza-subsidios-estatales-a-los-testigos-de-jehova/
 RedirectMatch 301 ^/victoria-historica-de-aevtj/?$ /noticias/victoria-historica-de-aevtj/
 
+# /demandas/ era la versión antigua de WordPress; la vigente es /legal/ (14/10/2026)
+RedirectMatch 301 ^/demandas/?$ /legal/
+
+# /colaboradores/ ya está integrada en /quienes-somos/ (14/10/2026)
+RedirectMatch 301 ^/colaboradores/?$ /quienes-somos/#colaboradores
+
 # Página 404 propia
 ErrorDocument 404 /404.html
 

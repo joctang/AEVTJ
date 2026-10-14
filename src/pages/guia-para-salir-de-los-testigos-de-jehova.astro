@@ -21,20 +21,6 @@ const jsonLdArticle = {
   image: `${Astro.site ?? ""}${intro.heroImage.src.replace(/^\//, "")}`,
   mainEntityOfPage: `${Astro.site ?? "https://victimasdetestigosdejehova.org/"}guia-para-salir-de-los-testigos-de-jehova/`,
 };
-
-const jsonLdHowTo = {
-  "@context": "https://schema.org",
-  "@type": "HowTo",
-  name: "7 pasos para afrontar la salida",
-  description: "Pasos prácticos para afrontar la salida de los Testigos de Jehová.",
-  author: { "@type": "Organization", name: "AEVTJ" },
-  step: pasos.map((paso) => ({
-    "@type": "HowToStep",
-    position: paso.n,
-    name: paso.titulo,
-    text: paso.parrafos.join(" "),
-  })),
-};
 ---
 
 <BaseLayout title={intro.titulo} description={description} breadcrumbs={[{ label: intro.titulo }]}>
@@ -212,7 +198,6 @@ const jsonLdHowTo = {
   </div>
 
   <script type="application/ld+json" set:html={JSON.stringify(jsonLdArticle)} />
-  <script type="application/ld+json" set:html={JSON.stringify(jsonLdHowTo)} />
 
   <script>
     import { initRail } from "../scripts/rail";

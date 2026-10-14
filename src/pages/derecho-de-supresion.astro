@@ -35,16 +35,12 @@ const modelos: Record<number, { etiqueta: string; modelo: ModeloTexto }> = {
 const textoModelo = (m: ModeloTexto) =>
   [m.asunto ? `Asunto: ${m.asunto}` : null, ...m.parrafos].filter(Boolean).join("\n\n");
 
-const jsonLdHowTo = {
+const jsonLdWebPage = {
   "@context": "https://schema.org",
-  "@type": "HowTo",
+  "@type": "WebPage",
   name: intro.titulo,
   description,
-  author: {
-    "@type": "Organization",
-    name: "AEVTJ — Asociación Española de Víctimas de los Testigos de Jehová",
-  },
-  step: pasos.map((paso) => ({ "@type": "HowToStep", position: paso.n, name: paso.titulo })),
+  publisher: { "@type": "Organization", name: "AEVTJ" },
 };
 ---
 
@@ -232,7 +228,7 @@ const jsonLdHowTo = {
     </section>
   </div>
 
-  <script type="application/ld+json" set:html={JSON.stringify(jsonLdHowTo)} />
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLdWebPage)} />
 
   <script>
     import { initRail } from "../scripts/rail";

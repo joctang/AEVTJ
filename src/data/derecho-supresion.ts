@@ -20,7 +20,7 @@ export interface Descarga {
 
 export const intro = {
   kicker: "Protección de datos · RGPD",
-  titulo: "Cómo suprimir tus datos personales ante los Testigos de Jehová (derecho de supresión)",
+  titulo: "Derecho de supresión ante los Testigos de Jehová",
   h1: "Cómo suprimir tus datos personales ante los Testigos de Jehová",
   entradilla:
     "Cualquier persona puede ejercer su derecho de supresión respecto de sus datos personales ante el responsable del tratamiento. Si la organización trata datos personales de una persona, esta puede pedir que se supriman cuando proceda conforme al RGPD y la LOPDGDD.",

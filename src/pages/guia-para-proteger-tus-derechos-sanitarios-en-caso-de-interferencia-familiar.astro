@@ -34,23 +34,6 @@ const textoPaso = (paso: (typeof pasos)[number]) =>
     )
     .join(" ");
 
-const jsonLdHowTo = {
-  "@context": "https://schema.org",
-  "@type": "HowTo",
-  name: intro.titulo,
-  description,
-  author: {
-    "@type": "Organization",
-    name: "AEVTJ — Asociación Española de Víctimas de los Testigos de Jehová",
-  },
-  step: pasos.map((paso) => ({
-    "@type": "HowToStep",
-    position: paso.n,
-    name: paso.titulo,
-    text: textoPaso(paso),
-  })),
-};
-
 const jsonLdWebPage = {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -205,7 +188,6 @@ const jsonLdWebPage = {
     </section>
   </div>
 
-  <script type="application/ld+json" set:html={JSON.stringify(jsonLdHowTo)} />
   <script type="application/ld+json" set:html={JSON.stringify(jsonLdWebPage)} />
 
   <script>

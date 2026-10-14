@@ -39,10 +39,8 @@ export interface AvisoLegal {
 
 export const intro: DerechosIntro = {
   kicker: "Derechos sanitarios · Protección",
-  // H1 del contenido; el hero de [...slug].astro usa uno más corto
-  // ("Guía para proteger tus derechos sanitarios").
-  titulo:
-    "Guía para proteger tus derechos sanitarios ante posibles interferencias familiares (expulsados de los Testigos de Jehová)",
+  // Título SEO (<title>) y nombre del schema; el H1 visible está en la página.
+  titulo: "Derechos sanitarios ante interferencia familiar: guía",
   objetivo:
     "Que se respeten tus decisiones médicas si quedas inconsciente o no puedes expresarte.",
   queNecesitas:
