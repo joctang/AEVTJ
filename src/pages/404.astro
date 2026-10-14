@@ -1,0 +1,24 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Página no encontrada"
+  description="La página que buscas no existe o ha cambiado de dirección. Vuelve al inicio o consulta las noticias y recursos de la AEVTJ."
+  noindex
+>
+  <section class="mx-auto max-w-2xl px-6 py-20 text-center">
+    <p class="text-sm font-semibold uppercase tracking-wide">Error 404</p>
+    <h1 class="mt-3 text-3xl font-bold">No hemos encontrado esta página</h1>
+    <p class="mt-4">
+      Puede que la dirección haya cambiado o que el enlace esté incompleto.
+      Si necesitas ayuda, no estás solo: escríbenos.
+    </p>
+    <ul class="mt-8 space-y-2">
+      <li><a href="/">Ir al inicio</a></li>
+      <li><a href="/noticias/">Ver las noticias</a></li>
+      <li><a href="/recursos-de-ayuda/">Recursos de ayuda</a></li>
+      <li><a href="/contacto/">Contactar con la AEVTJ</a></li>
+    </ul>
+  </section>
+</BaseLayout>
