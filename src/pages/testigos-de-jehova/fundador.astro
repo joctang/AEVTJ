@@ -1,0 +1,109 @@
+---
+// /testigos-de-jehova/fundador/: artículo cerrado; el texto está en src/data/testigos-de-jehova-fundador.json (el BORRADOR.md ya no está al día).
+// Presentación: ArticuloDocumental.
+// Keyword principal: «fundador de los testigos de jehová» / «quién fundó los testigos de jehová».
+import ArticuloDocumental from "../../components/ArticuloDocumental.astro";
+import datos from "../../data/testigos-de-jehova-fundador.json";
+
+const cortos = {
+  respuesta: "Quién fue",
+  fechas: "En qué año",
+  historia: "Cronología",
+  russell: "Russell",
+  muerte: "Muerte y tumba",
+  consta: "Lo que consta",
+  piramide: "Pirámide",
+  mason: "Masonería",
+  trigo: "Trigo milagroso",
+  hamilton: "Juicio de Hamilton",
+  matrimonio: "Matrimonio",
+  fecha1914: "1914",
+  versiones: "Dos respuestas",
+  nombre: "El nombre",
+  estudiantes: "Otras ramas",
+  origen: "De dónde son",
+};
+
+// Ilustraciones del estilo geométrico «hilo lima» (docs-ilustraciones/ENCARGO-FUNDADOR.md).
+const ilustraciones = {
+  fechas: { nombre: "tdj-fundador-fechas-hilo", escena: "", alt: "Ilustración de cinco cuentas de distinto tamaño y color ensartadas en un hilo lima, que queda suelto por su extremo izquierdo.", lista: true, pos: "derecha" as const },
+  russell: { nombre: "tdj-fundador-russell-revistas-hilo", escena: "", alt: "Ilustración de una pila de tres cuadernos junto a un cuaderno abierto, con un hilo lima como marcapáginas.", lista: true, pos: "izquierda" as const },
+  piramide: { nombre: "tdj-fundador-piramide-lapida-hilo", escena: "", alt: "Ilustración de una losa oscura y, aparte, un pequeño triángulo arena; el hilo lima sale de la losa y acaba en un lazo sin llegar al triángulo.", lista: true, pos: "derecha" as const },
+  trigo: { nombre: "tdj-fundador-trigo-hilo", escena: "", alt: "Ilustración de un frasco con tres espigas de trigo y una etiqueta redonda atada al cuello con un hilo lima.", lista: true, pos: "izquierda" as const },
+  versiones: { nombre: "tdj-fundador-versiones-arcos-hilo", escena: "", alt: "Ilustración de dos arcos del mismo tamaño, uno azul oscuro y otro verde, unidos por un hilo lima a la misma altura.", lista: true, pos: "derecha" as const },
+  estudiantes: { nombre: "tdj-fundador-ramas-hilo", escena: "", alt: "Ilustración de un hilo lima grueso que se bifurca en cuatro hilos finos, cada uno hacia un círculo distinto.", lista: true, pos: "izquierda" as const },
+};
+
+const sigueLeyendo = [
+  { titulo: "Testigos de Jehová", descripcion: "Quiénes son, qué creen y cómo viven.", href: "/testigos-de-jehova/" },
+  { titulo: "La Biblia de los Testigos de Jehová", descripcion: "Qué Biblia usan, qué ediciones ha tenido y en qué se diferencia.", href: "/testigos-de-jehova/biblia/" },
+  { titulo: "Guía para salir", descripcion: "El proceso de salida explicado paso a paso.", href: "/guia-para-salir-de-los-testigos-de-jehova/" },
+];
+
+// Los 16 temas del acordeón, en cuatro bloques para que se recorra de un vistazo.
+// Los ids deben cubrir todas las secciones, en el mismo orden en que aparecen en la página.
+const gruposIndice = [
+  { titulo: "Quién fue y cuándo", ids: ["respuesta", "fechas", "russell", "muerte"] },
+  { titulo: "Lo que se le atribuye", ids: ["consta", "piramide", "mason", "trigo", "hamilton"] },
+  { titulo: "Vida y profecías", ids: ["matrimonio", "fecha1914", "historia"] },
+  { titulo: "El nombre y las ramas", ids: ["versiones", "nombre", "estudiantes", "origen"] },
+];
+
+// Bibliografía: título estable para cada fuente citada con número en el texto.
+const titulosFuentes: Record<string, string> = {
+  "https://www.britannica.com/biography/Charles-Taze-Russell": "Enciclopedia Británica: «Charles Taze Russell»",
+  "https://archive.org/details/magazines-zions-watchtower-and-herald-christ-presence-1879": "Zion's Watch Tower and Herald of Christ's Presence, volumen de 1879 (facsímil · Internet Archive)",
+  "https://archive.org/details/magazines-zions-watchtower-and-herald-christ-presence-1895": "Zion's Watch Tower, volumen de 1895 (facsímil · Internet Archive)",
+  "https://archive.org/details/magazines-the-watchtower-and-herald-christ-presence-1914": "The Watch Tower, volumen de 1914 (facsímil · Internet Archive)",
+  "https://archive.org/details/ourinheritancein00smytuoft": "C. Piazzi Smyth, Our Inheritance in the Great Pyramid, edición de 1874 (Internet Archive)",
+  "https://www.jw.org/en/library/books/Jehovahs-Witnesses-Proclaimers-of-Gods-Kingdom/Kingdom-Preaching-Furthered-by-Production-of-Bible-Literature/Producing-Bible-Literature-for-Use-in-the-Ministry/": "Los testigos de Jehová — Proclamadores del Reino de Dios (1993), pp. 575-576 · jw.org",
+  "https://www.jw.org/en/library/books/Jehovahs-Witnesses-Proclaimers-of-Gods-Kingdom/Kingdom-Preaching-Furthered-by-Production-of-Bible-Literature/Printing-and-Distributing-Gods-Own-Sacred-Word/": "Los testigos de Jehová — Proclamadores del Reino de Dios (1993), p. 603 · jw.org",
+  "https://www.jw.org/es/testigos-de-jehov%C3%A1/preguntas-frecuentes/fundador/": "jw.org: «¿Quién es el fundador de los testigos de Jehová?»",
+  "https://wol.jw.org/en/wol/d/r1/lp-e/1101993013": "Proclamadores del Reino de Dios, cap. 11: la convención de Columbus de 1931 · wol.jw.org",
+  "https://watchtowerdocuments.org/was-pastor-charles-taze-russell-a-freemason/": "WatchtowerDocuments: «Was Pastor Charles Taze Russell a Freemason?»",
+  "https://watchtowerdocuments.org/?p=3884": "WatchtowerDocuments: Russell, Rutherford y la Gran Pirámide (cita de The Watch Tower, 15-11-1928, p. 344)",
+  "https://watchtowerdocuments.org/wp-content/documents/1919_Souvenir_Notes_of_ISBA_Convention_Report.pdf": "Souvenir Notes of the I.B.S.A. Convention, Pittsburgh, 2-5 de enero de 1919 (facsímil)",
+  "https://watchtowerdocuments.org/wp-content/documents/1913_Some_More_Facts_About_Russell_.pdf": "J. J. Ross, Some More Facts about «Pastor» Russell (1913, facsímil)",
+  "https://www.thestudiesinthescriptures.com/Pages/English/Eng%20V3/Eng%20Vol%203%20TC%20Fwd.htm": "Studies in the Scriptures, vol. 3: Thy Kingdom Come (1891), prólogo e índice",
+  "https://law.justia.com/cases/new-york/appellate-division/1915/168-ad-121.html": "Russell v. Brooklyn Daily Eagle, 168 A.D. 121 (Nueva York, 7 de mayo de 1915)",
+  "https://app.midpage.ai/document/russell-v-russell-6276026": "Russell v. Russell, 37 Pa. Super. 348 (Pensilvania, 19 de octubre de 1908)",
+  "https://freemasonry.bcy.ca/biography/russell_c/pyramid_monument.html": "Gran Logia de Columbia Británica y Yukón: el monumento piramidal",
+  "https://www.findagrave.com/memorial/5591/charles_taze-russell": "Find a Grave: memorial de Charles Taze Russell",
+  "https://www.ebsco.com/research-starters/religion-and-philosophy/international-bible-students-association-becomes-jehovahs": "EBSCO Research Starters: «International Bible Students Association Becomes Jehovah's Witnesses» (2021)",
+  "https://www.routledge.com/Jehovahs-Witnesses-Continuity-and-Change/Chryssides/p/book/9781138548787": "G. D. Chryssides, Jehovah's Witnesses: Continuity and Change",
+  "https://www.jstor.org/stable/10.3138/j.ctt13x1qs2": "M. James Penton, Apocalypse Delayed (JSTOR)",
+};
+
+// Notas breves junto a la entrada de la bibliografía: el límite de cada fuente, a la vista.
+const notasFuentes: Record<string, string> = {
+  "https://www.jw.org/es/testigos-de-jehov%C3%A1/preguntas-frecuentes/fundador/": "Postura oficial de la organización.",
+  "https://www.jw.org/en/library/books/Jehovahs-Witnesses-Proclaimers-of-Gods-Kingdom/Kingdom-Preaching-Furthered-by-Production-of-Bible-Literature/Producing-Bible-Literature-for-Use-in-the-Ministry/": "Publicación oficial de los Testigos de Jehová.",
+  "https://www.jw.org/en/library/books/Jehovahs-Witnesses-Proclaimers-of-Gods-Kingdom/Kingdom-Preaching-Furthered-by-Production-of-Bible-Literature/Printing-and-Distributing-Gods-Own-Sacred-Word/": "Publicación oficial de los Testigos de Jehová.",
+  "https://watchtowerdocuments.org/wp-content/documents/1913_Some_More_Facts_About_Russell_.pdf": "Versión de la parte contraria en el caso.",
+  "https://watchtowerdocuments.org/was-pastor-charles-taze-russell-a-freemason/": "Transcripciones de las cartas de las logias, sin los escaneos.",
+};
+---
+
+<ArticuloDocumental
+  datos={datos}
+  slug="fundador"
+  miga="Fundador"
+  tituloSeo="Charles Taze Russell, fundador de los Testigos"
+  descripcion="Quién fundó los Testigos de Jehová y quién fue Charles Taze Russell: fechas, qué dicen ellos y qué consta de la masonería, la pirámide y el trigo."
+  revisado="18 de octubre de 2026"
+  revisadoIso="2026-10-18"
+  referencias
+  titulosFuentes={titulosFuentes}
+  notasFuentes={notasFuentes}
+  cortos={cortos}
+  ilustraciones={ilustraciones}
+  gruposIndice={gruposIndice}
+  hero={{
+    src: "/uploads/2026/10/charles-taze-russell-hero.webp",
+    alt: "Charles Taze Russell sentado ante un libro, en un retrato fotográfico de 1911 adaptado a formato apaisado.",
+    credito: { texto: "Eric Patterson · Wikimedia Commons (1911)", href: "https://commons.wikimedia.org/wiki/File:Charles_Taze_Russell.jpg" },
+  }}
+  tarjetas="respuesta"
+  linea="historia"
+  sigueLeyendo={sigueLeyendo}
+/>

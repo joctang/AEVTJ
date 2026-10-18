@@ -5,8 +5,13 @@ export const mainNav = [
     label: "Testigos de Jehová",
     href: "/testigos-de-jehova/",
     children: [
+      { label: "Testigos de Jehová: quiénes son y qué creen", href: "/testigos-de-jehova/" },
       { label: "Transfusiones de sangre", href: "/testigos-de-jehova/sangre/" },
-      { label: "Normas y vida cotidiana", href: "/testigos-de-jehova/normas/" },
+      { label: "Cumpleaños", href: "/testigos-de-jehova/cumpleanos/" },
+      { label: "Navidad", href: "/testigos-de-jehova/navidad/" },
+      { label: "Documentales", href: "/testigos-de-jehova/documentales/" },
+      { label: "La Biblia de los Testigos de Jehová", href: "/testigos-de-jehova/biblia/" },
+      { label: "Quién fundó los Testigos de Jehová", href: "/testigos-de-jehova/fundador/" },
     ],
   },
   {
@@ -34,8 +39,13 @@ export const mainNav = [
 
 // Pie de página: lista corta propia (no repite el menú entero).
 export const footerNav = [
-  { label: "Testigos de Jehová", href: "/testigos-de-jehova/" },
+  { label: "Testigos de Jehová: quiénes son y qué creen", href: "/testigos-de-jehova/" },
   { label: "Transfusiones de sangre", href: "/testigos-de-jehova/sangre/" },
+  { label: "Cumpleaños", href: "/testigos-de-jehova/cumpleanos/" },
+  { label: "Navidad", href: "/testigos-de-jehova/navidad/" },
+  { label: "Documentales", href: "/testigos-de-jehova/documentales/" },
+  { label: "La Biblia de los Testigos de Jehová", href: "/testigos-de-jehova/biblia/" },
+  { label: "Quién fundó los Testigos de Jehová", href: "/testigos-de-jehova/fundador/" },
   { label: "Guía para salir", href: "/guia-para-salir-de-los-testigos-de-jehova/" },
   { label: "Otras asociaciones", href: "/otras-asociaciones/" },
   { label: "Ex testigos en las redes", href: "/victimas/" },
@@ -53,5 +63,5 @@ export const legalLinks = [
   { label: "Aviso Legal", href: "/aviso-legal/" },
   { label: "Política de Cookies", href: "/politica-de-cookies/" },
   { label: "Política de privacidad", href: "/politica-de-privacidad/" },
-  { label: "Transparencia", href: "/transparencia/" },
+  { label: "Transparencia", href: "/quienes-somos/#transparencia" },
 ];

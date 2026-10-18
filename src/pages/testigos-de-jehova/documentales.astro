@@ -8,7 +8,9 @@ import "../../styles/documentales.css";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import TornEdge from "../../components/TornEdge.astro";
 import DocumentalIlustracion from "../../components/DocumentalIlustracion.astro";
+import TarjetaRelacionado from "../../components/TarjetaRelacionado.astro";
 import { intro, grupos, antesDeElegir, preguntas } from "../../data/testigos-de-jehova-documentales";
+import { miniaturaEnlaceRelacionado } from "../../data/miniaturas-enlaces-relacionados";
 
 const textoPlano = (s: string) => s.replace(/<[^>]+>/g, "");
 const palabras = [intro.entradilla, ...grupos.flatMap((g) => [g.intro ?? "", ...g.obras.map((o) => o.descripcion)]), ...antesDeElegir.parrafos]
@@ -178,12 +180,9 @@ const jsonLdFaq = {
       <div class="guia-cierre__inner">
         <p class="guia-kicker guia-kicker--crema" data-reveal>Más sobre los Testigos de Jehová</p>
         <h2 id="dc-sigue-titulo" data-reveal>Sigue leyendo</h2>
-        <div class="guia-recursos">
+        <div class:list={["guia-recursos", { "guia-recursos--ilustrados": sigueLeyendo.some((r) => miniaturaEnlaceRelacionado(r.href)) }]}>
           {sigueLeyendo.map((r) => (
-            <a class="guia-recurso" href={r.href} data-reveal>
-              <h3>{r.titulo}</h3>
-              <p>{r.descripcion}</p>
-            </a>
+            <TarjetaRelacionado {...r} />
           ))}
         </div>
         <div class="guia-cierre__actions" data-reveal>

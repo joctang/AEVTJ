@@ -1,0 +1,53 @@
+---
+// /testigos-de-jehova/biblia/: artículo cerrado; el texto está en src/data/testigos-de-jehova-biblia.json (el BORRADOR.md ya no está al día).
+// Presentación: ArticuloDocumental.
+// Keyword principal: «biblia testigos de jehová» / «biblia de los testigos de jehová».
+import ArticuloDocumental from "../../components/ArticuloDocumental.astro";
+import datos from "../../data/testigos-de-jehova-biblia.json";
+
+const cortos = {
+  respuesta: "Cuál es",
+  historia: "Ediciones",
+  antigua: "Biblia antigua",
+  comite: "Quién la tradujo",
+  diferencias: "Diferencias",
+  versiculos: "Versículos omitidos",
+  canon: "Libros y canon",
+  cristiana: "¿Es cristiana?",
+  especialistas: "Especialistas",
+  fiable: "¿Es fiable?",
+};
+
+// Ilustraciones del estilo geométrico «hilo lima» (docs-ilustraciones/GUIA-ILUSTRACIONES.md).
+const ilustraciones = {
+  respuesta: { nombre: "tdj-biblia-libro-marcapaginas-hilo", escena: "", alt: "Ilustración de un libro cerrado sobre un escalón; un hilo lima sale de él como marcapáginas y cae al suelo.", lista: true, pos: "derecha" as const },
+  historia: { nombre: "tdj-biblia-ediciones-estante-hilo", escena: "", alt: "Ilustración de tres libros de distinta altura y color en un estante, rodeados por un hilo lima que los une.", lista: true, pos: "izquierda" as const },
+  diferencias: { nombre: "tdj-biblia-dos-ventanas-hilo", escena: "", alt: "Ilustración de dos ventanas en arco casi iguales, una con el arco ligeramente distinto; un hilo lima atraviesa las dos.", lista: true, pos: "derecha" as const },
+  fiable: { nombre: "tdj-biblia-banco-puerta-hilo", escena: "", alt: "Ilustración de una figura sin rostro sentada en un banco junto a una puerta entreabierta; un hilo lima queda suelto en el suelo.", lista: true, pos: "izquierda" as const },
+};
+
+const sigueLeyendo = [
+  { titulo: "Testigos de Jehová", descripcion: "Quiénes son, qué creen y cómo viven.", href: "/testigos-de-jehova/" },
+  { titulo: "Quién fundó los Testigos de Jehová", descripcion: "Russell, los Estudiantes de la Biblia y el origen del nombre.", href: "/testigos-de-jehova/fundador/" },
+  { titulo: "Guía para salir", descripcion: "El proceso de salida explicado paso a paso.", href: "/guia-para-salir-de-los-testigos-de-jehova/" },
+];
+---
+
+<ArticuloDocumental
+  datos={datos}
+  slug="biblia"
+  miga="La Biblia"
+  tituloSeo="Biblia de los Testigos de Jehová: cuál es y ediciones"
+  descripcion="Qué Biblia usan los Testigos de Jehová, cuál es la edición antigua, en qué se diferencia de la Reina-Valera y la católica y qué versículos no incluye."
+  revisado="18 de octubre de 2026"
+  revisadoIso="2026-10-18"
+  referencias
+  hero={{ src: "/uploads/2026/10/tdj-biblia-ediciones-hero.png", alt: "Varias ediciones de la Traducción del Nuevo Mundo en español e inglés, colocadas juntas." }}
+  cortos={cortos}
+  ilustraciones={ilustraciones}
+  accionHero={{ texto: "Ver las diferencias", href: "#diferencias" }}
+  tarjetas="respuesta"
+  listaSimple="respuesta"
+  linea="historia"
+  sigueLeyendo={sigueLeyendo}
+/>

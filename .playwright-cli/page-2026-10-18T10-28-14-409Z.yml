@@ -1,0 +1,433 @@
+- generic [ref=f2e1]:
+  - link "Saltar al contenido" [ref=f2e2] [cursor=pointer]:
+    - /url: "#contenido"
+  - banner [ref=f2e3]:
+    - generic [ref=f2e4]:
+      - link [ref=f2e5] [cursor=pointer]:
+        - /url: /
+        - img "AEVTJ - Asociación Española de Víctimas de los Testigos de Jehová" [ref=f2e6]
+      - button "Cerrar menú" [expanded] [active] [ref=f2e337] [cursor=pointer]
+    - navigation "Menú móvil" [ref=f2e339]:
+      - list [ref=f2e340]:
+        - listitem [ref=f2e341]:
+          - link "¿Quiénes somos?" [ref=f2e342] [cursor=pointer]:
+            - /url: /quienes-somos/
+        - listitem [ref=f2e343]:
+          - link "Noticias" [ref=f2e344] [cursor=pointer]:
+            - /url: /noticias/
+        - listitem [ref=f2e345]:
+          - link "Testigos de Jehová" [ref=f2e346] [cursor=pointer]:
+            - /url: /testigos-de-jehova/
+          - list [ref=f2e347]:
+            - listitem [ref=f2e348]:
+              - 'link "Testigos de Jehová: quiénes son y qué creen" [ref=f2e349] [cursor=pointer]':
+                - /url: /testigos-de-jehova/
+            - listitem [ref=f2e350]:
+              - link "Transfusiones de sangre" [ref=f2e351] [cursor=pointer]:
+                - /url: /testigos-de-jehova/sangre/
+            - listitem [ref=f2e352]:
+              - link "Cumpleaños" [ref=f2e353] [cursor=pointer]:
+                - /url: /testigos-de-jehova/cumpleanos/
+            - listitem [ref=f2e354]:
+              - link "Navidad" [ref=f2e355] [cursor=pointer]:
+                - /url: /testigos-de-jehova/navidad/
+            - listitem [ref=f2e356]:
+              - link "Documentales" [ref=f2e357] [cursor=pointer]:
+                - /url: /testigos-de-jehova/documentales/
+            - listitem [ref=f2e358]:
+              - link "La Biblia de los Testigos de Jehová" [ref=f2e359] [cursor=pointer]:
+                - /url: /testigos-de-jehova/biblia/
+            - listitem [ref=f2e360]:
+              - link "Quién fundó los Testigos de Jehová" [ref=f2e361] [cursor=pointer]:
+                - /url: /testigos-de-jehova/fundador/
+        - listitem [ref=f2e362]:
+          - link "Documentos" [ref=f2e363] [cursor=pointer]:
+            - /url: /recursos-de-ayuda/
+          - list [ref=f2e364]:
+            - listitem [ref=f2e365]:
+              - link "Demandas, juicios y sentencias judiciales" [ref=f2e366] [cursor=pointer]:
+                - /url: /legal/
+            - listitem [ref=f2e367]:
+              - link "Guía para salir de los Testigos de Jehová" [ref=f2e368] [cursor=pointer]:
+                - /url: /guia-para-salir-de-los-testigos-de-jehova/
+            - listitem [ref=f2e369]:
+              - link "Guía para proteger tus derechos sanitarios en caso de interferencia familiar" [ref=f2e370] [cursor=pointer]:
+                - /url: /guia-para-proteger-tus-derechos-sanitarios-en-caso-de-interferencia-familiar/
+            - listitem [ref=f2e371]:
+              - link "Guía para suprimir tus datos personales (derecho de supresión)" [ref=f2e372] [cursor=pointer]:
+                - /url: /derecho-de-supresion/
+        - listitem [ref=f2e373]:
+          - link "Hazte socio / Donaciones" [ref=f2e374] [cursor=pointer]:
+            - /url: /hazte-socio/
+        - listitem [ref=f2e375]:
+          - link "Contacto" [ref=f2e376] [cursor=pointer]:
+            - /url: /contacto/
+      - generic [ref=f2e377]:
+        - link "Facebook" [ref=f2e378] [cursor=pointer]:
+          - /url: https://www.facebook.com/asoc.aevtj
+        - link "Youtube" [ref=f2e381] [cursor=pointer]:
+          - /url: https://www.youtube.com/@AEVTJ
+        - link "X" [ref=f2e384] [cursor=pointer]:
+          - /url: https://x.com/aevtj
+        - link "Instagram" [ref=f2e387] [cursor=pointer]:
+          - /url: https://www.instagram.com/asoc.aevtj/
+  - main [ref=f2e10]:
+    - navigation "Miga de pan" [ref=f2e11]:
+      - list [ref=f2e13]:
+        - listitem [ref=f2e14]:
+          - link "Inicio" [ref=f2e15] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=f2e16]:
+          - text: /
+          - generic [ref=f2e17]: Testigos de Jehová
+    - generic [ref=f2e18]:
+      - generic [ref=f2e19]:
+        - img "Cartel de la sede mundial de los Testigos de Jehová en Warwick, Nueva York, con los edificios al fondo." [ref=f2e20]
+        - generic [ref=f2e22]:
+          - paragraph [ref=f2e23]: Guía informativa
+          - 'heading "Testigos de Jehová: quiénes son, qué creen y cómo viven" [level=1] [ref=f2e24]'
+          - paragraph [ref=f2e25]: "Los Testigos de Jehová son un grupo religioso que se considera cristiano. Llaman Jehová a Dios y basan sus creencias en su interpretación de la Biblia. Seguramente los conoces por sus visitas a las casas o por los expositores de publicaciones que colocan en la calle. Para ellos, hablar de su fe y predicar no es algo secundario: ocupa un lugar central en su vida religiosa y organiza buena parte de su actividad."
+          - generic [ref=f2e26]:
+            - link "Ver los temas ↗" [ref=f2e27] [cursor=pointer]:
+              - /url: "#tj-indice"
+            - link "Busco apoyo ↗" [ref=f2e28] [cursor=pointer]:
+              - /url: "#mirada-aevtj"
+        - list "Sobre esta página" [ref=f2e30]:
+          - listitem [ref=f2e31]:
+            - strong [ref=f2e32]: "4"
+            - text: min de lectura
+          - listitem [ref=f2e33]: Revisado el 8 de octubre de 2026
+      - region [ref=f2e34]:
+        - generic [ref=f2e35]:
+          - paragraph [ref=f2e36]: En esta página
+          - heading "Temas" [level=2] [ref=f2e37]
+          - paragraph [ref=f2e38]: Además de predicar, su fe influye en las celebraciones, las relaciones personales y algunas decisiones sobre salud. Aquí te contamos lo esencial para entender quiénes son y cómo se organiza su religión.
+          - generic [ref=f2e39]:
+            - link [ref=f2e40] [cursor=pointer]:
+              - /url: "#origen"
+              - figure [ref=f2e41]:
+                - generic [aria-hidden] [ref=f2e42]: "1"
+              - generic [ref=f2e43]:
+                - heading "¿Cómo surgieron los Testigos de Jehová?" [level=3] [ref=f2e44]
+                - text: ↗
+            - link [ref=f2e45] [cursor=pointer]:
+              - /url: "#creencias"
+              - figure [ref=f2e46]:
+                - generic [aria-hidden] [ref=f2e47]: "2"
+              - generic [ref=f2e48]:
+                - heading "¿En qué creen?" [level=3] [ref=f2e49]
+                - text: ↗
+            - link [ref=f2e50] [cursor=pointer]:
+              - /url: "#direccion"
+              - figure [ref=f2e51]:
+                - generic [aria-hidden] [ref=f2e52]: "3"
+              - generic [ref=f2e53]:
+                - heading "¿Quién los dirige?" [level=3] [ref=f2e54]
+                - text: ↗
+            - link [ref=f2e55] [cursor=pointer]:
+              - /url: "#reuniones-y-predicacion"
+              - figure [ref=f2e56]:
+                - generic [aria-hidden] [ref=f2e57]: "4"
+              - generic [ref=f2e58]:
+                - heading "¿Qué hacen en sus reuniones y por qué predican?" [level=3] [ref=f2e59]
+                - text: ↗
+            - link [ref=f2e60] [cursor=pointer]:
+              - /url: "#normas"
+              - figure [ref=f2e61]:
+                - generic [aria-hidden] [ref=f2e62]: "5"
+              - generic [ref=f2e63]:
+                - heading "¿Qué normas siguen en su vida cotidiana?" [level=3] [ref=f2e64]
+                - text: ↗
+            - link [ref=f2e65] [cursor=pointer]:
+              - /url: "#sangre"
+              - figure [ref=f2e66]:
+                - generic [aria-hidden] [ref=f2e67]: "6"
+              - generic [ref=f2e68]:
+                - heading "¿Qué ocurre con las transfusiones de sangre?" [level=3] [ref=f2e69]
+                - text: ↗
+            - link [ref=f2e70] [cursor=pointer]:
+              - /url: "#salida"
+              - figure [ref=f2e71]:
+                - generic [aria-hidden] [ref=f2e72]: "7"
+              - generic [ref=f2e73]:
+                - heading "¿Qué pasa si alguien deja de ser Testigo?" [level=3] [ref=f2e74]
+                - text: ↗
+      - region [ref=f2e75]:
+        - generic [ref=f2e76]:
+          - generic [ref=f2e77]:
+            - generic [ref=f2e79]: "1"
+            - heading "¿Cómo surgieron los Testigos de Jehová?" [level=2] [ref=f2e80]
+            - paragraph [ref=f2e81]: Las raíces del movimiento actual están en grupos de estudio bíblico que surgieron en Pensilvania en la década de 1870. Entre sus figuras destacadas estuvo Charles Taze Russell. En 1931, quienes formaban parte de la organización adoptaron el nombre de Testigos de Jehová.
+            - paragraph [ref=f2e82]: "Esta es solo una referencia breve: la historia completa, incluidos sus cambios de organización y de enseñanzas, merece una página propia."
+          - img "Ilustración de una pequeña imprenta antigua junto a una pila de libros, unidos por un hilo verde." [ref=f2e86]
+      - region [ref=f2e87]:
+        - generic [ref=f2e88]:
+          - generic [ref=f2e89]:
+            - generic [ref=f2e91]: "2"
+            - heading "¿En qué creen?" [level=2] [ref=f2e92]
+            - paragraph [ref=f2e93]: "Creen en Jehová como Dios y en Jesús como su Hijo y Salvador. Se consideran cristianos, pero no aceptan la Trinidad: para ellos, Dios y Jesús son seres distintos. Esta es una de las diferencias principales con el catolicismo y muchas iglesias protestantes."
+            - paragraph [ref=f2e94]: También creen que Dios acabará con el sufrimiento y que las personas podrán vivir para siempre en un paraíso en la Tierra. Esperan una resurrección de los muertos y no creen en un infierno de tormento eterno.
+            - paragraph [ref=f2e95]:
+              - text: La Biblia ocupa un lugar central en su vida. Utilizan habitualmente su propia traducción, la
+              - emphasis [ref=f2e96]: Traducción del Nuevo Mundo
+              - text: ", y estudian sus textos siguiendo las explicaciones de la organización."
+          - img "Ilustración de un libro cerrado y una puerta entreabierta por la que entra luz, unidos por un hilo verde." [ref=f2e100]
+      - region [ref=f2e101]:
+        - generic [ref=f2e102]:
+          - generic [ref=f2e103]:
+            - generic [ref=f2e105]: "3"
+            - heading "¿Quién los dirige?" [level=2] [ref=f2e106]
+            - paragraph [ref=f2e107]: La organización está dirigida por el Cuerpo Gobernante, un grupo de hombres que orienta sus enseñanzas y su actividad mundial. Sus explicaciones de la Biblia sirven de referencia para las congregaciones, que son los grupos locales de Testigos.
+            - paragraph [ref=f2e108]: "La organización tiene una dirección central: el Cuerpo Gobernante establece las enseñanzas y directrices comunes. En cada congregación, los ancianos las transmiten y las aplican al dirigir las reuniones, la predicación y los asuntos de disciplina religiosa. Así, la misma línea organizativa llega a las congregaciones de distintos países."
+          - img "Ilustración de una mesa alargada al fondo con unas pocas figuras y muchas filas de sillas vacías delante, unidas a la mesa por un hilo verde." [ref=f2e112]
+      - region [ref=f2e113]:
+        - generic [ref=f2e114]:
+          - generic [ref=f2e115]:
+            - generic [ref=f2e117]: "4"
+            - heading "¿Qué hacen en sus reuniones y por qué predican?" [level=2] [ref=f2e118]
+            - paragraph [ref=f2e119]: Sus lugares de reunión se llaman Salones del Reino. Allí estudian la Biblia y sus publicaciones, escuchan discursos, oran y cantan. Las reuniones y la predicación forman parte habitual de su práctica religiosa.
+            - paragraph [ref=f2e120]: Cuando llaman a una puerta o hablan con alguien en la calle, buscan compartir sus creencias y ofrecer un estudio de la Biblia. Lo hacen porque entienden que Jesús encargó a sus seguidores transmitir su mensaje.
+          - img "Ilustración de un expositor de publicaciones en la acera unido por un hilo verde al pomo de la puerta de una casa." [ref=f2e124]
+      - region [ref=f2e125]:
+        - generic [ref=f2e126]:
+          - generic [ref=f2e127]:
+            - generic [ref=f2e129]: "5"
+            - heading "¿Qué normas siguen en su vida cotidiana?" [level=2] [ref=f2e130]
+            - paragraph [ref=f2e131]: "Su fe influye en decisiones que para otras personas pueden no tener relación con la religión. Algunos ejemplos ayudan a entenderlo:"
+          - img "Ilustración de una tarta de cumpleaños con las velas apagadas y un regalo sin abrir apartado en el suelo, con el lazo verde suelto." [ref=f2e135]
+        - generic [ref=f2e136]:
+          - article [ref=f2e137]:
+            - text: "01"
+            - heading "Celebraciones" [level=3] [ref=f2e138]
+            - paragraph [ref=f2e139]:
+              - text: No celebran
+              - link "cumpleaños" [ref=f2e140] [cursor=pointer]:
+                - /url: /testigos-de-jehova/cumpleanos/
+              - text: ni
+              - link "Navidad" [ref=f2e141] [cursor=pointer]:
+                - /url: /testigos-de-jehova/navidad/
+              - text: "por motivos religiosos. Eso no significa que no celebren nada: pueden reunirse con familiares y amigos o celebrar una boda."
+          - article [ref=f2e142]:
+            - text: "02"
+            - heading "Ropa y aspecto" [level=3] [ref=f2e143]
+            - paragraph [ref=f2e144]: Para las reuniones y la predicación se espera una apariencia que consideren modesta y apropiada. Algunas pautas han cambiado, así que la imagen de hombres siempre afeitados y mujeres siempre con falda no describe todas las situaciones actuales.
+          - article [ref=f2e145]:
+            - text: "03"
+            - heading "Pareja y familia" [level=3] [ref=f2e146]
+            - paragraph [ref=f2e147]: Sus enseñanzas establecen normas sobre las relaciones sexuales, el matrimonio y el divorcio. Por eso, compartir o no la religión puede tener bastante peso en una relación de pareja.
+          - article [ref=f2e148]:
+            - text: "04"
+            - heading "Política y guerras" [level=3] [ref=f2e149]
+            - paragraph [ref=f2e150]: Defienden la neutralidad política y no participan en guerras. Lo entienden como parte de su compromiso religioso.
+        - paragraph [ref=f2e152]: Estas pautas no abarcan todos los aspectos ni describen por sí solas cómo vive cada persona cada situación.
+        - paragraph [ref=f2e153]:
+          - link "Consulta la guía completa sobre normas y vida cotidiana" [ref=f2e154] [cursor=pointer]:
+            - /url: /testigos-de-jehova/normas/
+            - text: Consulta la guía completa sobre normas y vida cotidiana
+            - generic [aria-hidden] [ref=f2e155]: →
+      - region [ref=f2e156]:
+        - generic [ref=f2e157]:
+          - generic [ref=f2e158]:
+            - generic [ref=f2e160]: "6"
+            - heading "¿Qué ocurre con las transfusiones de sangre?" [level=2] [ref=f2e161]
+            - paragraph [ref=f2e162]: Durante décadas, los Testigos de Jehová mantuvieron una postura restrictiva frente a las transfusiones por su interpretación de la Biblia. En septiembre de 2026, la organización cambió su postura sobre algunos componentes sanguíneos, aunque mantiene una distinción respecto a la sangre completa. La historia y el alcance de estos cambios requieren más contexto que el que cabe aquí.
+            - link "Los Testigos de Jehová y su postura sobre la sangre ↗" [ref=f2e163] [cursor=pointer]:
+              - /url: /testigos-de-jehova/sangre/
+          - img "Ilustración de un vial de sangre con un hilo verde atado, símbolo de cuidado y confianza." [ref=f2e167]
+      - note [ref=f2e169]:
+        - paragraph [ref=f2e175]:
+          - text: Si a ti o a un familiar os proponen una transfusión, el equipo que os atiende puede explicar qué componente recomienda, por qué y qué alternativas hay. Así podréis valorar la decisión con información clara sobre el caso concreto. En nuestra
+          - link "guía de derechos sanitarios" [ref=f2e176] [cursor=pointer]:
+            - /url: /guia-para-proteger-tus-derechos-sanitarios-en-caso-de-interferencia-familiar/
+          - text: explicamos cómo comunicar la voluntad del paciente.
+      - region [ref=f2e177]:
+        - generic [ref=f2e178]:
+          - generic [ref=f2e179]:
+            - generic [ref=f2e181]: "7"
+            - heading "¿Qué pasa si alguien deja de ser Testigo?" [level=2] [ref=f2e182]
+            - paragraph [ref=f2e183]: Dejar de asistir a las reuniones, renunciar a la religión y ser expulsado no son la misma situación. La organización distingue entre ellas, y el trato que recibe la persona puede cambiar.
+            - paragraph [ref=f2e184]: En caso de expulsión, la norma que la organización comunica a sus miembros es que no mantengan trato social con la persona; la convivencia con familiares que viven en el mismo hogar se trata de otra manera.
+            - paragraph [ref=f2e185]:
+              - text: "Ser expulsado puede tener consecuencias que van mucho más allá de dejar una religión. Según la norma de la organización, otros miembros dejan de mantener trato social con la persona; la convivencia con familiares del mismo hogar se trata de forma distinta. Para quienes tienen a padres, hermanos, hijos adultos o amistades cercanas dentro de la organización, especialmente si viven fuera del hogar, la expulsión puede suponer perder de golpe el contacto cotidiano con casi toda esa red. AEVTJ recibe testimonios de personas para quienes esto supone un antes y un después: no solo dejan una religión, también pueden perder casi toda su vida familiar y social dentro de la organización y tener que reconstruir su vida con una red de apoyo muy reducida. En nuestra"
+              - link "guía para salir de los Testigos de Jehová" [ref=f2e186] [cursor=pointer]:
+                - /url: /guia-para-salir-de-los-testigos-de-jehova/
+              - text: explicamos estas situaciones y ofrecemos recursos.
+          - img "Ilustración de una familia sentada a un extremo de la mesa y una silla vacía al otro, separadas por un hilo cortado." [ref=f2e190]
+        - generic [ref=f2e191]:
+          - paragraph [ref=f2e192]: Tres situaciones distintas
+          - list [ref=f2e193]:
+            - listitem [ref=f2e194]:
+              - generic [aria-hidden] [ref=f2e195]: "1"
+              - text: Dejar de asistir a las reuniones
+            - listitem [ref=f2e196]:
+              - generic [aria-hidden] [ref=f2e197]: "2"
+              - text: Renunciar a la religión
+            - listitem [ref=f2e198]:
+              - generic [aria-hidden] [ref=f2e199]: "3"
+              - text: Ser expulsado
+      - region [ref=f2e200]:
+        - generic [ref=f2e201]:
+          - generic [ref=f2e202]:
+            - generic [ref=f2e203]:
+              - paragraph [ref=f2e204]: Nuestra perspectiva
+              - heading "La mirada de la AEVTJ" [level=2] [ref=f2e205]
+              - generic [ref=f2e206]:
+                - paragraph [ref=f2e207]: En la Asociación Española de Víctimas de los Testigos de Jehová prestamos especial atención a cómo las normas de la organización pueden afectar a las personas y a sus relaciones. Respetamos a quienes practican esta religión. Ese respeto es compatible con escuchar a quienes han sufrido y examinar las prácticas que les han causado daño.
+                - paragraph [ref=f2e208]:
+                  - text: Si has llegado hasta aquí por curiosidad, esta es una primera orientación. Si el tema te afecta personalmente, puedes consultar los
+                  - link "recursos de ayuda" [ref=f2e209] [cursor=pointer]:
+                    - /url: /recursos-de-ayuda/
+                  - text: ", conocer"
+                  - link "quiénes somos" [ref=f2e210] [cursor=pointer]:
+                    - /url: /quienes-somos/
+                  - text: o
+                  - link "contactar con la asociación" [ref=f2e211] [cursor=pointer]:
+                    - /url: /contacto/
+                  - text: .
+            - figure [ref=f2e212]:
+              - img "Ilustración de una persona que sale por una puerta y alcanza un hilo verde que sostiene un grupo de personas que la espera." [ref=f2e213]
+          - paragraph [ref=f2e214]: Sigue leyendo
+          - generic [ref=f2e215]:
+            - link [ref=f2e216] [cursor=pointer]:
+              - /url: /testigos-de-jehova/sangre/
+              - heading "Transfusiones de sangre" [level=3] [ref=f2e217]
+              - paragraph [ref=f2e218]: Historia, postura actual y cambios documentados hasta 2026.
+              - text: ↗
+            - link [ref=f2e219] [cursor=pointer]:
+              - /url: /testigos-de-jehova/documentales/
+              - heading "Documentales y reportajes" [level=3] [ref=f2e220]
+              - paragraph [ref=f2e221]: Una selección contextualizada de producciones sobre los Testigos de Jehová.
+              - text: ↗
+            - link [ref=f2e222] [cursor=pointer]:
+              - /url: /guia-para-salir-de-los-testigos-de-jehova/
+              - heading "Guía para salir de los Testigos de Jehová" [level=3] [ref=f2e223]
+              - paragraph [ref=f2e224]: El proceso de salida explicado en seis capítulos y siete pasos.
+              - text: ↗
+            - link [ref=f2e225] [cursor=pointer]:
+              - /url: /guia-para-proteger-tus-derechos-sanitarios-en-caso-de-interferencia-familiar/
+              - heading "Guía de derechos sanitarios" [level=3] [ref=f2e226]
+              - paragraph [ref=f2e227]: Representante, voluntades anticipadas y tarjeta de emergencia.
+              - text: ↗
+            - link [ref=f2e228] [cursor=pointer]:
+              - /url: /derecho-de-supresion/
+              - heading "Derecho de supresión" [level=3] [ref=f2e229]
+              - paragraph [ref=f2e230]: Cómo pedir que se borren tus datos personales.
+              - text: ↗
+            - link [ref=f2e231] [cursor=pointer]:
+              - /url: /quienes-somos/
+              - heading "Quiénes somos" [level=3] [ref=f2e232]
+              - paragraph [ref=f2e233]: La asociación, su junta directiva y sus colaboradores.
+              - text: ↗
+          - generic [ref=f2e234]:
+            - link "Recursos de ayuda ↗" [ref=f2e235] [cursor=pointer]:
+              - /url: /recursos-de-ayuda/
+            - link "Contacta con la asociación ↗" [ref=f2e236] [cursor=pointer]:
+              - /url: /contacto/
+      - region [ref=f2e237]:
+        - generic [ref=f2e238]:
+          - paragraph [ref=f2e239]: Dudas habituales
+          - heading "Otras preguntas frecuentes" [level=2] [ref=f2e240]
+          - generic [ref=f2e241]:
+            - group [ref=f2e242]:
+              - heading "¿Rezan el padrenuestro?" [level=3] [ref=f2e244] [cursor=pointer]
+            - group [ref=f2e246]:
+              - heading "¿Siguen los Diez Mandamientos?" [level=3] [ref=f2e248] [cursor=pointer]
+            - group [ref=f2e250]:
+              - heading "¿Creen en la creación o en la evolución?" [level=3] [ref=f2e252] [cursor=pointer]
+            - group [ref=f2e254]:
+              - heading "¿En qué trabajan los Testigos de Jehová?" [level=3] [ref=f2e256] [cursor=pointer]
+            - group [ref=f2e258]:
+              - heading "¿Pueden bailar los Testigos de Jehová?" [level=3] [ref=f2e260] [cursor=pointer]
+          - paragraph [ref=f2e262]: Revisado el 8 de octubre de 2026. Las fuentes oficiales citadas describen la postura de la organización; los enlaces externos se abren en una pestaña nueva.
+  - contentinfo [ref=f2e263]:
+    - generic [ref=f2e264]:
+      - generic [ref=f2e265]:
+        - generic [ref=f2e266]:
+          - img "AEVTJ" [ref=f2e267]
+          - paragraph [ref=f2e268]: Asociación Española de Víctimas de los Testigos de Jehová y la JW.ORG. Estamos aquí para escucharte, ayudarte a recuperar tu vida y darte el apoyo que necesitas para dejar atrás la organización.
+          - generic [ref=f2e269]:
+            - link "Facebook" [ref=f2e270] [cursor=pointer]:
+              - /url: https://www.facebook.com/asoc.aevtj
+            - link "Youtube" [ref=f2e273] [cursor=pointer]:
+              - /url: https://www.youtube.com/@AEVTJ
+            - link "X" [ref=f2e276] [cursor=pointer]:
+              - /url: https://x.com/aevtj
+            - link "Instagram" [ref=f2e279] [cursor=pointer]:
+              - /url: https://www.instagram.com/asoc.aevtj/
+        - navigation "Menú de pie de página" [ref=f2e282]:
+          - heading "Explora" [level=2] [ref=f2e283]
+          - list [ref=f2e284]:
+            - listitem [ref=f2e285]:
+              - 'link "Testigos de Jehová: quiénes son y qué creen" [ref=f2e286] [cursor=pointer]':
+                - /url: /testigos-de-jehova/
+            - listitem [ref=f2e287]:
+              - link "Transfusiones de sangre" [ref=f2e288] [cursor=pointer]:
+                - /url: /testigos-de-jehova/sangre/
+            - listitem [ref=f2e289]:
+              - link "Cumpleaños" [ref=f2e290] [cursor=pointer]:
+                - /url: /testigos-de-jehova/cumpleanos/
+            - listitem [ref=f2e291]:
+              - link "Navidad" [ref=f2e292] [cursor=pointer]:
+                - /url: /testigos-de-jehova/navidad/
+            - listitem [ref=f2e293]:
+              - link "Documentales" [ref=f2e294] [cursor=pointer]:
+                - /url: /testigos-de-jehova/documentales/
+            - listitem [ref=f2e295]:
+              - link "La Biblia de los Testigos de Jehová" [ref=f2e296] [cursor=pointer]:
+                - /url: /testigos-de-jehova/biblia/
+            - listitem [ref=f2e297]:
+              - link "Quién fundó los Testigos de Jehová" [ref=f2e298] [cursor=pointer]:
+                - /url: /testigos-de-jehova/fundador/
+            - listitem [ref=f2e299]:
+              - link "Guía para salir" [ref=f2e300] [cursor=pointer]:
+                - /url: /guia-para-salir-de-los-testigos-de-jehova/
+            - listitem [ref=f2e301]:
+              - link "Otras asociaciones" [ref=f2e302] [cursor=pointer]:
+                - /url: /otras-asociaciones/
+            - listitem [ref=f2e303]:
+              - link "Ex testigos en las redes" [ref=f2e304] [cursor=pointer]:
+                - /url: /victimas/
+            - listitem [ref=f2e305]:
+              - link "Contacto" [ref=f2e306] [cursor=pointer]:
+                - /url: /contacto/
+        - generic [ref=f2e307]:
+          - heading "Boletín de noticias" [level=2] [ref=f2e308]
+          - paragraph [ref=f2e309]: Recibe nuestro boletín de noticias mensual de forma totalmente gratuita y mantente informado.
+          - generic [ref=f2e310]:
+            - textbox "Tu correo electrónico" [ref=f2e311]
+            - generic [ref=f2e312]:
+              - checkbox "Quiero recibir la newsletter y acepto el tratamiento de mi email para ese fin." [ref=f2e313]
+              - generic [ref=f2e314]: Quiero recibir la newsletter y acepto el tratamiento de mi email para ese fin.
+            - paragraph [ref=f2e315]:
+              - text: La suscripción se gestionará mediante Mailchimp. Tratamos tus datos según nuestra
+              - link "Política de Privacidad" [ref=f2e316] [cursor=pointer]:
+                - /url: /politica-de-privacidad/
+              - text: .
+            - button "Suscribirme" [ref=f2e317] [cursor=pointer]
+            - status
+      - generic [ref=f2e318]:
+        - paragraph [ref=f2e319]: © 2026 Asociación Española de Victimas de los Testigos de Jehová
+        - list [ref=f2e320]:
+          - listitem [ref=f2e321]:
+            - link "Aviso Legal" [ref=f2e322] [cursor=pointer]:
+              - /url: /aviso-legal/
+          - listitem [ref=f2e323]:
+            - link "Política de Cookies" [ref=f2e324] [cursor=pointer]:
+              - /url: /politica-de-cookies/
+          - listitem [ref=f2e325]:
+            - link "Política de privacidad" [ref=f2e326] [cursor=pointer]:
+              - /url: /politica-de-privacidad/
+          - listitem [ref=f2e327]:
+            - link "Transparencia" [ref=f2e328] [cursor=pointer]:
+              - /url: /quienes-somos/#transparencia
+  - generic [ref=f2e330]:
+    - paragraph [ref=f2e331]:
+      - text: Utilizamos tecnologías necesarias para que la web funcione y, si lo aceptas, herramientas de analítica y vídeos incrustados de plataformas externas. No usamos publicidad personalizada. Consulta la
+      - link "Política de cookies" [ref=f2e332] [cursor=pointer]:
+        - /url: /politica-de-cookies/
+      - text: para más información.
+    - generic [ref=f2e333]:
+      - button "Denegar" [ref=f2e334] [cursor=pointer]
+      - button "Aceptar" [ref=f2e335] [cursor=pointer]
+      - link "Ver preferencias" [ref=f2e336] [cursor=pointer]:
+        - /url: /politica-de-cookies/

@@ -1,0 +1,425 @@
+- generic [active] [ref=f3e1]:
+  - link "Saltar al contenido" [ref=f3e2] [cursor=pointer]:
+    - /url: "#contenido"
+  - banner [ref=f3e3]:
+    - generic [ref=f3e4]:
+      - link [ref=f3e5] [cursor=pointer]:
+        - /url: /
+        - img "AEVTJ - Asociación Española de Víctimas de los Testigos de Jehová" [ref=f3e6]
+      - button "Abrir menú" [ref=f3e7] [cursor=pointer]
+  - main [ref=f3e10]:
+    - navigation "Miga de pan" [ref=f3e11]:
+      - list [ref=f3e13]:
+        - listitem [ref=f3e14]:
+          - link "Inicio" [ref=f3e15] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=f3e16]:
+          - text: /
+          - link "Testigos de Jehová" [ref=f3e17] [cursor=pointer]:
+            - /url: /testigos-de-jehova/
+        - listitem [ref=f3e18]:
+          - text: /
+          - generic [ref=f3e19]: Vestimenta
+    - generic [ref=f3e20]:
+      - generic [ref=f3e21]:
+        - img "Asistentes sentados de espaldas en una asamblea de los Testigos de Jehová, con traje, chaqueta y vestidos, mirando hacia el escenario." [ref=f3e22]
+        - generic [ref=f3e24]:
+          - 'heading "Cómo se visten los Testigos de Jehová: reuniones, barba y cambios recientes" [level=1] [ref=f3e25]'
+          - paragraph [ref=f3e26]: "Durante años, la imagen pública de los Testigos de Jehová en reuniones y en la predicación fue marcadamente formal: observaciones independientes describieron a hombres con traje y corbata y a mujeres con falda o vestido. No era un uniforme único ni demuestra que todas las congregaciones aplicaran las expectativas de la misma manera. Sí permite entender por qué la ropa llegó a ser una señal visible de pertenencia y de cómo se esperaba representar a la congregación."
+          - generic [ref=f3e27]:
+            - link "Ver la respuesta ↗" [ref=f3e28] [cursor=pointer]:
+              - /url: "#respuesta"
+            - link "Busco apoyo ↗" [ref=f3e29] [cursor=pointer]:
+              - /url: "#mirada-aevtj"
+        - list "Sobre esta página" [ref=f3e31]:
+          - listitem [ref=f3e32]:
+            - strong [ref=f3e33]: "9"
+            - text: min de lectura
+          - listitem [ref=f3e34]: Revisado el 18 de octubre de 2026
+      - region [ref=f3e35]:
+        - generic [ref=f3e36]:
+          - paragraph [ref=f3e37]: En esta página
+          - paragraph [ref=f3e38]: "En diciembre de 2023, el Cuerpo Gobernante dijo que la Biblia no condena la barba y que llevarla es una decisión personal. En marzo de 2024 flexibilizó algunas pautas de ropa: permitió pantalones de vestir a las mujeres y que los hombres eligieran si llevar chaqueta o corbata en varias actividades. Los anuncios describen la orientación institucional; para saber cómo se vivían las expectativas antes y después también hacen falta testimonios y observaciones independientes."
+          - heading "En esta página" [level=2] [ref=f3e39]
+          - list [ref=f3e41]:
+            - listitem [ref=f3e42]:
+              - 'link "La respuesta breve: ¿cómo deben vestir?" [ref=f3e43] [cursor=pointer]':
+                - /url: "#respuesta"
+                - generic [aria-hidden] [ref=f3e44]: "01"
+                - generic [aria-hidden] [ref=f3e46]: ↓
+            - listitem [ref=f3e47]:
+              - link "¿Por qué van arreglados a las reuniones?" [ref=f3e48] [cursor=pointer]:
+                - /url: "#principios"
+                - generic [aria-hidden] [ref=f3e49]: "02"
+                - generic [aria-hidden] [ref=f3e51]: ↓
+            - listitem [ref=f3e52]:
+              - link "Qué muestran las observaciones independientes" [ref=f3e53] [cursor=pointer]:
+                - /url: "#observaciones"
+                - generic [aria-hidden] [ref=f3e54]: "03"
+                - generic [aria-hidden] [ref=f3e56]: ↓
+            - listitem [ref=f3e57]:
+              - link "¿Pueden llevar barba? Qué cambió en 2023" [ref=f3e58] [cursor=pointer]:
+                - /url: "#barba"
+                - generic [aria-hidden] [ref=f3e59]: "04"
+                - generic [aria-hidden] [ref=f3e61]: ↓
+            - listitem [ref=f3e62]:
+              - link "Qué aporta el artículo de 2025" [ref=f3e63] [cursor=pointer]:
+                - /url: "#2025"
+                - generic [aria-hidden] [ref=f3e64]: "05"
+                - generic [aria-hidden] [ref=f3e66]: ↓
+            - listitem [ref=f3e67]:
+              - link "¿Las mujeres tienen que llevar falda?" [ref=f3e68] [cursor=pointer]:
+                - /url: "#mujeres"
+                - generic [aria-hidden] [ref=f3e69]: "06"
+                - generic [aria-hidden] [ref=f3e71]: ↓
+            - listitem [ref=f3e72]:
+              - link "¿Los hombres necesitan traje y corbata?" [ref=f3e73] [cursor=pointer]:
+                - /url: "#hombres"
+                - generic [aria-hidden] [ref=f3e74]: "07"
+                - generic [aria-hidden] [ref=f3e76]: ↓
+            - listitem [ref=f3e77]:
+              - link "¿Qué cambia al participar en el programa o visitar Betel?" [ref=f3e78] [cursor=pointer]:
+                - /url: "#programa"
+                - generic [aria-hidden] [ref=f3e79]: "08"
+                - generic [aria-hidden] [ref=f3e81]: ↓
+            - listitem [ref=f3e82]:
+              - link "¿Y en la vida diaria o en otros países?" [ref=f3e83] [cursor=pointer]:
+                - /url: "#vida-diaria"
+                - generic [aria-hidden] [ref=f3e84]: "09"
+                - generic [aria-hidden] [ref=f3e86]: ↓
+      - region [ref=f3e87]:
+        - generic [ref=f3e88]:
+          - generic [ref=f3e90]: "1"
+          - 'heading "La respuesta breve: ¿cómo deben vestir?" [level=2] [ref=f3e91]'
+        - paragraph [ref=f3e92]:
+          - text: Hay que distinguir entre
+          - strong [ref=f3e93]: lo que la organización comunica
+          - text: ","
+          - strong [ref=f3e94]: las costumbres de cada congregación
+          - text: "y"
+          - strong [ref=f3e95]: lo que vive cada persona
+          - text: . Históricamente, las observaciones disponibles muestran una expectativa de vestir formal en reuniones y predicación. Las pautas oficiales se flexibilizaron en 2023 y 2024, pero no hay una encuesta representativa que permita medir cómo se aplican hoy en cada país.
+        - table [ref=f3e97]:
+          - rowgroup [ref=f3e98]:
+            - row [ref=f3e99]:
+              - columnheader "Situación" [ref=f3e100]
+              - columnheader "Orientación institucional publicada" [ref=f3e101]
+              - columnheader "Qué permite afirmar sobre la práctica" [ref=f3e102]
+          - rowgroup [ref=f3e103]:
+            - row [ref=f3e104]:
+              - rowheader "Reuniones" [ref=f3e105]
+              - 'cell "Orientación institucional publicada: La organización pide ropa limpia, modesta y apropiada, y dice que hay margen para elegir." [ref=f3e106]'
+              - 'cell "Qué permite afirmar sobre la práctica: Observadores independientes describieron durante años una presentación formal. Eso no prueba que se vistiera igual en todas partes." [ref=f3e107]'
+            - row [ref=f3e108]:
+              - rowheader "Barba" [ref=f3e109]
+              - 'cell "Orientación institucional publicada: Desde diciembre de 2023, llevarla es una decisión personal y no debería afectar a los nombramientos." [ref=f3e110]'
+              - 'cell "Qué permite afirmar sobre la práctica: La aclaración respondió a preguntas sobre hermanos con responsabilidades; el artículo de 2025 muestra que a algunas personas aún les sorprendía ver barbas en discursos." [ref=f3e111]'
+            - row [ref=f3e112]:
+              - rowheader "Pantalones de mujer" [ref=f3e113]
+              - 'cell "Orientación institucional publicada: El anuncio de marzo de 2024 los permite en el ministerio y al asistir a reuniones y asambleas." [ref=f3e114]'
+              - 'cell "Qué permite afirmar sobre la práctica: Para intervenir en el programa, el anuncio conserva la referencia a falda o vestido cuando esa sea la costumbre local." [ref=f3e115]'
+            - row [ref=f3e116]:
+              - rowheader "Chaqueta y corbata de hombre" [ref=f3e117]
+              - 'cell "Orientación institucional publicada: Desde marzo de 2024, pueden decidir si las llevan en el ministerio y al asistir a reuniones y asambleas." [ref=f3e118]'
+              - 'cell "Qué permite afirmar sobre la práctica: Para intervenir en el programa, el anuncio mantiene chaqueta y corbata cuando esa sea la costumbre local." [ref=f3e119]'
+            - row [ref=f3e120]:
+              - rowheader "Visita a Betel" [ref=f3e121]
+              - 'cell "Orientación institucional publicada: El anuncio de 2024 recomienda chaqueta y corbata para hombres y falda o vestido para mujeres cuando sea la costumbre local." [ref=f3e122]'
+              - 'cell "Qué permite afirmar sobre la práctica: Es una orientación condicionada, no una descripción de la ropa cotidiana de los Testigos." [ref=f3e123]'
+      - region [ref=f3e124]:
+        - generic [ref=f3e125]:
+          - generic [ref=f3e127]: "2"
+          - heading "¿Por qué van arreglados a las reuniones?" [level=2] [ref=f3e128]
+        - paragraph [ref=f3e129]:
+          - text: La explicación institucional
+          - superscript [ref=f3e130]:
+            - link "Fuente 1" [ref=f3e131] [cursor=pointer]:
+              - /url: "#fn-1"
+              - text: "1"
+          - text: vincula la ropa de reunión con el respeto a Dios y a quienes asisten, e invoca principios bíblicos de modestia y buen juicio. Esa es la justificación que ofrece la organización; por sí sola no explica cómo se convertían esos principios en expectativas concretas dentro de cada congregación.
+        - paragraph [ref=f3e132]:
+          - text: La misma publicación afirma que
+          - strong [ref=f3e133]: hay espacio para la elección personal
+          - text: y que no hace falta ropa costosa. Sin embargo, los estudios y observaciones independientes que hemos localizado describen una imagen mucho más concreta y formal en reuniones y predicación. La distancia entre un principio general y la expectativa social de cómo debía vestir quien representaba a la congregación merece explicarse, sin asumir que cada persona lo vivió igual.
+        - paragraph [ref=f3e134]: La organización lo presenta como una elección guiada por principios. En la práctica, la ropa formal también funcionó como una expectativa social reconocible en actividades religiosas; las fuentes no permiten medir cuán uniforme fue.
+      - region [ref=f3e135]:
+        - generic [ref=f3e136]:
+          - generic [ref=f3e138]: "3"
+          - heading "Qué muestran las observaciones independientes" [level=2] [ref=f3e139]
+        - paragraph [ref=f3e140]:
+          - text: Un estudio sociológico de Andrew Holden
+          - superscript [ref=f3e141]:
+            - link "Fuente 2" [ref=f3e142] [cursor=pointer]:
+              - /url: "#fn-2"
+              - text: "2"
+          - text: describe a hombres con traje o camisa formal y corbata, y a mujeres con falda o vestido, tanto en reuniones como en la predicación. Una observación universitaria de una reunión en Colchester
+          - superscript [ref=f3e143]:
+            - link "Fuente 3" [ref=f3e144] [cursor=pointer]:
+              - /url: "#fn-3"
+              - text: "3"
+          - text: ", Inglaterra, en 2015, también registró una apariencia muy arreglada. Un reportaje de"
+          - emphasis [ref=f3e145]: The Guardian
+          - superscript [ref=f3e146]:
+            - link "Fuente 4" [ref=f3e147] [cursor=pointer]:
+              - /url: "#fn-4"
+              - text: "4"
+          - text: "describió de forma similar a Testigos predicando en Londres. Son observaciones situadas —no una encuesta mundial—, pero corroboran que la formalidad no era solo una formulación en publicaciones: se veía en la práctica."
+        - paragraph [ref=f3e148]: La evidencia disponible también obliga a poner límites. Esas fuentes son anteriores a los cambios anunciados en 2023 y 2024, se concentran en lugares concretos y no representan todas las experiencias. Los relatos de miembros y exmiembros pueden documentar cómo se sintió la presión o qué consecuencias tuvo en una congregación, pero deben identificarse como testimonios personales y no generalizarse a todos los Testigos.
+      - region [ref=f3e149]:
+        - generic [ref=f3e150]:
+          - generic [ref=f3e151]:
+            - generic [ref=f3e152]:
+              - generic [ref=f3e154]: "4"
+              - heading "¿Pueden llevar barba? Qué cambió en 2023" [level=2] [ref=f3e155]
+            - paragraph [ref=f3e156]:
+              - strong [ref=f3e157]: Sí.
+              - text: En el Informe 8 del Cuerpo Gobernante, del 15 de diciembre de 2023
+              - superscript [ref=f3e158]:
+                - link "Fuente 5" [ref=f3e159] [cursor=pointer]:
+                  - /url: "#fn-5"
+                  - text: "5"
+              - text: ", la organización explicó que la Biblia no condena la barba y pidió que no se juzgara a un hombre por decidir llevarla. El anuncio puede consultarse también en su transcripción en español"
+              - superscript [ref=f3e160]:
+                - link "Fuente 6" [ref=f3e161] [cursor=pointer]:
+                  - /url: "#fn-6"
+                  - text: "6"
+              - text: .
+            - paragraph [ref=f3e162]: El informe afirma que la Biblia no condena la barba y que, por tanto, llevarla es una decisión personal. También aborda expresamente si un hermano con barba puede ocupar responsabilidades y dice que sus aptitudes deben juzgarse por su espiritualidad, no por el vello facial. Esto permite concluir que la apariencia había tenido peso organizativo en ese ámbito; no demuestra que existiera una prohibición escrita idéntica o aplicada con la misma intensidad en todas las congregaciones.
+            - paragraph [ref=f3e163]: Por eso, «¿por qué los Testigos de Jehová no usan barba?» parte hoy de una premisa desactualizada. La respuesta más completa es que durante años la expectativa de ir afeitado pudo influir en la aceptación social y en el acceso a ciertas responsabilidades, aunque la Biblia no prohíba la barba; desde 2023, la organización afirma que es una decisión personal. Una persona puede llevarla y otra preferir afeitarse.
+          - figure [ref=f3e164]:
+            - img "Ilustración de una maquinilla, un peine y un cepillo de barba conectados por un hilo lima suelto." [ref=f3e165]
+      - region [ref=f3e166]:
+        - generic [ref=f3e167]:
+          - generic [ref=f3e169]: "5"
+          - heading "Qué aporta el artículo de 2025" [level=2] [ref=f3e170]
+        - paragraph [ref=f3e171]:
+          - text: En julio de 2025,
+          - emphasis [ref=f3e172]: La Atalaya
+          - text: publicó el relato de una Testigo de Eslovenia
+          - superscript [ref=f3e173]:
+            - link "Fuente 7" [ref=f3e174] [cursor=pointer]:
+              - /url: "#fn-7"
+              - text: "7"
+          - text: "que dijo haberse sorprendido al ver por primera vez a un hermano barbudo dar un discurso, pese a conocer el anuncio de 2023. Contó que oró para adaptarse al cambio. Es un testimonio individual publicado por la propia organización: no mide cuántos miembros reaccionaron así, pero muestra que la antigua expectativa seguía teniendo fuerza para algunas personas. El artículo de 2025 no anuncia una nueva norma sobre barba o ropa; promueve aceptar los cambios de dirección de la organización."
+        - paragraph [ref=f3e175]: "La comparación deja una pregunta legítima: si la barba no estaba prohibida por la Biblia, ¿por qué la expectativa anterior llegó a influir en quién parecía apropiado para representar a la congregación? El informe de 2023 ofrece una explicación institucional: las costumbres sociales cambian y la organización no quiere juzgar ni fomentar divisiones por ese asunto. Eso explica cómo justificó el cambio; no demuestra por sí solo todos los motivos por los que mantuvo antes la expectativa. Afirmar que buscaba retener miembros o mejorar su imagen sería una hipótesis, no un hecho probado por las fuentes consultadas."
+      - region [ref=f3e176]:
+        - generic [ref=f3e177]:
+          - generic [ref=f3e178]:
+            - generic [ref=f3e179]:
+              - generic [ref=f3e181]: "6"
+              - heading "¿Las mujeres tienen que llevar falda?" [level=2] [ref=f3e182]
+            - paragraph [ref=f3e183]:
+              - strong [ref=f3e184]: No para asistir a todas las actividades.
+              - text: El Informe 2 del Cuerpo Gobernante, del 15 de marzo de 2024
+              - superscript [ref=f3e185]:
+                - link "Fuente 8" [ref=f3e186] [cursor=pointer]:
+                  - /url: "#fn-8"
+                  - text: "8"
+              - text: anunció que las mujeres pueden llevar
+              - strong [ref=f3e187]: pantalones de vestir
+              - text: al participar en el ministerio y al asistir a reuniones y asambleas de circuito o regionales. Pidió que fueran prendas dignas, modestas y apropiadas, no informales.
+            - paragraph [ref=f3e188]:
+              - text: El mismo anuncio distingue entre asistir y participar en el programa. Si una mujer interviene en él, debe llevar falda o vestido
+              - strong [ref=f3e189]: cuando esa sea la costumbre del lugar donde vive
+              - text: . También puede elegir falda o vestido aunque no intervenga. La transcripción oficial
+              - superscript [ref=f3e190]:
+                - link "Fuente 9" [ref=f3e191] [cursor=pointer]:
+                  - /url: "#fn-9"
+                  - text: "9"
+              - text: permite leer exactamente a qué situaciones se refiere.
+            - paragraph [ref=f3e192]: Así, ni «siempre tienen que llevar falda» ni «ahora cualquier prenda vale para cualquier función» resume bien la orientación de 2024. El comunicado tampoco establece una longitud universal para las faldas.
+          - figure [ref=f3e193]:
+            - img "Ilustración de unos pantalones de vestir y una falda colgados en perchas, unidos por un hilo lima." [ref=f3e194]
+      - region [ref=f3e195]:
+        - generic [ref=f3e196]:
+          - generic [ref=f3e197]:
+            - generic [ref=f3e198]:
+              - generic [ref=f3e200]: "7"
+              - heading "¿Los hombres necesitan traje y corbata?" [level=2] [ref=f3e201]
+            - paragraph [ref=f3e202]:
+              - strong [ref=f3e203]: No siempre.
+              - text: Desde el anuncio de marzo de 2024, los hombres pueden decidir si llevan chaqueta o corbata en el ministerio y al asistir a reuniones y asambleas. Si no las llevan, la organización sigue pidiendo una apariencia apropiada, modesta y digna, no informal.
+            - paragraph [ref=f3e204]:
+              - text: Si participan en el programa, deben llevar chaqueta
+              - strong [ref=f3e205]: "y"
+              - text: corbata cuando esa sea la costumbre local. Pueden elegir esas prendas aunque no participen. El informe no dice que el traje sea obligatorio para todo asistente ni que haya dejado de importar cómo se viste quien representa a la congregación.
+          - figure [ref=f3e206]:
+            - img "Ilustración de una chaqueta y una corbata sobre una silla, junto a un hilo lima suelto." [ref=f3e207]
+      - region [ref=f3e208]:
+        - generic [ref=f3e209]:
+          - generic [ref=f3e210]:
+            - generic [ref=f3e211]:
+              - generic [ref=f3e213]: "8"
+              - heading "¿Qué cambia al participar en el programa o visitar Betel?" [level=2] [ref=f3e214]
+            - paragraph [ref=f3e215]:
+              - text: El anuncio de 2024 traza una diferencia concreta entre
+              - strong [ref=f3e216]: asistir
+              - text: "y"
+              - strong [ref=f3e217]: tomar parte en el programa
+              - text: de reuniones y asambleas. Para esta última función, menciona falda o vestido en mujeres y chaqueta y corbata en hombres cuando sea la costumbre del lugar.
+            - paragraph [ref=f3e218]: "También añade una orientación para las visitas a Betel: en los lugares donde sea la costumbre, considera apropiado que los hombres lleven chaqueta y corbata, y las mujeres falda o vestido. Estas condiciones aparecen en el anuncio completo y no deben perderse al resumir los cambios de 2024."
+          - figure [ref=f3e219]:
+            - img "Ilustración de una persona sentada entre varias sillas y otra ante un atril, conectadas por un hilo lima." [ref=f3e220]
+      - region [ref=f3e221]:
+        - generic [ref=f3e222]:
+          - generic [ref=f3e223]:
+            - generic [ref=f3e224]:
+              - generic [ref=f3e226]: "9"
+              - heading "¿Y en la vida diaria o en otros países?" [level=2] [ref=f3e227]
+            - paragraph [ref=f3e228]:
+              - text: Los anuncios oficiales hablan de reuniones, asambleas, ministerio y visitas a Betel.
+              - strong [ref=f3e229]: No fijan un código universal para el trabajo, la casa o el tiempo libre.
+              - text: Las investigaciones y observaciones describen situaciones concretas, no cómo viste cada Testigo en todos los ámbitos.
+            - paragraph [ref=f3e230]: La organización menciona la costumbre local para determinadas funciones. Eso confirma que el contexto importa. Los testimonios de miembros y exmiembros pueden ayudar a entender la experiencia —por ejemplo, sentirse observado, recibir comentarios o tener que cambiarse para una actividad—, pero cada relato debe atribuirse a quien lo vivió. No contamos aquí con datos representativos para comparar países o medir la práctica actual.
+          - figure [ref=f3e231]:
+            - img "Ilustración de una persona en una sala de reunión y otra en un espacio cotidiano, unidas por un hilo lima." [ref=f3e232]
+      - region [ref=f3e233]:
+        - generic [ref=f3e234]:
+          - paragraph [ref=f3e235]: Dudas habituales
+          - heading "Preguntas frecuentes" [level=2] [ref=f3e236]
+          - generic [ref=f3e237]:
+            - group [ref=f3e238]:
+              - heading "¿Los Testigos de Jehová tienen prohibida la barba?" [level=3] [ref=f3e240] [cursor=pointer]
+            - group [ref=f3e242]:
+              - heading "¿Una mujer puede ir a una reunión con pantalones?" [level=3] [ref=f3e244] [cursor=pointer]
+            - group [ref=f3e246]:
+              - heading "¿Un hombre puede acudir sin corbata?" [level=3] [ref=f3e248] [cursor=pointer]
+            - group [ref=f3e250]:
+              - heading "¿Se exige ropa cara o un uniforme?" [level=3] [ref=f3e252] [cursor=pointer]
+            - group [ref=f3e254]:
+              - heading "¿Las orientaciones de 2024 se aplican a toda la ropa diaria?" [level=3] [ref=f3e256] [cursor=pointer]
+            - group [ref=f3e258]:
+              - heading "¿Antes la organización presentaba como bíblicas normas que la Biblia no prohíbe?" [level=3] [ref=f3e260] [cursor=pointer]
+            - group [ref=f3e262]:
+              - heading "¿Por qué cambiaron las normas?" [level=3] [ref=f3e264] [cursor=pointer]
+      - region [ref=f3e266]:
+        - group [ref=f3e267]:
+          - generic "Fuentes y documentación 9 referencias · Revisado el 18 de octubre de 2026" [ref=f3e268] [cursor=pointer]:
+            - generic [ref=f3e269]:
+              - heading "Fuentes y documentación" [level=2] [ref=f3e270]
+              - generic [ref=f3e271]: 9 referencias · Revisado el 18 de octubre de 2026
+      - region [ref=f3e273]:
+        - generic [ref=f3e274]:
+          - paragraph [ref=f3e275]: La mirada de la AEVTJ
+          - heading "Mirar a la persona, no solo a su ropa" [level=2] [ref=f3e276]
+          - generic [ref=f3e277]:
+            - paragraph [ref=f3e278]: La apariencia puede hacer visible una costumbre religiosa, pero no cuenta la experiencia completa de quien la lleva. Algunas personas viven esas decisiones con naturalidad; otras pueden tener recuerdos distintos. Para hablar de experiencias concretas necesitamos testimonios identificables, no suponerlas a partir de la ropa.
+            - paragraph [ref=f3e279]:
+              - text: En la AEVTJ queremos ofrecer información precisa para quien intenta entender las enseñanzas de los Testigos de Jehová o revisar su propia historia. Si necesitas hablar de lo que viviste, puedes
+              - link "contactar con la asociación" [ref=f3e280] [cursor=pointer]:
+                - /url: /contacto/
+              - text: .
+          - paragraph [ref=f3e281]: Sigue leyendo
+          - generic [ref=f3e282]:
+            - link [ref=f3e283] [cursor=pointer]:
+              - /url: /testigos-de-jehova/normas/
+              - heading "Normas y vida cotidiana" [level=3] [ref=f3e284]
+              - paragraph [ref=f3e285]: Qué orientaciones influyen en distintas decisiones diarias.
+              - text: ↗
+            - link [ref=f3e286] [cursor=pointer]:
+              - /url: /testigos-de-jehova/cumpleanos/
+              - heading "Cumpleaños" [level=3] [ref=f3e287]
+              - paragraph [ref=f3e288]: Por qué no los celebran y cómo explican esa postura.
+              - text: ↗
+            - link [ref=f3e289] [cursor=pointer]:
+              - /url: /guia-para-salir-de-los-testigos-de-jehova/
+              - heading "Guía para salir" [level=3] [ref=f3e290]
+              - paragraph [ref=f3e291]: Información y apoyo si estás pensando en dejar la organización.
+              - text: ↗
+          - generic [ref=f3e292]:
+            - link "Contacta con la asociación ↗" [ref=f3e293] [cursor=pointer]:
+              - /url: /contacto/
+            - link "Recursos de ayuda ↗" [ref=f3e294] [cursor=pointer]:
+              - /url: /recursos-de-ayuda/
+  - contentinfo [ref=f3e295]:
+    - generic [ref=f3e296]:
+      - generic [ref=f3e297]:
+        - generic [ref=f3e298]:
+          - img "AEVTJ" [ref=f3e299]
+          - paragraph [ref=f3e300]: Asociación Española de Víctimas de los Testigos de Jehová y la JW.ORG. Estamos aquí para escucharte, ayudarte a recuperar tu vida y darte el apoyo que necesitas para dejar atrás la organización.
+          - generic [ref=f3e301]:
+            - link "Facebook" [ref=f3e302] [cursor=pointer]:
+              - /url: https://www.facebook.com/asoc.aevtj
+            - link "Youtube" [ref=f3e305] [cursor=pointer]:
+              - /url: https://www.youtube.com/@AEVTJ
+            - link "X" [ref=f3e308] [cursor=pointer]:
+              - /url: https://x.com/aevtj
+            - link "Instagram" [ref=f3e311] [cursor=pointer]:
+              - /url: https://www.instagram.com/asoc.aevtj/
+        - navigation "Menú de pie de página" [ref=f3e314]:
+          - heading "Explora" [level=2] [ref=f3e315]
+          - list [ref=f3e316]:
+            - listitem [ref=f3e317]:
+              - 'link "Testigos de Jehová: quiénes son y qué creen" [ref=f3e318] [cursor=pointer]':
+                - /url: /testigos-de-jehova/
+            - listitem [ref=f3e319]:
+              - link "Transfusiones de sangre" [ref=f3e320] [cursor=pointer]:
+                - /url: /testigos-de-jehova/sangre/
+            - listitem [ref=f3e321]:
+              - link "Cumpleaños" [ref=f3e322] [cursor=pointer]:
+                - /url: /testigos-de-jehova/cumpleanos/
+            - listitem [ref=f3e323]:
+              - link "Navidad" [ref=f3e324] [cursor=pointer]:
+                - /url: /testigos-de-jehova/navidad/
+            - listitem [ref=f3e325]:
+              - link "Documentales" [ref=f3e326] [cursor=pointer]:
+                - /url: /testigos-de-jehova/documentales/
+            - listitem [ref=f3e327]:
+              - link "La Biblia de los Testigos de Jehová" [ref=f3e328] [cursor=pointer]:
+                - /url: /testigos-de-jehova/biblia/
+            - listitem [ref=f3e329]:
+              - link "Quién fundó los Testigos de Jehová" [ref=f3e330] [cursor=pointer]:
+                - /url: /testigos-de-jehova/fundador/
+            - listitem [ref=f3e331]:
+              - link "Guía para salir" [ref=f3e332] [cursor=pointer]:
+                - /url: /guia-para-salir-de-los-testigos-de-jehova/
+            - listitem [ref=f3e333]:
+              - link "Otras asociaciones" [ref=f3e334] [cursor=pointer]:
+                - /url: /otras-asociaciones/
+            - listitem [ref=f3e335]:
+              - link "Ex testigos en las redes" [ref=f3e336] [cursor=pointer]:
+                - /url: /victimas/
+            - listitem [ref=f3e337]:
+              - link "Contacto" [ref=f3e338] [cursor=pointer]:
+                - /url: /contacto/
+        - generic [ref=f3e339]:
+          - heading "Boletín de noticias" [level=2] [ref=f3e340]
+          - paragraph [ref=f3e341]: Recibe nuestro boletín de noticias mensual de forma totalmente gratuita y mantente informado.
+          - generic [ref=f3e342]:
+            - textbox "Tu correo electrónico" [ref=f3e343]
+            - generic [ref=f3e344]:
+              - checkbox "Quiero recibir la newsletter y acepto el tratamiento de mi email para ese fin." [ref=f3e345]
+              - generic [ref=f3e346]: Quiero recibir la newsletter y acepto el tratamiento de mi email para ese fin.
+            - paragraph [ref=f3e347]:
+              - text: La suscripción se gestionará mediante Mailchimp. Tratamos tus datos según nuestra
+              - link "Política de Privacidad" [ref=f3e348] [cursor=pointer]:
+                - /url: /politica-de-privacidad/
+              - text: .
+            - button "Suscribirme" [ref=f3e349] [cursor=pointer]
+            - status
+      - generic [ref=f3e350]:
+        - paragraph [ref=f3e351]: © 2026 Asociación Española de Victimas de los Testigos de Jehová
+        - list [ref=f3e352]:
+          - listitem [ref=f3e353]:
+            - link "Aviso Legal" [ref=f3e354] [cursor=pointer]:
+              - /url: /aviso-legal/
+          - listitem [ref=f3e355]:
+            - link "Política de Cookies" [ref=f3e356] [cursor=pointer]:
+              - /url: /politica-de-cookies/
+          - listitem [ref=f3e357]:
+            - link "Política de privacidad" [ref=f3e358] [cursor=pointer]:
+              - /url: /politica-de-privacidad/
+          - listitem [ref=f3e359]:
+            - link "Transparencia" [ref=f3e360] [cursor=pointer]:
+              - /url: /quienes-somos/#transparencia
+  - generic [ref=f3e362]:
+    - paragraph [ref=f3e363]:
+      - text: Utilizamos tecnologías necesarias para que la web funcione y, si lo aceptas, herramientas de analítica y vídeos incrustados de plataformas externas. No usamos publicidad personalizada. Consulta la
+      - link "Política de cookies" [ref=f3e364] [cursor=pointer]:
+        - /url: /politica-de-cookies/
+      - text: para más información.
+    - generic [ref=f3e365]:
+      - button "Denegar" [ref=f3e366] [cursor=pointer]
+      - button "Aceptar" [ref=f3e367] [cursor=pointer]
+      - link "Ver preferencias" [ref=f3e368] [cursor=pointer]:
+        - /url: /politica-de-cookies/

@@ -131,7 +131,7 @@
           "bloques": [
             {
               "tipo": "parrafo",
-              "html": "Dos años después, la revista situaba el nacimiento de Jesús a principios de octubre. Hoy su web dice que la Biblia no revela la fecha del nacimiento."
+              "html": "Dos años después, la revista situaba el nacimiento de Jesús a principios de octubre. Hoy <a href=\"https://www.jw.org/es/testigos-de-jehov%C3%A1/preguntas-frecuentes/por-qu%C3%A9-no-celebran-la-navidad/\" target=\"_blank\" rel=\"noopener\">su web</a> dice que la Biblia no revela la fecha del nacimiento."
             }
           ]
         },
@@ -140,7 +140,7 @@
           "bloques": [
             {
               "tipo": "parrafo",
-              "html": "<em>Proclamadores</em> señala la de 1926 como la última Navidad celebrada en Brooklyn, y menciona que también se dejó en las sucursales de Inglaterra y Suiza. En aquella época todavía se llamaban Estudiantes de la Biblia; el nombre de Testigos de Jehová llegó en 1931."
+              "html": "<a href=\"https://wol.jw.org/es/wol/pc/r4/lp-s/1200273077/1302/10\" target=\"_blank\" rel=\"noopener\"><em>Proclamadores</em></a> señala la de 1926 como la última Navidad celebrada en Brooklyn, y menciona que también se dejó en las sucursales de Inglaterra y Suiza. En aquella época todavía se llamaban Estudiantes de la Biblia; el nombre de Testigos de Jehová llegó en 1931."
             }
           ]
         },
@@ -149,7 +149,7 @@
           "bloques": [
             {
               "tipo": "parrafo",
-              "html": "La historia oficial cita el artículo «El origen de la Navidad», publicado en la revista <em>The Golden Age</em> (hoy <em>¡Despertad!</em>) del 14 de diciembre de 1927. Decía que era una fiesta pagana que fomentaba la idolatría y terminaba así:"
+              "html": "<a href=\"https://wol.jw.org/es/wol/d/r4/lp-s/1102014249\" target=\"_blank\" rel=\"noopener\">La historia oficial</a> cita el artículo «El origen de la Navidad», publicado en la revista <em>The Golden Age</em> (hoy <em>¡Despertad!</em>) del 14 de diciembre de 1927. Decía que era una fiesta pagana que fomentaba la idolatría y terminaba así:"
             },
             {
               "tipo": "cita",
@@ -169,7 +169,7 @@
           "bloques": [
             {
               "tipo": "parrafo",
-              "html": "En diciembre de 1928, Richard H. Barber dio por radio un discurso contra la Navidad. Se publicó en <em>The Golden Age</em> del 12 de diciembre con el título «La Navidad: su origen y propósito»."
+              "html": "En diciembre de 1928, Richard H. Barber dio por radio un discurso contra la Navidad (<a href=\"https://wol.jw.org/es/wol/d/r4/lp-s/1102014249\" target=\"_blank\" rel=\"noopener\"><em>El Reino de Dios ya está gobernando</em>, cap. 10</a>). Se publicó en <em>The Golden Age</em> del 12 de diciembre con el título «La Navidad: su origen y propósito»."
             },
             {
               "tipo": "cita",
@@ -213,83 +213,23 @@
     },
     {
       "id": "fecha",
-      "titulo": "¿Nació Jesús el 25 de diciembre?",
+      "titulo": "¿Qué dicen los historiadores sobre la fecha y el origen?",
       "bloques": [
         {
           "tipo": "parrafo",
-          "html": "No se sabe. Los evangelios no dan ninguna fecha, y el detalle de los pastores en el campo no basta para calcularla. El historiador Andrew McGowan lo explica en <a href=\"https://www.biblicalarchaeology.org/daily/people-cultures-in-the-bible/jesus-historical-jesus/how-december-25-became-christmas/\" target=\"_blank\" rel=\"noopener\">«How December 25 Became Christmas»</a>, donde repasa cómo se fue formando la tradición:"
-        },
-        {
-          "tipo": "lista",
-          "items": [
-            {
-              "etiqueta": "Hacia el año 200.",
-              "html": "Clemente de Alejandría recogía varios cálculos sobre el nacimiento, y ninguno era el 25 de diciembre."
-            },
-            {
-              "etiqueta": "Siglo IV.",
-              "html": "Ya se celebraba el 25 de diciembre en Occidente y el 6 de enero en Oriente."
-            },
-            {
-              "etiqueta": "Mediados del siglo IV.",
-              "html": "Un almanaque romano sitúa el nacimiento de Cristo en Belén el 25 de diciembre."
-            }
-          ]
+          "html": "La Biblia no da la fecha del nacimiento de Jesús, y en eso coinciden los Testigos y los historiadores. El historiador Andrew McGowan explica en <a href=\"https://www.biblicalarchaeology.org/daily/people-cultures-in-the-bible/jesus-historical-jesus/how-december-25-became-christmas/\" target=\"_blank\" rel=\"noopener\">«How December 25 Became Christmas»</a> que, hacia el año 200, Clemente de Alejandría recogía varios cálculos y ninguno era el 25 de diciembre, y que en el siglo IV ya se celebraba ese día en Occidente. En la Iglesia católica es la fecha de la celebración, no una fecha histórica demostrada: <a href=\"https://www.vatican.va/content/john-paul-ii/es/audiences/1993/documents/hf_jp-ii_aud_19931222.html\" target=\"_blank\" rel=\"noopener\">Juan Pablo II la llamó «convencional»</a>."
         },
         {
           "tipo": "parrafo",
-          "html": "En esto coinciden los Testigos y los historiadores: no se conoce la fecha exacta del nacimiento de Jesús. En la Iglesia católica, el 25 de diciembre es la fecha de la celebración litúrgica, no una fecha histórica demostrada. <a href=\"https://www.vatican.va/content/john-paul-ii/es/audiences/1993/documents/hf_jp-ii_aud_19931222.html\" target=\"_blank\" rel=\"noopener\">Juan Pablo II la llamó «convencional»</a> y explicó que la Navidad conmemora el nacimiento de Jesús."
-        }
-      ],
-      "subsecciones": []
-    },
-    {
-      "id": "origen",
-      "titulo": "¿Se eligió esa fecha para sustituir una fiesta pagana?",
-      "bloques": [
-        {
-          "tipo": "parrafo",
-          "html": "Es la explicación más conocida, pero los historiadores no se ponen de acuerdo. El investigador C. P. E. Nothaft repasa las dos grandes teorías en la revista <a href=\"https://www.cambridge.org/core/journals/church-history/article/abs/origins-of-the-christmas-date-some-recent-trends-in-historical-research/3767138672A4C2DFBED6BD1B004FB78A\" target=\"_blank\" rel=\"noopener\"><em>Church History</em> (2012)</a>:"
-        },
-        {
-          "tipo": "lista",
-          "items": [
-            {
-              "etiqueta": "Las fiestas del sol.",
-              "html": "La fecha coincide con celebraciones romanas dedicadas al sol, y la Navidad comparte el simbolismo de la luz. Pero eso no demuestra quién eligió la fecha ni por qué."
-            },
-            {
-              "etiqueta": "Los cálculos de los propios cristianos.",
-              "html": "Algunos situaban la concepción de Jesús el 25 de marzo. Nueve meses después, sale el 25 de diciembre."
-            }
-          ]
+          "html": "Sobre el origen de la fecha, los historiadores no se ponen de acuerdo. El investigador C. P. E. Nothaft repasa en la revista <a href=\"https://www.cambridge.org/core/journals/church-history/article/abs/origins-of-the-christmas-date-some-recent-trends-in-historical-research/3767138672A4C2DFBED6BD1B004FB78A\" target=\"_blank\" rel=\"noopener\"><em>Church History</em> (2012)</a> las dos teorías principales: que se eligió por coincidir con fiestas romanas dedicadas al sol, o que salió de los cálculos de algunos cristianos, que situaban la concepción de Jesús el 25 de marzo. Nothaft propone tener en cuenta las dos."
         },
         {
           "tipo": "parrafo",
-          "html": "Nothaft propone tener en cuenta las dos explicaciones a la vez."
+          "html": "Con las costumbres pasa algo parecido: cada una tiene su propia historia y su propia época. El árbol de Navidad, por ejemplo, se popularizó en el Reino Unido en el siglo XIX, según el <a href=\"https://www.vam.ac.uk/articles/victorian-christmas-traditions\" target=\"_blank\" rel=\"noopener\">Victoria and Albert Museum</a>, después de que en 1848 se publicara una ilustración de la reina Victoria y el príncipe Alberto con su familia alrededor de un árbol."
         },
         {
           "tipo": "parrafo",
-          "html": "Los Testigos, por su parte, dan el origen pagano de la fiesta por establecido, y es uno de los motivos principales por los que no la celebran."
-        }
-      ],
-      "subsecciones": []
-    },
-    {
-      "id": "costumbres",
-      "titulo": "¿Y el árbol, los regalos y las demás costumbres?",
-      "bloques": [
-        {
-          "tipo": "parrafo",
-          "html": "No todo en la Navidad tiene el mismo origen. La fecha, el árbol y las tarjetas de felicitación tienen historias distintas."
-        },
-        {
-          "tipo": "parrafo",
-          "html": "Muchas de las costumbres que hoy nos parecen de toda la vida son bastante recientes. El <a href=\"https://www.vam.ac.uk/articles/victorian-christmas-traditions\" target=\"_blank\" rel=\"noopener\">Victoria and Albert Museum</a> explica cómo se popularizó el árbol de Navidad en el Reino Unido en el siglo XIX: en 1848 se publicó una ilustración de la reina Victoria y el príncipe Alberto con su familia alrededor de un árbol, y la imagen se hizo enormemente popular."
-        },
-        {
-          "tipo": "parrafo",
-          "html": "La <a href=\"https://www.jw.org/es/ense%C3%B1anzas-b%C3%ADblicas/preguntas/qu%C3%A9-dice-la-biblia-acerca-de-la-navidad/\" target=\"_blank\" rel=\"noopener\">web de los Testigos</a> relaciona los regalos, las luces y el árbol con prácticas anteriores al cristianismo. Los historiadores suelen estudiar cada costumbre por separado, porque cada una tiene su propia historia y su propia época."
+          "html": "Los Testigos, por su parte, dan por establecido el origen pagano de la fiesta y de sus costumbres, y es uno de los motivos principales por los que no la celebran."
         }
       ],
       "subsecciones": []
@@ -312,7 +252,11 @@
         },
         {
           "tipo": "parrafo",
-          "html": "Por eso, ante la misma invitación a cenar en Nochebuena, una persona ve una reunión familiar y otra, una celebración religiosa. Entender eso evita muchos malentendidos en las familias."
+          "html": "Por eso, ante la misma invitación a cenar en Nochebuena, una persona ve una reunión familiar y otra, una celebración religiosa."
+        },
+        {
+          "tipo": "parrafo",
+          "html": "Hoy, además, la Navidad va más allá de los cristianos. Según <a href=\"https://www.pewresearch.org/short-reads/2026/02/12/which-countries-have-the-most-and-fewest-public-holidays/\" target=\"_blank\" rel=\"noopener\">Pew Research Center</a>, al menos 154 países la tienen como festivo nacional, y en India, según <a href=\"https://www.pewresearch.org/religion/2021/06/29/diversity-and-pluralism/\" target=\"_blank\" rel=\"noopener\">una encuesta de Pew de 2019</a>, casi uno de cada cinco hindúes, sijs y jainistas participa en festejos navideños."
         }
       ],
       "subsecciones": []
@@ -348,19 +292,6 @@
               "html": "Son testimonios elegidos por la propia organización para explicar su postura. Lo que cuenta Jasmine, y lo que cuentan otros exmiembros, es bastante distinto. No sabemos cuántos niños lo viven de una manera u otra, pero sí que la versión de las revistas no es la única."
             }
           ]
-        },
-        {
-          "titulo": "La Navidad se vive de maneras distintas",
-          "bloques": [
-            {
-              "tipo": "parrafo",
-              "html": "La Navidad tiene hoy un alcance amplio, también fuera de las comunidades cristianas. Según <a href=\"https://www.pewresearch.org/short-reads/2026/02/12/which-countries-have-the-most-and-fewest-public-holidays/\" target=\"_blank\" rel=\"noopener\">Pew Research Center</a>, en 2026 al menos 154 países reconocen el día de Navidad como festivo nacional. Ese dato habla de calendarios oficiales, no de cuántas personas la celebran. En India, <a href=\"https://www.pewresearch.org/religion/2021/06/29/diversity-and-pluralism/\" target=\"_blank\" rel=\"noopener\">una encuesta de Pew realizada en 2019</a> encontró que casi uno de cada cinco hindúes, sijs y jainistas participa en festejos navideños."
-            },
-            {
-              "tipo": "parrafo",
-              "html": "Para algunas personas es una fiesta religiosa; para otras, una tradición cultural o familiar, y hay quienes no la celebran. El significado depende de cada persona y de su entorno. También cada familia puede valorar qué puede suponer para un niño quedarse al margen cuando sus compañeros viven una actividad como un momento compartido."
-            }
-          ]
         }
       ]
     },
@@ -370,15 +301,11 @@
       "bloques": [
         {
           "tipo": "parrafo",
-          "html": "Depende. Las publicaciones no prohíben todo contacto con la Navidad."
+          "html": "<strong class=\"respuesta-corta\">Depende.</strong> Las publicaciones no prohíben todo contacto con la Navidad."
         },
         {
           "tipo": "parrafo",
           "html": "El capítulo <a href=\"https://www.jw.org/es/biblioteca/libros/curso-biblico/adorar-dios-como-quiere/\" target=\"_blank\" rel=\"noopener\">«Adore a Dios como él quiere» (§§14-16)</a> dice que se puede dar las gracias a quien te felicita y deja a la conciencia de cada uno aceptar algunos regalos. Si la familia quiere celebrar, aconseja ser respetuoso y pensarse bien si pasar ese tiempo con ellos."
-        },
-        {
-          "tipo": "parrafo",
-          "html": "Celebrar sigue sin estar permitido. Pero aceptar un regalo o contestar amablemente a una felicitación no es, sin más, saltarse la norma."
         },
         {
           "tipo": "parrafo",
@@ -395,25 +322,6 @@
         {
           "tipo": "parrafo",
           "html": "Si tienes un familiar Testigo, a veces sirve más preguntarle directamente que discutir sobre la doctrina: qué plan le haría sentirse cómodo, qué significa para él y cómo podéis seguir viéndoos."
-        }
-      ],
-      "subsecciones": []
-    },
-    {
-      "id": "consecuencias",
-      "titulo": "¿Celebrar la Navidad puede tener consecuencias?",
-      "bloques": [
-        {
-          "tipo": "parrafo",
-          "html": "Sí, puede tenerlas. El manual interno para ancianos, <em>Pastoreen el rebaño de Dios</em>, del que existe una <a href=\"https://www.scribd.com/document/922803273/202509-sfg-E\" target=\"_blank\" rel=\"noopener\">copia en inglés de septiembre de 2025 publicada por terceros</a>, incluye celebrar fiestas de «religión falsa» dentro del apartado de apostasía (apéndice A, §39). Es una de las faltas más graves para la organización."
-        },
-        {
-          "tipo": "parrafo",
-          "html": "El mismo párrafo aclara que no todas las fiestas tienen que ver directamente con la religión falsa ni obligan a formar un comité. Es decir, no todo gesto navideño acaba en expulsión. Pero la posibilidad está escrita."
-        },
-        {
-          "tipo": "parrafo",
-          "html": "Si te han presionado o sancionado por celebrar la Navidad, lo que viviste cuenta, aunque el manual tenga matices. Si quieres, <a href=\"/contacto/\">cuéntanoslo</a>."
         }
       ],
       "subsecciones": []
@@ -437,10 +345,6 @@
             "«Tardé años en dejar de preguntarme si Jehová me estaba mirando.»"
           ],
           "fuente": "«It Happened to Me: I Grew Up as a Jehovah's Witness», xoJane en <a href=\"https://time.com/3654731/grew-up-as-jehovahs-witness/\" target=\"_blank\" rel=\"noopener\">TIME</a>, 8 de enero de 2015 (traducción de la AEVTJ)"
-        },
-        {
-          "tipo": "parrafo",
-          "html": "No hay una forma correcta de hacerlo. Puedes celebrarlo por todo lo alto, ir poco a poco, quedarte con las costumbres que te gusten o seguir sin celebrar. La primera cena de Nochebuena o el primer árbol no tienen que demostrar nada. Y siempre puedes cambiar de idea."
         }
       ],
       "subsecciones": []
@@ -451,47 +355,38 @@
       "bloques": [
         {
           "tipo": "parrafo",
-          "html": "Respetamos que cada uno viva su fe como quiera, también en Navidad. Lo que pedimos es que nadie tenga que celebrar en contra de su conciencia para demostrar que quiere a su familia. Y que nadie tenga que callarse sus dudas o su malestar para demostrar que es leal a su congregación."
+          "html": "Para muchos de quienes crecimos como Testigos, diciembre era un mes raro. Las calles se llenaban de luces, en clase se ensayaban villancicos y en casa no pasaba nada. Algunos recuerdan que los sacaban a otra sala mientras sus compañeros cantaban; otros, buscar excusas para no ir a una cena familiar."
         },
         {
           "tipo": "parrafo",
-          "html": "En el colegio y en casa, lo importante es escuchar a la persona que tienes delante, sobre todo si es un niño. Esta historia empezó con una Navidad en Brooklyn hace casi cien años. Hoy se juega en decisiones mucho más cercanas: una invitación, una cena familiar, una función de Navidad en el colegio."
+          "html": "Y luego estaba la culpa. «Tardé años en dejar de preguntarme si Jehová me estaba mirando», cuenta la mujer del relato de TIME. Durante décadas se presentó como una elección entre «aceptar la Navidad con su espíritu y perder a Dios» o aceptar a Dios y «perder la Navidad»."
+        },
+        {
+          "tipo": "parrafo",
+          "html": "También se pierde algo cuando la familia se divide: padres que no ven a sus hijos en las fechas señaladas, como la mujer que entrevistó Holden, e hijos que pasan la Nochebuena lejos de los suyos. Respetamos que cada uno viva su fe como quiera. Lo que pedimos es que nadie tenga que elegir entre su conciencia y su familia, ni callarse sus dudas para demostrar que es leal a su congregación."
+        },
+        {
+          "tipo": "parrafo",
+          "html": "Si ya has salido, no hay una forma correcta de vivir la Navidad. Puedes celebrarla por todo lo alto, ir poco a poco, quedarte con las costumbres que te gusten o seguir sin celebrar. Es normal sentir ilusión, culpa o tristeza por las que te perdiste. La primera cena de Nochebuena o el primer árbol no tienen que demostrar nada."
+        },
+        {
+          "tipo": "parrafo",
+          "html": "Si te presionaron o te sentiste solo en estas fechas, lo que viviste cuenta. Aquí hay personas que lo entienden porque pasaron por lo mismo. Cuando quieras hablar de ello, puedes <a href=\"/contacto/\">escribirnos</a>."
         }
       ],
       "subsecciones": []
     },
     {
       "id": "fuentes",
-      "titulo": "Fuentes",
+      "titulo": "Fuentes y límites de este artículo",
       "bloques": [
         {
           "tipo": "parrafo",
-          "html": "Enlazamos cada fuente junto al dato que respalda. Hemos usado:"
-        },
-        {
-          "tipo": "lista",
-          "items": [
-            {
-              "etiqueta": "Publicaciones de los Testigos de Jehová",
-              "html": ", para explicar sus argumentos y cómo cuentan su propia historia."
-            },
-            {
-              "etiqueta": "Investigación histórica",
-              "html": ": Nothaft, McGowan y el Victoria and Albert Museum."
-            },
-            {
-              "etiqueta": "Otras perspectivas",
-              "html": ": el Catecismo católico y el artículo de Holloway."
-            },
-            {
-              "etiqueta": "Testimonios y documentos internos",
-              "html": ": la declaración de Jasmine Grew, el relato de TIME, el estudio de Holden y la copia del manual de 2025."
-            }
-          ]
+          "html": "Los números del texto remiten a esta bibliografía: cada fuente se lista una sola vez, por más veces que se cite, y el enlace se abre en una pestaña nueva. Donde una fuente tiene límites, lo decimos junto a su entrada."
         },
         {
           "tipo": "parrafo",
-          "html": "Revisión: 13 de octubre de 2026. Las fechas de 1881, 1883, 1927 y 1928 las tomamos de las historias oficiales de la organización, no de los ejemplares originales. Del artículo de Nothaft hemos consultado el resumen y las referencias, no el texto completo. Y no hemos podido confirmar que la copia del manual de 2025 sea la edición vigente hoy."
+          "html": "Las fechas de 1881, 1883, 1927 y 1928 las tomamos de las historias oficiales de la organización, no de los ejemplares originales. Del artículo de Nothaft hemos consultado el resumen y las referencias, no el texto completo. El relato de TIME no lleva firma: se publicó con el nombre de la web xoJane. Las citas en inglés están traducidas por la AEVTJ."
         }
       ],
       "subsecciones": []
@@ -500,15 +395,15 @@
   "preguntas": [
     {
       "pregunta": "¿No celebran la Navidad porque no creen en Jesús?",
-      "respuesta": "No. Creen en Jesús. Lo que rechazan es la fiesta, no a Jesús."
+      "respuesta": "<strong class=\"respuesta-corta\">No.</strong> Creen en Jesús. Lo que rechazan es la fiesta, no a Jesús."
     },
     {
       "pregunta": "¿La Biblia prohíbe la Navidad?",
-      "respuesta": "No. La Biblia no la menciona. La organización aplica a la Navidad textos sobre recordar la muerte de Jesús y separarse de otros cultos."
+      "respuesta": "<strong class=\"respuesta-corta\">No.</strong> La Biblia no la menciona. La organización aplica a la Navidad textos sobre recordar la muerte de Jesús y separarse de otros cultos."
     },
     {
       "pregunta": "¿Alguna vez la celebraron?",
-      "respuesta": "Sí. En su sede de Brooklyn la celebraron hasta 1926. En 1927 y 1928 empezaron a pedir que se abandonara."
+      "respuesta": "<strong class=\"respuesta-corta\">Sí.</strong> En su sede de Brooklyn la celebraron hasta 1926. En 1927 y 1928 empezaron a pedir que se abandonara."
     },
     {
       "pregunta": "¿Cuándo nació Jesús según los Testigos?",
@@ -520,11 +415,11 @@
     },
     {
       "pregunta": "¿Celebran otra fiesta en lugar de la Navidad?",
-      "respuesta": "No. Su celebración principal es la Conmemoración de la muerte de Jesús, pero no la presentan como una alternativa a la Navidad."
+      "respuesta": "<strong class=\"respuesta-corta\">No.</strong> Su celebración principal es la Conmemoración de la muerte de Jesús, pero no la presentan como una alternativa a la Navidad."
     },
     {
       "pregunta": "¿Todos los niños Testigos lo pasan mal en Navidad?",
-      "respuesta": "No lo sabemos. Hay niños que dicen que no se sienten excluidos y adultos que recuerdan haberlo pasado muy mal. Ninguno de los dos grupos habla por todos."
+      "respuesta": "<strong class=\"respuesta-corta\">No lo sabemos.</strong> Hay niños que dicen que no se sienten excluidos y adultos que recuerdan haberlo pasado muy mal. Ninguno de los dos grupos habla por todos."
     }
   ]
 }

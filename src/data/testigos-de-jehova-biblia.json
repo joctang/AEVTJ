@@ -1,0 +1,699 @@
+{
+  "titulo": "La Biblia de los Testigos de Jehová: cuál es y en qué se diferencia",
+  "entrada": [
+    {
+      "tipo": "parrafo",
+      "html": "Los Testigos de Jehová usan la <strong>Traducción del Nuevo Mundo de las Santas Escrituras</strong> (TNM). En español, la edición vigente es <a href=\"https://www.jw.org/es/testigos-de-jehov%C3%A1/qui%C3%A9nes-somos-y-qu%C3%A9-hacemos/editamos-publicaciones/biblia-en-espa%C3%B1ol-nwt/\" target=\"_blank\" rel=\"noopener\">la revisión presentada en Madrid el 19 de julio de 2019</a>. Aunque consultan otras traducciones, esta es la que suelen usar y la que ofrecen en su curso bíblico gratuito."
+    },
+    {
+      "tipo": "parrafo",
+      "html": "Aquí explicamos qué ediciones ha tenido (incluida la Biblia antigua que muchas familias conservan), en qué se diferencia de la Reina-Valera y de las Biblias católicas, y qué pasajes se leen distinto en cada una."
+    }
+  ],
+  "secciones": [
+    {
+      "id": "respuesta",
+      "titulo": "¿Qué Biblia usan los Testigos de Jehová?",
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "html": "Usan la Traducción del Nuevo Mundo. Estos son los datos básicos:"
+        },
+        {
+          "tipo": "lista",
+          "items": [
+            {
+              "etiqueta": "Editorial.",
+              "html": "La publican los Testigos de Jehová a través de su sociedad editorial, Watch Tower Bible and Tract Society."
+            },
+            {
+              "etiqueta": "Edición actual.",
+              "html": "En español, la revisión de 2019. Las anteriores, como <a href=\"https://www.jw.org/es/biblioteca/biblia/bi12/libros/colosenses/1/\" target=\"_blank\" rel=\"noopener\">la de 1987</a>, también se pueden consultar en la biblioteca en línea."
+            },
+            {
+              "etiqueta": "Coste.",
+              "html": "Se distribuye gratuitamente."
+            },
+            {
+              "etiqueta": "Otras traducciones.",
+              "html": "En <a href=\"https://www.jw.org/es/testigos-de-jehov%C3%A1/preguntas-frecuentes/biblia-de-los-testigos-tnm/\" target=\"_blank\" rel=\"noopener\">sus publicaciones</a> explican que han usado otras traducciones y que pueden ofrecer el curso bíblico con una versión distinta, aunque esta es su traducción de referencia."
+            }
+          ]
+        },
+        {
+          "tipo": "parrafo",
+          "html": "Entre los motivos que dan, destacan tres aspectos de esta traducción:"
+        },
+        {
+          "tipo": "lista",
+          "items": [
+            {
+              "etiqueta": "El nombre «Jehová».",
+              "html": "Lo conserva donde, a su juicio, aparecía en los textos originales."
+            },
+            {
+              "etiqueta": "La exactitud.",
+              "html": "Según ellos, transmite con fidelidad el mensaje bíblico."
+            },
+            {
+              "etiqueta": "La claridad.",
+              "html": "Dicen que usa un lenguaje fácil de entender hoy."
+            }
+          ]
+        }
+      ],
+      "subsecciones": []
+    },
+    {
+      "id": "historia",
+      "titulo": "¿Cómo ha cambiado la Biblia de los Testigos de Jehová?",
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "html": "Si tienes una Biblia antigua de los Testigos, o te preguntas por qué la tuya no dice lo mismo que la de tus padres, hay una razón: existen varias ediciones. Esta es la cronología que hemos reconstruido a partir de sus publicaciones."
+        }
+      ],
+      "subsecciones": [
+        {
+          "titulo": "1950: empieza la publicación en inglés",
+          "bloques": [
+            {
+              "tipo": "parrafo",
+              "html": "Según sus fuentes, la publicación en inglés comenzó en 1950 y la versión completa salió por partes entre 1950 y 1960."
+            }
+          ]
+        },
+        {
+          "titulo": "1961: edición completa en inglés",
+          "bloques": [
+            {
+              "tipo": "parrafo",
+              "html": "Esta edición sirvió de base para la primera traducción al español."
+            }
+          ]
+        },
+        {
+          "titulo": "1967: primera Biblia completa en español",
+          "bloques": [
+            {
+              "tipo": "parrafo",
+              "html": "La versión completa en español llegó en 1967 y, según los Testigos de Jehová, desde entonces han publicado unos 62 millones de ejemplares en español."
+            }
+          ]
+        },
+        {
+          "titulo": "1987: otra edición en español",
+          "bloques": [
+            {
+              "tipo": "parrafo",
+              "html": "La biblioteca en línea conserva <a href=\"https://www.jw.org/es/biblioteca/biblia/bi12/libros/colosenses/1/\" target=\"_blank\" rel=\"noopener\">la edición de 1987</a>, así que se puede comparar con la actual. En Colosenses 1:16, por ejemplo, aquella dice «todas las [otras] cosas», con «otras» entre corchetes; <a href=\"https://www.jw.org/es/biblioteca/biblia/biblia-estudio/libros/colosenses/1/\" target=\"_blank\" rel=\"noopener\">la de 2019</a> dice «todo lo demás», sin corchetes."
+            }
+          ]
+        },
+        {
+          "titulo": "2013: revisión en inglés",
+          "bloques": [
+            {
+              "tipo": "parrafo",
+              "html": "En 2008, el Cuerpo Gobernante nombró un nuevo Comité de Traducción de la Biblia del Nuevo Mundo. Cinco años después, en octubre de 2013, presentó una edición revisada en inglés, que sirvió de base para la revisión en español."
+            }
+          ]
+        },
+        {
+          "titulo": "2019: revisión en español",
+          "bloques": [
+            {
+              "tipo": "parrafo",
+              "html": "El 19 de julio de 2019, Gerrit Lösch, miembro del Cuerpo Gobernante, <a href=\"https://www.jw.org/es/testigos-de-jehov%C3%A1/qui%C3%A9nes-somos-y-qu%C3%A9-hacemos/editamos-publicaciones/biblia-en-espa%C3%B1ol-nwt/\" target=\"_blank\" rel=\"noopener\">presentó la revisión en español en Madrid ante 47.232 personas</a>, según el recuento de los propios Testigos de Jehová. Es la edición vigente. Estos son sus cambios principales:"
+            },
+            {
+              "tipo": "lista",
+              "items": [
+                {
+                  "etiqueta": "Lenguaje.",
+                  "html": "Se actualizaron palabras y nombres: «Revelación» pasó a ser «Apocalipsis», «gozo» pasó a «felicidad» y «benignidad» a «amabilidad»."
+                },
+                {
+                  "etiqueta": "El nombre divino.",
+                  "html": "«Jehová» aparece ahora 7.216 veces, 237 de ellas en las Escrituras Griegas Cristianas (el Nuevo Testamento)."
+                },
+                {
+                  "etiqueta": "Pasajes omitidos.",
+                  "html": "Se dejaron fuera del texto los dos finales de Marcos 16 y el pasaje de Juan 7:53 a 8:11. Los Testigos de Jehová consideran que se añadieron después y lo explican en sus <a href=\"https://wol.jw.org/es/wol/d/r4/lp-s/1001070203\" target=\"_blank\" rel=\"noopener\">notas de estudio y apéndices</a>. Los vemos <a href=\"#versiculos\">más abajo</a>."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "antigua",
+      "titulo": "¿Cuál es la Biblia antigua de los Testigos de Jehová y qué edición tengo?",
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "html": "Mira la portada interior o la página de créditos: ahí figura el año de la edición. Las ediciones completas más antiguas en español son la de 1967 y la de 1987. La «Biblia verde» de la que hablan algunas personas suele ser un ejemplar antiguo con la tapa de ese color. Es un apodo informal, no el nombre de una edición."
+        },
+        {
+          "tipo": "parrafo",
+          "html": "Esto es lo que cambia entre la edición de 1987 y la de 2019:"
+        },
+        {
+          "tipo": "tabla",
+          "titulo": "Edición de 1987 frente a la de 2019",
+          "cabecera": [
+            "Pasaje",
+            "Edición de 1987",
+            "Edición de 2019"
+          ],
+          "filas": [
+            [
+              "<a href=\"https://www.jw.org/es/biblioteca/biblia/biblia-estudio/libros/colosenses/1/\" target=\"_blank\" rel=\"noopener\">Colosenses 1:16</a>",
+              "«todas las [otras] cosas»",
+              "«todo lo demás», sin corchetes"
+            ],
+            [
+              "<a href=\"https://www.jw.org/es/biblioteca/biblia/biblia-estudio/libros/marcos/16/\" target=\"_blank\" rel=\"noopener\">Marcos 16:9-20</a>",
+              "Está en el texto, con una nota sobre los manuscritos",
+              "No está: el capítulo termina en el versículo 8"
+            ],
+            [
+              "<a href=\"https://www.jw.org/es/biblioteca/biblia/biblia-estudio/libros/juan/8/\" target=\"_blank\" rel=\"noopener\">Juan 7:53 a 8:11</a>",
+              "Está en el texto, con una nota sobre los manuscritos",
+              "No está: el capítulo 8 empieza en el versículo 12"
+            ],
+            [
+              "<a href=\"https://www.jw.org/es/biblioteca/biblia/biblia-estudio/libros/mateo/17/\" target=\"_blank\" rel=\"noopener\">Mateo 17:21</a>",
+              "Solo el número y una raya, con nota",
+              "Igual: solo el número y una raya, con nota"
+            ],
+            [
+              "Último libro de la Biblia",
+              "«Revelación»",
+              "«Apocalipsis»"
+            ]
+          ]
+        }
+      ],
+      "subsecciones": []
+    },
+    {
+      "id": "comite",
+      "titulo": "¿Quién tradujo la Traducción del Nuevo Mundo?",
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "html": "La organización nunca ha publicado sus nombres. Explica que los miembros del comité que preparó la primera versión en inglés pidieron que no se hicieran públicos, y el comité actual, nombrado en 2008, tampoco los ha dado. Para la edición en español, dice que reunió a traductores cristianos bautizados con experiencia en sus publicaciones y que el Cuerpo Gobernante supervisa el trabajo a través de su Comité de Redacción."
+        },
+        {
+          "tipo": "parrafo",
+          "html": "Hay otra versión. Raymond Franz, que fue miembro del Cuerpo Gobernante hasta 1980, escribió en su libro <em>Crisis de conciencia</em> (1983) que el primer comité lo formaban Nathan Knorr, Fred Franz, Albert Schroeder y George Gangas. Según él, Fred Franz era el único con conocimientos suficientes de las lenguas bíblicas para una traducción así: había estudiado griego dos años en la Universidad de Cincinnati y había aprendido hebreo por su cuenta (<a href=\"https://www.bible-researcher.com/new-world.html\" target=\"_blank\" rel=\"noopener\">página 50 de la edición inglesa</a>). La organización no ha confirmado esos nombres."
+        },
+        {
+          "tipo": "parrafo",
+          "html": "Como la organización no ha dado a conocer quiénes son los traductores ni su formación, no se puede comprobar por vías oficiales. Por eso nos fijamos en el texto, en las notas y en pasajes concretos. Eso es lo que hacemos a continuación."
+        }
+      ],
+      "subsecciones": []
+    },
+    {
+      "id": "diferencias",
+      "titulo": "¿En qué se diferencia de la Reina-Valera y de otras Biblias?",
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "html": "Casi todas las diferencias tienen que ver con tres cosas: <strong>cómo se traduce un pasaje</strong>, <strong>qué versículos aparecen en el texto</strong> según los manuscritos antiguos y <strong>qué libros forman la Biblia</strong>. Son cuestiones distintas, así que las vemos por separado."
+        },
+        {
+          "tipo": "parrafo",
+          "html": "«Reina-Valera» y «Biblia católica» no se refieren a un único texto, así que conviene decir qué ediciones comparamos:"
+        },
+        {
+          "tipo": "tabla",
+          "titulo": "Las Biblias en español que comparamos",
+          "cabecera": [
+            "Edición",
+            "Qué es",
+            "Qué tener en cuenta"
+          ],
+          "filas": [
+            [
+              "Traducción del Nuevo Mundo (TNM), revisión de 2019",
+              "La Biblia que publican los Testigos de Jehová. Edición de estudio con notas.",
+              "La hizo un comité anónimo. Es la que tomamos como base para comparar."
+            ],
+            [
+              "Reina-Valera 1960 (RVR1960)",
+              "Revisión de una traducción protestante clásica.",
+              "«Reina-Valera» es una familia de revisiones. No todas dicen lo mismo."
+            ],
+            [
+              "Nueva Versión Internacional (NVI)",
+              "Traducción contemporánea en español.",
+              "El texto se ha revisado varias veces; indicamos siempre la edición."
+            ],
+            [
+              "Nueva Biblia de las Américas (NBLA)",
+              "Versión evangélica de tradición más literal.",
+              "No es la LBLA, su antecesora."
+            ],
+            [
+              "Nueva Biblia de Jerusalén",
+              "Biblia católica, con introducciones y notas.",
+              "«Biblia católica» no es una traducción, sino una tradición con varias ediciones."
+            ]
+          ]
+        }
+      ],
+      "subsecciones": [
+        {
+          "titulo": "Juan 1:1: «era un dios» frente a «era Dios»",
+          "bloques": [
+            {
+              "tipo": "parrafo",
+              "html": "Es una de las diferencias más conocidas. La TNM dice que la Palabra «era un dios»; las otras cuatro ediciones dicen «era Dios»."
+            },
+            {
+              "tipo": "tabla",
+              "titulo": "Dos pasajes en cinco ediciones",
+              "cabecera": [
+                "Edición",
+                "Juan 1:1 (final)",
+                "<a href=\"https://www.jw.org/es/biblioteca/biblia/biblia-estudio/libros/colosenses/1/\" target=\"_blank\" rel=\"noopener\">Colosenses 1:16</a>"
+              ],
+              "filas": [
+                [
+                  "<a href=\"https://www.jw.org/es/biblioteca/biblia/biblia-estudio/libros/juan/1/\" target=\"_blank\" rel=\"noopener\">TNM 2019</a>",
+                  "«la Palabra era un dios»",
+                  "«todo lo demás fue creado»"
+                ],
+                [
+                  "<a href=\"https://www.biblegateway.com/passage/?search=Juan+1%3A1%3B+Colosenses+1%3A16&version=RVR1960;NVI;NBLA\" target=\"_blank\" rel=\"noopener\">Reina-Valera 1960</a>",
+                  "«el Verbo era Dios»",
+                  "«fueron creadas todas las cosas»"
+                ],
+                [
+                  "<a href=\"https://www.biblegateway.com/passage/?search=Juan+1%3A1%3B+Colosenses+1%3A16&version=RVR1960;NVI;NBLA\" target=\"_blank\" rel=\"noopener\">NVI</a>",
+                  "«el Verbo era Dios»",
+                  "«fueron creadas todas las cosas»"
+                ],
+                [
+                  "<a href=\"https://www.biblegateway.com/passage/?search=Juan+1%3A1%3B+Colosenses+1%3A16&version=RVR1960;NVI;NBLA\" target=\"_blank\" rel=\"noopener\">NBLA</a>",
+                  "«el Verbo era Dios»",
+                  "«fueron creadas todas las cosas»"
+                ],
+                [
+                  "<a href=\"https://apps.idteologia.org/index.php?book=43&chapter=1&db=bj.db&r=sagradaEscritura\" target=\"_blank\" rel=\"noopener\">Nueva Biblia de Jerusalén (católica)</a>",
+                  "«la Palabra era Dios»",
+                  "«todas las cosas»"
+                ]
+              ]
+            },
+            {
+              "tipo": "parrafo",
+              "html": "De la Biblia de Jerusalén usamos la <a href=\"https://apps.idteologia.org/index.php?book=43&chapter=1&db=bj.db&r=sagradaEscritura\" target=\"_blank\" rel=\"noopener\">edición de 1998 para Juan</a> y la <a href=\"https://apps.idteologia.org/index.php?book=51&chapter=1&db=bj2009.db&r=sagradaEscritura\" target=\"_blank\" rel=\"noopener\">de 2009 para Colosenses</a>, y en las dos solo hemos podido consultar una transcripción en línea."
+            },
+            {
+              "tipo": "parrafo",
+              "html": "<a href=\"https://wol.jw.org/es/wol/d/r4/lp-s/1001070669\" target=\"_blank\" rel=\"noopener\">La nota de estudio</a> da tres razones para traducirlo así. El segundo <em>theós</em> aparece sin artículo en griego, lo que, según la nota, describe una cualidad de la Palabra. La Palabra estaba «con» Dios. Y antiguas versiones coptas distinguen los dos usos de <em>theós</em>. También señala que algunas traducciones modernas hacen algo parecido."
+            },
+            {
+              "tipo": "parrafo",
+              "html": "Otros gramáticos han estudiado esa construcción. <a href=\"https://www.areopage.net/PDF/Harner.pdf\" target=\"_blank\" rel=\"noopener\">Philip Harner (1973)</a> y <a href=\"https://www.areopage.net/PDF/Wallace.pdf\" target=\"_blank\" rel=\"noopener\">Daniel Wallace (1996)</a> la entienden como cualitativa («de naturaleza divina»), no como indefinida («un dios»). Es la interpretación de esos autores, no una regla que todos compartan."
+            }
+          ]
+        },
+        {
+          "titulo": "Colosenses 1:16: «todo lo demás»",
+          "bloques": [
+            {
+              "tipo": "parrafo",
+              "html": "Aquí la traducción añade una palabra: no dice «todas las cosas», sino «todo lo demás». Su <a href=\"https://wol.jw.org/es/wol/d/r4/lp-s/1001070779\" target=\"_blank\" rel=\"noopener\">nota de estudio</a> reconoce que una versión literal del griego sería «todas las cosas». Los Testigos de Jehová explican que esa expresión podría dar a entender que Jesús no fue creado, algo que no encaja con sus creencias, y que el término griego puede significar «todos los demás» en otros contextos."
+            },
+            {
+              "tipo": "parrafo",
+              "html": "En el griego no hay ninguna palabra aparte que corresponda a «otras», así que incluirla es una decisión de traducción. La <a href=\"https://wol.jw.org/es/wol/d/r4/lp-s/1001070779\" target=\"_blank\" rel=\"noopener\">nota</a> la justifica por el contexto y por la creencia de que Jesús fue el primer ser creado por Dios. La edición de 1987 marcaba «otras» entre corchetes; la de 2019 ya no. Aquí los especialistas no coinciden: los críticos sostienen que añadir «otras» cambia el sentido del versículo, mientras que Jason BeDuhn defiende que está implícito en el griego."
+            }
+          ]
+        },
+        {
+          "titulo": "El nombre «Jehová» en el Nuevo Testamento",
+          "bloques": [
+            {
+              "tipo": "parrafo",
+              "html": "En <a href=\"https://www.biblegateway.com/passage/?search=Colosenses+1%3A10&version=RVR1960;NVI;NBLA\" target=\"_blank\" rel=\"noopener\">Colosenses 1:10</a>, esta edición dice «de una manera digna de Jehová»; la Reina-Valera 1960, la NVI y la NBLA dicen «digno del Señor». La nota de estudio remite al apéndice C3, donde los Testigos de Jehová explican por qué incluyen «Jehová» en pasajes como este."
+            },
+            {
+              "tipo": "parrafo",
+              "html": "Su explicación es una inferencia: los manuscritos griegos del Nuevo Testamento que se conservan dicen <em>Kyrios</em> («Señor») o <em>Theos</em> («Dios»), no el nombre divino. El investigador <a href=\"https://www.areopage.net/howard.pdf\" target=\"_blank\" rel=\"noopener\">George Howard propuso algo parecido en 1977</a>, aunque otros especialistas lo discuten. Incluso Jason BeDuhn, que valora bien esta traducción en general, considera que poner «Jehová» en el Nuevo Testamento no se ajusta al texto griego. Para valorarlo, conviene leer el apéndice y contrastarlo con otras fuentes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "versiculos",
+      "titulo": "¿Qué versículos quitaron los Testigos de Jehová?",
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "html": "Hay versículos que aparecen en otras Biblias y no en la Traducción del Nuevo Mundo. Algunos críticos dicen que los Testigos los quitaron. La organización responde que no estaban en los manuscritos más antiguos y lo explica en uno de sus apéndices. Otras Biblias modernas reconocen el mismo problema en los manuscritos, pero toman otra decisión: mantener esos versículos en el texto con una nota."
+        }
+      ],
+      "subsecciones": [
+        {
+          "titulo": "Qué versículos no aparecen en la TNM",
+          "bloques": [
+            {
+              "tipo": "parrafo",
+              "html": "<a href=\"https://wol.jw.org/es/wol/d/r4/lp-s/1001070203\" target=\"_blank\" rel=\"noopener\">El apéndice A3</a> enumera estos versículos y cada caso lleva una nota de estudio:"
+            },
+            {
+              "tipo": "lista",
+              "items": [
+                {
+                  "etiqueta": "Mateo.",
+                  "html": "17:21; 18:11; 23:14."
+                },
+                {
+                  "etiqueta": "Marcos.",
+                  "html": "7:16; 9:44, 46; 11:26; 15:28."
+                },
+                {
+                  "etiqueta": "Lucas.",
+                  "html": "17:36; 23:17."
+                },
+                {
+                  "etiqueta": "Juan.",
+                  "html": "5:4."
+                },
+                {
+                  "etiqueta": "Hechos.",
+                  "html": "8:37; 15:34; 24:7; 28:29."
+                },
+                {
+                  "etiqueta": "Romanos.",
+                  "html": "16:24."
+                }
+              ]
+            },
+            {
+              "tipo": "parrafo",
+              "html": "De los más conocidos, esto es lo que dicen en otras Biblias (citamos la Reina-Valera 1960):"
+            },
+            {
+              "tipo": "lista",
+              "items": [
+                {
+                  "etiqueta": "Mateo 17:21.",
+                  "html": "«Pero este género no sale sino con oración y ayuno»."
+                },
+                {
+                  "etiqueta": "Hechos 8:37.",
+                  "html": "La confesión del eunuco etíope antes de bautizarse: «Creo que Jesucristo es el Hijo de Dios»."
+                },
+                {
+                  "etiqueta": "Marcos 16:9-20.",
+                  "html": "El final largo del evangelio: las apariciones de Jesús resucitado y el encargo a los discípulos."
+                },
+                {
+                  "etiqueta": "Juan 7:53 a 8:11.",
+                  "html": "El episodio de la mujer sorprendida en adulterio."
+                }
+              ]
+            },
+            {
+              "tipo": "parrafo",
+              "html": "La revisión de 2019 también deja fuera el final largo de Marcos (16:9-20), el final corto y el pasaje de Juan 7:53 a 8:11. <a href=\"https://wol.jw.org/es/wol/d/r4/lp-s/1001070203\" target=\"_blank\" rel=\"noopener\">El apéndice</a> los llama «relatos espurios» y dice que no estaban en los manuscritos originales. En la edición de estudio en línea, Marcos termina en el versículo 8 y Juan 8 empieza en el 12; las notas explican la postura de los Testigos de Jehová. La edición de 1987 los incluía con una nota sobre los manuscritos. Por tanto, esta decisión corresponde a la revisión de 2019, no a todas las ediciones de esta Biblia."
+            }
+          ]
+        },
+        {
+          "titulo": "Por qué lo hizo",
+          "bloques": [
+            {
+              "tipo": "parrafo",
+              "html": "Los Testigos de Jehová explican que se basaron en ediciones críticas del texto griego, como las de Nestle-Aland y las Sociedades Bíblicas Unidas, además de papiros antiguos. Según su interpretación, esos manuscritos muestran que copistas posteriores añadieron los versículos. También señalan que algunas traducciones antiguas, como la Biblia del Oso y la Versión del Rey Jacobo, sí los incluyen."
+            }
+          ]
+        },
+        {
+          "titulo": "Qué hacen otras Biblias",
+          "bloques": [
+            {
+              "tipo": "parrafo",
+              "html": "Las Biblias en español no tratan estos pasajes igual. Hemos comparado tres pasajes en cuatro ediciones:"
+            },
+            {
+              "tipo": "tabla",
+              "titulo": "Tres pasajes en cuatro ediciones",
+              "cabecera": [
+                "Edición",
+                "<a href=\"https://www.jw.org/es/biblioteca/biblia/biblia-estudio/libros/mateo/17/\" target=\"_blank\" rel=\"noopener\">Mateo 17:21</a>",
+                "<a href=\"https://www.jw.org/es/biblioteca/biblia/biblia-estudio/libros/marcos/16/\" target=\"_blank\" rel=\"noopener\">Marcos 16:9-20</a>",
+                "<a href=\"https://www.jw.org/es/biblioteca/biblia/biblia-estudio/libros/juan/8/\" target=\"_blank\" rel=\"noopener\">Juan 7:53 a 8:11</a>"
+              ],
+              "filas": [
+                [
+                  "<a href=\"https://www.jw.org/es/biblioteca/biblia/biblia-estudio/libros/mateo/17/\" target=\"_blank\" rel=\"noopener\">TNM 2019</a>",
+                  "Solo el número y una raya, con nota de estudio",
+                  "Omitido: el capítulo acaba en el v. 8",
+                  "Omitido: el capítulo 8 empieza en el v. 12"
+                ],
+                [
+                  "<a href=\"https://www.biblegateway.com/passage/?search=Mateo+17%3A20-22%3B+Marcos+16%3A8-9%3B+Juan+7%3A53-8%3A1&version=RVR1960;NVI;NBLA\" target=\"_blank\" rel=\"noopener\">Reina-Valera 1960</a>",
+                  "En el texto",
+                  "En el texto",
+                  "En el texto"
+                ],
+                [
+                  "<a href=\"https://www.biblegateway.com/passage/?search=Mateo+17%3A20-22%3B+Marcos+16%3A8-9%3B+Juan+7%3A53-8%3A1&version=RVR1960;NVI;NBLA\" target=\"_blank\" rel=\"noopener\">NVI</a>",
+                  "El número queda vacío, con nota: algunos manuscritos añaden la frase",
+                  "En el texto, con nota: están en manuscritos tardíos",
+                  "En el texto, con una nota en 7:52: los manuscritos más antiguos no lo traen"
+                ],
+                [
+                  "<a href=\"https://www.biblegateway.com/passage/?search=Mateo+17%3A20-22%3B+Marcos+16%3A8-9%3B+Juan+7%3A53-8%3A1&version=RVR1960;NVI;NBLA\" target=\"_blank\" rel=\"noopener\">NBLA</a>",
+                  "En el texto, con nota: los manuscritos más antiguos no lo incluyen",
+                  "En el texto, con nota: algunos de los manuscritos más antiguos no incluyen los vv. 9-20",
+                  "En el texto, con nota: no aparece en los manuscritos más antiguos"
+                ]
+              ]
+            },
+            {
+              "tipo": "parrafo",
+              "html": "Las notas de la NVI y de la NBLA también reconocen que los manuscritos más antiguos no traen esos pasajes, igual que la evidencia que cita esta edición. La diferencia está en qué hace cada Biblia con esa información: la revisión de 2019 los deja fuera del texto, mientras que la NVI y la NBLA los mantienen con una nota."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "canon",
+      "titulo": "¿La Biblia católica tiene más libros?",
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "html": "<strong class=\"respuesta-corta\">Sí.</strong> Es la diferencia más visible con la Biblia católica. Las Biblias católicas tienen 73 libros (<a href=\"https://www.vatican.va/archive/catechism_sp/p1s1c2a3_sp.html\" target=\"_blank\" rel=\"noopener\">Catecismo, n.º 120</a>); las protestantes y la de los Testigos de Jehová, 66."
+        },
+        {
+          "tipo": "parrafo",
+          "html": "Los siete libros que la tradición católica llama «deuterocanónicos» son Tobías, Judit, Sabiduría, Eclesiástico (Sirácida), Baruc y 1 y 2 Macabeos. Además, en esa tradición Ester y Daniel incluyen secciones que no aparecen en las Biblias protestantes. Los tres grupos comparten los 27 libros del Nuevo Testamento; la diferencia está en el Antiguo."
+        },
+        {
+          "tipo": "parrafo",
+          "html": "Esta Biblia sigue el canon de 66 libros, como las protestantes. Los Testigos de Jehová sostienen que la Biblia va de Génesis a Revelación y está formada por esos 66 (<a href=\"https://wol.jw.org/es/wol/d/r4/lp-s/1200000880\" target=\"_blank\" rel=\"noopener\"><em>Perspicacia</em>, «Canon»</a>). Es decir, esos siete libros no los quitaron los Testigos: siguen el mismo canon que las Biblias protestantes, distinto del católico."
+        }
+      ],
+      "subsecciones": []
+    },
+    {
+      "id": "cristiana",
+      "titulo": "¿Es la Biblia de los Testigos de Jehová una Biblia cristiana?",
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "html": "Es una traducción de la Biblia cristiana: contiene los mismos 66 libros que las Biblias protestantes. La discusión no está en los libros, sino en cómo se traducen los textos sobre la naturaleza de Jesús, como Juan 1:1 o Colosenses 1:16."
+        },
+        {
+          "tipo": "parrafo",
+          "html": "Algunas confesiones cristianas creen que en esos pasajes la traducción refleja la doctrina de los Testigos, que no aceptan la Trinidad. Ellos lo niegan y dicen que se limitan a ser fieles al texto. Para ver qué creen sobre Jesús y si se consideran cristianos, puedes leer <a href=\"/testigos-de-jehova/\">nuestra página sobre los Testigos de Jehová</a>."
+        }
+      ],
+      "subsecciones": []
+    },
+    {
+      "id": "especialistas",
+      "titulo": "¿Qué dicen los especialistas sobre la Traducción del Nuevo Mundo?",
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "html": "Las opiniones están divididas, y casi todas se refieren a ediciones en inglés, no a la revisión española de 2019."
+        },
+        {
+          "tipo": "parrafo",
+          "html": "Bruce M. Metzger, especialista en Nuevo Testamento, publicó en 1964 <a href=\"https://translation.bible/wp-content/uploads/2024/06/metzger-1964-book-review-new-world-translation-of-the-christian-greek-scriptures.pdf\" target=\"_blank\" rel=\"noopener\">una reseña</a> de la edición inglesa de 1950. En las páginas 150-152 reconoce parte del trabajo de traducción, pero critica varias decisiones, entre ellas las de Juan 1:1, Colosenses 1:16-17 y el uso de «Jehová» en el Nuevo Testamento."
+        },
+        {
+          "tipo": "parrafo",
+          "html": "Jason David BeDuhn comparó en 2003 nueve traducciones inglesas del Nuevo Testamento en pasajes discutidos por motivos doctrinales, en su libro <a href=\"https://www.bloomsbury.com/us/truth-in-translation-9780761825562/\" target=\"_blank\" rel=\"noopener\"><em>Truth in Translation</em></a>. Concluye que, de las que compara, la Traducción del Nuevo Mundo es la más exacta, aunque «no libre de sesgos». Pero también la critica: considera que poner «Jehová» en el Nuevo Testamento no es una traducción exacta, porque no sigue el texto griego. En cambio, defiende el «otras» de Colosenses 1:16 (págs. 83-87 y 163-169, según <a href=\"https://www.tetragrammaton.org/truthintrans.html\" target=\"_blank\" rel=\"noopener\">esta reseña detallada</a>)."
+        }
+      ],
+      "subsecciones": []
+    },
+    {
+      "id": "fiable",
+      "titulo": "¿Es fiable la Biblia de los Testigos de Jehová?",
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "html": "No hay una respuesta única que sirva para todos los pasajes. Los Testigos de Jehová defienden su traducción y explican sus decisiones; otras personas las comparan con las de otras Biblias, sobre todo donde el hebreo o el griego permiten más de una lectura."
+        },
+        {
+          "tipo": "parrafo",
+          "html": "Que una traducción sea diferente no demuestra que esté manipulada; y llamarla exacta tampoco basta para cerrar la discusión. Si tienes dudas, ayuda separar tres cosas: lo que esta Biblia explica en sus notas, lo que otros traductores o especialistas discuten y lo que son simples diferencias de estilo. Las tablas de arriba siguen ese orden."
+        },
+        {
+          "tipo": "parrafo",
+          "html": "Si quieres revisarla por tu cuenta, puedes:"
+        },
+        {
+          "tipo": "lista",
+          "items": [
+            {
+              "etiqueta": "Mirar qué edición tienes.",
+              "html": "Comprueba el año, el idioma y si es la edición de estudio o la sencilla."
+            },
+            {
+              "etiqueta": "Leer las notas.",
+              "html": "Las notas de estudio explican por qué algunos pasajes se traducen de una forma concreta."
+            },
+            {
+              "etiqueta": "Comparar varias Biblias.",
+              "html": "Busca el mismo pasaje en una Reina-Valera, una NVI y una Biblia católica."
+            },
+            {
+              "etiqueta": "Consultar una fuente independiente",
+              "html": "si la diferencia depende del griego o del hebreo, como un comentario académico o una Biblia interlineal."
+            },
+            {
+              "etiqueta": "Distinguir traducción y doctrina.",
+              "html": "A veces cambia la forma de decirlo; otras veces, también cambia la idea que transmite."
+            }
+          ]
+        }
+      ],
+      "subsecciones": []
+    },
+    {
+      "id": "mirada-aevtj",
+      "titulo": "Si creciste con esta Biblia",
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "html": "Para muchas personas que crecieron como Testigos de Jehová, esta fue la Biblia de toda su vida: la que leían de niños, la que llevaban a las reuniones y la que usaban para predicar. Y aprendieron que no bastaba con leerla, sino que había que entenderla como la explicaba la organización. En 1968, <em>La Atalaya</em> decía que la Biblia <a href=\"https://wol.jw.org/es/wol/d/r4/lp-s/1967722\" target=\"_blank\" rel=\"noopener\">«pertenece a la congregación cristiana como organización, no a individuos, prescindiendo de cuán sinceramente crean que pueden interpretar la Biblia»</a>."
+        },
+        {
+          "tipo": "parrafo",
+          "html": "Por eso, al salir, abrir otra Biblia no siempre es fácil. Hay quien siente culpa, como si estuviera traicionando algo. Hay quien tiene miedo de lo que va a encontrar. Y hay quien, después de todo lo vivido, prefiere no abrir ninguna durante un tiempo. Todo eso es normal."
+        },
+        {
+          "tipo": "parrafo",
+          "html": "No tienes que decidir nada con prisa. Puedes leer otras traducciones, compararlas o dejarlas a un lado, y decidir con calma qué lugar quieres que tenga la Biblia en tu vida, si es que quieres que tenga alguno."
+        },
+        {
+          "tipo": "parrafo",
+          "html": "Si estás en ese proceso, aquí hay personas que lo entienden porque pasaron por lo mismo. Cuando quieras hablar de ello, puedes <a href=\"/contacto/\">escribirnos</a>."
+        }
+      ],
+      "subsecciones": []
+    },
+    {
+      "id": "fuentes",
+      "titulo": "Fuentes",
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "html": "Estas son las fuentes que hemos usado, agrupadas por tipo:"
+        },
+        {
+          "tipo": "lista",
+          "items": [
+            {
+              "etiqueta": "Publicaciones de los Testigos de Jehová",
+              "html": ", para explicar su posición y sus ediciones: <a href=\"https://www.jw.org/es/testigos-de-jehov%C3%A1/preguntas-frecuentes/biblia-de-los-testigos-tnm/\" target=\"_blank\" rel=\"noopener\">¿Tienen los testigos de Jehová su propia Biblia?</a>, <a href=\"https://www.jw.org/es/testigos-de-jehov%C3%A1/preguntas-frecuentes/cambiar-biblia-creencias/\" target=\"_blank\" rel=\"noopener\">¿Han cambiado la Biblia para que encaje con sus creencias?</a>, <a href=\"https://www.jw.org/es/testigos-de-jehov%C3%A1/qui%C3%A9nes-somos-y-qu%C3%A9-hacemos/editamos-publicaciones/biblia-en-espa%C3%B1ol-nwt/\" target=\"_blank\" rel=\"noopener\">la presentación de la revisión de 2019</a>, <a href=\"https://wol.jw.org/es/wol/d/r4/lp-s/1001070203\" target=\"_blank\" rel=\"noopener\">el apéndice A3 de la TNM</a>, <a href=\"https://wol.jw.org/es/wol/d/r4/lp-s/1967722\" target=\"_blank\" rel=\"noopener\"><em>La Atalaya</em> del 15 de marzo de 1968</a> y <a href=\"https://wol.jw.org/es/wol/d/r4/lp-s/1983046\" target=\"_blank\" rel=\"noopener\"><em>La Atalaya</em> del 1 de junio de 1983</a>."
+            },
+            {
+              "etiqueta": "Texto y notas de la TNM",
+              "html": ": <a href=\"https://www.jw.org/es/biblioteca/biblia/biblia-estudio/libros/juan/1/\" target=\"_blank\" rel=\"noopener\">Juan 1</a> y <a href=\"https://wol.jw.org/es/wol/d/r4/lp-s/1001070669\" target=\"_blank\" rel=\"noopener\">su nota de estudio</a>; <a href=\"https://www.jw.org/es/biblioteca/biblia/biblia-estudio/libros/colosenses/1/\" target=\"_blank\" rel=\"noopener\">Colosenses 1 (2019)</a>, <a href=\"https://wol.jw.org/es/wol/d/r4/lp-s/1001070779\" target=\"_blank\" rel=\"noopener\">su nota de estudio</a> y <a href=\"https://www.jw.org/es/biblioteca/biblia/bi12/libros/colosenses/1/\" target=\"_blank\" rel=\"noopener\">Colosenses 1 (1987)</a>; <a href=\"https://www.jw.org/es/biblioteca/biblia/biblia-estudio/libros/mateo/17/\" target=\"_blank\" rel=\"noopener\">Mateo 17 (2019)</a> y <a href=\"https://www.jw.org/es/biblioteca/biblia/bi12/libros/mateo/17/\" target=\"_blank\" rel=\"noopener\">Mateo 17 (1987)</a>; <a href=\"https://www.jw.org/es/biblioteca/biblia/biblia-estudio/libros/marcos/16/\" target=\"_blank\" rel=\"noopener\">Marcos 16</a> y <a href=\"https://www.jw.org/es/biblioteca/biblia/biblia-estudio/libros/juan/8/\" target=\"_blank\" rel=\"noopener\">Juan 8</a>."
+            },
+            {
+              "etiqueta": "Otras ediciones",
+              "html": ", en Bible Gateway: <a href=\"https://www.biblegateway.com/passage/?search=Juan+1%3A1%3B+Colosenses+1%3A16&version=RVR1960;NVI;NBLA\" target=\"_blank\" rel=\"noopener\">Juan 1:1 y Colosenses 1:16</a>, <a href=\"https://www.biblegateway.com/passage/?search=Colosenses+1%3A10&version=RVR1960;NVI;NBLA\" target=\"_blank\" rel=\"noopener\">Colosenses 1:10</a>, <a href=\"https://www.biblegateway.com/passage/?search=Mateo+17%3A20-22&version=RVR1960;NVI;NBLA\" target=\"_blank\" rel=\"noopener\">Mateo 17:20-22</a>, <a href=\"https://www.biblegateway.com/passage/?search=Marcos+16%3A8-9&version=RVR1960;NVI;NBLA\" target=\"_blank\" rel=\"noopener\">Marcos 16:8-9</a> y <a href=\"https://www.biblegateway.com/passage/?search=Juan+7%3A53-8%3A1&version=RVR1960;NVI;NBLA\" target=\"_blank\" rel=\"noopener\">Juan 7:53-8:1</a>. La Nueva Biblia de Jerusalén, en una transcripción en línea: <a href=\"https://apps.idteologia.org/index.php?book=43&chapter=1&db=bj.db&r=sagradaEscritura\" target=\"_blank\" rel=\"noopener\">Juan 1 (1998)</a> y <a href=\"https://apps.idteologia.org/index.php?book=51&chapter=1&db=bj2009.db&r=sagradaEscritura\" target=\"_blank\" rel=\"noopener\">Colosenses 1 (2009)</a>."
+            },
+            {
+              "etiqueta": "Canon",
+              "html": ": <a href=\"https://www.vatican.va/archive/catechism_sp/p1s1c2a3_sp.html\" target=\"_blank\" rel=\"noopener\">Catecismo de la Iglesia Católica</a> y <a href=\"https://wol.jw.org/es/wol/d/r4/lp-s/1200000880\" target=\"_blank\" rel=\"noopener\">Perspicacia, «Canon»</a>, de los Testigos de Jehová."
+            },
+            {
+              "etiqueta": "Especialistas",
+              "html": ": <a href=\"https://translation.bible/wp-content/uploads/2024/06/metzger-1964-book-review-new-world-translation-of-the-christian-greek-scriptures.pdf\" target=\"_blank\" rel=\"noopener\">Metzger (1964), reseña</a>; <a href=\"https://www.areopage.net/PDF/Harner.pdf\" target=\"_blank\" rel=\"noopener\">Harner (1973)</a>; <a href=\"https://www.areopage.net/PDF/Wallace.pdf\" target=\"_blank\" rel=\"noopener\">Wallace (1996)</a>; <a href=\"https://www.areopage.net/howard.pdf\" target=\"_blank\" rel=\"noopener\">Howard (1977)</a>; <a href=\"https://www.bloomsbury.com/us/truth-in-translation-9780761825562/\" target=\"_blank\" rel=\"noopener\">BeDuhn (2003), ficha de la editorial</a> y <a href=\"https://www.tetragrammaton.org/truthintrans.html\" target=\"_blank\" rel=\"noopener\">reseña detallada del libro</a>."
+            },
+            {
+              "etiqueta": "Antiguos miembros",
+              "html": ": Raymond Franz, <em>Crisis de conciencia</em> (1983), pág. 50 de la edición inglesa, citado en <a href=\"https://www.bible-researcher.com/new-world.html\" target=\"_blank\" rel=\"noopener\">The Bible Researcher</a>."
+            }
+          ]
+        },
+        {
+          "tipo": "parrafo",
+          "html": "Revisado el 18 de octubre de 2026. Los pasajes de la Reina-Valera, la NVI, la NBLA y la Biblia de Jerusalén proceden de sus versiones en línea, no de ejemplares impresos. De BeDuhn citamos sus conclusiones a partir de una reseña con las páginas del libro; no hemos consultado el ejemplar completo. La postura de los Testigos de Jehová procede de sus publicaciones; la de antiguos miembros, críticos y especialistas, de las fuentes citadas."
+        }
+      ],
+      "subsecciones": []
+    }
+  ],
+  "preguntas": [
+    {
+      "pregunta": "¿Cuál es la Biblia de los Testigos de Jehová?",
+      "respuesta": "La Traducción del Nuevo Mundo de las Santas Escrituras. En español, la edición vigente es la revisión de 2019."
+    },
+    {
+      "pregunta": "¿Cuál es la Biblia antigua de los Testigos de Jehová?",
+      "respuesta": "No hay una sola. La primera edición completa en español es de 1967 y la biblioteca en línea conserva también la de 1987; la vigente es la revisión de 2019. Para saber cuál tienes, mira el año en la portada interior o en la página de créditos. Si has oído hablar de la «Biblia verde», suele ser un ejemplar antiguo de tapa verde: es un apodo informal, no el nombre de una edición."
+    },
+    {
+      "pregunta": "¿Los Testigos de Jehová solo pueden leer su Biblia?",
+      "respuesta": "Oficialmente, no. La organización explica que ha usado otras traducciones y que puede ofrecer el curso bíblico con una versión distinta, aunque suele regalar un ejemplar de la Traducción del Nuevo Mundo. A la vez, sus publicaciones han insistido en que la Biblia debe entenderse como la explica la organización. En 1968, <a href=\"https://wol.jw.org/es/wol/d/r4/lp-s/1967722\" target=\"_blank\" rel=\"noopener\"><em>La Atalaya</em></a> decía que «no se puede entender apropiadamente la Biblia sin tener presente la organización visible de Jehová». Y en 1983 <a href=\"https://wol.jw.org/es/wol/d/r4/lp-s/1983046\" target=\"_blank\" rel=\"noopener\">advertía</a> contra el «modo de pensar independiente», por ejemplo «poniendo en duda el consejo que suministra la organización visible de Dios»."
+    },
+    {
+      "pregunta": "¿Qué diferencia hay entre la Biblia de los Testigos y la Reina-Valera?",
+      "respuesta": "Hay tres diferencias principales: algunos pasajes se traducen de otra forma (Juan 1:1 y Colosenses 1:16), algunos versículos no aparecen en esta Biblia pero sí en otras ediciones (como Mateo 17:21 o Marcos 16:9-20), y las Biblias católicas incluyen más libros. Arriba puedes ver cada caso."
+    },
+    {
+      "pregunta": "¿Qué diferencia hay entre la Biblia católica y la de los Testigos de Jehová?",
+      "respuesta": "La Biblia católica tiene 73 libros, frente a los 66 de la de los Testigos de Jehová. Siete libros del Antiguo Testamento que aparecen en la católica no están en esta edición. Además, algunos pasajes se traducen de forma distinta: en Juan 1:1, la Biblia de Jerusalén dice «la Palabra era Dios» y esta edición, «la Palabra era un dios»."
+    },
+    {
+      "pregunta": "¿Qué versículos faltan en la Biblia de los Testigos de Jehová?",
+      "respuesta": "El apéndice A3 de esta edición enumera Mateo 17:21; 18:11; 23:14; Marcos 7:16; 9:44, 46; 11:26; 15:28; Lucas 17:36; 23:17; Juan 5:4; Hechos 8:37; 15:34; 24:7; 28:29 y Romanos 16:24. La edición actual tampoco incluye Marcos 16:9-20 ni Juan 7:53 a 8:11. Otras Biblias modernas explican estos casos en notas y muchas mantienen los pasajes en el texto."
+    },
+    {
+      "pregunta": "¿Quién tradujo la Biblia de los Testigos de Jehová?",
+      "respuesta": "Según la organización, un comité que pidió mantener el anonimato y que supervisa el Cuerpo Gobernante a través de su Comité de Redacción. Raymond Franz, antiguo miembro del Cuerpo Gobernante, afirmó en 1983 que el primer comité lo formaban Nathan Knorr, Fred Franz, Albert Schroeder y George Gangas."
+    },
+    {
+      "pregunta": "¿La Biblia de los Testigos de Jehová es una Biblia cristiana?",
+      "respuesta": "Contiene los mismos 66 libros que las Biblias protestantes. Lo que cuestionan otras confesiones cristianas son algunas decisiones de traducción en los pasajes sobre Jesús. Los Testigos de Jehová las defienden como fieles al texto."
+    },
+    {
+      "pregunta": "¿Es confiable la Biblia de los Testigos de Jehová?",
+      "respuesta": "Depende del pasaje. Muchas diferencias con otras Biblias son de estilo, pero en algunos textos, como Juan 1:1 o Colosenses 1:16, la traducción tiene peso doctrinal. En esos casos conviene compararla con otras ediciones y leer las notas."
+    },
+    {
+      "pregunta": "¿Está manipulada o alterada la Biblia de los Testigos de Jehová?",
+      "respuesta": "Conviene distinguir tres cosas. Puedes comprobar que algunos pasajes se traducen distinto a otras Biblias: Juan 1:1, Colosenses 1:16 y el uso de «Jehová» en el Nuevo Testamento. Esta edición explica esas decisiones en sus notas y apéndices; en Colosenses 1:16, por ejemplo, reconoce que «todas las cosas» sería la traducción literal. Algunas confesiones cristianas y especialistas creen que ciertas decisiones reflejan la doctrina de los Testigos; ellos lo niegan. Por eso, más que hablar de «falsificación», aquí examinamos decisiones de traducción concretas y el peso doctrinal que pueden tener."
+    }
+  ]
+}

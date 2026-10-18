@@ -3,7 +3,7 @@
 // Lee 06_Contenido/testigos-de-jehova__sangre/BORRADOR.md (hasta «Notas de edición»)
 // y escribe src/data/testigos-de-jehova-sangre.json. El texto no se reescribe:
 // solo se convierte el markdown en línea (enlaces, negrita, cursiva, ==subrayado==) a HTML.
-import { readFileSync, writeFileSync } from "node:fs";
+import { existsSync, readFileSync, statSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, resolve } from "node:path";
 
@@ -127,5 +127,9 @@ if (faq) {
   datos.secciones = datos.secciones.filter((s) => s !== faq);
 }
 
+// Desde el 18-10-2026 el texto se retoca directamente en el JSON: no se sobrescribe
+// un JSON más reciente que su borrador salvo con --forzar.
+if (!process.argv.includes("--forzar") && existsSync(destino) && statSync(destino).mtimeMs > statSync(origen).mtimeMs)
+  throw new Error("El JSON de sangre es más reciente que su BORRADOR.md; no se sobrescribe (usa --forzar si es lo que quieres).");
 writeFileSync(destino, JSON.stringify(datos, null, 2) + "\n", "utf8");
 console.log(`Escrito ${destino}: ${datos.secciones.length} secciones, ${datos.preguntas?.length ?? 0} preguntas.`);

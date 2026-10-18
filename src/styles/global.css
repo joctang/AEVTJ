@@ -17,6 +17,9 @@ body {
   color: var(--color-brand-ink);
 }
 
+/* Respuesta breve en preguntas directas: gana jerarquía sin ocupar una línea propia. */
+.respuesta-corta { display: inline-block; margin-right: 0.16em; font-size: 1.35em; line-height: 1; vertical-align: baseline; }
+
 .breadcrumbs {
   background: var(--color-brand-cream);
   border-bottom: 1px solid rgb(18 44 51 / 0.05);

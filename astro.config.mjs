@@ -11,12 +11,22 @@ const paginasPendientes = [
   '/testigos-de-jehova/vestimenta/',
 ];
 
+// Páginas que siguen generándose pero redirigen (301 en public/.htaccess) a otra URL:
+// no deben estar en el sitemap.
+const paginasRedirigidas = [
+  '/transparencia/', // portal antiguo; vigente: /quienes-somos/#transparencia (15/10/2026)
+  '/testimonios-bajo-juramento/',
+  '/separacion-de-la-sociedad/',
+  '/relacion-de-pecados-para-un-comite-judicial/',
+];
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://victimasdetestigosdejehova.org',
   integrations: [
     sitemap({
-      filter: (page) => !paginasPendientes.some((ruta) => page.endsWith(ruta)),
+      filter: (page) =>
+        ![...paginasPendientes, ...paginasRedirigidas].some((ruta) => page.endsWith(ruta)),
     }),
   ],
   devToolbar: {

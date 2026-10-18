@@ -1,15 +1,18 @@
 ---
 // /testigos-de-jehova/sangre/: página documental sobre la sangre y las transfusiones.
-// El texto procede literalmente del borrador editorial y se genera con
-// `node scripts/sangre-desde-borrador.mjs` (src/data/testigos-de-jehova-sangre.json).
+// Revisada con el criterio editorial el 18-10-2026: desde entonces el texto se retoca directamente en
+// src/data/testigos-de-jehova-sangre.json (el script sangre-desde-borrador.mjs ya no lo sobrescribe).
 // Aquí solo se decide la presentación de cada bloque. Las ilustraciones aún no existen:
 // se muestran huecos reservados con la escena prevista (docs-ilustraciones/GUIA-ILUSTRACIONES.md).
 import "../../styles/guia-salida.css";
 import "../../styles/sangre.css";
+import "../../styles/referencias.css";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import TornEdge from "../../components/TornEdge.astro";
+import TarjetaRelacionado from "../../components/TarjetaRelacionado.astro";
+import { miniaturaEnlaceRelacionado } from "../../data/miniaturas-enlaces-relacionados";
 import CitaTextual from "../../components/CitaTextual.astro";
-import datos from "../../data/testigos-de-jehova-sangre.json";
+import datosBase from "../../data/testigos-de-jehova-sangre.json";
 
 type Bloque =
   | { tipo: "parrafo"; html: string }
@@ -22,6 +25,93 @@ type Bloque =
 type Sub = { titulo: string; bloques: Bloque[] };
 type Seccion = { id: string; titulo: string; bloques: Bloque[]; subsecciones: Sub[] };
 
+
+// Bibliografía numerada: los enlaces externos del texto pasan a superíndices que
+// remiten a la lista única de fuentes (ver src/styles/referencias.css).
+const titulosFuentes: Record<string, string> = {
+  "https://www.ajwrb.org/estimating-mortality-epidemiological-extrapolations-of-the-blood-prohibition": "AJWRB: «Estimating Mortality: Epidemiological Extrapolations of the Blood Prohibition» (web crítica)",
+  "https://pubmed.ncbi.nlm.nih.gov/8430707/": "C. S. Kitchens, «Are transfusions overrated? Surgical outcome of Jehovah's Witnesses», The American Journal of Medicine (1993) · PubMed",
+  "https://pubmed.ncbi.nlm.nih.gov/22150804/": "A. M. Beliaev y otros, estudio en hospitales de Nueva Zelanda, Vox Sanguinis (2012) · PubMed",
+  "https://wol.jw.org/es/wol/d/r4/lp-s/1993768": "La Atalaya, 15 de octubre de 1993: «¿Se han sobrestimado las transfusiones de sangre?» · wol.jw.org",
+  "https://www.jw.org/es/comunicados-internacionales/pa%C3%ADses-territorios/noticias-internacionales/Cada-Testigo-decide-ahora-si-acepta-o-dona-los-componentes-principales-de-la-sangre/": "Comunicado oficial: «Cada Testigo decide ahora si acepta o dona los componentes principales de la sangre» · jw.org",
+  "https://www.jw.org/es/biblioteca/articulos/otros-temas/testigos-jehov%C3%A1-respetamos-vida/": "jw.org: «Los testigos de Jehová respetamos la vida»",
+  "https://wol.jw.org/es/wol/d/r4/lp-s/301975006": "Historia oficial de la organización sobre la sangre · wol.jw.org",
+  "https://pubmed.ncbi.nlm.nih.gov/41632342/": "Estudio histórico sobre testigos de Jehová y transfusiones (2026) · PubMed",
+  "https://www.abc.es/sociedad/menores-murieron-rechazar-sangre-quedar-decision-conciencia-20260924021854-nt.html": "Diario ABC: menores que murieron por rechazar sangre y la decisión de conciencia",
+  "https://wol.jw.org/es/wol/d/r4/lp-s/1101993015": "Los testigos de Jehová — Proclamadores del Reino de Dios (1993) · wol.jw.org",
+  "https://wol.jw.org/es/wol/d/r4/lp-s/201988330": "Anuncio de 1988 sobre los componentes de la sangre · wol.jw.org",
+  "https://www.cesnur.org/testi/geova_junek2.htm": "CESNUR: declaración de la organización a la prensa (caso Junek)",
+  "https://www.theguardian.com/uk/2000/jun/15/stephenbates": "The Guardian, 15 de junio de 2000",
+  "https://www.jw.org/es/noticias/region/internacionales/2026-Informe-2-del-Cuerpo-Gobernante/": "Informe 2 del Cuerpo Gobernante, marzo de 2026 · jw.org",
+  "https://www.myjewishlearning.com/article/pikuach-nefesh/": "My Jewish Learning: «Pikuach Nefesh» y la preservación de la vida",
+  "https://pubmed.ncbi.nlm.nih.gov/20002070/": "Análisis de 70 dictámenes religiosos suníes sobre transfusiones · PubMed",
+  "https://wol.jw.org/es/wol/d/r4/lp-s/101994360": "¡Despertad! de 1994: sumario del número · wol.jw.org",
+  "https://wol.jw.org/es/wol/d/r4/lp-s/101994361": "¡Despertad! de 1994: artículo sobre Adrian · wol.jw.org",
+  "https://wol.jw.org/es/wol/d/r4/lp-s/101994363": "¡Despertad! de 1994: artículo sobre los cuatro casos · wol.jw.org",
+  "https://www.who.int/news-room/fact-sheets/detail/blood-safety-and-availability": "OMS: «Blood safety and availability» (nota descriptiva)",
+  "https://www.sanidad.gob.es/profesionales/saludPublica/medicinaTransfusional/congresos/docs/DiaMundialDonante2019_Nota_OMS.pdf": "Ministerio de Sanidad: nota de la OMS para el Día Mundial del Donante de 2019 (PDF)",
+  "https://portaluz.org/batalla-mal/ex-miembros-secta-testigos-jehova-piden-justicia-miles-murieron-recibir-transfusion-sangre-n7178": "Portaluz: «Ex miembros de la secta Testigos de Jehová piden justicia para miles…»",
+  "https://www.boe.es/buscar/doc.php?id=BOE-T-2002-15992": "STC 154/2002, del Tribunal Constitucional · BOE",
+  "https://jtcoronado.wordpress.com/2018/01/04/el-constitucional-ampara-a-dos-testigos-de-jehova-cuyo-hijo-murio-tras-negarse-a-una-transfusion-el-tribunal-defiende-el-derecho-del-menor-de-13-anos-a-oponerse-a-la-intervencion/": "El País, 20 de julio de 2002 (copia en blog): El Constitucional ampara a dos testigos de Jehová",
+  "https://coroners.nsw.gov.au/content/dam/dcj/ctsd/coronerscourt/documents/findings/2025/Inquest_into_the_death_of_Heather_Winchester.pdf": "Investigación forense de Nueva Gales del Sur (Australia): conclusiones sobre la muerte de Heather Winchester (PDF)",
+  "https://pubmed.ncbi.nlm.nih.gov/11641673/": "Estudio de 2001 sobre mortalidad en pacientes testigos de Jehová · PubMed",
+  "https://pubmed.ncbi.nlm.nih.gov/12375651/": "Estudio de 2002 sobre pacientes que rechazan transfusiones · PubMed",
+  "https://pubmed.ncbi.nlm.nih.gov/35131631/": "Revisión publicada en 2022 sobre resultados en pacientes testigos de Jehová · PubMed",
+  "https://hudoc.echr.coe.int/eng?i=001-236065": "Sentencia del Tribunal Europeo de Derechos Humanos · HUDOC",
+  "https://www.sanidad.gob.es/en/profesionales/saludPublica/medicinaTransfusional/publicaciones/docs/Informe_Nacional_Actividad_Centros_y_Servicios_de_Transfusion_2025.pdf": "Ministerio de Sanidad: Informe nacional de actividad de centros y servicios de transfusión (2025, PDF)",
+  "https://www.mhlw.go.jp/content/10200000/001046317.pdf": "Ministerio de Sanidad, Trabajo y Bienestar de Japón: documento de preguntas y respuestas (PDF)",
+  "https://www.japantimes.co.jp/news/2026/04/13/japan/crime-legal/jehovahs-witnesses-sue-japan-government/": "The Japan Times (2026): testigos de Jehová demandan al Gobierno japonés",
+  "https://www.mhlw.go.jp/stf/kaiken/daijin/0000194708_00970.html": "Rueda de prensa del ministro japonés, 25 de septiembre de 2026",
+  "https://www.domstol.no/en/supremecourt/rulings/rulings-2026/supreme-court---civil-cases/HR-2026-1009-A/": "Tribunal Supremo de Noruega: sentencia HR-2026-1009-A",
+  "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Noticias-Judiciales/Un-juzgado-de-Torrejon-de-Ardoz-desestima-la-demanda-de-la-organizacion-religiosa-Testigos-de-Jehova-por-vulneracion-del-derecho-al-honor": "Poder Judicial: un juzgado de Torrejón de Ardoz desestima la demanda de la organización por derecho al honor",
+  "https://childabuseroyalcommission.gov.au/media-releases/report-jehovah-witness-organisations-released": "Royal Commission de Australia: comunicado sobre el informe de los Testigos de Jehová",
+};
+const notasFuentes: Record<string, string> = {
+  "https://www.ajwrb.org/estimating-mortality-epidemiological-extrapolations-of-the-blood-prohibition": "Web crítica con la norma sobre la sangre. Su cifra es una extrapolación, no un recuento.",
+  "https://wol.jw.org/es/wol/d/r4/lp-s/1993768": "Publicación oficial de los Testigos de Jehová.",
+  "https://www.jw.org/es/comunicados-internacionales/pa%C3%ADses-territorios/noticias-internacionales/Cada-Testigo-decide-ahora-si-acepta-o-dona-los-componentes-principales-de-la-sangre/": "Publicación oficial de los Testigos de Jehová.",
+  "https://www.jw.org/es/biblioteca/articulos/otros-temas/testigos-jehov%C3%A1-respetamos-vida/": "Publicación oficial de los Testigos de Jehová.",
+  "https://wol.jw.org/es/wol/d/r4/lp-s/301975006": "Publicación oficial de los Testigos de Jehová.",
+  "https://www.jw.org/es/noticias/region/internacionales/2026-Informe-2-del-Cuerpo-Gobernante/": "Publicación oficial de los Testigos de Jehová.",
+};
+const numeradas = new Map<string, { n: number; url: string; titulo: string; nota?: string }>();
+const esExterna = (href: string) => /^https?:\/\//i.test(href) && !href.includes("victimasdetestigosdejehova.org");
+const numerar = (html: string): string => {
+  if (!html || !html.includes("<a ")) return html;
+  return html.replace(/<a\s[^>]*?href="(https?:\/\/[^"]+)"[^>]*>([\s\S]*?)<\/a>/g, (m: string, href: string, texto: string) => {
+    if (!esExterna(href)) return m;
+    let r = numeradas.get(href);
+    let primera = false;
+    if (!r) {
+      primera = true;
+      r = {
+        n: numeradas.size + 1,
+        url: href,
+        titulo: titulosFuentes[href] ?? texto.replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim(),
+        nota: notasFuentes[href],
+      };
+      numeradas.set(href, r);
+    }
+    return `${texto}<sup class="ad-ref"${primera ? ` id="ref-${r.n}"` : ""}><a href="#fn-${r.n}" aria-label="Fuente ${r.n}">${r.n}</a></sup>`;
+  });
+};
+const numBloque = (b: Bloque): Bloque =>
+  b.tipo === "parrafo" || b.tipo === "destacado" || b.tipo === "nota" ? { ...b, html: numerar(b.html) }
+  : b.tipo === "lista" ? { ...b, items: b.items.map((i) => ({ ...i, html: numerar(i.html) })) }
+  : b.tipo === "tabla" ? { ...b, filas: b.filas.map((f) => f.map((c) => numerar(c))) }
+  : b.tipo === "cita" ? { ...b, citas: b.citas.map((c) => numerar(c)), fuente: numerar(b.fuente) }
+  : b;
+const datos = {
+  ...datosBase,
+  entrada: datosBase.entrada.map((b: { html: string }) => ({ ...b, html: numerar(b.html) })),
+  secciones: (datosBase.secciones as Seccion[]).map((s) => ({
+    ...s,
+    bloques: s.bloques.map(numBloque),
+    subsecciones: s.subsecciones.map((sub) => ({ ...sub, bloques: sub.bloques.map(numBloque) })),
+  })),
+  preguntas: datosBase.preguntas.map((p: { pregunta: string; respuesta: string }) => ({ ...p, respuesta: numerar(p.respuesta) })),
+};
+
 const secciones = datos.secciones as Seccion[];
 const contenido = secciones.filter((s) => s.id !== "mirada-aevtj");
 const mirada = secciones.find((s) => s.id === "mirada-aevtj")!;
@@ -29,8 +119,8 @@ const mirada = secciones.find((s) => s.id === "mirada-aevtj")!;
 const tituloSeo = "Testigos de Jehová y transfusiones: historia y cambios";
 const descripcion =
   "Por qué los Testigos de Jehová rechazan la sangre, cómo ha cambiado su postura desde 1945 hasta 2026 y qué examinan hoy tribunales y gobiernos.";
-const revisado = "8 de octubre de 2026";
-const revisadoIso = "2026-10-08";
+const revisado = "18 de octubre de 2026";
+const revisadoIso = "2026-10-18";
 
 const cortos: Record<string, string> = {
   "postura-actual": "Qué dicen hoy",
@@ -161,6 +251,7 @@ const jsonLdFaq = {
       <ol>
         {contenido.map((s, i) => <li><a href={`#${s.id}`}><span>{i + 1}. {cortos[s.id] ?? s.titulo}</span></a></li>)}
         <li><a href="#preguntas"><span>Preguntas frecuentes</span></a></li>
+        <li><a href="#fuentes"><span>Fuentes</span></a></li>
         <li><a href={`#${mirada.id}`}><span>La mirada de la AEVTJ</span></a></li>
       </ol>
       <span class="guia-rail__progreso" aria-hidden="true"></span>
@@ -189,12 +280,13 @@ const jsonLdFaq = {
 
     <section class="sg-indice" id="sg-indice" aria-labelledby="sg-indice-titulo">
       <div class="sg-ancho">
+        <p class="guia-kicker" data-reveal>En esta página</p>
         {datos.entrada.slice(1).map((b: { html: string }) => <p class="sg-presentacion" data-reveal set:html={b.html} />)}
         <h2 id="sg-indice-titulo" class="sr-only">En esta página</h2>
-        <ol class="sg-indice__lista">
+        <ol class:list={["sg-indice__lista", { "sg-indice__lista--tercios": contenido.length % 4 === 1 }]}>
           {contenido.map((s, i) => (
             <li data-reveal style={`transition-delay:${(i % 4) * 90}ms`}>
-              <a href={`#${s.id}`}>
+              <a class="sg-indice__enlace" href={`#${s.id}`}>
                 <span class="sg-indice__num" aria-hidden="true">{String(i + 1).padStart(2, "0")}</span>
                 <span class="sg-indice__titulo">{s.titulo}</span>
                 <span class="sg-indice__ir" aria-hidden="true">↓</span>
@@ -313,7 +405,7 @@ const jsonLdFaq = {
                   <span class="sg-etapa__periodo">{e.periodo}</span>
                   {e.titulo && <h3>{e.titulo.charAt(0).toUpperCase() + e.titulo.slice(1)}</h3>}
                   {sub.bloques.map((b) =>
-                    b.tipo === "parrafo" ? <p set:html={b.html} /> : b.tipo === "lista" ? <ul class="sg-lista sg-lista--etapa">{b.items.map((item) => <li><strong set:html={item.etiqueta} /> <Fragment set:html={item.html} /></li>)}</ul> : b.tipo === "hito" ? <h4 class="sg-hito">{b.titulo}</h4> : b.tipo === "cita" ? <CitaTextual citas={b.citas} fuente={b.fuente} imagen={b.imagen} /> : null
+                    b.tipo === "parrafo" ? <p set:html={b.html} /> : b.tipo === "lista" ? <ul class="sg-lista sg-lista--etapa">{b.items.map((item) => <li><strong set:html={item.etiqueta} /> <Fragment set:html={item.html} /></li>)}</ul> : b.tipo === "hito" ? <h4 class="sg-hito">{b.titulo}</h4> : b.tipo === "cita" ? <CitaTextual citas={b.citas} fuente={b.fuente} imagen={b.imagen} /> : b.tipo === "destacado" ? <p class="sg-destacado" set:html={b.html} /> : null
                   )}
                 </li>
               );
@@ -449,6 +541,34 @@ const jsonLdFaq = {
       </div>
     </section>
 
+    <section class="sg-columna ad-biblio-wrap" aria-labelledby="sg-fuentes-titulo">
+      <details class="ad-biblio" id="fuentes">
+        <summary>
+          <span>
+            <h2 id="sg-fuentes-titulo">Fuentes y documentación</h2>
+            <span class="ad-biblio__cuenta">{numeradas.size} referencias · Revisado el {revisado}</span>
+          </span>
+          <span class="sg-faq__signo" aria-hidden="true"></span>
+        </summary>
+        <div class="ad-biblio__cuerpo">
+          <p>Los números del texto remiten a esta bibliografía: cada fuente se lista una sola vez, por más veces que se cite, y el enlace se abre en una pestaña nueva. Las publicaciones de la organización muestran su postura en cada fecha; los estudios, informes y sentencias se citan con su ámbito y sus límites.</p>
+          <ol class="ad-biblio__lista">
+            {[...numeradas.values()].map((r) => (
+              <li id={`fn-${r.n}`}>
+                <span class="ad-biblio__num" aria-hidden="true">{r.n}</span>
+                <span class="ad-biblio__entrada">
+                  <a href={r.url} target="_blank" rel="noopener noreferrer">{r.titulo}</a>
+                  {r.nota && <span class="ad-biblio__nota"> — {r.nota}</span>}
+                </span>
+                <a class="ad-biblio__volver" href={`#ref-${r.n}`} aria-label={`Volver al punto del texto que cita la fuente ${r.n}`}>↩</a>
+              </li>
+            ))}
+          </ol>
+          <p class="ad-fuentes__fecha">Esta página no sustituye el consejo médico ni jurídico. Los enlaces externos se abren en una pestaña nueva.</p>
+        </div>
+      </details>
+    </section>
+
     <section class="guia-cierre" id={mirada.id} aria-labelledby="sg-mirada-titulo">
       <div class="guia-cierre__inner">
         <p class="guia-kicker guia-kicker--crema" data-reveal>Nuestra perspectiva</p>
@@ -458,12 +578,9 @@ const jsonLdFaq = {
         </div>
 
         <p class="guia-kicker guia-kicker--crema sg-sigue" data-reveal>Sigue leyendo</p>
-        <div class="guia-recursos">
+        <div class:list={["guia-recursos", { "guia-recursos--ilustrados": sigueLeyendo.some((r) => miniaturaEnlaceRelacionado(r.href)) }]}>
           {sigueLeyendo.map((r) => (
-            <a class="guia-recurso" href={r.href} data-reveal>
-              <h3>{r.titulo}</h3>
-              <p>{r.descripcion}</p>
-            </a>
+            <TarjetaRelacionado {...r} />
           ))}
         </div>
 
@@ -485,6 +602,14 @@ const jsonLdFaq = {
   <script>
     import { initRail } from "../../scripts/rail";
     initRail(".guia-rail");
+
+    // Al pulsar un superíndice, despliega la bibliografía antes de saltar a la nota.
+    document.addEventListener("click", (ev) => {
+      const enlace = (ev.target as HTMLElement | null)?.closest?.("a");
+      if (!enlace || !enlace.getAttribute("href")?.startsWith("#fn-")) return;
+      const biblio = document.getElementById("fuentes");
+      if (biblio instanceof HTMLDetailsElement && !biblio.open) biblio.open = true;
+    });
 
     const quieto = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 

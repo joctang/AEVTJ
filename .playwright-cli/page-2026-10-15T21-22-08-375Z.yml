@@ -1,0 +1,415 @@
+- generic [active] [ref=f4e1]:
+  - link "Saltar al contenido" [ref=f4e2] [cursor=pointer]:
+    - /url: "#contenido"
+  - banner [ref=f4e3]:
+    - generic [ref=f4e4]:
+      - link [ref=f4e5] [cursor=pointer]:
+        - /url: /
+        - img "AEVTJ - Asociación Española de Víctimas de los Testigos de Jehová" [ref=f4e6]
+      - navigation "Menú principal" [ref=f4e7]:
+        - list [ref=f4e8]:
+          - listitem [ref=f4e9]:
+            - link "¿Quiénes somos?" [ref=f4e10] [cursor=pointer]:
+              - /url: /quienes-somos/
+          - listitem [ref=f4e11]:
+            - link "Noticias" [ref=f4e12] [cursor=pointer]:
+              - /url: /noticias/
+          - listitem [ref=f4e13]:
+            - link "Testigos de Jehová" [ref=f4e14] [cursor=pointer]:
+              - /url: /testigos-de-jehova/
+          - listitem [ref=f4e17]:
+            - link "Documentos" [ref=f4e18] [cursor=pointer]:
+              - /url: /recursos-de-ayuda/
+          - listitem [ref=f4e21]:
+            - link "Hazte socio / Donaciones" [ref=f4e22] [cursor=pointer]:
+              - /url: /hazte-socio/
+          - listitem [ref=f4e23]:
+            - link "Contacto" [ref=f4e24] [cursor=pointer]:
+              - /url: /contacto/
+      - generic [ref=f4e25]:
+        - link "Facebook" [ref=f4e26] [cursor=pointer]:
+          - /url: https://www.facebook.com/asoc.aevtj
+        - link "Youtube" [ref=f4e29] [cursor=pointer]:
+          - /url: https://www.youtube.com/@AEVTJ
+        - link "X" [ref=f4e32] [cursor=pointer]:
+          - /url: https://x.com/aevtj
+        - link "Instagram" [ref=f4e35] [cursor=pointer]:
+          - /url: https://www.instagram.com/asoc.aevtj/
+  - main [ref=f4e38]:
+    - navigation "Miga de pan" [ref=f4e39]:
+      - list [ref=f4e41]:
+        - listitem [ref=f4e42]:
+          - link "Inicio" [ref=f4e43] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=f4e44]:
+          - text: /
+          - link "Testigos de Jehová" [ref=f4e45] [cursor=pointer]:
+            - /url: /testigos-de-jehova/
+        - listitem [ref=f4e46]:
+          - text: /
+          - generic [ref=f4e47]: Vestimenta
+    - generic [ref=f4e48]:
+      - navigation "Secciones de la página":
+        - list:
+          - listitem:
+            - link "1. Respuesta breve":
+              - /url: "#respuesta"
+          - listitem:
+            - link "2. Por qué se arreglan":
+              - /url: "#principios"
+          - listitem:
+            - link "3. Barba":
+              - /url: "#barba"
+          - listitem:
+            - link "4. Falda y pantalones":
+              - /url: "#mujeres"
+          - listitem:
+            - link "5. Chaqueta y corbata":
+              - /url: "#hombres"
+          - listitem:
+            - link "6. Programa y Betel":
+              - /url: "#programa"
+          - listitem:
+            - link "7. Vida diaria":
+              - /url: "#vida-diaria"
+          - listitem:
+            - link "Preguntas frecuentes":
+              - /url: "#preguntas"
+          - listitem:
+            - link "La mirada de la AEVTJ":
+              - /url: "#mirada-aevtj"
+      - generic [ref=f4e49]:
+        - generic [ref=f4e51]:
+          - 'heading "Cómo se visten los Testigos de Jehová: reuniones, barba y cambios recientes" [level=1] [ref=f4e52]'
+          - paragraph [ref=f4e53]:
+            - text: Si has visto a los Testigos de Jehová acudir a una reunión con ropa formal, quizá te preguntes si existe una regla para cada prenda. La organización pide que quienes participan en sus actividades religiosas vistan de forma limpia, modesta y apropiada. También reconoce margen para elegir.
+            - strong [ref=f4e54]: No hay un uniforme único
+            - text: ", y las indicaciones sobre reuniones y predicación no describen toda su vida cotidiana."
+          - generic [ref=f4e55]:
+            - link "Ver la respuesta ↗" [ref=f4e56] [cursor=pointer]:
+              - /url: "#respuesta"
+            - link "Busco apoyo ↗" [ref=f4e57] [cursor=pointer]:
+              - /url: "#mirada-aevtj"
+        - generic [ref=f4e58]:
+          - list "Sobre esta página" [ref=f4e59]:
+            - listitem [ref=f4e60]:
+              - strong [ref=f4e61]: "6"
+              - text: min de lectura
+            - listitem [ref=f4e62]: Revisado el 15 de octubre de 2026
+          - link "Ver los temas" [ref=f4e63] [cursor=pointer]:
+            - /url: "#ad-indice"
+            - text: Ver los temas
+            - generic [aria-hidden] [ref=f4e64]: ↓
+      - region [ref=f4e65]:
+        - generic [ref=f4e66]:
+          - paragraph [ref=f4e67]: "Dos anuncios cambiaron una imagen muy conocida: en diciembre de 2023, el Cuerpo Gobernante aclaró que llevar barba no está condenado por la Biblia; en marzo de 2024 comunicó que las mujeres pueden llevar pantalones de vestir y los hombres pueden prescindir de chaqueta o corbata en determinadas actividades. Para quien participa en el programa de una reunión o visita Betel, el mismo anuncio conserva condiciones ligadas a la costumbre local."
+          - heading "En esta página" [level=2] [ref=f4e68]
+          - list [ref=f4e69]:
+            - listitem [ref=f4e70]:
+              - 'link "La respuesta breve: ¿cómo deben vestir?" [ref=f4e71] [cursor=pointer]':
+                - /url: "#respuesta"
+                - generic [aria-hidden] [ref=f4e72]: "01"
+                - generic [aria-hidden] [ref=f4e74]: ↓
+            - listitem [ref=f4e75]:
+              - link "¿Por qué van arreglados a las reuniones?" [ref=f4e76] [cursor=pointer]:
+                - /url: "#principios"
+                - generic [aria-hidden] [ref=f4e77]: "02"
+                - generic [aria-hidden] [ref=f4e79]: ↓
+            - listitem [ref=f4e80]:
+              - link "¿Pueden llevar barba? Qué cambió en 2023" [ref=f4e81] [cursor=pointer]:
+                - /url: "#barba"
+                - generic [aria-hidden] [ref=f4e82]: "03"
+                - generic [aria-hidden] [ref=f4e84]: ↓
+            - listitem [ref=f4e85]:
+              - link "¿Las mujeres tienen que llevar falda?" [ref=f4e86] [cursor=pointer]:
+                - /url: "#mujeres"
+                - generic [aria-hidden] [ref=f4e87]: "04"
+                - generic [aria-hidden] [ref=f4e89]: ↓
+            - listitem [ref=f4e90]:
+              - link "¿Los hombres necesitan traje y corbata?" [ref=f4e91] [cursor=pointer]:
+                - /url: "#hombres"
+                - generic [aria-hidden] [ref=f4e92]: "05"
+                - generic [aria-hidden] [ref=f4e94]: ↓
+            - listitem [ref=f4e95]:
+              - link "¿Qué cambia al participar en el programa o visitar Betel?" [ref=f4e96] [cursor=pointer]:
+                - /url: "#programa"
+                - generic [aria-hidden] [ref=f4e97]: "06"
+                - generic [aria-hidden] [ref=f4e99]: ↓
+            - listitem [ref=f4e100]:
+              - link "¿Y en la vida diaria o en otros países?" [ref=f4e101] [cursor=pointer]:
+                - /url: "#vida-diaria"
+                - generic [aria-hidden] [ref=f4e102]: "07"
+                - generic [aria-hidden] [ref=f4e104]: ↓
+      - region [ref=f4e105]:
+        - generic [ref=f4e106]:
+          - generic [ref=f4e108]: "1"
+          - 'heading "La respuesta breve: ¿cómo deben vestir?" [level=2] [ref=f4e109]'
+        - paragraph [ref=f4e110]:
+          - text: Depende de
+          - strong [ref=f4e111]: la actividad
+          - text: ", de"
+          - strong [ref=f4e112]: si la persona interviene en el programa
+          - text: y, en algunos casos, de
+          - strong [ref=f4e113]: la costumbre del lugar
+          - text: . Esta es la orientación que la organización comunica hoy para el ministerio, las reuniones y las asambleas; no es una descripción de cómo viste cada persona en su trabajo o en casa.
+        - table [ref=f4e115]:
+          - rowgroup [ref=f4e116]:
+            - row [ref=f4e117]:
+              - columnheader "Situación" [ref=f4e118]
+              - columnheader "Orientación publicada" [ref=f4e119]
+              - columnheader "Matiz importante" [ref=f4e120]
+          - rowgroup [ref=f4e121]:
+            - row [ref=f4e122]:
+              - rowheader "Reuniones" [ref=f4e123]
+              - cell "Ropa limpia, modesta y apropiada." [ref=f4e124]
+              - cell "La explicación oficial deja espacio para elegir y dice que no hace falta ropa cara." [ref=f4e125]
+            - row [ref=f4e126]:
+              - rowheader "Barba" [ref=f4e127]
+              - cell "Un hombre puede llevarla." [ref=f4e128]
+              - cell "El informe de 2023 pide no juzgar a quien la lleve." [ref=f4e129]
+            - row [ref=f4e130]:
+              - rowheader "Pantalones de mujer" [ref=f4e131]
+              - cell "Pantalones de vestir en el ministerio y al asistir a reuniones y asambleas." [ref=f4e132]
+              - cell "Al participar en el programa, falda o vestido si esa es la costumbre local." [ref=f4e133]
+            - row [ref=f4e134]:
+              - rowheader "Chaqueta y corbata de hombre" [ref=f4e135]
+              - cell "Puede decidir si las lleva en el ministerio y al asistir a reuniones y asambleas." [ref=f4e136]
+              - cell "Al participar en el programa, ambas prendas si esa es la costumbre local." [ref=f4e137]
+            - row [ref=f4e138]:
+              - rowheader "Visita a Betel" [ref=f4e139]
+              - cell "El anuncio de 2024 contempla chaqueta y corbata para hombres y falda o vestido para mujeres." [ref=f4e140]
+              - cell "Lo condiciona a que sea la costumbre del lugar donde viven." [ref=f4e141]
+      - region [ref=f4e142]:
+        - generic [ref=f4e143]:
+          - generic [ref=f4e145]: "2"
+          - heading "¿Por qué van arreglados a las reuniones?" [level=2] [ref=f4e146]
+        - paragraph [ref=f4e147]:
+          - text: La
+          - link "explicación de los Testigos de Jehová" [ref=f4e148] [cursor=pointer]:
+            - /url: https://www.jw.org/es/biblioteca/folletos/voluntad-de-Jehov%C3%A1/indumentaria-y-arreglo-personal/
+          - text: parte del respeto a Dios, a las personas que asisten y al lugar donde se reúnen. También invoca los principios bíblicos de modestia y buen juicio. Según esa explicación, la ropa no debería llamar la atención por ser excesivamente lujosa, reveladora o descuidada.
+        - paragraph [ref=f4e149]:
+          - text: La misma publicación afirma que
+          - strong [ref=f4e150]: hay espacio para la elección personal
+          - text: dentro de esos principios y que no hace falta vestir con ropa costosa para acudir a un Salón del Reino. Son criterios de su propia organización, no una lista exhaustiva de prendas autorizadas o prohibidas.
+        - paragraph [ref=f4e151]: Ir arreglado es una expectativa para sus actividades religiosas. No convierte la ropa de todos los Testigos, en todos los momentos, en un uniforme.
+      - region [ref=f4e152]:
+        - generic [ref=f4e153]:
+          - generic [ref=f4e155]: "3"
+          - heading "¿Pueden llevar barba? Qué cambió en 2023" [level=2] [ref=f4e156]
+        - paragraph [ref=f4e157]:
+          - strong [ref=f4e158]: Sí.
+          - text: En el
+          - link "Informe 8 del Cuerpo Gobernante, del 15 de diciembre de 2023" [ref=f4e159] [cursor=pointer]:
+            - /url: https://www.jw.org/es/noticias/region/internacionales/2023-Informe-8-del-Cuerpo-Gobernante/
+          - text: ", la organización explicó que la Biblia no condena la barba y pidió que no se juzgara a un hombre por decidir llevarla. El anuncio puede consultarse también en su"
+          - link "transcripción en español" [ref=f4e160] [cursor=pointer]:
+            - /url: https://cfp2.jw-cdn.org/a/c36773/1/o/702023024_S_cnt_1.vtt
+          - text: .
+        - paragraph [ref=f4e161]: El informe repasa imágenes y costumbres de distintas épocas para explicar por qué durante años fue habitual ver a sus representantes afeitados. Esa explicación histórica procede de la propia organización. No permite afirmar que hubiera una regla idéntica, aplicada de igual modo, en todos los países y congregaciones.
+        - paragraph [ref=f4e162]: Por eso, la pregunta «¿por qué los Testigos de Jehová no usan barba?» parte hoy de una premisa desactualizada. Una persona puede llevarla; otra puede preferir afeitarse. La orientación publicada sigue hablando de arreglo personal, pero ya no presenta la ausencia de barba como requisito general.
+      - region [ref=f4e163]:
+        - generic [ref=f4e164]:
+          - generic [ref=f4e166]: "4"
+          - heading "¿Las mujeres tienen que llevar falda?" [level=2] [ref=f4e167]
+        - paragraph [ref=f4e168]:
+          - strong [ref=f4e169]: No para asistir a todas las actividades.
+          - text: El
+          - link "Informe 2 del Cuerpo Gobernante, del 15 de marzo de 2024" [ref=f4e170] [cursor=pointer]:
+            - /url: https://www.jw.org/es/noticias/region/internacionales/2024-Informe-2-del-Cuerpo-Gobernante/
+          - text: anunció que las mujeres pueden llevar
+          - strong [ref=f4e171]: pantalones de vestir
+          - text: al participar en el ministerio y al asistir a reuniones y asambleas de circuito o regionales. Pidió que fueran prendas dignas, modestas y apropiadas, no informales.
+        - paragraph [ref=f4e172]:
+          - text: El mismo anuncio distingue entre asistir y participar en el programa. Si una mujer interviene en él, debe llevar falda o vestido
+          - strong [ref=f4e173]: cuando esa sea la costumbre del lugar donde vive
+          - text: . También puede elegir falda o vestido aunque no intervenga. La
+          - link "transcripción oficial" [ref=f4e174] [cursor=pointer]:
+            - /url: https://cfp2.jw-cdn.org/a/abd9084/2/o/1112024005_S_cnt_1.vtt
+          - text: permite leer exactamente a qué situaciones se refiere.
+        - paragraph [ref=f4e175]: Así, ni «siempre tienen que llevar falda» ni «ahora cualquier prenda vale para cualquier función» resume bien la orientación de 2024. El comunicado tampoco establece una longitud universal para las faldas.
+      - region [ref=f4e176]:
+        - generic [ref=f4e177]:
+          - generic [ref=f4e179]: "5"
+          - heading "¿Los hombres necesitan traje y corbata?" [level=2] [ref=f4e180]
+        - paragraph [ref=f4e181]:
+          - strong [ref=f4e182]: No siempre.
+          - text: Desde el anuncio de marzo de 2024, los hombres pueden decidir si llevan chaqueta o corbata en el ministerio y al asistir a reuniones y asambleas. Si no las llevan, la organización sigue pidiendo una apariencia apropiada, modesta y digna, no informal.
+        - paragraph [ref=f4e183]:
+          - text: Si participan en el programa, deben llevar chaqueta
+          - strong [ref=f4e184]: "y"
+          - text: corbata cuando esa sea la costumbre local. Pueden elegir esas prendas aunque no participen. El informe no dice que el traje sea obligatorio para todo asistente ni que haya dejado de importar cómo se viste quien representa a la congregación.
+      - region [ref=f4e185]:
+        - generic [ref=f4e186]:
+          - generic [ref=f4e188]: "6"
+          - heading "¿Qué cambia al participar en el programa o visitar Betel?" [level=2] [ref=f4e189]
+        - paragraph [ref=f4e190]:
+          - text: El anuncio de 2024 traza una diferencia concreta entre
+          - strong [ref=f4e191]: asistir
+          - text: "y"
+          - strong [ref=f4e192]: tomar parte en el programa
+          - text: de reuniones y asambleas. Para esta última función, menciona falda o vestido en mujeres y chaqueta y corbata en hombres cuando sea la costumbre del lugar.
+        - paragraph [ref=f4e193]: "También añade una orientación para las visitas a Betel: en los lugares donde sea la costumbre, considera apropiado que los hombres lleven chaqueta y corbata, y las mujeres falda o vestido. Estas condiciones aparecen en el anuncio completo y no deben perderse al resumir los cambios de 2024."
+      - region [ref=f4e194]:
+        - generic [ref=f4e195]:
+          - generic [ref=f4e197]: "7"
+          - heading "¿Y en la vida diaria o en otros países?" [level=2] [ref=f4e198]
+        - paragraph [ref=f4e199]:
+          - text: Las fuentes citadas hablan de reuniones, asambleas, ministerio y visitas a Betel.
+          - strong [ref=f4e200]: No fijan un código universal para la ropa del trabajo, de casa o del tiempo libre.
+          - text: Por eso, ver a una persona Testigo en una reunión no permite deducir cómo se viste en todos los demás ámbitos.
+        - paragraph [ref=f4e201]: La organización menciona la costumbre local para determinadas funciones. Eso permite afirmar que el contexto importa, pero no describir una práctica idéntica para cada país o congregación sin datos adicionales. Del mismo modo, las publicaciones oficiales informan de la orientación comunicada; no prueban por sí solas cómo se vivió antes o después en cada familia.
+      - region [ref=f4e202]:
+        - generic [ref=f4e203]:
+          - paragraph [ref=f4e204]: Dudas habituales
+          - heading "Preguntas frecuentes" [level=2] [ref=f4e205]
+          - generic [ref=f4e206]:
+            - group [ref=f4e207]:
+              - heading "¿Los Testigos de Jehová tienen prohibida la barba?" [level=3] [ref=f4e209] [cursor=pointer]
+            - group [ref=f4e211]:
+              - heading "¿Una mujer puede ir a una reunión con pantalones?" [level=3] [ref=f4e213] [cursor=pointer]
+            - group [ref=f4e215]:
+              - heading "¿Un hombre puede acudir sin corbata?" [level=3] [ref=f4e217] [cursor=pointer]
+            - group [ref=f4e219]:
+              - heading "¿Se exige ropa cara o un uniforme?" [level=3] [ref=f4e221] [cursor=pointer]
+            - group [ref=f4e223]:
+              - heading "¿Las orientaciones de 2024 se aplican a toda la ropa diaria?" [level=3] [ref=f4e225] [cursor=pointer]
+      - region [ref=f4e227]:
+        - generic [ref=f4e228]:
+          - paragraph [ref=f4e229]: La mirada de la AEVTJ
+          - heading "Mirar a la persona, no solo a su ropa" [level=2] [ref=f4e230]
+          - generic [ref=f4e231]:
+            - paragraph [ref=f4e232]: La apariencia puede hacer visible una costumbre religiosa, pero no cuenta la experiencia completa de quien la lleva. Algunas personas viven esas decisiones con naturalidad; otras pueden tener recuerdos distintos. Para hablar de experiencias concretas necesitamos testimonios identificables, no suponerlas a partir de la ropa.
+            - paragraph [ref=f4e233]:
+              - text: En la AEVTJ queremos ofrecer información precisa para quien intenta entender las enseñanzas de los Testigos de Jehová o revisar su propia historia. Si necesitas hablar de lo que viviste, puedes
+              - link "contactar con la asociación" [ref=f4e234] [cursor=pointer]:
+                - /url: /contacto/
+              - text: .
+          - paragraph [ref=f4e235]: Sigue leyendo
+          - generic [ref=f4e236]:
+            - link [ref=f4e237] [cursor=pointer]:
+              - /url: /testigos-de-jehova/normas/
+              - heading "Normas y vida cotidiana" [level=3] [ref=f4e238]
+              - paragraph [ref=f4e239]: Qué orientaciones influyen en distintas decisiones diarias.
+              - text: ↗
+            - link [ref=f4e240] [cursor=pointer]:
+              - /url: /testigos-de-jehova/cumpleanos/
+              - heading "Cumpleaños" [level=3] [ref=f4e241]
+              - paragraph [ref=f4e242]: Por qué no los celebran y cómo explican esa postura.
+              - text: ↗
+            - link [ref=f4e243] [cursor=pointer]:
+              - /url: /guia-para-salir-de-los-testigos-de-jehova/
+              - heading "Guía para salir" [level=3] [ref=f4e244]
+              - paragraph [ref=f4e245]: Información y apoyo si estás pensando en dejar la organización.
+              - text: ↗
+          - generic [ref=f4e246]:
+            - link "Contacta con la asociación ↗" [ref=f4e247] [cursor=pointer]:
+              - /url: /contacto/
+            - link "Recursos de ayuda ↗" [ref=f4e248] [cursor=pointer]:
+              - /url: /recursos-de-ayuda/
+      - region [ref=f4e249]:
+        - heading "Fuentes y alcance" [level=2] [ref=f4e250]
+        - list [ref=f4e251]:
+          - listitem [ref=f4e252]:
+            - link [ref=f4e253] [cursor=pointer]:
+              - /url: https://www.jw.org/es/biblioteca/folletos/voluntad-de-Jehov%C3%A1/indumentaria-y-arreglo-personal/
+              - strong [ref=f4e254]: ¿Por qué vamos tan bien arreglados a las reuniones?
+            - text: Explicación institucional sobre respeto, modestia, elección personal y coste de la ropa.
+          - listitem [ref=f4e255]:
+            - link [ref=f4e256] [cursor=pointer]:
+              - /url: https://www.jw.org/es/noticias/region/internacionales/2023-Informe-8-del-Cuerpo-Gobernante/
+              - strong [ref=f4e257]: Informe 8 del Cuerpo Gobernante de 2023
+            - text: "y"
+            - link "transcripción oficial" [ref=f4e258] [cursor=pointer]:
+              - /url: https://cfp2.jw-cdn.org/a/c36773/1/o/702023024_S_cnt_1.vtt
+            - text: . Anuncio sobre la barba del 15 de diciembre de 2023.
+          - listitem [ref=f4e259]:
+            - link [ref=f4e260] [cursor=pointer]:
+              - /url: https://www.jw.org/es/noticias/region/internacionales/2024-Informe-2-del-Cuerpo-Gobernante/
+              - strong [ref=f4e261]: Informe 2 del Cuerpo Gobernante de 2024
+            - text: "y"
+            - link "transcripción oficial" [ref=f4e262] [cursor=pointer]:
+              - /url: https://cfp2.jw-cdn.org/a/abd9084/2/o/1112024005_S_cnt_1.vtt
+            - text: . Anuncio sobre indumentaria del 15 de marzo de 2024, incluido el detalle sobre quienes participan en el programa y quienes visitan Betel.
+        - paragraph [ref=f4e263]:
+          - text: Estas fuentes muestran la
+          - strong [ref=f4e264]: posición institucional publicada
+          - text: . No establecen que toda congregación o toda persona la haya aplicado de la misma manera. No se incluyen aquí experiencias individuales no verificadas ni una historia completa de las prácticas anteriores.
+        - paragraph [ref=f4e265]: Revisado el 15 de octubre de 2026. Los enlaces externos se abren en una pestaña nueva.
+  - contentinfo [ref=f4e266]:
+    - generic [ref=f4e267]:
+      - generic [ref=f4e268]:
+        - generic [ref=f4e269]:
+          - img "AEVTJ" [ref=f4e270]
+          - paragraph [ref=f4e271]: Asociación Española de Víctimas de los Testigos de Jehová y la JW.ORG. Estamos aquí para escucharte, ayudarte a recuperar tu vida y darte el apoyo que necesitas para dejar atrás la organización.
+          - generic [ref=f4e272]:
+            - link "Facebook" [ref=f4e273] [cursor=pointer]:
+              - /url: https://www.facebook.com/asoc.aevtj
+            - link "Youtube" [ref=f4e276] [cursor=pointer]:
+              - /url: https://www.youtube.com/@AEVTJ
+            - link "X" [ref=f4e279] [cursor=pointer]:
+              - /url: https://x.com/aevtj
+            - link "Instagram" [ref=f4e282] [cursor=pointer]:
+              - /url: https://www.instagram.com/asoc.aevtj/
+        - navigation "Menú de pie de página" [ref=f4e285]:
+          - heading "Explora" [level=2] [ref=f4e286]
+          - list [ref=f4e287]:
+            - listitem [ref=f4e288]:
+              - link "Testigos de Jehová" [ref=f4e289] [cursor=pointer]:
+                - /url: /testigos-de-jehova/
+            - listitem [ref=f4e290]:
+              - link "Transfusiones de sangre" [ref=f4e291] [cursor=pointer]:
+                - /url: /testigos-de-jehova/sangre/
+            - listitem [ref=f4e292]:
+              - link "Guía para salir" [ref=f4e293] [cursor=pointer]:
+                - /url: /guia-para-salir-de-los-testigos-de-jehova/
+            - listitem [ref=f4e294]:
+              - link "Otras asociaciones" [ref=f4e295] [cursor=pointer]:
+                - /url: /otras-asociaciones/
+            - listitem [ref=f4e296]:
+              - link "Ex testigos en las redes" [ref=f4e297] [cursor=pointer]:
+                - /url: /victimas/
+            - listitem [ref=f4e298]:
+              - link "Contacto" [ref=f4e299] [cursor=pointer]:
+                - /url: /contacto/
+        - generic [ref=f4e300]:
+          - heading "Boletín de noticias" [level=2] [ref=f4e301]
+          - paragraph [ref=f4e302]: Recibe nuestro boletín de noticias mensual de forma totalmente gratuita y mantente informado.
+          - generic [ref=f4e303]:
+            - textbox "Tu correo electrónico" [ref=f4e304]
+            - generic [ref=f4e305]:
+              - checkbox "Quiero recibir la newsletter y acepto el tratamiento de mi email para ese fin." [ref=f4e306]
+              - generic [ref=f4e307]: Quiero recibir la newsletter y acepto el tratamiento de mi email para ese fin.
+            - paragraph [ref=f4e308]:
+              - text: La suscripción se gestionará mediante Mailchimp. Tratamos tus datos según nuestra
+              - link "Política de Privacidad" [ref=f4e309] [cursor=pointer]:
+                - /url: /politica-de-privacidad/
+              - text: .
+            - button "Suscribirme" [ref=f4e310] [cursor=pointer]
+            - status
+      - generic [ref=f4e311]:
+        - paragraph [ref=f4e312]: © 2026 Asociación Española de Victimas de los Testigos de Jehová
+        - list [ref=f4e313]:
+          - listitem [ref=f4e314]:
+            - link "Aviso Legal" [ref=f4e315] [cursor=pointer]:
+              - /url: /aviso-legal/
+          - listitem [ref=f4e316]:
+            - link "Política de Cookies" [ref=f4e317] [cursor=pointer]:
+              - /url: /politica-de-cookies/
+          - listitem [ref=f4e318]:
+            - link "Política de privacidad" [ref=f4e319] [cursor=pointer]:
+              - /url: /politica-de-privacidad/
+          - listitem [ref=f4e320]:
+            - link "Transparencia" [ref=f4e321] [cursor=pointer]:
+              - /url: /quienes-somos/#transparencia
+  - generic [ref=f4e323]:
+    - paragraph [ref=f4e324]:
+      - text: Utilizamos tecnologías necesarias para que la web funcione y, si lo aceptas, herramientas de analítica y vídeos incrustados de plataformas externas. No usamos publicidad personalizada. Consulta la
+      - link "Política de cookies" [ref=f4e325] [cursor=pointer]:
+        - /url: /politica-de-cookies/
+      - text: para más información.
+    - generic [ref=f4e326]:
+      - button "Denegar" [ref=f4e327] [cursor=pointer]
+      - button "Aceptar" [ref=f4e328] [cursor=pointer]
+      - link "Ver preferencias" [ref=f4e329] [cursor=pointer]:
+        - /url: /politica-de-cookies/

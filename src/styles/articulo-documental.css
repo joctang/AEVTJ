@@ -8,6 +8,38 @@
     radial-gradient(ellipse at 66% 92%, #d8eaa426, transparent 45%),
     radial-gradient(ellipse at 8% 100%, #2ea88f26, transparent 55%);
 }
+
+/* La foto de ediciones de la TNM llena el hero; el degradado reserva contraste al titular. */
+.ad-hero--biblia .guia-hero__img {
+  inset: 0; width: 100%; object-position: center 47%; opacity: .78;
+  mask-image: none; -webkit-mask-image: none;
+}
+.ad-hero--biblia .guia-hero__scrim {
+  background:
+    linear-gradient(90deg, #0f2537f2 0%, #0f2537df 37%, #0f25377a 68%, #0f253726 100%),
+    linear-gradient(0deg, #0f2537 0%, transparent 45%);
+}
+
+/* Russell queda a la derecha; el fondo extendido reserva aire para el titular. */
+.ad-hero--fundador .guia-hero__img {
+  inset: 0; width: 100%; object-position: center; opacity: .94;
+  mask-image: none; -webkit-mask-image: none;
+}
+.ad-hero--fundador .guia-hero__scrim {
+  background:
+    linear-gradient(90deg, #0f2537d9 0%, #0f2537a6 34%, #0f253733 63%, transparent 82%),
+    linear-gradient(0deg, #0f2537 0%, transparent 38%);
+}
+/* Foto de asamblea a sangre; el degradado oscuro deja leer el titular a la izquierda. */
+.ad-hero--vestimenta .guia-hero__img {
+  inset: 0; width: 100%; object-position: center 40%; opacity: .72;
+  mask-image: none; -webkit-mask-image: none;
+}
+.ad-hero--vestimenta .guia-hero__scrim {
+  background:
+    linear-gradient(90deg, #0f2537f2 0%, #0f2537d9 38%, #0f25378c 70%, #0f253740 100%),
+    linear-gradient(0deg, #0f2537 0%, transparent 40%);
+}
 .ad-credito a { color: #dce4ce; text-decoration: underline; text-underline-offset: 3px; }
 .ad-credito a:hover { color: #2ea88f; }
 
@@ -15,12 +47,48 @@
 .ad-tarjetas--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .ad-tarjetas .sg-verso__num { display: block; margin-bottom: 18px; font-size: 11px; font-weight: 600; letter-spacing: .14em; color: #2ea88f; }
 
+/* Índice: lista numerada en dos columnas con filetes, sin una tarjeta por tema. */
+.ad-indice-acordeon .sg-indice__lista { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 clamp(32px, 5vw, 72px); border-top: 1px solid #dce3cd; }
+.ad-indice-acordeon .sg-indice__lista a {
+  display: grid; grid-template-columns: 2.6rem 1fr auto; grid-template-rows: none; align-items: baseline; gap: 0;
+  min-height: 0; height: auto; padding: 15px 4px; border-radius: 0; background: none; border: 0; border-bottom: 1px solid #dce3cd; box-shadow: none;
+  font-size: clamp(16px, 1.3vw, 18px);
+}
+.ad-indice-acordeon .sg-indice__num { font-family: var(--font-body); font-size: 11px; font-weight: 600; letter-spacing: .14em; color: #1f7a63; }
+.ad-indice-acordeon .sg-indice__ir { width: auto; height: auto; border: 0; border-radius: 0; background: none; font-size: 14px; color: #1f7a63; }
+@media (hover:hover) and (pointer:fine) {
+  .ad-indice-acordeon .sg-indice__lista a:hover { background: none; color: #1f7a63; border-color: #dce3cd; transform: none; box-shadow: none; }
+  .ad-indice-acordeon .sg-indice__lista a:hover .sg-indice__num { color: #1f7a63; }
+  .ad-indice-acordeon .sg-indice__lista a:hover .sg-indice__ir { background: none; border: 0; color: #1f7a63; translate: 0 3px; }
+}
+
+/* Índice agrupado (fundador): rótulo de bloque a ancho completo entre las filas del acordeón. */
+.ad-indice__grupo {
+  grid-column: 1 / -1; padding: 18px 4px 4px;
+  font-family: var(--font-body); font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
+  color: #7c8a72;
+}
+.ad-indice__grupo:first-child { padding-top: 8px; }
+
+/* Índice largo: plegado en acordeón, abierto solo si se pide. */
+.ad-indice-acordeon { margin-top: clamp(24px, 3vw, 36px); border-radius: 24px; background: #fbfdf5; border: 1px solid #dce3cd; }
+.ad-indice-acordeon summary { display: flex; align-items: center; justify-content: space-between; gap: 18px; min-height: 64px; padding: 16px 24px; cursor: pointer; list-style: none; font-family: var(--font-heading); font-size: clamp(1.05rem, 1.7vw, 1.25rem); letter-spacing: -.02em; color: #122c33; }
+.ad-indice-acordeon summary::-webkit-details-marker { display: none; }
+.ad-indice-acordeon[open] .sg-faq__signo::after { rotate: 0deg; }
+.ad-indice-acordeon .sg-indice__lista { margin: 0; padding: 0 24px 12px; border-top: 0; }
+@media (hover:hover) and (pointer:fine) { .ad-indice-acordeon summary:hover .sg-faq__signo { background: #1f7a63; } }
+@media (max-width: 767px) { .ad-indice-acordeon summary { padding: 14px 18px; } .ad-indice-acordeon .sg-indice__lista { padding: 0 18px 8px; } }
+
 /* Hueco de ilustración pendiente dentro de la apertura de sección. */
 .sg-apertura__img:has(.sg-hueco) { aspect-ratio: 3 / 2; border-radius: 32px; overflow: hidden; border: 1px dashed #122c3340; }
 @media (max-width: 899px) { .sg-apertura__img:has(.sg-hueco) { position: relative; } }
 
 /* Listas de claves (fechas, teorías…). */
 .ad-claves li::before { background: #2ea88f; }
+.ad-lista-simple { width: min(760px, calc(100% - 64px)); margin-inline: auto; }
+.ad-lista-simple li { padding-left: 30px; }
+.ad-lista-simple li::before { width: 9px; height: 9px; background: #1f7a63; box-shadow: 0 0 0 4px #1f7a6314; }
+.ad-lista-simple strong { color: #122c33; font-weight: 600; }
 
 /* Testimonio: ficha clara con filete teal, separada del texto de la AEVTJ. */
 .ad-caso {
@@ -49,5 +117,100 @@
 .ad-fuentes__fecha { padding-top: 14px; border-top: 1px solid #dce3cd; font-size: 13px !important; color: #7c8a72 !important; }
 
 @media (max-width: 767px) {
-  .ad-tarjetas--4, .ad-mirada__texto { grid-template-columns: 1fr; }
+  .ad-tarjetas--4, .ad-mirada__texto, .ad-indice-acordeon .sg-indice__lista { grid-template-columns: 1fr; }
+  .ad-indice-acordeon .sg-indice__lista a { padding: 13px 2px; }
+  .ad-hero--biblia .guia-hero__img {
+    inset: 0 0 auto; width: 100%; height: 58%; object-position: center 45%; opacity: .68;
+    mask-image: linear-gradient(180deg, #000 0%, #0009 66%, transparent 100%);
+    -webkit-mask-image: linear-gradient(180deg, #000 0%, #0009 66%, transparent 100%);
+  }
+  .ad-hero--biblia .guia-hero__scrim {
+    background: linear-gradient(180deg, #0f253733 0%, #0f2537b8 38%, #0f2537 70%);
+  }
+  .ad-hero--vestimenta .guia-hero__img {
+    object-position: 50% center; opacity: .5;
+    mask-image: none; -webkit-mask-image: none;
+  }
+  .ad-hero--vestimenta .guia-hero__scrim {
+    background: linear-gradient(180deg, #0f253766 0%, #0f2537b8 35%, #0f2537 72%);
+  }
+  .ad-hero--fundador .guia-hero__img {
+    object-position: 78% center; opacity: .7;
+    mask-image: none; -webkit-mask-image: none;
+  }
+  .ad-hero--fundador .guia-hero__scrim {
+    background: linear-gradient(180deg, #0f253733 0%, #0f253755 30%, #0f2537ed 74%, #0f2537 100%);
+  }
 }
+
+/* Tablas documentales: jerarquía clara, en línea con Sangre; la primera fila destacada es solo de Biblia. */
+.ad-tabla { margin-top: 28px; }
+.ad .ad-tabla {
+  padding: 8px; overflow: hidden; border-color: #dce3cd; border-radius: 28px;
+  background: #fbfdf5; box-shadow: 0 18px 45px #0f25371a;
+}
+.ad .ad-tabla .sg-tabla caption {
+  padding: 22px 22px 18px; font-size: clamp(1.3rem, 2.2vw, 1.7rem);
+}
+.ad .ad-tabla .sg-tabla thead { background: #eef6d9; }
+.ad .ad-tabla .sg-tabla thead th {
+  padding: 13px 18px; border: 0; color: #1f7a63;
+}
+.ad .ad-tabla .sg-tabla tbody th,
+.ad .ad-tabla .sg-tabla td { padding: 17px 18px; }
+.ad .ad-tabla .sg-tabla tbody th { width: 28%; font-weight: 500; }
+.ad .ad-tabla .sg-tabla td:last-child { font-weight: 400; color: #435043; }
+.ad .ad-tabla .sg-tabla tbody tr:nth-child(even) { background: #f5f8e9; }
+.ad--biblia .ad-tabla .sg-tabla tbody tr:first-child { background: #e7f0d2; }
+.ad--biblia .ad-tabla .sg-tabla tbody tr:first-child th::before {
+  content: ''; display: inline-block; width: 7px; height: 7px; margin-right: 10px;
+  border-radius: 50%; background: #1f7a63; vertical-align: middle;
+}
+@media (hover:hover) and (pointer:fine) {
+  .ad .ad-tabla .sg-tabla tbody tr { transition: background-color 250ms ease; }
+  .ad .ad-tabla .sg-tabla tbody tr:hover { background: #eef6d9; }
+}
+@media (max-width: 767px) {
+  .ad .ad-tabla { padding: 6px; border-radius: 22px; }
+  .ad .ad-tabla .sg-tabla caption { padding: 18px 16px 14px; }
+  .ad .ad-tabla .sg-tabla tbody tr { padding: 12px 14px; }
+  .ad .ad-tabla .sg-tabla tbody th,
+  .ad .ad-tabla .sg-tabla td { padding: 5px 0; }
+  .ad .ad-tabla .sg-tabla tbody th { width: 100%; }
+  .ad--biblia .ad-tabla .sg-tabla tbody tr:first-child th::before { margin-right: 8px; }
+}
+
+/* Fundador: la fecha como ancla visual y menos peso en las columnas de texto. */
+.ad--fundador .ad-tabla .sg-tabla tbody th { width: 24%; font-family: var(--font-heading); font-size: 16.5px; font-weight: 400; }
+.ad--fundador .ad-seccion--fechas .sg-tabla td:nth-child(2) { width: 20%; white-space: nowrap; font-weight: 600; color: #1f7a63; }
+.ad--fundador .ad-tabla .sg-tabla td { font-size: 14.5px; line-height: 1.6; }
+@media (max-width: 767px) {
+  .ad--fundador .ad-tabla .sg-tabla tbody th,
+  .ad--fundador .ad-seccion--consta .sg-tabla tbody th,
+  .ad--fundador .ad-seccion--consta .sg-tabla td:nth-child(3),
+  .ad--fundador .ad-seccion--fechas .sg-tabla td:nth-child(2) { width: 100%; white-space: normal; }
+}
+
+/* Idea destacada: sin recuadro ni rojo (el rojo es de Sangre). Un hilo teal con nudo lima a la izquierda,
+   la misma firma de las ilustraciones, y el texto en la serif de la web a tamaño de lectura. */
+.ad .sg-destacado {
+  position: relative; margin-block: 2em; padding: 4px 0 4px clamp(22px, 3vw, 32px); border: 0;
+  font-size: clamp(1.15rem, 1.9vw, 1.4rem); line-height: 1.45; letter-spacing: -.02em; color: #122c33; text-wrap: pretty;
+}
+.ad .sg-destacado::before {
+  content: ""; position: absolute; inset: 0 auto 0 0; width: 2px; border-radius: 2px;
+  background: linear-gradient(#2ea88f, #2ea88f99);
+}
+.ad .sg-destacado::after {
+  content: ""; position: absolute; left: -5px; top: .45em; width: 12px; height: 12px; border-radius: 50%;
+  background: #d8eaa4; box-shadow: 0 0 0 2px #fbfdf5, 0 0 0 3px #2ea88f;
+}
+
+/* Acento teal para respuestas breves dentro de estos artículos. */
+.ad .respuesta-corta { color: #1f7a63; }
+
+/* Lista dentro de una etapa de la línea de tiempo. */
+.sg-etapa .ad-etapa-lista { margin: 1.2em 0 0; padding-left: 1.1em; }
+.sg-etapa .ad-etapa-lista li { margin-top: .6em; font-size: 16px; line-height: 1.7; color: #435043; }
+.sg-etapa .ad-etapa-lista strong { color: #122c33; }
+.sg-etapa .ad-etapa-lista a { color: #1f7a63; text-decoration: underline; text-underline-offset: 3px; }

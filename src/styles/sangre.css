@@ -334,16 +334,16 @@ html:not(.reveal-ready) .sg-linea::after { scale: 1 1; }
 
 /* Índice: número grande en Lora, flecha en círculo; al pasar, la tarjeta se vuelve navy. */
 .sg-indice__lista a {
-  display: grid; grid-template-rows: auto 1fr auto; gap: 14px; min-height: 168px; padding: 22px 22px 18px;
-  border-radius: 24px; transition: transform 450ms var(--ease-editorial), box-shadow 450ms var(--ease-editorial), background-color 450ms var(--ease-editorial), color 450ms var(--ease-editorial);
+  display: grid; grid-template-rows: auto 1fr auto; gap: 10px; min-height: 148px; padding: 18px 18px 14px;
+  border-radius: 22px; transition: transform 450ms var(--ease-editorial), box-shadow 450ms var(--ease-editorial), background-color 450ms var(--ease-editorial), color 450ms var(--ease-editorial);
 }
 .sg-indice__num {
-  font-family: var(--font-heading); font-size: 34px; font-weight: 400; letter-spacing: -.04em; line-height: 1;
+  font-family: var(--font-heading); font-size: 30px; font-weight: 400; letter-spacing: -.04em; line-height: 1;
   color: #2ea88f; transition: color 450ms var(--ease-editorial);
 }
 .sg-indice__titulo { align-self: start; text-wrap: balance; }
 .sg-indice__ir {
-  justify-self: end; display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%;
+  justify-self: end; display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%;
   border: 1px solid #dce3cd; font-size: 14px; color: #122c33;
   transition: background-color 450ms var(--ease-editorial), border-color 450ms var(--ease-editorial), translate 450ms var(--ease-editorial);
 }
@@ -353,6 +353,13 @@ html:not(.reveal-ready) .sg-linea::after { scale: 1 1; }
   .sg-indice__lista a:hover .sg-indice__ir { background: #d8eaa4; border-color: #d8eaa4; color: #122c33; translate: 0 3px; }
 }
 .sg-indice__lista a:focus-visible { outline: 2px solid #2ea88f; outline-offset: 3px; }
+
+/* Parrillas siempre cerradas: con 9 temas, tres columnas exactas (3×3); con cualquier resto
+   impar, la última tarjeta ocupa dos columnas y remata la fila sin huecos. */
+@media (min-width: 768px) {
+  .sg .sg-indice__lista--tercios { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .sg .sg-indice__lista:not(.sg-indice__lista--tercios) li:last-child:nth-child(odd) { grid-column: span 2; }
+}
 
 /* Versículos: navy con brillo teal, número en píldora e hilo lima que se dibuja al entrar. */
 .sg-verso {

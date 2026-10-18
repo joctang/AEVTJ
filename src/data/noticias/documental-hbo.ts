@@ -50,7 +50,7 @@ export const noticia: Noticia = {
     {
       tipo: "parrafo",
       texto:
-        "La confesión de los Testigos de Jehová <strong>ha negado en distintas ocasiones</strong> acusaciones y críticas relacionadas con su funcionamiento interno.",
+        "La confesión de los <a href=\"/testigos-de-jehova/\"><strong>Testigos de Jehová</strong></a> <strong>ha negado en distintas ocasiones</strong> acusaciones y críticas relacionadas con su funcionamiento interno.",
     },
     {
       tipo: "parrafo",

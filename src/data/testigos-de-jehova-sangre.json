@@ -3,7 +3,7 @@
   "entrada": [
     {
       "tipo": "parrafo",
-      "html": "En esta página analizamos y explicamos por qué los Testigos de Jehová no aceptan, o no aceptaban, transfusiones de sangre, en qué textos de la Biblia se apoyan y cómo ha cambiado su postura desde los años cuarenta hasta hoy. Durante más de ochenta años rechazaron tanto la sangre completa como sus componentes principales. Desde septiembre de 2026 siguen rechazando la sangre completa, pero recibir glóbulos rojos, glóbulos blancos, plasma o plaquetas es una decisión de conciencia de cada miembro."
+      "html": "Aquí te contamos por qué los Testigos de Jehová no aceptan, o no aceptaban, transfusiones de sangre, en qué textos de la Biblia se apoyan y cómo ha cambiado su postura desde los años cuarenta hasta hoy. Durante más de ochenta años rechazaron tanto la sangre completa como sus componentes principales. Desde septiembre de 2026 siguen rechazando la sangre completa, pero recibir glóbulos rojos, glóbulos blancos, plasma o plaquetas es una decisión de conciencia de cada miembro."
     },
     {
       "tipo": "parrafo",
@@ -86,27 +86,9 @@
             "«No sólo como descendiente de Noé, sino ahora también como uno obligado por la ley que Dios dió a Israel […] el extranjero tenía prohibido comer o beber sangre, fuera por transfusión o por la boca.»"
           ],
           "fuente": "<em>The Watchtower</em>, 1 de diciembre de 1944 (<em>La Atalaya</em>, 15 de abril de 1945), citada en el <a href=\"https://wol.jw.org/es/wol/d/r4/lp-s/301975006\" target=\"_blank\" rel=\"noopener\"><em>Anuario</em> de 1975</a>"
-        },
-        {
-          "tipo": "parrafo",
-          "html": "Otras tradiciones leen esos mismos pasajes de otro modo. Para la mayoría de las iglesias cristianas, las normas de Levítico pertenecían a la Ley de Moisés, que no obliga a los cristianos. Y las peticiones de Hechos 15 respondían a la convivencia entre creyentes de origen judío y no judío, en especial en las comidas compartidas. Desde esta lectura, una transfusión no es comer sangre, sino un tratamiento que sirve para conservar la vida."
         }
       ],
-      "subsecciones": [
-        {
-          "titulo": "¿Son la única religión que rechaza la sangre?",
-          "bloques": [
-            {
-              "tipo": "parrafo",
-              "html": "No hemos encontrado ninguna otra religión de tamaño comparable que prohíba las transfusiones como norma. El <a href=\"https://pubmed.ncbi.nlm.nih.gov/41632342/\" target=\"_blank\" rel=\"noopener\">estudio histórico de 2026</a> sobre las iglesias cristianas y la transfusión señala a los Testigos de Jehová como el caso más destacado de rechazo."
-            },
-            {
-              "tipo": "parrafo",
-              "html": "Sí existen grupos religiosos pequeños que rechazan la medicina en general y confían solo en la oración, lo que se conoce como curación por fe. Es un fenómeno distinto. Esos grupos rechazan al médico. Los Testigos de Jehová van al médico, aceptan la mayoría de los tratamientos y rechazan solo la sangre. Esa combinación, aceptar la medicina moderna y prohibir un tratamiento concreto por una interpretación bíblica, es lo que hace su postura prácticamente única."
-            }
-          ]
-        }
-      ]
+      "subsecciones": []
     },
     {
       "id": "cronologia",
@@ -304,36 +286,6 @@
           ]
         },
         {
-          "titulo": "2002-2026: la justicia y los gobiernos examinan a la organización",
-          "bloques": [
-            {
-              "tipo": "parrafo",
-              "html": "Mientras la norma cambiaba, tribunales y gobiernos de varios países empezaron a examinar a la organización. No consta que la organización los señale como causa de sus cambios sobre la sangre; los recogemos como contexto y los desarrollamos en <a href=\"#otros-paises\">«¿Qué está pasando en otros países?»</a>."
-            },
-            {
-              "tipo": "lista",
-              "items": [
-                {
-                  "etiqueta": "España (2002 y 2024).",
-                  "html": "El Tribunal Constitucional anula la condena penal a los padres de Marcos, y el Tribunal Europeo de Derechos Humanos condena a España por transfundir a una adulta que había rechazado la sangre."
-                },
-                {
-                  "etiqueta": "Australia (2016).",
-                  "html": "La Comisión Real concluye que los niños no estaban adecuadamente protegidos del abuso sexual dentro de la organización."
-                },
-                {
-                  "etiqueta": "Japón (2022-2026).",
-                  "html": "El Gobierno señala como posible negligencia médica impedir por motivos religiosos que un menor reciba una transfusión necesaria, y la organización y varios pacientes llegan a los tribunales."
-                },
-                {
-                  "etiqueta": "Noruega (2021-2026).",
-                  "html": "El Estado le retira la subvención y el registro; el Tribunal Supremo concluye en abril de 2026 que esas decisiones eran inválidas."
-                }
-              ]
-            }
-          ]
-        },
-        {
           "titulo": "2026: se permiten la propia sangre y los componentes",
           "bloques": [
             {
@@ -405,6 +357,10 @@
                   "Sin cambios"
                 ]
               ]
+            },
+            {
+              "tipo": "destacado",
+              "html": "En 2000, <em>La Atalaya</em> decía que «la ley de Dios sobre la sangre no está sujeta a reformas». Que desde 2026 aceptar plaquetas o plasma sea decisión de conciencia quiere decir que antes no lo era: hasta entonces, aceptarlos podía suponer dejar de ser Testigo."
             }
           ]
         }
@@ -416,7 +372,7 @@
       "bloques": [
         {
           "tipo": "parrafo",
-          "html": "Los Testigos de Jehová son el grupo religioso más conocido que rechaza las transfusiones, pero su postura es una excepción. Un <a href=\"https://pubmed.ncbi.nlm.nih.gov/41632342/\" target=\"_blank\" rel=\"noopener\">estudio histórico publicado en 2026</a> muestra que las iglesias católica, ortodoxa, anglicana, luterana, reformada y metodista acabaron aceptando la transfusión como un acto legítimo de cuidado de la vida, en línea con la caridad cristiana. La Iglesia católica, en concreto, no pone objeciones a recibir sangre y ha animado a donarla."
+          "html": "Los Testigos de Jehová son el grupo religioso más conocido que rechaza las transfusiones, y no hemos encontrado otra religión de tamaño comparable que las prohíba como norma. Un <a href=\"https://pubmed.ncbi.nlm.nih.gov/41632342/\" target=\"_blank\" rel=\"noopener\">estudio histórico publicado en 2026</a> muestra que las iglesias católica, ortodoxa, anglicana, luterana, reformada y metodista acabaron aceptando la transfusión como un acto legítimo de cuidado de la vida."
         },
         {
           "tipo": "cita",
@@ -427,29 +383,11 @@
         },
         {
           "tipo": "parrafo",
-          "html": "En el judaísmo, la Torá prohíbe comer sangre, pero la tradición antepone salvar una vida a casi cualquier otro precepto. Este principio se conoce como <em>pikuaj néfesh</em> (<a href=\"https://www.myjewishlearning.com/article/pikuach-nefesh/\" target=\"_blank\" rel=\"noopener\">explicación del principio</a>)."
-        },
-        {
-          "tipo": "cita",
-          "citas": [
-            "«Uno de los principios más básicos de la ley judía es que la vida humana es lo primero. Casi cualquier mandamiento religioso puede quebrantarse para salvar la vida de un ser humano.»"
-          ],
-          "fuente": "<a href=\"https://www.myjewishlearning.com/article/pikuach-nefesh/\" target=\"_blank\" rel=\"noopener\">My Jewish Learning</a> (traducción de la AEVTJ)"
+          "html": "La mayoría de las iglesias cristianas leen de otro modo los mismos pasajes: entienden que las normas de Levítico pertenecían a la Ley de Moisés y que las peticiones de Hechos 15 respondían a la convivencia entre creyentes de origen judío y no judío. En el judaísmo, la Torá prohíbe comer sangre, pero la tradición antepone salvar una vida a casi cualquier otro precepto, un principio conocido como <em>pikuaj néfesh</em> (<a href=\"https://www.myjewishlearning.com/article/pikuach-nefesh/\" target=\"_blank\" rel=\"noopener\">explicación del principio</a>). Y en el islam, un <a href=\"https://pubmed.ncbi.nlm.nih.gov/20002070/\" target=\"_blank\" rel=\"noopener\">análisis de 70 dictámenes religiosos suníes</a> publicado en 2011 encontró que todos permitían la transfusión."
         },
         {
           "tipo": "parrafo",
-          "html": "En el islam, un <a href=\"https://pubmed.ncbi.nlm.nih.gov/20002070/\" target=\"_blank\" rel=\"noopener\">análisis de 70 dictámenes religiosos suníes</a> publicado en 2011 encontró que todos permitían la transfusión de sangre, aunque algunos la condicionaban a la necesidad médica. Varios la presentaban incluso como una forma de caridad."
-        },
-        {
-          "tipo": "cita",
-          "citas": [
-            "«Los 70 dictámenes permiten la donación de órganos y la transfusión de sangre. […] Casi la mitad de los dictámenes que permiten la transfusión lo hacen sin mencionar ninguna restricción ni problema.»"
-          ],
-          "fuente": "Resumen del <a href=\"https://pubmed.ncbi.nlm.nih.gov/20002070/\" target=\"_blank\" rel=\"noopener\">análisis de 70 dictámenes suníes</a>, <em>Bioethics</em>, 2011 (traducción de la AEVTJ)"
-        },
-        {
-          "tipo": "parrafo",
-          "html": "La diferencia no está en considerar la sangre algo valioso, idea que comparten muchas religiones, sino en lo que se deduce de ello. La mayoría entiende que proteger la vida justifica recibir sangre. Los Testigos de Jehová han sostenido durante décadas que respetar la sangre exigía rechazarla, incluso cuando la vida estaba en peligro."
+          "html": "Tampoco es lo mismo que la curación por fe. Algunos grupos pequeños rechazan la medicina en general y confían solo en la oración. Los Testigos de Jehová van al médico, aceptan la mayoría de los tratamientos y rechazan solo la sangre."
         }
       ],
       "subsecciones": []
@@ -527,14 +465,14 @@
           "bloques": [
             {
               "tipo": "parrafo",
-              "html": "Los artículos están escritos con cariño hacia los menores y sus familias. Pero merecen una lectura crítica por varias razones:"
+              "html": "Leídos hoy, estos relatos plantean varias preguntas:"
             },
             {
               "tipo": "lista",
               "items": [
                 {
                   "etiqueta": "Presentan la muerte como un acto de fidelidad.",
-                  "html": "El mensaje para los lectores jóvenes era claro: rechazar sangre aunque cueste la vida es lo que hace un buen Testigo."
+                  "html": "Las revistas incluían a los menores que murieron entre los jóvenes que «pusieron a Dios en primer lugar». Así se presentaba su decisión a los lectores, muchos de ellos también jóvenes."
                 },
                 {
                   "etiqueta": "Hablan de decisiones propias de menores que crecieron dentro de esa enseñanza.",
@@ -542,7 +480,7 @@
                 },
                 {
                   "etiqueta": "Lo que en 1993 era fidelidad a Dios hoy es decisión de conciencia.",
-                  "html": "En 1993, rechazar plaquetas y glóbulos rojos se presentaba como una prueba de lealtad: Lenae rechazó ambos, y la revista la incluía entre los jóvenes que «pusieron a Dios en primer lugar». Desde septiembre de 2026, el Cuerpo Gobernante deja precisamente esos componentes a la conciencia de cada miembro. Lo que entonces se exigía como fidelidad ha dejado de serlo, y no por un cambio en la medicina, sino por una decisión de la organización."
+                  "html": "En 1993, Lenae rechazó plaquetas y glóbulos rojos, y la revista la incluía entre los jóvenes que «pusieron a Dios en primer lugar». Desde septiembre de 2026, el Cuerpo Gobernante deja precisamente esos componentes a la conciencia de cada miembro."
                 }
               ]
             },
@@ -577,7 +515,7 @@
             },
             {
               "tipo": "parrafo",
-              "html": "Estas historias se contaban junto a otras de miembros que sobrevivieron sin sangre, como la de una mujer operada en 1959 que perdió más del 70 % de su sangre. La combinación transmitía una idea: obedecer podía costar la vida, pero también podía salvarla, y en ambos casos era lo correcto."
+              "html": "Estas historias se contaban junto a otras de miembros que sobrevivieron sin sangre, como la de una mujer operada en 1959 que perdió más del 70 % de su sangre."
             }
           ]
         }
@@ -589,22 +527,27 @@
       "bloques": [
         {
           "tipo": "parrafo",
-          "html": "No existe una cifra mundial fiable de personas que hayan muerto tras rechazar sangre por su religión, y desconfiamos de quien la ofrezca sin datos. Lo que sí hay son casos concretos, resoluciones judiciales y estudios médicos que muestran que el riesgo es real."
+          "html": "No existe un recuento mundial de personas que hayan muerto tras rechazar sangre por su religión: la organización no publica esos datos. Lo que hay son casos concretos, resoluciones judiciales, estudios médicos y alguna estimación."
         },
         {
           "tipo": "parrafo",
-          "html": "Hay, eso sí, una estimación muy difundida. El periodista Luis Santamaría del Río la recoge en Portaluz el 25 de septiembre de 2026, una semana después del anuncio de la organización:"
+          "html": "La estimación más citada es la de <a href=\"https://www.ajwrb.org/estimating-mortality-epidemiological-extrapolations-of-the-blood-prohibition\" target=\"_blank\" rel=\"noopener\">AJWRB</a>, una web crítica con la norma sobre la sangre. Calcula unas 33.246 muertes entre 1961 y 2016, unas 594 al año de media y alrededor de 1.220 solo en 2016. No es un recuento, sino una extrapolación que sigue el método del médico Muramoto. Parte de un <a href=\"https://pubmed.ncbi.nlm.nih.gov/8430707/\" target=\"_blank\" rel=\"noopener\">estudio de 1993</a> publicado en <em>The American Journal of Medicine</em>, que revisó 1.404 operaciones a Testigos sin transfusión, redondea a la baja su mortalidad (del 1,4 % al 1 %) y la aplica al número de Testigos que, según las estadísticas de Estados Unidos, necesitarían sangre cada año. Después lo contrasta con un <a href=\"https://pubmed.ncbi.nlm.nih.gov/22150804/\" target=\"_blank\" rel=\"noopener\">estudio de cuatro hospitales de Nueva Zelanda</a> publicado en <em>Vox Sanguinis</em> en 2012."
         },
         {
           "tipo": "cita",
           "citas": [
-            "«La Alianza para la Investigación y la Bioética sobre los Testigos de Jehová (AJWRB, por sus siglas en inglés) calcula, a partir de fuentes independientes, que en estos 65 años habrían muerto más de 30.000 adeptos de la secta por negarse a aceptar una transfusión.»"
+            "«Estas cifras deben entenderse como extrapolaciones epidemiológicas, no como mortalidad observada.»",
+            "«Como no se han publicado datos oficiales de mortalidad, el número real de muertes asociadas a la norma no puede determinarse por ahora.»"
           ],
-          "fuente": "Luis Santamaría del Río, <a href=\"https://portaluz.org/batalla-mal/ex-miembros-secta-testigos-jehova-piden-justicia-miles-murieron-recibir-transfusion-sangre-n7178\" target=\"_blank\" rel=\"noopener\">«Ex miembros de la secta Testigos de Jehová piden justicia para miles que murieron por no recibir transfusión de sangre»</a>, Portaluz"
+          "fuente": "<a href=\"https://www.ajwrb.org/estimating-mortality-epidemiological-extrapolations-of-the-blood-prohibition\" target=\"_blank\" rel=\"noopener\">AJWRB</a>, «Estimating Mortality: Epidemiological Extrapolations of the Blood Prohibition» (traducción de la AEVTJ)"
         },
         {
           "tipo": "parrafo",
-          "html": "Los 65 años se cuentan desde 1961, cuando empezaron las expulsiones. Es una estimación de una organización de parte, recogida por un medio que habla de «secta». No hemos podido revisar su método, así que la citamos como orden de magnitud y no como dato comprobado."
+          "html": "La propia organización citó el estudio de partida. <a href=\"https://wol.jw.org/es/wol/d/r4/lp-s/1993768\" target=\"_blank\" rel=\"noopener\"><em>La Atalaya</em> del 15 de octubre de 1993</a> recogía la conclusión de su autor: rechazar las transfusiones en operaciones mayores «parece añadir de un 0,5 a 1,5% de mortalidad al riesgo operatorio global». La revista lo presentaba como un riesgo menor que el de aceptarlas: «cualquier riesgo médico de rechazar la transfusión de sangre probablemente sea menor que los riesgos implicados en aceptarla»."
+        },
+        {
+          "tipo": "parrafo",
+          "html": "La cifra depende de varios supuestos, como aplicar los datos de Estados Unidos a todo el mundo, así que la damos como orden de magnitud y no como dato comprobado."
         }
       ],
       "subsecciones": [
@@ -721,10 +664,6 @@
           "fuente": "Fallo de la <a href=\"https://hudoc.echr.coe.int/eng?i=001-236065\" target=\"_blank\" rel=\"noopener\">sentencia del TEDH, <em>Pindo Mulla c. España</em></a>, 2024 (traducción de la AEVTJ)"
         },
         {
-          "tipo": "parrafo",
-          "html": "Para la AEVTJ, respetar la decisión de un adulto y cuestionar la presión de una organización no son ideas contradictorias."
-        },
-        {
           "tipo": "destacado",
           "html": "La pregunta de fondo es hasta qué punto una decisión es libre cuando aceptar un tratamiento puede suponer perder a la familia, los amigos y la comunidad."
         },
@@ -763,7 +702,7 @@
       "bloques": [
         {
           "tipo": "parrafo",
-          "html": "La postura sobre la sangre no se discute solo dentro de las congregaciones. En los últimos años, tribunales y gobiernos de varios países han examinado a la organización, a veces dándole la razón y a veces no. El único que trata de la sangre es Japón; del resto dejamos solo una línea."
+          "html": "La postura sobre la sangre no se discute solo dentro de las congregaciones. El caso más directamente ligado a ella es el de Japón."
         }
       ],
       "subsecciones": [
@@ -794,28 +733,6 @@
               "html": "Es decir, por ahora el ministerio no cambia sus instrucciones por el anuncio, pero lo vigila. Para los menores, el marco de protección japonés no depende de lo que decida la organización."
             }
           ]
-        },
-        {
-          "titulo": "En otros países, sin relación con la sangre",
-          "bloques": [
-            {
-              "tipo": "lista",
-              "items": [
-                {
-                  "etiqueta": "Noruega.",
-                  "html": "El Supremo anuló en 2026 la retirada de subvención y registro a la organización por el trato a los exmiembros (<a href=\"https://www.domstol.no/en/supremecourt/rulings/rulings-2026/supreme-court---civil-cases/HR-2026-1009-A/\" target=\"_blank\" rel=\"noopener\">sentencia</a>)."
-                },
-                {
-                  "etiqueta": "España.",
-                  "html": "Un juzgado de Torrejón de Ardoz desestimó en 2023 la demanda de la organización contra la AEVTJ (<a href=\"https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Noticias-Judiciales/Un-juzgado-de-Torrejon-de-Ardoz-desestima-la-demanda-de-la-organizacion-religiosa-Testigos-de-Jehova-por-vulneracion-del-derecho-al-honor\" target=\"_blank\" rel=\"noopener\">Poder Judicial</a>). La AEVTJ es parte en ese proceso."
-                },
-                {
-                  "etiqueta": "Australia.",
-                  "html": "La Comisión Real concluyó en 2016 que los niños no estaban adecuadamente protegidos del abuso sexual en la organización (<a href=\"https://childabuseroyalcommission.gov.au/media-releases/report-jehovah-witness-organisations-released\" target=\"_blank\" rel=\"noopener\">comunicado</a>)."
-                }
-              ]
-            }
-          ]
         }
       ]
     },
@@ -825,15 +742,19 @@
       "bloques": [
         {
           "tipo": "parrafo",
-          "html": "Valoramos que la organización deje en manos de cada persona decisiones que afectan directamente a su salud y a su vida. Pero el cambio llega tarde y es incompleto. Durante décadas, sus normas llevaron a rechazar tratamientos que hoy considera aceptables, y hubo personas, también niños, que murieron o sufrieron daños graves por obedecerlas."
+          "html": "Muchos de quienes formamos la asociación llevamos durante años en la cartera una tarjeta para rechazar la sangre. Recordamos el miedo a tener un accidente, las conversaciones en el hospital con un familiar enfermo y la sensación de que aceptar un tratamiento podía costarte a tu familia y a tu comunidad. Hay padres que vieron morir a sus hijos convencidos de que hacían lo correcto, y personas que hoy se preguntan por qué lo que entonces era una prueba de fe ahora es una decisión de cada uno."
         },
         {
           "tipo": "parrafo",
-          "html": "Por eso, como explicamos en nuestro <a href=\"/noticias/la-aevtj-reclama-libertad-medica-plena-tras-el-cambio-sobre-transfusiones/\">comunicado del 18 de septiembre de 2026</a>, pedimos a la organización una disculpa pública a esas personas y a sus familias, y garantías de que nadie será presionado ni aislado por sus decisiones médicas. Defendemos que cada paciente pueda elegir cualquier tratamiento, incluida la sangre completa, sin miedo a perder a los suyos."
+          "html": "Es normal sentir rabia, tristeza o desconcierto al leer el cambio de 2026. También es normal sentir alivio. Ninguna de esas emociones está mal, y no hace falta tenerlo todo claro."
         },
         {
           "tipo": "parrafo",
-          "html": "Si este tema te afecta, en nuestra <a href=\"/guia-para-proteger-tus-derechos-sanitarios-en-caso-de-interferencia-familiar/\">guía de derechos sanitarios</a> explicamos cómo dejar constancia de tu voluntad. También puedes <a href=\"/contacto/\">contactar con la asociación</a> de forma confidencial o consultar los <a href=\"/recursos-de-ayuda/\">recursos de ayuda</a>. Ante una decisión médica concreta, habla siempre con tu equipo sanitario."
+          "html": "Respetar la decisión de un adulto y cuestionar la presión de una organización no son ideas contradictorias. Por eso, como explicamos en nuestro <a href=\"/noticias/la-aevtj-reclama-libertad-medica-plena-tras-el-cambio-sobre-transfusiones/\">comunicado del 18 de septiembre de 2026</a>, pedimos a la organización una disculpa pública a quienes murieron o sufrieron daños graves y a sus familias, y garantías de que nadie será presionado ni aislado por sus decisiones médicas. Defendemos que cada paciente pueda elegir cualquier tratamiento, incluida la sangre completa, sin miedo a perder a los suyos."
+        },
+        {
+          "tipo": "parrafo",
+          "html": "Si este tema te afecta, en nuestra <a href=\"/guia-para-proteger-tus-derechos-sanitarios-en-caso-de-interferencia-familiar/\">guía de derechos sanitarios</a> explicamos cómo dejar constancia de tu voluntad. Ante una decisión médica concreta, habla siempre con tu equipo sanitario. Y si quieres contar lo que viviste, aquí hay personas que lo entienden porque pasaron por lo mismo. Cuando quieras hablar de ello, puedes <a href=\"/contacto/\">escribirnos</a>."
         }
       ],
       "subsecciones": []
@@ -850,15 +771,15 @@
     },
     {
       "pregunta": "¿Pueden donar o recibir órganos?",
-      "respuesta": "Sí. Desde 1980, recibir un trasplante de órganos es una decisión personal para los Testigos de Jehová. Entre 1967 y 1980, la organización consideró los trasplantes una forma de canibalismo. La idea de que hoy tienen prohibido donar órganos no se corresponde con lo que publica la organización."
+      "respuesta": "<strong class=\"respuesta-corta\">Sí.</strong> Desde 1980, recibir un trasplante de órganos es una decisión personal para los Testigos de Jehová. Entre 1967 y 1980, la organización consideró los trasplantes una forma de canibalismo. La idea de que hoy tienen prohibido donar órganos no se corresponde con lo que publica la organización."
     },
     {
       "pregunta": "¿Qué ocurre si un Testigo acepta una transfusión de sangre completa?",
-      "respuesta": "Las publicaciones de 2026 no explican qué consecuencias tiene. Desde 2000, quien aceptaba una transfusión prohibida y no se arrepentía era considerado alguien que se había desasociado, con el mismo efecto que una expulsión. La AEVTJ teme que aceptar sangre completa siga suponiendo una falta grave con consecuencias sociales para quien lo haga."
+      "respuesta": "Las publicaciones de 2026 no explican qué consecuencias tiene. Hasta 2026, quien aceptaba una transfusión prohibida y no se arrepentía era considerado alguien que se había desasociado, y la propia organización reconocía que el resultado era el mismo que una expulsión."
     },
     {
       "pregunta": "¿Rechazan la medicina?",
-      "respuesta": "No. Los Testigos de Jehová acuden al médico y aceptan la mayoría de los tratamientos. La organización afirma que no practica la curación por fe y que sus miembros buscan la mejor atención médica que respete sus creencias."
+      "respuesta": "<strong class=\"respuesta-corta\">No.</strong> Los Testigos de Jehová acuden al médico y aceptan la mayoría de los tratamientos. La organización afirma que no practica la curación por fe y que sus miembros buscan la mejor atención médica que respete sus creencias."
     }
   ]
 }

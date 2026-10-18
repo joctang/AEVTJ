@@ -1,6 +1,6 @@
 ---
-// /testigos-de-jehova/cumpleanos/: texto en 06_Contenido/testigos-de-jehova__cumpleanos/BORRADOR.md.
-// Datos: node scripts/articulo-desde-borrador.mjs cumpleanos · Presentación: ArticuloDocumental.
+// /testigos-de-jehova/cumpleanos/: revisada con el criterio editorial el 18-10-2026; desde entonces el texto se retoca
+// directamente en src/data/testigos-de-jehova-cumpleanos.json (el BORRADOR.md ya no está al día). Presentación: ArticuloDocumental.
 import ArticuloDocumental from "../../components/ArticuloDocumental.astro";
 import datos from "../../data/testigos-de-jehova-cumpleanos.json";
 
@@ -21,11 +21,43 @@ const ilustraciones = {
 };
 
 const sigueLeyendo = [
-  { titulo: "Navidad", descripcion: "Por qué no la celebran y cómo dejaron de hacerlo.", href: "/testigos-de-jehova/navidad/" },
-  { titulo: "Normas y vida cotidiana", descripcion: "Qué pueden hacer y qué no, tema a tema.", href: "/testigos-de-jehova/normas/" },
-  { titulo: "Transfusiones de sangre", descripcion: "Historia, postura y cambios documentados.", href: "/testigos-de-jehova/sangre/" },
-  { titulo: "Guía para salir", descripcion: "El proceso de salida explicado paso a paso.", href: "/guia-para-salir-de-los-testigos-de-jehova/" },
+  { titulo: "Navidad", descripcion: "Por qué no la celebran y cómo dejaron de hacerlo.", href: "/testigos-de-jehova/navidad/", imagen: "/uploads/2026/10/tdj-navidad-arbol-papa-noel-hilo-900.webp" },
+  { titulo: "Normas y vida cotidiana", descripcion: "Qué pueden hacer y qué no, tema a tema.", href: "/testigos-de-jehova/normas/", imagen: "/uploads/2026/10/tdj-normas-voto-urna-hilo-900.webp" },
+  { titulo: "Transfusiones de sangre", descripcion: "Historia, postura y cambios documentados.", href: "/testigos-de-jehova/sangre/", imagen: "/uploads/2026/10/tdj-sangre-habitacion-hospital-hilo-900.webp" },
+  { titulo: "Guía para salir", descripcion: "El proceso de salida explicado paso a paso.", href: "/guia-para-salir-de-los-testigos-de-jehova/", imagen: "/uploads/2026/10/tdj-renuncia-arco-hilo-libre-900.webp" },
 ];
+
+// Bibliografía numerada: título estable para cada fuente citada en el texto.
+const titulosFuentes: Record<string, string> = {
+  "https://www.jw.org/es/testigos-de-jehov%C3%A1/preguntas-frecuentes/cumpleanos/": "jw.org: preguntas frecuentes sobre los cumpleaños",
+  "https://wol.jw.org/es/wol/d/r4/lp-s/1980530/": "La Atalaya del 15 de julio de 1982 · wol.jw.org",
+  "https://wol.jw.org/es/wol/d/r4/lp-s/1102014249": "El Reino de Dios ya está gobernando (retrospectiva oficial) · wol.jw.org",
+  "https://wol.jw.org/es/wol/d/r4/lp-s/1951727/": "La Atalaya, 1 de febrero de 1952: «Preguntas de los lectores» · wol.jw.org",
+  "https://www.jw.org/es/biblioteca/folletos/La-escuela-y-los-testigos-de-Jehov%C3%A1/D%C3%ADas-festivos-y-celebraciones/": "Folleto «La escuela y los testigos de Jehová»: «Días festivos y celebraciones» · jw.org",
+  "https://shunnedpodcast.com/episode-ten-dj-is-shunned-by-jehovahs-witnesses/": "Shunned, episodio 10: DJ (transcripción del pódcast)",
+  "https://shunnedpodcast.com/episode-nineteen-lyndi-is-shunned-by-jehovahs-witnesses/": "Shunned, episodio 19: Lyndi (transcripción del pódcast)",
+  "https://www.abuseincare.org.nz/__data/assets/pdf_file/0027/26658/witness-statement-of-jasmine-grew-1-june-2022.pdf": "Declaración de Jasmine Grew (1 de junio de 2022) ante la Comisión Real de Investigación de Nueva Zelanda",
+  "https://www.evangelical-times.org/i-was-a-jehovahs-witness-for-60-years-but-gave-it-up-for-christ-an-interview-with-jim-fielder/": "Entrevista a Jim Fielder en Evangelical Times",
+  "https://www.lancaster.ac.uk/fass/resources/sociology-online-papers/papers/holden-doing-tolerance.pdf": "A. Holden, «Doing Tolerance» · Lancaster University",
+  "https://www.abc.net.au/listen/programs/lifematters/throwing-off-your-religious-shackles-to-have-a-party/8095596": "Entrevista de Trish Karr en ABC Radio National (Life Matters)",
+  "https://www.jw.org/es/biblioteca/videos/hazte-amigo-jehova/jehova-perdona/": "Hazte amigo de Jehová, lección 40: «Jehová perdona» (vídeo, 2021) · jw.org",
+  "https://www.jw.org/es/biblioteca/videos/hazte-amigo-jehova/por-que-no-celebramos-cumpleanos/": "Hazte amigo de Jehová, lección 41: «¿Por qué no celebramos los cumpleaños?» (vídeo, 2021) · jw.org",
+};
+
+// Límites de cada fuente, a la vista en la bibliografía.
+const notasFuentes: Record<string, string> = {
+  "https://www.jw.org/es/testigos-de-jehov%C3%A1/preguntas-frecuentes/cumpleanos/": "Publicación oficial de los Testigos de Jehová.",
+  "https://wol.jw.org/es/wol/d/r4/lp-s/1980530/": "Publicación oficial de los Testigos de Jehová.",
+  "https://wol.jw.org/es/wol/d/r4/lp-s/1951727/": "Publicación oficial de los Testigos de Jehová.",
+  "https://wol.jw.org/es/wol/d/r4/lp-s/1102014249": "Publicación oficial de los Testigos de Jehová.",
+  "https://www.jw.org/es/biblioteca/folletos/La-escuela-y-los-testigos-de-Jehov%C3%A1/D%C3%ADas-festivos-y-celebraciones/": "Publicación oficial de los Testigos de Jehová.",
+  "https://shunnedpodcast.com/episode-ten-dj-is-shunned-by-jehovahs-witnesses/": "Resumen de los pasajes de la transcripción que se citan en el texto.",
+  "https://shunnedpodcast.com/episode-nineteen-lyndi-is-shunned-by-jehovahs-witnesses/": "Resumen de los pasajes de la transcripción que se citan en el texto.",
+  "https://www.evangelical-times.org/i-was-a-jehovahs-witness-for-60-years-but-gave-it-up-for-christ-an-interview-with-jim-fielder/": "Traducido del inglés por la AEVTJ.",
+  "https://www.lancaster.ac.uk/fass/resources/sociology-online-papers/papers/holden-doing-tolerance.pdf": "Traducido del inglés por la AEVTJ.",
+  "https://www.jw.org/es/biblioteca/videos/hazte-amigo-jehova/jehova-perdona/": "Vídeo oficial para niños. Citas tomadas de sus subtítulos.",
+  "https://www.jw.org/es/biblioteca/videos/hazte-amigo-jehova/por-que-no-celebramos-cumpleanos/": "Vídeo oficial para niños. Citas tomadas de sus subtítulos.",
+};
 ---
 
 <ArticuloDocumental
@@ -33,15 +65,17 @@ const sigueLeyendo = [
   slug="cumpleanos"
   miga="Cumpleaños"
   descripcion="Por qué los Testigos de Jehová no celebran cumpleaños: sus razones, cómo las han explicado desde 1936 y lo que cuentan quienes crecieron sin celebrarlos."
-  revisado="13 de octubre de 2026"
-  revisadoIso="2026-10-13"
+  revisado="18 de octubre de 2026"
+  revisadoIso="2026-10-18"
+  referencias
+  titulosFuentes={titulosFuentes}
+  notasFuentes={notasFuentes}
   cortos={cortos}
   hero={{
     src: "/uploads/2026/10/tdj-cumpleanos-tarta-hero-800.webp",
     srcset: "/uploads/2026/10/tdj-cumpleanos-tarta-hero-800.webp 800w",
     alt: "Una mano sostiene una tarta de cumpleaños con velas de colores encendidas sobre un fondo turquesa.",
   }}
-  accionHero={{ texto: "Ver sus argumentos", href: "#respuesta" }}
   tarjetas="respuesta"
   linea="historia"
   casos={["Lyndi"]}

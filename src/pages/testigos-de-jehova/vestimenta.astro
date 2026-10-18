@@ -1,25 +1,86 @@
 ---
-// /testigos-de-jehova/vestimenta/: esqueleto (noindex) a partir de 06_Contenido/testigos-de-jehova__vestimenta/BORRADOR.md.
-import TemaPendiente from "../../components/TemaPendiente.astro";
+// Artículo local de Vestimenta; el contenido está en los datos de la página.
+import ArticuloDocumental from "../../components/ArticuloDocumental.astro";
+import datos from "../../data/testigos-de-jehova-vestimenta.json";
+
+const cortos = {
+  respuesta: "Antes y ahora",
+  principios: "Por qué vestían igual",
+  barba: "Por qué no llevaban barba",
+  "2025": "Cómo se vivió",
+  mujeres: "Falda y pantalones",
+  hombres: "Chaqueta y corbata",
+  programa: "Programa y Betel",
+  "vida-diaria": "Vida diaria",
+};
+
+// Ilustraciones editoriales de Vestimenta; alternan lado como en Cumpleaños y Biblia.
+const ilustraciones = {
+  barba: { nombre: "tdj-vestimenta-barba-hilo", escena: "", alt: "Ilustración de una maquinilla, un peine y un cepillo de barba conectados por un hilo lima suelto.", lista: true, pos: "derecha" as const },
+  mujeres: { nombre: "tdj-vestimenta-falda-pantalones-hilo", escena: "", alt: "Ilustración de unos pantalones de vestir y una falda colgados en perchas, unidos por un hilo lima.", lista: true, pos: "izquierda" as const },
+  hombres: { nombre: "tdj-vestimenta-chaqueta-corbata-hilo", escena: "", alt: "Ilustración de una chaqueta y una corbata sobre una silla, junto a un hilo lima suelto.", lista: true, pos: "derecha" as const },
+  programa: { nombre: "tdj-vestimenta-programa-reunion-hilo", escena: "", alt: "Ilustración de una persona sentada entre varias sillas y otra ante un atril, conectadas por un hilo lima.", lista: true, pos: "izquierda" as const },
+  "vida-diaria": { nombre: "tdj-vestimenta-reunion-vida-diaria-hilo", escena: "", alt: "Ilustración de una persona en una sala de reunión y otra en un espacio cotidiano, unidas por un hilo lima.", lista: true, pos: "derecha" as const },
+};
+
+const sigueLeyendo = [
+  { titulo: "Normas y vida cotidiana", descripcion: "Qué orientaciones influyen en distintas decisiones diarias.", href: "/testigos-de-jehova/normas/" },
+  { titulo: "Cumpleaños", descripcion: "Por qué no los celebran y cómo explican esa postura.", href: "/testigos-de-jehova/cumpleanos/" },
+  { titulo: "Guía para salir", descripcion: "Información y apoyo si estás pensando en dejar la organización.", href: "/guia-para-salir-de-los-testigos-de-jehova/" },
+];
+
+// Bibliografía numerada: título estable para cada fuente citada en el texto.
+const titulosFuentes: Record<string, string> = {
+  "https://wol.jw.org/es/wol/d/r4/lp-s/402016684": "La Atalaya, septiembre de 2016: «¿Da gloria a Dios nuestra forma de vestir?» · wol.jw.org",
+  "https://www.jw.org/es/biblioteca/folletos/voluntad-de-Jehov%C3%A1/indumentaria-y-arreglo-personal/": "Folleto «La voluntad de Jehová»: «Indumentaria y arreglo personal» · jw.org",
+  "https://www.jw.org/es/noticias/region/internacionales/2023-Informe-8-del-Cuerpo-Gobernante/": "Informe 8 del Cuerpo Gobernante, 15 de diciembre de 2023 · jw.org",
+  "https://cfp2.jw-cdn.org/a/c36773/1/o/702023024_S_cnt_1.vtt": "Transcripción oficial (VTT) del Informe 8, en español · jw-cdn",
+  "https://www.jw.org/es/noticias/region/internacionales/2024-Informe-2-del-Cuerpo-Gobernante/": "Informe 2 del Cuerpo Gobernante, 15 de marzo de 2024 · jw.org",
+  "https://cfp2.jw-cdn.org/a/abd9084/2/o/1112024005_S_cnt_1.vtt": "Transcripción oficial (VTT) del Informe 2 · jw-cdn",
+  "https://www.jw.org/es/biblioteca/revistas/atalaya-estudio-julio-2025/Puede-seguir-aprendiendo-de-las-ense%C3%B1anzas-b%C3%A1sicas/": "La Atalaya, julio de 2025: «¿Puede seguir aprendiendo de las enseñanzas básicas?» · jw.org",
+  "https://www.lancaster.ac.uk/fass/resources/sociology-online-papers/papers/holden-averting-risk.pdf": "Andrew Holden, «Averting Risk: A Cultural Analysis of the Worldview of Jehovah’s Witnesses» · Lancaster University",
+  "https://www1.essex.ac.uk/sociology/documents/ideate-sum-16.pdf": "IDEATE Summer 2016 proceedings · University of Essex",
+  "https://www.theguardian.com/world/2015/jul/14/jehovahs-witnesses-evangelism-church-god-armageddon": "Reportaje sobre predicación pública de los Testigos de Jehová · The Guardian, 14 de julio de 2015",
+  "https://wol.jw.org/es/wol/d/r4/lp-s/101999086": "¡Despertad!, 8 de febrero de 1999: «Nuestra forma de vestir: ¿importa en realidad?» · wol.jw.org",
+  "https://www.jwfacts.com/watchtower/beards-jehovahs-witnesses.php": "«The history of beards and Jehovah's Witnesses» · JWfacts",
+};
+
+// Límites de cada fuente, a la vista en la bibliografía.
+const notasFuentes: Record<string, string> = {
+  "https://wol.jw.org/es/wol/d/r4/lp-s/402016684": "Explica que la aceptación de la barba dependía de las costumbres locales y podía influir en cómo se consideraba a un ministro.",
+  "https://www.jw.org/es/biblioteca/folletos/voluntad-de-Jehov%C3%A1/indumentaria-y-arreglo-personal/": "Publicación oficial de los Testigos de Jehová.",
+  "https://www.jw.org/es/noticias/region/internacionales/2023-Informe-8-del-Cuerpo-Gobernante/": "Incluye el anuncio sobre la barba.",
+  "https://www.jw.org/es/noticias/region/internacionales/2024-Informe-2-del-Cuerpo-Gobernante/": "Incluye el anuncio sobre indumentaria y el detalle sobre el programa y Betel.",
+  "https://www.jw.org/es/biblioteca/revistas/atalaya-estudio-julio-2025/Puede-seguir-aprendiendo-de-las-ense%C3%B1anzas-b%C3%A1sicas/": "Testimonio individual publicado por la organización; ilustra una reacción, no mide su frecuencia.",
+  "https://www.lancaster.ac.uk/fass/resources/sociology-online-papers/papers/holden-averting-risk.pdf": "Estudio sociológico anterior a los cambios recientes; describe prácticas observadas, no su prevalencia actual.",
+  "https://www1.essex.ac.uk/sociology/documents/ideate-sum-16.pdf": "Observación de una congregación en Colchester en 2015; no es una muestra representativa.",
+  "https://www.theguardian.com/world/2015/jul/14/jehovahs-witnesses-evangelism-church-god-armageddon": "Reportaje con observación en Londres en 2015; no representa todas las congregaciones.",
+  "https://cfp2.jw-cdn.org/a/c36773/1/o/702023024_S_cnt_1.vtt": "Entre los minutos 08:00 y 08:25 reconoce que la mayoría de los hermanos con barba no recibían nombramientos.",
+  "https://wol.jw.org/es/wol/d/r4/lp-s/101999086": "Publicación oficial; asocia la barba y el pelo largo al rechazo de los valores tradicionales.",
+  "https://www.jwfacts.com/watchtower/beards-jehovahs-witnesses.php": "Web crítica con la organización; reúne publicaciones, documentos internos y testimonios en inglés.",
+};
 ---
 
-<TemaPendiente
-  titulo="Cómo se visten los Testigos de Jehová: reuniones, barba y cambios recientes"
-  descripcion="Cómo se visten los Testigos de Jehová en las reuniones, si pueden llevar barba o pantalones y qué ha cambiado desde 2023 y 2024."
-  etiqueta="Vestimenta"
-  carpeta="testigos-de-jehova__vestimenta"
-  respuesta={[
-    "Los Testigos de Jehová suelen vestir de manera arreglada en sus reuniones porque, según explica su organización, consideran que la ropa limpia, modesta y apropiada muestra respeto a Dios y a quienes asisten. Eso no significa que todos vistan igual: la organización habla de principios generales y reconoce cierto margen para elegir la ropa.",
-    "Algunas prácticas también han cambiado. Hoy la barba no está prohibida por una norma general de la organización, y desde 2024 las mujeres pueden llevar pantalones de vestir en determinadas actividades religiosas. El contexto y algunas costumbres locales siguen influyendo en la ropa de quienes participan en el programa de una reunión o asamblea.",
-  ]}
-  esquema={[
-    "¿Por qué se visten así para las reuniones?",
-    "¿Los Testigos de Jehová pueden llevar barba?",
-    "¿Las mujeres Testigos de Jehová tienen que llevar falda?",
-    "¿Los hombres tienen que llevar traje y corbata?",
-    "¿La vestimenta cambia según el lugar?",
-  ]}
-  fuentes={[
-    { label: "Informe del Cuerpo Gobernante, marzo de 2024", href: "https://www.jw.org/es/noticias/region/internacionales/2024-Informe-2-del-Cuerpo-Gobernante/" },
-  ]}
+<ArticuloDocumental
+  datos={datos}
+  slug="vestimenta"
+  miga="Vestimenta"
+  tituloSeo="¿Cómo se visten los Testigos de Jehová? Ropa y normas"
+  descripcion="Cómo visten los Testigos de Jehová, qué ha cambiado con la barba, los pantalones y la corbata, y qué pasaba antes con quien no seguía la norma."
+  revisado="18 de octubre de 2026"
+  revisadoIso="2026-10-18"
+  referencias
+  titulosFuentes={titulosFuentes}
+  notasFuentes={notasFuentes}
+  cortos={cortos}
+  ilustraciones={ilustraciones}
+  hero={{
+    src: "/uploads/2026/10/tdj-vestimenta-asamblea-hero-1536.webp",
+    srcset: "/uploads/2026/10/tdj-vestimenta-asamblea-hero-900.webp 900w, /uploads/2026/10/tdj-vestimenta-asamblea-hero-1536.webp 1536w",
+    alt: "Asistentes sentados de espaldas en una asamblea de los Testigos de Jehová, con traje, chaqueta y vestidos, mirando hacia el escenario.",
+  }}
+  mostrarAccionesHero={false}
+  mostrarIntroIndice={false}
+  noindex
+  sigueLeyendo={sigueLeyendo}
 />

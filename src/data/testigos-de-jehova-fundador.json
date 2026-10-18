@@ -1,0 +1,671 @@
+{
+  "titulo": "¿Quién fundó los Testigos de Jehová? Charles Taze Russell y lo que consta de él",
+  "entrada": [
+    {
+      "tipo": "parrafo",
+      "html": "En términos históricos, el fundador es Charles Taze Russell (1852–1916): él puso en marcha el movimiento de Estudiantes de la Biblia del que procede la organización actual. Los Testigos de Jehová no lo ven así. Dicen que Russell no fundó una religión nueva y que su fundador es Jesús. Y el nombre «Testigos de Jehová» ni siquiera existía en vida de Russell: se adoptó en 1931, quince años después de su muerte, bajo su sucesor, Joseph F. Rutherford."
+    },
+    {
+      "tipo": "parrafo",
+      "html": "Por eso la respuesta depende de lo que se pregunte: el movimiento, la sociedad editorial, el nombre o la creencia. Lo explicamos punto por punto justo debajo, y en cada fecha de la página aclaramos de cuál de esas cosas se habla."
+    },
+    {
+      "tipo": "parrafo",
+      "html": "Más abajo, quién fue Russell y qué hay de cierto en lo que se cuenta de él: si era masón, la pirámide, el trigo, el griego y su matrimonio."
+    }
+  ],
+  "secciones": [
+    {
+      "id": "respuesta",
+      "titulo": "¿Quién fundó los Testigos de Jehová?",
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "html": "Russell, en términos históricos; Jesús, según los propios Testigos. Si se añaden el nombre y la sociedad legal, salen cuatro respuestas que no se contradicen:"
+        },
+        {
+          "tipo": "lista",
+          "items": [
+            {
+              "etiqueta": "Historia del movimiento.",
+              "html": "Charles Taze Russell, editor y dirigente de los primeros grupos de Estudiantes de la Biblia en Pensilvania. La <a href=\"https://www.britannica.com/biography/Charles-Taze-Russell\" target=\"_blank\" rel=\"noopener\">Enciclopedia Británica</a> lo describe como fundador de la International Bible Students Association, precursora de los Testigos de Jehová."
+            },
+            {
+              "etiqueta": "Postura de los Testigos de Jehová.",
+              "html": "Reconocen que Russell fue el primer editor de <em>La Atalaya</em> y dirigió la obra de educación bíblica, pero sostienen que «eso no lo convirtió en el fundador de una nueva religión». Para ellos, el fundador es Jesús."
+            },
+            {
+              "etiqueta": "El nombre.",
+              "html": "«Testigos de Jehová» se adoptó el 26 de julio de 1931 en una convención en Columbus (Ohio), a propuesta de Rutherford. Russell nunca lo usó: había muerto en 1916."
+            },
+            {
+              "etiqueta": "La sociedad legal.",
+              "html": "La entidad editorial se formó en 1881, con William H. Conley como presidente, y se constituyó legalmente en Pensilvania en diciembre de 1884, ya con Russell como presidente."
+            }
+          ]
+        },
+        {
+          "tipo": "destacado",
+          "html": "Si alguien te dice que «Russell fundó los Testigos de Jehová» o que «no los fundó nadie», probablemente esté contestando a una pregunta distinta: la de los orígenes del movimiento, la del nombre o la de la creencia religiosa."
+        }
+      ],
+      "subsecciones": []
+    },
+    {
+      "id": "fechas",
+      "titulo": "¿En qué año se fundaron los Testigos de Jehová?",
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "html": "Con ese nombre, desde 1931. Como grupo de estudio de la Biblia, desde aproximadamente 1870, y la revista y la sociedad de las que procede la organización son de entre 1879 y 1884. No hay una fecha única: según lo que se tome como punto de partida, sale un año distinto."
+        },
+        {
+          "tipo": "tabla",
+          "titulo": "Qué fecha cuenta como «fundación»",
+          "cabecera": [
+            "Criterio",
+            "Fecha",
+            "Qué ocurrió"
+          ],
+          "filas": [
+            [
+              "Primeros grupos de estudio",
+              "Hacia 1870",
+              "Russell y otras personas de Allegheny (Pensilvania) empiezan a estudiar la Biblia en grupo, según los relatos biográficos. La web de los Testigos de Jehová no da año y habla de finales del siglo XIX."
+            ],
+            [
+              "Primera revista",
+              "Julio de 1879",
+              "Aparece <em>Zion's Watch Tower and Herald of Christ's Presence</em> (<a href=\"https://archive.org/details/magazines-zions-watchtower-and-herald-christ-presence-1879\" target=\"_blank\" rel=\"noopener\">volumen de 1879</a>), la revista que editaba Russell."
+            ],
+            [
+              "Primera sociedad",
+              "16 de febrero de 1881",
+              "Se forma en Pittsburgh la Zion's Watch Tower Tract Society. Su presidente es William H. Conley (<a href=\"https://www.jw.org/en/library/books/Jehovahs-Witnesses-Proclaimers-of-Gods-Kingdom/Kingdom-Preaching-Furthered-by-Production-of-Bible-Literature/Producing-Bible-Literature-for-Use-in-the-Ministry/\" target=\"_blank\" rel=\"noopener\"><em>Proclamadores</em>, 1993, pp. 575-576</a>)."
+            ],
+            [
+              "Constitución legal",
+              "15 de diciembre de 1884",
+              "La sociedad se incorpora en Pensilvania, con Russell como presidente. La Enciclopedia Británica sitúa aquí su fundación."
+            ],
+            [
+              "Traslado a Brooklyn",
+              "1909",
+              "La sede pasa a Brooklyn y se constituye una entidad en Nueva York."
+            ],
+            [
+              "Nombre actual",
+              "26 de julio de 1931",
+              "Se adopta «Testigos de Jehová»."
+            ]
+          ]
+        }
+      ],
+      "subsecciones": []
+    },
+    {
+      "id": "russell",
+      "titulo": "¿Quién fue Charles Taze Russell?",
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "html": "Fue un editor y dirigente religioso estadounidense. Nació el 16 de febrero de 1852 en Allegheny (Pensilvania) y murió el 31 de octubre de 1916 cerca de Pampa (Texas). Fue el editor de la revista, el presidente de la sociedad desde 1884 hasta su muerte y el autor de una serie de seis volúmenes publicada entre 1886 y 1904, que primero se llamó <em>Millennial Dawn</em> y después <em>Studies in the Scriptures</em>."
+        },
+        {
+          "tipo": "parrafo",
+          "html": "Sus seguidores se llamaron Estudiantes de la Biblia. Russell nunca usó «Testigos de Jehová» para su grupo: ese nombre no existía todavía."
+        },
+        {
+          "tipo": "parrafo",
+          "html": "Antes de la revista, hacia 1870, escuchó al predicador adventista Jonas Wendell y, entre 1876 y 1878, colaboró con otro predicador adventista, Nelson Barbour. Después rompieron por desacuerdos sobre la cronología profética y el sentido de la muerte de Cristo."
+        }
+      ],
+      "subsecciones": []
+    },
+    {
+      "id": "muerte",
+      "titulo": "¿Cómo murió y dónde está enterrado Charles Taze Russell?",
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "html": "Murió el 31 de octubre de 1916, a los 64 años, en un tren cerca de Pampa (Texas), y está enterrado en el cementerio de Rosemont (United Cemeteries), en el área de Pittsburgh. Según la historia oficial de los Testigos de Jehová, estaba gravemente enfermo. No damos una causa de la muerte porque no hemos podido abrir las noticias de la época ni un certificado médico."
+        },
+        {
+          "tipo": "parrafo",
+          "html": "El monumento piramidal al que a veces se llama «su tumba» no era su lápida, y además ya no está: lo explicamos más abajo."
+        }
+      ],
+      "subsecciones": []
+    },
+    {
+      "id": "consta",
+      "titulo": "Lo que se dice de Russell y lo que consta",
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "html": "Sobre Russell circulan muchas afirmaciones en internet. Hemos contrastado las afirmaciones más repetidas con documentos de la época: sentencias de 1908 y 1915, números originales de <em>The Watch Tower</em>, un informe de convención de 1919 y publicaciones de los Testigos de Jehová. Lo que no hemos podido abrir en el original, lo decimos."
+        },
+        {
+          "tipo": "tabla",
+          "titulo": "Seis cosas que se dicen de Russell y qué hay de cierto",
+          "cabecera": [
+            "Se dice que",
+            "Qué hay de cierto",
+            "Fuente"
+          ],
+          "filas": [
+            [
+              "«Era masón»",
+              "No hemos localizado ninguna documentación que acredite que lo fuera. Él mismo dijo en 1913 que nunca lo había sido y en 1895 escribió contra las sociedades secretas.",
+              "<a href=\"https://watchtowerdocuments.org/was-pastor-charles-taze-russell-a-freemason/\" target=\"_blank\" rel=\"noopener\">Discurso de 1913</a> (copias recompuestas); <a href=\"https://archive.org/details/magazines-zions-watchtower-and-herald-christ-presence-1895\" target=\"_blank\" rel=\"noopener\"><em>Zion's Watch Tower</em>, 15-6-1895, p. 143</a>."
+            ],
+            [
+              "«La tumba de Russell es una pirámide»",
+              "La pirámide no era su lápida y ya no está: se retiró en 2021. Se proyectó en 1919 en la parcela que la Sociedad Watch Tower tenía en el cementerio. Su forma copia la Gran Pirámide de Guiza, que Russell interpretaba como una profecía en piedra.",
+              "<a href=\"https://watchtowerdocuments.org/wp-content/documents/1919_Souvenir_Notes_of_ISBA_Convention_Report.pdf\" target=\"_blank\" rel=\"noopener\">Informe de la convención de Pittsburgh (1919)</a>; <a href=\"https://www.thestudiesinthescriptures.com/Pages/English/Eng%20V3/Eng%20Vol%203%20TC%20Fwd.htm\" target=\"_blank\" rel=\"noopener\"><em>Estudios de las Escrituras</em>, vol. 3 (1891)</a>."
+            ],
+            [
+              "«Estafó vendiendo trigo»",
+              "Promovió un «trigo milagroso» a un dólar la libra; según el fallo de 1915, informes oficiales admitidos como prueba tendían a indicar que no rendía más que el trigo común. Demandó por difamación al <em>Brooklyn Daily Eagle</em> por una viñeta y perdió.",
+              "<a href=\"https://law.justia.com/cases/new-york/appellate-division/1915/168-ad-121.html\" target=\"_blank\" rel=\"noopener\">Sentencia de 1915</a>."
+            ],
+            [
+              "«No sabía griego»",
+              "En 1914 negó haber alegado un conocimiento especial de griego o hebreo. La anécdota del alfabeto procede del folleto de su adversario Ross.",
+              "<a href=\"https://archive.org/details/magazines-the-watchtower-and-herald-christ-presence-1914\" target=\"_blank\" rel=\"noopener\"><em>The Watch Tower</em>, 15-9-1914, p. 287</a>; <a href=\"https://watchtowerdocuments.org/wp-content/documents/1913_Some_More_Facts_About_Russell_.pdf\" target=\"_blank\" rel=\"noopener\">folleto de Ross (1913)</a>."
+            ],
+            [
+              "«Era un pastor ordenado»",
+              "No lo era: lo dice la sentencia de 1915.",
+              "<a href=\"https://law.justia.com/cases/new-york/appellate-division/1915/168-ad-121.html\" target=\"_blank\" rel=\"noopener\">Sentencia de 1915</a>."
+            ],
+            [
+              "«Su esposa lo llevó a juicio»",
+              "Sí. Un jurado falló a favor de Maria Russell por «indignidades personales» y la apelación de 1908 confirmó el fallo. La sentencia describe su conducta hacia ella como «dominación arrogante continua».",
+              "<a href=\"https://app.midpage.ai/document/russell-v-russell-6276026\" target=\"_blank\" rel=\"noopener\"><em>Russell v. Russell</em>, 37 Pa. Super. 348 (1908)</a>."
+            ]
+          ]
+        }
+      ],
+      "subsecciones": []
+    },
+    {
+      "id": "piramide",
+      "titulo": "¿Por qué hay una pirámide junto a su tumba?",
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "html": "Porque la Sociedad Watch Tower proyectó allí un monumento piramidal, y Russell creía que la Gran Pirámide de Guiza era una profecía en piedra. Russell está sepultado en el cementerio de Rosemont, en el área de Pittsburgh. La pirámide nunca fue su lápida y hoy ya no está: se retiró en 2021. Cuatro datos ayudan a entender qué fue:"
+        },
+        {
+          "tipo": "lista",
+          "items": [
+            {
+              "etiqueta": "No es su lápida.",
+              "html": "<a href=\"https://watchtowerdocuments.org/wp-content/documents/1919_Souvenir_Notes_of_ISBA_Convention_Report.pdf\" target=\"_blank\" rel=\"noopener\">El informe de la convención de Pittsburgh de enero de 1919</a> distingue la tumba de Russell del monumento piramidal que se proyectaba en el centro de la parcela que la Sociedad Watch Tower tenía en el cementerio. En aquel momento aún no estaba construido."
+            },
+            {
+              "etiqueta": "Lo diseñó John A. Bohnet.",
+              "html": "Así lo dice el propio informe. El año en que se terminó no lo hemos podido cerrar: las fuentes dan 1919 o 1921."
+            },
+            {
+              "etiqueta": "Imita la Gran Pirámide de Guiza.",
+              "html": "Su remate reproduce el de la pirámide egipcia, que Russell interpretaba como símbolo de Cristo."
+            },
+            {
+              "etiqueta": "Ya no está.",
+              "html": "El monumento fue retirado en 2021, después de sufrir actos vandálicos. Su lápida, distinta del monumento, sigue en el cementerio (<a href=\"https://www.findagrave.com/memorial/5591/charles_taze-russell\" target=\"_blank\" rel=\"noopener\">Find a Grave</a>; <a href=\"https://freemasonry.bcy.ca/biography/russell_c/pyramid_monument.html\" target=\"_blank\" rel=\"noopener\">Gran Logia de Columbia Británica y Yukon</a>)."
+            }
+          ]
+        },
+        {
+          "tipo": "parrafo",
+          "html": "Russell sí creía en la pirámide. En <a href=\"https://www.thestudiesinthescriptures.com/Pages/English/Eng%20V3/Eng%20Vol%203%20TC%20Fwd.htm\" target=\"_blank\" rel=\"noopener\"><em>Venga a nos tu Reino</em> (1891)</a> dedicó un capítulo entero, «El testimonio del testigo y profeta de piedra de Dios, la Gran Pirámide de Egipto». Sostenía que sus pasillos y medidas ilustraban el plan de Dios. En esa idea seguía a estudiosos de la época, como John Taylor (1859) y Charles Piazzi Smyth (1864; <a href=\"https://archive.org/details/ourinheritancein00smytuoft\" target=\"_blank\" rel=\"noopener\">edición de 1874</a>)."
+        },
+        {
+          "tipo": "parrafo",
+          "html": "Después de su muerte, la revista cambió de postura. En <em>The Watch Tower</em> del 15 de noviembre de 1928 (p. 344, artículo «The Altar in Egypt», <a href=\"https://watchtowerdocuments.org/?p=3884\" target=\"_blank\" rel=\"noopener\">citado por WatchtowerDocuments</a>, una web crítica que recopila documentos originales) la pirámide pasó a ser «Biblia de Satanás», y no «testigo de piedra de Dios». Es una interpretación religiosa de la revista, no un hecho arqueológico."
+        },
+        {
+          "tipo": "destacado",
+          "html": "La forma de pirámide se explica por lo que Russell creía de la Gran Pirámide. Ni siquiera la <a href=\"https://freemasonry.bcy.ca/biography/russell_c/pyramid_monument.html\" target=\"_blank\" rel=\"noopener\">Gran Logia de Columbia Británica y Yukon</a> considera masónico el monumento: dice que esa idea es errónea."
+        }
+      ],
+      "subsecciones": []
+    },
+    {
+      "id": "mason",
+      "titulo": "¿Era masón Charles Taze Russell?",
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "html": "No hemos localizado ninguna documentación que acredite que Russell fuera masón. Que no la hayamos localizado no prueba por sí solo que nunca lo fuera, pero tampoco hay base para afirmarlo."
+        },
+        {
+          "tipo": "parrafo",
+          "html": "Se citan cartas de logias que dirían que no figura en sus registros. Solo hemos visto transcripciones de esas cartas, no los escaneos, y la Gran Logia de Pensilvania respondió en 2001 que sus libros de registro no estaban entonces disponibles. Por eso no las damos como prueba en ningún sentido."
+        },
+        {
+          "tipo": "parrafo",
+          "html": "Lo que sí consta es lo que escribió. En <a href=\"https://archive.org/details/magazines-zions-watchtower-and-herald-christ-presence-1895\" target=\"_blank\" rel=\"noopener\"><em>Zion's Watch Tower</em> del 15 de junio de 1895 (p. 143)</a> criticó las sociedades secretas, con mención expresa de la masonería, y sostuvo que tienen «algún objeto o plan secreto» más allá de la fraternidad."
+        },
+        {
+          "tipo": "parrafo",
+          "html": "La duda nace en parte de un discurso de junio de 1913 en San Francisco, recogido en el informe de la convención. Russell usó el lenguaje de la masonería como imagen y habló de una «masonería bíblica» aplicada a los creyentes; en el mismo discurso dijo que nunca había sido masón. Solo hemos podido ver copias recompuestas del texto, no un facsímil de imprenta, así que no reproducimos frases literales."
+        },
+        {
+          "tipo": "parrafo",
+          "html": "Los Estudiantes de la Biblia sí usaron símbolos que también aparecen en la masonería, como la cruz y la corona. Es un símbolo cristiano muy anterior, que usan muchas iglesias, y los Testigos de Jehová lo dejaron más tarde. Compartir un símbolo no prueba pertenencia."
+        }
+      ],
+      "subsecciones": []
+    },
+    {
+      "id": "trigo",
+      "titulo": "El trigo milagroso y el pleito con el Brooklyn Daily Eagle",
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "html": "Fue un trigo que la revista de Russell ofreció a sus lectores en 1911 como mucho más productivo que el común: decía que rendía diez o quince veces más. Según la sentencia, lo vendía un asociado suyo a un dólar la libra, con la promesa de dar todos los ingresos a una sociedad que Russell controlaba. Un <a href=\"https://law.justia.com/cases/new-york/appellate-division/1915/168-ad-121.html\" target=\"_blank\" rel=\"noopener\">tribunal de 1915</a> recogió que informes oficiales tendían a indicar lo contrario."
+        },
+        {
+          "tipo": "parrafo",
+          "html": "El <em>Brooklyn Daily Eagle</em> publicó una viñeta («Easy Money Puzzle»), fechada en septiembre de 1911 según la demanda, que comparaba a Russell con los directores de un banco quebrado y daba a entender que vendía el trigo de forma deshonesta. Russell demandó al periódico por difamación."
+        },
+        {
+          "tipo": "parrafo",
+          "html": "Durante el juicio se admitieron como prueba informes del Departamento de Agricultura de Estados Unidos. Según el tribunal, esos informes tendían a indicar que el trigo milagroso no era más productivo que el trigo corriente y que otros trigos se vendían mucho más baratos. El jurado dio la razón al periódico, que alegó que lo que decía era verdad. El 7 de mayo de 1915 el <a href=\"https://law.justia.com/cases/new-york/appellate-division/1915/168-ad-121.html\" target=\"_blank\" rel=\"noopener\">Tribunal de Apelación de Nueva York</a> confirmó la sentencia. Consideró que la viñeta era difamatoria en abstracto, pero dejó al jurado decidir si lo que insinuaba era cierto."
+        },
+        {
+          "tipo": "parrafo",
+          "html": "Lo que la sentencia no hace es declarar a Russell culpable de ningún delito, y no hemos localizado ninguna causa penal contra él por este episodio. Es una búsqueda en índices judiciales y prensa digitalizada, que no equivale a una prueba de que no existiera."
+        }
+      ],
+      "subsecciones": []
+    },
+    {
+      "id": "hamilton",
+      "titulo": "¿Sabía griego? ¿Estaba ordenado? El pleito de Hamilton",
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "html": "Ordenado, no: lo dice la <a href=\"https://law.justia.com/cases/new-york/appellate-division/1915/168-ad-121.html\" target=\"_blank\" rel=\"noopener\">sentencia de 1915</a>. De su griego no hay prueba directa. La anécdota de que no supo leer el alfabeto viene de su adversario Ross, y Russell negó haber alegado un conocimiento especial."
+        },
+        {
+          "tipo": "parrafo",
+          "html": "En 1912, un pastor baptista de Hamilton (Ontario), John Jacob Ross, difundió un folleto contra Russell. Russell lo denunció por libelo y se celebró una vista en marzo de 1913."
+        },
+        {
+          "tipo": "parrafo",
+          "html": "En un <a href=\"https://watchtowerdocuments.org/wp-content/documents/1913_Some_More_Facts_About_Russell_.pdf\" target=\"_blank\" rel=\"noopener\">segundo folleto</a>, Ross cuenta que en la vista el abogado entregó a Russell un Nuevo Testamento griego de Westcott y Hort y le pidió leer las letras del alfabeto, y que Russell no supo hacerlo. Es la versión de Ross, parte contraria en el caso. No hemos podido abrir el acta de la vista."
+        },
+        {
+          "tipo": "parrafo",
+          "html": "Russell respondió en <a href=\"https://archive.org/details/magazines-the-watchtower-and-herald-christ-presence-1914\" target=\"_blank\" rel=\"noopener\"><em>The Watch Tower</em> del 15 de septiembre de 1914</a> que no alegaba un conocimiento especial de ninguna de las dos lenguas, hebreo y griego. En esa misma publicación contó que el caso se había desestimado. No hemos encontrado el acta del tribunal que lo confirme."
+        },
+        {
+          "tipo": "parrafo",
+          "html": "Russell se presentaba como «pastor». La sentencia de 1915 sobre el trigo lo describe como «un predicador sin ordenar»."
+        }
+      ],
+      "subsecciones": []
+    },
+    {
+      "id": "matrimonio",
+      "titulo": "Su matrimonio y el juicio de 1908",
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "html": "Sí: su esposa, Maria, lo llevó a juicio y el tribunal de apelación confirmó en 1908 el fallo a su favor. Russell se había casado con Maria Frances Ackley en 1879 y se separaron en 1897. Entre los motivos que se citan están las discrepancias sobre la dirección de la revista."
+        },
+        {
+          "tipo": "parrafo",
+          "html": "Un jurado falló a favor de Maria por «indignidades personales», y el Tribunal Superior de Pensilvania confirmó el fallo el 19 de octubre de 1908 (<a href=\"https://app.midpage.ai/document/russell-v-russell-6276026\" target=\"_blank\" rel=\"noopener\"><em>Russell v. Russell</em>, 37 Pa. Super. 348</a>). La sentencia describe la conducta de Russell hacia su esposa como «dominación arrogante continua»."
+        },
+        {
+          "tipo": "parrafo",
+          "html": "No hemos podido consultar el expediente de primera instancia: los testimonios, el decreto inicial ni la pensión. En redes circulan acusaciones más graves sobre su vida privada. Ninguna está respaldada por un documento que hayamos podido abrir, y por eso no las repetimos."
+        }
+      ],
+      "subsecciones": []
+    },
+    {
+      "id": "fecha1914",
+      "titulo": "¿Qué profetizó Russell sobre 1914?",
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "html": "Russell llevaba años señalando esa fecha. En 1889, en el <a href=\"http://www.thestudiesinthescriptures.com/Pages/English/Eng%20V2/Eng%20Vol%202%20Ch%204.htm\" target=\"_blank\" rel=\"noopener\">segundo volumen de sus <em>Estudios de las Escrituras</em></a>, escribió que en 1914 terminarían por completo los «tiempos de los gentiles» y que eso traería «la desintegración del gobierno de hombres imperfectos». Los Estudiantes de la Biblia esperaron 1914 durante décadas como una fecha clave."
+        },
+        {
+          "tipo": "parrafo",
+          "html": "Según la historia oficial de los Testigos de Jehová, la mayoría de los presentes en la reunión de octubre de aquel año llevaba años esperándolo. El 2 de octubre, Russell dijo al entrar en el comedor que los tiempos de los gentiles habían terminado y que sus reyes habían tenido su día. Algunos miembros pensaban que irían al cielo ese mes. No ocurrió."
+        },
+        {
+          "tipo": "parrafo",
+          "html": "Con el tiempo, la fecha se reinterpretó. Hoy los Testigos de Jehová enseñan que en 1914 <a href=\"https://wol.jw.org/es/wol/d/r4/lp-s/1102021232\" target=\"_blank\" rel=\"noopener\">«Jesús comienza a gobernar en el cielo como Rey del Reino de Dios»</a>, algo que no se ve en la tierra. En su relato reconocen que entonces aún tenían cosas que aprender sobre el significado de ese año."
+        }
+      ],
+      "subsecciones": []
+    },
+    {
+      "id": "historia",
+      "titulo": "De los grupos de estudio al nombre actual: cronología",
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "html": "Así se encadenan los hechos, en orden."
+        }
+      ],
+      "subsecciones": [
+        {
+          "titulo": "Hacia 1870: un grupo de estudio bíblico en Allegheny",
+          "bloques": [
+            {
+              "tipo": "parrafo",
+              "html": "Russell nació el 16 de febrero de 1852 en Allegheny (Pensilvania), hoy integrada en Pittsburgh. Hacia 1870, siendo adolescente, participó con otras personas en un grupo para estudiar la Biblia por su cuenta. Es el origen que suelen citar las biografías; la respuesta oficial de los Testigos de Jehová no lo fecha y habla de unos estudiantes de la Biblia de Pittsburgh a finales del siglo XIX."
+            }
+          ]
+        },
+        {
+          "titulo": "1879: aparece la revista Zion's Watch Tower",
+          "bloques": [
+            {
+              "tipo": "parrafo",
+              "html": "En julio de 1879 empezó a publicarse la revista que Russell editaba, <a href=\"https://archive.org/details/magazines-zions-watchtower-and-herald-christ-presence-1879\" target=\"_blank\" rel=\"noopener\"><em>Zion's Watch Tower and Herald of Christ's Presence</em></a>. Es la antecesora de <em>La Atalaya</em>, que se sigue publicando."
+            }
+          ]
+        },
+        {
+          "titulo": "1881–1884: se forma y se constituye la sociedad",
+          "bloques": [
+            {
+              "tipo": "parrafo",
+              "html": "El 16 de febrero de 1881 se formó en Pittsburgh la Zion's Watch Tower Tract Society, para sostener la publicación y la distribución de textos. Su primer presidente fue William H. Conley (<a href=\"https://www.jw.org/en/library/books/Jehovahs-Witnesses-Proclaimers-of-Gods-Kingdom/Kingdom-Preaching-Furthered-by-Production-of-Bible-Literature/Producing-Bible-Literature-for-Use-in-the-Ministry/\" target=\"_blank\" rel=\"noopener\"><em>Proclamadores</em>, pp. 575-576</a>). En diciembre de 1884 la sociedad se constituyó legalmente en Pensilvania y Russell pasó a ser presidente, cargo que mantuvo hasta su muerte. En 1896 cambió su nombre a Watch Tower Bible and Tract Society (<a href=\"https://www.jw.org/en/library/books/Jehovahs-Witnesses-Proclaimers-of-Gods-Kingdom/Kingdom-Preaching-Furthered-by-Production-of-Bible-Literature/Printing-and-Distributing-Gods-Own-Sacred-Word/\" target=\"_blank\" rel=\"noopener\"><em>Proclamadores</em>, p. 603</a>)."
+            },
+            {
+              "tipo": "parrafo",
+              "html": "La <a href=\"https://www.britannica.com/biography/Charles-Taze-Russell\" target=\"_blank\" rel=\"noopener\">Enciclopedia Británica</a> atribuye a Russell la fundación de la sociedad en 1884; otras fuentes distinguen 1881 y 1884. La diferencia es de criterio, no de hechos."
+            }
+          ]
+        },
+        {
+          "titulo": "1909: la sede se traslada a Brooklyn",
+          "bloques": [
+            {
+              "tipo": "parrafo",
+              "html": "En 1909 las oficinas centrales pasaron a Brooklyn, y ese año se constituyó en Nueva York la People's Pulpit Association, hoy Watchtower Bible and Tract Society of New York. Desde entonces hay varias entidades legales vinculadas; la de Pensilvania, que lleva ese nombre desde 1955, es hoy la principal."
+            }
+          ]
+        },
+        {
+          "titulo": "1916–1917: muere Russell y Rutherford asume la presidencia",
+          "bloques": [
+            {
+              "tipo": "parrafo",
+              "html": "Russell murió el 31 de octubre de 1916 cerca de Pampa (Texas), en un tren de regreso a Brooklyn. El 6 de enero de 1917, el abogado Joseph F. Rutherford fue elegido presidente de la sociedad en la reunión anual de Pittsburgh; la historia oficial de los Testigos de Jehová habla de una elección unánime."
+            },
+            {
+              "tipo": "parrafo",
+              "html": "Ese mismo año hubo una disputa por el control de la sociedad. Rutherford sustituyó a cuatro miembros de la junta directiva: sostuvo que no ocupaban legalmente sus puestos, y ellos defendieron lo contrario. Cada parte publicó su versión en 1917. Rutherford lo hizo en el folleto <em>Harvest Siftings</em>; los directores apartados (R. H. Hirsh, I. F. Hoskins, A. I. Ritchie y J. D. Wright) le respondieron en <a href=\"https://watchtowerdocuments.org/wp-content/documents/1917_Light_After_Darkness.pdf\" target=\"_blank\" rel=\"noopener\"><em>Light After Darkness</em></a>. La disputa dividió a los Estudiantes de la Biblia."
+            }
+          ]
+        },
+        {
+          "titulo": "1931: se adopta el nombre «Testigos de Jehová»",
+          "bloques": [
+            {
+              "tipo": "parrafo",
+              "html": "El 26 de julio de 1931, en <a href=\"https://wol.jw.org/en/wol/d/r1/lp-e/1101993013\" target=\"_blank\" rel=\"noopener\">una convención en Columbus (Ohio)</a>, se aprobó una resolución para que los seguidores de la sociedad se conocieran como Testigos de Jehová. Otras ramas del movimiento siguieron llamándose Estudiantes de la Biblia."
+            }
+          ]
+        },
+        {
+          "titulo": "1932–1938: los nombramientos pasan a la sede",
+          "bloques": [
+            {
+              "tipo": "parrafo",
+              "html": "Bajo Rutherford cambió también la forma de dirigir las congregaciones. Hasta entonces, cada congregación elegía a sus ancianos por votación. En 1932 ese sistema se eliminó: los ancianos electivos <a href=\"https://wol.jw.org/es/wol/d/r4/lp-s/1983644\" target=\"_blank\" rel=\"noopener\">«fueron reemplazados por un comité de servicio compuesto de hermanos maduros»</a>, según contó <em>La Atalaya</em> en 1984. Y desde 1938, según la misma revista, «la Sociedad nombró directamente a hombres capacitados». Es decir, los nombramientos dejaron de decidirse en cada congregación y pasaron a hacerse desde la sede."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "versiones",
+      "titulo": "¿Qué dicen los Testigos de Jehová y los historiadores?",
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "html": "Los Testigos de Jehová dicen que su fundador es Jesús; los historiadores, que los orígenes están en Russell y en los Estudiantes de la Biblia."
+        },
+        {
+          "tipo": "parrafo",
+          "html": "<strong>Los Testigos de Jehová.</strong> En su <a href=\"https://www.jw.org/es/testigos-de-jehov%C3%A1/preguntas-frecuentes/fundador/\" target=\"_blank\" rel=\"noopener\">sección de preguntas frecuentes</a> explican que Russell fue el primer editor de <em>La Atalaya</em> y dirigió la obra de educación bíblica de un grupo de estudiantes de la Biblia cercano a Pittsburgh, pero no lo consideran el fundador de una religión nueva. Razonan que, como Jesús es el fundador del cristianismo, también lo es de su organización, y apoyan esa idea en Colosenses 1:18-20. Es una explicación religiosa: atribuye la fundación a un origen espiritual, no a un hecho histórico fechable."
+        },
+        {
+          "tipo": "parrafo",
+          "html": "<strong>Los historiadores y las obras de referencia.</strong> Miden la fundación con hechos verificables: quién publicó qué, cuándo se constituyó la sociedad y cuándo se adoptó el nombre. Con ese criterio, los orígenes están en los Estudiantes de la Biblia de Russell, y el nombre actual llega con Rutherford. Según el resumen de David L. DeHart para <a href=\"https://www.ebsco.com/research-starters/religion-and-philosophy/international-bible-students-association-becomes-jehovahs\" target=\"_blank\" rel=\"noopener\">EBSCO Research Starters</a> (2021), esa etapa permitió a Rutherford concentrar la autoridad en la sociedad, en una estructura que pasó de ser algo democrática a cada vez más teocrática. Entre los estudios académicos sobre el movimiento están los libros de George D. Chryssides (<a href=\"https://www.routledge.com/Jehovahs-Witnesses-Continuity-and-Change/Chryssides/p/book/9781138548787\" target=\"_blank\" rel=\"noopener\"><em>Jehovah's Witnesses: Continuity and Change</em></a>) y de M. James Penton (<a href=\"https://www.jstor.org/stable/10.3138/j.ctt13x1qs2\" target=\"_blank\" rel=\"noopener\"><em>Apocalypse Delayed</em></a>)."
+        },
+        {
+          "tipo": "destacado",
+          "html": "Las dos respuestas contestan a preguntas distintas. Los Testigos de Jehová hablan de su fundamento religioso; los historiadores, de cómo y cuándo apareció el grupo. Una no invalida a la otra."
+        }
+      ],
+      "subsecciones": []
+    },
+    {
+      "id": "nombre",
+      "titulo": "¿Por qué se llaman Testigos de Jehová?",
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "html": "Porque en 1931 adoptaron ese nombre a partir de Isaías 43:8-12, el pasaje en el que se apoyó la resolución. Se presentó el 26 de julio de 1931 en la convención de Columbus (Ohio), que se celebró del 24 al 30 de julio, y la presentó Rutherford."
+        },
+        {
+          "tipo": "lista",
+          "items": [
+            {
+              "etiqueta": "Qué decía la resolución.",
+              "html": "Declaraba inadecuado el nombre «Estudiantes de la Biblia» y pedía un nombre que no estuviera ligado a ninguna persona, Russell incluido."
+            },
+            {
+              "etiqueta": "Por qué se hizo.",
+              "html": "La explicación que se dio fue reducir la confusión pública entre los distintos grupos surgidos del movimiento."
+            },
+            {
+              "etiqueta": "Quién lo adoptó.",
+              "html": "El grupo vinculado a la Watch Tower Society. Otras ramas conservaron el nombre de Estudiantes de la Biblia."
+            }
+          ]
+        }
+      ],
+      "subsecciones": []
+    },
+    {
+      "id": "estudiantes",
+      "titulo": "¿Qué pasó con los demás Estudiantes de la Biblia?",
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "html": "Se dividieron. La muerte de Russell y la elección de Rutherford, en 1916 y 1917, abrieron una división: varios grupos siguieron por separado y algunos continúan hoy."
+        },
+        {
+          "tipo": "tabla",
+          "titulo": "Algunos grupos que siguieron como Estudiantes de la Biblia",
+          "cabecera": [
+            "Grupo",
+            "Año",
+            "Qué se sabe",
+            "¿Sigue hoy?"
+          ],
+          "filas": [
+            [
+              "Pastoral Bible Institute",
+              "1918",
+              "Se organizó en Brooklyn y publicó la revista <em>The Herald of Christ's Kingdom</em>.",
+              "Sí. Su revista sigue saliendo (<a href=\"https://www.herald-magazine.com/\" target=\"_blank\" rel=\"noopener\">último número: septiembre-octubre de 2026</a>)."
+            ],
+            [
+              "Stand Fast Bible Students Association",
+              "1918",
+              "Surgió en Portland (Oregón) por discrepancias con Rutherford sobre los bonos de guerra. Se disolvió.",
+              "No."
+            ],
+            [
+              "Laymen's Home Missionary Movement",
+              "1919",
+              "Lo fundó Paul S. L. Johnson.",
+              "Según <a href=\"https://en.wikipedia.org/wiki/Laymen%27s_Home_Missionary_Movement\" target=\"_blank\" rel=\"noopener\">Wikipedia</a>, sí, con unos 15.000 miembros; no hemos encontrado actividad reciente que lo confirme."
+            ],
+            [
+              "Dawn Bible Students Association",
+              "1931",
+              "Se creó para reanudar la publicación de <em>Studies in the Scriptures</em>.",
+              "Sí. Mantiene revista, programas y convenciones (<a href=\"https://www.dawnbible.com/\" target=\"_blank\" rel=\"noopener\">su web</a>; <a href=\"https://www.thearda.com/us-religion/group-profiles/groups?D=1006\" target=\"_blank\" rel=\"noopener\">ARDA</a>)."
+            ]
+          ]
+        },
+        {
+          "tipo": "parrafo",
+          "html": "Así que los Testigos de Jehová no son los únicos herederos de Russell. Más de un siglo después de la división, siguen existiendo grupos que salieron del mismo tronco y no son Testigos de Jehová: se siguen llamando Estudiantes de la Biblia, leen los escritos de Russell y no reconocen la autoridad de la Watch Tower. Además de estas organizaciones, hay <a href=\"https://en.wikipedia.org/wiki/Bible_Student_movement\" target=\"_blank\" rel=\"noopener\">congregaciones independientes</a> que funcionan por su cuenta, sin depender de ninguna sede. Son grupos pequeños y no hemos encontrado cifras actuales fiables de cuántas personas los forman."
+        }
+      ],
+      "subsecciones": [
+        {
+          "titulo": "Cuántas personas se fueron: una cifra discutida",
+          "bloques": [
+            {
+              "tipo": "parrafo",
+              "html": "No hay una cifra fiable. Las estimaciones varían mucho según quién las da: los Testigos de Jehová, antiguos miembros y estudiosos ajenos llegan a números muy distintos, y ninguna se ha podido contrastar con documentos de la época. Por eso no damos una cifra como si fuera un dato firme."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "origen",
+      "titulo": "¿De dónde son los Testigos de Jehová?",
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "html": "Del este de Estados Unidos. El movimiento nace en la zona de Pittsburgh y Allegheny, en Pensilvania, en la segunda mitad del siglo XIX. En 1909 la sede se trasladó a Brooklyn (Nueva York). Hoy la entidad legal principal sigue constituida en Pensilvania y tiene su sede en Warwick (Nueva York)."
+        }
+      ],
+      "subsecciones": []
+    },
+    {
+      "id": "mirada-aevtj",
+      "titulo": "Si quieres entender de dónde viene lo que te enseñaron",
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "html": "Dentro de la organización, la historia se aprende casi siempre de una sola fuente: sus propias publicaciones, como el libro <em>Proclamadores</em>. Al salir, mucha gente descubre cosas que no conocía: el juicio por el trigo milagroso, la sentencia sobre el matrimonio de Russell o las fechas que se esperaban y no se cumplieron."
+        },
+        {
+          "tipo": "parrafo",
+          "html": "Y mirar fuera no es fácil. Durante años se ha insistido en no buscar esa información. En 2018, <em>La Atalaya</em> lo decía así: <a href=\"https://wol.jw.org/es/wol/d/r4/lp-s/2018524\" target=\"_blank\" rel=\"noopener\">«Sobre todo, es importante que evitemos las páginas de Internet que promueven los apóstatas»</a>. Por eso, leer otra versión de la historia puede dar miedo o sentirse como una traición."
+        },
+        {
+          "tipo": "parrafo",
+          "html": "Es normal sentir sorpresa, rabia o alivio, o todo a la vez. No hace falta procesarlo de golpe. Puedes ir poco a poco, contrastar cada dato y quedarte con lo que esté demostrado."
+        },
+        {
+          "tipo": "parrafo",
+          "html": "Si estás en ese proceso, aquí hay personas que lo entienden porque pasaron por lo mismo. Cuando quieras hablar de ello, puedes <a href=\"/contacto/\">escribirnos</a>."
+        }
+      ],
+      "subsecciones": []
+    },
+    {
+      "id": "fuentes",
+      "titulo": "Fuentes",
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "html": "Los números del texto remiten a esta bibliografía: cada fuente se lista una sola vez, por más veces que se cite. Donde una fuente tiene límites (una sola versión de los hechos, transcripciones sin escaneos), lo decimos junto a su entrada."
+        },
+        {
+          "tipo": "lista",
+          "items": [
+            {
+              "etiqueta": "Obras y recursos consultados para ampliar",
+              "html": ": la <a href=\"https://journals.psu.edu/wph/article/view/3986\" target=\"_blank\" rel=\"noopener\">biografía de Vandenberg en <em>Western Pennsylvania History</em> (1986)</a>; la <a href=\"https://www.canadiana.ca/view/oocihm.87677\" target=\"_blank\" rel=\"noopener\">ficha del folleto de Ross en Canadiana</a>; <a href=\"https://pittsburghcemeteries.com/?p=1448\" target=\"_blank\" rel=\"noopener\">Pittsburgh Cemeteries</a>, sobre el cementerio; la <a href=\"https://freemasonry.bcy.ca/biography/russell_c/russell_c.html\" target=\"_blank\" rel=\"noopener\">ficha de Russell en la Gran Logia de Columbia Británica y Yukon</a>; la <a href=\"https://watchtowerdocuments.org/?p=90274\" target=\"_blank\" rel=\"noopener\">cronología de WatchtowerDocuments.org</a> (1870-2024), web crítica con la organización que recopila documentos originales; y los artículos de Wikipedia sobre la <a href=\"https://en.wikipedia.org/wiki/Watch_Tower_Bible_and_Tract_Society_of_Pennsylvania\" target=\"_blank\" rel=\"noopener\">Watch Tower Bible and Tract Society de Pensilvania</a>, las <a href=\"https://en.wikipedia.org/wiki/Corporations_of_Jehovah%27s_Witnesses\" target=\"_blank\" rel=\"noopener\">corporaciones de los Testigos de Jehová</a>, <a href=\"https://en.wikipedia.org/wiki/Charles_Taze_Russell\" target=\"_blank\" rel=\"noopener\">Charles Taze Russell</a>, el <a href=\"https://en.wikipedia.org/wiki/Bible_Student_movement\" target=\"_blank\" rel=\"noopener\">movimiento de los Estudiantes de la Biblia</a> y <a href=\"https://en.wikipedia.org/wiki/Joseph_Franklin_Rutherford\" target=\"_blank\" rel=\"noopener\">Joseph F. Rutherford</a>."
+            }
+          ]
+        },
+        {
+          "tipo": "parrafo",
+          "html": "Revisado el 18 de octubre de 2026. Hemos cotejado con los textos originales la formación de la sociedad en 1881, su constitución en 1884 y el cambio de nombre de 1896 (<em>Los testigos de Jehová, proclamadores del Reino de Dios</em>, 1993, pp. 575-576 y 603; Rutherford, 1915), el primer número de <em>Zion's Watch Tower</em> (julio de 1879), la resolución del nombre en <em>The Watch Tower</em> del 1 de octubre de 1931 (artículo «A New Name», pp. 291-297) y el traslado a Brooklyn en 1909. Son fuentes de la propia sociedad, por lo que muestran su versión. Del discurso masónico de 1913 solo hemos visto copias recompuestas del texto, y de las cartas de las logias solo transcripciones. No hemos consultado el acta de incorporación de 1884, los libros de Chryssides y Penton, el acta de la vista de Hamilton, los artículos del <em>Brooklyn Daily Eagle</em>, el programa de 1921 del monumento ni el expediente de primera instancia del juicio de 1908. Sobre el monumento piramidal, la retirada de 2021 consta en Find a Grave y en la página de la Gran Logia de Columbia Británica y Yukon. También hemos cotejado en el original el capítulo de Russell sobre 1914 (1889; la traducción de las citas es nuestra), el folleto <em>Light After Darkness</em> (1917), <em>La Atalaya</em> del 15 de enero de 1984 sobre los ancianos electivos y la de agosto de 2018 sobre las páginas de apóstatas. De <em>Harvest Siftings</em> no hemos consultado el original."
+        }
+      ],
+      "subsecciones": []
+    }
+  ],
+  "preguntas": [
+    {
+      "pregunta": "¿Quién fundó los Testigos de Jehová?",
+      "respuesta": "En términos históricos, Charles Taze Russell fue la figura principal en los orígenes del movimiento de Estudiantes de la Biblia del que procede la organización. Los Testigos de Jehová consideran que su fundador es Jesús y no creen que Russell fundara una religión nueva."
+    },
+    {
+      "pregunta": "¿Quién fue Charles Taze Russell?",
+      "respuesta": "Un editor y dirigente religioso estadounidense (1852–1916), primer editor de <em>Zion's Watch Tower</em> y presidente de la sociedad editorial desde 1884 hasta su muerte."
+    },
+    {
+      "pregunta": "¿En qué año se fundaron los Testigos de Jehová?",
+      "respuesta": "No hay un año único. La revista es de 1879, la sociedad se formó en 1881 y se constituyó legalmente en 1884. El nombre «Testigos de Jehová» se adoptó en 1931."
+    },
+    {
+      "pregunta": "¿Russell fundó la organización con el nombre de Testigos de Jehová?",
+      "respuesta": "<strong class=\"respuesta-corta\">No.</strong> Russell murió en 1916 y el nombre se adoptó en 1931, bajo Rutherford."
+    },
+    {
+      "pregunta": "¿Quién fue Joseph F. Rutherford?",
+      "respuesta": "Un abogado elegido presidente de la sociedad en enero de 1917, tras la muerte de Russell. Bajo su presidencia se adoptó el nombre «Testigos de Jehová» en 1931."
+    },
+    {
+      "pregunta": "¿Los Estudiantes de la Biblia y los Testigos de Jehová son lo mismo?",
+      "respuesta": "Los Testigos de Jehová proceden de los Estudiantes de la Biblia, pero no todos los Estudiantes de la Biblia pasaron a serlo. Tras la muerte de Russell hubo divisiones, y algunos grupos siguieron por separado con ese nombre."
+    },
+    {
+      "pregunta": "¿Por qué dicen los Testigos de Jehová que Jesús es su fundador?",
+      "respuesta": "Porque razonan que, si Jesús es el fundador del cristianismo, también lo es de su organización. Es su interpretación confesional; la descripción histórica del movimiento moderno destaca a Russell y a los Estudiantes de la Biblia."
+    },
+    {
+      "pregunta": "¿Cuándo nació y murió Charles Taze Russell?",
+      "respuesta": "Nació el 16 de febrero de 1852 en Allegheny (Pensilvania) y murió el 31 de octubre de 1916 cerca de Pampa (Texas)."
+    },
+    {
+      "pregunta": "¿Charles Taze Russell era masón?",
+      "respuesta": "No hemos localizado ninguna documentación que acredite que lo fuera. Él mismo dijo en un discurso de 1913 que nunca había sido masón, y en 1895 escribió contra las sociedades secretas."
+    },
+    {
+      "pregunta": "¿Por qué la tumba de Russell es una pirámide?",
+      "respuesta": "No lo es: la pirámide era un monumento que se proyectó en la parcela que la Sociedad Watch Tower tenía en el cementerio, junto a su tumba. Su forma remite a la Gran Pirámide de Guiza, que Russell interpretaba como una profecía en piedra. Su lápida es otra cosa, y el monumento se retiró en 2021."
+    },
+    {
+      "pregunta": "¿Dónde está sepultado Charles Taze Russell?",
+      "respuesta": "En el cementerio de Rosemont (United Cemeteries), en el área de Pittsburgh (Pensilvania). El monumento piramidal no era su lápida y se retiró en 2021."
+    },
+    {
+      "pregunta": "¿Qué era el trigo milagroso de Russell?",
+      "respuesta": "Un trigo que la revista de Russell promovió en 1911 a un dólar la libra, con la promesa de que rendía diez o quince veces más que el común. Según el fallo de 1915, informes oficiales tendían a indicar que no era más productivo, y un jurado dio la razón al periódico que lo cuestionó."
+    },
+    {
+      "pregunta": "¿Russell sabía griego? ¿Era un pastor ordenado?",
+      "respuesta": "En 1914 negó haber alegado un conocimiento especial de griego o hebreo. La anécdota de que no supo leer el alfabeto griego procede del folleto de su adversario Ross y no hemos podido contrastarla con el acta de la vista. Y no estaba ordenado: una sentencia de 1915 lo describe como un predicador sin ordenar."
+    },
+    {
+      "pregunta": "¿Qué profetizó Charles Taze Russell?",
+      "respuesta": "Durante años señaló 1914 como el fin de los «tiempos de los gentiles» y de los gobiernos humanos. El 2 de octubre de 1914 dijo que habían terminado. Algunos miembros creían que irían al cielo ese mes, y no ocurrió. Hoy los Testigos de Jehová enseñan que en 1914 Jesús empezó a gobernar en el cielo."
+    },
+    {
+      "pregunta": "¿De dónde son los Testigos de Jehová?",
+      "respuesta": "Del este de Estados Unidos: el movimiento nace en la zona de Pittsburgh, en Pensilvania, en el siglo XIX."
+    },
+    {
+      "pregunta": "¿Desde cuándo existen los Testigos de Jehová?",
+      "respuesta": "Como grupos de estudio, desde aproximadamente 1870, según las biografías de Russell; con ese nombre, desde 1931."
+    }
+  ]
+}

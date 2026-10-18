@@ -7,6 +7,7 @@ import "../styles/derechos-sanitarios.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PasoSanitario from "../components/PasoSanitario.astro";
 import TarjetaEmergencia from "../components/TarjetaEmergencia.astro";
+import TarjetaRelacionado from "../components/TarjetaRelacionado.astro";
 import {
   intro,
   avisoLegal,
@@ -163,10 +164,7 @@ const jsonLdWebPage = {
         <div class="derechos-cruces__grid">
           {
             enlacesCruzados.map((enlace) => (
-              <a class="derechos-cruce" href={enlace.href} data-reveal>
-                <h3>{enlace.titulo}</h3>
-                <p>{enlace.descripcion}</p>
-              </a>
+              <TarjetaRelacionado {...enlace} variante="cruce" />
             ))
           }
         </div>

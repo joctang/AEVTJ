@@ -1,0 +1,22 @@
+---
+import { miniaturaEnlaceRelacionado } from "../data/miniaturas-enlaces-relacionados";
+
+interface Props {
+  href: string;
+  titulo: string;
+  descripcion: string;
+  variante?: "recurso" | "cruce";
+  imagen?: string;
+}
+
+const { href, titulo, descripcion, variante = "recurso", imagen } = Astro.props;
+const miniatura = imagen ?? miniaturaEnlaceRelacionado(href);
+const base = variante === "cruce" ? "derechos-cruce" : "guia-recurso";
+const imagenClass = variante === "cruce" ? "derechos-cruce__miniatura" : "guia-recurso__miniatura";
+const contenidoClass = variante === "cruce" ? "derechos-cruce__contenido" : "guia-recurso__contenido";
+---
+
+<a class:list={[base, { [`${base}--con-imagen`]: Boolean(miniatura) }]} href={href} data-reveal>
+  {miniatura && <img class={imagenClass} src={miniatura} width="900" height="600" loading="lazy" decoding="async" alt="" aria-hidden="true" />}
+  <div class={contenidoClass}><h3>{titulo}</h3><p>{descripcion}</p></div>
+</a>

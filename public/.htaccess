@@ -58,6 +58,15 @@ RedirectMatch 301 ^/demandas/?$ /legal/
 # /colaboradores/ ya está integrada en /quienes-somos/ (14/10/2026)
 RedirectMatch 301 ^/colaboradores/?$ /quienes-somos/#colaboradores
 
+# /transparencia/ era el portal antiguo de WordPress; el vigente está en /quienes-somos/ (15/10/2026)
+RedirectMatch 301 ^/transparencia/?$ /quienes-somos/#transparencia
+
+# Páginas retiradas del catálogo; sin equivalente editorial directo (18/10/2026).
+# Se envían a la guía general de salida para ofrecer orientación relacionada.
+RedirectMatch 301 ^/testimonios-bajo-juramento/?$ /guia-para-salir-de-los-testigos-de-jehova/
+RedirectMatch 301 ^/separacion-de-la-sociedad/?$ /guia-para-salir-de-los-testigos-de-jehova/
+RedirectMatch 301 ^/relacion-de-pecados-para-un-comite-judicial/?$ /guia-para-salir-de-los-testigos-de-jehova/
+
 # Página 404 propia
 ErrorDocument 404 /404.html
 

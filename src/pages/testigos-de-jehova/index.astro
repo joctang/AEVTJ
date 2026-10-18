@@ -1,13 +1,15 @@
 ---
-// Página pilar /testigos-de-jehova/: introduce el tema y enlaza a las páginas
-// temáticas cuando estén publicadas. Contenido en src/data/testigos-de-jehova.ts.
+// Página pilar /testigos-de-jehova/: introduce el tema y enlaza a las páginas temáticas.
+// Contenido en src/data/testigos-de-jehova.ts (revisado con el criterio editorial el 18-10-2026).
 // Estructura de capítulos de la guía de salida (guia-salida.css). Las ilustraciones
 // que faltan se muestran como huecos reservados con la escena prevista.
 import "../../styles/guia-salida.css";
 import "../../styles/testigos-de-jehova.css";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import TornEdge from "../../components/TornEdge.astro";
-import { intro, heroFoto, presentacion, secciones, mirada, preguntas } from "../../data/testigos-de-jehova";
+import TarjetaRelacionado from "../../components/TarjetaRelacionado.astro";
+import { intro, heroFoto, presentacion, secciones, mirada, preguntas, fuentes } from "../../data/testigos-de-jehova";
+import { miniaturaEnlaceRelacionado } from "../../data/miniaturas-enlaces-relacionados";
 import type { Ilustracion, Bloque } from "../../data/testigos-de-jehova";
 
 const textoPlano = (s: string) => s.replace(/<[^>]+>/g, "");
@@ -41,12 +43,10 @@ const minutos = Math.max(1, Math.round(palabras / 200));
 const situaciones = ["Dejar de asistir a las reuniones", "Renunciar a la religión", "Ser expulsado"];
 
 const sigueLeyendo = [
+  { titulo: "Normas y vida cotidiana", descripcion: "Qué pueden hacer y qué no, y cómo han cambiado algunas normas.", href: "/testigos-de-jehova/normas/" },
+  { titulo: "El fundador y los primeros años", descripcion: "Charles Taze Russell, los Estudiantes de la Biblia y la división de 1917.", href: "/testigos-de-jehova/fundador/" },
+  { titulo: "Su Biblia", descripcion: "La Traducción del Nuevo Mundo: quién la hizo y qué dicen los especialistas.", href: "/testigos-de-jehova/biblia/" },
   { titulo: "Transfusiones de sangre", descripcion: "Historia, postura actual y cambios documentados hasta 2026.", href: "/testigos-de-jehova/sangre/" },
-  { titulo: "Documentales y reportajes", descripcion: "Una selección contextualizada de producciones sobre los Testigos de Jehová.", href: "/testigos-de-jehova/documentales/" },
-  { titulo: "Guía para salir de los Testigos de Jehová", descripcion: "El proceso de salida explicado en seis capítulos y siete pasos.", href: "/guia-para-salir-de-los-testigos-de-jehova/" },
-  { titulo: "Guía de derechos sanitarios", descripcion: "Representante, voluntades anticipadas y tarjeta de emergencia.", href: "/guia-para-proteger-tus-derechos-sanitarios-en-caso-de-interferencia-familiar/" },
-  { titulo: "Derecho de supresión", descripcion: "Cómo pedir que se borren tus datos personales.", href: "/derecho-de-supresion/" },
-  { titulo: "Quiénes somos", descripcion: "La asociación, su junta directiva y sus colaboradores.", href: "/quienes-somos/" },
 ];
 
 const url = `${Astro.site ?? "https://victimasdetestigosdejehova.org/"}testigos-de-jehova/`;
@@ -237,13 +237,10 @@ const jsonLdFaq = {
         </div>
 
         <p class="guia-kicker guia-kicker--crema tj-sigue" data-reveal>Sigue leyendo</p>
-        <div class="guia-recursos">
+        <div class:list={["guia-recursos", { "guia-recursos--ilustrados": sigueLeyendo.some((r) => miniaturaEnlaceRelacionado(r.href)) }]}>
           {
             sigueLeyendo.map((r) => (
-              <a class="guia-recurso" href={r.href} data-reveal>
-                <h3>{r.titulo}</h3>
-                <p>{r.descripcion}</p>
-              </a>
+              <TarjetaRelacionado {...r} />
             ))
           }
         </div>
@@ -273,6 +270,9 @@ const jsonLdFaq = {
           }
         </div>
         <p class="tj-revision">Revisado el {intro.revisado}. Las fuentes oficiales citadas describen la postura de la organización; los enlaces externos se abren en una pestaña nueva.</p>
+        <ul class="tj-revision tj-fuentes">
+          {fuentes.map((f) => <li><a href={f.href} target="_blank" rel="noopener">{f.texto}</a></li>)}
+        </ul>
       </div>
     </section>
   </div>

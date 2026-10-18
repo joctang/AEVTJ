@@ -221,6 +221,15 @@ a.derechos-registro { color: #1f7a63; text-decoration: none; transition: transfo
 .derechos-cruce::after { content: '↗'; margin-top: auto; padding-top: 18px; font-size: 20px; color: #1f7a63; transition: translate 450ms var(--ease-editorial); }
 .derechos-cruce h3 { font-size: 18px; line-height: 1.3; letter-spacing: -.02em; }
 .derechos-cruce p { margin-top: 8px; font-size: 13px; line-height: 1.65; color: #526149; }
+.derechos-cruce--con-imagen {
+  display: grid; grid-template-columns: 68px minmax(0,1fr); grid-template-rows: 1fr auto;
+  grid-template-areas: "imagen contenido" "imagen flecha"; align-items: start; gap: 8px 12px; padding: 18px;
+}
+.derechos-cruce__miniatura { grid-area: imagen; display: block; width: 68px; height: 52px; border-radius: 11px; object-fit: cover; }
+.derechos-cruce__contenido { grid-area: contenido; min-width: 0; }
+.derechos-cruce--con-imagen h3 { font-size: 16.5px; }
+.derechos-cruce--con-imagen p { margin-top: 6px; font-size: 12.5px; }
+.derechos-cruce--con-imagen::after { grid-area: flecha; justify-self: end; margin: 0; padding: 0; font-size: 17px; }
 @media (hover:hover) and (pointer:fine) {
   .derechos-cruce:hover { transform: translateY(-6px); box-shadow: 0 30px 60px #0f25371f; }
   .derechos-cruce:hover::after { translate: 3px -3px; }

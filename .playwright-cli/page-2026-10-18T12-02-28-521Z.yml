@@ -1,0 +1,531 @@
+- generic [active] [ref=e1]:
+  - link "Saltar al contenido" [ref=e2] [cursor=pointer]:
+    - /url: "#contenido"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img "AEVTJ - Asociación Española de Víctimas de los Testigos de Jehová" [ref=e6]
+      - navigation "Menú principal" [ref=e7]:
+        - list [ref=e8]:
+          - listitem [ref=e9]:
+            - link "¿Quiénes somos?" [ref=e10] [cursor=pointer]:
+              - /url: /quienes-somos/
+          - listitem [ref=e11]:
+            - link "Noticias" [ref=e12] [cursor=pointer]:
+              - /url: /noticias/
+          - listitem [ref=e13]:
+            - link "Testigos de Jehová" [ref=e14] [cursor=pointer]:
+              - /url: /testigos-de-jehova/
+          - listitem [ref=e17]:
+            - link "Documentos" [ref=e18] [cursor=pointer]:
+              - /url: /recursos-de-ayuda/
+          - listitem [ref=e21]:
+            - link "Hazte socio / Donaciones" [ref=e22] [cursor=pointer]:
+              - /url: /hazte-socio/
+          - listitem [ref=e23]:
+            - link "Contacto" [ref=e24] [cursor=pointer]:
+              - /url: /contacto/
+      - generic [ref=e25]:
+        - link "Facebook" [ref=e26] [cursor=pointer]:
+          - /url: https://www.facebook.com/asoc.aevtj
+        - link "Youtube" [ref=e29] [cursor=pointer]:
+          - /url: https://www.youtube.com/@AEVTJ
+        - link "X" [ref=e32] [cursor=pointer]:
+          - /url: https://x.com/aevtj
+        - link "Instagram" [ref=e35] [cursor=pointer]:
+          - /url: https://www.instagram.com/asoc.aevtj/
+  - main [ref=e38]:
+    - navigation "Miga de pan" [ref=e39]:
+      - list [ref=e41]:
+        - listitem [ref=e42]:
+          - link "Inicio" [ref=e43] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=e44]:
+          - text: /
+          - link "Testigos de Jehová" [ref=e45] [cursor=pointer]:
+            - /url: /testigos-de-jehova/
+        - listitem [ref=e46]:
+          - text: /
+          - generic [ref=e47]: Cumpleaños
+    - generic [ref=e48]:
+      - navigation "Secciones de la página":
+        - list:
+          - listitem:
+            - link "1. Sus argumentos":
+              - /url: "#respuesta"
+          - listitem:
+            - link "2. Cómo lo han explicado":
+              - /url: "#historia"
+          - listitem:
+            - link "3. En clase":
+              - /url: "#escuela"
+          - listitem:
+            - link "4. Lo que recuerdan":
+              - /url: "#infancia"
+          - listitem:
+            - link "5. Regalos y familia":
+              - /url: "#familia"
+          - listitem:
+            - link "6. ¿Expulsión?":
+              - /url: "#expulsion"
+          - listitem:
+            - link "7. Volver a celebrar":
+              - /url: "#despues"
+          - listitem:
+            - link "Preguntas frecuentes":
+              - /url: "#preguntas"
+          - listitem:
+            - link "Fuentes":
+              - /url: "#fuentes"
+          - listitem:
+            - link "La mirada de la AEVTJ":
+              - /url: "#mirada-aevtj"
+      - generic [ref=e49]:
+        - img "Una mano sostiene una tarta de cumpleaños con velas de colores encendidas sobre un fondo turquesa." [ref=e50]
+        - generic [ref=e52]:
+          - heading "¿Por qué los Testigos de Jehová no celebran los cumpleaños?" [level=1] [ref=e53]
+          - paragraph [ref=e54]: Los Testigos de Jehová no celebran los cumpleaños porque relacionan esta celebración con costumbres paganas, creen que los primeros cristianos no la celebraban y señalan que los dos cumpleaños que menciona la Biblia acaban con una muerte. La propia organización reconoce que la Biblia no los prohíbe directamente.
+          - generic [ref=e55]:
+            - link "Ver sus argumentos ↗" [ref=e56] [cursor=pointer]:
+              - /url: "#respuesta"
+            - link "Busco apoyo ↗" [ref=e57] [cursor=pointer]:
+              - /url: "#mirada-aevtj"
+        - generic [ref=e58]:
+          - list "Sobre esta página" [ref=e59]:
+            - listitem [ref=e60]:
+              - strong [ref=e61]: "8"
+              - text: min de lectura
+            - listitem [ref=e62]: Revisado el 13 de octubre de 2026
+          - link "Ver los temas" [ref=e63] [cursor=pointer]:
+            - /url: "#ad-indice"
+            - text: Ver los temas
+            - generic [aria-hidden] [ref=e64]: ↓
+      - region [ref=e65]:
+        - generic [ref=e66]:
+          - paragraph [ref=e67]: "Su web asegura que los hijos de Testigos «no sienten que se están perdiendo algo bueno». DJ, que creció como Testigo, recuerda otra cosa: que cuando en clase celebraban un cumpleaños, a él lo mandaban a colorear a un rincón. Aquí te contamos las razones de la organización, cómo las ha explicado con los años y lo que cuentan quienes crecieron sin cumpleaños."
+          - heading "En esta página" [level=2] [ref=e68]
+          - list [ref=e70]:
+            - listitem [ref=e71]:
+              - link "Los cuatro argumentos de la organización" [ref=e72] [cursor=pointer]:
+                - /url: "#respuesta"
+                - generic [aria-hidden] [ref=e73]: "01"
+                - generic [aria-hidden] [ref=e75]: ↓
+            - listitem [ref=e76]:
+              - link "Cómo se ha explicado esta postura con los años" [ref=e77] [cursor=pointer]:
+                - /url: "#historia"
+                - generic [aria-hidden] [ref=e78]: "02"
+                - generic [aria-hidden] [ref=e80]: ↓
+            - listitem [ref=e81]:
+              - link "Cuando se celebra un cumpleaños en clase" [ref=e82] [cursor=pointer]:
+                - /url: "#escuela"
+                - generic [aria-hidden] [ref=e83]: "03"
+                - generic [aria-hidden] [ref=e85]: ↓
+            - listitem [ref=e86]:
+              - link "Lo que recuerdan algunas personas que crecieron como Testigos" [ref=e87] [cursor=pointer]:
+                - /url: "#infancia"
+                - generic [aria-hidden] [ref=e88]: "04"
+                - generic [aria-hidden] [ref=e90]: ↓
+            - listitem [ref=e91]:
+              - link "Regalos y cumpleaños en familia" [ref=e92] [cursor=pointer]:
+                - /url: "#familia"
+                - generic [aria-hidden] [ref=e93]: "05"
+                - generic [aria-hidden] [ref=e95]: ↓
+            - listitem [ref=e96]:
+              - link "¿Celebrar un cumpleaños puede llevar a la expulsión?" [ref=e97] [cursor=pointer]:
+                - /url: "#expulsion"
+                - generic [aria-hidden] [ref=e98]: "06"
+                - generic [aria-hidden] [ref=e100]: ↓
+            - listitem [ref=e101]:
+              - link "Volver a celebrar después de dejar la religión" [ref=e102] [cursor=pointer]:
+                - /url: "#despues"
+                - generic [aria-hidden] [ref=e103]: "07"
+                - generic [aria-hidden] [ref=e105]: ↓
+      - region [ref=e106]:
+        - generic [ref=e107]:
+          - generic [ref=e109]: "1"
+          - heading "Los cuatro argumentos de la organización" [level=2] [ref=e110]
+        - paragraph [ref=e111]:
+          - text: En su artículo oficial
+          - superscript [ref=e112]:
+            - link "Fuente 1" [ref=e113] [cursor=pointer]:
+              - /url: "#fn-1"
+              - text: "1"
+          - text: ", la organización da cuatro argumentos:"
+        - generic [ref=e114]:
+          - article [ref=e115]:
+            - text: “
+            - generic [aria-hidden] [ref=e116]: "01"
+            - heading "El origen de algunas costumbres" [level=3] [ref=e117]
+            - paragraph [ref=e118]: Asocia algunas costumbres de los cumpleaños con la superstición, la astrología y la magia.
+          - article [ref=e119]:
+            - text: “
+            - generic [aria-hidden] [ref=e120]: "02"
+            - heading "El ejemplo de los primeros cristianos" [level=3] [ref=e121]
+            - paragraph [ref=e122]: Sostiene que no celebraban cumpleaños y que los cristianos de hoy deberían hacer lo mismo.
+          - article [ref=e123]:
+            - text: “
+            - generic [aria-hidden] [ref=e124]: "03"
+            - heading "La muerte de Jesús" [level=3] [ref=e125]
+            - paragraph [ref=e126]: Jesús pidió a sus seguidores que recordaran su muerte, pero sobre su nacimiento no dijo nada, ni en un sentido ni en otro. La organización interpreta ese silencio como una señal de que no quería que se celebrara.
+          - article [ref=e127]:
+            - text: “
+            - generic [aria-hidden] [ref=e128]: "04"
+            - heading "Los relatos del faraón y Herodes" [level=3] [ref=e129]
+            - paragraph [ref=e130]: "La Biblia solo habla de dos cumpleaños: el de un faraón y el de Herodes. Ninguno de los dos servía a Dios y en los dos relatos muere alguien. Para la organización, son malos ejemplos."
+        - figure [ref=e131]:
+          - text: “
+          - generic [ref=e132]:
+            - generic [ref=e133]: Texto original
+            - blockquote [ref=e134]:
+              - paragraph [ref=e135]: «Los testigos de Jehová no celebramos los cumpleaños porque estamos convencidos de que Dios no quiere que lo hagamos. Aunque la Biblia no prohíbe directamente esta celebración, sí nos da algunas claves que nos ayudan a entender cómo ve Dios los cumpleaños.»
+            - paragraph [ref=e136]:
+              - text: — «¿Por qué los testigos de Jehová no celebran los cumpleaños?»
+              - superscript [ref=e137]:
+                - link "Fuente 1" [ref=e138] [cursor=pointer]:
+                  - /url: "#fn-1"
+                  - text: "1"
+              - text: ", jw.org"
+        - paragraph [ref=e139]: La organización reconoce que la Biblia no prohíbe los cumpleaños. Su decisión de no celebrarlos se basa en cómo interpreta esas «claves».
+      - region [ref=e140]:
+        - generic [ref=e141]:
+          - generic [ref=e143]: "2"
+          - heading "Cómo se ha explicado esta postura con los años" [level=2] [ref=e144]
+        - paragraph [ref=e145]: No es una postura nueva. Sus publicaciones la vienen explicando desde, al menos, los años treinta. Estos son algunos de los momentos en que lo han explicado.
+        - list [ref=e146]:
+          - listitem [ref=e147]:
+            - generic [ref=e148]: "1936"
+            - heading "Dos cumpleaños y ningún siervo de Dios" [level=3] [ref=e149]
+            - paragraph [ref=e150]:
+              - text: La revista
+              - emphasis [ref=e151]: The Golden Age
+              - text: (hoy
+              - emphasis [ref=e152]: ¡Despertad!
+              - text: ) ya usaba el argumento del faraón y Herodes, el mismo que sigue en su web hoy.
+            - figure [ref=e153]:
+              - text: “
+              - generic [ref=e154]:
+                - generic [ref=e155]: Texto original
+                - blockquote [ref=e156]:
+                  - paragraph [ref=e157]: "«En las Escrituras solo se mencionan dos cumpleaños: el del pagano faraón de Egipto de los días de José y el de Herodes, cuya celebración le costó la vida a Juan el Bautista. La Biblia no habla del cumpleaños de ningún siervo de Dios.»"
+                - paragraph [ref=e158]:
+                  - text: —
+                  - emphasis [ref=e159]: The Golden Age
+                  - text: ", 6 de mayo de 1936, citada en"
+                  - emphasis [ref=e160]: El Reino de Dios ya está gobernando
+                  - superscript [ref=e161]:
+                    - link "Fuente 2" [ref=e162] [cursor=pointer]:
+                      - /url: "#fn-2"
+                      - text: "2"
+                  - text: ", capítulo 10"
+          - listitem [ref=e163]:
+            - generic [ref=e164]: "1952"
+            - heading "Regalos sí, pero no ese día" [level=3] [ref=e165]
+            - paragraph [ref=e166]:
+              - emphasis [ref=e167]: La Atalaya
+              - text: "respondió a un lector que preguntaba si se podían celebrar cumpleaños o ir a los de otras personas. Dejaba claro que se podían hacer regalos y reunirse, pero no por un cumpleaños:"
+            - figure [ref=e168]:
+              - text: “
+              - generic [ref=e169]:
+                - generic [ref=e170]: Texto original
+                - blockquote [ref=e171]:
+                  - paragraph [ref=e172]: «Si desean presentarle un regalo a un hermano, no necesitan esperar el aniversario del día de su entrada al mundo, como si eso fuera una ocasión memorable. Si el día exacto del nacimiento de Jesús y su conmemoración no fueron dignos de tal atención, ¿los de quién serán?»
+                - paragraph [ref=e173]:
+                  - text: —
+                  - emphasis [ref=e174]: La Atalaya
+                  - text: ", 1 de febrero de 1952"
+                  - superscript [ref=e175]:
+                    - link "Fuente 3" [ref=e176] [cursor=pointer]:
+                      - /url: "#fn-3"
+                      - text: "3"
+                  - text: ", «Preguntas de los lectores»"
+          - listitem [ref=e177]:
+            - generic [ref=e178]: "1982"
+            - heading "Reunirse en familia no es celebrar" [level=3] [ref=e179]
+            - paragraph [ref=e180]:
+              - emphasis [ref=e181]: La Atalaya
+              - text: del 15 de julio
+              - superscript [ref=e182]:
+                - link "Fuente 4" [ref=e183] [cursor=pointer]:
+                  - /url: "#fn-4"
+                  - text: "4"
+              - text: volvió a explicar por qué no celebran cumpleaños. Esta vez empezaba reconociendo que la Biblia no se opone a hacer regalos ni a disfrutar de una comida o una fiesta, y diferenciaba entre reunirse en familia y celebrar un cumpleaños.
+          - listitem [ref=e184]:
+            - generic [ref=e185]: Hoy
+            - heading "Unas «claves» para entender cómo ve Dios los cumpleaños" [level=3] [ref=e186]
+            - paragraph [ref=e187]: "Su web actual reconoce que la Biblia no prohíbe directamente los cumpleaños y habla de «claves» para entender cómo los ve Dios. La conclusión sigue siendo la misma: no se celebran."
+      - region [ref=e188]:
+        - generic [ref=e189]:
+          - generic [ref=e190]:
+            - generic [ref=e191]:
+              - generic [ref=e193]: "3"
+              - heading "Cuando se celebra un cumpleaños en clase" [level=2] [ref=e194]
+            - paragraph [ref=e195]:
+              - text: La norma también se aplica a los cumpleaños de los compañeros. Un folleto de los Testigos dirigido a los profesores
+              - superscript [ref=e196]:
+                - link "Fuente 5" [ref=e197] [cursor=pointer]:
+                  - /url: "#fn-5"
+                  - text: "5"
+              - text: "explica que los alumnos Testigos no participan en estas celebraciones: ni cantan ni dan regalos."
+            - paragraph [ref=e198]:
+              - text: Un antiguo Testigo identificado como DJ contó en el pódcast Shunned
+              - superscript [ref=e199]:
+                - link "Fuente 6" [ref=e200] [cursor=pointer]:
+                  - /url: "#fn-6"
+                  - text: "6"
+              - text: cómo lo vivía en su colegio. Recuerda que, cuando en clase celebraban un cumpleaños, a veces le mandaban otra tarea, lo ponían a colorear en un rincón o lo apartaban del grupo. Y se preguntaba por qué él no podía jugar y comer tarta con los demás.
+          - figure [ref=e201]:
+            - img "Ilustración de un pupitre con un regalo y una mesa de alumnos al fondo, conectados por un hilo lima suelto." [ref=e202]
+      - region [ref=e203]:
+        - generic [ref=e204]:
+          - generic [ref=e205]:
+            - generic [ref=e206]:
+              - generic [ref=e208]: "4"
+              - heading "Lo que recuerdan algunas personas que crecieron como Testigos" [level=2] [ref=e209]
+            - paragraph [ref=e210]: No pasa solo en el colegio. También ocurre cuando un amigo te invita a su cumpleaños o cuando alguien de la familia celebra el suyo. Algunas personas que crecieron como Testigos han contado cómo lo vivieron.
+          - figure [ref=e211]:
+            - img "Ilustración de una figura infantil sentada aparte de una mesa de cumpleaños; un hilo lima queda suelto entre ambas." [ref=e212]
+        - article [ref=e214]:
+          - paragraph [ref=e215]: Testimonio
+          - heading "Lyndi y el cumpleaños sorpresa de su hermana" [level=3] [ref=e216]
+          - paragraph [ref=e217]:
+            - text: En una entrevista con Shunned
+            - superscript [ref=e218]:
+              - link "Fuente 7" [ref=e219] [cursor=pointer]:
+                - /url: "#fn-7"
+                - text: "7"
+            - text: ", Lyndi recordó que su padre le preparó a su hermana un cumpleaños sorpresa cuando cumplió siete años, en casa de una tía, y las llevó a las dos. Según contó, las niñas se encerraron en el baño llorando y no querían salir: tenían miedo de que Jehová se enfadara y las matara."
+          - paragraph [ref=e220]: A diferencia de DJ, Lyndi sí estaba en el cumpleaños, pero le daba miedo participar. Su recuerdo muestra lo difícil que es para un niño querer estar con su familia y, a la vez, temer que eso enfade a Dios.
+        - generic [ref=e221]:
+          - heading "Las invitaciones de los compañeros" [level=3] [ref=e222]
+          - paragraph [ref=e223]:
+            - text: Jasmine Grew contó en su declaración ante la Comisión Real de Investigación de Nueva Zelanda
+            - superscript [ref=e224]:
+              - link "Fuente 8" [ref=e225] [cursor=pointer]:
+                - /url: "#fn-8"
+                - text: "8"
+            - text: que ni ella ni los demás niños Testigos de su colegio podían ir a los cumpleaños de compañeros que no eran Testigos.
+          - paragraph [ref=e226]:
+            - text: Jim Fielder, que pasó sesenta años en la organización, lo recordaba así en una entrevista con Evangelical Times
+            - superscript [ref=e227]:
+              - link "Fuente 9" [ref=e228] [cursor=pointer]:
+                - /url: "#fn-9"
+                - text: "9"
+            - text: ":"
+          - figure [ref=e229]:
+            - text: “
+            - generic [ref=e230]:
+              - generic [ref=e231]: Texto original
+              - blockquote [ref=e232]:
+                - paragraph [ref=e233]: «No podía participar en las celebraciones de cumpleaños; no podía hacer tarjetas por el Día del Padre o de la Madre.»
+                - paragraph [ref=e234]: «A menudo me pasaba el tiempo pensando excusas creíbles para no ir a ninguna fiesta ni a los clubes extraescolares […].»
+              - paragraph [ref=e235]:
+                - text: — Jim Fielder,
+                - emphasis [ref=e236]: Evangelical Times
+                - superscript [ref=e237]:
+                  - link "Fuente 9" [ref=e238] [cursor=pointer]:
+                    - /url: "#fn-9"
+                    - text: "9"
+                - text: (traducción de la AEVTJ)
+          - paragraph [ref=e239]: En su artículo, la organización presenta los comentarios de tres niños que dicen no sentir que se estén perdiendo algo bueno. Sin embargo, la experiencia de la AEVTJ, las vivencias personales de quienes forman la asociación y los testimonios que hemos escuchado en entrevistas a lo largo de los años muestran que no todo el mundo lo vivió igual. Algunas personas recuerdan una infancia marcada por el miedo y el dolor, o por sentirse apartadas de los demás.
+      - region [ref=e240]:
+        - generic [ref=e241]:
+          - generic [ref=e243]: "5"
+          - heading "Regalos y cumpleaños en familia" [level=2] [ref=e244]
+        - paragraph [ref=e245]:
+          - text: No celebrar cumpleaños no quiere decir que los Testigos no hagan regalos o no se reúnan en familia. La Atalaya de 1982
+          - superscript [ref=e246]:
+            - link "Fuente 4" [ref=e247] [cursor=pointer]:
+              - /url: "#fn-4"
+              - text: "4"
+          - text: explicaba que pueden hacerlo, siempre que no sea por un cumpleaños.
+        - paragraph [ref=e248]:
+          - text: En la práctica, cuando parte de la familia no es Testigo, cada uno busca su manera. El sociólogo Andrew Holden recogió en su estudio
+          - emphasis [ref=e249]: Doing Tolerance
+          - superscript [ref=e250]:
+            - link "Fuente 10" [ref=e251] [cursor=pointer]:
+              - /url: "#fn-10"
+              - text: "10"
+          - text: "el caso de una joven Testigo que no sabía cómo felicitar a su madre sin saltarse las normas. Al final decidió ir a su cumpleaños:"
+        - figure [ref=e252]:
+          - text: “
+          - generic [ref=e253]:
+            - generic [ref=e254]: Texto original
+            - blockquote [ref=e255]:
+              - paragraph [ref=e256]: «Le explicó a su madre que, aunque no podría comprarle un regalo ni cantar el cumpleaños feliz con el resto de la familia, la invitaría a comer y le haría un regalo más adelante.»
+            - paragraph [ref=e257]:
+              - text: — Andrew Holden,
+              - emphasis [ref=e258]: Doing Tolerance
+              - superscript [ref=e259]:
+                - link "Fuente 10" [ref=e260] [cursor=pointer]:
+                  - /url: "#fn-10"
+                  - text: "10"
+              - text: ", Universidad de Lancaster, p. 5 (traducción de la AEVTJ)"
+        - paragraph [ref=e261]: Son soluciones que cada persona buscó por su cuenta, no normas de la organización. Muestran cómo algunos intentan no alejarse de su familia sin ir en contra de lo que creen.
+      - region [ref=e262]:
+        - generic [ref=e263]:
+          - generic [ref=e265]: "6"
+          - heading "¿Celebrar un cumpleaños puede llevar a la expulsión?" [level=2] [ref=e266]
+        - paragraph [ref=e267]: Las publicaciones citadas dejan claro que la organización no aprueba estas celebraciones, pero ninguna dice que celebrar un cumpleaños suponga la expulsión automática.
+        - paragraph [ref=e268]: En el mismo estudio, Holden explica que saltarse una norma clara se castiga con la expulsión, pero que en los casos dudosos cada miembro lo ve de una manera. Y pone como ejemplo de caso dudoso, precisamente, ir a un cumpleaños. Por eso, en cada situación concreta habría que ver qué pasó y qué decidió la congregación.
+      - region [ref=e269]:
+        - generic [ref=e270]:
+          - generic [ref=e272]: "7"
+          - heading "Volver a celebrar después de dejar la religión" [level=2] [ref=e273]
+        - paragraph [ref=e274]:
+          - text: Para algunas personas que dejan la religión, celebrar su primer cumpleaños es todo un acontecimiento. Es lo que le pasó a Trish Karr, que contó su historia en una entrevista con ABC Radio National
+          - superscript [ref=e275]:
+            - link "Fuente 11" [ref=e276] [cursor=pointer]:
+              - /url: "#fn-11"
+              - text: "11"
+          - text: . De pequeña no celebraba su cumpleaños ni podía ir a los de sus amigos. Cuando salió de la organización, empezó a celebrarlos y a disfrutarlos.
+        - paragraph [ref=e277]: "A otros les cuesta más. Después de tantos años, soplar las velas puede resultar raro o incluso dar algo de culpa al principio. No hay una forma correcta de vivirlo: cada uno lleva su ritmo."
+      - region [ref=e278]:
+        - generic [ref=e279]:
+          - paragraph [ref=e280]: Dudas habituales
+          - heading "Preguntas frecuentes" [level=2] [ref=e281]
+          - generic [ref=e282]:
+            - group [ref=e283]:
+              - heading "¿La Biblia prohíbe celebrar cumpleaños?" [level=3] [ref=e285] [cursor=pointer]
+            - group [ref=e287]:
+              - heading "¿Pueden hacer regalos los Testigos de Jehová?" [level=3] [ref=e289] [cursor=pointer]
+            - group [ref=e291]:
+              - heading "¿Puede un niño Testigo ir al cumpleaños de un compañero?" [level=3] [ref=e293] [cursor=pointer]
+            - group [ref=e295]:
+              - heading "¿Expulsan a quien celebra un cumpleaños?" [level=3] [ref=e297] [cursor=pointer]
+      - region [ref=e299]:
+        - group [ref=e300]:
+          - generic "Fuentes y documentación 11 referencias · Revisado el 13 de octubre de 2026" [ref=e301] [cursor=pointer]:
+            - generic [ref=e302]:
+              - heading "Fuentes y documentación" [level=2] [ref=e303]
+              - generic [ref=e304]: 11 referencias · Revisado el 13 de octubre de 2026
+      - region [ref=e306]:
+        - generic [ref=e307]:
+          - paragraph [ref=e308]: La mirada de la AEVTJ
+          - heading "Escuchar lo que vivió cada persona" [level=2] [ref=e309]
+          - generic [ref=e310]:
+            - paragraph [ref=e311]: Muchos padres Testigos quieren a sus hijos y se lo demuestran durante todo el año. Pero eso no quita que un niño se sintiera solo mientras sus compañeros cantaban el cumpleaños feliz, o que le diera miedo ir al cumpleaños de un primo. Las dos cosas pueden ser verdad a la vez. Contar lo que uno sintió no es acusar a su familia.
+            - paragraph [ref=e312]:
+              - text: En la AEVTJ creemos que cada uno tiene derecho a contar cómo lo vivió y a que le escuchen, aunque su historia no coincida con lo que dicen las revistas de la organización. Si tú también lo viviste y quieres contárnoslo,
+              - link "escríbenos" [ref=e313] [cursor=pointer]:
+                - /url: /contacto/
+              - text: .
+          - paragraph [ref=e314]: Sigue leyendo
+          - generic [ref=e315]:
+            - link [ref=e316] [cursor=pointer]:
+              - /url: /testigos-de-jehova/navidad/
+              - heading "Navidad" [level=3] [ref=e317]
+              - paragraph [ref=e318]: Por qué no la celebran y cómo dejaron de hacerlo.
+              - text: ↗
+            - link [ref=e319] [cursor=pointer]:
+              - /url: /testigos-de-jehova/normas/
+              - heading "Normas y vida cotidiana" [level=3] [ref=e320]
+              - paragraph [ref=e321]: Qué pueden hacer y qué no, tema a tema.
+              - text: ↗
+            - link [ref=e322] [cursor=pointer]:
+              - /url: /testigos-de-jehova/sangre/
+              - heading "Transfusiones de sangre" [level=3] [ref=e323]
+              - paragraph [ref=e324]: Historia, postura y cambios documentados.
+              - text: ↗
+            - link [ref=e325] [cursor=pointer]:
+              - /url: /guia-para-salir-de-los-testigos-de-jehova/
+              - heading "Guía para salir" [level=3] [ref=e326]
+              - paragraph [ref=e327]: El proceso de salida explicado paso a paso.
+              - text: ↗
+          - generic [ref=e328]:
+            - link "Contacta con la asociación ↗" [ref=e329] [cursor=pointer]:
+              - /url: /contacto/
+            - link "Recursos de ayuda ↗" [ref=e330] [cursor=pointer]:
+              - /url: /recursos-de-ayuda/
+  - contentinfo [ref=e331]:
+    - generic [ref=e332]:
+      - generic [ref=e333]:
+        - generic [ref=e334]:
+          - img "AEVTJ" [ref=e335]
+          - paragraph [ref=e336]: Asociación Española de Víctimas de los Testigos de Jehová y la JW.ORG. Estamos aquí para escucharte, ayudarte a recuperar tu vida y darte el apoyo que necesitas para dejar atrás la organización.
+          - generic [ref=e337]:
+            - link "Facebook" [ref=e338] [cursor=pointer]:
+              - /url: https://www.facebook.com/asoc.aevtj
+            - link "Youtube" [ref=e341] [cursor=pointer]:
+              - /url: https://www.youtube.com/@AEVTJ
+            - link "X" [ref=e344] [cursor=pointer]:
+              - /url: https://x.com/aevtj
+            - link "Instagram" [ref=e347] [cursor=pointer]:
+              - /url: https://www.instagram.com/asoc.aevtj/
+        - navigation "Menú de pie de página" [ref=e350]:
+          - heading "Explora" [level=2] [ref=e351]
+          - list [ref=e352]:
+            - listitem [ref=e353]:
+              - 'link "Testigos de Jehová: quiénes son y qué creen" [ref=e354] [cursor=pointer]':
+                - /url: /testigos-de-jehova/
+            - listitem [ref=e355]:
+              - link "Transfusiones de sangre" [ref=e356] [cursor=pointer]:
+                - /url: /testigos-de-jehova/sangre/
+            - listitem [ref=e357]:
+              - link "Cumpleaños" [ref=e358] [cursor=pointer]:
+                - /url: /testigos-de-jehova/cumpleanos/
+            - listitem [ref=e359]:
+              - link "Navidad" [ref=e360] [cursor=pointer]:
+                - /url: /testigos-de-jehova/navidad/
+            - listitem [ref=e361]:
+              - link "Documentales" [ref=e362] [cursor=pointer]:
+                - /url: /testigos-de-jehova/documentales/
+            - listitem [ref=e363]:
+              - link "La Biblia de los Testigos de Jehová" [ref=e364] [cursor=pointer]:
+                - /url: /testigos-de-jehova/biblia/
+            - listitem [ref=e365]:
+              - link "Quién fundó los Testigos de Jehová" [ref=e366] [cursor=pointer]:
+                - /url: /testigos-de-jehova/fundador/
+            - listitem [ref=e367]:
+              - link "Guía para salir" [ref=e368] [cursor=pointer]:
+                - /url: /guia-para-salir-de-los-testigos-de-jehova/
+            - listitem [ref=e369]:
+              - link "Otras asociaciones" [ref=e370] [cursor=pointer]:
+                - /url: /otras-asociaciones/
+            - listitem [ref=e371]:
+              - link "Ex testigos en las redes" [ref=e372] [cursor=pointer]:
+                - /url: /victimas/
+            - listitem [ref=e373]:
+              - link "Contacto" [ref=e374] [cursor=pointer]:
+                - /url: /contacto/
+        - generic [ref=e375]:
+          - heading "Boletín de noticias" [level=2] [ref=e376]
+          - paragraph [ref=e377]: Recibe nuestro boletín de noticias mensual de forma totalmente gratuita y mantente informado.
+          - generic [ref=e378]:
+            - textbox "Tu correo electrónico" [ref=e379]
+            - generic [ref=e380]:
+              - checkbox "Quiero recibir la newsletter y acepto el tratamiento de mi email para ese fin." [ref=e381]
+              - generic [ref=e382]: Quiero recibir la newsletter y acepto el tratamiento de mi email para ese fin.
+            - paragraph [ref=e383]:
+              - text: La suscripción se gestionará mediante Mailchimp. Tratamos tus datos según nuestra
+              - link "Política de Privacidad" [ref=e384] [cursor=pointer]:
+                - /url: /politica-de-privacidad/
+              - text: .
+            - button "Suscribirme" [ref=e385] [cursor=pointer]
+            - status
+      - generic [ref=e386]:
+        - paragraph [ref=e387]: © 2026 Asociación Española de Victimas de los Testigos de Jehová
+        - list [ref=e388]:
+          - listitem [ref=e389]:
+            - link "Aviso Legal" [ref=e390] [cursor=pointer]:
+              - /url: /aviso-legal/
+          - listitem [ref=e391]:
+            - link "Política de Cookies" [ref=e392] [cursor=pointer]:
+              - /url: /politica-de-cookies/
+          - listitem [ref=e393]:
+            - link "Política de privacidad" [ref=e394] [cursor=pointer]:
+              - /url: /politica-de-privacidad/
+          - listitem [ref=e395]:
+            - link "Transparencia" [ref=e396] [cursor=pointer]:
+              - /url: /quienes-somos/#transparencia
+  - generic [ref=e398]:
+    - paragraph [ref=e399]:
+      - text: Utilizamos tecnologías necesarias para que la web funcione y, si lo aceptas, herramientas de analítica y vídeos incrustados de plataformas externas. No usamos publicidad personalizada. Consulta la
+      - link "Política de cookies" [ref=e400] [cursor=pointer]:
+        - /url: /politica-de-cookies/
+      - text: para más información.
+    - generic [ref=e401]:
+      - button "Denegar" [ref=e402] [cursor=pointer]
+      - button "Aceptar" [ref=e403] [cursor=pointer]
+      - link "Ver preferencias" [ref=e404] [cursor=pointer]:
+        - /url: /politica-de-cookies/

@@ -12,7 +12,7 @@ export const intro = {
   h1: "Carta de renuncia a los Testigos de Jehová: ¿hace falta?",
   // HTML
   entradilla:
-    "<strong>No. No necesitas escribir una carta para dejar de ser Testigo de Jehová.</strong> La ley española reconoce tu derecho a abandonar una religión sin que nadie te lo impida, y la propia organización acepta que una persona deje de participar sin presentar ninguna renuncia.",
+    "<strong class=\"respuesta-corta\">No.</strong> No hace falta escribir una carta para dejar de ser Testigo de Jehová. La ley española reconoce tu derecho a abandonar una religión sin que nadie te lo impida, y la propia organización acepta que una persona deje de participar sin presentar ninguna renuncia.",
   // Foto de Towfiqu barbhuiya en Unsplash (Licencia Unsplash), compartida con /derecho-de-supresion/.
   // Provisional hasta tener ilustración propia de la serie geométrica.
   heroImage: {
