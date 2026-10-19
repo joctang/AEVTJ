@@ -15,24 +15,24 @@ import type { Noticia } from "./tipos";
  */
 export const noticia: Noticia = {
   slug: "entrevista-soraya-narez-el-intermedio-la-sexta",
-  titulo: "Entrevista a Soraya Narez en El Intermedio, La Sexta",
+  titulo: "Entrevista a Soraya Nárez en El Intermedio, La Sexta",
   fecha: "2026-03-12T07:11:28",
   autoria: "AEVTJ · Redacción Madrid",
   medio: { etiqueta: "Emitido en", nombre: "El Intermedio · LaSexta" },
   portada: {
     src: "/uploads/2026/03/ei-intermedio.jpg",
-    alt: "Soraya Narez durante su entrevista en el plató de El Intermedio",
+    alt: "Soraya Nárez durante su entrevista en el plató de El Intermedio",
   },
   entradilla:
-    "Soraya Narez, vicepresidenta de la AEVTJ, expuso en El Intermedio uno de los mecanismos más invisibles de la organización: la condicionalidad del afecto.",
+    "Soraya Nárez, vicepresidenta de la AEVTJ, expuso en El Intermedio uno de los mecanismos más invisibles de la organización: la condicionalidad del afecto.",
   citaDestacada: {
     texto:
       "Te das cuenta de que la gente de tu alrededor no te quiere por quien eres, sino porque eres <em>obediente</em>.",
-    autor: "Soraya Narez",
+    autor: "Soraya Nárez",
     cargo: "Vicepresidenta de la AEVTJ",
   },
   pieza: {
-    titulo: "Soraya Narez en El Intermedio – LaSexta",
+    titulo: "Soraya Nárez en El Intermedio – LaSexta",
     youtubeId: "yX6Z-9-OUHI",
     pie: "Entrevista completa · El Intermedio · LaSexta · 2026",
   },
@@ -41,7 +41,7 @@ export const noticia: Noticia = {
     {
       tipo: "parrafo",
       texto:
-        "La visibilidad de las víctimas de los Testigos de Jehová alcanzó un nuevo hito con la aparición de Soraya Narez, vicepresidenta de la AEVTJ, en <strong>El Intermedio de LaSexta</strong>. En una conversación sincera y cruda, Narez expuso uno de los mecanismos más invisibles y dañinos de la organización: la condicionalidad del afecto.",
+        "La visibilidad de las víctimas de los Testigos de Jehová alcanzó un nuevo hito con la aparición de Soraya Nárez, vicepresidenta de la AEVTJ, en <strong>El Intermedio de LaSexta</strong>. En una conversación sincera y cruda, Nárez expuso uno de los mecanismos más invisibles y dañinos de la organización: la condicionalidad del afecto.",
     },
     {
       tipo: "cita",
@@ -52,7 +52,7 @@ export const noticia: Noticia = {
     {
       tipo: "parrafo",
       texto:
-        'Narez subrayó que abandonar la organización supone enfrentarse a una <strong>"muerte social" inmediata</strong>. Su testimonio en LaSexta puso el foco en cómo el miedo a perder a la familia mantiene a miles de personas dentro de una estructura en la que ya no creen, generando cuadros de ansiedad y un profundo sentimiento de soledad.',
+        'Nárez subrayó que abandonar la organización supone enfrentarse a una <strong>"muerte social" inmediata</strong>. Su testimonio en LaSexta puso el foco en cómo el miedo a perder a la familia mantiene a miles de personas dentro de una estructura en la que ya no creen, generando cuadros de ansiedad y un profundo sentimiento de soledad.',
     },
     {
       tipo: "parrafo",
@@ -78,7 +78,7 @@ export const noticia: Noticia = {
     },
   ],
   perfil: {
-    titulo: "Quién es Soraya Narez",
+    titulo: "Quién es Soraya Nárez",
     texto:
       "Vicepresidenta de la AEVTJ. Exmiembro de los Testigos de Jehová y activista por los derechos de las víctimas del ostracismo religioso. Ha compartido su experiencia en medios nacionales para visibilizar el impacto del control sectario.",
   },
@@ -86,7 +86,7 @@ export const noticia: Noticia = {
     {
       titulo: "Ver la entrevista",
       texto:
-        "Accede a la entrevista completa de Soraya Narez en el canal de El Intermedio en LaSexta.",
+        "Accede a la entrevista completa de Soraya Nárez en el canal de El Intermedio en LaSexta.",
       href: "https://www.youtube.com/watch?v=yX6Z-9-OUHI",
       etiqueta: "Ver en YouTube",
       externo: true,

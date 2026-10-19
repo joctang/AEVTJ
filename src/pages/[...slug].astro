@@ -12,10 +12,6 @@ const heroPhotos: Record<string, string> = {
 
 // Título y descripción SEO por página (el título visible/H1 sigue siendo el del contenido).
 const seo: Record<string, { title?: string; description?: string }> = {
-  "recursos-de-ayuda": {
-    title: "Recursos de ayuda para ex Testigos de Jehová",
-    description: "Guías en PDF y recursos de apoyo para quienes salen de los Testigos de Jehová, incluida una guía sobre el trauma religioso.",
-  },
   transparencia: {
     title: "Transparencia de la AEVTJ",
     description: "Portal de transparencia de la AEVTJ: información clara y accesible sobre la Asociación Española de Víctimas de los Testigos de Jehová.",
@@ -38,6 +34,7 @@ const heroTitles: Record<string, string> = {
 export async function getStaticPaths() {
   const excludedSlugs = new Set([
     "victimas-testigos-de-jehova-ayuda-denuncia", // home, has its own index.astro
+    "recursos-de-ayuda", // has its own custom page
     "noticias", // has its own listing page
     "quienes-somos", // has its own custom page
     "guia-para-salir-de-los-testigos-de-jehova", // has its own custom page

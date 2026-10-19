@@ -11,17 +11,17 @@ import type { Noticia } from "./tipos";
  */
 export const noticia: Noticia = {
   slug: "israel-florez-y-soraya-narez-en-onda-cero-el-vacio-de-una-vida-borrada-por-la-expulsion",
-  metaDescription: "Israel Flórez y Soraya Narez relatan en Onda Cero las secuelas del ostracismo familiar: la norma que obliga a ignorar a quienes abandonan el grupo.",
-  titulo: "Israel Flórez y Soraya Narez en Onda Cero: el vacío de una vida «borrada» por la expulsión",
+  metaDescription: "Israel Flórez y Soraya Nárez relatan en Onda Cero las secuelas del ostracismo familiar: la norma que obliga a ignorar a quienes abandonan el grupo.",
+  titulo: "Israel Flórez y Soraya Nárez en Onda Cero: el vacío de una vida «borrada» por la expulsión",
   fecha: "2026-03-11T07:24:25",
   autoria: "Redacción AEVTJ · Madrid",
   medio: { etiqueta: "Emitido en", nombre: "Onda Cero Radio" },
   portada: {
     src: "/uploads/2026/04/soraya-narez-jose-ramon-navarro-pareja_69.webp",
-    alt: "Soraya Narez y José Ramón Navarro en el estudio de Onda Cero durante la grabación del reportaje",
+    alt: "Soraya Nárez y José Ramón Navarro en el estudio de Onda Cero durante la grabación del reportaje",
   },
   entradilla:
-    "Israel Flórez y Soraya Narez relataron en Onda Cero las secuelas del ostracismo familiar: una norma interna que obliga al entorno a ignorar por completo a quienes abandonan el grupo.",
+    "Israel Flórez y Soraya Nárez relataron en Onda Cero las secuelas del ostracismo familiar: una norma interna que obliga al entorno a ignorar por completo a quienes abandonan el grupo.",
   citaDestacada: {
     texto: "Tengo mi vida de 2005 hacia atrás en un cajón cerrado.",
     autor: "Israel Flórez",
@@ -44,12 +44,12 @@ export const noticia: Noticia = {
     {
       tipo: "parrafo",
       texto:
-        "En una intervención para <strong>Onda Cero</strong>, Israel Flórez y Soraya Narez han compartido un testimonio sobrecogedor sobre el impacto del ostracismo familiar. Sus palabras destapan las secuelas de una norma interna que obliga al entorno a ignorar por completo a quienes deciden abandonar el grupo.",
+        "En una intervención para <strong>Onda Cero</strong>, Israel Flórez y Soraya Nárez han compartido un testimonio sobrecogedor sobre el impacto del ostracismo familiar. Sus palabras destapan las secuelas de una norma interna que obliga al entorno a ignorar por completo a quienes deciden abandonar el grupo.",
     },
     {
       tipo: "parrafo",
       texto:
-        'Israel describió la dolorosa "anulación" de su historia personal: cuando padres y hermanos tienen <strong>prohibido dirigirte la palabra</strong>, tu pasado queda borrado. Soraya Narez insistió en que esta <strong>"muerte social"</strong> es una vulneración de derechos que el Estado no debe ignorar.',
+        'Israel describió la dolorosa "anulación" de su historia personal: cuando padres y hermanos tienen <strong>prohibido dirigirte la palabra</strong>, tu pasado queda borrado. Soraya Nárez insistió en que esta <strong>"muerte social"</strong> es una vulneración de derechos que el Estado no debe ignorar.',
     },
     {
       tipo: "seccion",

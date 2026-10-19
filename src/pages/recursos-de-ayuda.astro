@@ -1,0 +1,175 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const pdfTrauma = "/uploads/2025/10/Recurso-Guia-sobre-aspectos-del-trauma-religiosa-de-los-Testigos-de-Jehova-Traduc.-Loida-AEVTJ-ES.pdf";
+const pdfSalida = "/uploads/2025/10/Recurso-Guia-para-salir-de-los-TdJ-Mar25-1.pdf";
+
+const explorar = [
+  {
+    numero: "01",
+    titulo: "Entender lo que estás viviendo",
+    texto: "Si has salido —o estás pensando en hacerlo— quizá necesites poner nombre a lo que te pasa y saber que no tienes que resolverlo todo hoy.",
+    enlace: "/testigos-de-jehova/",
+    accion: "Conocer el contexto",
+    etiqueta: "Para empezar",
+  },
+  {
+    numero: "02",
+    titulo: "Encontrar apoyo y orientación",
+    texto: "Reúne pasos prácticos, información sobre tus derechos y formas de contactar con personas que conocen de cerca esta experiencia.",
+    enlace: "/guia-para-salir-de-los-testigos-de-jehova/",
+    accion: "Ver la guía para salir",
+    etiqueta: "Apoyo práctico",
+  },
+  {
+    numero: "03",
+    titulo: "Informarte con calma y fuentes",
+    texto: "Consulta qué ha explicado la organización en distintos momentos sobre algunos temas. Encontrarás fechas y referencias para que puedas leerlas y sacar tus propias conclusiones.",
+    enlace: "/testigos-de-jehova/normas/",
+    accion: "Explorar normas y cambios",
+    etiqueta: "Información documentada",
+  },
+];
+
+const temas = [
+  { titulo: "Normas y cambios", texto: "Una mirada a las normas y a cómo se han explicado en distintas épocas.", href: "/testigos-de-jehova/normas/" },
+  { titulo: "Vestimenta", texto: "Qué se ha indicado sobre la ropa y cómo han cambiado algunas orientaciones.", href: "/testigos-de-jehova/vestimenta/" },
+  { titulo: "Sangre y decisiones médicas", texto: "Información para conocer la postura religiosa y pensar en tus derechos sanitarios.", href: "/testigos-de-jehova/sangre/" },
+  { titulo: "Proteger tus derechos sanitarios", texto: "Una guía práctica ante posibles interferencias familiares en decisiones de salud.", href: "/guia-para-proteger-tus-derechos-sanitarios-en-caso-de-interferencia-familiar/" },
+];
+---
+
+<BaseLayout
+  title="Recursos de ayuda para ex Testigos de Jehová"
+  description="Guías, apoyo e información documentada para ex Testigos de Jehová, personas que se plantean salir y quienes quieren comprender mejor esta experiencia."
+  breadcrumbs={[{ label: "Recursos de ayuda" }]}
+>
+  <div class="recursos-page">
+    <section class="recursos-hero">
+      <div class="recursos-shell recursos-hero__inner">
+        <p class="recursos-eyebrow">No tienes que resolverlo todo hoy</p>
+        <h1>Un lugar para encontrar respuestas y apoyo</h1>
+        <p class="recursos-hero__lead">Salir, plantearte dudas o intentar comprender lo que le ocurre a alguien cercano puede remover muchas cosas. Aquí encontrarás información y recursos para dar el siguiente paso a tu ritmo.</p>
+        <p class="recursos-hero__firma">Somos una asociación formada por antiguos Testigos de Jehová. Conocemos esta experiencia también desde dentro.</p>
+        <a class="recursos-button recursos-button--light" href="#elige-tu-camino">Encuentra lo que necesitas <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="recursos-hero__ornamento" aria-hidden="true"><span></span><span></span><span></span></div>
+    </section>
+
+    <section class="recursos-section recursos-section--paths" id="elige-tu-camino">
+      <div class="recursos-shell">
+        <div class="recursos-section__intro">
+          <p class="recursos-eyebrow">Empieza por donde te resulte más útil</p>
+          <h2>¿Qué estás buscando ahora?</h2>
+          <p>No hay un único recorrido. Puedes leer, pedir orientación o simplemente explorar.</p>
+        </div>
+        <div class="recursos-paths">
+          {explorar.map((item) => (
+            <article class="recursos-path">
+              <div class="recursos-path__top"><span class="recursos-path__number">{item.numero}</span><span class="recursos-path__tag">{item.etiqueta}</span></div>
+              <h3>{item.titulo}</h3>
+              <p>{item.texto}</p>
+              <a href={item.enlace}>{item.accion}<span aria-hidden="true"> →</span></a>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="recursos-section recursos-section--temas">
+      <div class="recursos-shell recursos-temas-layout">
+        <div class="recursos-section__intro recursos-section__intro--sticky">
+          <p class="recursos-eyebrow">Leer y contrastar</p>
+          <h2>Conoce los temas con contexto</h2>
+          <p>Recopilamos información y referencias sobre asuntos que pueden generar preguntas. El propósito es ayudarte a entender qué se ha dicho en distintos momentos, no decirte qué pensar.</p>
+          <a class="recursos-text-link" href="/testigos-de-jehova/">Ver todos los temas <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="recursos-temas">
+          {temas.map((tema, index) => (
+            <a class="recursos-tema" href={tema.href}>
+              <span class="recursos-tema__index">0{index + 1}</span>
+              <span class="recursos-tema__body"><strong>{tema.titulo}</strong><span>{tema.texto}</span></span>
+              <span class="recursos-tema__arrow" aria-hidden="true">↗</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="recursos-section recursos-section--guias">
+      <div class="recursos-shell">
+        <div class="recursos-section__intro">
+          <p class="recursos-eyebrow">Material para consultar y compartir</p>
+          <h2>Guías que puedes llevar contigo</h2>
+          <p>Además de los contenidos de esta web, puedes descargar estos materiales para leerlos con calma.</p>
+        </div>
+        <div class="recursos-downloads">
+          <article class="recursos-download">
+            <span class="recursos-download__icon" aria-hidden="true">PDF</span>
+            <div><p class="recursos-download__type">Guía descargable</p><h3>Trauma religioso y Testigos de Jehová</h3><p>Material de consulta sobre aspectos del trauma religioso relacionado con esta experiencia.</p><a href={pdfTrauma} target="_blank" rel="noopener noreferrer">Abrir guía en PDF <span aria-hidden="true">↗</span></a></div>
+          </article>
+          <article class="recursos-download recursos-download--accent">
+            <span class="recursos-download__icon" aria-hidden="true">PDF</span>
+            <div><p class="recursos-download__type">Guía web y PDF</p><h3>Guía para salir de los Testigos de Jehová</h3><p>Lee la guía en la web, con sus pasos y enlaces de apoyo. Si prefieres conservarla, también puedes consultar la edición PDF de marzo de 2025.</p><a href="/guia-para-salir-de-los-testigos-de-jehova/">Leer la guía en la web <span aria-hidden="true">→</span></a><a class="recursos-download__secondary" href={pdfSalida} target="_blank" rel="noopener noreferrer">Abrir edición PDF (marzo 2025) <span aria-hidden="true">↗</span></a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="recursos-contacto">
+      <div class="recursos-shell recursos-contacto__inner">
+        <div><p class="recursos-eyebrow">No tienes que hacerlo a solas</p><h2>Si necesitas hablar, estamos aquí</h2><p>Puedes escribirnos para contarnos qué necesitas. Te escucharemos sin exigirte que tengas una decisión tomada.</p></div>
+        <a class="recursos-button recursos-button--dark" href="/contacto/">Contactar con la asociación <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .recursos-page{--r-ink:#202a27;--r-green:#35564b;--r-olive:#a9b47b;--r-cream:#f5f3eb;--r-paper:#fffefa;--r-muted:#68736c;color:var(--r-ink)}
+  .recursos-shell{width:min(1160px,calc(100% - 48px));margin-inline:auto}
+  .recursos-hero{position:relative;isolation:isolate;overflow:hidden;background:#263c36;color:white;min-height:530px;display:flex;align-items:center}
+  .recursos-hero:before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at 78% 45%,rgba(169,180,123,.25),transparent 34%),linear-gradient(110deg,#263c36 18%,#31483e 72%,#3c5143)}
+  .recursos-hero__inner{padding-block:92px 100px;max-width:1160px}
+  .recursos-eyebrow{margin:0 0 16px;color:#788d76;font-size:.76rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase}
+  .recursos-hero .recursos-eyebrow{color:#c4ce9f}
+  .recursos-hero h1,.recursos-section h2,.recursos-contacto h2{font-family:var(--font-heading,Georgia,serif);font-weight:500;letter-spacing:-.035em}
+  .recursos-hero h1{max-width:760px;margin:0;font-size:clamp(2.8rem,6vw,5.2rem);line-height:1.03}
+  .recursos-hero__lead{max-width:650px;margin:24px 0 0;color:rgba(255,255,255,.84);font-size:1.16rem;line-height:1.75}
+  .recursos-hero__firma{margin:20px 0 28px;color:#d4dac8;font-size:.94rem}
+  .recursos-button{display:inline-flex;align-items:center;gap:16px;padding:15px 20px;border-radius:3px;text-decoration:none;font-size:.9rem;font-weight:700;transition:transform .2s,background .2s}
+  .recursos-button:hover{transform:translateY(-2px)}
+  .recursos-button--light{background:#f7f5ee;color:#273c35}.recursos-button--light:hover{background:white}
+  .recursos-hero__ornamento{position:absolute;right:max(5vw,calc((100vw - 1250px)/2));top:50%;width:260px;height:260px;transform:translateY(-50%);opacity:.45;pointer-events:none}
+  .recursos-hero__ornamento span{position:absolute;border:1px solid rgba(202,215,163,.45);border-radius:50%;inset:0}.recursos-hero__ornamento span:nth-child(2){inset:27px}.recursos-hero__ornamento span:nth-child(3){inset:54px;background:rgba(169,180,123,.13)}
+  .recursos-section{padding:100px 0}.recursos-section--paths{background:var(--r-cream)}
+  .recursos-section__intro{max-width:680px;margin-bottom:38px}.recursos-section h2,.recursos-contacto h2{margin:0;font-size:clamp(2rem,4vw,3.15rem);line-height:1.12}
+  .recursos-section__intro>p:last-child{max-width:650px;margin:16px 0 0;color:var(--r-muted);font-size:1.04rem;line-height:1.75}
+  .recursos-paths{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+  .recursos-path{min-height:300px;padding:26px;background:var(--r-paper);border:1px solid rgba(32,42,39,.09);display:flex;flex-direction:column;align-items:flex-start}
+  .recursos-path__top{width:100%;display:flex;justify-content:space-between;align-items:center;margin-bottom:30px}
+  .recursos-path__number{font-family:Georgia,serif;color:#8c9a69;font-size:1.35rem}
+  .recursos-path__tag{padding:6px 9px;background:#eef0e6;color:#54634e;font-size:.68rem;font-weight:700;letter-spacing:.04em}
+  .recursos-path h3,.recursos-download h3{margin:0;font-family:Georgia,serif;font-size:1.48rem;line-height:1.25;font-weight:500}
+  .recursos-path>p{margin:13px 0 24px;color:var(--r-muted);font-size:.94rem;line-height:1.7}
+  .recursos-path>a,.recursos-text-link,.recursos-download a{margin-top:auto;color:var(--r-green);font-weight:700;text-decoration:none;font-size:.9rem}
+  .recursos-path>a:hover,.recursos-text-link:hover,.recursos-download a:hover{text-decoration:underline;text-underline-offset:4px}
+  .recursos-section--temas{background:var(--r-paper)}
+  .recursos-temas-layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:90px;align-items:start}
+  .recursos-section__intro--sticky{position:sticky;top:110px;margin:0}.recursos-text-link{display:inline-block;margin-top:24px}
+  .recursos-temas{border-top:1px solid #dfe2d8}
+  .recursos-tema{display:grid;grid-template-columns:42px 1fr 22px;gap:16px;align-items:start;padding:24px 4px;border-bottom:1px solid #dfe2d8;color:inherit;text-decoration:none;transition:padding .2s,background .2s}
+  .recursos-tema:hover{padding-inline:12px;background:#f7f7f1}.recursos-tema__index{padding-top:3px;color:#8a9768;font-size:.76rem;font-weight:700}
+  .recursos-tema__body{display:grid;gap:7px}.recursos-tema__body strong{font-family:Georgia,serif;font-size:1.2rem;font-weight:500}.recursos-tema__body span{color:var(--r-muted);font-size:.9rem;line-height:1.6}.recursos-tema__arrow{color:var(--r-green)}
+  .recursos-section--guias{background:#f2f0e8}.recursos-downloads{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .recursos-download{display:grid;grid-template-columns:52px 1fr;gap:20px;padding:28px;background:var(--r-paper);border:1px solid rgba(32,42,39,.1)}
+  .recursos-download--accent{background:#e8ebdf}.recursos-download__icon{display:grid;place-items:center;width:48px;height:56px;background:#e8ebdf;color:#465b49;font-size:.68rem;font-weight:800;clip-path:polygon(0 0,72% 0,100% 25%,100% 100%,0 100%)}
+  .recursos-download__type{margin:0 0 9px;color:var(--r-muted);font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+  .recursos-download h3{font-size:1.32rem}.recursos-download div>p:not(.recursos-download__type){margin:11px 0 18px;color:var(--r-muted);font-size:.9rem;line-height:1.65}
+  .recursos-download a{display:inline-block;margin-right:18px}.recursos-download__secondary{margin-top:12px!important}
+  .recursos-contacto{padding:68px 0;background:#dce2d2}.recursos-contacto__inner{display:flex;align-items:center;justify-content:space-between;gap:40px}.recursos-contacto__inner>div{max-width:670px}.recursos-contacto h2{font-size:clamp(2rem,3.5vw,2.8rem)}.recursos-contacto__inner>div>p:last-child{margin:14px 0 0;color:#536057;line-height:1.7}
+  .recursos-button--dark{flex:none;background:#2e493f;color:white}.recursos-button--dark:hover{background:#20372f}
+  @media(max-width:800px){.recursos-hero{min-height:0}.recursos-hero__inner{padding-block:76px 82px}.recursos-hero__ornamento{right:-115px;top:auto;bottom:-90px;transform:none}.recursos-paths{grid-template-columns:1fr}.recursos-path{min-height:0}.recursos-path__top{margin-bottom:20px}.recursos-temas-layout{grid-template-columns:1fr;gap:38px}.recursos-section__intro--sticky{position:static}.recursos-downloads{grid-template-columns:1fr}.recursos-section{padding:76px 0}.recursos-contacto__inner{align-items:flex-start;flex-direction:column;gap:24px}}
+  @media(max-width:520px){.recursos-shell{width:min(100% - 36px,1160px)}.recursos-hero h1{font-size:2.75rem}.recursos-hero__lead{font-size:1.03rem}.recursos-download{grid-template-columns:40px 1fr;gap:14px;padding:20px}.recursos-download__icon{width:40px;height:48px}.recursos-tema{grid-template-columns:30px 1fr 18px;gap:10px}.recursos-section{padding:64px 0}}
+  @media(prefers-reduced-motion:reduce){.recursos-button,.recursos-tema{transition:none}}
+</style>
