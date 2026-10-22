@@ -35,6 +35,9 @@
   text-decoration: underline; text-decoration-color: #2ea88f; text-decoration-thickness: 2px; text-underline-offset: 4px;
 }
 
+/* En el hero oscuro, solo el subrayado lima, sin fondo claro. */
+.sg-hero .sg-subrayado { background: none; color: inherit; padding: 0; text-decoration-color: #d8eaa4; }
+
 /* ---------- Presentación e índice ---------- */
 .sg-indice { padding-block: clamp(60px, 7vw, 90px) clamp(20px, 3vw, 40px); }
 .sg-presentacion {

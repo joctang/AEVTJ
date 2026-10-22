@@ -105,6 +105,23 @@ articulos.vestimenta = {
   },
 };
 
+articulos.expulsion = {
+  ids: {
+    "¿Qué es la expulsión de los Testigos de Jehová?": "que-es",
+    "¿Por qué pueden expulsar a un Testigo de Jehová?": "motivos",
+    "¿Cómo funciona el comité judicial?": "comite",
+    "¿Cómo se trata a una persona expulsada?": "trato",
+    "¿Qué pasa con la familia de una persona expulsada?": "familia",
+    "¿Es lo mismo expulsado, desasociado, inactivo o ex Testigo?": "diferencias",
+    "¿Se puede volver a ser Testigo después de una expulsión?": "readmision",
+    "Qué cuentan quienes lo han vivido": "testimonios",
+    "¿Han cambiado las instrucciones sobre la expulsión?": "cronologia",
+    "Preguntas frecuentes": "preguntas",
+    "Lo que más duele es perder a tu gente": "mirada-aevtj",
+    "Fuentes y alcance": "fuentes",
+  },
+};
+
 const tema = process.argv[2];
 const config = articulos[tema];
 if (!config) throw new Error(`Uso: node scripts/articulo-desde-borrador.mjs ${Object.keys(articulos).join("|")}`);

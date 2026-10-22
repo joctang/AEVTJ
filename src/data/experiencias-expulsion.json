@@ -1,0 +1,755 @@
+{
+  "etiquetas": [
+    {
+      "id": "familia",
+      "texto": "Familia"
+    },
+    {
+      "id": "comité",
+      "texto": "Comité judicial"
+    },
+    {
+      "id": "reuniones",
+      "texto": "Reuniones"
+    },
+    {
+      "id": "readmisión",
+      "texto": "Readmisión"
+    },
+    {
+      "id": "amistades",
+      "texto": "Amistades"
+    },
+    {
+      "id": "trabajo",
+      "texto": "Trabajo"
+    },
+    {
+      "id": "hijos",
+      "texto": "Hijos"
+    }
+  ],
+  "grupos": [
+    {
+      "id": "personas",
+      "titulo": "Personas que han contado su caso",
+      "intro": "Entrevistas en vídeo, prensa y foros públicos. Elige un nombre para leer lo que cuenta esa persona, con el enlace a la fuente y el minuto cuando es un vídeo."
+    },
+    {
+      "id": "organizacion",
+      "titulo": "Lo que publica la organización",
+      "intro": "Salen de La Atalaya y de Nuestro Ministerio del Reino. Los nombres los cambia la publicación, así que no se pueden contrastar con otras fuentes."
+    }
+  ],
+  "casos": [
+    {
+      "id": "A01",
+      "grupo": "personas",
+      "persona": "Miriam",
+      "rol": "Expulsada y readmitida; después renunció",
+      "lugar": "No consta",
+      "epoca": "Sin fecha para la expulsión; el contacto con sus padres, reciente según el documental",
+      "resumen": "Fue expulsada y tardó tres años y medio en ser readmitida. Dice que sus padres no respondían a sus cartas y que su padre le pidió que no escribiera hasta que volviera a ser Testigo. Volvió, según cuenta, para recuperar a su familia, y al año se fue por voluntad propia. Cuenta que, cuando tuvo a su hija, escribió a sus padres y les envió fotos durante un par de meses; dice que solo contestaba su padre, que es anciano, y que lleva dos años sin saber de ellos.",
+      "etiquetas": [
+        "familia",
+        "readmisión"
+      ],
+      "fuente": {
+        "texto": "Documental «Expulsados de los Testigos de Jehová», EL PAÍS (12-10-2025), minutos 2:18 y 17:06",
+        "url": "https://www.youtube.com/watch?v=dF85vscQnYE&t=138s"
+      }
+    },
+    {
+      "id": "A02",
+      "grupo": "personas",
+      "persona": "Israel Flórez",
+      "rol": "Dejó de ser Testigo en 2005; expulsado en 2008",
+      "lugar": "España",
+      "epoca": "2008; boda en septiembre de 2022",
+      "resumen": "Cuenta que, cuando fueron a decirle que le harían un comité judicial por vender cruces en sus joyerías, echó a los ancianos de la tienda, y que supo después, por la reacción de la gente, que lo habían expulsado a puerta cerrada. Dice que se anunció su nombre desde la plataforma del Salón del Reino y que la gente cambiaba de acera al verlo por la calle. Cuenta que sus padres fueron a su boda, en septiembre de 2022, y que el día antes su padre le pidió que no hiciera fotos ni las colgara en Facebook, por temor a que un Testigo las viera.",
+      "etiquetas": [
+        "comité",
+        "amistades",
+        "familia"
+      ],
+      "fuente": {
+        "texto": "Documental «Expulsados de los Testigos de Jehová», EL PAÍS (12-10-2025), minuto 14:31",
+        "url": "https://www.youtube.com/watch?v=dF85vscQnYE&t=871s"
+      }
+    },
+    {
+      "id": "A03",
+      "grupo": "personas",
+      "persona": "Soraya Nárez",
+      "rol": "Expulsada y readmitida",
+      "lugar": "España",
+      "epoca": "Sin fecha en la fuente",
+      "resumen": "Dice que la expulsaron después de contar a los ancianos una relación con una pareja que no era Testigo. Fue readmitida y, años después, su padre le dijo que no podía haber contacto porque otro Testigo le había enviado una foto del árbol de Navidad de su piso.",
+      "etiquetas": [
+        "familia",
+        "comité",
+        "readmisión"
+      ],
+      "fuente": {
+        "texto": "Entrevista en elDiario.es (15-9-2024)",
+        "url": "https://www.eldiario.es/catalunya/soraya-narez-extestigo-jehova-perdi-relacion-padre-poner-arbol-navidad-casa_128_11517873.html"
+      }
+    },
+    {
+      "id": "A04",
+      "grupo": "personas",
+      "persona": "Noemí",
+      "rol": "Expulsada (dice que provocó su expulsión)",
+      "lugar": "No consta",
+      "epoca": "Sin fecha en la fuente",
+      "resumen": "Se bautizó a los 17 años. Cuenta que provocó su propia expulsión porque no veía otra salida y que, tras el comité, su madre le dijo que no podía seguir en casa si no aceptaba lo que le había enseñado. Más adelante fue a la Conmemoración, entró con la reunión empezada y se marchó antes del final porque, según dice, así se lo habían indicado los ancianos.",
+      "etiquetas": [
+        "comité",
+        "familia",
+        "reuniones"
+      ],
+      "fuente": {
+        "texto": "Entrevista en el canal de Juanje Diánez (2-9-2025), minuto 61:00",
+        "url": "https://www.youtube.com/watch?v=ibKNV-uqPI8&t=3660s"
+      }
+    },
+    {
+      "id": "A05",
+      "grupo": "personas",
+      "persona": "«Rudy» (alias en el vídeo)",
+      "rol": "Expulsado a los 26 años",
+      "lugar": "No consta",
+      "epoca": "Sin fecha en la fuente",
+      "resumen": "Fue al anuncio de su expulsión. Cuenta que después, en las reuniones, nadie le saludaba y que debía irse antes de la oración final. Dice que no tiene contacto con su familia, con la que ya tenía mala relación antes.",
+      "etiquetas": [
+        "reuniones",
+        "familia",
+        "amistades"
+      ],
+      "fuente": {
+        "texto": "Entrevista en «Las historias no contadas de las ovejas negras» (26-7-2026), minuto 67:00",
+        "url": "https://www.youtube.com/watch?v=yBfZzS3xoiI&t=4020s"
+      },
+      "corto": "«Rudy»"
+    },
+    {
+      "id": "A06",
+      "grupo": "personas",
+      "persona": "Hombre venezolano (no da su nombre en el fragmento)",
+      "rol": "Expulsado",
+      "lugar": "Venezuela",
+      "epoca": "2017, según él",
+      "resumen": "Cuenta que su madre no le habla. Se mudó a otra congregación y asistió dos meses a las reuniones sin que nadie le hablara, entrando cuando ya habían empezado y saliendo antes de la oración final.",
+      "etiquetas": [
+        "familia",
+        "reuniones"
+      ],
+      "fuente": {
+        "texto": "Entrevista en el canal de Miguel Ángel Idrogo (4-6-2026), minuto 71:00",
+        "url": "https://www.youtube.com/watch?v=XYZTBPpDLg8&t=4260s"
+      },
+      "corto": "Un hombre de Venezuela"
+    },
+    {
+      "id": "A07",
+      "grupo": "personas",
+      "persona": "Lydia Casanova",
+      "rol": "Tratada como expulsada sin estarlo formalmente",
+      "lugar": "España (Cataluña)",
+      "epoca": "Hace unos cinco años, según la fuente (2024)",
+      "resumen": "Un comité de tres ancianos la juzgó por relaciones con chicos antes de casarse. Perdonada la primera vez, no acudió al segundo comité ni firmó la carta de desasociación, pero dice que la tratan como apóstata. Cuenta que lleva cinco años sin ver a sus padres ni a sus dos hermanos.",
+      "etiquetas": [
+        "comité",
+        "familia"
+      ],
+      "fuente": {
+        "texto": "Reportaje de 3Cat (29-9-2024)",
+        "url": "https://www.3cat.cat/3catinfo/dun-dia-per-laltre-no-tens-ningu-el-relat-duna-extestimoni-de-jehova-expulsada/noticia/3310438/"
+      }
+    },
+    {
+      "id": "A08",
+      "grupo": "personas",
+      "persona": "Becky",
+      "rol": "Se fue sin ser expulsada",
+      "lugar": "España",
+      "epoca": "Septiembre de 2026 (el mensaje a su padre)",
+      "resumen": "Estuvo 27 años en los Testigos. Dice que, tras un conflicto con los ancianos en Estados Unidos, volvió a España sin el apoyo de su familia. Cuenta que escribió a su padre y recibió una respuesta cariñosa, pero que el mensaje fue borrado en menos de una hora.",
+      "etiquetas": [
+        "familia"
+      ],
+      "fuente": {
+        "texto": "Entrevista en El Independiente (12-10-2026)",
+        "url": "https://www.elindependiente.com/espana/2026/10/12/becky-extestigo-jehova-vuestra-hija-os-quiere"
+      }
+    },
+    {
+      "id": "A09",
+      "grupo": "personas",
+      "persona": "Alejandro («AlejandroChile26»)",
+      "rol": "Expulsado",
+      "lugar": "Chile",
+      "epoca": "Sin fecha en la fuente",
+      "resumen": "Cuenta que se bautizó de adolescente para agradar a su familia. Tras la fuga de su hermano, dice que lo expulsaron pese a apelar, y que un anciano le comentó que su caso serviría de ejemplo. Afirma que su familia se fragmentó y hoy modera un grupo de apoyo en línea.",
+      "etiquetas": [
+        "comité",
+        "familia"
+      ],
+      "fuente": {
+        "texto": "Relato en el foro de la Comunidad ex-Testigos de Jehová (24-8-2026)",
+        "url": "https://extj.co/foro/printthread.php?tid=9928"
+      },
+      "corto": "Alejandro"
+    },
+    {
+      "id": "A10",
+      "grupo": "personas",
+      "persona": "Raquel",
+      "rol": "Expulsada",
+      "lugar": "España",
+      "epoca": "Sin fecha en la fuente",
+      "resumen": "Fue precursora y nunca pensó que la expulsarían. Cuenta que su proceso empezó con un «aflojamiento» durante la pandemia: faltar a reuniones y predicar menos. Dice que, tras la expulsión, su familia y sus amigas dejaron de hablarle y la bloquearon en el móvil.",
+      "etiquetas": [
+        "familia",
+        "amistades"
+      ],
+      "fuente": {
+        "texto": "Entrevista «Ahora me entero» en el canal de Juanje Diánez (8-10-2026), minuto 22:59",
+        "url": "https://www.youtube.com/watch?v=IXuY_PfNio8&t=1379s"
+      }
+    },
+    {
+      "id": "A11",
+      "grupo": "personas",
+      "persona": "Eduardo",
+      "rol": "Expulsado",
+      "lugar": "México",
+      "epoca": "Antes de 2022",
+      "resumen": "Cuenta que pasó 21 años dentro. Dice que, tras su expulsión, siguió yendo cuatro meses a las reuniones y que su padre, el resto de su familia y los demás Testigos dejaron de hablarle. Afirma que pudo salir adelante porque tenía un trabajo que le permitía pagar vivienda y comida.",
+      "etiquetas": [
+        "familia",
+        "trabajo"
+      ],
+      "fuente": {
+        "texto": "Entrevista en el canal Doble G (3-9-2022), minuto 61:13",
+        "url": "https://www.youtube.com/watch?v=udbRTZQChcI&t=3673s"
+      }
+    },
+    {
+      "id": "A12",
+      "grupo": "personas",
+      "persona": "Gache Boccazzi",
+      "rol": "Expulsado",
+      "lugar": "España",
+      "epoca": "Sin fecha en la fuente",
+      "resumen": "Dice que al salir de los Testigos su familia le dejó de hablar y se quedó solo. Cuenta que, al enterarse de que se había anunciado su expulsión, se sintió feliz porque lo vivió como el primer paso hacia su libertad.",
+      "etiquetas": [
+        "familia",
+        "amistades"
+      ],
+      "fuente": {
+        "texto": "Entrevista en su canal (16-6-2025), minuto 3:49",
+        "url": "https://www.youtube.com/watch?v=Ec0ZmDfjqlI&t=229s"
+      }
+    },
+    {
+      "id": "A13",
+      "grupo": "personas",
+      "persona": "Taire Tania",
+      "rol": "Dejó de ir sin estar bautizada; los ancianos le pidieron una carta de renuncia",
+      "lugar": "México",
+      "epoca": "Hace unos 27 años, según ella (tenía 16 años)",
+      "resumen": "Nunca se bautizó. Cuenta que dejó de ir a las reuniones a los 16 años y que los ancianos le pidieron una carta de renuncia. Dice que a la semana se anunció que ya no era parte de los Testigos, que su madre le pidió que se fuera de casa para que la familia pudiera ayudarla y que los ancianos pidieron al gerente del restaurante donde trabajaba que no la dejara atenderlos.",
+      "etiquetas": [
+        "reuniones",
+        "familia",
+        "trabajo"
+      ],
+      "fuente": {
+        "texto": "Entrevista en el canal Conciencia Cruda (1-9-2023), minuto 23:48",
+        "url": "https://www.youtube.com/watch?v=JmnafJHqdho&t=1428s"
+      }
+    },
+    {
+      "id": "A14",
+      "grupo": "personas",
+      "persona": "Jaciel",
+      "rol": "Expulsado",
+      "lugar": "Ciudad de México",
+      "epoca": "Sin fecha en la fuente",
+      "resumen": "Cuenta que confesó una relación con su novia y pidió que lo expulsaran porque sabía que «no estaba bien». Dice que pasó por unos diez comités antes de la expulsión. Afirma que sus padres lo comprendieron y que su hermana también cambió su forma de pensar.",
+      "etiquetas": [
+        "comité",
+        "familia"
+      ],
+      "fuente": {
+        "texto": "Relato en el canal Conciencia Cruda (16-6-2020), minuto 6:46",
+        "url": "https://www.youtube.com/watch?v=8DA3b2NeEF0&t=406s"
+      }
+    },
+    {
+      "id": "A15",
+      "grupo": "personas",
+      "persona": "Andrés Padilla",
+      "rol": "Expulsado",
+      "lugar": "México (por lo que cuenta de su zona)",
+      "epoca": "Expulsado a los 21 años, nueve años antes del vídeo (2023)",
+      "resumen": "Se bautizó a los 16 y dice que lo expulsaron a los 21. Cuenta que sus padres, Testigos, ya no se relacionaban con él y que, el día antes de la entrevista, le dieron un ultimátum: que no los buscara, no fuera a su casa y no les pidiera nada. Supone que a su padre lo presionaron para que dejara de hablarle.",
+      "etiquetas": [
+        "familia"
+      ],
+      "fuente": {
+        "texto": "Entrevista en el canal Conciencia Cruda (12-7-2023), minuto 0:00",
+        "url": "https://www.youtube.com/watch?v=Gnn7tnD2D3g&t=0s"
+      }
+    },
+    {
+      "id": "A16",
+      "grupo": "personas",
+      "persona": "Vanesa",
+      "rol": "Renunció con una carta",
+      "lugar": "Colombia",
+      "epoca": "Un mes antes de la entrevista (2023)",
+      "resumen": "Ex precursora regular. Cuenta que entregó una carta de renuncia a los ancianos y que estos le dijeron que sus amigos dejarían de hablarle «por su propia decisión», algo que ella discute porque, según dice, los obligan. Afirma que su marido, Testigo, se fue de casa tras la renuncia.",
+      "etiquetas": [
+        "amistades",
+        "familia"
+      ],
+      "fuente": {
+        "texto": "Entrevista en el canal Conciencia Cruda (29-9-2023), minuto 2:03",
+        "url": "https://www.youtube.com/watch?v=gmu1mWkeOSM&t=123s"
+      }
+    },
+    {
+      "id": "A17",
+      "grupo": "personas",
+      "persona": "Kevin Herrera",
+      "rol": "Expulsado de adolescente; después dejó los Testigos",
+      "lugar": "Ciudad de México",
+      "epoca": "Sin fecha en la fuente",
+      "resumen": "Hijo de un anciano, cuenta que se bautizó por presión y que lo expulsaron de adolescente. Explica que, según su experiencia, un anciano con un hijo expulsado en casa puede perder su privilegio o echarlo, y que su padre dejó el suyo; Kevin volvió por compromiso con él. Años después, cuando le dijo que ya no creía, su padre le contestó que era libre, pero que la puerta de casa estaba abierta para que se fuera.",
+      "etiquetas": [
+        "familia",
+        "readmisión"
+      ],
+      "fuente": {
+        "texto": "Entrevista en el canal Conciencia Cruda (1-6-2023), minuto 4:00",
+        "url": "https://www.youtube.com/watch?v=y8YCI_myEZA&t=240s"
+      }
+    },
+    {
+      "id": "A18",
+      "grupo": "personas",
+      "persona": "Isidro",
+      "rol": "Renunció con una carta",
+      "lugar": "No consta",
+      "epoca": "Hace unos 33 años, según él (vídeo de 2024)",
+      "resumen": "Hijo de un precursor y de una precursora regular, cuenta que su padre fue expulsado y que lo veía entrar por la puerta de atrás de la casa para no cruzarse con quienes estudiaban con su madre. Años después presentó su carta de renuncia. Dice que sus amigos de la congregación lo abandonaron y que, cinco minutos después de decírselo a un anciano para el que trabajaba, la esposa de este pidió que lo despidieran.",
+      "etiquetas": [
+        "familia",
+        "amistades",
+        "trabajo"
+      ],
+      "fuente": {
+        "texto": "Entrevista en el canal Conciencia Cruda (16-1-2024), minuto 28:55",
+        "url": "https://www.youtube.com/watch?v=1ejWlJ6rpvE&t=1735s"
+      }
+    },
+    {
+      "id": "A19",
+      "grupo": "personas",
+      "persona": "Aniani",
+      "rol": "Expulsada",
+      "lugar": "No consta",
+      "epoca": "Sin fecha en la fuente",
+      "resumen": "Se bautizó a los 21. Cuenta que pidió ayuda a los ancianos en un momento difícil y que el comité la expulsó, diciéndole que no estaba preparada para ser cristiana. Dice que los Testigos cambiaban de acera al verla y que su madre dejó de cuidar a sus hijas y le pidió que no la llamara. Añade que sus padres compraron una casa a la que ella nunca pudo ir.",
+      "etiquetas": [
+        "comité",
+        "familia",
+        "amistades",
+        "hijos"
+      ],
+      "fuente": {
+        "texto": "Entrevista en el canal Narsinfiltro (27-9-2026), minuto 40:00",
+        "url": "https://www.youtube.com/watch?v=uhTyQJqTdi0&t=2400s"
+      }
+    },
+    {
+      "id": "A20",
+      "grupo": "personas",
+      "persona": "Mujer entrevistada por Miguel Ángel Idrogo",
+      "rol": "Expulsada",
+      "lugar": "No consta",
+      "epoca": "Sin fecha en la fuente",
+      "resumen": "Cuenta que se sometió a un comité con cuatro ancianos y que salió expulsada con el ánimo por los suelos. Dice que, después, personas con las que había tenido mucho cariño le quitaban la cara o le daban la espalda al verla por la calle.",
+      "etiquetas": [
+        "comité",
+        "amistades"
+      ],
+      "fuente": {
+        "texto": "Entrevista en el canal de Miguel Ángel Idrogo (8-6-2026), minuto 62:00",
+        "url": "https://www.youtube.com/watch?v=PyoKiri_DFM&t=3720s"
+      },
+      "corto": "Una mujer expulsada"
+    },
+    {
+      "id": "A21",
+      "grupo": "personas",
+      "persona": "Armando",
+      "rol": "Dejó de ser Testigo; su madre lo trató como «opositor»",
+      "lugar": "Sonora (México)",
+      "epoca": "Sin fecha; tenía unos 20 años en 2023",
+      "resumen": "Cuenta que su madre lo llamó «opositor» tras enterarse, por los ancianos, de un mensaje suyo, y que lo echó de casa esa misma noche. Antes, según dice, le había asegurado que podía seguir viviendo allí aunque dejara de ser Testigo.",
+      "etiquetas": [
+        "familia"
+      ],
+      "fuente": {
+        "texto": "Entrevista en el canal Jimy Temático (26-2-2023), minuto 0:34",
+        "url": "https://www.youtube.com/watch?v=nuc4RZajN5g&t=34s"
+      }
+    },
+    {
+      "id": "A22",
+      "grupo": "personas",
+      "persona": "Mujer entrevistada en El Perro Verde Podcast",
+      "rol": "Expulsada y readmitida",
+      "lugar": "No consta",
+      "epoca": "Sin fecha en la fuente",
+      "resumen": "Cuenta que estuvo ocho meses expulsada y que siguió yendo a las reuniones porque quería el perdón de Dios, pero tenía que entrar con la reunión empezada y marcharse la primera. Dice que su hija, de 8 o 9 años, le preguntaba por qué nadie las saludaba. Fue readmitida, fue a pocas reuniones más y dejó de ir porque, según dice, seguía sin el apoyo que necesitaba.",
+      "etiquetas": [
+        "reuniones",
+        "readmisión",
+        "hijos",
+        "amistades"
+      ],
+      "fuente": {
+        "texto": "Entrevista en El Perro Verde Podcast (26-6-2025), minuto 22:36",
+        "url": "https://www.youtube.com/watch?v=5CKpo-hoyPw&t=1356s"
+      },
+      "corto": "Una mujer readmitida"
+    },
+    {
+      "id": "A23",
+      "grupo": "personas",
+      "persona": "Tobías",
+      "rol": "Hijo de una madre expulsada",
+      "lugar": "No consta",
+      "epoca": "Cuando era adolescente; sin fecha exacta",
+      "resumen": "Cuenta que su madre estuvo dos años expulsada y que, aunque él no lo estaba, muchas personas dejaron de invitarlo porque ella no podía acompañarlo. Dice que fue como si los hubieran expulsado a los dos. Afirma que su madre fue readmitida más tarde.",
+      "etiquetas": [
+        "familia",
+        "hijos"
+      ],
+      "fuente": {
+        "texto": "Entrevista en el canal El depósito de la fe, minuto 17:01",
+        "url": "https://www.youtube.com/watch?v=0A3CcCj5MnA&t=1021s"
+      }
+    },
+    {
+      "id": "A24",
+      "grupo": "personas",
+      "persona": "Begoña Gerpe",
+      "rol": "Se fue a los 18 sin ser expulsada",
+      "lugar": "España",
+      "epoca": "Cuatro años después de irse, según ella",
+      "resumen": "Cuenta que dejó la religión a los 18 años sin ser expulsada y que sabía que algunos Testigos dejarían de hablarle. Dice que, cuatro años después, un anciano le comunicó que, para ir a la boda de su hermana, tenía que arrepentirse. Se sometió a otro comité y se arrepintió, según explica, para poder asistir a la boda.",
+      "etiquetas": [
+        "comité",
+        "familia",
+        "reuniones"
+      ],
+      "fuente": {
+        "texto": "Vídeo en su canal (28-3-2026), minuto 12:25",
+        "url": "https://www.youtube.com/watch?v=jZB6ZTinrB0&t=745s"
+      }
+    },
+    {
+      "id": "A25",
+      "grupo": "personas",
+      "persona": "Abigail",
+      "rol": "Expulsada",
+      "lugar": "No consta",
+      "epoca": "1 de mayo de 2018, según ella",
+      "resumen": "Dice que la expulsaron el 1 de mayo de 2018, tras no presentarse a su comité. Cuenta que perdió ocho kilos en dos semanas y que su familia y sus amistades de toda la vida dejaron de tratarla. Afirma que casi toda su vida social y laboral estaba dentro del grupo.",
+      "etiquetas": [
+        "comité",
+        "familia",
+        "amistades",
+        "trabajo"
+      ],
+      "fuente": {
+        "texto": "Entrevista en el canal El Director (5-7-2026), minuto 35:00",
+        "url": "https://www.youtube.com/watch?v=Qg7MfUrq8t4&t=2100s"
+      }
+    },
+    {
+      "id": "A26",
+      "grupo": "personas",
+      "persona": "Daniela («Dani»)",
+      "rol": "Renunció con una carta; los ancianos no querían aceptarla",
+      "lugar": "No consta",
+      "epoca": "Su marido murió el 1 de octubre de 2024; entregó la carta un año después, según cuenta",
+      "resumen": "Cuenta que su marido, también Testigo, murió el 1 de octubre de 2024 y que, cuando quiso renunciar, los ancianos le dijeron que tenía «dos vidas en juego», la de su hija y la suya, y que no volvería a ver a su marido. Dice que entregó su carta de renuncia el 1 de octubre de 2025 y que, desde entonces, Testigos con los que se cruza le vuelven la cara para no saludarla.",
+      "etiquetas": [
+        "amistades",
+        "familia"
+      ],
+      "fuente": {
+        "texto": "Entrevista en el canal Conciencia Cruda (21-10-2025), minuto 2:00",
+        "url": "https://www.youtube.com/watch?v=rJ7siZkTpiQ&t=120s"
+      },
+      "corto": "Daniela"
+    },
+    {
+      "id": "A27",
+      "grupo": "personas",
+      "persona": "Efraín",
+      "rol": "Considerado «apóstata» tras 32 años como Testigo",
+      "lugar": "Puerto Rico",
+      "epoca": "Cuando murió su padre, un mes antes del vídeo (2022)",
+      "resumen": "Cuenta que, al viajar a Puerto Rico para acompañar a su madre tras la muerte de su padre, que no era Testigo, ninguno de sus amigos de más de 30 años en la organización le escribió ni le llamó. Dice que un Testigo que conocía a su familia política desde hacía décadas pasó a su lado y lo ignoró cuando lo saludó, y que solo dos personas de la congregación de su madre hablaron con él.",
+      "etiquetas": [
+        "amistades",
+        "familia"
+      ],
+      "fuente": {
+        "texto": "Vídeo en el canal Oasis Ex-Testigos de Jehová (23-10-2022), minuto 3:00",
+        "url": "https://www.youtube.com/watch?v=VK92_Q4EELk&t=180s"
+      }
+    },
+    {
+      "id": "A28",
+      "grupo": "personas",
+      "persona": "Eliana, 59 años",
+      "rol": "Madre de un hijo expulsado; después dejó los Testigos",
+      "lugar": "No consta",
+      "epoca": "Ocho años de trato restringido a su hijo; testimonio de 2016",
+      "resumen": "Cuenta que, cuando su hijo fue expulsado, un anciano le aconsejó que lo echara de casa y sus hijas le pedían que no le hablara ni le diera un abrazo. Dice que lo aguantó ocho años, que el hijo se fue a los 19 años y que, si la veían con él por la calle, avisaban a los ancianos, la amonestaban y le quitaron privilegios.",
+      "etiquetas": [
+        "familia",
+        "hijos"
+      ],
+      "fuente": {
+        "texto": "Testimonio en el canal Momento de la Verdad (26-4-2016), minuto 6:17",
+        "url": "https://www.youtube.com/watch?v=C2HUwUldc08&t=377s"
+      },
+      "corto": "Eliana"
+    },
+    {
+      "id": "A29",
+      "grupo": "personas",
+      "persona": "Shayra Lemi",
+      "rol": "Se fue sin ser expulsada (inactiva desde 2013) y después se desasoció",
+      "lugar": "No consta",
+      "epoca": "Inactiva desde mediados de 2013; llamada de su madre en 2017",
+      "resumen": "Cuenta que dejó de asistir en 2013 y que, en 2017, hospitalizada por un accidente durante su embarazo, su madre la llamó para reprocharle que se hubiera unido a grupos de ex Testigos. Dice que, al contarle lo que le había pasado, su madre respondió que no lo sabía y colgó, y que no volvió a llamar para preguntar por ella ni por el bebé.",
+      "etiquetas": [
+        "familia"
+      ],
+      "fuente": {
+        "texto": "Vídeo en el canal de Shayra Lemi (12-1-2019), minuto 7:18",
+        "url": "https://www.youtube.com/watch?v=EveKQ2Qdv5o&t=438s"
+      }
+    },
+    {
+      "id": "A30",
+      "grupo": "personas",
+      "persona": "Liberada y Tranquila (nombre del canal)",
+      "rol": "Expulsada",
+      "lugar": "No consta",
+      "epoca": "Su madre lleva más de dos años y medio sin hablarle, según el vídeo de 2019",
+      "resumen": "Dice que su madre, que cumplía 71 años ese día, llevaba más de dos años y medio sin hablarle. Cuenta que, tras la expulsión, vivió unos diez años en una fase de «choque» emocional y que aceptar que su familia no le habla y que perdió amistades de toda la vida fue parte del proceso.",
+      "etiquetas": [
+        "familia",
+        "amistades"
+      ],
+      "fuente": {
+        "texto": "Vídeo en el canal Liberada y Tranquila (17-1-2019), minuto 0:00",
+        "url": "https://www.youtube.com/watch?v=6o2N7KxXTCo&t=0s"
+      },
+      "corto": "Liberada y Tranquila"
+    },
+    {
+      "id": "B01",
+      "grupo": "organizacion",
+      "persona": "Elizabeth y Mark",
+      "rol": "Padres de un hijo adulto expulsado",
+      "lugar": "No consta",
+      "epoca": "Publicado en septiembre de 2021",
+      "resumen": "Elizabeth cuenta que se culpó al principio y que fue muy duro cortar por completo la relación con su hijo adulto; dice que, al volver él, valoró más la disciplina. Mark dice que su hijo le contó años después que volvió en parte porque ellos hicieron lo que debían.",
+      "etiquetas": [
+        "familia",
+        "readmisión"
+      ],
+      "fuente": {
+        "texto": "La Atalaya (estudio), septiembre de 2021: «Cuando un ser querido deja a Jehová»",
+        "url": "https://www.jw.org/es/biblioteca/revistas/atalaya-estudio-septiembre-2021/Cuando-un-ser-querido-deja-a-Jehov%C3%A1"
+      }
+    },
+    {
+      "id": "B02",
+      "grupo": "organizacion",
+      "persona": "Hilda",
+      "rol": "Madre de un hijo que dejó la congregación",
+      "lugar": "No consta",
+      "epoca": "Publicado en septiembre de 2021",
+      "resumen": "Cuenta que su hijo dejó la congregación, a su esposa y a sus hijos, y que ese dolor fue mucho peor que la muerte de su esposo.",
+      "etiquetas": [
+        "familia"
+      ],
+      "fuente": {
+        "texto": "La Atalaya (estudio), septiembre de 2021: «Cuando un ser querido deja a Jehová»",
+        "url": "https://www.jw.org/es/biblioteca/revistas/atalaya-estudio-septiembre-2021/Cuando-un-ser-querido-deja-a-Jehov%C3%A1"
+      }
+    },
+    {
+      "id": "B03",
+      "grupo": "organizacion",
+      "persona": "Luke",
+      "rol": "Padre de un hijo expulsado",
+      "lugar": "No consta",
+      "epoca": "Publicado en septiembre de 2021",
+      "resumen": "Cuenta que, tras la expulsión de su hijo, se sentía culpable, tenía pesadillas y lloraba mucho.",
+      "etiquetas": [
+        "familia"
+      ],
+      "fuente": {
+        "texto": "La Atalaya (estudio), septiembre de 2021: «Cuando un ser querido deja a Jehová»",
+        "url": "https://www.jw.org/es/biblioteca/revistas/atalaya-estudio-septiembre-2021/Cuando-un-ser-querido-deja-a-Jehov%C3%A1"
+      }
+    },
+    {
+      "id": "B04",
+      "grupo": "organizacion",
+      "persona": "Esther",
+      "rol": "Hija de un padre expulsado",
+      "lugar": "No consta",
+      "epoca": "Publicado en septiembre de 2021",
+      "resumen": "Su padre fue expulsado después de tomar la decisión de dejar a Jehová. Cuenta que lloraba a menudo y se preocupaba constantemente por él.",
+      "etiquetas": [
+        "familia"
+      ],
+      "fuente": {
+        "texto": "La Atalaya (estudio), septiembre de 2021: «Cuando un ser querido deja a Jehová»",
+        "url": "https://www.jw.org/es/biblioteca/revistas/atalaya-estudio-septiembre-2021/Cuando-un-ser-querido-deja-a-Jehov%C3%A1"
+      }
+    },
+    {
+      "id": "B05",
+      "grupo": "organizacion",
+      "persona": "Míriam",
+      "rol": "Hermana de un hombre expulsado",
+      "lugar": "No consta",
+      "epoca": "Publicado en septiembre de 2021",
+      "resumen": "Su hermano fue expulsado. Dice que tenía miedo de lo que dijera la gente y que unos buenos amigos, también tristes, no hablaron mal de su hermano, lo que la hizo sentirse acompañada.",
+      "etiquetas": [
+        "familia",
+        "amistades"
+      ],
+      "fuente": {
+        "texto": "La Atalaya (estudio), septiembre de 2021: «Cuando un ser querido deja a Jehová»",
+        "url": "https://www.jw.org/es/biblioteca/revistas/atalaya-estudio-septiembre-2021/Cuando-un-ser-querido-deja-a-Jehov%C3%A1"
+      }
+    },
+    {
+      "id": "B06",
+      "grupo": "organizacion",
+      "persona": "María",
+      "rol": "Esposa de un hombre expulsado",
+      "lugar": "No consta",
+      "epoca": "Publicado en septiembre de 2021",
+      "resumen": "Su esposo fue expulsado y dejó a la familia. Cuenta que unos amigos le cocinaron, ayudaron a sus hijos con el estudio, lloraron con ella y la defendieron de rumores falsos.",
+      "etiquetas": [
+        "familia",
+        "amistades",
+        "hijos"
+      ],
+      "fuente": {
+        "texto": "La Atalaya (estudio), septiembre de 2021: «Cuando un ser querido deja a Jehová»",
+        "url": "https://www.jw.org/es/biblioteca/revistas/atalaya-estudio-septiembre-2021/Cuando-un-ser-querido-deja-a-Jehov%C3%A1"
+      }
+    },
+    {
+      "id": "B07",
+      "grupo": "organizacion",
+      "persona": "Félix",
+      "rol": "Expulsado y readmitido",
+      "lugar": "No consta",
+      "epoca": "Publicado en octubre de 2021",
+      "resumen": "Cuenta que, al volver, la congregación lo estaba esperando, que se sintió muy querido y que entre todos le ayudaron a sentirse de nuevo parte de ella. El artículo no cuenta cómo lo trataron durante la expulsión.",
+      "etiquetas": [
+        "readmisión"
+      ],
+      "fuente": {
+        "texto": "La Atalaya (estudio), octubre de 2021: «Cómo reparar su amistad con Jehová»",
+        "url": "https://www.jw.org/es/biblioteca/revistas/atalaya-estudio-octubre-2021/C%C3%B3mo-reparar-su-amistad-con-Jehov%C3%A1"
+      }
+    },
+    {
+      "id": "B08",
+      "grupo": "organizacion",
+      "persona": "Isabelle",
+      "rol": "Estuvo más de 20 años expulsada",
+      "lugar": "No consta",
+      "epoca": "Publicado en octubre de 2021",
+      "resumen": "Estuvo expulsada más de 20 años. Dice que le costaba mucho creer que Jehová pudiera perdonarla.",
+      "etiquetas": [
+        "readmisión"
+      ],
+      "fuente": {
+        "texto": "La Atalaya (estudio), octubre de 2021: «Cómo reparar su amistad con Jehová»",
+        "url": "https://www.jw.org/es/biblioteca/revistas/atalaya-estudio-octubre-2021/C%C3%B3mo-reparar-su-amistad-con-Jehov%C3%A1"
+      }
+    },
+    {
+      "id": "B09",
+      "grupo": "organizacion",
+      "persona": "Larissa",
+      "rol": "Readmitida",
+      "lugar": "No consta",
+      "epoca": "Publicado en octubre de 2021",
+      "resumen": "Cuenta que, al volver, sentía mucha vergüenza y que había traicionado a la congregación, y que ese sentimiento le duró mucho tiempo.",
+      "etiquetas": [
+        "readmisión"
+      ],
+      "fuente": {
+        "texto": "La Atalaya (estudio), octubre de 2021: «Cómo reparar su amistad con Jehová»",
+        "url": "https://www.jw.org/es/biblioteca/revistas/atalaya-estudio-octubre-2021/C%C3%B3mo-reparar-su-amistad-con-Jehov%C3%A1"
+      }
+    },
+    {
+      "id": "B10",
+      "grupo": "organizacion",
+      "persona": "Andrej",
+      "rol": "Readmitido",
+      "lugar": "No consta",
+      "epoca": "Publicado en octubre de 2021",
+      "resumen": "Cuenta que sentía mucha culpa y vergüenza al volver, y que después de cada oración se sentía más aliviado y en paz.",
+      "etiquetas": [
+        "readmisión"
+      ],
+      "fuente": {
+        "texto": "La Atalaya (estudio), octubre de 2021: «Cómo reparar su amistad con Jehová»",
+        "url": "https://www.jw.org/es/biblioteca/revistas/atalaya-estudio-octubre-2021/C%C3%B3mo-reparar-su-amistad-con-Jehov%C3%A1"
+      }
+    },
+    {
+      "id": "B11",
+      "grupo": "organizacion",
+      "persona": "Un hermano y su hermana",
+      "rol": "Hijos de una madre expulsada desde hacía seis años",
+      "lugar": "No consta",
+      "epoca": "Publicado en agosto de 2002",
+      "resumen": "Tras un discurso en una asamblea, decidieron cambiar el trato a su madre, que no vivía con ellos. Le dijeron que la querían pero que solo le hablarían de asuntos familiares importantes. Según el relato, la madre empezó a asistir a las reuniones y fue restablecida.",
+      "etiquetas": [
+        "familia",
+        "readmisión"
+      ],
+      "fuente": {
+        "texto": "Nuestro Ministerio del Reino, agosto de 2002: «Demostremos lealtad cristiana cuando se expulsa a un pariente»",
+        "url": "https://wol.jw.org/es/wol/d/r4/lp-s/202002285"
+      },
+      "corto": "Dos hermanos"
+    }
+  ]
+}

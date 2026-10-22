@@ -1,0 +1,166 @@
+---
+// Muro de nombres para las experiencias (sustituye al acordeón el 22-10-2026). Cada grupo es un
+// panel con su recuento, los nombres unidos por el hilo lima y una ficha que se abre al pulsar un
+// nombre. Sin JavaScript se ven todas las fichas. El slot «intermedio» se pinta antes del último
+// grupo (en expulsión, lo que confirman las revistas). Datos en src/data/experiencias-expulsion.json.
+type Caso = {
+  id: string;
+  grupo: string;
+  persona: string;
+  corto?: string;
+  rol: string;
+  lugar: string;
+  epoca: string;
+  resumen: string;
+  etiquetas: string[];
+  fuente: { texto: string; url: string };
+};
+interface Props {
+  etiquetas?: { id: string; texto: string }[];
+  grupos: { id: string; titulo: string; intro: string }[];
+  casos: Caso[];
+}
+const { grupos, casos } = Astro.props;
+const nombre = (c: Caso) => c.corto ?? c.persona.replace(/\s*\(.*\)\s*$/, "").replace(/,\s*\d+\s*años$/, "");
+---
+
+<div class="muros">
+  {grupos.map((g, i) => {
+    const lista = casos.filter((c) => c.grupo === g.id);
+    return (
+      <>
+        {i > 0 && i === grupos.length - 1 && Astro.slots.has("intermedio") && <div class="sg-columna muros__intermedio"><slot name="intermedio" /></div>}
+        <section class:list={["sg-ancho muro", `muro--${g.id}`]} data-muro aria-labelledby={`muro-${g.id}`}>
+          <svg class="muro__hilo" viewBox="0 0 1200 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 22 C 150 4, 300 38, 450 20 S 750 4, 900 22 S 1110 36, 1200 14" /></svg>
+          <header class="muro__cabecera">
+            <p class="muro__cifra" aria-hidden="true">{lista.length}</p>
+            <div>
+              <h3 id={`muro-${g.id}`} class="muro__titulo"><span class="sr-only">{lista.length} · </span>{g.titulo}</h3>
+              <p class="muro__sub">{g.intro}</p>
+            </div>
+          </header>
+
+          <ul class="muro__nombres" role="list">
+            {lista.map((c) => (
+              <li><button type="button" class="muro__nombre" aria-expanded="false" aria-controls={`ficha-${c.id}`} data-ficha={c.id}>{nombre(c)}</button></li>
+            ))}
+          </ul>
+
+          <p class="muro__pista" data-pista>Elige un nombre para leer su historia.</p>
+
+          <div class="muro__fichas">
+            {lista.map((c, j) => (
+              <article id={`ficha-${c.id}`} class="muro__ficha" data-id={c.id} tabindex="-1" aria-labelledby={`ficha-${c.id}-t`}>
+                <p class="muro__ficha-rol">{c.rol}</p>
+                <h4 id={`ficha-${c.id}-t`} class="muro__ficha-nombre">{c.persona}</h4>
+                <p class="muro__ficha-texto">{c.resumen}</p>
+                <p class="muro__ficha-meta"><span>{c.lugar}</span><span>{c.epoca}</span></p>
+                <p class="muro__ficha-fuente">Fuente: <a href={c.fuente.url} target="_blank" rel="noopener noreferrer">{c.fuente.texto}</a></p>
+                <div class="muro__ficha-nav">
+                  {j > 0 && <button type="button" class="muro__paso" data-ir={lista[j - 1].id}>← {nombre(lista[j - 1])}</button>}
+                  {j < lista.length - 1 && <button type="button" class="muro__paso muro__paso--sig" data-ir={lista[j + 1].id}>{nombre(lista[j + 1])} →</button>}
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+      </>
+    );
+  })}
+</div>
+
+<style>
+  .muros { margin-top: 36px; display: grid; gap: 40px; }
+  .muros__intermedio { display: grid; gap: 22px; margin-block: 16px; }
+  .muros__intermedio :global(.sg-columna) { width: auto; margin: 0; }
+
+  .muro { position: relative; overflow: hidden; border-radius: 32px; padding: clamp(28px, 5vw, 64px) clamp(22px, 5vw, 64px) clamp(30px, 5vw, 56px); }
+  .muro--personas { background: #122c33; color: #f5fbdf; }
+  .muro--organizacion { background: #fbfdf3; color: #122c33; border: 1px solid #dce3cd; }
+
+  .muro__hilo { position: absolute; inset: 18px 0 auto; width: 100%; height: 40px; opacity: .55; }
+  .muro__hilo path { fill: none; stroke: #d8eaa4; stroke-width: 1.5; stroke-dasharray: 2200; stroke-dashoffset: 2200; animation: muro-hilo 2.4s ease-out .2s forwards; }
+  .muro--organizacion .muro__hilo path { stroke: #2ea88f; }
+  @keyframes muro-hilo { to { stroke-dashoffset: 0; } }
+
+  .muro__cabecera { position: relative; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: clamp(16px, 3vw, 36px); align-items: end; margin-top: 18px; }
+  .muro__cifra { font-family: var(--font-heading); font-size: clamp(4.5rem, 11vw, 8.5rem); line-height: .82; letter-spacing: -.05em; color: #d8eaa4; }
+  .muro--organizacion .muro__cifra { color: #2ea88f; }
+  .muro__titulo { font-size: clamp(1.4rem, 2.4vw, 1.9rem); font-weight: 400; letter-spacing: -.02em; color: inherit; }
+  .muro__sub { margin-top: 8px; max-width: 560px; font-size: 15px; line-height: 1.65; opacity: .82; }
+
+  .muro__nombres { position: relative; display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 0; margin: clamp(30px, 4vw, 48px) 0 0; padding: 0; list-style: none; }
+  .muro__nombres li { display: inline-flex; align-items: baseline; }
+  .muro__nombres li:not(:last-child)::after { content: ""; width: 6px; height: 6px; margin-inline: clamp(10px, 1.4vw, 18px); border-radius: 50%; background: #d8eaa4; opacity: .7; transform: translateY(-.28em); }
+  .muro--organizacion .muro__nombres li:not(:last-child)::after { background: #2ea88f; opacity: .55; }
+  .muro__nombre { font: inherit; font-family: var(--font-heading); font-size: clamp(1.3rem, 2.4vw, 1.95rem); line-height: 1.35; letter-spacing: -.015em; color: inherit; background: none; border: 0; padding: 2px 0; cursor: pointer; text-decoration: underline; text-decoration-color: transparent; text-decoration-thickness: 2px; text-underline-offset: 6px; transition: color 200ms ease, text-decoration-color 200ms ease, opacity 200ms ease; }
+  .muro__nombre:hover { text-decoration-color: currentColor; }
+  .muro__nombre:focus-visible { outline: 2px solid #d8eaa4; outline-offset: 4px; border-radius: 4px; }
+  .muro--organizacion .muro__nombre:focus-visible { outline-color: #1f7a63; }
+  .muro__nombre[aria-expanded="true"] { color: #d8eaa4; text-decoration-color: #d8eaa4; }
+  .muro--organizacion .muro__nombre[aria-expanded="true"] { color: #1f7a63; text-decoration-color: #1f7a63; }
+  .muro.tiene-activa .muro__nombre:not([aria-expanded="true"]) { opacity: .65; }
+  .muro.tiene-activa .muro__nombre:not([aria-expanded="true"]):hover { opacity: 1; }
+
+  .muro__pista { display: none; margin-top: 26px; font-size: 14px; opacity: .7; }
+  .muro.con-js .muro__pista { display: block; }
+  .muro.con-js.tiene-activa .muro__pista { display: none; }
+
+  .muro__fichas { display: grid; gap: 18px; margin-top: 28px; }
+  .muro.con-js .muro__ficha:not(.es-activa) { display: none; }
+  .muro__ficha { max-width: 760px; padding: clamp(22px, 3vw, 34px); border-radius: 24px; background: #183a43; border-left: 3px solid #d8eaa4; outline: none; }
+  .muro--organizacion .muro__ficha { background: #fff; border-left-color: #2ea88f; box-shadow: 0 10px 30px -22px #122c3366; }
+  .muro.con-js .muro__ficha.es-activa { animation: muro-ficha 380ms cubic-bezier(.2, .8, .2, 1); }
+  @keyframes muro-ficha { from { opacity: 0; transform: translateY(10px); } }
+  .muro__ficha-rol { font-size: 12.5px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; opacity: .7; }
+  .muro__ficha-nombre { margin-top: 6px; font-size: clamp(1.35rem, 2.2vw, 1.7rem); font-weight: 400; letter-spacing: -.02em; color: inherit; }
+  .muro__ficha-texto { margin-top: 14px; font-family: var(--font-heading); font-size: clamp(1.05rem, 1.5vw, 1.2rem); line-height: 1.6; }
+  .muro__ficha-meta { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 16px; font-size: 14px; opacity: .75; }
+  .muro__ficha-meta span + span::before { content: "·"; margin-right: 18px; }
+  .muro__ficha-fuente { margin-top: 8px; font-size: 14px; opacity: .85; }
+  .muro__ficha-fuente a { color: inherit; text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; }
+  .muro--personas .muro__ficha-fuente a { color: #d8eaa4; }
+  .muro__ficha-nav { display: none; flex-wrap: wrap; justify-content: space-between; gap: 10px; margin-top: 22px; }
+  .muro.con-js .muro__ficha-nav { display: flex; }
+  .muro__paso { font: inherit; font-size: 14px; color: inherit; background: none; border: 1px solid currentColor; border-radius: 999px; padding: 8px 16px; cursor: pointer; opacity: .8; transition: opacity 200ms ease; }
+  .muro__paso:hover { opacity: 1; }
+  .muro__paso--sig { margin-left: auto; }
+
+  .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+  @media (max-width: 640px) {
+    .muro { border-radius: 24px; }
+    .muro__cabecera { grid-template-columns: 1fr; align-items: start; }
+    .muro__nombre { font-size: 1.12rem; line-height: 1.25; }
+    .muro__nombres { gap: 2px 0; }
+    .muro__nombres li:not(:last-child)::after { margin-inline: 9px; width: 5px; height: 5px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .muro__hilo path { animation: none; stroke-dashoffset: 0; }
+    .muro.con-js .muro__ficha.es-activa { animation: none; }
+  }
+</style>
+
+<script>
+  document.querySelectorAll<HTMLElement>("[data-muro]").forEach((muro) => {
+    muro.classList.add("con-js");
+    const botones = [...muro.querySelectorAll<HTMLButtonElement>("[data-ficha]")];
+    const fichas = [...muro.querySelectorAll<HTMLElement>(".muro__ficha")];
+    const abrir = (id: string | null, enfocar = false) => {
+      fichas.forEach((f) => f.classList.toggle("es-activa", f.dataset.id === id));
+      botones.forEach((b) => b.setAttribute("aria-expanded", String(b.dataset.ficha === id)));
+      muro.classList.toggle("tiene-activa", id !== null);
+      const ficha = fichas.find((f) => f.dataset.id === id);
+      if (ficha && enfocar) {
+        ficha.focus({ preventScroll: true });
+        const r = ficha.getBoundingClientRect();
+        if (r.top < 90 || r.bottom > innerHeight) ficha.scrollIntoView({ block: "nearest", behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+      }
+    };
+    botones.forEach((b) => b.addEventListener("click", () => {
+      const yaAbierta = b.getAttribute("aria-expanded") === "true";
+      abrir(yaAbierta ? null : b.dataset.ficha ?? null, !yaAbierta);
+    }));
+    muro.querySelectorAll<HTMLButtonElement>("[data-ir]").forEach((b) => b.addEventListener("click", () => abrir(b.dataset.ir ?? null, true)));
+  });
+</script>

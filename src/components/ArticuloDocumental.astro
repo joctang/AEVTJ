@@ -12,6 +12,7 @@ import "../styles/referencias.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import TornEdge from "./TornEdge.astro";
 import CitaTextual from "./CitaTextual.astro";
+import ExperienciasAcordeon from "./ExperienciasAcordeon.astro";
 
 type Item = { etiqueta: string; html: string };
 type Bloque =
@@ -38,10 +39,13 @@ interface Props {
   accionHero?: { texto: string; href: string };
   mostrarAccionesHero?: boolean;
   mostrarIntroIndice?: boolean;
+  mostrarEtiquetaIndice?: boolean;
+  indiceAcordeon?: boolean;
   tarjetas?: string;
   listaSimple?: string;
   linea?: string;
   casos?: string[];
+  experiencias?: { seccion: string; datos: { etiquetas: any[]; grupos: any[]; casos: any[] } };
   ilustraciones?: Record<string, Ilustracion>;
   sigueLeyendo: { titulo: string; descripcion: string; href: string; imagen?: string }[];
   noindex?: boolean;
@@ -51,7 +55,7 @@ interface Props {
   gruposIndice?: GrupoIndice[];
 }
 
-const { datos: datosBase, slug, miga, tituloSeo, descripcion, revisado, revisadoIso, cortos, hero, accionHero, mostrarAccionesHero = true, mostrarIntroIndice = true, tarjetas, listaSimple, linea, casos = [], ilustraciones = {}, sigueLeyendo, noindex = false, referencias = false, titulosFuentes = {}, notasFuentes = {}, gruposIndice } = Astro.props;
+const { datos: datosBase, slug, miga, tituloSeo, descripcion, revisado, revisadoIso, cortos, hero, accionHero, mostrarAccionesHero = true, mostrarIntroIndice = true, mostrarEtiquetaIndice = true, indiceAcordeon, tarjetas, listaSimple, linea, casos = [], experiencias, ilustraciones = {}, sigueLeyendo, noindex = false, referencias = false, titulosFuentes = {}, notasFuentes = {}, gruposIndice } = Astro.props;
 
 // Bibliografía numerada (modo referencias): los enlaces externos del texto pasan a
 // superíndices que remiten a una lista única de fuentes al final de la página.
@@ -132,7 +136,7 @@ const etapa = (titulo: string) => {
   return { periodo: i === -1 ? titulo : titulo.slice(0, i), titulo: t && t.charAt(0).toUpperCase() + t.slice(1) };
 };
 // Con muchos temas el índice se pliega en un acordeón: el raíl lateral ya permite saltar entre secciones.
-const indiceLargo = contenido.length > 9;
+const indiceLargo = indiceAcordeon ?? contenido.length > 9;
 const Caja = indiceLargo ? "details" : "div";
 // Índice agrupado (acordeón): los grupos deben recorrer las secciones en el mismo orden y sin
 // omitir ni repetir ninguna; si no, se ignora el agrupado y se pinta la lista plana de siempre.
@@ -194,7 +198,7 @@ const jsonLd = [
     <section class="sg-indice" id="ad-indice" aria-labelledby="ad-indice-titulo">
       <div class="sg-ancho">
         {mostrarIntroIndice && <>
-          <p class="guia-kicker" data-reveal>En esta página</p>
+          {mostrarEtiquetaIndice && <p class="guia-kicker" data-reveal>En esta página</p>}
           {datos.entrada.slice(1).map((b) => <p class="sg-presentacion" data-reveal set:html={b.html} />)}
         </>}
         <h2 id="ad-indice-titulo" class="sr-only">En esta página</h2>
@@ -309,7 +313,17 @@ const jsonLd = [
 
           {resto.map((b) => pintar(b))}
 
-          {s.id === linea ? (
+          {experiencias && experiencias.seccion === s.id && (
+            <ExperienciasAcordeon {...experiencias.datos}>
+              {s.subsecciones.length > 0 && (
+                <Fragment slot="intermedio">
+                  {s.subsecciones.flatMap((sub) => sub.bloques).map((b) => pintar(b, false))}
+                </Fragment>
+              )}
+            </ExperienciasAcordeon>
+          )}
+
+          {experiencias && experiencias.seccion === s.id ? null : s.id === linea ? (
             <ol class="sg-columna sg-linea" data-linea>
               {s.subsecciones.map((sub, j) => {
                 const e = etapa(sub.titulo);

@@ -1,0 +1,99 @@
+---
+// Página documental sobre expulsión y desasociación. Usa ArticuloDocumental,
+// el sistema compartido por las páginas temáticas de sangre, fundador y otras.
+// Revisada el 20-10-2026 con el criterio editorial; el texto sale del BORRADOR.
+import ArticuloDocumental from "../../components/ArticuloDocumental.astro";
+import datos from "../../data/testigos-de-jehova-expulsion.json";
+import experiencias from "../../data/experiencias-expulsion.json";
+
+const referencias = {
+  "https://wol.jw.org/es/wol/d/r4/lp-s/2021565": "«Cuando un ser querido deja a Jehová» — La Atalaya (estudio), septiembre de 2021",
+  "https://wol.jw.org/es/wol/d/r4/lp-s/202020443": "«Debemos amar más a Jehová que a nuestra familia» — Guía de actividades, diciembre de 2020",
+  "https://wol.jw.org/es/wol/d/r4/lp-s/202020444": "«Cuando apoyamos la disciplina de Jehová, mostramos amor» — Guía de actividades, diciembre de 2020",
+  "https://wol.jw.org/es/wol/d/r4/lp-s/202017329": "«Seamos leales cuando un familiar es expulsado» — Guía de actividades, septiembre de 2017",
+  "https://wol.jw.org/es/wol/d/r4/lp-s/402016443": "«¿Estamos dejando que el Gran Alfarero nos moldee?» — La Atalaya (lenguaje sencillo), junio de 2016",
+  "https://wol.jw.org/es/wol/d/r4/lp-s/2015287": "«La expulsión: una muestra de amor» — La Atalaya, 15 de abril de 2015",
+  "https://wol.jw.org/es/wol/d/r4/lp-s/2013611": "«¿Está bien que los padres cristianos se sienten con un hijo expulsado en las reuniones?» — La Atalaya, 15 de agosto de 2013",
+  "https://wol.jw.org/es/wol/d/r4/lp-s/2013044": "«No permita que nada lo aleje de Jehová» — La Atalaya, 15 de enero de 2013",
+  "https://wol.jw.org/es/wol/d/r4/lp-s/2012282": "«La traición: terrible marca de nuestros tiempos» — La Atalaya (estudio), abril de 2012",
+  "https://wol.jw.org/es/wol/d/r4/lp-s/1102008083": "«Cómo tratar a un expulsado» — Manténganse en el amor de Dios, 2008",
+  "https://wol.jw.org/es/wol/d/r4/lp-s/2006845": "«Aceptemos siempre la disciplina de Jehová» — La Atalaya, 15 de noviembre de 2006",
+  "https://wol.jw.org/es/wol/d/r4/lp-s/2006644": "«Cuando un ser amado deja a Jehová» — La Atalaya, 1 de septiembre de 2006",
+  "https://wol.jw.org/es/wol/d/r4/lp-s/1102014944": "«Conservemos la paz y la limpieza de la congregación» — Organizados para hacer la voluntad de Jehová, cap. 14",
+  "https://wol.jw.org/es/wol/d/r4/lp-s/202002285": "«Demostremos lealtad cristiana cuando se expulsa a un pariente» — Nuestro Ministerio del Reino, agosto de 2002",
+  "https://wol.jw.org/es/wol/d/r4/lp-s/1995526": "«¿Es la expulsión una disposición amorosa?» — La Atalaya, 15 de julio de 1995",
+  "https://wol.jw.org/es/wol/d/r4/lp-s/1988287": "«Disciplina que puede dar fruto pacífico» — La Atalaya, 15 de abril de 1988",
+  "https://wol.jw.org/es/wol/d/r4/lp-s/1981689": "«Si se expulsa a un pariente...» — La Atalaya, 15 de noviembre de 1981",
+  "https://wol.jw.org/es/wol/d/r4/lp-s/1981688": "«La expulsión... desde qué punto de vista verla» — La Atalaya, 15 de noviembre de 1981",
+  "https://www.jw.org/es/biblioteca/revistas/atalaya-estudio-agosto-2024/C%C3%B3mo-se-ayuda-a-los-que-han-sido-sacados-de-la-congregaci%C3%B3n/": "«Cómo se ayuda a los que han sido sacados de la congregación» — La Atalaya (estudio), agosto de 2024",
+  "https://www.jw.org/es/testigos-de-jehov%C3%A1/preguntas-frecuentes/sacados-de-la-congregaci%C3%B3n/": "«¿Cómo tratan los Testigos de Jehová a quienes ya no pertenecen a su religión?» — Preguntas frecuentes, jw.org (consulta: 20-10-2026)",
+  "https://www.youtube.com/watch?v=PoCl-xK-d8M&t=40s": "Carlos Roldán — «Comité judicial: ex anciano de los Testigos de Jehová cuenta su triste experiencia», vídeo (3-12-2021)",
+};
+
+const notas = {
+  "https://wol.jw.org/es/wol/d/r4/lp-s/2021565": "Fuente primaria oficial; trata también el caso de quien deja de servir a Jehová, no solo la expulsión formal.",
+  "https://wol.jw.org/es/wol/d/r4/lp-s/202020443": "Fuente primaria oficial sobre lealtad familiar.",
+  "https://wol.jw.org/es/wol/d/r4/lp-s/202020444": "Fuente primaria oficial sobre la justificación doctrinal de la disciplina.",
+  "https://wol.jw.org/es/wol/d/r4/lp-s/202017329": "Fuente primaria oficial; material didáctico para familias.",
+  "https://wol.jw.org/es/wol/d/r4/lp-s/402016443": "Experiencia en un artículo de tema más amplio; no es una exposición principal de la norma.",
+  "https://wol.jw.org/es/wol/d/r4/lp-s/2015287": "Fuente primaria oficial sobre motivos y justificación publicados en 2015.",
+  "https://wol.jw.org/es/wol/d/r4/lp-s/2013611": "Respuesta a un supuesto concreto sobre padres e hijos que viven en el hogar.",
+  "https://wol.jw.org/es/wol/d/r4/lp-s/2013044": "Orientación familiar en un tema más amplio.",
+  "https://wol.jw.org/es/wol/d/r4/lp-s/2012282": "Artículo de tema más amplio; contextualizar sus pasajes sobre expulsión.",
+  "https://wol.jw.org/es/wol/d/r4/lp-s/1102008083": "Fuente primaria oficial sobre el trato publicado en 2008; no asumir que cada detalle siga vigente.",
+  "https://wol.jw.org/es/wol/d/r4/lp-s/2006845": "Marco doctrinal sobre disciplina; no trata exclusivamente de expulsión.",
+  "https://wol.jw.org/es/wol/d/r4/lp-s/2006644": "Orientación para familiares; distingue dejar la fe de la expulsión formal.",
+  "https://wol.jw.org/es/wol/d/r4/lp-s/1102014944": "La edición disponible en línea puede diferir de ediciones anteriores del manual.",
+  "https://wol.jw.org/es/wol/d/r4/lp-s/202002285": "Fuente histórica sobre el trato a familiares expulsados o desasociados.",
+  "https://wol.jw.org/es/wol/d/r4/lp-s/1995526": "Fuente primaria oficial; justificación histórica, no norma actual por sí sola.",
+  "https://wol.jw.org/es/wol/d/r4/lp-s/1988287": "Fuente primaria histórica; contextualizar ejemplos y fecha.",
+  "https://wol.jw.org/es/wol/d/r4/lp-s/1981689": "Fuente primaria histórica sobre relaciones familiares.",
+  "https://wol.jw.org/es/wol/d/r4/lp-s/1981688": "Fuente primaria histórica sobre la explicación oficial de la expulsión.",
+  "https://www.jw.org/es/biblioteca/revistas/atalaya-estudio-agosto-2024/C%C3%B3mo-se-ayuda-a-los-que-han-sido-sacados-de-la-congregaci%C3%B3n/": "Fuente primaria oficial sobre el cambio de término y el saludo breve en reuniones.",
+  "https://www.jw.org/es/testigos-de-jehov%C3%A1/preguntas-frecuentes/sacados-de-la-congregaci%C3%B3n/": "Descripción actual de la norma publicada por la organización; no acredita por sí sola su aplicación en cada caso. No trata el caso de familiares que viven fuera de casa.",
+  "https://www.youtube.com/watch?v=PoCl-xK-d8M&t=40s": "Testimonio individual de un exanciano; no describe el procedimiento general.",
+};
+
+const ilustraciones = {
+  "que-es": { nombre: "tdj-expulsion-umbral-hilo", escena: "", alt: "Ilustración de una figura en el escalón de una puerta abierta; desde dentro de la casa sale un hilo lima que queda suelto a sus pies.", lista: true, pos: "derecha" as const },
+  trato: { nombre: "tdj-expulsion-saludo-pasillo-hilo", escena: "", alt: "Ilustración de dos figuras que se cruzan en un pasillo y levantan la mano para saludarse; entre ellas, un hilo lima con los extremos sin tocarse.", lista: true, pos: "izquierda" as const },
+  familia: { nombre: "tdj-expulsion-telefono-carta-hilo-cortado", escena: "", alt: "Ilustración de un teléfono boca abajo y una carta sin abrir sobre una mesa, unidos por un hilo lima cortado en el medio.", lista: true, pos: "derecha" as const },
+  cronologia: { nombre: "tdj-expulsion-cuadernos-hilo", escena: "", alt: "Ilustración de una fila de cuadernos sin título, de pequeños a grandes, atravesados por un hilo lima.", lista: true, pos: "izquierda" as const },
+  testimonios: { nombre: "tdj-expulsion-circulo-escucha-hilo", escena: "", alt: "Ilustración de cinco figuras sentadas en semicírculo que escuchan a una de ellas, unidas por un hilo lima.", lista: true, pos: "derecha" as const },
+};
+// Hero: fotografía (imagen generada por Joctan, 22-10-2026; original en 06_Contenido/testigos-de-jehova__expulsion/hero/).
+const hero = {
+  src: "/uploads/2026/10/tdj-expulsion-fotos-hero-1536.webp",
+  srcset: "/uploads/2026/10/tdj-expulsion-fotos-hero-900.webp 900w, /uploads/2026/10/tdj-expulsion-fotos-hero-1536.webp 1536w",
+  alt: "Marcos de fotos sobre un mueble de salón, junto a la ventana; uno de ellos está boca abajo.",
+};
+
+const cortos = { "que-es": "Qué es", diferencias: "Términos", motivos: "Motivos", comite: "Comité", trato: "Trato", familia: "Familia", cronologia: "Antes y ahora", readmision: "Volver", testimonios: "Testimonios" };
+const sigueLeyendo = [
+  { titulo: "Testigos de Jehová", descripcion: "Quiénes son, qué creen y cómo viven.", href: "/testigos-de-jehova/" },
+  { titulo: "Guía para salir", descripcion: "El proceso de salida explicado paso a paso.", href: "/guia-para-salir-de-los-testigos-de-jehova/" },
+  { titulo: "Recursos de ayuda", descripcion: "Apoyo y orientación para encontrar el siguiente paso.", href: "/recursos-de-ayuda/" },
+];
+---
+
+<ArticuloDocumental
+  datos={datos}
+  slug="expulsion-y-desasociacion"
+  miga="Expulsión y desasociación"
+  tituloSeo="Expulsión de los Testigos de Jehová: qué es y cómo se trata"
+  descripcion="Qué es la expulsión de los Testigos de Jehová, por qué ocurre y cómo se trata a un expulsado, con las normas oficiales y testimonios de quien la vivió."
+  revisado="20 de octubre de 2026"
+  revisadoIso="2026-10-20"
+  referencias
+  hero={hero}
+  titulosFuentes={referencias}
+  notasFuentes={notas}
+  cortos={cortos}
+  experiencias={{ seccion: "testimonios", datos: experiencias }}
+  linea="cronologia"
+  sigueLeyendo={sigueLeyendo}
+  mostrarAccionesHero={false}
+  mostrarEtiquetaIndice={false}
+  indiceAcordeon
+  ilustraciones={ilustraciones}
+/>

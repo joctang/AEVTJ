@@ -235,6 +235,17 @@ fotográfico se conserva):
 | `tdj-guia-salida-dudas-hilo` | Capítulo 5 · Empezar a cuestionar |
 | `tdj-guia-salida-impacto-emocional-hilo-cortado` | Capítulo 6 · El impacto emocional |
 
+Ilustraciones de `/testigos-de-jehova/expulsion-y-desasociacion/` (originales y prompt en
+`06_Contenido/testigos-de-jehova__expulsion/`):
+
+| Archivo | Uso |
+|---|---|
+| `tdj-expulsion-umbral-hilo` | Hero |
+| `tdj-expulsion-saludo-pasillo-hilo` | 5. Trato |
+| `tdj-expulsion-telefono-carta-hilo-cortado` | 6. Familia (escena dura) |
+| `tdj-expulsion-cuadernos-hilo` | 7. Antes y ahora |
+| `tdj-expulsion-circulo-escucha-hilo` | 9. Testimonios |
+
 Escenas de ejemplo para nuevas ilustraciones (formato de la línea `Scene:`):
 
 ```
