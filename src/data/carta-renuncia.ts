@@ -95,7 +95,7 @@ export const secciones: Seccion[] = [
     listaNumerada: true,
     lista: [
       "<strong>Se anuncia en la congregación.</strong> El libro <em>Organizados para hacer la voluntad de Jehová</em> indica que se hace un breve anuncio: «[Nombre] ya no es testigo de Jehová». No se dice si la persona renunció o fue sacada.",
-      "<strong>Se te trata como a una persona expulsada.</strong> El mismo libro equipara la desasociación con la expulsión. Según sus normas, los miembros dejan de relacionarse socialmente contigo.",
+      "<strong>Se te trata como a una <a href='/testigos-de-jehova/expulsion-y-desasociacion/'>persona expulsada</a>.</strong> El mismo libro equipara la desasociación con la expulsión. Según sus normas, los miembros dejan de relacionarse socialmente contigo.",
       "<strong>La familia que vive contigo mantiene la convivencia,</strong> según jw.org.",
     ],
     cierre: [

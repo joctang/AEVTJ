@@ -7,6 +7,7 @@ const miniaturasPorRuta: Record<string, string> = {
   "/testigos-de-jehova/normas/": "/uploads/2026/10/tdj-normas-voto-urna-hilo-900.webp",
   "/testigos-de-jehova/sangre/": "/uploads/2026/10/tdj-sangre-habitacion-hospital-hilo-900.webp",
   "/testigos-de-jehova/vestimenta/": "/uploads/2026/10/tdj-vestimenta-chaqueta-corbata-hilo-900.webp",
+  "/testigos-de-jehova/expulsion-y-desasociacion/": "/uploads/2026/10/tdj-expulsion-umbral-hilo-900.webp",
   "/testigos-de-jehova/documentales/": "/uploads/2026/10/tdj-documentales-pantalla-hilo-900.webp",
   "/guia-para-salir-de-los-testigos-de-jehova/": "/uploads/2026/10/tdj-renuncia-arco-hilo-libre-900.webp",
   "/guia-para-proteger-tus-derechos-sanitarios-en-caso-de-interferencia-familiar/": "/uploads/2026/10/tdj-sangre-habitacion-hospital-hilo-900.webp",

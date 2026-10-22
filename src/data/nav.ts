@@ -7,6 +7,7 @@ export const mainNav = [
     children: [
       { label: "Testigos de Jehová: quiénes son y qué creen", href: "/testigos-de-jehova/" },
       { label: "Transfusiones de sangre", href: "/testigos-de-jehova/sangre/" },
+      { label: "Expulsión y desasociación", href: "/testigos-de-jehova/expulsion-y-desasociacion/" },
       { label: "Cumpleaños", href: "/testigos-de-jehova/cumpleanos/" },
       { label: "Navidad", href: "/testigos-de-jehova/navidad/" },
       { label: "Documentales", href: "/testigos-de-jehova/documentales/" },
@@ -41,6 +42,7 @@ export const mainNav = [
 export const footerNav = [
   { label: "Testigos de Jehová: quiénes son y qué creen", href: "/testigos-de-jehova/" },
   { label: "Transfusiones de sangre", href: "/testigos-de-jehova/sangre/" },
+  { label: "Expulsión y desasociación", href: "/testigos-de-jehova/expulsion-y-desasociacion/" },
   { label: "Cumpleaños", href: "/testigos-de-jehova/cumpleanos/" },
   { label: "Navidad", href: "/testigos-de-jehova/navidad/" },
   { label: "Documentales", href: "/testigos-de-jehova/documentales/" },

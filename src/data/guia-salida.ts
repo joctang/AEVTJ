@@ -158,7 +158,7 @@ export const capitulos: GuiaCapitulo[] = [
     resumen: "Ostracismo, miedo a perder los lazos y cómo cuidar la salud mental.",
     parrafos: [
       "Tomar la decisión de salir no es un proceso sencillo. A menudo experimentas un <strong>conflicto interno</strong>: por un lado, te sientes aliviado al pensar en liberarte de normas y rutinas que ya no compartes; por otro, <strong>te aterra perder los lazos</strong> con amigos y familiares que siguen dentro.",
-      "En esta organización, la práctica habitual cuando alguien se aleja o es expulsado conlleva el ostracismo: los miembros tienen prohibido dirigirte la palabra o mantener contacto cercano contigo. Para una persona que ha invertido años de su vida ahí, esto puede ser devastador y desencadenar sentimientos de ansiedad, soledad, vergüenza o culpa.",
+      "En esta organización, la práctica habitual cuando alguien se aleja o <a href='/testigos-de-jehova/expulsion-y-desasociacion/'>es expulsado</a> conlleva el ostracismo: los miembros tienen prohibido dirigirte la palabra o mantener contacto cercano contigo. Para una persona que ha invertido años de su vida ahí, esto puede ser devastador y desencadenar sentimientos de ansiedad, soledad, vergüenza o culpa.",
       "Algunos testigos que deciden irse y tienen familiares muy apegados a la congregación se enfrentan al miedo de ser rechazados o incluso de que sus seres queridos los corten de su vida por completo. Este escenario puede provocar <strong>episodios depresivos</strong> y, en los casos más graves, llevar a <strong>pensamientos suicidas</strong>. No es un asunto menor: la salud mental está en juego, por lo que es fundamental que busques o cuentes con redes de apoyo.",
     ],
     imagen: {
