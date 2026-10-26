@@ -14,8 +14,8 @@ const posts = (await getCollection("posts")).sort(
 >
   <header class="border-b border-black/5 bg-brand-cream">
     <div class="mx-auto max-w-[1200px] px-5 py-14 text-center lg:px-8">
-      <h1 class="font-heading text-4xl font-semibold uppercase tracking-wide text-brand-ink sm:text-5xl">
-        Noticias
+      <h1 class="font-heading text-3xl font-semibold uppercase tracking-wide text-brand-ink sm:text-4xl">
+        Noticias sobre los Testigos de Jehová
       </h1>
       <p class="mx-auto mt-3 max-w-2xl text-brand-ink/70">
         Actualidad, entrevistas y apariciones en medios de la Asociación Española de
@@ -25,6 +25,7 @@ const posts = (await getCollection("posts")).sort(
   </header>
 
   <div class="mx-auto max-w-[1200px] px-5 py-14 lg:px-8">
+    <h2 class="sr-only">Últimas noticias</h2>
     <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
       {
         posts.map((post) => (
@@ -52,9 +53,9 @@ const posts = (await getCollection("posts")).sort(
                   })}
                 </span>
               )}
-              <h2 class="font-heading text-xl font-semibold leading-tight text-brand-ink">
+              <h3 class="font-heading text-xl font-semibold leading-tight text-brand-ink">
                 {post.data.title}
-              </h2>
+              </h3>
               <p class="line-clamp-3 text-sm text-brand-ink/70">{post.data.excerpt}</p>
             </div>
           </a>

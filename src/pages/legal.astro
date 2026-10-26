@@ -75,7 +75,7 @@ const jsonLd = {
       <div class="legal-marcador__grid">
         {casos.map((caso) => (
           <a class="legal-marcador__casilla" href={`#${caso.id}`} data-reveal>
-            <h2>{caso.demandado}</h2>
+            <p class="legal-marcador__nombre">{caso.demandado}</p>
             <p>{caso.rol}</p>
             <EstadoBadge etiqueta={caso.estado.etiqueta} tono={caso.estado.tono} />
           </a>
@@ -92,6 +92,7 @@ const jsonLd = {
 
     <section class="legal-casos" aria-label="Casos en España">
       <div class="legal-casos__inner">
+        <h2 class="legal-sr-only">Demandas en España</h2>
         {casos.map((caso) => <CasoJudicial caso={caso} />)}
       </div>
       <p class="legal-actualizacion">Última actualización: {intro.actualizado}</p>

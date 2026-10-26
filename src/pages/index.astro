@@ -78,7 +78,7 @@ const schemaOrg = {
       logo: "https://victimasdetestigosdejehova.org/uploads/2025/10/Logo-avtj-300x300.png",
       email: "info@victimasdetestigosdejehova.org",
       description:
-        "Asociación que escucha, apoya y acompaña legal y psicológicamente a las víctimas de los Testigos de Jehová y la JW.ORG en España.",
+        "Asociación que escucha, apoya y acompaña legal y psicológicamente a las víctimas de los Testigos de Jehová en España.",
     },
     {
       "@type": "WebSite",
@@ -134,12 +134,12 @@ const schemaOrg = {
     </section>
 
     <section id="ayuda" class="premium-shell floating-routes" data-scene="light" aria-label="Rutas de ayuda">
-      <p class="premium-kicker" data-reveal style="grid-column:1/-1">Empieza por tu situación</p>
+      <h2 class="premium-kicker" data-reveal style="grid-column:1/-1">Empieza por tu situación</h2>
       {
         resourceCards.map((card, i) => (
           <a href={card.href} class="route-card" data-reveal style={`transition-delay:${i * 150}ms`}>
             <span>{card.number}</span>
-            <h2>{card.title}</h2>
+            <p class="route-card__title">{card.title}</p>
             <p>{card.text}</p>
             <strong>{card.label}</strong>
           </a>
@@ -230,8 +230,8 @@ const schemaOrg = {
 
     <section class="premium-shell split-section spain-section">
       <div class="section-copy" data-reveal>
-        <p class="premium-kicker">Presencia en España</p>
-        <h2>{memberCount} socios, <em>{spainMembers} en España</em></h2>
+        <h2 class="premium-kicker">Presencia en España</h2>
+        <p class="home-display">{memberCount} socios, <em>{spainMembers} en España</em></p>
         <p>
           En España, en poco tiempo, la Asociación Española de Víctimas de los Testigos de Jehová ha conseguido
           reunir a más de 800 miembros en lo que es un movimiento imparable, teniendo presencia en todas las comunidades
@@ -268,7 +268,7 @@ const schemaOrg = {
       <div class="premium-shell dark-story__grid">
         <div class="dark-story__sticky" data-reveal>
           <p class="premium-kicker">Ostracismo o exclusión social</p>
-          <h2>El precio de salir de la JW.ORG: Ostracismo o exclusión social</h2>
+          <h2>El precio de salir: ostracismo y exclusión social</h2>
         </div>
         <div class="story-text" data-reveal>
           <p>¿Qué pasa cuando alguien decide abandonar la organización?</p>
@@ -288,7 +288,7 @@ const schemaOrg = {
       </div>
       <div class="section-copy" data-reveal>
         <p class="premium-kicker">Tienes dudas</p>
-        <h2>¿Te estás planteando poder dejar a los Testigos de Jehová?</h2>
+        <h2>¿Te estás planteando dejar a los Testigos de Jehová?</h2>
         <p>
           <em>Es posible que tengas miedo, o que te sientas <strong>atrapado</strong>. Pero no es así. Aquí vamos a mostrarte <strong>cómo</strong> recuperarte y volver a ser tú mismo. Queremos que sepas que <u>no estás solo</u>. Ya has dado el primer paso al buscar <strong>información</strong>. Nosotros estamos contigo.</em>
         </p>
@@ -315,11 +315,11 @@ const schemaOrg = {
       <img width="1600" height="900" src="/uploads/2025/10/foto-noticias.jpg" alt="" class="dark-story__bg" loading="lazy" />
       <div class="premium-shell dark-story__grid">
         <div class="dark-story__sticky" data-reveal>
-          <p class="premium-kicker">Somos víctimas de los testigos de Jehová</p>
-          <h2 class="visibility-statement">
+          <h2 class="premium-kicker">Somos víctimas de los Testigos de Jehová</h2>
+          <p class="visibility-statement">
             No eres un traidor, ni un pecador, ni un alma perdida.
             <em>Eres alguien que ha elegido la libertad.</em>
-          </h2>
+          </p>
         </div>
         <div class="visibility-body" data-reveal>
           <p class="visibility-lead">
@@ -350,8 +350,8 @@ const schemaOrg = {
 
     <section class="premium-shell mission-section" data-scene="light" aria-labelledby="mission-title">
       <div class="mission-head" data-reveal>
-        <p class="premium-kicker">Visibilizar y denunciar</p>
-        <h2 id="mission-title">Estamos aquí <em>para eso.</em></h2>
+        <h2 id="mission-title" class="premium-kicker">Qué hace la AEVTJ: visibilizar, expresar y acompañar</h2>
+        <p class="mission-lema">Estamos aquí <em>para eso.</em></p>
       </div>
 
       <ol class="mission-pillars">
@@ -406,7 +406,7 @@ const schemaOrg = {
     <section class="premium-shell split-section freedom-section">
       <div class="section-copy" data-reveal>
         <p class="premium-kicker">Diste el paso más difícil</p>
-        <h2>Ex Testigos de Jehová: Recupera tu libertad y aprende a ser tú</h2>
+        <h2>Ex Testigos de Jehová: recupera tu libertad y aprende a ser tú</h2>
         <p>
           <strong>Salir no es el final, es el principio</strong> de algo nuevo. Pero también es un camino lleno de desafíos.
           Si eres un ex Testigo de Jehová, aquí tienes <strong>herramientas, consejos y apoyo</strong> para dejar atrás el

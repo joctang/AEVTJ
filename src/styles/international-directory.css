@@ -107,7 +107,7 @@
 .country-group summary:focus-visible { outline: 3px solid #526737; outline-offset: 3px; border-radius: 20px; }
 .country-group img.country-group__flag { flex: none; width: 46px; height: 34px; object-fit: cover; border-radius: 7px; box-shadow: 0 0 0 1px #0000001a, 0 4px 10px #0000000f; }
 .country-group__heading { display: grid; gap: 3px; min-width: 0; }
-.country-group__heading strong { color: #1d2b19; font: 500 24px/1.2 var(--font-heading, Georgia, serif); letter-spacing: -.03em; }
+.country-group__heading strong, .country-group__heading h2.country-group__name { margin: 0; color: #1d2b19; font: 500 24px/1.2 var(--font-heading, Georgia, serif); letter-spacing: -.03em; }
 .country-group__heading small { color: #5c6654; font-size: 13px; }
 .country-group__kinds { display: flex; gap: 5px; margin-left: auto; }
 .kind-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--kind); box-shadow: 0 0 0 3px var(--kind-bg); }
@@ -200,7 +200,7 @@
   .country-nav a { font-size: 13px; }
   .country-group summary { gap: 12px; padding: 14px; }
   .country-group img.country-group__flag { width: 38px; height: 28px; }
-  .country-group__heading strong { font-size: 20px; }
+  .country-group__heading strong, .country-group__heading h2.country-group__name { font-size: 20px; }
   .country-group__cards { padding: 0 12px 12px; }
   .support-card { padding: 20px 18px 18px; }
 }

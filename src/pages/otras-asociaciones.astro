@@ -81,7 +81,7 @@ const kindOrder = ["specific", "general", "specialist", "remote"] as const;
         <details class="country-group" id={`pais-${code}`} data-country={country.toLocaleLowerCase("es")}>
           <summary>
             <img class="country-group__flag" src={`/flags/${code}.svg`} alt="" width={flagDim.get(`/flags/${code}.svg`)?.w} height={flagDim.get(`/flags/${code}.svg`)?.h} loading="lazy" />
-            <span class="country-group__heading"><strong>{country}</strong><small>{resources.length} {resources.length === 1 ? "recurso publicado" : "recursos publicados"} · Consulta los canales disponibles</small></span>
+            <div class="country-group__heading"><h2 class="country-group__name">{country}</h2><small>{resources.length} {resources.length === 1 ? "recurso publicado" : "recursos publicados"} · Consulta los canales disponibles</small></div>
             <span class="country-group__kinds" aria-hidden="true">{kindOrder.filter((k) => resources.some((r) => r.kind === k)).map((k) => <span class="kind-dot" data-kind={k} title={kindLabels[k]}></span>)}</span>
             <span class="country-group__chevron" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg></span>
           </summary>

@@ -263,3 +263,18 @@
   to { translate: 0 9px; }
 }
 @media (prefers-reduced-motion: reduce) { .layered-media::after { animation: none; } }
+
+/* Semántica de encabezados: kickers como H2 y titulares visuales como <p>. Mismo aspecto que antes. */
+h2.premium-kicker, .section-copy h2.premium-kicker, .section-head h2.premium-kicker, .dark-story h2.premium-kicker, .mission-head h2.premium-kicker { margin: 0; font-family: var(--font-body); font-size: 10px; font-weight: 600; letter-spacing: .16em; line-height: 1.6; text-transform: uppercase; }
+.floating-routes h2.premium-kicker { margin: 0; }
+.route-card p.route-card__title { margin-top: 28px; max-width: none; font-family: var(--font-heading); font-size: clamp(28px,2.7vw,40px); line-height: 1.12; color: inherit; }
+.section-copy p.home-display { margin-top: 24px; max-width: none; font-family: var(--font-heading); font-size: clamp(34px,4.15vw,58px); line-height: 1.12; letter-spacing: -.055em; font-weight: 400; color: inherit; }
+.spain-section p.home-display em { color: #5b6934; }
+.dark-story p.visibility-statement { margin-top: 30px; max-width: none; font-family: var(--font-heading); font-weight: 400; color: inherit; }
+.mission-head p.mission-lema { margin-top: 24px; max-width: none; font-family: var(--font-heading); font-size: clamp(44px,6vw,86px); line-height: 1; letter-spacing: -.06em; font-weight: 400; color: inherit; }
+.mission-head p.mission-lema em { color: #5b6934; }
+@media (max-width:767px) {
+  .route-card p.route-card__title { margin-top: 14px; font-size: 32px; }
+  .section-copy p.home-display { font-size: 36px; }
+  .mission-head p.mission-lema { font-size: 50px; }
+}
