@@ -47,8 +47,9 @@ const temas = [
   <div class="recursos-page">
     <section class="recursos-hero">
       <div class="recursos-shell recursos-hero__inner">
-        <p class="recursos-eyebrow">No tienes que resolverlo todo hoy</p>
-        <h1>Un lugar para encontrar respuestas y apoyo</h1>
+        <h1 class="recursos-eyebrow">Recursos de ayuda para ex Testigos de Jehová</h1>
+        <p class="recursos-hero__title">Un lugar para encontrar respuestas y apoyo</p>
+        <p class="recursos-eyebrow recursos-eyebrow--after">No tienes que resolverlo todo hoy</p>
         <p class="recursos-hero__lead">Salir, plantearte dudas o intentar comprender lo que le ocurre a alguien cercano puede remover muchas cosas. Aquí encontrarás información y recursos para dar el siguiente paso a tu ritmo.</p>
         <p class="recursos-hero__firma">Somos una asociación formada por antiguos Testigos de Jehová. Conocemos esta experiencia también desde dentro.</p>
         <a class="recursos-button recursos-button--light" href="#elige-tu-camino">Encuentra lo que necesitas <span aria-hidden="true">↓</span></a>
@@ -133,8 +134,10 @@ const temas = [
   .recursos-hero__inner{padding-block:92px 100px;max-width:1160px}
   .recursos-eyebrow{margin:0 0 16px;color:#788d76;font-size:.76rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase}
   .recursos-hero .recursos-eyebrow{color:#c4ce9f}
-  .recursos-hero h1,.recursos-section h2,.recursos-contacto h2{font-family:var(--font-heading,Georgia,serif);font-weight:500;letter-spacing:-.035em}
-  .recursos-hero h1{max-width:760px;margin:0;font-size:clamp(2.8rem,6vw,5.2rem);line-height:1.03}
+  .recursos-hero__title,.recursos-section h2,.recursos-contacto h2{font-family:var(--font-heading,Georgia,serif);font-weight:500;letter-spacing:-.035em}
+  .recursos-hero h1.recursos-eyebrow{font-family:inherit;margin:0 0 16px}
+  .recursos-eyebrow--after{margin:22px 0 0!important}
+  .recursos-hero__title{max-width:760px;margin:0;font-size:clamp(2.8rem,6vw,5.2rem);line-height:1.03}
   .recursos-hero__lead{max-width:650px;margin:24px 0 0;color:rgba(255,255,255,.84);font-size:1.16rem;line-height:1.75}
   .recursos-hero__firma{margin:20px 0 28px;color:#d4dac8;font-size:.94rem}
   .recursos-button{display:inline-flex;align-items:center;gap:16px;padding:15px 20px;border-radius:3px;text-decoration:none;font-size:.9rem;font-weight:700;transition:transform .2s,background .2s}
@@ -170,6 +173,6 @@ const temas = [
   .recursos-contacto{padding:68px 0;background:#dce2d2}.recursos-contacto__inner{display:flex;align-items:center;justify-content:space-between;gap:40px}.recursos-contacto__inner>div{max-width:670px}.recursos-contacto h2{font-size:clamp(2rem,3.5vw,2.8rem)}.recursos-contacto__inner>div>p:last-child{margin:14px 0 0;color:#536057;line-height:1.7}
   .recursos-button--dark{flex:none;background:#2e493f;color:white}.recursos-button--dark:hover{background:#20372f}
   @media(max-width:800px){.recursos-hero{min-height:0}.recursos-hero__inner{padding-block:76px 82px}.recursos-hero__ornamento{right:-115px;top:auto;bottom:-90px;transform:none}.recursos-paths{grid-template-columns:1fr}.recursos-path{min-height:0}.recursos-path__top{margin-bottom:20px}.recursos-temas-layout{grid-template-columns:1fr;gap:38px}.recursos-section__intro--sticky{position:static}.recursos-downloads{grid-template-columns:1fr}.recursos-section{padding:76px 0}.recursos-contacto__inner{align-items:flex-start;flex-direction:column;gap:24px}}
-  @media(max-width:520px){.recursos-shell{width:min(100% - 36px,1160px)}.recursos-hero h1{font-size:2.75rem}.recursos-hero__lead{font-size:1.03rem}.recursos-download{grid-template-columns:40px 1fr;gap:14px;padding:20px}.recursos-download__icon{width:40px;height:48px}.recursos-tema{grid-template-columns:30px 1fr 18px;gap:10px}.recursos-section{padding:64px 0}}
+  @media(max-width:520px){.recursos-shell{width:min(100% - 36px,1160px)}.recursos-hero__title{font-size:2.75rem}.recursos-hero__lead{font-size:1.03rem}.recursos-download{grid-template-columns:40px 1fr;gap:14px;padding:20px}.recursos-download__icon{width:40px;height:48px}.recursos-tema{grid-template-columns:30px 1fr 18px;gap:10px}.recursos-section{padding:64px 0}}
   @media(prefers-reduced-motion:reduce){.recursos-button,.recursos-tema{transition:none}}
 </style>
