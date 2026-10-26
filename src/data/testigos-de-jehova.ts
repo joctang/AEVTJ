@@ -12,7 +12,7 @@ export interface Intro {
   titulo: string;
   tituloSeo: string;
   descripcion: string;
-  entradilla: string;
+  entradilla: string[];
   revisado: string;
   revisadoIso: string;
 }
@@ -52,8 +52,11 @@ export const intro: Intro = {
   tituloSeo: "Testigos de Jehová: quiénes son y qué creen",
   descripcion:
     "Quiénes son los Testigos de Jehová, qué creen y cómo viven. Una explicación sencilla de su organización y sus normas desde la perspectiva de la AEVTJ.",
-  entradilla:
-    "Los Testigos de Jehová son un grupo religioso que se considera cristiano. Llaman Jehová a Dios y basan sus creencias en su interpretación de la Biblia. Seguramente los conoces por sus visitas a las casas o por los expositores de publicaciones que colocan en la calle. Para ellos, hablar de su fe y predicar no es algo secundario: ocupa un lugar central en su vida religiosa y organiza buena parte de su actividad.",
+  // Texto propuesto por la junta (26-10-2026), en dos párrafos.
+  entradilla: [
+    "Los testigos de Jehová son una organización religiosa que se identifica como cristiana y llama Jehová a Dios. Sus creencias y normas se basan en la interpretación de la Biblia que establece el Cuerpo Gobernante, un reducido grupo de hombres que dirige la organización mundial y al que consideran el instrumento de Dios para transmitir su guía.",
+    "Creen vivir en los «últimos días», esperan la llegada del Armagedón (la guerra de Dios que pondrá fin al mundo actual) y aspiran a vivir eternamente en un paraíso en la Tierra. Son conocidos por predicar de casa en casa y por sus expositores de publicaciones en la calle: difundir su fe ocupa un lugar central en su vida religiosa.",
+  ],
   revisado: "18 de octubre de 2026",
   revisadoIso: "2026-10-18",
 };
@@ -95,7 +98,9 @@ export const secciones: Seccion[] = [
     },
     bloques: [
       p("Creen en Jehová como Dios y en Jesús como su Hijo y Salvador. Se consideran cristianos, pero no aceptan la Trinidad: para ellos, Dios y Jesús son seres distintos. Esta es una de las diferencias principales con el catolicismo y muchas iglesias protestantes."),
-      p("También creen que Dios acabará con el sufrimiento y que las personas podrán vivir para siempre en un paraíso en la Tierra. Esperan una resurrección de los muertos y no creen en un infierno de tormento eterno."),
+      p(`Creen que el mundo vive sus «últimos días». En ${ext("https://www.jw.org/es/ense%C3%B1anzas-b%C3%ADblicas/preguntas/ultimos-dias-se%C3%B1al-profecias-fin/", "su web oficial")} lo explican así: «Los sucesos mundiales y la cronología bíblica muestran que los últimos días comenzaron en 1914, el año en que empezó la Primera Guerra Mundial».`),
+      p(`Esperan que ese periodo termine con el Armagedón, que ${ext("https://www.jw.org/es/ense%C3%B1anzas-b%C3%ADblicas/preguntas/el-armaged%C3%B3n/", "la organización define")} como «la guerra final y definitiva entre Dios y los gobiernos humanos». No lo entienden como la destrucción del planeta: según su web, la Tierra seguirá existiendo y «una gran muchedumbre» de siervos leales de Dios sobrevivirá. Sobre la fecha, recuerdan que Jesús dijo que «el día y la hora no los sabe nadie».`),
+      p("Después, creen que Dios acabará con el sufrimiento y que las personas podrán vivir para siempre en un paraíso en la Tierra. Esperan una resurrección de los muertos y no creen en un infierno de tormento eterno."),
       p("La Biblia ocupa un lugar central en su vida. Utilizan habitualmente su propia traducción, la <a href=\"/testigos-de-jehova/biblia/\"><em>Traducción del Nuevo Mundo</em></a>, y estudian sus textos siguiendo las explicaciones de la organización."),
     ],
   },
@@ -124,6 +129,7 @@ export const secciones: Seccion[] = [
     bloques: [
       p("Sus lugares de reunión se llaman Salones del Reino. Allí estudian la Biblia y sus publicaciones, escuchan discursos, oran y cantan. Las reuniones y la predicación forman parte habitual de su práctica religiosa."),
       p("Cuando llaman a una puerta o hablan con alguien en la calle, buscan compartir sus creencias y ofrecer un estudio de la Biblia. Lo hacen porque entienden que Jesús encargó a sus seguidores transmitir su mensaje."),
+      p("Además, cuentan la predicación por todo el mundo entre las señales de los últimos días: «Las buenas noticias del Reino se predicarán en toda la tierra habitada» (Mateo 24:14)."),
     ],
   },
   {
@@ -210,6 +216,8 @@ export const mirada = {
 
 // Fuentes oficiales citadas en el texto, a la vista al pie de la página.
 export const fuentes = [
+  { href: "https://www.jw.org/es/ense%C3%B1anzas-b%C3%ADblicas/preguntas/ultimos-dias-se%C3%B1al-profecias-fin/", texto: "Preguntas sobre la Biblia: «¿Cuál es la señal de “los últimos días” o “los tiempos finales”?» · jw.org" },
+  { href: "https://www.jw.org/es/ense%C3%B1anzas-b%C3%ADblicas/preguntas/el-armaged%C3%B3n/", texto: "Preguntas sobre la Biblia: «¿Qué es el Armagedón?» · jw.org" },
   { href: "https://wol.jw.org/es/wol/d/r4/lp-s/2017283", texto: "La Atalaya, febrero de 2017: «¿Quién dirige hoy al pueblo de Dios?» · wol.jw.org" },
   { href: "https://wol.jw.org/es/wol/d/r4/lp-s/502012472", texto: "Preguntas frecuentes: «¿Cómo tratan los testigos de Jehová a quienes ya no pertenecen a su religión?» · wol.jw.org" },
   { href: "https://wol.jw.org/es/wol/d/r4/lp-s/2024534", texto: "La Atalaya, agosto de 2024: «Cómo se ayuda a los que han sido sacados de la congregación» · wol.jw.org" },

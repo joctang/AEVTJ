@@ -12,6 +12,8 @@
 /* ---------- Hero ---------- */
 /* El título es más largo que el de la guía de salida: algo más pequeño y ancho. */
 .guia-hero h1.tj-hero__titulo { max-width: 15ch; font-size: clamp(2.8rem, 5vw, 5.2rem); line-height: 1.02; }
+/* La entradilla va en dos párrafos: el segundo, pegado al primero. */
+.guia-hero__entradilla + .guia-hero__entradilla { margin-top: 14px; }
 /* La foto de la sede tiene un cielo muy saturado: se apaga para igualar el tono de los demás heroes. */
 .tj .guia-hero__img { filter: saturate(.55) brightness(.92); }
 @media (max-width: 767px) { .tj .guia-hero__img { object-position: 45% 85%; opacity: .6; } }

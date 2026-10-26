@@ -36,7 +36,7 @@ const partir = (bloques: Bloque[]) => {
   return { antes: bloques.slice(0, i), lista: lista.tipo === "lista" ? lista : null, despues: bloques.slice(i + 1) };
 };
 
-const palabras = [intro.entradilla, presentacion, ...secciones.flatMap((s) => s.bloques.map((b) => (b.tipo === "parrafo" ? b.texto : b.items.map((it) => it.texto).join(" "))))]
+const palabras = [...intro.entradilla, presentacion, ...secciones.flatMap((s) => s.bloques.map((b) => (b.tipo === "parrafo" ? b.texto : b.items.map((it) => it.texto).join(" "))))]
   .map(textoPlano).join(" ").split(/\s+/).length;
 const minutos = Math.max(1, Math.round(palabras / 200));
 
@@ -90,7 +90,7 @@ const jsonLdFaq = {
       <div class="guia-hero__content">
         <p class="guia-kicker guia-kicker--crema">{intro.kicker}</p>
         <h1 class="tj-hero__titulo">{intro.titulo}</h1>
-        <p class="guia-hero__entradilla">{intro.entradilla}</p>
+        {intro.entradilla.map((parrafo) => <p class="guia-hero__entradilla">{parrafo}</p>)}
         <div class="guia-hero__actions">
           <a class="guia-pill guia-pill--solid" href="#tj-indice">Ver los temas</a>
           <a class="guia-pill guia-pill--ghost" href={`#${mirada.id}`}>Busco apoyo</a>

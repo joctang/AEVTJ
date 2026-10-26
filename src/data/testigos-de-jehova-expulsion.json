@@ -284,6 +284,35 @@
       "subsecciones": []
     },
     {
+      "id": "impacto",
+      "titulo": "¿Qué pasa después en la vida diaria?",
+      "bloques": [
+        {
+          "tipo": "parrafo",
+          "html": "Quienes cuentan su caso describen algo parecido: el círculo de personas que tenían se reduce de golpe. Hablan de amistades que se van apagando, de congregaciones donde nadie les dirige la palabra y de familiares que dejan de llamar."
+        },
+        {
+          "tipo": "parrafo",
+          "html": "Varias personas hablan también del impacto emocional que tuvo en ellas. No podemos medir ese efecto con los testimonios que hemos reunido, y requiere atención profesional. Un reportaje de 3CAT visibiliza el impacto del ostracismo y la salud mental; lo recogemos en <a href=\"/noticias/\">noticias</a>."
+        },
+        {
+          "tipo": "destacado",
+          "html": "Si estás pasando por algo así, no tienes que cargarlo solo. Los <a href=\"/recursos-de-ayuda/\">recursos de ayuda</a> reúnen apoyo y orientación para encontrar el siguiente paso."
+        }
+      ],
+      "subsecciones": [
+        {
+          "titulo": "Cuando hay niños de por medio",
+          "bloques": [
+            {
+              "tipo": "parrafo",
+              "html": "Algunas personas cuentan que sus hijos pequeños notaron el cambio en las reuniones. No publicamos datos de menores. Si eres menor de edad y estás viviendo esta situación, en los <a href=\"/recursos-de-ayuda/\">recursos de ayuda</a> encontrarás a quién acudir."
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "cronologia",
       "titulo": "¿Han cambiado las instrucciones sobre la expulsión?",
       "bloques": [
