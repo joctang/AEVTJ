@@ -33,6 +33,7 @@ RedirectMatch 301 ^/alta/?$ /hazte-socio/
 RedirectMatch 301 ^/donaciones/?$ /hazte-socio/
 RedirectMatch 301 ^/inicio/?$ /
 RedirectMatch 301 ^/category/.+ /noticias/
+RedirectMatch 301 ^/tag/testimonios/?$ /testigos-de-jehova/expulsion-y-desasociacion/
 
 # Noticias del WordPress antiguo: pasaron de /slug/ a /noticias/slug/ (14/10/2026). 301 exacto, uno por noticia.
 RedirectMatch 301 ^/3cat-familia-ana-montiel-cambio-transfusiones/?$ /noticias/3cat-familia-ana-montiel-cambio-transfusiones/
